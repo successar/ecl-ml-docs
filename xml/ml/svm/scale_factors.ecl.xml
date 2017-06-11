@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.scale_factors" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/scale_factors.ecl" target="scale_factors.ecl.xml">
+  <Definition body="201" end="1309" exported="1" fullname="ml.svm.scale_factors" inherit_type="local" line="3" name="scale_factors" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_factors.ecl" start="68">
+   <Type>function</Type>
+   <Signature>DATASET(Types.SVM_Scale)
+       scale_factors(Types.Scale_Parms parms,
+                     DATASET(Types.SVM_Instance) ds)</Signature><Params>
+    <Param name="parms"/>
+    <Param name="ds"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="54" fullname="ML.SVM.Types" inherit_type="local" line="2" name="Types" ref="ml.svm.types" start="54" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="types.ecl.xml"/></Meta>

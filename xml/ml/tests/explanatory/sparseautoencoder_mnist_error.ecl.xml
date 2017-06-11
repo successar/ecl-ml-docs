@@ -1,0 +1,2917 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Source name="ML.Tests.Explanatory.SparseAutoencoder_MNIST_Error" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" target="sparseautoencoder_mnist_error.ecl.xml">
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="../../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="44" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" remotescope="1" start="44" target="../../../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="66" end="92" fullname="ml.tests.explanatory.layout_cell" inherit_type="local" line="4" name="Layout_Cell" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="52">
+   <Type>record</Type>
+   <Field name="x"/>
+   <Field name="y"/>
+   <Signature>Layout_Cell</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="123" end="149" fullname="ml.tests.explanatory.layout_part" inherit_type="local" line="7" name="Layout_Part" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="109">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="246" end="249" fullname="ml.tests.explanatory.hl" inherit_type="local" line="9" name="hl" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="232">
+   <Signature>INTEGER4 hl</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="299" end="304" fullname="ml.tests.explanatory.f" inherit_type="local" line="10" name="f" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="286">
+   <Signature>INTEGER4 f</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="361" end="9690" fullname="ml.tests.explanatory.value_record" inherit_type="local" line="14" name="value_record" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="346">
+   <Type>record</Type>
+   <Field name="f1"/>
+   <Field name="f2"/>
+   <Field name="f3"/>
+   <Field name="f4"/>
+   <Field name="f5"/>
+   <Field name="f6"/>
+   <Field name="f7"/>
+   <Field name="f8"/>
+   <Field name="f9"/>
+   <Field name="f10"/>
+   <Field name="f11"/>
+   <Field name="f12"/>
+   <Field name="f13"/>
+   <Field name="f14"/>
+   <Field name="f15"/>
+   <Field name="f16"/>
+   <Field name="f17"/>
+   <Field name="f18"/>
+   <Field name="f19"/>
+   <Field name="f20"/>
+   <Field name="f21"/>
+   <Field name="f22"/>
+   <Field name="f23"/>
+   <Field name="f24"/>
+   <Field name="f25"/>
+   <Field name="f26"/>
+   <Field name="f27"/>
+   <Field name="f28"/>
+   <Field name="f29"/>
+   <Field name="f30"/>
+   <Field name="f31"/>
+   <Field name="f32"/>
+   <Field name="f33"/>
+   <Field name="f34"/>
+   <Field name="f35"/>
+   <Field name="f36"/>
+   <Field name="f37"/>
+   <Field name="f38"/>
+   <Field name="f39"/>
+   <Field name="f40"/>
+   <Field name="f41"/>
+   <Field name="f42"/>
+   <Field name="f43"/>
+   <Field name="f44"/>
+   <Field name="f45"/>
+   <Field name="f46"/>
+   <Field name="f47"/>
+   <Field name="f48"/>
+   <Field name="f49"/>
+   <Field name="f50"/>
+   <Field name="f51"/>
+   <Field name="f52"/>
+   <Field name="f53"/>
+   <Field name="f54"/>
+   <Field name="f55"/>
+   <Field name="f56"/>
+   <Field name="f57"/>
+   <Field name="f58"/>
+   <Field name="f59"/>
+   <Field name="f60"/>
+   <Field name="f61"/>
+   <Field name="f62"/>
+   <Field name="f63"/>
+   <Field name="f64"/>
+   <Field name="f65"/>
+   <Field name="f66"/>
+   <Field name="f67"/>
+   <Field name="f68"/>
+   <Field name="f69"/>
+   <Field name="f70"/>
+   <Field name="f71"/>
+   <Field name="f72"/>
+   <Field name="f73"/>
+   <Field name="f74"/>
+   <Field name="f75"/>
+   <Field name="f76"/>
+   <Field name="f77"/>
+   <Field name="f78"/>
+   <Field name="f79"/>
+   <Field name="f80"/>
+   <Field name="f81"/>
+   <Field name="f82"/>
+   <Field name="f83"/>
+   <Field name="f84"/>
+   <Field name="f85"/>
+   <Field name="f86"/>
+   <Field name="f87"/>
+   <Field name="f88"/>
+   <Field name="f89"/>
+   <Field name="f90"/>
+   <Field name="f91"/>
+   <Field name="f92"/>
+   <Field name="f93"/>
+   <Field name="f94"/>
+   <Field name="f95"/>
+   <Field name="f96"/>
+   <Field name="f97"/>
+   <Field name="f98"/>
+   <Field name="f99"/>
+   <Field name="f100"/>
+   <Field name="f101"/>
+   <Field name="f102"/>
+   <Field name="f103"/>
+   <Field name="f104"/>
+   <Field name="f105"/>
+   <Field name="f106"/>
+   <Field name="f107"/>
+   <Field name="f108"/>
+   <Field name="f109"/>
+   <Field name="f110"/>
+   <Field name="f111"/>
+   <Field name="f112"/>
+   <Field name="f113"/>
+   <Field name="f114"/>
+   <Field name="f115"/>
+   <Field name="f116"/>
+   <Field name="f117"/>
+   <Field name="f118"/>
+   <Field name="f119"/>
+   <Field name="f120"/>
+   <Field name="f121"/>
+   <Field name="f122"/>
+   <Field name="f123"/>
+   <Field name="f124"/>
+   <Field name="f125"/>
+   <Field name="f126"/>
+   <Field name="f127"/>
+   <Field name="f128"/>
+   <Field name="f129"/>
+   <Field name="f130"/>
+   <Field name="f131"/>
+   <Field name="f132"/>
+   <Field name="f133"/>
+   <Field name="f134"/>
+   <Field name="f135"/>
+   <Field name="f136"/>
+   <Field name="f137"/>
+   <Field name="f138"/>
+   <Field name="f139"/>
+   <Field name="f140"/>
+   <Field name="f141"/>
+   <Field name="f142"/>
+   <Field name="f143"/>
+   <Field name="f144"/>
+   <Field name="f145"/>
+   <Field name="f146"/>
+   <Field name="f147"/>
+   <Field name="f148"/>
+   <Field name="f149"/>
+   <Field name="f150"/>
+   <Field name="f151"/>
+   <Field name="f152"/>
+   <Field name="f153"/>
+   <Field name="f154"/>
+   <Field name="f155"/>
+   <Field name="f156"/>
+   <Field name="f157"/>
+   <Field name="f158"/>
+   <Field name="f159"/>
+   <Field name="f160"/>
+   <Field name="f161"/>
+   <Field name="f162"/>
+   <Field name="f163"/>
+   <Field name="f164"/>
+   <Field name="f165"/>
+   <Field name="f166"/>
+   <Field name="f167"/>
+   <Field name="f168"/>
+   <Field name="f169"/>
+   <Field name="f170"/>
+   <Field name="f171"/>
+   <Field name="f172"/>
+   <Field name="f173"/>
+   <Field name="f174"/>
+   <Field name="f175"/>
+   <Field name="f176"/>
+   <Field name="f177"/>
+   <Field name="f178"/>
+   <Field name="f179"/>
+   <Field name="f180"/>
+   <Field name="f181"/>
+   <Field name="f182"/>
+   <Field name="f183"/>
+   <Field name="f184"/>
+   <Field name="f185"/>
+   <Field name="f186"/>
+   <Field name="f187"/>
+   <Field name="f188"/>
+   <Field name="f189"/>
+   <Field name="f190"/>
+   <Field name="f191"/>
+   <Field name="f192"/>
+   <Field name="f193"/>
+   <Field name="f194"/>
+   <Field name="f195"/>
+   <Field name="f196"/>
+   <Field name="f197"/>
+   <Field name="f198"/>
+   <Field name="f199"/>
+   <Field name="f200"/>
+   <Field name="f201"/>
+   <Field name="f202"/>
+   <Field name="f203"/>
+   <Field name="f204"/>
+   <Field name="f205"/>
+   <Field name="f206"/>
+   <Field name="f207"/>
+   <Field name="f208"/>
+   <Field name="f209"/>
+   <Field name="f210"/>
+   <Field name="f211"/>
+   <Field name="f212"/>
+   <Field name="f213"/>
+   <Field name="f214"/>
+   <Field name="f215"/>
+   <Field name="f216"/>
+   <Field name="f217"/>
+   <Field name="f218"/>
+   <Field name="f219"/>
+   <Field name="f220"/>
+   <Field name="f221"/>
+   <Field name="f222"/>
+   <Field name="f223"/>
+   <Field name="f224"/>
+   <Field name="f225"/>
+   <Field name="f226"/>
+   <Field name="f227"/>
+   <Field name="f228"/>
+   <Field name="f229"/>
+   <Field name="f230"/>
+   <Field name="f231"/>
+   <Field name="f232"/>
+   <Field name="f233"/>
+   <Field name="f234"/>
+   <Field name="f235"/>
+   <Field name="f236"/>
+   <Field name="f237"/>
+   <Field name="f238"/>
+   <Field name="f239"/>
+   <Field name="f240"/>
+   <Field name="f241"/>
+   <Field name="f242"/>
+   <Field name="f243"/>
+   <Field name="f244"/>
+   <Field name="f245"/>
+   <Field name="f246"/>
+   <Field name="f247"/>
+   <Field name="f248"/>
+   <Field name="f249"/>
+   <Field name="f250"/>
+   <Field name="f251"/>
+   <Field name="f252"/>
+   <Field name="f253"/>
+   <Field name="f254"/>
+   <Field name="f255"/>
+   <Field name="f256"/>
+   <Field name="f257"/>
+   <Field name="f258"/>
+   <Field name="f259"/>
+   <Field name="f260"/>
+   <Field name="f261"/>
+   <Field name="f262"/>
+   <Field name="f263"/>
+   <Field name="f264"/>
+   <Field name="f265"/>
+   <Field name="f266"/>
+   <Field name="f267"/>
+   <Field name="f268"/>
+   <Field name="f269"/>
+   <Field name="f270"/>
+   <Field name="f271"/>
+   <Field name="f272"/>
+   <Field name="f273"/>
+   <Field name="f274"/>
+   <Field name="f275"/>
+   <Field name="f276"/>
+   <Field name="f277"/>
+   <Field name="f278"/>
+   <Field name="f279"/>
+   <Field name="f280"/>
+   <Field name="f281"/>
+   <Field name="f282"/>
+   <Field name="f283"/>
+   <Field name="f284"/>
+   <Field name="f285"/>
+   <Field name="f286"/>
+   <Field name="f287"/>
+   <Field name="f288"/>
+   <Field name="f289"/>
+   <Field name="f290"/>
+   <Field name="f291"/>
+   <Field name="f292"/>
+   <Field name="f293"/>
+   <Field name="f294"/>
+   <Field name="f295"/>
+   <Field name="f296"/>
+   <Field name="f297"/>
+   <Field name="f298"/>
+   <Field name="f299"/>
+   <Field name="f300"/>
+   <Field name="f301"/>
+   <Field name="f302"/>
+   <Field name="f303"/>
+   <Field name="f304"/>
+   <Field name="f305"/>
+   <Field name="f306"/>
+   <Field name="f307"/>
+   <Field name="f308"/>
+   <Field name="f309"/>
+   <Field name="f310"/>
+   <Field name="f311"/>
+   <Field name="f312"/>
+   <Field name="f313"/>
+   <Field name="f314"/>
+   <Field name="f315"/>
+   <Field name="f316"/>
+   <Field name="f317"/>
+   <Field name="f318"/>
+   <Field name="f319"/>
+   <Field name="f320"/>
+   <Field name="f321"/>
+   <Field name="f322"/>
+   <Field name="f323"/>
+   <Field name="f324"/>
+   <Field name="f325"/>
+   <Field name="f326"/>
+   <Field name="f327"/>
+   <Field name="f328"/>
+   <Field name="f329"/>
+   <Field name="f330"/>
+   <Field name="f331"/>
+   <Field name="f332"/>
+   <Field name="f333"/>
+   <Field name="f334"/>
+   <Field name="f335"/>
+   <Field name="f336"/>
+   <Field name="f337"/>
+   <Field name="f338"/>
+   <Field name="f339"/>
+   <Field name="f340"/>
+   <Field name="f341"/>
+   <Field name="f342"/>
+   <Field name="f343"/>
+   <Field name="f344"/>
+   <Field name="f345"/>
+   <Field name="f346"/>
+   <Field name="f347"/>
+   <Field name="f348"/>
+   <Field name="f349"/>
+   <Field name="f350"/>
+   <Field name="f351"/>
+   <Field name="f352"/>
+   <Field name="f353"/>
+   <Field name="f354"/>
+   <Field name="f355"/>
+   <Field name="f356"/>
+   <Field name="f357"/>
+   <Field name="f358"/>
+   <Field name="f359"/>
+   <Field name="f360"/>
+   <Field name="f361"/>
+   <Field name="f362"/>
+   <Field name="f363"/>
+   <Field name="f364"/>
+   <Field name="f365"/>
+   <Field name="f366"/>
+   <Field name="f367"/>
+   <Field name="f368"/>
+   <Field name="f369"/>
+   <Field name="f370"/>
+   <Field name="f371"/>
+   <Field name="f372"/>
+   <Field name="f373"/>
+   <Field name="f374"/>
+   <Field name="f375"/>
+   <Field name="f376"/>
+   <Field name="f377"/>
+   <Field name="f378"/>
+   <Field name="f379"/>
+   <Field name="f380"/>
+   <Field name="f381"/>
+   <Field name="f382"/>
+   <Field name="f383"/>
+   <Field name="f384"/>
+   <Field name="f385"/>
+   <Field name="f386"/>
+   <Field name="f387"/>
+   <Field name="f388"/>
+   <Field name="f389"/>
+   <Field name="f390"/>
+   <Field name="f391"/>
+   <Field name="f392"/>
+   <Field name="f393"/>
+   <Field name="f394"/>
+   <Field name="f395"/>
+   <Field name="f396"/>
+   <Field name="f397"/>
+   <Field name="f398"/>
+   <Field name="f399"/>
+   <Field name="f400"/>
+   <Field name="f401"/>
+   <Field name="f402"/>
+   <Field name="f403"/>
+   <Field name="f404"/>
+   <Field name="f405"/>
+   <Field name="f406"/>
+   <Field name="f407"/>
+   <Field name="f408"/>
+   <Field name="f409"/>
+   <Field name="f410"/>
+   <Field name="f411"/>
+   <Field name="f412"/>
+   <Field name="f413"/>
+   <Field name="f414"/>
+   <Field name="f415"/>
+   <Field name="f416"/>
+   <Field name="f417"/>
+   <Field name="f418"/>
+   <Field name="f419"/>
+   <Field name="f420"/>
+   <Field name="f421"/>
+   <Field name="f422"/>
+   <Field name="f423"/>
+   <Field name="f424"/>
+   <Field name="f425"/>
+   <Field name="f426"/>
+   <Field name="f427"/>
+   <Field name="f428"/>
+   <Field name="f429"/>
+   <Field name="f430"/>
+   <Field name="f431"/>
+   <Field name="f432"/>
+   <Field name="f433"/>
+   <Field name="f434"/>
+   <Field name="f435"/>
+   <Field name="f436"/>
+   <Field name="f437"/>
+   <Field name="f438"/>
+   <Field name="f439"/>
+   <Field name="f440"/>
+   <Field name="f441"/>
+   <Field name="f442"/>
+   <Field name="f443"/>
+   <Field name="f444"/>
+   <Field name="f445"/>
+   <Field name="f446"/>
+   <Field name="f447"/>
+   <Field name="f448"/>
+   <Field name="f449"/>
+   <Field name="f450"/>
+   <Field name="f451"/>
+   <Field name="f452"/>
+   <Field name="f453"/>
+   <Field name="f454"/>
+   <Field name="f455"/>
+   <Field name="f456"/>
+   <Field name="f457"/>
+   <Field name="f458"/>
+   <Field name="f459"/>
+   <Field name="f460"/>
+   <Field name="f461"/>
+   <Field name="f462"/>
+   <Field name="f463"/>
+   <Field name="f464"/>
+   <Field name="f465"/>
+   <Field name="f466"/>
+   <Field name="f467"/>
+   <Field name="f468"/>
+   <Field name="f469"/>
+   <Field name="f470"/>
+   <Field name="f471"/>
+   <Field name="f472"/>
+   <Field name="f473"/>
+   <Field name="f474"/>
+   <Field name="f475"/>
+   <Field name="f476"/>
+   <Field name="f477"/>
+   <Field name="f478"/>
+   <Field name="f479"/>
+   <Field name="f480"/>
+   <Field name="f481"/>
+   <Field name="f482"/>
+   <Field name="f483"/>
+   <Field name="f484"/>
+   <Field name="f485"/>
+   <Field name="f486"/>
+   <Field name="f487"/>
+   <Field name="f488"/>
+   <Field name="f489"/>
+   <Field name="f490"/>
+   <Field name="f491"/>
+   <Field name="f492"/>
+   <Field name="f493"/>
+   <Field name="f494"/>
+   <Field name="f495"/>
+   <Field name="f496"/>
+   <Field name="f497"/>
+   <Field name="f498"/>
+   <Field name="f499"/>
+   <Field name="f500"/>
+   <Field name="f501"/>
+   <Field name="f502"/>
+   <Field name="f503"/>
+   <Field name="f504"/>
+   <Field name="f505"/>
+   <Field name="f506"/>
+   <Field name="f507"/>
+   <Field name="f508"/>
+   <Field name="f509"/>
+   <Field name="f510"/>
+   <Field name="f511"/>
+   <Field name="f512"/>
+   <Field name="f513"/>
+   <Field name="f514"/>
+   <Field name="f515"/>
+   <Field name="f516"/>
+   <Field name="f517"/>
+   <Field name="f518"/>
+   <Field name="f519"/>
+   <Field name="f520"/>
+   <Field name="f521"/>
+   <Field name="f522"/>
+   <Field name="f523"/>
+   <Field name="f524"/>
+   <Field name="f525"/>
+   <Field name="f526"/>
+   <Field name="f527"/>
+   <Field name="f528"/>
+   <Field name="f529"/>
+   <Field name="f530"/>
+   <Field name="f531"/>
+   <Field name="f532"/>
+   <Field name="f533"/>
+   <Field name="f534"/>
+   <Field name="f535"/>
+   <Field name="f536"/>
+   <Field name="f537"/>
+   <Field name="f538"/>
+   <Field name="f539"/>
+   <Field name="f540"/>
+   <Field name="f541"/>
+   <Field name="f542"/>
+   <Field name="f543"/>
+   <Field name="f544"/>
+   <Field name="f545"/>
+   <Field name="f546"/>
+   <Field name="f547"/>
+   <Field name="f548"/>
+   <Field name="f549"/>
+   <Field name="f550"/>
+   <Field name="f551"/>
+   <Field name="f552"/>
+   <Field name="f553"/>
+   <Field name="f554"/>
+   <Field name="f555"/>
+   <Field name="f556"/>
+   <Field name="f557"/>
+   <Field name="f558"/>
+   <Field name="f559"/>
+   <Field name="f560"/>
+   <Field name="f561"/>
+   <Field name="f562"/>
+   <Field name="f563"/>
+   <Field name="f564"/>
+   <Field name="f565"/>
+   <Field name="f566"/>
+   <Field name="f567"/>
+   <Field name="f568"/>
+   <Field name="f569"/>
+   <Field name="f570"/>
+   <Field name="f571"/>
+   <Field name="f572"/>
+   <Field name="f573"/>
+   <Field name="f574"/>
+   <Field name="f575"/>
+   <Field name="f576"/>
+   <Field name="f577"/>
+   <Field name="f578"/>
+   <Field name="f579"/>
+   <Field name="f580"/>
+   <Field name="f581"/>
+   <Field name="f582"/>
+   <Field name="f583"/>
+   <Field name="f584"/>
+   <Field name="f585"/>
+   <Field name="f586"/>
+   <Field name="f587"/>
+   <Field name="f588"/>
+   <Field name="f589"/>
+   <Field name="f590"/>
+   <Field name="f591"/>
+   <Field name="f592"/>
+   <Field name="f593"/>
+   <Field name="f594"/>
+   <Field name="f595"/>
+   <Field name="f596"/>
+   <Field name="f597"/>
+   <Field name="f598"/>
+   <Field name="f599"/>
+   <Field name="f600"/>
+   <Field name="f601"/>
+   <Field name="f602"/>
+   <Field name="f603"/>
+   <Field name="f604"/>
+   <Field name="f605"/>
+   <Field name="f606"/>
+   <Field name="f607"/>
+   <Field name="f608"/>
+   <Field name="f609"/>
+   <Field name="f610"/>
+   <Field name="f611"/>
+   <Field name="f612"/>
+   <Field name="f613"/>
+   <Field name="f614"/>
+   <Field name="f615"/>
+   <Field name="f616"/>
+   <Field name="f617"/>
+   <Field name="f618"/>
+   <Field name="f619"/>
+   <Field name="f620"/>
+   <Field name="f621"/>
+   <Field name="f622"/>
+   <Field name="f623"/>
+   <Field name="f624"/>
+   <Field name="f625"/>
+   <Field name="f626"/>
+   <Field name="f627"/>
+   <Field name="f628"/>
+   <Field name="f629"/>
+   <Field name="f630"/>
+   <Field name="f631"/>
+   <Field name="f632"/>
+   <Field name="f633"/>
+   <Field name="f634"/>
+   <Field name="f635"/>
+   <Field name="f636"/>
+   <Field name="f637"/>
+   <Field name="f638"/>
+   <Field name="f639"/>
+   <Field name="f640"/>
+   <Field name="f641"/>
+   <Field name="f642"/>
+   <Field name="f643"/>
+   <Field name="f644"/>
+   <Field name="f645"/>
+   <Field name="f646"/>
+   <Field name="f647"/>
+   <Field name="f648"/>
+   <Field name="f649"/>
+   <Field name="f650"/>
+   <Field name="f651"/>
+   <Field name="f652"/>
+   <Field name="f653"/>
+   <Field name="f654"/>
+   <Field name="f655"/>
+   <Field name="f656"/>
+   <Field name="f657"/>
+   <Field name="f658"/>
+   <Field name="f659"/>
+   <Field name="f660"/>
+   <Field name="f661"/>
+   <Field name="f662"/>
+   <Field name="f663"/>
+   <Field name="f664"/>
+   <Field name="f665"/>
+   <Field name="f666"/>
+   <Field name="f667"/>
+   <Field name="f668"/>
+   <Field name="f669"/>
+   <Field name="f670"/>
+   <Field name="f671"/>
+   <Field name="f672"/>
+   <Field name="f673"/>
+   <Field name="f674"/>
+   <Field name="f675"/>
+   <Field name="f676"/>
+   <Field name="f677"/>
+   <Field name="f678"/>
+   <Field name="f679"/>
+   <Field name="f680"/>
+   <Field name="f681"/>
+   <Field name="f682"/>
+   <Field name="f683"/>
+   <Field name="f684"/>
+   <Field name="f685"/>
+   <Field name="f686"/>
+   <Field name="f687"/>
+   <Field name="f688"/>
+   <Field name="f689"/>
+   <Field name="f690"/>
+   <Field name="f691"/>
+   <Field name="f692"/>
+   <Field name="f693"/>
+   <Field name="f694"/>
+   <Field name="f695"/>
+   <Field name="f696"/>
+   <Field name="f697"/>
+   <Field name="f698"/>
+   <Field name="f699"/>
+   <Field name="f700"/>
+   <Field name="f701"/>
+   <Field name="f702"/>
+   <Field name="f703"/>
+   <Field name="f704"/>
+   <Field name="f705"/>
+   <Field name="f706"/>
+   <Field name="f707"/>
+   <Field name="f708"/>
+   <Field name="f709"/>
+   <Field name="f710"/>
+   <Field name="f711"/>
+   <Field name="f712"/>
+   <Field name="f713"/>
+   <Field name="f714"/>
+   <Field name="f715"/>
+   <Field name="f716"/>
+   <Field name="f717"/>
+   <Field name="f718"/>
+   <Field name="f719"/>
+   <Field name="f720"/>
+   <Field name="f721"/>
+   <Field name="f722"/>
+   <Field name="f723"/>
+   <Field name="f724"/>
+   <Field name="f725"/>
+   <Field name="f726"/>
+   <Field name="f727"/>
+   <Field name="f728"/>
+   <Field name="f729"/>
+   <Field name="f730"/>
+   <Field name="f731"/>
+   <Field name="f732"/>
+   <Field name="f733"/>
+   <Field name="f734"/>
+   <Field name="f735"/>
+   <Field name="f736"/>
+   <Field name="f737"/>
+   <Field name="f738"/>
+   <Field name="f739"/>
+   <Field name="f740"/>
+   <Field name="f741"/>
+   <Field name="f742"/>
+   <Field name="f743"/>
+   <Field name="f744"/>
+   <Field name="f745"/>
+   <Field name="f746"/>
+   <Field name="f747"/>
+   <Field name="f748"/>
+   <Field name="f749"/>
+   <Field name="f750"/>
+   <Field name="f751"/>
+   <Field name="f752"/>
+   <Field name="f753"/>
+   <Field name="f754"/>
+   <Field name="f755"/>
+   <Field name="f756"/>
+   <Field name="f757"/>
+   <Field name="f758"/>
+   <Field name="f759"/>
+   <Field name="f760"/>
+   <Field name="f761"/>
+   <Field name="f762"/>
+   <Field name="f763"/>
+   <Field name="f764"/>
+   <Field name="f765"/>
+   <Field name="f766"/>
+   <Field name="f767"/>
+   <Field name="f768"/>
+   <Field name="f769"/>
+   <Field name="f770"/>
+   <Field name="f771"/>
+   <Field name="f772"/>
+   <Field name="f773"/>
+   <Field name="f774"/>
+   <Field name="f775"/>
+   <Field name="f776"/>
+   <Field name="f777"/>
+   <Field name="f778"/>
+   <Field name="f779"/>
+   <Field name="f780"/>
+   <Field name="f781"/>
+   <Field name="f782"/>
+   <Field name="f783"/>
+   <Field name="f784"/>
+   <Signature>value_record</Signature><Field name="Label"/>
+  </Definition>
+  <Definition body="33" end="82" fullname="ml.tests.explanatory.__dinprep__1__" inherit_type="local" line="16" name="__dInPrep__1__" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="1">
+   <Signature>/-------------------------------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="144" end="196" fullname="ml.tests.explanatory.__tra__2__" inherit_type="local" line="18" name="__tra__2__" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="100">
+   <Type>transform</Type>
+   <Params>
+    <Param name="L"/>
+    <Param name="C"/>
+   </Params>
+   <Signature>uctured dataset, and appends a unique 1-base</Signature><Return>&lt;unnamed&gt;</Return>
+  </Definition>
+  <Definition body="204" end="238" fullname="ml.tests.explanatory.input_data" inherit_type="local" line="22" name="input_data" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes any structured dataset, and appends a unique 1-based record ID
+// column to it 
+//
+//   dIn       : The name of</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="38" end="10806" fullname="ml.tests.explanatory.indepdatac_toname" inherit_type="local" line="81" name="indepDataC_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//------------------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="40" end="10807" fullname="ml.tests.explanatory.indepdatac_tonumber" inherit_type="local" line="83" name="indepDataC_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//--------------------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.explanatory.indepdatac" inherit_type="local" line="85" name="indepDataC" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="16" end="2800" fullname="ml.tests.explanatory.indepdatac_map" inherit_type="local" line="87" name="indepDataC_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//--------------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="9709" end="9779" fullname="ml.tests.explanatory.input_data_tmp" inherit_type="local" line="802" name="input_data_tmp" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="9692">
+   <Signature>input_data_tmp</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="9890" end="23921" fullname="ml.tests.explanatory.sampledata_format" inherit_type="local" line="806" name="Sampledata_Format" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="9870">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="f1"/>
+   <Field name="f2"/>
+   <Field name="f3"/>
+   <Field name="f4"/>
+   <Field name="f5"/>
+   <Field name="f6"/>
+   <Field name="f7"/>
+   <Field name="f8"/>
+   <Field name="f9"/>
+   <Field name="f10"/>
+   <Field name="f11"/>
+   <Field name="f12"/>
+   <Field name="f13"/>
+   <Field name="f14"/>
+   <Field name="f15"/>
+   <Field name="f16"/>
+   <Field name="f17"/>
+   <Field name="f18"/>
+   <Field name="f19"/>
+   <Field name="f20"/>
+   <Field name="f21"/>
+   <Field name="f22"/>
+   <Field name="f23"/>
+   <Field name="f24"/>
+   <Field name="f25"/>
+   <Field name="f26"/>
+   <Field name="f27"/>
+   <Field name="f28"/>
+   <Field name="f29"/>
+   <Field name="f30"/>
+   <Field name="f31"/>
+   <Field name="f32"/>
+   <Field name="f33"/>
+   <Field name="f34"/>
+   <Field name="f35"/>
+   <Field name="f36"/>
+   <Field name="f37"/>
+   <Field name="f38"/>
+   <Field name="f39"/>
+   <Field name="f40"/>
+   <Field name="f41"/>
+   <Field name="f42"/>
+   <Field name="f43"/>
+   <Field name="f44"/>
+   <Field name="f45"/>
+   <Field name="f46"/>
+   <Field name="f47"/>
+   <Field name="f48"/>
+   <Field name="f49"/>
+   <Field name="f50"/>
+   <Field name="f51"/>
+   <Field name="f52"/>
+   <Field name="f53"/>
+   <Field name="f54"/>
+   <Field name="f55"/>
+   <Field name="f56"/>
+   <Field name="f57"/>
+   <Field name="f58"/>
+   <Field name="f59"/>
+   <Field name="f60"/>
+   <Field name="f61"/>
+   <Field name="f62"/>
+   <Field name="f63"/>
+   <Field name="f64"/>
+   <Field name="f65"/>
+   <Field name="f66"/>
+   <Field name="f67"/>
+   <Field name="f68"/>
+   <Field name="f69"/>
+   <Field name="f70"/>
+   <Field name="f71"/>
+   <Field name="f72"/>
+   <Field name="f73"/>
+   <Field name="f74"/>
+   <Field name="f75"/>
+   <Field name="f76"/>
+   <Field name="f77"/>
+   <Field name="f78"/>
+   <Field name="f79"/>
+   <Field name="f80"/>
+   <Field name="f81"/>
+   <Field name="f82"/>
+   <Field name="f83"/>
+   <Field name="f84"/>
+   <Field name="f85"/>
+   <Field name="f86"/>
+   <Field name="f87"/>
+   <Field name="f88"/>
+   <Field name="f89"/>
+   <Field name="f90"/>
+   <Field name="f91"/>
+   <Field name="f92"/>
+   <Field name="f93"/>
+   <Field name="f94"/>
+   <Field name="f95"/>
+   <Field name="f96"/>
+   <Field name="f97"/>
+   <Field name="f98"/>
+   <Field name="f99"/>
+   <Field name="f100"/>
+   <Field name="f101"/>
+   <Field name="f102"/>
+   <Field name="f103"/>
+   <Field name="f104"/>
+   <Field name="f105"/>
+   <Field name="f106"/>
+   <Field name="f107"/>
+   <Field name="f108"/>
+   <Field name="f109"/>
+   <Field name="f110"/>
+   <Field name="f111"/>
+   <Field name="f112"/>
+   <Field name="f113"/>
+   <Field name="f114"/>
+   <Field name="f115"/>
+   <Field name="f116"/>
+   <Field name="f117"/>
+   <Field name="f118"/>
+   <Field name="f119"/>
+   <Field name="f120"/>
+   <Field name="f121"/>
+   <Field name="f122"/>
+   <Field name="f123"/>
+   <Field name="f124"/>
+   <Field name="f125"/>
+   <Field name="f126"/>
+   <Field name="f127"/>
+   <Field name="f128"/>
+   <Field name="f129"/>
+   <Field name="f130"/>
+   <Field name="f131"/>
+   <Field name="f132"/>
+   <Field name="f133"/>
+   <Field name="f134"/>
+   <Field name="f135"/>
+   <Field name="f136"/>
+   <Field name="f137"/>
+   <Field name="f138"/>
+   <Field name="f139"/>
+   <Field name="f140"/>
+   <Field name="f141"/>
+   <Field name="f142"/>
+   <Field name="f143"/>
+   <Field name="f144"/>
+   <Field name="f145"/>
+   <Field name="f146"/>
+   <Field name="f147"/>
+   <Field name="f148"/>
+   <Field name="f149"/>
+   <Field name="f150"/>
+   <Field name="f151"/>
+   <Field name="f152"/>
+   <Field name="f153"/>
+   <Field name="f154"/>
+   <Field name="f155"/>
+   <Field name="f156"/>
+   <Field name="f157"/>
+   <Field name="f158"/>
+   <Field name="f159"/>
+   <Field name="f160"/>
+   <Field name="f161"/>
+   <Field name="f162"/>
+   <Field name="f163"/>
+   <Field name="f164"/>
+   <Field name="f165"/>
+   <Field name="f166"/>
+   <Field name="f167"/>
+   <Field name="f168"/>
+   <Field name="f169"/>
+   <Field name="f170"/>
+   <Field name="f171"/>
+   <Field name="f172"/>
+   <Field name="f173"/>
+   <Field name="f174"/>
+   <Field name="f175"/>
+   <Field name="f176"/>
+   <Field name="f177"/>
+   <Field name="f178"/>
+   <Field name="f179"/>
+   <Field name="f180"/>
+   <Field name="f181"/>
+   <Field name="f182"/>
+   <Field name="f183"/>
+   <Field name="f184"/>
+   <Field name="f185"/>
+   <Field name="f186"/>
+   <Field name="f187"/>
+   <Field name="f188"/>
+   <Field name="f189"/>
+   <Field name="f190"/>
+   <Field name="f191"/>
+   <Field name="f192"/>
+   <Field name="f193"/>
+   <Field name="f194"/>
+   <Field name="f195"/>
+   <Field name="f196"/>
+   <Field name="f197"/>
+   <Field name="f198"/>
+   <Field name="f199"/>
+   <Field name="f200"/>
+   <Field name="f201"/>
+   <Field name="f202"/>
+   <Field name="f203"/>
+   <Field name="f204"/>
+   <Field name="f205"/>
+   <Field name="f206"/>
+   <Field name="f207"/>
+   <Field name="f208"/>
+   <Field name="f209"/>
+   <Field name="f210"/>
+   <Field name="f211"/>
+   <Field name="f212"/>
+   <Field name="f213"/>
+   <Field name="f214"/>
+   <Field name="f215"/>
+   <Field name="f216"/>
+   <Field name="f217"/>
+   <Field name="f218"/>
+   <Field name="f219"/>
+   <Field name="f220"/>
+   <Field name="f221"/>
+   <Field name="f222"/>
+   <Field name="f223"/>
+   <Field name="f224"/>
+   <Field name="f225"/>
+   <Field name="f226"/>
+   <Field name="f227"/>
+   <Field name="f228"/>
+   <Field name="f229"/>
+   <Field name="f230"/>
+   <Field name="f231"/>
+   <Field name="f232"/>
+   <Field name="f233"/>
+   <Field name="f234"/>
+   <Field name="f235"/>
+   <Field name="f236"/>
+   <Field name="f237"/>
+   <Field name="f238"/>
+   <Field name="f239"/>
+   <Field name="f240"/>
+   <Field name="f241"/>
+   <Field name="f242"/>
+   <Field name="f243"/>
+   <Field name="f244"/>
+   <Field name="f245"/>
+   <Field name="f246"/>
+   <Field name="f247"/>
+   <Field name="f248"/>
+   <Field name="f249"/>
+   <Field name="f250"/>
+   <Field name="f251"/>
+   <Field name="f252"/>
+   <Field name="f253"/>
+   <Field name="f254"/>
+   <Field name="f255"/>
+   <Field name="f256"/>
+   <Field name="f257"/>
+   <Field name="f258"/>
+   <Field name="f259"/>
+   <Field name="f260"/>
+   <Field name="f261"/>
+   <Field name="f262"/>
+   <Field name="f263"/>
+   <Field name="f264"/>
+   <Field name="f265"/>
+   <Field name="f266"/>
+   <Field name="f267"/>
+   <Field name="f268"/>
+   <Field name="f269"/>
+   <Field name="f270"/>
+   <Field name="f271"/>
+   <Field name="f272"/>
+   <Field name="f273"/>
+   <Field name="f274"/>
+   <Field name="f275"/>
+   <Field name="f276"/>
+   <Field name="f277"/>
+   <Field name="f278"/>
+   <Field name="f279"/>
+   <Field name="f280"/>
+   <Field name="f281"/>
+   <Field name="f282"/>
+   <Field name="f283"/>
+   <Field name="f284"/>
+   <Field name="f285"/>
+   <Field name="f286"/>
+   <Field name="f287"/>
+   <Field name="f288"/>
+   <Field name="f289"/>
+   <Field name="f290"/>
+   <Field name="f291"/>
+   <Field name="f292"/>
+   <Field name="f293"/>
+   <Field name="f294"/>
+   <Field name="f295"/>
+   <Field name="f296"/>
+   <Field name="f297"/>
+   <Field name="f298"/>
+   <Field name="f299"/>
+   <Field name="f300"/>
+   <Field name="f301"/>
+   <Field name="f302"/>
+   <Field name="f303"/>
+   <Field name="f304"/>
+   <Field name="f305"/>
+   <Field name="f306"/>
+   <Field name="f307"/>
+   <Field name="f308"/>
+   <Field name="f309"/>
+   <Field name="f310"/>
+   <Field name="f311"/>
+   <Field name="f312"/>
+   <Field name="f313"/>
+   <Field name="f314"/>
+   <Field name="f315"/>
+   <Field name="f316"/>
+   <Field name="f317"/>
+   <Field name="f318"/>
+   <Field name="f319"/>
+   <Field name="f320"/>
+   <Field name="f321"/>
+   <Field name="f322"/>
+   <Field name="f323"/>
+   <Field name="f324"/>
+   <Field name="f325"/>
+   <Field name="f326"/>
+   <Field name="f327"/>
+   <Field name="f328"/>
+   <Field name="f329"/>
+   <Field name="f330"/>
+   <Field name="f331"/>
+   <Field name="f332"/>
+   <Field name="f333"/>
+   <Field name="f334"/>
+   <Field name="f335"/>
+   <Field name="f336"/>
+   <Field name="f337"/>
+   <Field name="f338"/>
+   <Field name="f339"/>
+   <Field name="f340"/>
+   <Field name="f341"/>
+   <Field name="f342"/>
+   <Field name="f343"/>
+   <Field name="f344"/>
+   <Field name="f345"/>
+   <Field name="f346"/>
+   <Field name="f347"/>
+   <Field name="f348"/>
+   <Field name="f349"/>
+   <Field name="f350"/>
+   <Field name="f351"/>
+   <Field name="f352"/>
+   <Field name="f353"/>
+   <Field name="f354"/>
+   <Field name="f355"/>
+   <Field name="f356"/>
+   <Field name="f357"/>
+   <Field name="f358"/>
+   <Field name="f359"/>
+   <Field name="f360"/>
+   <Field name="f361"/>
+   <Field name="f362"/>
+   <Field name="f363"/>
+   <Field name="f364"/>
+   <Field name="f365"/>
+   <Field name="f366"/>
+   <Field name="f367"/>
+   <Field name="f368"/>
+   <Field name="f369"/>
+   <Field name="f370"/>
+   <Field name="f371"/>
+   <Field name="f372"/>
+   <Field name="f373"/>
+   <Field name="f374"/>
+   <Field name="f375"/>
+   <Field name="f376"/>
+   <Field name="f377"/>
+   <Field name="f378"/>
+   <Field name="f379"/>
+   <Field name="f380"/>
+   <Field name="f381"/>
+   <Field name="f382"/>
+   <Field name="f383"/>
+   <Field name="f384"/>
+   <Field name="f385"/>
+   <Field name="f386"/>
+   <Field name="f387"/>
+   <Field name="f388"/>
+   <Field name="f389"/>
+   <Field name="f390"/>
+   <Field name="f391"/>
+   <Field name="f392"/>
+   <Field name="f393"/>
+   <Field name="f394"/>
+   <Field name="f395"/>
+   <Field name="f396"/>
+   <Field name="f397"/>
+   <Field name="f398"/>
+   <Field name="f399"/>
+   <Field name="f400"/>
+   <Field name="f401"/>
+   <Field name="f402"/>
+   <Field name="f403"/>
+   <Field name="f404"/>
+   <Field name="f405"/>
+   <Field name="f406"/>
+   <Field name="f407"/>
+   <Field name="f408"/>
+   <Field name="f409"/>
+   <Field name="f410"/>
+   <Field name="f411"/>
+   <Field name="f412"/>
+   <Field name="f413"/>
+   <Field name="f414"/>
+   <Field name="f415"/>
+   <Field name="f416"/>
+   <Field name="f417"/>
+   <Field name="f418"/>
+   <Field name="f419"/>
+   <Field name="f420"/>
+   <Field name="f421"/>
+   <Field name="f422"/>
+   <Field name="f423"/>
+   <Field name="f424"/>
+   <Field name="f425"/>
+   <Field name="f426"/>
+   <Field name="f427"/>
+   <Field name="f428"/>
+   <Field name="f429"/>
+   <Field name="f430"/>
+   <Field name="f431"/>
+   <Field name="f432"/>
+   <Field name="f433"/>
+   <Field name="f434"/>
+   <Field name="f435"/>
+   <Field name="f436"/>
+   <Field name="f437"/>
+   <Field name="f438"/>
+   <Field name="f439"/>
+   <Field name="f440"/>
+   <Field name="f441"/>
+   <Field name="f442"/>
+   <Field name="f443"/>
+   <Field name="f444"/>
+   <Field name="f445"/>
+   <Field name="f446"/>
+   <Field name="f447"/>
+   <Field name="f448"/>
+   <Field name="f449"/>
+   <Field name="f450"/>
+   <Field name="f451"/>
+   <Field name="f452"/>
+   <Field name="f453"/>
+   <Field name="f454"/>
+   <Field name="f455"/>
+   <Field name="f456"/>
+   <Field name="f457"/>
+   <Field name="f458"/>
+   <Field name="f459"/>
+   <Field name="f460"/>
+   <Field name="f461"/>
+   <Field name="f462"/>
+   <Field name="f463"/>
+   <Field name="f464"/>
+   <Field name="f465"/>
+   <Field name="f466"/>
+   <Field name="f467"/>
+   <Field name="f468"/>
+   <Field name="f469"/>
+   <Field name="f470"/>
+   <Field name="f471"/>
+   <Field name="f472"/>
+   <Field name="f473"/>
+   <Field name="f474"/>
+   <Field name="f475"/>
+   <Field name="f476"/>
+   <Field name="f477"/>
+   <Field name="f478"/>
+   <Field name="f479"/>
+   <Field name="f480"/>
+   <Field name="f481"/>
+   <Field name="f482"/>
+   <Field name="f483"/>
+   <Field name="f484"/>
+   <Field name="f485"/>
+   <Field name="f486"/>
+   <Field name="f487"/>
+   <Field name="f488"/>
+   <Field name="f489"/>
+   <Field name="f490"/>
+   <Field name="f491"/>
+   <Field name="f492"/>
+   <Field name="f493"/>
+   <Field name="f494"/>
+   <Field name="f495"/>
+   <Field name="f496"/>
+   <Field name="f497"/>
+   <Field name="f498"/>
+   <Field name="f499"/>
+   <Field name="f500"/>
+   <Field name="f501"/>
+   <Field name="f502"/>
+   <Field name="f503"/>
+   <Field name="f504"/>
+   <Field name="f505"/>
+   <Field name="f506"/>
+   <Field name="f507"/>
+   <Field name="f508"/>
+   <Field name="f509"/>
+   <Field name="f510"/>
+   <Field name="f511"/>
+   <Field name="f512"/>
+   <Field name="f513"/>
+   <Field name="f514"/>
+   <Field name="f515"/>
+   <Field name="f516"/>
+   <Field name="f517"/>
+   <Field name="f518"/>
+   <Field name="f519"/>
+   <Field name="f520"/>
+   <Field name="f521"/>
+   <Field name="f522"/>
+   <Field name="f523"/>
+   <Field name="f524"/>
+   <Field name="f525"/>
+   <Field name="f526"/>
+   <Field name="f527"/>
+   <Field name="f528"/>
+   <Field name="f529"/>
+   <Field name="f530"/>
+   <Field name="f531"/>
+   <Field name="f532"/>
+   <Field name="f533"/>
+   <Field name="f534"/>
+   <Field name="f535"/>
+   <Field name="f536"/>
+   <Field name="f537"/>
+   <Field name="f538"/>
+   <Field name="f539"/>
+   <Field name="f540"/>
+   <Field name="f541"/>
+   <Field name="f542"/>
+   <Field name="f543"/>
+   <Field name="f544"/>
+   <Field name="f545"/>
+   <Field name="f546"/>
+   <Field name="f547"/>
+   <Field name="f548"/>
+   <Field name="f549"/>
+   <Field name="f550"/>
+   <Field name="f551"/>
+   <Field name="f552"/>
+   <Field name="f553"/>
+   <Field name="f554"/>
+   <Field name="f555"/>
+   <Field name="f556"/>
+   <Field name="f557"/>
+   <Field name="f558"/>
+   <Field name="f559"/>
+   <Field name="f560"/>
+   <Field name="f561"/>
+   <Field name="f562"/>
+   <Field name="f563"/>
+   <Field name="f564"/>
+   <Field name="f565"/>
+   <Field name="f566"/>
+   <Field name="f567"/>
+   <Field name="f568"/>
+   <Field name="f569"/>
+   <Field name="f570"/>
+   <Field name="f571"/>
+   <Field name="f572"/>
+   <Field name="f573"/>
+   <Field name="f574"/>
+   <Field name="f575"/>
+   <Field name="f576"/>
+   <Field name="f577"/>
+   <Field name="f578"/>
+   <Field name="f579"/>
+   <Field name="f580"/>
+   <Field name="f581"/>
+   <Field name="f582"/>
+   <Field name="f583"/>
+   <Field name="f584"/>
+   <Field name="f585"/>
+   <Field name="f586"/>
+   <Field name="f587"/>
+   <Field name="f588"/>
+   <Field name="f589"/>
+   <Field name="f590"/>
+   <Field name="f591"/>
+   <Field name="f592"/>
+   <Field name="f593"/>
+   <Field name="f594"/>
+   <Field name="f595"/>
+   <Field name="f596"/>
+   <Field name="f597"/>
+   <Field name="f598"/>
+   <Field name="f599"/>
+   <Field name="f600"/>
+   <Field name="f601"/>
+   <Field name="f602"/>
+   <Field name="f603"/>
+   <Field name="f604"/>
+   <Field name="f605"/>
+   <Field name="f606"/>
+   <Field name="f607"/>
+   <Field name="f608"/>
+   <Field name="f609"/>
+   <Field name="f610"/>
+   <Field name="f611"/>
+   <Field name="f612"/>
+   <Field name="f613"/>
+   <Field name="f614"/>
+   <Field name="f615"/>
+   <Field name="f616"/>
+   <Field name="f617"/>
+   <Field name="f618"/>
+   <Field name="f619"/>
+   <Field name="f620"/>
+   <Field name="f621"/>
+   <Field name="f622"/>
+   <Field name="f623"/>
+   <Field name="f624"/>
+   <Field name="f625"/>
+   <Field name="f626"/>
+   <Field name="f627"/>
+   <Field name="f628"/>
+   <Field name="f629"/>
+   <Field name="f630"/>
+   <Field name="f631"/>
+   <Field name="f632"/>
+   <Field name="f633"/>
+   <Field name="f634"/>
+   <Field name="f635"/>
+   <Field name="f636"/>
+   <Field name="f637"/>
+   <Field name="f638"/>
+   <Field name="f639"/>
+   <Field name="f640"/>
+   <Field name="f641"/>
+   <Field name="f642"/>
+   <Field name="f643"/>
+   <Field name="f644"/>
+   <Field name="f645"/>
+   <Field name="f646"/>
+   <Field name="f647"/>
+   <Field name="f648"/>
+   <Field name="f649"/>
+   <Field name="f650"/>
+   <Field name="f651"/>
+   <Field name="f652"/>
+   <Field name="f653"/>
+   <Field name="f654"/>
+   <Field name="f655"/>
+   <Field name="f656"/>
+   <Field name="f657"/>
+   <Field name="f658"/>
+   <Field name="f659"/>
+   <Field name="f660"/>
+   <Field name="f661"/>
+   <Field name="f662"/>
+   <Field name="f663"/>
+   <Field name="f664"/>
+   <Field name="f665"/>
+   <Field name="f666"/>
+   <Field name="f667"/>
+   <Field name="f668"/>
+   <Field name="f669"/>
+   <Field name="f670"/>
+   <Field name="f671"/>
+   <Field name="f672"/>
+   <Field name="f673"/>
+   <Field name="f674"/>
+   <Field name="f675"/>
+   <Field name="f676"/>
+   <Field name="f677"/>
+   <Field name="f678"/>
+   <Field name="f679"/>
+   <Field name="f680"/>
+   <Field name="f681"/>
+   <Field name="f682"/>
+   <Field name="f683"/>
+   <Field name="f684"/>
+   <Field name="f685"/>
+   <Field name="f686"/>
+   <Field name="f687"/>
+   <Field name="f688"/>
+   <Field name="f689"/>
+   <Field name="f690"/>
+   <Field name="f691"/>
+   <Field name="f692"/>
+   <Field name="f693"/>
+   <Field name="f694"/>
+   <Field name="f695"/>
+   <Field name="f696"/>
+   <Field name="f697"/>
+   <Field name="f698"/>
+   <Field name="f699"/>
+   <Field name="f700"/>
+   <Field name="f701"/>
+   <Field name="f702"/>
+   <Field name="f703"/>
+   <Field name="f704"/>
+   <Field name="f705"/>
+   <Field name="f706"/>
+   <Field name="f707"/>
+   <Field name="f708"/>
+   <Field name="f709"/>
+   <Field name="f710"/>
+   <Field name="f711"/>
+   <Field name="f712"/>
+   <Field name="f713"/>
+   <Field name="f714"/>
+   <Field name="f715"/>
+   <Field name="f716"/>
+   <Field name="f717"/>
+   <Field name="f718"/>
+   <Field name="f719"/>
+   <Field name="f720"/>
+   <Field name="f721"/>
+   <Field name="f722"/>
+   <Field name="f723"/>
+   <Field name="f724"/>
+   <Field name="f725"/>
+   <Field name="f726"/>
+   <Field name="f727"/>
+   <Field name="f728"/>
+   <Field name="f729"/>
+   <Field name="f730"/>
+   <Field name="f731"/>
+   <Field name="f732"/>
+   <Field name="f733"/>
+   <Field name="f734"/>
+   <Field name="f735"/>
+   <Field name="f736"/>
+   <Field name="f737"/>
+   <Field name="f738"/>
+   <Field name="f739"/>
+   <Field name="f740"/>
+   <Field name="f741"/>
+   <Field name="f742"/>
+   <Field name="f743"/>
+   <Field name="f744"/>
+   <Field name="f745"/>
+   <Field name="f746"/>
+   <Field name="f747"/>
+   <Field name="f748"/>
+   <Field name="f749"/>
+   <Field name="f750"/>
+   <Field name="f751"/>
+   <Field name="f752"/>
+   <Field name="f753"/>
+   <Field name="f754"/>
+   <Field name="f755"/>
+   <Field name="f756"/>
+   <Field name="f757"/>
+   <Field name="f758"/>
+   <Field name="f759"/>
+   <Field name="f760"/>
+   <Field name="f761"/>
+   <Field name="f762"/>
+   <Field name="f763"/>
+   <Field name="f764"/>
+   <Field name="f765"/>
+   <Field name="f766"/>
+   <Field name="f767"/>
+   <Field name="f768"/>
+   <Field name="f769"/>
+   <Field name="f770"/>
+   <Field name="f771"/>
+   <Field name="f772"/>
+   <Field name="f773"/>
+   <Field name="f774"/>
+   <Field name="f775"/>
+   <Field name="f776"/>
+   <Field name="f777"/>
+   <Field name="f778"/>
+   <Field name="f779"/>
+   <Field name="f780"/>
+   <Field name="f781"/>
+   <Field name="f782"/>
+   <Field name="f783"/>
+   <Signature>Sampledata_Format</Signature><Field name="f784"/>
+  </Definition>
+  <Definition body="23938" end="23975" fullname="ml.tests.explanatory.sample_table" inherit_type="local" line="1594" name="sample_table" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="23923">
+   <Signature>sample_table</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24238" end="24243" fullname="ml.tests.explanatory.sparsityparam" inherit_type="local" line="1604" name="sparsityParam" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24215">
+   <Signature>REAL8 sparsityParam</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24257" end="24262" fullname="ml.tests.explanatory.beta" inherit_type="local" line="1605" name="BETA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24244">
+   <Signature>REAL8 BETA</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24277" end="24282" fullname="ml.tests.explanatory.alpha" inherit_type="local" line="1606" name="ALPHA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24263">
+   <Signature>REAL8 ALPHA</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24298" end="24302" fullname="ml.tests.explanatory.lambda" inherit_type="local" line="1607" name="LAMBDA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24283">
+   <Signature>REAL8 LAMBDA</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24323" end="24325" fullname="ml.tests.explanatory.maxiter" inherit_type="local" line="1608" name="MaxIter" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24303">
+   <Signature>UNSIGNED2 MaxIter</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24343" end="24345" fullname="ml.tests.explanatory.prows" inherit_type="local" line="1609" name="prows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24326">
+   <Signature>UNSIGNED4 prows</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24363" end="24365" fullname="ml.tests.explanatory.pcols" inherit_type="local" line="1610" name="pcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24346">
+   <Signature>UNSIGNED4 pcols</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24385" end="24387" fullname="ml.tests.explanatory.maxrows" inherit_type="local" line="1611" name="Maxrows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24366">
+   <Signature>UNSIGNED4 Maxrows</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24407" end="24409" fullname="ml.tests.explanatory.maxcols" inherit_type="local" line="1612" name="Maxcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24388">
+   <Signature>UNSIGNED4 Maxcols</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24488" end="24541" fullname="ml.tests.explanatory.intw" inherit_type="local" line="1614" name="IntW" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24481">
+   <Signature>IntW</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24549" end="24599" fullname="ml.tests.explanatory.intb" inherit_type="local" line="1615" name="Intb" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24542">
+   <Signature>Intb</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24665" end="24677" fullname="ml.tests.explanatory.x" inherit_type="local" line="1620" name="X" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24662">
+   <Signature>X</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24687" end="24707" fullname="ml.tests.explanatory.dt" inherit_type="local" line="1625" name="dt" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24682">
+   <Signature>dt</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24715" end="24719" fullname="ml.tests.explanatory.dtmp" inherit_type="local" line="1626" name="dTmp" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24708">
+   <Signature>dTmp</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24724" end="24744" fullname="ml.tests.explanatory.d" inherit_type="local" line="1627" name="d" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24720">
+   <Signature>d</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24855" end="24869" fullname="ml.tests.explanatory.m" inherit_type="local" line="1628" name="m" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24851">
+   <Signature>m</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24896" end="24901" fullname="ml.tests.explanatory.m_1" inherit_type="local" line="1629" name="m_1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24890">
+   <Signature>m_1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24916" end="25092" fullname="ml.tests.explanatory.sizerec" inherit_type="local" line="1631" name="sizeRec" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="24906">
+   <Type>record</Type>
+   <Field name="m_rows"/>
+   <Field name="m_cols"/>
+   <Field name="f_b_rows"/>
+   <Signature>sizeRec</Signature><Field name="f_b_cols"/>
+  </Definition>
+  <Definition body="25134" end="25147" fullname="ml.tests.explanatory.havemaxrow" inherit_type="local" line="1638" name="havemaxrow" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25121">
+   <Signature>havemaxrow</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25166" end="25179" fullname="ml.tests.explanatory.havemaxcol" inherit_type="local" line="1639" name="havemaxcol" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25153">
+   <Signature>havemaxcol</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25201" end="25228" fullname="ml.tests.explanatory.havemaxrowcol" inherit_type="local" line="1640" name="havemaxrowcol" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25185">
+   <Signature>havemaxrowcol</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25243" end="25264" fullname="ml.tests.explanatory.dstats" inherit_type="local" line="1641" name="dstats" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25234">
+   <Signature>dstats</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25276" end="25289" fullname="ml.tests.explanatory.d_n" inherit_type="local" line="1642" name="d_n" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25270">
+   <Signature>d_n</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25301" end="25314" fullname="ml.tests.explanatory.d_m" inherit_type="local" line="1643" name="d_m" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25295">
+   <Signature>d_m</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25333" end="25338" fullname="ml.tests.explanatory.output_num" inherit_type="local" line="1644" name="output_num" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25320">
+   <Signature>output_num</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25355" end="25395" fullname="PBblas.AutoBVMap" inherit_type="local" line="1645" name="derivemap" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25343" target="../../../pbblas/autobvmap.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.autobvmap.nodes_available" inherit_type="local" line="12" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="363" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="427" end="3220" fullname="pbblas.autobvmap.mapmatrix" inherit_type="local" line="13" name="MapMatrix" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="408" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>MapMatrix</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3260" end="3276" fullname="pbblas.autobvmap.this_node" inherit_type="local" line="95" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3235" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3306" end="3356" exported="1" fullname="pbblas.autobvmap.row_blocks" inherit_type="override" line="97" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3284" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3381" end="3431" exported="1" fullname="pbblas.autobvmap.col_blocks" inherit_type="override" line="98" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3359" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3450" end="3461" fullname="pbblas.autobvmap.rowcol" inherit_type="local" line="99" name="rowcol" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3434" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>rowcol</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3486" end="3497" fullname="pbblas.autobvmap.block_rows" inherit_type="local" line="100" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3464" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3522" end="3533" fullname="pbblas.autobvmap.block_cols" inherit_type="local" line="101" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3500" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3563" end="3571" exported="1" fullname="pbblas.autobvmap.matrix_rows" inherit_type="override" line="103" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3541" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3596" end="3604" exported="1" fullname="pbblas.autobvmap.matrix_cols" inherit_type="override" line="104" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3574" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3632" end="3657" exported="1" fullname="pbblas.autobvmap.partitions_used" inherit_type="override" line="105" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3607" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3682" end="3721" exported="1" fullname="pbblas.autobvmap.nodes_used" inherit_type="override" line="106" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3660" target="../../../pbblas/autobvmap.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3780" end="3814" exported="1" fullname="pbblas.autobvmap.row_block" inherit_type="override" line="108" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3740" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="3857" end="3891" exported="1" fullname="pbblas.autobvmap.col_block" inherit_type="override" line="109" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3817" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="3949" end="3977" exported="1" fullname="pbblas.autobvmap.assigned_part" inherit_type="override" line="110" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3894" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="4018" end="4040" exported="1" fullname="pbblas.autobvmap.assigned_node" inherit_type="override" line="111" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3980" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="4079" end="4122" exported="1" fullname="pbblas.autobvmap.first_row" inherit_type="override" line="112" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4043" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="4161" end="4204" exported="1" fullname="pbblas.autobvmap.first_col" inherit_type="override" line="113" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4125" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="4243" end="4288" exported="1" fullname="pbblas.autobvmap.part_rows" inherit_type="override" line="114" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4207" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="4327" end="4372" exported="1" fullname="pbblas.autobvmap.part_cols" inherit_type="override" line="115" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4291" target="../../../pbblas/autobvmap.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>derivemap</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="25413" end="25526" fullname="ml.tests.explanatory.sizetable" inherit_type="local" line="1646" name="sizeTable" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25401">
+   <Signature>sizeTable</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25566" end="25670" fullname="PBblas.Matrix_Map" inherit_type="local" line="1648" name="dmap" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25559" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>dmap</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="25683" end="25722" fullname="ml.tests.explanatory.ddist" inherit_type="local" line="1649" name="ddist" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25675">
+   <Signature>ddist</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25775" end="25799" fullname="ml.tests.explanatory.w1_mat" inherit_type="local" line="1651" name="w1_mat" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25766">
+   <Signature>w1_mat</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25815" end="25846" fullname="ml.tests.explanatory.w1_mat_x" inherit_type="local" line="1652" name="w1_mat_x" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25804">
+   <Signature>w1_mat_x</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25862" end="25893" fullname="ml.tests.explanatory.w1_mat_y" inherit_type="local" line="1653" name="w1_mat_y" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25851">
+   <Signature>w1_mat_y</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25906" end="25991" fullname="PBblas.Matrix_Map" inherit_type="local" line="1654" name="w1map" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25898" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>w1map</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="26005" end="26050" fullname="ml.tests.explanatory.w1dist" inherit_type="local" line="1655" name="w1dist" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="25996">
+   <Signature>w1dist</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26064" end="26088" fullname="ml.tests.explanatory.w2_mat" inherit_type="local" line="1656" name="w2_mat" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26055">
+   <Signature>w2_mat</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26104" end="26114" fullname="ml.tests.explanatory.w2_mat_x" inherit_type="local" line="1657" name="w2_mat_x" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26093">
+   <Signature>w2_mat_x</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26130" end="26140" fullname="ml.tests.explanatory.w2_mat_y" inherit_type="local" line="1658" name="w2_mat_y" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26119">
+   <Signature>w2_mat_y</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26153" end="26238" fullname="PBblas.Matrix_Map" inherit_type="local" line="1659" name="w2map" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26145" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>w2map</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="26252" end="26297" fullname="ml.tests.explanatory.w2dist" inherit_type="local" line="1660" name="w2dist" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26243">
+   <Signature>w2dist</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26362" end="26386" fullname="ml.tests.explanatory.b1vec" inherit_type="local" line="1662" name="b1vec" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26354">
+   <Signature>b1vec</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26401" end="26431" fullname="ml.tests.explanatory.b1vec_x" inherit_type="local" line="1663" name="b1vec_x" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26391">
+   <Signature>b1vec_x</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26447" end="26504" fullname="PBblas.Matrix_Map" inherit_type="local" line="1664" name="b1vecmap" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26436" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>b1vecmap</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="26521" end="26568" fullname="ml.tests.explanatory.b1vecdist" inherit_type="local" line="1665" name="b1vecdist" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26509">
+   <Signature>b1vecdist</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26581" end="26605" fullname="ml.tests.explanatory.b2vec" inherit_type="local" line="1666" name="b2vec" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26573">
+   <Signature>b2vec</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26620" end="26650" fullname="ml.tests.explanatory.b2vec_x" inherit_type="local" line="1667" name="b2vec_x" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26610">
+   <Signature>b2vec_x</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26666" end="26723" fullname="PBblas.Matrix_Map" inherit_type="local" line="1668" name="b2vecmap" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26655" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>b2vecmap</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="26740" end="26787" fullname="ml.tests.explanatory.b2vecdist" inherit_type="local" line="1669" name="b2vecdist" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26728">
+   <Signature>b2vecdist</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="26925" end="26936" fullname="ml.tests.explanatory.siggrad" inherit_type="local" line="1672" name="siggrad" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26821">
+   <Type>function</Type>
+   <Signature>Types.value_t siggrad(PBblas.Types.value_t v, PBblas.Types.dimension_t r, PBblas.Types.dimension_t c)</Signature><Params>
+    <Param name="v"/>
+    <Param name="r"/>
+    <Param name="c"/>
+   </Params>
+  </Definition>
+  <Definition body="27052" end="27069" fullname="ml.tests.explanatory.sigmoid" inherit_type="local" line="1673" name="sigmoid" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="26948">
+   <Type>function</Type>
+   <Signature>Types.value_t sigmoid(PBblas.Types.value_t v, PBblas.Types.dimension_t r, PBblas.Types.dimension_t c)</Signature><Params>
+    <Param name="v"/>
+    <Param name="r"/>
+    <Param name="c"/>
+   </Params>
+  </Definition>
+  <Definition body="27098" end="27175" fullname="PBblas.Matrix_Map" inherit_type="local" line="1675" name="b1map" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27090" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>b1map</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="27188" end="27265" fullname="PBblas.Matrix_Map" inherit_type="local" line="1676" name="b2map" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27180" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>b2map</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="27278" end="27285" fullname="PBblas.Matrix_Map" inherit_type="local" line="1677" name="a2map" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27270" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>a2map</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="27298" end="27305" fullname="PBblas.Matrix_Map" inherit_type="local" line="1678" name="a3map" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27290" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>a3map</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="27321" end="27331" fullname="ml.tests.explanatory.hl_nodes" inherit_type="local" line="1679" name="HL_nodes" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27310">
+   <Signature>HL_nodes</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="27383" end="27393" fullname="PBblas.Matrix_Map" inherit_type="local" line="1680" name="Hiddmap" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27373" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>Hiddmap</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="27448" end="27499" fullname="PBblas.Matrix_Map" inherit_type="local" line="1682" name="Ones_VecMap" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27434" target="../../../pbblas/matrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_available</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>this_node</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>block_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../../pbblas/matrix_map.ecl.xml">
+    <Signature>nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>assigned_node(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_row(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>first_col(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_rows(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../../pbblas/matrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>part_cols(partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>Ones_VecMap</Signature><Parents>
+    <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="27581" end="27699" fullname="ml.tests.explanatory.gen" inherit_type="local" line="1684" name="gen" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27531">
+   <Type>transform</Type>
+   <Params>
+    <Param name="c"/>
+    <Param name="NumRows"/>
+   </Params>
+   <Signature>Layout_Cell gen(UNSIGNED4 c, UNSIGNED4 NumRows)</Signature><Return>layout_cell</Return>
+  </Definition>
+  <Definition body="27782" end="27823" fullname="ml.tests.explanatory.ones_vec" inherit_type="local" line="1690" name="Ones_Vec" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27771">
+   <Signature>Ones_Vec</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="27843" end="27895" fullname="ml.tests.explanatory.ones_vecdist" inherit_type="local" line="1691" name="Ones_Vecdist" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27828">
+   <Signature>Ones_Vecdist</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="27971" end="28060" fullname="ml.tests.explanatory.b1m" inherit_type="local" line="1695" name="b1m" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="27965">
+   <Signature>b1m</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="28090" end="28170" fullname="ml.tests.explanatory.z2" inherit_type="local" line="1697" name="z2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="28085">
+   <Signature>z2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="28205" end="28248" fullname="ml.tests.explanatory.a2" inherit_type="local" line="1699" name="a2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="28200">
+   <Signature>a2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="28436" end="28525" fullname="ml.tests.explanatory.b2m" inherit_type="local" line="1704" name="b2m" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="28430">
+   <Signature>b2m</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="28658" end="28725" fullname="ml.tests.explanatory.z3_tmp" inherit_type="local" line="1708" name="z3_tmp" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="28649">
+   <Signature>z3_tmp</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="28735" end="28770" fullname="ml.tests.explanatory.z3" inherit_type="local" line="1709" name="z3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="28730">
+   <Signature>z3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="28794" end="28831" fullname="ml.tests.explanatory.z3_matrix" inherit_type="local" line="1711" name="z3_matrix" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="28782">
+   <Signature>z3_matrix</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="28846" end="28880" fullname="ml.tests.explanatory.z3_rows" inherit_type="local" line="1712" name="z3_rows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl" start="28836">
+   <Signature>z3_rows</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="../../appendid.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DeepLearning.ecl" name="ML.DeepLearning" target="../../deeplearning.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" name="ML.NeuralNetworks" target="../../neuralnetworks.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="../../fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../../../pbblas/autobvmap.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../../pbblas/pb_dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../../pbblas/hadamardproduct.ecl.xml"/></Meta>

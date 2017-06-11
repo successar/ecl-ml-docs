@@ -1,0 +1,412 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : value_record
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : d
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro to reconstitute an original matrix from a NumericField-formatted
+// dataset.  In the simplest case, the assumption is that the field order
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro to reconstitute an original matrix from a NumericField-formatted
+// dataset.  In the simplest case, the assumption is that the field order
+// of the resulting table is in line with the field numbers in the input
+// dataset, with the ID field as the first field.  If a field mapping is
+// specified, this order can be re-arranged.
+//   dIn  : The name of the input dataset in NumericField format
+//   lOut : The name of the resulting layout the data should be in
+//   dOut : The name of the resulting dataset
+//   dMap : [OPTIONAL] If the user customized the fields used in the ToField
+//          process, they should include the mapping table that was created
+//          automatically by ToField here so the fields map back properly.
+//          This will be named NF_map, where NF is the name of the
+//          NumericField table that was created by ToField.
+//  Examples (used to reconstitute the ToField examples):
+//    ML.FromField(dMatrix,lOrig,dResults)
+//    ML.FromField(dMatrix,lOrig,dResults,dOrigData_Map)
+//
+// IMPORTANT NOTE: If fields in lOut were disregarded by the ToField macro
+// during the creation of the NumericField table, those fields WILL NOT be
+// reconstituted by this macro.  They will be left blank or zero.
+//---------------------------------------------------------------------------
+ FromField(dIn,lOut,dOut,dMap='')MACRO
+  LOADXML('<xml/>')
+  // If a mapping table was specified, we need to join it to the input data
+  // to marry the field number to the field name.
+  #UNIQUENAME(id)
+  #UNIQUENAME(dInPrep)
+  #IF(#TEXT(dMap)='')
+    %dInPrep%TABLE(dIn,{UNSIGNED %id%iddIn})
+    // Variable to keep track of which field number we are on
+    #D
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro to reconstitute an original matrix from a NumericField-formatted
+// dataset.  In the simplest case, the assumption is that the field order
+// of the resulting table is in line with the field numbers in the input
+// dataset, with the ID field as the first field.  If a field mapping is
+// specified, this order can be re-arranged.
+//   dIn  : The name of the input dataset in NumericField format
+//   lOut : The name of the resulting layout the data should be in
+//   dOut : The name of the resulting dataset
+//   dMap : [OPTIONAL] If the user customized the fields used in the ToField
+//          process, they should include the mapping table that was created
+//          automatically by ToField here so the fields map back properly.
+//          This will be named NF_map, where NF is the name of the
+//          NumericField table that was created by ToField.
+//  Examples (used to reconstitute the ToField examples):
+//    ML.FromField(dMatrix,lOrig,dResults)
+//    ML.FromField(dMatrix,lOrig,dResults,dOrigData_Map)
+//
+// IMPORTANT NOTE: If fields in lOut were disregarded by the ToField macro
+// during the creation of the NumericField table, those fields WILL NOT be
+// reconstituted by this macro.  They will be left blank or zero.
+//---------------------------------------------------------------------------
+ FromField(dIn,lOut,dOut,dMap='')MACRO
+  LOADXML('<xml/>')
+  // If a mapping table was specified, we need to join it to the input data
+  // to marry the field number to the field name.
+  #UNIQUENAME(id)
+  #UNIQUENAME(dInPrep)
+  #IF(#TEXT(dMap)='')
+    %dInPrep%TABLE(dIn,{UNSIGNED %id%iddIn})
+    // Variable to keep track of which field number we are on
+    #DECLARE(iUnPivotLoop) #SET(iUnPivotLoop,0)
+  #ELSE
+    #UNIQUENAME(dTmp)
+    %dTmp%JOIN(dIn,dMap((UNSIGNED)assigned_name>0),LEFT.number=(UNSI
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //---------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //-----------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : //-----
+			<ul>
+				
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : value_record
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : d
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro to reconstitute an original matrix from a NumericField-formatted
+// dataset.  In the simplest case, the assumption is that the field order
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro to reconstitute an original matrix from a NumericField-formatted
+// dataset.  In the simplest case, the assumption is that the field order
+// of the resulting table is in line with the field numbers in the input
+// dataset, with the ID field as the first field.  If a field mapping is
+// specified, this order can be re-arranged.
+//   dIn  : The name of the input dataset in NumericField format
+//   lOut : The name of the resulting layout the data should be in
+//   dOut : The name of the resulting dataset
+//   dMap : [OPTIONAL] If the user customized the fields used in the ToField
+//          process, they should include the mapping table that was created
+//          automatically by ToField here so the fields map back properly.
+//          This will be named NF_map, where NF is the name of the
+//          NumericField table that was created by ToField.
+//  Examples (used to reconstitute the ToField examples):
+//    ML.FromField(dMatrix,lOrig,dResults)
+//    ML.FromField(dMatrix,lOrig,dResults,dOrigData_Map)
+//
+// IMPORTANT NOTE: If fields in lOut were disregarded by the ToField macro
+// during the creation of the NumericField table, those fields WILL NOT be
+// reconstituted by this macro.  They will be left blank or zero.
+//---------------------------------------------------------------------------
+ FromField(dIn,lOut,dOut,dMap='')MACRO
+  LOADXML('<xml/>')
+  // If a mapping table was specified, we need to join it to the input data
+  // to marry the field number to the field name.
+  #UNIQUENAME(id)
+  #UNIQUENAME(dInPrep)
+  #IF(#TEXT(dMap)='')
+    %dInPrep%TABLE(dIn,{UNSIGNED %id%iddIn})
+    // Variable to keep track of which field number we are on
+    #D
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro to reconstitute an original matrix from a NumericField-formatted
+// dataset.  In the simplest case, the assumption is that the field order
+// of the resulting table is in line with the field numbers in the input
+// dataset, with the ID field as the first field.  If a field mapping is
+// specified, this order can be re-arranged.
+//   dIn  : The name of the input dataset in NumericField format
+//   lOut : The name of the resulting layout the data should be in
+//   dOut : The name of the resulting dataset
+//   dMap : [OPTIONAL] If the user customized the fields used in the ToField
+//          process, they should include the mapping table that was created
+//          automatically by ToField here so the fields map back properly.
+//          This will be named NF_map, where NF is the name of the
+//          NumericField table that was created by ToField.
+//  Examples (used to reconstitute the ToField examples):
+//    ML.FromField(dMatrix,lOrig,dResults)
+//    ML.FromField(dMatrix,lOrig,dResults,dOrigData_Map)
+//
+// IMPORTANT NOTE: If fields in lOut were disregarded by the ToField macro
+// during the creation of the NumericField table, those fields WILL NOT be
+// reconstituted by this macro.  They will be left blank or zero.
+//---------------------------------------------------------------------------
+ FromField(dIn,lOut,dOut,dMap='')MACRO
+  LOADXML('<xml/>')
+  // If a mapping table was specified, we need to join it to the input data
+  // to marry the field number to the field name.
+  #UNIQUENAME(id)
+  #UNIQUENAME(dInPrep)
+  #IF(#TEXT(dMap)='')
+    %dInPrep%TABLE(dIn,{UNSIGNED %id%iddIn})
+    // Variable to keep track of which field number we are on
+    #DECLARE(iUnPivotLoop) #SET(iUnPivotLoop,0)
+  #ELSE
+    #UNIQUENAME(dTmp)
+    %dTmp%JOIN(dIn,dMap((UNSIGNED)assigned_name>0),LEFT.number=(UNSI
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //---------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //-----------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : //-----
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+</body>
+</html>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="Examples.Sentilyze.PreProcess" sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" target="preprocess.ecl.xml">
+  <Definition body="299" end="2945" exported="1" fullname="Examples.Sentilyze.PreProcess" inherit_type="local" line="10" name="PreProcess" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="279">
+   <Type>module</Type>
+   <Definition body="346" end="789" exported="1" fullname="examples.sentilyze.preprocess.removefeatures" inherit_type="local" line="11" name="RemoveFeatures" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="308">
+    <Type>function</Type>
+    <Signature>RemoveFeatures(STRING tweet)</Signature><Params>
+     <Param name="tweet"/>
+    </Params>
+   </Definition>
+   <Definition body="831" end="1324" exported="1" fullname="examples.sentilyze.preprocess.replacefeatures" inherit_type="local" line="20" name="ReplaceFeatures" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="792">
+    <Type>function</Type>
+    <Signature>ReplaceFeatures(STRING tweet)</Signature><Params>
+     <Param name="tweet"/>
+    </Params>
+   </Definition>
+   <Definition body="1375" end="1524" exported="1" fullname="examples.sentilyze.preprocess.removert" inherit_type="local" line="29" name="RemoveRT" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1327">
+    <Type>function</Type>
+    <Signature>RemoveRT(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+     <Param name="T"/>
+    </Params>
+   </Definition>
+   <Definition body="1578" end="1704" exported="1" fullname="examples.sentilyze.preprocess.removeblank" inherit_type="local" line="33" name="RemoveBlank" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1527">
+    <Type>function</Type>
+    <Signature>RemoveBlank(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+     <Param name="T"/>
+    </Params>
+   </Definition>
+   <Definition body="1767" end="1874" exported="1" fullname="examples.sentilyze.preprocess.converttoraw" inherit_type="local" line="37" name="ConvertToRaw" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1707">
+    <Type>function</Type>
+    <Signature>ConvertToRaw(DATASET(Sentilyze.Types.TweetType) T)</Signature><Params>
+     <Param name="T"/>
+    </Params>
+   </Definition>
+   <Definition body="1998" end="2162" exported="1" fullname="examples.sentilyze.preprocess.removeanalysis" inherit_type="local" line="42" name="RemoveAnalysis" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1944">
+    <Type>function</Type>
+    <Signature>RemoveAnalysis(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+     <Param name="T"/>
+    </Params>
+   </Definition>
+   <Definition body="2220" end="2385" exported="1" fullname="examples.sentilyze.preprocess.replaceanalysis" inherit_type="local" line="48" name="ReplaceAnalysis" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="2165">
+    <Type>function</Type>
+    <Signature>ReplaceAnalysis(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+     <Param name="T"/>
+    </Params>
+   </Definition>
+   <Definition body="2507" end="2694" exported="1" fullname="examples.sentilyze.preprocess.removetraining" inherit_type="local" line="55" name="RemoveTraining" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="2453">
+    <Type>function</Type>
+    <Signature>RemoveTraining(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+     <Param name="T"/>
+    </Params>
+   </Definition>
+   <Definition body="2752" end="2939" exported="1" fullname="examples.sentilyze.preprocess.replacetraining" inherit_type="local" line="62" name="ReplaceTraining" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="2697">
+    <Type>function</Type>
+    <Signature>ReplaceTraining(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+     <Param name="T"/>
+    </Params>
+   </Definition>
+   <Signature>PreProcess</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="211" fullname="Examples.Sentilyze" inherit_type="local" line="6" name="Sentilyze" ref="examples.sentilyze" start="211" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="251" fullname="std.Str" inherit_type="local" line="7" name="Str" ref="std.str" start="251" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="274" fullname="ML" inherit_type="local" line="8" name="ML" ref="ml" remotescope="1" start="274" target="../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" name="Examples.Sentilyze.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="../../ml/docs/types.ecl.xml"/></Meta>

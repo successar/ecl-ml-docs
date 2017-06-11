@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Is" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Is.ecl" target="is.ecl.xml"/>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/></Meta>

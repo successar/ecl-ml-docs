@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Types.ecl" name="TestingSuite.Utils.Types" target="../utils/types.ecl.xml"/><Source name="TestingSuite.BenchmarkResults.rfc_performance_scores_c" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/BenchmarkResults/rfc_performance_scores_c.ecl" target="rfc_performance_scores_c.ecl.xml">
+  <Definition body="76" end="1537" exported="1" fullname="testingsuite.benchmarkresults.rfc_performance_scores_c" inherit_type="local" line="2" name="rfc_performance_scores_c" source="/media/sarthak/Data/ecl-ml/TestingSuite/BenchmarkResults/rfc_performance_scores_c.ecl" start="42">
+   <Signature>rfc_performance_scores_c</Signature><Type>attribute</Type>
+  </Definition>
+  <Import body="0" end="7" fullname="TestingSuite.Utils.Types" inherit_type="local" line="1" name="Types" ref="testingsuite.utils.types" start="7" target="../utils/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>

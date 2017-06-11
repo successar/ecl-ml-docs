@@ -1,0 +1,342 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml.docs
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+				std.str
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : CoLocation
+			<ul>
+				
+		<li>
+			FUNCTION : Words(DATASET(Docs.Types.Raw) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Lexicon(DATASET(Docs.Types.WordElement) Words)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : AllNGramsLayout
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : AllNGramsLayout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : MutualInfo(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Docs.Types.t_value Support(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Docs.Types.t_value Confidence(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Docs.Types.t_value Lift(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Docs.Types.t_value Conviction(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : NGramsLayout
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NGramsLayout NGrams(DATASET(AllNGramsLayout) d01)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SubGrams(DATASET(NGramsLayout) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SubGramsLayout
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : PMI(DATASET(SubGramsLayout) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitCompare(DATASET(NGramsLayout) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : STRING ShowPhrase(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : CoLocation
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : Words(DATASET(Docs.Types.Raw) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Lexicon(DATASET(Docs.Types.WordElement) Words)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : AllNGramsLayout
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : AllNGramsLayout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : MutualInfo(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Docs.Types.t_value Support(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Docs.Types.t_value Confidence(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Docs.Types.t_value Lift(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Docs.Types.t_value Conviction(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : NGramsLayout
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NGramsLayout NGrams(DATASET(AllNGramsLayout) d01)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SubGrams(DATASET(NGramsLayout) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SubGramsLayout
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : PMI(DATASET(SubGramsLayout) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitCompare(DATASET(NGramsLayout) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : STRING ShowPhrase(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

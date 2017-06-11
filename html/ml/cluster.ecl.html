@@ -1,0 +1,5917 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+				std.str
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : Cluster
+			<ul>
+				
+		<li>
+			RECORD : ClusterPair
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : c_model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : DF
+			<ul>
+				
+		<li>
+			MODULE : Default
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : QEuclideanSquared
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : QEuclidean
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : EuclideanSquared
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Euclidean
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Manhattan
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Cosine
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Tanimoto
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : WEuclideanSquared
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : WEuclidean
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : WManhattan
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Maximum
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : WCosine
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : WTanimoto
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UNSIGNED1 PModel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : MissingAppx
+			<ul>
+				
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 Pmodel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : CoOccur
+			<ul>
+				
+		<li>
+			FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED1 Pmodel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Distances(DATASET(Types.NumericField) d01,DATASET(Types.NumericField) d02,DF.Default Control = DF.Euclidean)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Closest(DATASET(Mat.Types.Element) dDistances)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : KMeans(DATASET(Types.NumericField) d01,DATASET(Types.NumericField) d02,UNSIGNED n=1,REAL nConverge=0.0,DF.Default fDist=DF.Euclidean)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : iOffset
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : lIterations
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.NumericField dResult(UNSIGNED n=n,DATASET(lIterations) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : dDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : dDistanceDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : dIterations
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : lIterations AllResults
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED Convergence
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.NumericField Result(UNSIGNED n=Convergence,DATASET(lIterations) d=dIterations)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.NumericField Delta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DistanceDelta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Allegiances(UNSIGNED n=Convergence)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : UNSIGNED Allegiance(UNSIGNED id,UNSIGNED n=Convergence)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : c_Method
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : AggloN(DATASET(Types.NumericField) d,UNSIGNED4 N,DF.Default Dist=DF.QEuclidean, c_Method cm=c_Method.min_dist)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : res
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Dendrogram
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NewickDendrogram
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Distances
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Clusters
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : Cluster
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : ClusterPair
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : c_model
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : DF
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	MODULE : Default
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : QEuclideanSquared
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : QEuclidean
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.qeuclideansquared
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : EuclideanSquared
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.qeuclideansquared
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Euclidean
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.euclideansquared
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Manhattan
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Cosine
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Tanimoto
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.cosine
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : WEuclideanSquared
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : WEuclidean
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.weuclideansquared
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : WManhattan
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Maximum
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.wmanhattan
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : WCosine
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : WTanimoto
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UNSIGNED1 PModel
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : MissingAppx
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 Pmodel
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : CoOccur
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="cluster.ecl.html">
+					ml.cluster.df.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : REAL8 EV2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : IV2(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb2(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb3(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SummaryID2(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join11(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join12(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join13(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Join21(ClusterPair im,Types.NumericField ri)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Background(Types.NumericField va1,Types.NumericField va2)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal BackFront(Mat.Types.Element Back,ClusterPair Fro)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED1 Pmodel
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 EV1(DATASET(Types.NumericField) d)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BOOLEAN JoinFilter(Types.t_FieldReal x,Types.t_FieldReal y,REAL8 ex1)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal IV1(Types.t_FieldReal x,Types.t_FieldReal y)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Comb1(DATASET(ClusterPair) d,REAL8 ev1,REAL8 ev2)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	
+	<p>	FUNCTION : Distances(DATASET(Types.NumericField) d01,DATASET(Types.NumericField) d02,DF.Default Control = DF.Euclidean)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Closest(DATASET(Mat.Types.Element) dDistances)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : KMeans(DATASET(Types.NumericField) d01,DATASET(Types.NumericField) d02,UNSIGNED n=1,REAL nConverge=0.0,DF.Default fDist=DF.Euclidean)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : iOffset
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : lIterations
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.NumericField dResult(UNSIGNED n=n,DATASET(lIterations) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : dDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : dDistanceDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : dIterations
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : lIterations AllResults
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED Convergence
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.NumericField Result(UNSIGNED n=Convergence,DATASET(lIterations) d=dIterations)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.NumericField Delta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DistanceDelta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Allegiances(UNSIGNED n=Convergence)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : UNSIGNED Allegiance(UNSIGNED id,UNSIGNED n=Convergence)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : c_Method
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : AggloN(DATASET(Types.NumericField) d,UNSIGNED4 N,DF.Default Dist=DF.QEuclidean, c_Method cm=c_Method.min_dist)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : res
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Dendrogram
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NewickDendrogram
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Distances
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Clusters
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	
+</body>
+</html>

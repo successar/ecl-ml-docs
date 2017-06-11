@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.LibSVM.svm_cross_validate" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" target="svm_cross_validate.ecl.xml">
+  <Import body="0" end="10" fullname="ML.SVM.LibSVM.Types" inherit_type="local" line="2" name="Types" ref="ml.svm.libsvm.types" start="10" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="38" fullname="ML.SVM.LibSVM.Constants" inherit_type="local" line="3" name="Constants" ref="ml.svm.libsvm.constants" start="38" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="70" fullname="ML.SVM.LibSVM.Converted" inherit_type="local" line="4" name="Converted" ref="ml.svm.libsvm.converted" start="70" target="converted.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="115" end="143" fullname="ml.svm.libsvm.result" inherit_type="local" line="6" name="Result" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="106">
+   <Type>record</Type>
+   <Field name="mse"/>
+   <Field name="r_sq"/>
+   <Signature>Result</Signature><Field name="correct"/>
+  </Definition>
+  <Definition body="154" end="180" fullname="ml.svm.libsvm.problem" inherit_type="local" line="7" name="Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="144">
+   <Type>record</Type>
+   <Field name="elements"/>
+   <Field name="entries"/>
+   <Field name="features"/>
+   <Field name="max_value"/>
+   <Field name="y"/>
+   <Signature>Problem</Signature><Field name="x"/>
+  </Definition>
+  <Definition body="193" end="223" fullname="ml.svm.libsvm.svm_parms" inherit_type="local" line="8" name="SVM_Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="181">
+   <Type>record</Type>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="gamma"/>
+   <Field name="coef0"/>
+   <Field name="cache_size"/>
+   <Field name="eps"/>
+   <Field name="C"/>
+   <Field name="nu"/>
+   <Field name="p"/>
+   <Field name="nr_weight"/>
+   <Field name="shrinking"/>
+   <Field name="prob_est"/>
+   <Field name="lbl"/>
+   <Signature>SVM_Parms</Signature><Field name="weight"/>
+  </Definition>
+  <Definition body="234" end="260" fullname="ml.svm.libsvm.errcode" inherit_type="local" line="9" name="ErrCode" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="224">
+   <Signature>ErrCode</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="470" end="5652" exported="1" fullname="ml.svm.libsvm.svm_cross_validate" inherit_type="local" line="10" name="svm_cross_validate" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="261">
+   <Type>embed</Type>
+   <Signature>Result svm_cross_validate(SVM_Parms prm,
+                                 Problem prb,
+                                 UNSIGNED2 nr_fold,
+                                 UNSIGNED4 err_code=ErrCode)</Signature><Params>
+    <Param name="prm"/>
+    <Param name="prb"/>
+    <Param name="nr_fold"/>
+    <Param name="err_code"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../types.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/></Meta>

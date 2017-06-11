@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl"/>
+ <Source name="ML.Tests.Explanatory.10CrossValidation" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/10CrossValidation.ecl" target="10crossvalidation.ecl.xml">
+  <Import body="0" end="35" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="35" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="46" fullname="ML.Tests.Explanatory" inherit_type="local" line="3" name="TE" ref="ml.tests.explanatory" start="46" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="119" end="309" fullname="ml.tests.explanatory.indep_data" inherit_type="local" line="5" name="indep_data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/10CrossValidation.ecl" start="107">
+   <Signature>indep_data</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="320" end="364" fullname="ml.tests.explanatory.dep_data" inherit_type="local" line="6" name="dep_data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/10CrossValidation.ecl" start="310">
+   <Signature>dep_data</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="412" end="448" fullname="ml.tests.explanatory.indepdata" inherit_type="local" line="9" name="indepData" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/10CrossValidation.ecl" start="400">
+   <Signature>indepData</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="489" end="523" fullname="ml.tests.explanatory.depdata" inherit_type="local" line="11" name="depData" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/10CrossValidation.ecl" start="479">
+   <Signature>depData</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="534" end="584" fullname="ML.Classify.RandomForest" inherit_type="local" line="12" name="learner" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/10CrossValidation.ecl" start="524" target="../../classify.ecl.xml">
+   <Type>module</Type>
+   <Definition body="70470" end="70974" exported="1" fullname="ml.classify.randomforest.learnd" inherit_type="local" line="1304" name="LearnD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="70384" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="71064" end="71454" exported="1" fullname="ml.classify.randomforest.learnc" inherit_type="local" line="1311" name="LearnC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="70979" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="71624" end="71692" exported="1" fullname="ml.classify.randomforest.model" inherit_type="local" line="1318" name="Model" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="71576" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="71862" end="71931" exported="1" fullname="ml.classify.randomforest.modelc" inherit_type="local" line="1322" name="ModelC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="71813" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ModelC(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="72198" end="72277" exported="1" fullname="ml.classify.randomforest.classprobdistribd" inherit_type="local" line="1327" name="ClassProbDistribD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="72102" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="72376" end="72455" exported="1" fullname="ml.classify.randomforest.classprobdistribc" inherit_type="local" line="1330" name="ClassProbDistribC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="72282" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassProbDistribC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="72647" end="72719" exported="1" fullname="ml.classify.randomforest.classifyd" inherit_type="local" line="1334" name="ClassifyD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="72560" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="72810" end="72881" exported="1" fullname="ml.classify.randomforest.classifyc" inherit_type="local" line="1337" name="ClassifyC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="72724" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Signature>learner</Signature><Parents/>
+  </Definition>
+  <Definition body="590" end="648" fullname="ML.Tests.Explanatory.cv.CVResults" inherit_type="local" line="14" name="cv" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/10CrossValidation.ecl" start="586">
+   <Type>module</Type>
+   <Definition body="5978" end="6041" exported="1" fullname="ml.tests.explanatory.cv.cvresults.auc_curvepoints" inherit_type="local" line="119" name="AUC_curvePoints" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="5952">
+    <Signature>UCcurvePoint GetCurvePoint</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6072" end="6171" exported="1" fullname="ml.tests.explanatory.cv.cvresults.auc_scores" inherit_type="local" line="120" name="AUC_scores" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6046">
+    <Signature>AUC_curvePoin</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6202" end="6241" fullname="ML.Classify.Compare" inherit_type="local" line="121" name="TestModule" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6176" target="../../classify.ecl.xml">
+    <Type>module</Type>
+    <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+     <Signature>J</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+     <Type>record</Type>
+     <Field name="classifier"/>
+     <Field name="c_actual"/>
+     <Field name="c_modeled"/>
+     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+    </Definition>
+    <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+     <Signature>class_cnt</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+     <Signature>cfmx</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+     <Signature>cross_raw</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+     <Signature>RecallByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+     <Signature>Accuracy</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>LE(AUC_curvePoints, {posCl</Signature><Parents/>
+   </Definition>
+   <Definition body="6272" end="6301" exported="1" fullname="ml.tests.explanatory.cv.cvresults.crossassignments" inherit_type="local" line="122" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6246">
+    <Signature>}, posClass, classifier)</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6332" end="6358" exported="1" fullname="ml.tests.explanatory.cv.cvresults.recallbyclass" inherit_type="local" line="123" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6306">
+    <Signature>Classify.Compare(it_depN,</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6389" end="6418" exported="1" fullname="ml.tests.explanatory.cv.cvresults.precisionbyclass" inherit_type="local" line="124" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6363">
+    <Signature>nments  TestModule.Cross</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6449" end="6477" exported="1" fullname="ml.tests.explanatory.cv.cvresults.fp_rate_byclass" inherit_type="local" line="125" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6423">
+    <Signature>ass     TestModule.Recal</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6508" end="6529" exported="1" fullname="ml.tests.explanatory.cv.cvresults.accuracy" inherit_type="local" line="126" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6482">
+    <Signature>lass  TestModule.Precisi</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6560" end="6567" exported="1" fullname="ml.tests.explanatory.cv.cvresults.cpdn" inherit_type="local" line="127" name="CPDN" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6534">
+    <Signature>ate_ByClass   TestModule</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6598" end="6607" exported="1" fullname="ml.tests.explanatory.cv.cvresults.classn" inherit_type="local" line="128" name="classN" source="/media/sarthak/Data/ecl-ml/./ML/NFoldCrossValidation.ecl" start="6572">
+    <Signature>lass
+     Accuracy</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>cv</Signature><Parents/>
+  </Definition>
+  <Definition body="34" end="57" fullname="ml.tests.explanatory.pr_dep_toname" inherit_type="local" line="81" name="pr_dep_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//--------------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="36" end="281" fullname="ml.tests.explanatory.pr_indep_toname" inherit_type="local" line="81" name="pr_indep_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//----------------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="36" end="58" fullname="ml.tests.explanatory.pr_dep_tonumber" inherit_type="local" line="83" name="pr_dep_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//----------------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="38" end="282" fullname="ml.tests.explanatory.pr_indep_tonumber" inherit_type="local" line="83" name="pr_indep_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//------------------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.explanatory.pr_dep" inherit_type="local" line="85" name="pr_dep" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.explanatory.pr_indep" inherit_type="local" line="85" name="pr_indep" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="12" end="2800" fullname="ml.tests.explanatory.pr_dep_map" inherit_type="local" line="87" name="pr_dep_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//----------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="14" end="2800" fullname="ml.tests.explanatory.pr_indep_map" inherit_type="local" line="87" name="pr_indep_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//------------</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" name="ML.Tests.Explanatory.AdultDS" target="adultds.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" name="ML.Discretize" target="../../discretize.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Classify.ecl" name="ML.Classify" target="../../classify.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" name="ML.NaiveBayes" target="../../naivebayes.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="../../fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" name="ML.NeuralNetworks" target="../../neuralnetworks.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../../../pbblas/autobvmap.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../../pbblas/hadamardproduct.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../../pbblas/pb_dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="../../appendid.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" name="ML.Mat.InsertColumn" target="../../mat/insertcolumn.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="../../mat/identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="../../mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="../../mat/strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="../../mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="../../mat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Add.ecl" name="ML.Mat.Add" target="../../mat/add.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="../../mat/sub.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" name="ML.Mat.Inv" target="../../mat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" name="ML.Mat.Decomp" target="../../mat/decomp.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="../../mat/setdimension.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" name="ML.Mat.Substitute" target="../../mat/substitute.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" name="ML.Mat.LowerTriangle" target="../../mat/lowertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" name="ML.Mat.UpperTriangle" target="../../mat/uppertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" name="ML.Mat.Householder" target="../../mat/householder.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" name="ML.Mat.Det" target="../../mat/det.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" name="PBblas.Vector2Diag" target="../../../pbblas/vector2diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_diag" target="../../../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgetrf.ecl" name="PBblas.PB_dgetrf" target="../../../pbblas/pb_dgetrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" name="PBblas.PB_dtrsm" target="../../../pbblas/pb_dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="../../../pbblas/pb_dtran.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" name="ML.DMat.Trans" target="../../dmat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" name="ML.DMat.Inv" target="../../dmat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" name="PBblas.PB_dpotrf" target="../../../pbblas/pb_dpotrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" name="ML.Trees" target="../../trees.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" name="ML.Sampling" target="../../sampling.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" name="ML.Ensemble" target="../../ensemble.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../../svm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="../../svm/libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" name="ML.SVM.Converted" target="../../svm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" name="ML.SVM.train" target="../../svm/train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="../../svm/libsvm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" name="ML.SVM.LibSVM.svm_train" target="../../svm/libsvm/svm_train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="../../svm/libsvm/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" name="ML.SVM.predict" target="../../svm/predict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NFoldCrossValidation.ecl" name="ML.NFoldCrossValidation" target="../../nfoldcrossvalidation.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" name="ML.SVM.LibSVM.SVM_Predict" target="../../svm/libsvm/svm_predict.ecl.xml"/></Meta>

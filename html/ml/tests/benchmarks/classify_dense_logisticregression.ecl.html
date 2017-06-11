@@ -1,0 +1,1747 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			ATTRIBUTE : pathToFile
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Training
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Layout
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : File
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : HiggsIDRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //------------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //--------------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : //--------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : HiggsIDRec IDRecs(File L, INTEGER C)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : All_Higgs
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Higgs
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Dep
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Indep
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : MyLogisticRegression
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Base
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Logis_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ZStat_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfInt_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : DevianceRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ResidDevRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Model(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : norm_dist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ZStat(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ConfInt(Types.t_fieldReal level, DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : DevianceC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Dev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevRes
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevNull
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : p
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ResidDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NullDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : AIC
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : AOD(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : DevianceD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Dev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevRes
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevNull
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : p
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ResidDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NullDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : AIC
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnCS(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyS(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Model3
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : predict
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : predicted_v_actual
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy_proportion
+			<ul>
+				
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	ATTRIBUTE : pathToFile
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Training
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Layout
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : File
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : HiggsIDRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //------------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //--------------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : //--------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : HiggsIDRec IDRecs(File L, INTEGER C)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : All_Higgs
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Higgs
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Dep
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Indep
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : MyLogisticRegression
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../classify.ecl.html">
+					ml.classify.logistic_model
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Base
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Logis_Model
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ZStat_Model
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfInt_Model
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : DevianceRec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ResidDevRec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : norm_dist
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ZStat(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ConfInt(Types.t_fieldReal level, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : DevianceC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Dev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NDev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevRes
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevNull
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : p
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ResidDev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NullDev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : AIC
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : AOD(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : DevianceD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Dev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NDev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevRes
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevNull
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : p
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ResidDev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NullDev
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : AIC
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : LearnCS(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyS(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : Model3
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : predict
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : predicted_v_actual
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy_proportion
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+</body>
+</html>

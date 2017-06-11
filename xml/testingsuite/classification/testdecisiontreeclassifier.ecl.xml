@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.TestDecisionTreeClassifier" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestDecisionTreeClassifier.ecl" target="testdecisiontreeclassifier.ecl.xml">
+  <Definition body="249" end="3477" exported="1" fullname="testingsuite.classification.testdecisiontreeclassifier" inherit_type="local" line="10" name="TestDecisionTreeClassifier" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestDecisionTreeClassifier.ecl" start="186">
+   <Type>macro</Type>
+   <Signature>TestDecisionTreeClassifier(raw_dataset_name, repeats)</Signature><Params>
+    <Param name="raw_dataset_name"/>
+    <Param name="repeats"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="27" fullname="std" inherit_type="local" line="3" name="std" ref="std" remotescope="1" start="27" target="../../std/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="39" fullname="ML" inherit_type="local" line="4" name="ML" ref="ml" remotescope="1" start="39" target="../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="50" fullname="ML.Tests.Explanatory" inherit_type="local" line="5" name="TE" ref="ml.tests.explanatory" remotescope="1" start="50" target="../../ml/tests/explanatory/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="85" fullname="ML.Types" inherit_type="local" line="6" name="Types" ref="ml.types" start="85" target="../../ml/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="102" fullname="TestingSuite.Utils" inherit_type="local" line="7" name="Utils" ref="testingsuite.utils" remotescope="1" start="102" target="../utils/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="138" fullname="TestingSuite.Classification" inherit_type="local" line="8" name="Classification" ref="testingsuite.classification" start="138" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../ml/types.ecl.xml"/></Meta>

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="VL.Types" sourcePath="/media/sarthak/Data/ecl-ml/VL/Types.ecl" target="types.ecl.xml">
+  <Definition body="14" end="427" exported="1" fullname="VL.Types" inherit_type="local" line="1" name="Types" source="/media/sarthak/Data/ecl-ml/VL/Types.ecl" start="0">
+   <Type>module</Type>
+   <Definition body="47" end="106" exported="1" fullname="vl.types.chartinterface" inherit_type="local" line="2" name="ChartInterface" source="/media/sarthak/Data/ecl-ml/VL/Types.ecl" start="24">
+    <Type>record</Type>
+    <Field name="CHARTELEMENTTYPE"/>
+    <Signature>XPORT ChartInterfaceR</Signature><Field name="s"/>
+   </Definition>
+   <Definition body="134" end="205" exported="1" fullname="vl.types.cartesiandata" inherit_type="local" line="7" name="CartesianData" source="/media/sarthak/Data/ecl-ml/VL/Types.ecl" start="112">
+    <Type>record</Type>
+    <Field name="series"/>
+    <Field name="segment"/>
+    <Signature>CartesianDataRECORD</Signature><Field name="val"/>
+   </Definition>
+   <Definition body="233" end="284" exported="1" fullname="vl.types.graphlabels" inherit_type="local" line="13" name="GraphLabels" source="/media/sarthak/Data/ecl-ml/VL/Types.ecl" start="213">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Signature>LabelsRECORD
+    U</Signature><Field name="label"/>
+   </Definition>
+   <Definition body="315" end="417" exported="1" fullname="vl.types.graphrelationships" inherit_type="local" line="17" name="GraphRelationships" source="/media/sarthak/Data/ecl-ml/VL/Types.ecl" start="288">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="linkid"/>
+    <Field name="linklabel"/>
+    <Signature>tionshipsRECORD
+    UNSIG</Signature><Field name="weight"/>
+   </Definition>
+   <Signature>Types</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

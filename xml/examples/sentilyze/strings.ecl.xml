@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="Examples.Sentilyze.Strings" sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" target="strings.ecl.xml">
+  <Definition body="227" end="924" exported="1" fullname="Examples.Sentilyze.Strings" inherit_type="local" line="6" name="Strings" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" start="210">
+   <Type>module</Type>
+   <Definition body="302" end="336" exported="1" fullname="examples.sentilyze.strings.negativekeywords" inherit_type="local" line="9" name="NegativeKeywords" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" start="276">
+    <Signature>NegativeKeywords</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="405" end="439" exported="1" fullname="examples.sentilyze.strings.positivekeywords" inherit_type="local" line="10" name="PositiveKeywords" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" start="379">
+    <Signature>PositiveKeywords</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="545" end="580" exported="1" fullname="examples.sentilyze.strings.positivetweets" inherit_type="local" line="13" name="PositiveTweets" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" start="521">
+    <Signature>PositiveTweets</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="645" end="680" exported="1" fullname="examples.sentilyze.strings.negativetweets" inherit_type="local" line="14" name="NegativeTweets" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" start="621">
+    <Signature>NegativeTweets</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="741" end="776" exported="1" fullname="examples.sentilyze.strings.bayesmodel" inherit_type="local" line="15" name="BayesModel" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" start="721">
+    <Signature>BayesModel</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="838" end="873" exported="1" fullname="examples.sentilyze.strings.bayesvocab" inherit_type="local" line="16" name="BayesVocab" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" start="818">
+    <Signature>BayesVocab</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Strings</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

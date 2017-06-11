@@ -1,0 +1,1462 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../utils.ecl.html">
+				ml.utils
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../classify.ecl.html">
+				ml.classify
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="typessl.ecl.html">
+				ml.stepwiselogistic.typessl
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+				std.str
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : StepLogistic(REAL8 Ridge=0.00001, REAL8 Epsilon=0.000000001, UNSIGNED2 MaxIter=200)
+			<ul>
+				
+		<li>
+			RECORD : Parameter
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ParamRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : StepRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : RebaseX(DATASET(Types.NumericField) X)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ExtractX(DATASET(Types.NumericField) X, DATASET(Parameter) M)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Base
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Logis_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ZStat_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfInt_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : DevianceRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ResidDevRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Model(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : norm_dist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ZStat(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ConfInt(Types.t_fieldReal level, DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : DevianceC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Dev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevRes
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevNull
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : p
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ResidDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NullDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : AIC
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : AOD(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : DevianceD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Dev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevRes
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DevNull
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : p
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ResidDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NullDev
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : AIC
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnCS(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyS(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : StepLogistic(REAL8 Ridge=0.00001, REAL8 Epsilon=0.000000001, UNSIGNED2 MaxIter=200)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../classify.ecl.html">
+					ml.classify.logistic_sparse
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : Parameter
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ParamRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : StepRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : RebaseX(DATASET(Types.NumericField) X)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ExtractX(DATASET(Types.NumericField) X, DATASET(Parameter) M)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Base
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Logis_Model
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ZStat_Model
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfInt_Model
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : DevianceRec
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ResidDevRec
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : norm_dist
+		
+		<br/>
+		<a href="../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ZStat(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ConfInt(Types.t_fieldReal level, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : DevianceC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Dev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NDev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevRes
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevNull
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : p
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ResidDev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NullDev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : AIC
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : AOD(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : DevianceD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Dev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NDev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevRes
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DevNull
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : p
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ResidDev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NullDev
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : AIC
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : LearnCS(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyS(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

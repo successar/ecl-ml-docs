@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="VL.FormatCartesianData" sourcePath="/media/sarthak/Data/ecl-ml/VL/FormatCartesianData.ecl" target="formatcartesiandata.ecl.xml">
+  <Definition body="587" end="1360" exported="1" fullname="vl.formatcartesiandata" inherit_type="local" line="9" name="FormatCartesianData" source="/media/sarthak/Data/ecl-ml/VL/FormatCartesianData.ecl" start="550">
+   <Type>macro</Type>
+   <Signature>FormatCartesianData(d,XAxis)</Signature><Params>
+    <Param name="d"/>
+    <Param name="XAxis"/>
+   </Params>
+  </Definition>
+ </Source>
+</Meta>

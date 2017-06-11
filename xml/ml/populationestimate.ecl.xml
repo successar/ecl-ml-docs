@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.PopulationEstimate" sourcePath="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" target="populationestimate.ecl.xml">
+  <Definition body="122" end="22632" exported="1" fullname="ML.PopulationEstimate" inherit_type="local" line="6" name="PopulationEstimate" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="94">
+   <Type>module</Type>
+   <Definition body="508" end="5639" exported="1" fullname="ml.populationestimate.concordv1" inherit_type="local" line="10" name="ConcordV1" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="404">
+    <Type>function</Type>
+    <Signature>ConcordV1(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
+     <Param name="Y"/>
+     <Param name="lambda"/>
+     <Param name="maxIter"/>
+     <Param name="tol"/>
+    </Params>
+   </Definition>
+   <Definition body="5768" end="13232" exported="1" fullname="ml.populationestimate.concordv2" inherit_type="local" line="122" name="ConcordV2" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="5664">
+    <Type>function</Type>
+    <Signature>ConcordV2(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
+     <Param name="Y"/>
+     <Param name="lambda"/>
+     <Param name="maxIter"/>
+     <Param name="tol"/>
+    </Params>
+   </Definition>
+   <Definition body="13388" end="22043" exported="1" fullname="ml.populationestimate.concordv2blas" inherit_type="local" line="276" name="ConcordV2Blas" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="13280">
+    <Type>function</Type>
+    <Signature>ConcordV2Blas(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
+     <Param name="Y"/>
+     <Param name="lambda"/>
+     <Param name="maxIter"/>
+     <Param name="tol"/>
+    </Params>
+   </Definition>
+   <Definition body="22267" end="22307" exported="1" fullname="ml.populationestimate.inversecovariance" inherit_type="local" line="450" name="InverseCovariance" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="22151">
+    <Type>function</Type>
+    <Signature>InverseCovariance(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)</Signature><Params>
+     <Param name="Ydata"/>
+     <Param name="lambda1"/>
+     <Param name="maxIter"/>
+     <Param name="tol"/>
+    </Params>
+   </Definition>
+   <Definition body="22530" end="22613" exported="1" fullname="ml.populationestimate.covariance" inherit_type="local" line="455" name="Covariance" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="22421">
+    <Type>function</Type>
+    <Signature>Covariance(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)</Signature><Params>
+     <Param name="Ydata"/>
+     <Param name="lambda1"/>
+     <Param name="maxIter"/>
+     <Param name="tol"/>
+    </Params>
+   </Definition>
+   <Signature>PopulationEstimate</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="41" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="41" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="52" fullname="ML.Mat" inherit_type="local" line="3" name="Mat" ref="ml.mat" remotescope="1" start="52" target="mat/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="74" fullname="PBblas" inherit_type="local" line="4" name="PBblas" ref="pbblas" remotescope="1" start="74" target="../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="89" fullname="std" inherit_type="local" line="5" name="std" ref="std" remotescope="1" start="89" target="../std/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="mat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="mat/strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="mat/identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="mat/sub.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" name="ML.Mat.Inv" target="mat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" name="ML.Mat.Decomp" target="mat/decomp.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="mat/setdimension.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" name="ML.Mat.Substitute" target="mat/substitute.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" name="ML.Mat.LowerTriangle" target="mat/lowertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" name="ML.Mat.UpperTriangle" target="mat/uppertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" name="ML.Mat.Det" target="mat/det.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" name="ML.Mat.Householder" target="mat/householder.ecl.xml"/></Meta>

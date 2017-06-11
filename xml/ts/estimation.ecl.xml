@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.Estimation" sourcePath="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" target="estimation.ecl.xml">
+  <Import body="0" end="619" fullname="TS" inherit_type="local" line="14" name="TS" ref="ts" start="619" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="630" fullname="PBblas" inherit_type="local" line="15" name="PBblas" ref="pbblas" remotescope="1" start="630" target="../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="658" end="680" fullname="ts.value_t" inherit_type="local" line="17" name="value_t" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="648">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="689" end="715" fullname="ts.dim_t" inherit_type="local" line="18" name="dim_t" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="681">
+   <Signature>dim_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="727" end="750" fullname="ts.matrix_t" inherit_type="local" line="19" name="matrix_t" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="716">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="786" end="874" fullname="ts.model_cell" inherit_type="local" line="21" name="Model_cell" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="773">
+   <Type>record</Type>
+   <Field name="x"/>
+   <Field name="y"/>
+   <Field name="v"/>
+   <Field name="model_id"/>
+   <Signature>Model_cell</Signature><Field name="lags"/>
+  </Definition>
+  <Definition body="889" end="1013" fullname="ts.extend_spec" inherit_type="local" line="25" name="Extend_Spec" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="875">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="ar_terms"/>
+   <Field name="ma_terms"/>
+   <Field name="constant_term"/>
+   <Field name="obs_cnt"/>
+   <Field name="lag"/>
+   <Field name="mean"/>
+   <Field name="total"/>
+   <Signature>Extend_Spec</Signature><Field name="var"/>
+  </Definition>
+  <Definition body="1026" end="1287" fullname="ts.init_work" inherit_type="local" line="32" name="Init_Work" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="1014">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="ar_terms"/>
+   <Field name="ma_terms"/>
+   <Field name="constant_term"/>
+   <Field name="obs_cnt"/>
+   <Field name="mean"/>
+   <Field name="total"/>
+   <Field name="var"/>
+   <Field name="dep_set"/>
+   <Field name="lag_set"/>
+   <Field name="betas"/>
+   <Field name="residual"/>
+   <Field name="rlag_set"/>
+   <Field name="yw_set"/>
+   <Field name="cov_set"/>
+   <Signature>Init_Work</Signature><Field name="ma_coef"/>
+  </Definition>
+  <Definition body="1300" end="1512" fullname="ts.irls_work" inherit_type="local" line="46" name="Irls_Work" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="1288">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="ar_terms"/>
+   <Field name="ma_terms"/>
+   <Field name="constant_term"/>
+   <Field name="row_cnt"/>
+   <Field name="mean"/>
+   <Field name="total"/>
+   <Field name="var"/>
+   <Field name="delta"/>
+   <Field name="resid_mean"/>
+   <Field name="dep_set"/>
+   <Field name="betas"/>
+   <Field name="full_x"/>
+   <Signature>Irls_Work</Signature><Field name="w"/>
+  </Definition>
+  <Definition body="1731" end="15134" exported="1" fullname="ts.estimation" inherit_type="local" line="59" name="Estimation" source="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" start="1516">
+   <Type>function</Type>
+   <Signature>DATASET(TS.Types.Model_Parameters)
+       Estimation(DATASET(TS.Types.UniObservation) obs,
+                  DATASET(TS.Types.Model_Spec) spec,
+                  UNSIGNED2 maxIter=100, REAL4 epsilon=0.001)</Signature><Params>
+    <Param name="obs"/>
+    <Param name="spec"/>
+    <Param name="maxIter"/>
+    <Param name="epsilon"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" name="TS.SeriesByModel" target="seriesbymodel.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" name="TS.DifferenceSeries" target="differenceseries.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" name="TS.LagCorrelations" target="lagcorrelations.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" name="PBblas.BLAS.dasum" target="../pbblas/blas/dasum.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" name="PBblas.Block.make_vector" target="../pbblas/block/make_vector.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_Diag" target="../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" name="PBblas.Block.Apply2Cells" target="../pbblas/block/apply2cells.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" name="PBblas.Block.ICellFunc" target="../pbblas/block/icellfunc.ecl.xml"/></Meta>

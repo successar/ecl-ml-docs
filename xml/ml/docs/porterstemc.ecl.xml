@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Docs.PorterStemC" sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/PorterStemC.ecl" target="porterstemc.ecl.xml">
+  <Definition body="51" end="10451" fullname="ml.docs.stem" inherit_type="local" line="1" name="stem" source="/media/sarthak/Data/ecl-ml/ML/Docs/PorterStemC.ecl" start="0">
+   <Type>embed</Type>
+   <Signature>VARSTRING stem(VARSTRING word, INTEGER word_len)</Signature><Params>
+    <Param name="word"/>
+    <Param name="word_len"/>
+   </Params>
+  </Definition>
+  <Definition body="10495" end="10543" exported="1" fullname="ml.docs.porterstemc" inherit_type="local" line="334" name="PorterStemC" source="/media/sarthak/Data/ecl-ml/ML/Docs/PorterStemC.ecl" start="10454">
+   <Type>function</Type>
+   <Signature>STRING PorterStemC(STRING word)</Signature><Params>
+    <Param name="word"/>
+   </Params>
+  </Definition>
+ </Source>
+</Meta>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Deprecated.IrisPlantDS" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/IrisPlantDS.ecl" target="irisplantds.ecl.xml">
+  <Definition body="113" end="270" fullname="ml.tests.deprecated.layout_iris" inherit_type="local" line="4" name="layout_iris" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/IrisPlantDS.ecl" start="99">
+   <Type>record</Type>
+   <Field name="rid"/>
+   <Field name="class"/>
+   <Field name="sepal_length"/>
+   <Field name="sepal_width"/>
+   <Field name="petal_length"/>
+   <Field name="petal_width"/>
+   <Signature>layout_iris</Signature><Field name="class_name"/>
+  </Definition>
+  <Definition body="295" end="11213" exported="1" fullname="ml.tests.deprecated.irisplantds" inherit_type="local" line="14" name="IrisPlantDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/IrisPlantDS.ecl" start="272">
+   <Signature>IrisPlantDS</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+</Meta>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.LibSVM.Constants" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" target="constants.ecl.xml">
+  <Definition body="19" end="64" exported="1" fullname="ML.SVM.LibSVM.Constants" inherit_type="local" line="1" name="Constants" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" start="0">
+   <Type>module</Type>
+   <Definition body="53" end="59" exported="1" fullname="ml.svm.libsvm.constants.libsvm_badparm" inherit_type="local" line="2" name="LibSVM_BadParm" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" start="29">
+    <Signature>LibSVM_BadParm</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Constants</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

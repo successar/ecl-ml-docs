@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.Demo.Series_Data" sourcePath="/media/sarthak/Data/ecl-ml/TS/Demo/Series_Data.ecl" target="series_data.ecl.xml">
+  <Import body="0" end="803" fullname="std.system.thorlib" inherit_type="local" line="15" name="thorlib" ref="std.system.thorlib" start="803" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="830" fullname="ML" inherit_type="local" line="16" name="ML" ref="ml" remotescope="1" start="830" target="../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="841" fullname="TS" inherit_type="local" line="17" name="TS" ref="ts" start="841" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="852" fullname="TS.Types" inherit_type="local" line="18" name="Types" ref="ts.types" start="852" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="871" end="891" fullname="ts.demo.co_eff" inherit_type="local" line="19" name="Co_eff" source="/media/sarthak/Data/ecl-ml/TS/Demo/Series_Data.ecl" start="862">
+   <Type>record</Type>
+   <Field name="cv"/>
+   <Field name="lag"/>
+   <Signature>Co_eff</Signature><Documentation> <content>Generate time series data for demonstration of TS attributes. Generates four series of values. A lag period is inferred by the number of start values. The series generated are: flat (a random walk); a slope constructed by adding the additive increment product of the prior value and the multiplicative increment; and the cummulative values of the slope value.</content>
+    <return>the generated time series.</return>
+    <param>test records</param>
+    <param>start values, seasonality or cyclic behavior is entered with this parameter</param>
+    <param>noise mean, the mean value of normally distributed noise which will be added</param>
+    <param>noise variance, the variance of the normally distributed noise</param>
+    <param>multiply value, the multiplicative increment</param>
+    <param>additive value, the additive increment</param>
+   </Documentation>
+  </Definition>
+  <Definition body="1149" end="5739" exported="1" fullname="ts.demo.series_data" inherit_type="local" line="21" name="Series_Data" source="/media/sarthak/Data/ecl-ml/TS/Demo/Series_Data.ecl" start="893">
+   <Type>function</Type>
+   <Signature>Series_Data(DATASET(Co_eff) initial_vals,
+                   REAL8 mult_val=1.0,
+                   REAL8 add_val=0.0,
+                   UNSIGNED2 test_records=100,
+                   REAL8 noise_mean=0.0,
+                   REAL8 noise_var=1.0)</Signature><Params>
+    <Param name="initial_vals"/>
+    <Param name="mult_val"/>
+    <Param name="add_val"/>
+    <Param name="test_records"/>
+    <Param name="noise_mean"/>
+    <Param name="noise_var"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../ml/distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../ml/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../ml/mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../ml/mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../ml/mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../ml/utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../ml/mat/repmat.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/></Meta>

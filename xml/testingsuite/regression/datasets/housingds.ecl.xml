@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Regression.Datasets.housingDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/housingDS.ecl" target="housingds.ecl.xml">
+  <Definition body="37" end="48234" exported="1" fullname="TestingSuite.Regression.Datasets.housingDS" inherit_type="local" line="2" name="housingDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/housingDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="73" end="548" fullname="testingsuite.regression.datasets.housingds.housingrecord" inherit_type="local" line="3" name="housingRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/housingDS.ecl" start="50">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="A1"/>
+    <Field name="A2"/>
+    <Field name="A3"/>
+    <Field name="A4"/>
+    <Field name="A5"/>
+    <Field name="A6"/>
+    <Field name="A7"/>
+    <Field name="A8"/>
+    <Field name="A9"/>
+    <Field name="A10"/>
+    <Field name="A11"/>
+    <Field name="A12"/>
+    <Field name="A13"/>
+    <Signature>housingRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="572" end="1086" exported="1" fullname="testingsuite.regression.datasets.housingds.betas" inherit_type="local" line="20" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/housingDS.ecl" start="557">
+    <Signature>betas</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1108" end="48229" exported="1" fullname="testingsuite.regression.datasets.housingds.content" inherit_type="local" line="35" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/housingDS.ecl" start="1091">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>housingDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

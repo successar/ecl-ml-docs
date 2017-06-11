@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.Diagnosis" sourcePath="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" target="diagnosis.ecl.xml">
+  <Import body="0" end="51" fullname="TS" inherit_type="local" line="2" name="TS" ref="ts" start="51" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="69" end="91" fullname="ts.model_score" inherit_type="local" line="3" name="Model_Score" source="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" start="55">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="ar_terms"/>
+   <Field name="ma_terms"/>
+   <Field name="constant_term"/>
+   <Field name="ar"/>
+   <Field name="ma"/>
+   <Field name="c"/>
+   <Field name="s_measure"/>
+   <Signature>Model_Score</Signature><Field name="Q_measure"/>
+  </Definition>
+  <Definition body="105" end="132" fullname="ts.model_parm" inherit_type="local" line="4" name="Model_Parm" source="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" start="92">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="ar_terms"/>
+   <Field name="ma_terms"/>
+   <Field name="constant_term"/>
+   <Field name="ar"/>
+   <Field name="ma"/>
+   <Signature>Model_Parm</Signature><Field name="c"/>
+  </Definition>
+  <Definition body="288" end="1045" exported="1" fullname="ts.diagnosis" inherit_type="local" line="6" name="Diagnosis" source="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" start="134">
+   <Type>function</Type>
+   <Signature>DATASET(TS.Types.Model_Score)
+       Diagnosis(DATASET(TS.Types.UniObservation) obs,
+                 DATASET(TS.Types.Model_Parameters) models)</Signature><Params>
+    <Param name="obs"/>
+    <Param name="models"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" name="TS.SeriesByModel" target="seriesbymodel.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" name="TS.EstimatedObs" target="estimatedobs.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" name="TS.ExtendedParameters" target="extendedparameters.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" name="TS.DifferenceSeries" target="differenceseries.ecl.xml"/></Meta>

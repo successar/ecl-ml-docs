@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="VL.D3" sourcePath="/media/sarthak/Data/ecl-ml/VL/D3.ecl" target="d3.ecl.xml">
+  <Definition body="23" end="10995" exported="1" fullname="VL.D3" inherit_type="local" line="2" name="D3" source="/media/sarthak/Data/ecl-ml/VL/D3.ecl" start="12">
+   <Type>module</Type>
+   <Definition body="444" end="3731" fullname="vl.d3.treetemplate" inherit_type="local" line="9" name="TreeTemplate" shared="1" source="/media/sarthak/Data/ecl-ml/VL/D3.ecl" start="409">
+    <Type>function</Type>
+    <Signature>reeTemplate(STRING sData)''+
+		'&lt;</Signature><Params>
+     <Param name="sData"/>
+    </Params>
+   </Definition>
+   <Definition body="3861" end="5534" fullname="vl.d3.converttotree" inherit_type="local" line="50" name="ConvertToTree" shared="1" source="/media/sarthak/Data/ecl-ml/VL/D3.ecl" start="3741">
+    <Type>function</Type>
+    <Signature>hLabels) dLabels,DATASET(VL.Types.GraphRelationships) dRelationships)FUNCTION
+    dParentLabelsJOIN(dRelationships,T</Signature><Params>
+     <Param name="dLabels"/>
+     <Param name="dRelationships"/>
+    </Params>
+   </Definition>
+   <Definition body="5899" end="8572" fullname="vl.d3.chordtemplate" inherit_type="local" line="78" name="ChordTemplate" shared="1" source="/media/sarthak/Data/ecl-ml/VL/D3.ecl" start="5863">
+    <Type>function</Type>
+    <Signature>t url(http://mbostock.github.com/d3/</Signature><Params>
+     <Param name="sData"/>
+    </Params>
+   </Definition>
+   <Definition body="8703" end="10357" fullname="vl.d3.converttochord" inherit_type="local" line="108" name="ConvertToChord" shared="1" source="/media/sarthak/Data/ecl-ml/VL/D3.ecl" start="8582">
+    <Type>function</Type>
+    <Signature>lationships)FUNCTION
+    dLReSequencedPROJECT(dLabels,TRANSFORM({RECORDOF(LEFT)UNSIGNED oldid},SELF.oldidLEFT.id</Signature><Params>
+     <Param name="dLabels"/>
+     <Param name="dRelationships"/>
+    </Params>
+   </Definition>
+   <Definition body="10597" end="10989" exported="1" fullname="vl.d3.graph" inherit_type="local" line="126" name="Graph" source="/media/sarthak/Data/ecl-ml/VL/D3.ecl" start="10418">
+    <Type>function</Type>
+    <Signature>Relationships,VL.Styles.Default s=VL.Styles.Default)FUNCTION
+    RETURN MAP(
+      sChartType='Tree'=&gt;OUTPUT(DATASET([{'CHARTCODE',TreeTemplate(ConvertToTree(dLabels,dRelationsh</Signature><Params>
+     <Param name="sChartType"/>
+     <Param name="sChartName"/>
+     <Param name="dLabels"/>
+     <Param name="dRelationships"/>
+     <Param name="s"/>
+    </Params>
+   </Definition>
+   <Signature>XPORT D3M</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="7" fullname="VL" inherit_type="local" line="1" name="VL" ref="vl" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" name="VL.Styles" target="styles.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Types.ecl" name="VL.Types" target="types.ecl.xml"/></Meta>

@@ -1,0 +1,710 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="dmat/pkg.toc.html">
+				ml.dmat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../pbblas/pkg.toc.html">
+				pbblas
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : Layout_Cell
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Layout_Part
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : emptyMUelm
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : DeepLearning
+			<ul>
+				
+		<li>
+			FUNCTION : Sparse_Autoencoder_IntWeights (INTEGER4 NumberofFeatures, INTEGER4 NumberofHiddenLayerNodes)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Sparse_Autoencoder_IntBias (INTEGER4 NumberofFeatures, INTEGER4 NumberofHiddenLayerNodes)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Sparse_Autoencoder (UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)
+			<ul>
+				
+		<li>
+			MODULE : SA(DATASET(Types.NumericField) X, DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : d
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : m
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : m_1
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : sparsityParam_
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : sparsityParam_1
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : sizeRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : havemaxrow
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : havemaxcol
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : havemaxrowcol
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : dstats
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : d_n
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : d_m
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : output_num
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : sizeTable
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Mod
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnC (DATASET(Types.NumericField) Indep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Model(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ExtractWeights (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ExtractBias (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ExtractW1 (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ExtractW2 (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Extractb1 (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Extractb2 (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : StackedSA (UNSIGNED4 NumSAs, DATASET(Types.DiscreteField) numHiddenNodes, REAL8 BETA, REAL8 sparsityParam , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100,
+  UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)
+			<ul>
+				
+		<li>
+			FUNCTION : LearnC (DATASET(Types.NumericField) Indep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Model(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SSAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) LearntMod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : Layout_Cell
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Layout_Part
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : emptyMUelm
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : DeepLearning
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : Sparse_Autoencoder_IntWeights (INTEGER4 NumberofFeatures, INTEGER4 NumberofHiddenLayerNodes)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Sparse_Autoencoder_IntBias (INTEGER4 NumberofFeatures, INTEGER4 NumberofHiddenLayerNodes)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : Sparse_Autoencoder (UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	MODULE : SA(DATASET(Types.NumericField) X, DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : d
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : m
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : m_1
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : sparsityParam_
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : sparsityParam_1
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : sizeRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : havemaxrow
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : havemaxcol
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : havemaxrowcol
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : dstats
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : d_n
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : d_m
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : output_num
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : sizeTable
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Mod
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : LearnC (DATASET(Types.NumericField) Indep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ExtractWeights (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ExtractBias (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ExtractW1 (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ExtractW2 (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Extractb1 (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Extractb2 (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : StackedSA (UNSIGNED4 NumSAs, DATASET(Types.DiscreteField) numHiddenNodes, REAL8 BETA, REAL8 sparsityParam , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100,
+  UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : LearnC (DATASET(Types.NumericField) Indep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SSAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) LearntMod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Validation.lda_cmpr2blei" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Validation/lda_cmpr2blei.ecl" target="lda_cmpr2blei.ecl.xml"/>
+ <Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LDA/Types.ecl" name="ML.LDA.Types" target="../../lda/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LDA/Topic_Estimation.ecl" name="ML.LDA.Topic_Estimation" target="../../lda/topic_estimation.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LDA/Collection_Stats.ecl" name="ML.LDA.Collection_Stats" target="../../lda/collection_stats.ecl.xml"/></Meta>

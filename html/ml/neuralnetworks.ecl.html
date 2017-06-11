@@ -1,0 +1,258 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../pbblas/pkg.toc.html">
+				pbblas
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="dmat/pkg.toc.html">
+				ml.dmat
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : Layout_Cell
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Layout_Part
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : NeuralNetworks (DATASET(Types.DiscreteField) net,UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : IntBias
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : IntWeights
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Model(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ExtractWeights (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ExtractBias (DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NNLearn(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NNOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NNClassify(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : Layout_Cell
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Layout_Part
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : NeuralNetworks (DATASET(Types.DiscreteField) net,UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : IntBias
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : IntWeights
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ExtractWeights (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ExtractBias (DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NNLearn(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NNOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NNClassify(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

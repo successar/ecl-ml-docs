@@ -1,0 +1,499 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="lsa.ecl.html">
+				ml.lsa.lsa
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../distribution.ecl.html">
+				ml.distribution
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../dmat/pkg.toc.html">
+				ml.dmat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../pbblas/mu.ecl.html">
+				pbblas.mu
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../pbblas/pkg.toc.html">
+				pbblas
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			FUNCTION : ToElm
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Part
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : IMatrix_Map
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Types.dimension_t  matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.dimension_t  matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.node_t       nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.partition_t  partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.partition_t  row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.partition_t  col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.dimension_t  row_block(Types.dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.dimension_t  col_block(Types.dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.partition_t  assigned_part(Types.dimension_t rb, Types.dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.node_t       assigned_node(Types.partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.dimension_t  first_row(Types.partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.dimension_t  first_col(Types.partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.dimension_t  part_rows(Types.partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.dimension_t  part_cols(Types.partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : RandomisedSVD
+			<ul>
+				
+		<li>
+			FUNCTION : RangeFinder(IMatrix_Map a_map, DATASET(Part) A, UNSIGNED4 size)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : mat_type
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : RandomisedSVD(IMatrix_Map a_map, DATASET(Part) dA, UNSIGNED4 r)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	FUNCTION : ToElm
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Part
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : IMatrix_Map
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Types.dimension_t  matrix_rows
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.dimension_t  matrix_cols
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.node_t       nodes_used
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.partition_t  partitions_used
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.partition_t  row_blocks
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.partition_t  col_blocks
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.dimension_t  row_block(Types.dimension_t mat_row)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.dimension_t  col_block(Types.dimension_t mat_col)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.partition_t  assigned_part(Types.dimension_t rb, Types.dimension_t cb)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.node_t       assigned_node(Types.partition_t p)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.dimension_t  first_row(Types.partition_t p)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.dimension_t  first_col(Types.partition_t p)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.dimension_t  part_rows(Types.partition_t p)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.dimension_t  part_cols(Types.partition_t p)
+		
+		<br/>
+		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : RandomisedSVD
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : RangeFinder(IMatrix_Map a_map, DATASET(Part) A, UNSIGNED4 size)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : mat_type
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : RandomisedSVD(IMatrix_Map a_map, DATASET(Part) dA, UNSIGNED4 r)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

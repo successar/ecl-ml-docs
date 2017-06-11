@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.grid_search" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" target="grid_search.ecl.xml">
+  <Import body="0" end="76" fullname="ML.SVM" inherit_type="local" line="2" name="SVM" ref="ml.svm" start="76" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="91" fullname="ML.SVM.Types" inherit_type="local" line="3" name="Types" ref="ml.svm.types" start="91" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="112" fullname="std.system.Thorlib" inherit_type="local" line="4" name="Thorlib" ref="std.system.thorlib" start="112" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="153" end="178" fullname="ml.svm.g_result" inherit_type="local" line="6" name="G_Result" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="142">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="correct"/>
+   <Field name="mse"/>
+   <Field name="r_sq"/>
+   <Field name="C"/>
+   <Field name="gamma"/>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="coef0"/>
+   <Field name="eps"/>
+   <Field name="nu"/>
+   <Field name="p"/>
+   <Field name="nr_weight"/>
+   <Field name="shrinking"/>
+   <Field name="prob_est"/>
+   <Field name="lbl"/>
+   <Signature>G_Result</Signature><Field name="weight"/>
+  </Definition>
+  <Definition body="191" end="212" fullname="ml.svm.grid_plan" inherit_type="local" line="7" name="Grid_Plan" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="179">
+   <Type>record</Type>
+   <Field name="folds"/>
+   <Field name="log2_C"/>
+   <Signature>Grid_Plan</Signature><Field name="log2_gamma"/>
+  </Definition>
+  <Definition body="225" end="246" fullname="ml.svm.grid_args" inherit_type="local" line="8" name="Grid_Args" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="213">
+   <Type>record</Type>
+   <Field name="start"/>
+   <Field name="stop"/>
+   <Signature>Grid_Args</Signature><Field name="max_incr"/>
+  </Definition>
+  <Definition body="256" end="277" fullname="ml.svm.t_base" inherit_type="local" line="9" name="T_Base" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="247">
+   <Type>record</Type>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="coef0"/>
+   <Field name="eps"/>
+   <Field name="nu"/>
+   <Field name="p"/>
+   <Field name="nr_weight"/>
+   <Field name="shrinking"/>
+   <Field name="prob_est"/>
+   <Field name="lbl"/>
+   <Signature>T_Base</Signature><Field name="weight"/>
+  </Definition>
+  <Definition body="287" end="314" fullname="ml.svm.t_parm" inherit_type="local" line="10" name="T_Parm" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="278">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="coef0"/>
+   <Field name="eps"/>
+   <Field name="nu"/>
+   <Field name="p"/>
+   <Field name="nr_weight"/>
+   <Field name="shrinking"/>
+   <Field name="prob_est"/>
+   <Field name="lbl"/>
+   <Field name="weight"/>
+   <Field name="gamma"/>
+   <Signature>T_Parm</Signature><Field name="C"/>
+  </Definition>
+  <Definition body="322" end="342" fullname="ml.svm.inst" inherit_type="local" line="11" name="Inst" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="315">
+   <Type>record</Type>
+   <Field name="rid"/>
+   <Field name="y"/>
+   <Field name="max_value"/>
+   <Signature>Inst</Signature><Field name="x"/>
+  </Definition>
+  <Definition body="410" end="1543" exported="1" fullname="ml.svm.grid_search" inherit_type="local" line="12" name="grid_search" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="343">
+   <Type>function</Type>
+   <Signature>grid_search(Grid_Plan plan, T_Base base, DATASET(Inst) d)</Signature><Params>
+    <Param name="plan"/>
+    <Param name="base"/>
+    <Param name="d"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="libsvm/types.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/cross_validate.ecl" name="ML.SVM.cross_validate" target="cross_validate.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="libsvm/converted.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="libsvm/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" name="ML.SVM.LibSVM.svm_cross_validate" target="libsvm/svm_cross_validate.ecl.xml"/></Meta>

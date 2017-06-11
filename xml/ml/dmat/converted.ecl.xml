@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.DMat.Converted" sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" target="converted.ecl.xml">
+  <Import body="0" end="375" fullname="PBblas" inherit_type="local" line="6" name="PBblas" ref="pbblas" remotescope="1" start="375" target="../../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="390" fullname="PBblas.Types" inherit_type="local" line="7" name="Types" ref="pbblas.types" start="390" target="../../pbblas/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="488" fullname="ML.Types" inherit_type="local" line="10" name="ML_Types" ref="ml.types" start="488" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="517" fullname="ML.Mat.Types" inherit_type="local" line="11" name="Mat_Types" ref="ml.mat.types" start="517" target="../mat/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="427" end="446" fullname="ml.dmat.layout_part" inherit_type="local" line="8" name="Layout_Part" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="413">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="461" end="480" fullname="ml.dmat.layout_cell" inherit_type="local" line="9" name="Layout_Cell" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="447">
+   <Type>record</Type>
+   <Field name="x"/>
+   <Field name="y"/>
+   <Signature>Layout_Cell</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="564" end="4810" exported="1" fullname="ML.DMat.Converted" inherit_type="local" line="13" name="Converted" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="545">
+   <Type>module</Type>
+   <Definition body="589" end="771" fullname="ml.dmat.converted.work1" inherit_type="local" line="14" name="Work1" shared="1" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="574">
+    <Type>record</Type>
+    <Field name="x"/>
+    <Field name="y"/>
+    <Field name="v"/>
+    <Field name="partition_id"/>
+    <Field name="node_id"/>
+    <Field name="block_row"/>
+    <Signature>Work1</Signature><Field name="block_col"/>
+   </Definition>
+   <Definition body="956" end="2761" exported="1" fullname="ml.dmat.converted.fromcells" inherit_type="local" line="20" name="FromCells" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="774">
+    <Type>function</Type>
+    <Signature>FromCells(PBblas.IMatrix_Map mat_map, DATASET(Layout_Cell) cells,
+                   Types.dimension_t insert_columns=0,
+                   Types.value_t insert_value=0.0d)</Signature><Params>
+     <Param name="mat_map"/>
+     <Param name="cells"/>
+     <Param name="insert_columns"/>
+     <Param name="insert_value"/>
+    </Params>
+   </Definition>
+   <Definition body="3156" end="3233" exported="1" fullname="ml.dmat.converted.frompart2cell" inherit_type="local" line="68" name="FromPart2Cell" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="3101">
+    <Type>function</Type>
+    <Signature>FromPart2Cell(DATASET(Layout_Part) part_recs)</Signature><Params>
+     <Param name="part_recs"/>
+    </Params>
+   </Definition>
+   <Definition body="3500" end="3859" exported="1" fullname="ml.dmat.converted.fromnumericfieldds" inherit_type="local" line="72" name="FromNumericFieldDS" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="3256">
+    <Type>function</Type>
+    <Signature>FromNumericFieldDS(DATASET(ML_Types.NumericField) cells,
+                           PBblas.IMatrix_Map mat_map,
+                           Types.dimension_t insert_columns=0,
+                           Types.value_t insert_value=0.0d)</Signature><Params>
+     <Param name="cells"/>
+     <Param name="mat_map"/>
+     <Param name="insert_columns"/>
+     <Param name="insert_value"/>
+    </Params>
+   </Definition>
+   <Definition body="4113" end="4166" exported="1" fullname="ml.dmat.converted.frompart2ds" inherit_type="local" line="92" name="FromPart2DS" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="4060">
+    <Type>function</Type>
+    <Signature>FromPart2DS(DATASET(Layout_Part) part_recs)</Signature><Params>
+     <Param name="part_recs"/>
+    </Params>
+   </Definition>
+   <Definition body="4508" end="4573" exported="1" fullname="ml.dmat.converted.fromelement" inherit_type="local" line="100" name="FromElement" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="4297">
+    <Type>function</Type>
+    <Signature>FromElement(DATASET(Mat_Types.Element) elms,
+                     PBblas.IMatrix_Map mat_map,
+                     Types.dimension_t ins_cols=0,
+                     Types.value_t ins_val=0.0d)</Signature><Params>
+     <Param name="elms"/>
+     <Param name="mat_map"/>
+     <Param name="ins_cols"/>
+     <Param name="ins_val"/>
+    </Params>
+   </Definition>
+   <Definition body="4755" end="4805" exported="1" fullname="ml.dmat.converted.frompart2elm" inherit_type="local" line="111" name="FromPart2Elm" source="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" start="4701">
+    <Type>function</Type>
+    <Signature>FromPart2Elm(DATASET(Layout_Part) part_recs)</Signature><Params>
+     <Param name="part_recs"/>
+    </Params>
+   </Definition>
+   <Signature>Converted</Signature><Parents/>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../pbblas/imatrix_map.ecl.xml"/></Meta>

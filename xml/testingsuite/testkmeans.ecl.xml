@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./TestingSuite/Utils/ToTraining.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Source name="TestingSuite.TestKmeans" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/TestKmeans.ecl" target="testkmeans.ecl.xml">
+  <Import body="0" end="7" fullname="std" inherit_type="local" line="1" name="std" ref="std" remotescope="1" start="7" target="../std/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="19" fullname="TS" inherit_type="local" line="2" name="TS" ref="ts" remotescope="1" start="19" target="../ts/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="30" fullname="ML" inherit_type="local" line="3" name="ML" ref="ml" remotescope="1" start="30" target="../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="41" fullname="ML.Types" inherit_type="local" line="4" name="Types" ref="ml.types" start="41" target="../ml/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="58" fullname="TestingSuite" inherit_type="local" line="5" name="TestingSuite" ref="testingsuite" start="58" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="79" fullname="TestingSuite.BenchmarkResults" inherit_type="local" line="6" name="BenchmarkResults" ref="testingsuite.benchmarkresults" remotescope="1" start="79" target="benchmarkresults/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="137" fullname="TestingSuite.Utils" inherit_type="local" line="7" name="Utils" ref="testingsuite.utils" remotescope="1" start="137" target="utils/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="164" fullname="TestingSuite.Clustering" inherit_type="local" line="8" name="Clustering" ref="testingsuite.clustering" remotescope="1" start="164" target="clustering/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="241" end="316" fullname="testingsuite.qualifiedname" inherit_type="local" line="11" name="QualifiedName" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestKmeans.ecl" start="205">
+   <Type>macro</Type>
+   <Signature>QualifiedName(prefix, datasetname)</Signature><Params>
+    <Param name="prefix"/>
+    <Param name="datasetname"/>
+   </Params>
+  </Definition>
+  <Definition body="387" end="689" fullname="testingsuite.clusteringdatasetnames" inherit_type="local" line="16" name="clusteringDatasetNames" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestKmeans.ecl" start="348">
+   <Signature>SET OF STRING clusteringDatasetNames</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="726" end="743" fullname="testingsuite.clusternumbers" inherit_type="local" line="21" name="ClusterNumbers" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestKmeans.ecl" start="694">
+   <Signature>SET OF INTEGER ClusterNumbers</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="779" end="810" fullname="testingsuite.cluster_no_of_elements" inherit_type="local" line="23" name="cluster_no_of_elements" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestKmeans.ecl" start="746">
+   <Signature>INTEGER cluster_no_of_elements</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="829" end="964" fullname="testingsuite.kmeans_results" inherit_type="local" line="25" name="kmeans_results" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestKmeans.ecl" start="812">
+   <Signature>kmeans_results</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../ml/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode_k.ecl" name="TestingSuite.Utils.GenerateCode_K" target="utils/generatecode_k.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/TestKMeans.ecl" name="TestingSuite.Clustering.TestKmeans" target="clustering/testkmeans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_eight_c_sixDS.ecl" name="TestingSuite.Clustering.Datasets.ionek_f_eight_c_sixDS" target="clustering/datasets/ionek_f_eight_c_sixds.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Cluster.ecl" name="ML.Cluster" target="../ml/cluster.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../ml/utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../ml/mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../ml/mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../ml/mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/ToTraining.ecl" name="TestingSuite.Utils.ToTraining" target="utils/totraining.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../ml/tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Types.ecl" name="TestingSuite.Utils.Types" target="utils/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_four_c_fourDS.ecl" name="TestingSuite.Clustering.Datasets.ionek_f_four_c_fourDS" target="clustering/datasets/ionek_f_four_c_fourds.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_sixteen_c_eightDS.ecl" name="TestingSuite.Clustering.Datasets.ionek_f_sixteen_c_eightDS" target="clustering/datasets/ionek_f_sixteen_c_eightds.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_thirty_two_c_eightDS.ecl" name="TestingSuite.Clustering.Datasets.ionek_f_thirty_two_c_eightDS" target="clustering/datasets/ionek_f_thirty_two_c_eightds.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_two_c_twoDS.ecl" name="TestingSuite.Clustering.Datasets.ionek_f_two_c_twoDS" target="clustering/datasets/ionek_f_two_c_twods.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Student_T_Test.ecl" name="TestingSuite.Utils.Student_T_Test" target="utils/student_t_test.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/BenchmarkResults/kmeans_performance_scores.ecl" name="TestingSuite.BenchmarkResults.kmeans_performance_scores" target="benchmarkresults/kmeans_performance_scores.ecl.xml"/></Meta>

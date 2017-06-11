@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.RoundDelta" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/RoundDelta.ecl" target="rounddelta.ecl.xml">
+  <Definition body="157" end="328" exported="1" fullname="ml.mat.rounddelta" inherit_type="local" line="4" name="RoundDelta" source="/media/sarthak/Data/ecl-ml/ML/Mat/RoundDelta.ecl" start="78">
+   <Type>function</Type>
+   <Signature>RoundDelta(DATASET(Types.Element) d, REAL delta=Config.RoundingError)</Signature><Params>
+    <Param name="d"/>
+    <Param name="delta"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="62" fullname="ML.Config" inherit_type="local" line="3" name="Config" ref="ml.config" start="62" target="../config.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/></Meta>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.Trans" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" target="trans.ecl.xml">
+  <Definition body="97" end="184" exported="1" fullname="ml.mat.trans" inherit_type="local" line="4" name="Trans" source="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" start="56">
+   <Type>function</Type>
+   <Signature>Trans(DATASET(Types.Element) d)</Signature><Params>
+    <Param name="d"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>

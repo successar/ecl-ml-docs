@@ -1,0 +1,1108 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : Trees
+			<ul>
+				
+		<li>
+			ATTRIBUTE : model_Map
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : STRING model_fields
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : modelC_Map
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : STRING modelC_fields
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : sNode
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : NodeInstDiscrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : wNode
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : cNode
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SplitD
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SplitF
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SplitC
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : final_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : final_node_instance
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : node_error
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : node_error to_node_error(SplitF l)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : KdTree(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Res
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Splits
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Partitioned
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Counts
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CountMean
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CountVariance
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Extents
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FullTree
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Boundaries
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : LowBounds
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UpBounds
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Locations
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : PartitionGiniImpurityBased	(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Decision(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : res
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Splits
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nsplits
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Partitioned
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Modes
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Precision
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Counts
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Purities
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CountMean
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CountVariance
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitsGiniImpurBased(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
+																Types.t_level Depth=10,REAL Purity=1.0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitsInfoGainRatioBased(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitInstances(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitInstancesD(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : C45PruneTree(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitsIGR_Pruned(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToDiscreteTree(DATASET(SplitD) nodes)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ModelD(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BinaryPartitionC	(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitBinaryCBased(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitBinInstances(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToNumericTree(DATASET(SplitC) nodes)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ModelC(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : Trees
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : model_Map
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : STRING model_fields
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : modelC_Map
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : STRING modelC_fields
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Node
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : sNode
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : NodeInstDiscrete
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : wNode
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : cNode
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SplitD
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SplitF
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SplitC
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : final_node
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : final_node_instance
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : node_error
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : node_error to_node_error(SplitF l)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : KdTree(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Res
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Splits
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Partitioned
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Counts
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CountMean
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CountVariance
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Extents
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FullTree
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Boundaries
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : LowBounds
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UpBounds
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Locations
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	
+	<p>	FUNCTION : PartitionGiniImpurityBased	(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : Decision(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : res
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Splits
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nsplits
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Partitioned
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Modes
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Precision
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Counts
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Purities
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CountMean
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CountVariance
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : SplitsGiniImpurBased(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
+																Types.t_level Depth=10,REAL Purity=1.0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitsInfoGainRatioBased(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitInstances(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitInstancesD(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : C45PruneTree(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitsIGR_Pruned(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToDiscreteTree(DATASET(SplitD) nodes)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ModelD(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BinaryPartitionC	(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitBinaryCBased(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitBinInstances(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToNumericTree(DATASET(SplitC) nodes)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ModelC(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

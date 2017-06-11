@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Pow" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Pow.ecl" target="pow.ecl.xml">
+  <Definition body="172" end="609" exported="1" fullname="ml.mat.pow" inherit_type="local" line="5" name="Pow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Pow.ecl" start="121">
+   <Type>function</Type>
+   <Signature>Pow(DATASET(Types.Element) d,UNSIGNED2 n)</Signature><Params>
+    <Param name="d"/>
+    <Param name="n"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="strict.ecl.xml"/></Meta>

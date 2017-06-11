@@ -1,0 +1,378 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../../pkg.toc.html">
+				ml.svm
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../pkg.toc.html">
+				ml.svm.libsvm
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : ECL_LibSVM_Problem
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : LibSVM_Node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : R8Entry
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : fileName
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : rawInput
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : instance_data
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : problem_data
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : LibSVM_Node_Exp
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : LibSVM_Node_Exp cvt(LibSVM_Node n)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : LibSVM_Node_Exp mark(LibSVM_Node_Exp prev, LibSVM_Node_Exp curr)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Expanded_Prob
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Expanded_Prob expand(ECL_LibSVM_Problem p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : xproblem_data
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Head_Prob
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Flat_Prob
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Head_Prob extHead(Expanded_Prob p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : problem_head
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Flat_Prob extNode(Expanded_Prob p, UNSIGNED4 c)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : prob_lines
+			<ul>
+				
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : ECL_LibSVM_Problem
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : LibSVM_Node
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : R8Entry
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : fileName
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : rawInput
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : instance_data
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : problem_data
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : LibSVM_Node_Exp
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : LibSVM_Node_Exp cvt(LibSVM_Node n)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : LibSVM_Node_Exp mark(LibSVM_Node_Exp prev, LibSVM_Node_Exp curr)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Expanded_Prob
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Expanded_Prob expand(ECL_LibSVM_Problem p)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : xproblem_data
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Head_Prob
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Flat_Prob
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Head_Prob extHead(Expanded_Prob p)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : problem_head
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Flat_Prob extNode(Expanded_Prob p, UNSIGNED4 c)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : prob_lines
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+</body>
+</html>

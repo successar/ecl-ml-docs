@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Source name="PBblas.BLAS.daxpy" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" target="daxpy.ecl.xml">
+  <Import body="0" end="139" fullname="PBblas.Types" inherit_type="local" line="3" name="Types" ref="pbblas.types" start="139" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="167" end="186" fullname="pbblas.blas.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" start="153">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="201" end="216" fullname="pbblas.blas.value_t" inherit_type="local" line="5" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" start="187">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="231" end="247" fullname="pbblas.blas.matrix_t" inherit_type="local" line="6" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" start="217">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="373" end="667" exported="1" fullname="pbblas.blas.daxpy" inherit_type="local" line="8" name="daxpy" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" start="249">
+   <Type>embed</Type>
+   <Signature>matrix_t daxpy(dimension_t N, value_t alpha, matrix_t x,
+                      dimension_t incX, matrix_t Y, incY)</Signature><Params>
+    <Param name="N"/>
+    <Param name="alpha"/>
+    <Param name="x"/>
+    <Param name="incX"/>
+    <Param name="Y"/>
+    <Param name="incY"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

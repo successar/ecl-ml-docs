@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.LSA.RandomisedSVD" sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/RandomisedSVD.ecl" target="randomisedsvd.ecl.xml">
+  <Import body="0" end="213" fullname="ML.Mat" inherit_type="local" line="4" name="Mat" ref="ml.mat" remotescope="1" start="213" target="../mat/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="235" fullname="ML.LSA.lsa" inherit_type="local" line="5" name="LSA" ref="ml.lsa.lsa" start="235" target="lsa.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="261" fullname="ML" inherit_type="local" line="6" name="ML" ref="ml" start="261" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="272" fullname="ML.Distribution" inherit_type="local" line="7" name="Dist" ref="ml.distribution" start="272" target="../distribution.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="304" fullname="ML.DMat" inherit_type="local" line="8" name="DMat" ref="ml.dmat" remotescope="1" start="304" target="../dmat/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="328" fullname="PBblas.MU" inherit_type="local" line="9" name="MU" ref="pbblas.mu" start="328" target="../../pbblas/mu.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="352" fullname="PBblas" inherit_type="local" line="10" name="PBblas" ref="pbblas" remotescope="1" start="352" target="../../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="196" end="225" fullname="ml.lsa.toelm" inherit_type="local" line="9" name="ToElm" source="/media/sarthak/Data/ecl-ml/./ML/LSA/lsa.ecl" start="188">
+   <Type>function</Type>
+   <Signature>ToElm</Signature><Params>
+    <Param name="part_recs"/>
+   </Params>
+  </Definition>
+  <Definition body="272" end="298" fullname="ml.lsa.part" inherit_type="local" line="11" name="Part" source="/media/sarthak/Data/ecl-ml/./ML/LSA/lsa.ecl" start="265">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="409" end="429" fullname="PBblas.IMatrix_Map" inherit_type="local" line="13" name="IMatrix_Map" source="/media/sarthak/Data/ecl-ml/ML/LSA/RandomisedSVD.ecl" start="395" target="../../pbblas/imatrix_map.ecl.xml">
+   <Type>module</Type>
+   <Definition body="110" end="109" exported="1" fullname="pbblas.imatrix_map.matrix_rows" inherit_type="local" line="5" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="71" target="../../pbblas/imatrix_map.ecl.xml">
+    <Signature>Types.dimension_t  matrix_rows</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="151" end="150" exported="1" fullname="pbblas.imatrix_map.matrix_cols" inherit_type="local" line="6" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="112" target="../../pbblas/imatrix_map.ecl.xml">
+    <Signature>Types.dimension_t  matrix_cols</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="191" end="190" exported="1" fullname="pbblas.imatrix_map.nodes_used" inherit_type="local" line="7" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="153" target="../../pbblas/imatrix_map.ecl.xml">
+    <Signature>Types.node_t       nodes_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="236" end="235" exported="1" fullname="pbblas.imatrix_map.partitions_used" inherit_type="local" line="8" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="193" target="../../pbblas/imatrix_map.ecl.xml">
+    <Signature>Types.partition_t  partitions_used</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="276" end="275" exported="1" fullname="pbblas.imatrix_map.row_blocks" inherit_type="local" line="9" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="238" target="../../pbblas/imatrix_map.ecl.xml">
+    <Signature>Types.partition_t  row_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="316" end="315" exported="1" fullname="pbblas.imatrix_map.col_blocks" inherit_type="local" line="10" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="278" target="../../pbblas/imatrix_map.ecl.xml">
+    <Signature>Types.partition_t  col_blocks</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="382" end="381" exported="1" fullname="pbblas.imatrix_map.row_block" inherit_type="local" line="11" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="318" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.dimension_t  row_block(Types.dimension_t mat_row)</Signature><Params>
+     <Param name="mat_row"/>
+    </Params>
+   </Definition>
+   <Definition body="448" end="447" exported="1" fullname="pbblas.imatrix_map.col_block" inherit_type="local" line="12" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="384" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.dimension_t  col_block(Types.dimension_t mat_col)</Signature><Params>
+     <Param name="mat_col"/>
+    </Params>
+   </Definition>
+   <Definition body="535" end="534" exported="1" fullname="pbblas.imatrix_map.assigned_part" inherit_type="local" line="13" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="450" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.partition_t  assigned_part(Types.dimension_t rb, Types.dimension_t cb)</Signature><Params>
+     <Param name="rb"/>
+     <Param name="cb"/>
+    </Params>
+   </Definition>
+   <Definition body="599" end="598" exported="1" fullname="pbblas.imatrix_map.assigned_node" inherit_type="local" line="14" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="537" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.node_t       assigned_node(Types.partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="659" end="658" exported="1" fullname="pbblas.imatrix_map.first_row" inherit_type="local" line="15" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="601" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.dimension_t  first_row(Types.partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="719" end="718" exported="1" fullname="pbblas.imatrix_map.first_col" inherit_type="local" line="16" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="661" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.dimension_t  first_col(Types.partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="779" end="778" exported="1" fullname="pbblas.imatrix_map.part_rows" inherit_type="local" line="17" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="721" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.dimension_t  part_rows(Types.partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="839" end="838" exported="1" fullname="pbblas.imatrix_map.part_cols" inherit_type="local" line="18" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="781" target="../../pbblas/imatrix_map.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.dimension_t  part_cols(Types.partition_t p)</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Signature>IMatrix_Map</Signature><Parents/>
+  </Definition>
+  <Definition body="492" end="2560" exported="1" fullname="ML.LSA.RandomisedSVD" inherit_type="local" line="16" name="RandomisedSVD" source="/media/sarthak/Data/ecl-ml/ML/LSA/RandomisedSVD.ecl" start="469">
+   <Type>module</Type>
+   <Definition body="575" end="1313" exported="1" fullname="ml.lsa.randomisedsvd.rangefinder" inherit_type="local" line="17" name="RangeFinder" source="/media/sarthak/Data/ecl-ml/ML/LSA/RandomisedSVD.ecl" start="502">
+    <Type>function</Type>
+    <Signature>RangeFinder(IMatrix_Map a_map, DATASET(Part) A, UNSIGNED4 size)</Signature><Params>
+     <Param name="a_map"/>
+     <Param name="A"/>
+     <Param name="size"/>
+    </Params>
+   </Definition>
+   <Definition body="1335" end="1364" inherit_type="local" line="34" name="mat_type" shared="1" source="/media/sarthak/Data/ecl-ml/ML/LSA/RandomisedSVD.ecl" start="1317">
+    <Signature>mat_type</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1440" end="2554" exported="1" fullname="ml.lsa.randomisedsvd.randomisedsvd" inherit_type="local" line="35" name="RandomisedSVD" source="/media/sarthak/Data/ecl-ml/ML/LSA/RandomisedSVD.ecl" start="1367">
+    <Type>function</Type>
+    <Signature>RandomisedSVD(IMatrix_Map a_map, DATASET(Part) dA, UNSIGNED4 r)</Signature><Params>
+     <Param name="a_map"/>
+     <Param name="dA"/>
+     <Param name="r"/>
+    </Params>
+   </Definition>
+   <Signature>RandomisedSVD</Signature><Parents/>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/lsa.ecl" name="ML.LSA.lsa" target="lsa.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/SVD.ecl" name="ML.LSA.DenseSVD.SVD" target="densesvd/svd.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" name="ML.DMat.Trans" target="../dmat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="../../pbblas/pb_dtran.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/EigC.ecl" name="ML.LSA.DenseSVD.EigC" target="densesvd/eigc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/eigen_dsyev.ecl" name="ML.LSA.DenseSVD.eigen_dsyev" target="densesvd/eigen_dsyev.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_diag" target="../../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/Eig.ecl" name="ML.LSA.DenseSVD.Eig" target="densesvd/eig.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" name="ML.LSA.DenseSVD.QR" target="densesvd/qr.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Decomp.ecl" name="ML.DMat.Decomp" target="../dmat/decomp.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" name="PBblas.PB_dtrsm" target="../../pbblas/pb_dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" name="PBblas.PB_dpotrf" target="../../pbblas/pb_dpotrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgetrf.ecl" name="PBblas.PB_dgetrf" target="../../pbblas/pb_dgetrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" name="PBblas.PB_Extract_Tri" target="../../pbblas/pb_extract_tri.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/Extract_Tri.ecl" name="PBblas.Block.Extract_Tri" target="../../pbblas/block/extract_tri.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Identity.ecl" name="ML.DMat.Identity" target="../dmat/identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Mul.ecl" name="ML.DMat.Mul" target="../dmat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/Helpers.ecl" name="ML.LSA.DenseSVD.Helpers" target="densesvd/helpers.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../pbblas/hadamardproduct.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../mat/repmat.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/></Meta>

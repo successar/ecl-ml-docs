@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.InsertColumn" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" target="insertcolumn.ecl.xml">
+  <Definition body="146" end="413" exported="1" fullname="ml.mat.insertcolumn" inherit_type="local" line="3" name="InsertColumn" source="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" start="55">
+   <Type>function</Type>
+   <Signature>InsertColumn(DATASET(Types.Element) d, Types.t_Index col_i, Types.t_value filler)</Signature><Params>
+    <Param name="d"/>
+    <Param name="col_i"/>
+    <Param name="filler"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/></Meta>

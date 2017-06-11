@@ -1,0 +1,1030 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml.tests.explanatory
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			ATTRIBUTE : indep_data
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : dep_data
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : indepData
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : depData
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : learner
+			<ul>
+				
+		<li>
+			FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Model(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ModelC(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : cv
+			<ul>
+				
+		<li>
+			ATTRIBUTE : UCcurvePoint GetCurvePoint
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : AUC_curvePoin
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : LE(AUC_curvePoints, {posCl
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : }, posClass, classifier)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Classify.Compare(it_depN,
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nments  TestModule.Cross
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ass     TestModule.Recal
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : lass  TestModule.Precisi
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ate_ByClass   TestModule
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : lass
+     Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //--------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //----------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //----------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //------------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : //----------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : //------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	ATTRIBUTE : indep_data
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : dep_data
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : indepData
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : depData
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : learner
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ModelC(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : cv
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : UCcurvePoint GetCurvePoint
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : AUC_curvePoin
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : LE(AUC_curvePoints, {posCl
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : }, posClass, classifier)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Classify.Compare(it_depN,
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nments  TestModule.Cross
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ass     TestModule.Recal
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : lass  TestModule.Precisi
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ate_ByClass   TestModule
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : lass
+     Accuracy
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : //--------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //----------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //----------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //------------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : //----------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : //------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+</body>
+</html>

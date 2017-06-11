@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Explanatory.MonkDS" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/MonkDS.ecl" target="monkds.ecl.xml">
+  <Definition body="389" end="13389" exported="1" fullname="ML.Tests.Explanatory.MonkDS" inherit_type="local" line="10" name="MonkDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/MonkDS.ecl" start="373">
+   <Type>module</Type>
+   <Definition body="418" end="639" fullname="ml.tests.explanatory.monkds.monkrecord" inherit_type="local" line="11" name="monkRecord" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/MonkDS.ecl" start="398">
+    <Type>record</Type>
+    <Field name="class"/>
+    <Field name="a1"/>
+    <Field name="a2"/>
+    <Field name="a3"/>
+    <Field name="a4"/>
+    <Field name="a5"/>
+    <Field name="a6"/>
+    <Signature>monkRecord</Signature><Field name="id"/>
+   </Definition>
+   <Definition body="661" end="3509" exported="1" fullname="ml.tests.explanatory.monkds.train_data" inherit_type="local" line="21" name="Train_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/MonkDS.ecl" start="641">
+    <Signature>Train_Data</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3530" end="13384" exported="1" fullname="ml.tests.explanatory.monkds.test_data" inherit_type="local" line="147" name="Test_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/MonkDS.ecl" start="3511">
+    <Signature>Test_Data</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>MonkDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="../../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/></Meta>

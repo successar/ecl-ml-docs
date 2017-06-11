@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Deprecated.BWR_testGenData" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" target="bwr_testgendata.ecl.xml">
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="22" end="32" fullname="ml.tests.deprecated.testsize" inherit_type="local" line="2" name="TestSize" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="11">
+   <Signature>TestSize</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="54" end="89" fullname="ML.Distribution.Normal" inherit_type="local" line="4" name="a1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="49" target="../../distribution.ecl.xml">
+   <Type>module</Type>
+   <Definition body="2864" end="3358" exported="1" fullname="ml.distribution.default.ntile" inherit_type="override" line="54" name="NTile" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2809" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
+     <Param name="Pc"/>
+    </Params>
+   </Definition>
+   <Definition body="3406" end="3411" exported="1" fullname="ml.distribution.default.invdensity" inherit_type="inherited" line="63" name="InvDensity" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3361" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>InvDensity(Types.t_FieldReal delta)</Signature><Params>
+     <Param name="delta"/>
+    </Params>
+   </Definition>
+   <Definition body="3476" end="3483" exported="1" fullname="ml.distribution.default.discrete" inherit_type="inherited" line="64" name="Discrete" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3458" target="../../distribution.ecl.xml">
+    <Signature>Discrete</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4707" end="4714" fullname="ml.distribution.normal.var" inherit_type="local" line="85" name="Var" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="4676" target="../../distribution.ecl.xml">
+    <Signature>Types.t_FieldReal Var</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4806" end="4817" fullname="ml.distribution.normal.low" inherit_type="local" line="87" name="low" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="4793" target="../../distribution.ecl.xml">
+    <Signature>low</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4834" end="4845" fullname="ml.distribution.normal.high" inherit_type="local" line="88" name="high" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="4820" target="../../distribution.ecl.xml">
+    <Signature>high</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4868" end="4888" exported="1" fullname="ml.distribution.normal.rangewidth" inherit_type="override" line="89" name="RangeWidth" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="4848" target="../../distribution.ecl.xml">
+    <Signature>RangeWidth</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="5042" end="5101" fullname="ml.distribution.normal.fn_density" inherit_type="local" line="91" name="fn_Density" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="4955" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</Signature><Params>
+     <Param name="x"/>
+     <Param name="mu"/>
+     <Param name="sig_sq"/>
+    </Params>
+   </Definition>
+   <Definition body="5161" end="5186" exported="1" fullname="ml.distribution.normal.density" inherit_type="override" line="92" name="Density" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="5104" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="5342" end="5673" exported="1" fullname="ml.distribution.normal.cumulative" inherit_type="override" line="95" name="Cumulative" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="5282" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="5696" end="5900" exported="1" fullname="ml.distribution.normal.densityv" inherit_type="override" line="102" name="DensityV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="5676" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>DensityV()</Signature><Params/>
+   </Definition>
+   <Definition body="5926" end="6062" exported="1" fullname="ml.distribution.normal.cumulativev" inherit_type="override" line="106" name="CumulativeV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="5903" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>CumulativeV()</Signature><Params/>
+   </Definition>
+   <Signature>a1</Signature><Parents>
+    <Parent line="27" name="Default" ref="ml.distribution.default" target="../../distribution.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="95" end="135" fullname="ml.tests.deprecated.b1" inherit_type="local" line="5" name="b1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="90">
+   <Signature>b1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="142" end="178" fullname="ML.Distribution.Normal2" inherit_type="local" line="7" name="a2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="137" target="../../distribution.ecl.xml">
+   <Type>module</Type>
+   <Definition body="1706" end="1958" exported="1" fullname="ml.distribution.default.cumulativev" inherit_type="override" line="33" name="CumulativeV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="1683" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>CumulativeV()</Signature><Params/>
+   </Definition>
+   <Definition body="2078" end="2754" exported="1" fullname="ml.distribution.default.cumulative" inherit_type="override" line="42" name="Cumulative" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2018" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="2864" end="3358" exported="1" fullname="ml.distribution.default.ntile" inherit_type="override" line="54" name="NTile" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2809" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
+     <Param name="Pc"/>
+    </Params>
+   </Definition>
+   <Definition body="3406" end="3411" exported="1" fullname="ml.distribution.default.invdensity" inherit_type="inherited" line="63" name="InvDensity" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3361" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>InvDensity(Types.t_FieldReal delta)</Signature><Params>
+     <Param name="delta"/>
+    </Params>
+   </Definition>
+   <Definition body="3476" end="3483" exported="1" fullname="ml.distribution.default.discrete" inherit_type="inherited" line="64" name="Discrete" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3458" target="../../distribution.ecl.xml">
+    <Signature>Discrete</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6323" end="6330" fullname="ml.distribution.normal2.var" inherit_type="local" line="113" name="Var" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="6292" target="../../distribution.ecl.xml">
+    <Signature>Types.t_FieldReal Var</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6422" end="6433" fullname="ml.distribution.normal2.low" inherit_type="local" line="115" name="low" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="6409" target="../../distribution.ecl.xml">
+    <Signature>low</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6450" end="6461" fullname="ml.distribution.normal2.high" inherit_type="local" line="116" name="high" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="6436" target="../../distribution.ecl.xml">
+    <Signature>high</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6484" end="6504" exported="1" fullname="ml.distribution.normal2.rangewidth" inherit_type="override" line="117" name="RangeWidth" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="6464" target="../../distribution.ecl.xml">
+    <Signature>RangeWidth</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="6658" end="6717" fullname="ml.distribution.normal2.fn_density" inherit_type="local" line="119" name="fn_Density" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="6571" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</Signature><Params>
+     <Param name="x"/>
+     <Param name="mu"/>
+     <Param name="sig_sq"/>
+    </Params>
+   </Definition>
+   <Definition body="6777" end="6802" exported="1" fullname="ml.distribution.normal2.density" inherit_type="override" line="120" name="Density" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="6720" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="6825" end="7029" exported="1" fullname="ml.distribution.normal2.densityv" inherit_type="override" line="121" name="DensityV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="6805" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>DensityV()</Signature><Params/>
+   </Definition>
+   <Signature>a2</Signature><Parents>
+    <Parent line="27" name="Default" ref="ml.distribution.default" target="../../distribution.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="184" end="224" fullname="ml.tests.deprecated.b2" inherit_type="local" line="8" name="b2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="179">
+   <Signature>b2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="247" end="279" fullname="ML.Distribution.Poisson" inherit_type="local" line="10" name="a3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="242" target="../../distribution.ecl.xml">
+   <Type>module</Type>
+   <Definition body="1265" end="1270" exported="1" fullname="ml.distribution.default.rangewidth" inherit_type="inherited" line="28" name="RangeWidth" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="1245" target="../../distribution.ecl.xml">
+    <Signature>RangeWidth</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1706" end="1958" exported="1" fullname="ml.distribution.default.cumulativev" inherit_type="override" line="33" name="CumulativeV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="1683" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>CumulativeV()</Signature><Params/>
+   </Definition>
+   <Definition body="2078" end="2754" exported="1" fullname="ml.distribution.default.cumulative" inherit_type="override" line="42" name="Cumulative" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2018" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="2864" end="3358" exported="1" fullname="ml.distribution.default.ntile" inherit_type="override" line="54" name="NTile" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2809" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
+     <Param name="Pc"/>
+    </Params>
+   </Definition>
+   <Definition body="3406" end="3411" exported="1" fullname="ml.distribution.default.invdensity" inherit_type="inherited" line="63" name="InvDensity" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3361" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>InvDensity(Types.t_FieldReal delta)</Signature><Params>
+     <Param name="delta"/>
+    </Params>
+   </Definition>
+   <Definition body="12123" end="12166" exported="1" fullname="ml.distribution.poisson.density" inherit_type="override" line="204" name="Density" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="12066" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="12189" end="12314" exported="1" fullname="ml.distribution.poisson.densityv" inherit_type="override" line="205" name="DensityV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="12169" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>DensityV()</Signature><Params/>
+   </Definition>
+   <Definition body="12413" end="12419" exported="1" fullname="ml.distribution.poisson.discrete" inherit_type="override" line="208" name="Discrete" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="12395" target="../../distribution.ecl.xml">
+    <Signature>Discrete</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>a3</Signature><Parents>
+    <Parent line="27" name="Default" ref="ml.distribution.default" target="../../distribution.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="285" end="325" fullname="ml.tests.deprecated.b3" inherit_type="local" line="11" name="b3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="280">
+   <Signature>b3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="331" end="341" fullname="ml.tests.deprecated.d" inherit_type="local" line="13" name="D" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testGenData.ecl" start="327">
+   <Signature>D</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/></Meta>

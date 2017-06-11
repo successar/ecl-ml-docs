@@ -1,0 +1,780 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/vec.ecl.html">
+				ml.mat.vec
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="utils.ecl.html">
+				ml.utils
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : Sampling
+			<ul>
+				
+		<li>
+			ATTRIBUTE : g_Method
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : t_Index
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : idListRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : idListGroupRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : idFoldRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Types.NumericField CreateIdRecs(Types.NumericField L, INTEGER C, INTEGER origSize, Types.t_Discrete method = g_Method.Zeroing)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : GenerateIdList(Types.t_Count origSize, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : dsRecordRnd
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : dsRecordRnd AddRandom(Types.NumericField l)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Types.NumericField GetRecords(Types.NumericField l, idListRec r)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : dsDiscRecRnd
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : GenerateNSampleList(t_Index N, Types.t_RecordID origSize)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : GeneratedData(DATASET(idListRec) dsIdList, DATASET( Types.NumericField) origData)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : genIdList
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : origDataset
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : genSubSample
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : RndSampleWithoutReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : genIdList
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : origDataset
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : genSubSample
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : RndSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : genIdList
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : origDataset
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : genSubSample
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : StratSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0, Types.t_FieldNumber fieldClass = 0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : genIdList
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : origDataset
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : genSubSample
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DiscreteDepNFolds(DATASET(Types.DiscreteField) originalData, Types.t_FieldNumber num_part)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : NFold(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : ds_parts
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NFoldList
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FoldNDS(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : NFoldCross(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : distribIdx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ds_parts
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : NFoldList
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FoldNTrainDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FoldNTestDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : Sampling
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : g_Method
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : t_Index
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : idListRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : idListGroupRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : idFoldRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Types.NumericField CreateIdRecs(Types.NumericField L, INTEGER C, INTEGER origSize, Types.t_Discrete method = g_Method.Zeroing)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : GenerateIdList(Types.t_Count origSize, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : dsRecordRnd
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : dsRecordRnd AddRandom(Types.NumericField l)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Types.NumericField GetRecords(Types.NumericField l, idListRec r)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : dsDiscRecRnd
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : GenerateNSampleList(t_Index N, Types.t_RecordID origSize)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : GeneratedData(DATASET(idListRec) dsIdList, DATASET( Types.NumericField) origData)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : genIdList
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : origDataset
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : genSubSample
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : RndSampleWithoutReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : genIdList
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : origDataset
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : genSubSample
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : RndSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : genIdList
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : origDataset
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : genSubSample
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : StratSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0, Types.t_FieldNumber fieldClass = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : genIdList
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : origDataset
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : genSubSample
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : DiscreteDepNFolds(DATASET(Types.DiscreteField) originalData, Types.t_FieldNumber num_part)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : NFold(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : ds_parts
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NFoldList
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FoldNDS(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : NFoldCross(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : distribIdx
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ds_parts
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : NFoldList
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FoldNTrainDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FoldNTestDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	
+</body>
+</html>

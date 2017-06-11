@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.AccumSeries" sourcePath="/media/sarthak/Data/ecl-ml/TS/AccumSeries.ecl" target="accumseries.ecl.xml">
+  <Import body="0" end="69" fullname="TS.Types" inherit_type="local" line="2" name="Types" ref="ts.types" start="69" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="90" end="106" fullname="ts.modelobs" inherit_type="local" line="3" name="ModelObs" source="/media/sarthak/Data/ecl-ml/TS/AccumSeries.ecl" start="79">
+   <Type>record</Type>
+   <Field name="period"/>
+   <Field name="dependent"/>
+   <Signature>ModelObs</Signature><Field name="model_id"/>
+  </Definition>
+  <Definition body="114" end="132" fullname="ts.spec" inherit_type="local" line="4" name="Spec" source="/media/sarthak/Data/ecl-ml/TS/AccumSeries.ecl" start="107">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Signature>Spec</Signature><Field name="degree"/>
+  </Definition>
+  <Definition body="246" end="1368" exported="1" fullname="ts.accumseries" inherit_type="local" line="5" name="AccumSeries" source="/media/sarthak/Data/ecl-ml/TS/AccumSeries.ecl" start="133">
+   <Type>function</Type>
+   <Signature>AccumSeries(DATASET(Types.ModelObs) obs,
+                        DATASET(Types.Ident_Spec) degree_spec)</Signature><Params>
+    <Param name="obs"/>
+    <Param name="degree_spec"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/></Meta>

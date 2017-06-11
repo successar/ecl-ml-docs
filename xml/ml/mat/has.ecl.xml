@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Has" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" target="has.ecl.xml">
+  <Definition body="126" end="2016" exported="1" fullname="ml.mat.has" inherit_type="local" line="5" name="Has" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="87">
+   <Type>module</Type>
+   <Params>
+    <Param name="d"/>
+   </Params>
+   <Parents/>
+   <Definition body="276" end="291" exported="1" fullname="ml.mat.has.stats" inherit_type="local" line="13" name="Stats" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="261">
+    <Signature>Stats</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="351" end="379" exported="1" fullname="ml.mat.has.dimension" inherit_type="local" line="16" name="Dimension" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="332">
+    <Signature>Dimension</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="460" end="503" exported="1" fullname="ml.mat.has.density" inherit_type="local" line="19" name="Density" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="443">
+    <Signature>Density</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="519" end="563" exported="1" fullname="ml.mat.has.norm" inherit_type="local" line="21" name="Norm" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="505">
+    <Signature>Norm</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="763" end="779" exported="1" fullname="ml.mat.has.meanrow" inherit_type="local" line="30" name="MeanRow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="746">
+    <Signature>MeanRow</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="979" end="995" exported="1" fullname="ml.mat.has.meancol" inherit_type="local" line="39" name="MeanCol" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="962">
+    <Signature>MeanCol</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1193" end="1209" exported="1" fullname="ml.mat.has.maxrow" inherit_type="local" line="47" name="MaxRow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="1177">
+    <Signature>MaxRow</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1408" end="1424" exported="1" fullname="ml.mat.has.maxcol" inherit_type="local" line="56" name="MaxCol" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="1392">
+    <Signature>MaxCol</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1623" end="1639" exported="1" fullname="ml.mat.has.sumrow" inherit_type="local" line="65" name="SumRow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="1607">
+    <Signature>SumRow</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1838" end="1854" exported="1" fullname="ml.mat.has.sumcol" inherit_type="local" line="74" name="SumCol" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="1822">
+    <Signature>SumCol</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Has(DATASET(Types.Element) d)</Signature><Definition body="1995" end="2011" exported="1" fullname="ml.mat.has.sdcol" inherit_type="local" line="82" name="SDCol" source="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" start="1980">
+    <Signature>SDCol</Signature><Type>attribute</Type>
+   </Definition>
+  </Definition>
+  <Import body="0" end="28" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="28" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="39" fullname="ML.Mat" inherit_type="local" line="3" name="ML_Mat" ref="ml.mat" start="39" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="64" fullname="ML.Mat.Types" inherit_type="local" line="4" name="Types" ref="ml.mat.types" start="64" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/></Meta>

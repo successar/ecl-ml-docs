@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Source name="PBblas.BLAS.dsyrk" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dsyrk.ecl" target="dsyrk.ecl.xml">
+  <Import body="0" end="496" fullname="PBblas.Types" inherit_type="local" line="9" name="Types" ref="pbblas.types" start="496" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="524" end="543" fullname="pbblas.blas.dimension_t" inherit_type="local" line="10" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dsyrk.ecl" start="510">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="558" end="574" inherit_type="local" line="11" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dsyrk.ecl" start="544">
+   <Signature>Triangle</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="589" end="604" fullname="pbblas.blas.value_t" inherit_type="local" line="12" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dsyrk.ecl" start="575">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="619" end="635" fullname="pbblas.blas.matrix_t" inherit_type="local" line="13" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dsyrk.ecl" start="605">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="835" end="1666" exported="1" fullname="pbblas.blas.dsyrk" inherit_type="local" line="15" name="dsyrk" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dsyrk.ecl" start="637">
+   <Type>embed</Type>
+   <Signature>matrix_t dsyrk(Triangle tri, BOOLEAN transposeA,
+            dimension_t N, dimension_t K,
+            value_t alpha, matrix_t A,
+            value_t beta, matrix_t C, BOOLEAN clear=FALSE)</Signature><Params>
+    <Param name="tri"/>
+    <Param name="transposeA"/>
+    <Param name="N"/>
+    <Param name="K"/>
+    <Param name="alpha"/>
+    <Param name="A"/>
+    <Param name="beta"/>
+    <Param name="C"/>
+    <Param name="clear"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

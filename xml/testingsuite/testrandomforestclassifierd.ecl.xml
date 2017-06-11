@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.TestRandomForestClassifierD" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" target="testrandomforestclassifierd.ecl.xml">
+  <Import body="0" end="11" fullname="std" inherit_type="local" line="1" name="std" ref="std" remotescope="1" start="11" target="../std/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="23" fullname="TS" inherit_type="local" line="2" name="TS" ref="ts" remotescope="1" start="23" target="../ts/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="34" fullname="ML" inherit_type="local" line="3" name="ML" ref="ml" remotescope="1" start="34" target="../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="45" fullname="ML.Types" inherit_type="local" line="4" name="Types" ref="ml.types" start="45" target="../ml/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="62" fullname="TestingSuite" inherit_type="local" line="5" name="TestingSuite" ref="testingsuite" start="62" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="83" fullname="TestingSuite.BenchmarkResults" inherit_type="local" line="6" name="BenchmarkResults" ref="testingsuite.benchmarkresults" remotescope="1" start="83" target="benchmarkresults/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="141" fullname="TestingSuite.Utils" inherit_type="local" line="7" name="Utils" ref="testingsuite.utils" remotescope="1" start="141" target="utils/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="168" fullname="TestingSuite.Classification" inherit_type="local" line="8" name="Classification" ref="testingsuite.classification" remotescope="1" start="168" target="classification/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="252" end="327" fullname="testingsuite.qualifiedname" inherit_type="local" line="10" name="QualifiedName" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="216">
+   <Type>macro</Type>
+   <Signature>QualifiedName(prefix, datasetname)</Signature><Params>
+    <Param name="prefix"/>
+    <Param name="datasetname"/>
+   </Params>
+  </Definition>
+  <Definition body="374" end="566" fullname="testingsuite.classificationdatasetnamesd" inherit_type="local" line="15" name="classificationDatasetNamesD" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="330">
+   <Signature>SET OF STRING classificationDatasetNamesD</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="645" end="681" fullname="testingsuite.c_no_of_elements" inherit_type="local" line="21" name="c_no_of_elements" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="618">
+   <Signature>INTEGER c_no_of_elements</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="696" end="857" fullname="testingsuite.rf_results" inherit_type="local" line="23" name="rf_results" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="683">
+   <Signature>rf_results</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../ml/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Types.ecl" name="TestingSuite.Utils.Types" target="utils/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode.ecl" name="TestingSuite.Utils.GenerateCode" target="utils/generatecode.ecl.xml"/></Meta>

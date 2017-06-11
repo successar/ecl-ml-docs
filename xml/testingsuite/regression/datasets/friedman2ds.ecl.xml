@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Regression.Datasets.friedman2DS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/friedman2DS.ecl" target="friedman2ds.ecl.xml">
+  <Definition body="39" end="75806" exported="1" fullname="TestingSuite.Regression.Datasets.friedman2DS" inherit_type="local" line="2" name="friedman2DS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/friedman2DS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="77" end="278" fullname="testingsuite.regression.datasets.friedman2ds.friedman2record" inherit_type="local" line="3" name="friedman2RECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/friedman2DS.ecl" start="52">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="A1"/>
+    <Field name="A2"/>
+    <Field name="A3"/>
+    <Field name="A4"/>
+    <Signature>friedman2RECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="298" end="453" exported="1" fullname="testingsuite.regression.datasets.friedman2ds.betas" inherit_type="local" line="11" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/friedman2DS.ecl" start="283">
+    <Signature>betas</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="476" end="75801" exported="1" fullname="testingsuite.regression.datasets.friedman2ds.content" inherit_type="local" line="18" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/friedman2DS.ecl" start="459">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>friedman2DS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

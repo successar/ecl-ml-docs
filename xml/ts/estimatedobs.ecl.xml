@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.EstimatedObs" sourcePath="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" target="estimatedobs.ecl.xml">
+  <Import body="0" end="63" fullname="TS" inherit_type="local" line="2" name="TS" ref="ts" start="63" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="74" fullname="TS.Types" inherit_type="local" line="3" name="Types" ref="ts.types" start="74" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="95" end="114" fullname="ts.modelobs" inherit_type="local" line="4" name="ModelObs" source="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" start="84">
+   <Type>record</Type>
+   <Field name="period"/>
+   <Field name="dependent"/>
+   <Signature>ModelObs</Signature><Field name="model_id"/>
+  </Definition>
+  <Definition body="137" end="167" fullname="ts.parameter_extension" inherit_type="local" line="5" name="Parameter_Extension" source="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" start="115">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="terms"/>
+   <Field name="c"/>
+   <Field name="mu"/>
+   <Field name="theta_phi"/>
+   <Signature>Parameter_Extension</Signature><Field name="phi"/>
+  </Definition>
+  <Definition body="177" end="200" fullname="ts.co_eff" inherit_type="local" line="6" name="Co_eff" source="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" start="168">
+   <Type>record</Type>
+   <Field name="cv"/>
+   <Signature>Co_eff</Signature><Field name="lag"/>
+  </Definition>
+  <Definition body="210" end="235" fullname="ts.obsrec" inherit_type="local" line="7" name="ObsRec" source="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" start="201">
+   <Type>record</Type>
+   <Field name="period"/>
+   <Signature>ObsRec</Signature><Field name="dependent"/>
+  </Definition>
+  <Definition body="246" end="300" fullname="ts.obswork" inherit_type="local" line="8" name="ObsWork" source="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" start="236">
+   <Type>record</Type>
+   <Field name="period"/>
+   <Signature>ObsWork</Signature><Field name="dependent"/>
+  </Definition>
+  <Definition body="513" end="4459" exported="1" fullname="ts.estimatedobs" inherit_type="local" line="12" name="EstimatedObs" source="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" start="301">
+   <Type>function</Type>
+   <Signature>DATASET(TS.Types.Obs_Estimated)
+       EstimatedObs(DATASET(TS.Types.ModelObs) model_obs,
+                    DATASET(TS.Types.Model_Parameters) models,
+                    UNSIGNED2 forecast_periods=0)</Signature><Params>
+    <Param name="model_obs"/>
+    <Param name="models"/>
+    <Param name="forecast_periods"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" name="TS.ExtendedParameters" target="extendedparameters.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" name="TS.DifferenceSeries" target="differenceseries.ecl.xml"/></Meta>

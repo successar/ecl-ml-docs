@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Regression.Datasets.servoDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/servoDS.ecl" target="servods.ecl.xml">
+  <Definition body="35" end="7469" exported="1" fullname="TestingSuite.Regression.Datasets.servoDS" inherit_type="local" line="2" name="servoDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/servoDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="69" end="282" fullname="testingsuite.regression.datasets.servods.servorecord" inherit_type="local" line="3" name="servoRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/servoDS.ecl" start="48">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="motor"/>
+    <Field name="screw"/>
+    <Field name="pgain"/>
+    <Field name="vgain"/>
+    <Signature>servoRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="306" end="497" exported="1" fullname="testingsuite.regression.datasets.servods.betas" inherit_type="local" line="11" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/servoDS.ecl" start="291">
+    <Signature>betas</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="520" end="7464" exported="1" fullname="testingsuite.regression.datasets.servods.content" inherit_type="local" line="18" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/servoDS.ecl" start="503">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>servoDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

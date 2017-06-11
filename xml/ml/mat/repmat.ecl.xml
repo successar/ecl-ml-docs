@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Repmat" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" target="repmat.ecl.xml">
+  <Definition body="225" end="643" exported="1" fullname="ml.mat.repmat" inherit_type="local" line="5" name="Repmat" source="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" start="159">
+   <Type>function</Type>
+   <Signature>Repmat(DATASET(Types.Element) A, UNSIGNED M, UNSIGNED N)</Signature><Params>
+    <Param name="A"/>
+    <Param name="M"/>
+    <Param name="N"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/></Meta>

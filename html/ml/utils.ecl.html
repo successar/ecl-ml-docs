@@ -1,0 +1,700 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+				std.str
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+				std.system.thorlib
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : Utils
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Pi
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Base
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			EMBED : REAL8 Fac(UNSIGNED2 i)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			EMBED : REAL8 DoubleFac(INTEGER2 i)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : REAL8 NCK(INTEGER2 N, INTEGER2 K)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			EMBED : REAL8 Poly(REAL8 x, SET OF REAL8 Coeffs)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : stirlingFormula(real8 x)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			EMBED : REAL8 gamma(REAL8 x)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			EMBED : REAL8 lowerGamma(REAL8 x, REAL8 y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			EMBED : REAL8 upperGamma(REAL8 x, REAL8 y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Beta(REAL8 x, REAL8 y)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Fat(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FatD(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SparseARFFfileToDiscreteField(STRING fileName)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SparseARFFfileToDiscreteFieldCounted(STRING fileName)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MACRO : Gini(infile,pivot,target)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MACRO : mac_SequenceInField(infile,infield,seq,outfile)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : RebaseDiscrete(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : RebaseNumericField(DATASET(Types.NumericField) cl)
+			<ul>
+				
+		<li>
+			RECORD : MapRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Mapping(Types.t_FieldNumber new_lowval=1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToNew(DATASET(MapRec) MapTable)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToOldFromElemToPart(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : RebaseNumericFieldID(DATASET(Types.NumericField) cl)
+			<ul>
+				
+		<li>
+			RECORD : MapRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : MappingID(Types.t_FieldNumber new_lowval=1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToNew(DATASET(MapRec) MapTable)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NotFirst(STRING S)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NotLast(STRING S)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NotNN(STRING S,UNSIGNED2 NN)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LastN(STRING S)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NchooseK(UNSIGNED1 N, UNSIGNED1 K)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToGroundTruth(DATASET(Types.NumericField) Y )
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : Utils
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Pi
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Base
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	EMBED : REAL8 Fac(UNSIGNED2 i)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	EMBED : REAL8 DoubleFac(INTEGER2 i)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : REAL8 NCK(INTEGER2 N, INTEGER2 K)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	EMBED : REAL8 Poly(REAL8 x, SET OF REAL8 Coeffs)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : stirlingFormula(real8 x)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	EMBED : REAL8 gamma(REAL8 x)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	EMBED : REAL8 lowerGamma(REAL8 x, REAL8 y)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	EMBED : REAL8 upperGamma(REAL8 x, REAL8 y)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Beta(REAL8 x, REAL8 y)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Fat(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FatD(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SparseARFFfileToDiscreteField(STRING fileName)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SparseARFFfileToDiscreteFieldCounted(STRING fileName)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MACRO : Gini(infile,pivot,target)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MACRO : mac_SequenceInField(infile,infield,seq,outfile)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : RebaseDiscrete(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : RebaseNumericField(DATASET(Types.NumericField) cl)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : MapRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Mapping(Types.t_FieldNumber new_lowval=1)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToNew(DATASET(MapRec) MapTable)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToOldFromElemToPart(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : RebaseNumericFieldID(DATASET(Types.NumericField) cl)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : MapRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : MappingID(Types.t_FieldNumber new_lowval=1)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToNew(DATASET(MapRec) MapTable)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : NotFirst(STRING S)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NotLast(STRING S)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NotNN(STRING S,UNSIGNED2 NN)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LastN(STRING S)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NchooseK(UNSIGNED1 N, UNSIGNED1 K)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToGroundTruth(DATASET(Types.NumericField) Y )
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

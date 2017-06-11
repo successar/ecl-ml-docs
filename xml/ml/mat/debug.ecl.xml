@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Debug" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" target="debug.ecl.xml">
+  <Definition body="15" end="22" exported="1" fullname="ml.mat.debug" inherit_type="local" line="1" name="Debug" source="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" start="0">
+   <Signature>Debug</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+</Meta>

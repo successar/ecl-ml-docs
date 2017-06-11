@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Clustering.TestKMeans" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/TestKMeans.ecl" target="testkmeans.ecl.xml">
+  <Definition body="218" end="2123" exported="1" fullname="testingsuite.clustering.testkmeans" inherit_type="local" line="8" name="TestKMeans" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/TestKMeans.ecl" start="158">
+   <Type>macro</Type>
+   <Signature>TestKMeans(raw_dataset_name, repeats, no_clusters)</Signature><Params>
+    <Param name="raw_dataset_name"/>
+    <Param name="repeats"/>
+    <Param name="no_clusters"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="std" inherit_type="local" line="1" name="std" ref="std" remotescope="1" start="7" target="../../std/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="19" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" remotescope="1" start="19" target="../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="30" fullname="ML.Tests.Explanatory" inherit_type="local" line="3" name="TE" ref="ml.tests.explanatory" remotescope="1" start="30" target="../../ml/tests/explanatory/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="65" fullname="ML.Types" inherit_type="local" line="4" name="Types" ref="ml.types" start="65" target="../../ml/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="82" fullname="TestingSuite.Utils" inherit_type="local" line="5" name="Utils" ref="testingsuite.utils" remotescope="1" start="82" target="../utils/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="118" fullname="TestingSuite.Clustering" inherit_type="local" line="6" name="Clustering" ref="testingsuite.clustering" start="118" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../ml/types.ecl.xml"/></Meta>

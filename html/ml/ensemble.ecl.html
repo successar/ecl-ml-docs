@@ -1,0 +1,648 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : Ensemble
+			<ul>
+				
+		<li>
+			ATTRIBUTE : modelD_Map
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : STRING modelD_fields
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : modelC_Map
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : STRING modelC_fields
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : gSplitD
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : gSplitC
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : gNodeInstDisc
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : gNodeThin
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : gNodeInstCont
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : DepGroupedRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : DepGroupedRec GroupDepRecords (Types.DiscreteField l, ML.Sampling.idListGroupRec r)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : gNodexKoutofM(DATASET(gNodeThin) topNodes, Types.t_FieldNumber K, Types.t_FieldNumber M)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NxKoutofM(Types.t_Count N, Types.t_FieldNumber K, Types.t_FieldNumber M)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Types.DiscreteField GetDRecords(Types.DiscreteField l, ML.Sampling.idListGroupRec r)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : gNodeInstDisc GenerateRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : gNodeInstCont GenerateCRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : gSplitD toNewDiscNode(gNodeInstDisc NodeInst)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Types.NumericField GetCRecords(Types.NumericField l, ML.Sampling.idListGroupRec r)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : gSplitC toNewContNode(gNodeInstCont NodeInst)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitFeatureSampleGI(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitFeatureSampleIGR(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, Types.t_level maxLevel=32)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FromDiscreteForest(DATASET(ML.Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToDiscreteForest(DATASET(gSplitD) nodes)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : gSplitInstancesD(DATASET(gSplitD) mod, DATASET(Types.DiscreteField) Indep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribForestD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyDForest(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : RndFeatSelBinPartitionGIBased(DATASET(gNodeInstCont) nodes, Types.t_Count nTrees, Types.t_Count kFeatSel, Types.t_Count mTotFeats, Types.t_Count p_level, REAL Purity=1.0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : SplitFeatureSampleGIBin(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ToContinuosForest(DATASET(gSplitC) nodes)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FromContinuosForest(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : gSplitInstC(DATASET(gSplitC) mod, DATASET(Types.NumericField) Indep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribForestC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyCForest(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : Ensemble
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : modelD_Map
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : STRING modelD_fields
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : modelC_Map
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : STRING modelC_fields
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : gSplitD
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : gSplitC
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : gNodeInstDisc
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : gNodeThin
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : gNodeInstCont
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : DepGroupedRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : DepGroupedRec GroupDepRecords (Types.DiscreteField l, ML.Sampling.idListGroupRec r)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : gNodexKoutofM(DATASET(gNodeThin) topNodes, Types.t_FieldNumber K, Types.t_FieldNumber M)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NxKoutofM(Types.t_Count N, Types.t_FieldNumber K, Types.t_FieldNumber M)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Types.DiscreteField GetDRecords(Types.DiscreteField l, ML.Sampling.idListGroupRec r)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : gNodeInstDisc GenerateRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : gNodeInstCont GenerateCRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : gSplitD toNewDiscNode(gNodeInstDisc NodeInst)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Types.NumericField GetCRecords(Types.NumericField l, ML.Sampling.idListGroupRec r)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : gSplitC toNewContNode(gNodeInstCont NodeInst)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitFeatureSampleGI(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitFeatureSampleIGR(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, Types.t_level maxLevel=32)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FromDiscreteForest(DATASET(ML.Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToDiscreteForest(DATASET(gSplitD) nodes)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : gSplitInstancesD(DATASET(gSplitD) mod, DATASET(Types.DiscreteField) Indep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribForestD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyDForest(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : RndFeatSelBinPartitionGIBased(DATASET(gNodeInstCont) nodes, Types.t_Count nTrees, Types.t_Count kFeatSel, Types.t_Count mTotFeats, Types.t_Count p_level, REAL Purity=1.0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : SplitFeatureSampleGIBin(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ToContinuosForest(DATASET(gSplitC) nodes)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FromContinuosForest(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : gSplitInstC(DATASET(gSplitC) mod, DATASET(Types.NumericField) Indep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribForestC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyCForest(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

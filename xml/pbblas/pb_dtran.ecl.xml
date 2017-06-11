@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.PB_dtran" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" target="pb_dtran.ecl.xml">
+  <Import body="0" end="115" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" start="115" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="130" fullname="PBblas.Types" inherit_type="local" line="4" name="Types" ref="pbblas.types" start="130" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="151" fullname="PBblas.IMatrix_Map" inherit_type="local" line="5" name="IMatrix_Map" ref="pbblas.imatrix_map" start="151" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="185" end="204" fullname="pbblas.layout_part" inherit_type="local" line="6" name="Layout_Part" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="171">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="221" end="242" fullname="pbblas.layout_target" inherit_type="local" line="7" name="Layout_Target" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="205">
+   <Type>record</Type>
+   <Field name="t_part_id"/>
+   <Field name="t_node_id"/>
+   <Field name="t_block_row"/>
+   <Field name="t_block_col"/>
+   <Field name="t_term"/>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Layout_Target</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="253" end="268" fullname="pbblas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="243">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="279" end="295" fullname="pbblas.matrix_t" inherit_type="local" line="9" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="269">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="310" end="329" fullname="pbblas.dimension_t" inherit_type="local" line="10" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="296">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="339" end="365" fullname="pbblas.emptyc" inherit_type="local" line="11" name="emptyC" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="330">
+   <Signature>emptyC</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="390" end="394" fullname="pbblas.empty_matrix" inherit_type="local" line="12" name="empty_matrix" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="366">
+   <Signature>matrix_t empty_matrix</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="570" end="1210" fullname="pbblas.dtran" inherit_type="local" line="15" name="dtran" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="439">
+   <Type>embed</Type>
+   <Signature>matrix_t dtran(dimension_t m, dimension_t n,
+               value_t alpha, matrix_t A,
+               value_t beta,  matrix_t C)</Signature><Params>
+    <Param name="m"/>
+    <Param name="n"/>
+    <Param name="alpha"/>
+    <Param name="A"/>
+    <Param name="beta"/>
+    <Param name="C"/>
+   </Params>
+  </Definition>
+  <Definition body="1388" end="3479" exported="1" fullname="pbblas.pb_dtran" inherit_type="local" line="40" name="PB_dtran" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="1212">
+   <Type>function</Type>
+   <Signature>PB_dtran(IMatrix_Map map_a, IMatrix_Map map_c,
+                value_t alpha, DATASET(Layout_Part) A,
+                value_t beta=0.0, DATASET(Layout_Part) C=emptyC)</Signature><Params>
+    <Param name="map_a"/>
+    <Param name="map_c"/>
+    <Param name="alpha"/>
+    <Param name="A"/>
+    <Param name="beta"/>
+    <Param name="C"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/></Meta>

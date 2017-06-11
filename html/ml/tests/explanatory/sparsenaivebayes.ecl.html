@@ -1,0 +1,1156 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../utils.ecl.html">
+				ml.utils
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			ATTRIBUTE : TrainDS
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : indepData
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : depData
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : trainer
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Base
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : SparseData
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ModelD(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : D_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : dmodel
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : D_classDist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : D_results
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : D_compare
+			<ul>
+				
+		<li>
+			ATTRIBUTE : J
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ConfMatrix_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : class_cnt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cfmx
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : cross_raw
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : CrossAssignments
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RecallByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : PrecisionByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : FP_Rate_ByClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Accuracy
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : AUC_D0
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : AUC_D4
+			<ul>
+				
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	ATTRIBUTE : TrainDS
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : indepData
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : depData
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : trainer
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../classify.ecl.html">
+					ml.classify.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Base
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : SparseData
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ModelD(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : D_Model
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : dmodel
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : D_classDist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : D_results
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : D_compare
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : J
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ConfMatrix_Rec
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : class_cnt
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cfmx
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : cross_raw
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : CrossAssignments
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RecallByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : PrecisionByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : FP_Rate_ByClass
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Accuracy
+		
+		<br/>
+		<a href="../../classify.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : AUC_D0
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : AUC_D4
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+</body>
+</html>

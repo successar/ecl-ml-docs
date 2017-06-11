@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Types" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" target="types.ecl.xml">
+  <Definition body="15" end="648" exported="1" fullname="ML.Mat.Types" inherit_type="local" line="1" name="Types" source="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" start="0">
+   <Type>module</Type>
+   <Definition body="108" end="119" exported="1" fullname="ml.mat.types.t_index" inherit_type="local" line="4" name="t_Index" source="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" start="91">
+    <Signature>t_Index</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="197" end="204" exported="1" fullname="ml.mat.types.t_value" inherit_type="local" line="5" name="t_value" source="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" start="180">
+    <Signature>t_value</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="222" end="233" exported="1" fullname="ml.mat.types.t_mu_no" inherit_type="local" line="6" name="t_mu_no" source="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" start="205">
+    <Signature>t_mu_no</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="296" end="378" exported="1" fullname="ml.mat.types.element" inherit_type="local" line="8" name="Element" source="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" start="279">
+    <Type>record</Type>
+    <Field name="x"/>
+    <Field name="y"/>
+    <Signature>Element</Signature><Field name="value"/>
+   </Definition>
+   <Definition body="400" end="539" exported="1" fullname="ml.mat.types.vecelement" inherit_type="local" line="14" name="VecElement" source="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" start="380">
+    <Type>record</Type>
+    <Field name="x"/>
+    <Field name="y"/>
+    <Signature>VecElement</Signature><Field name="value"/>
+   </Definition>
+   <Definition body="560" end="642" exported="1" fullname="ml.mat.types.muelement" inherit_type="local" line="20" name="MUElement" source="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" start="541">
+    <Type>record</Type>
+    <Field name="x"/>
+    <Field name="y"/>
+    <Field name="value"/>
+    <Signature>MUElement</Signature><Field name="no"/>
+   </Definition>
+   <Signature>Types</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

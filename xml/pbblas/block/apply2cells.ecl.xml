@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.Block.Apply2Cells" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" target="apply2cells.ecl.xml">
+  <Import body="0" end="56" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" start="56" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="75" end="98" fullname="pbblas.block.matrix_t" inherit_type="local" line="3" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" start="64">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="107" end="133" fullname="pbblas.block.dim_t" inherit_type="local" line="4" name="dim_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" start="99">
+   <Signature>dim_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="144" end="166" fullname="pbblas.block.value_t" inherit_type="local" line="5" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" start="134">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="175" end="199" fullname="pbblas.block.func_t" inherit_type="local" line="6" name="func_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" start="167">
+   <Type>function</Type>
+   <Signature>func_t</Signature><Params>
+    <Param name="v"/>
+    <Param name="r"/>
+    <Param name="c"/>
+   </Params>
+  </Definition>
+  <Definition body="271" end="555" exported="1" fullname="pbblas.block.apply2cells" inherit_type="local" line="8" name="Apply2Cells" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" start="201">
+   <Type>function</Type>
+   <Signature>matrix_t Apply2Cells(dim_t m, dim_t n, matrix_t x, func_t f)</Signature><Params>
+    <Param name="m"/>
+    <Param name="n"/>
+    <Param name="x"/>
+    <Param name="f"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" name="PBblas.Block.ICellFunc" target="icellfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/></Meta>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Regression.Datasets.AbaloneDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/AbaloneDS.ecl" target="abaloneds.ecl.xml">
+  <Definition body="37" end="279286" exported="1" fullname="TestingSuite.Regression.Datasets.AbaloneDS" inherit_type="local" line="2" name="AbaloneDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/AbaloneDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="73" end="440" fullname="testingsuite.regression.datasets.abaloneds.abalonerecord" inherit_type="local" line="3" name="AbaloneRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/AbaloneDS.ecl" start="50">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="Sex"/>
+    <Field name="f_Length"/>
+    <Field name="Diameter"/>
+    <Field name="Height"/>
+    <Field name="Whole_Weight"/>
+    <Field name="Shucked_W"/>
+    <Field name="Viscera_W"/>
+    <Field name="Shell_W"/>
+    <Signature>AbaloneRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="460" end="743" exported="1" fullname="testingsuite.regression.datasets.abaloneds.betas" inherit_type="local" line="15" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/AbaloneDS.ecl" start="445">
+    <Signature>betas</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="765" end="279281" exported="1" fullname="testingsuite.regression.datasets.abaloneds.content" inherit_type="local" line="25" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/AbaloneDS.ecl" start="748">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>AbaloneDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

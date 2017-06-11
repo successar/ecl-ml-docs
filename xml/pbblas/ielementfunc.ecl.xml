@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Source name="PBblas.IElementFunc" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" target="ielementfunc.ecl.xml">
+  <Import body="0" end="94" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" start="94" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="112" end="134" fullname="pbblas.value_t" inherit_type="local" line="3" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="102">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="149" end="175" fullname="pbblas.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="135">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="190" end="216" fullname="pbblas.partition_t" inherit_type="local" line="5" name="partition_t" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="176">
+   <Signature>partition_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="289" end="292" exported="1" fullname="pbblas.ielementfunc" inherit_type="local" line="7" name="IElementFunc" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="218">
+   <Type>function</Type>
+   <Signature>value_t IElementFunc(value_t v, dimension_t r, dimension_t c)</Signature><Params>
+    <Param name="v"/>
+    <Param name="r"/>
+    <Param name="c"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

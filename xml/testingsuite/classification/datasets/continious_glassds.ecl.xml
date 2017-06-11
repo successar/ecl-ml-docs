@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.continious_glassDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_glassDS.ecl" target="continious_glassds.ecl.xml">
+  <Definition body="46" end="14867" exported="1" fullname="TestingSuite.Classification.Datasets.continious_glassDS" inherit_type="local" line="2" name="continious_glassDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_glassDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="91" end="443" fullname="testingsuite.classification.datasets.continious_glassds.continious_glassrecord" inherit_type="local" line="3" name="continious_glassRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_glassDS.ecl" start="59">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="RI"/>
+    <Field name="Na"/>
+    <Field name="MG"/>
+    <Field name="Al"/>
+    <Field name="Si"/>
+    <Field name="K"/>
+    <Field name="Ca"/>
+    <Field name="Ba"/>
+    <Field name="Fe"/>
+    <Signature>continious_glassRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="465" end="14862" exported="1" fullname="testingsuite.classification.datasets.continious_glassds.content" inherit_type="local" line="16" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_glassDS.ecl" start="448">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>continious_glassDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

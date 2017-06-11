@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.LibSVM.Converted" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" target="converted.ecl.xml">
+  <Import body="0" end="152" fullname="ML.SVM.LibSVM.Types" inherit_type="local" line="5" name="Types" ref="ml.svm.libsvm.types" start="152" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="180" fullname="ML.SVM.Types" inherit_type="local" line="6" name="SVM_Types" ref="ml.svm.types" start="180" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="214" fullname="std" inherit_type="local" line="7" name="std" ref="std" remotescope="1" start="214" target="../../../std/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="269" end="295" fullname="ml.svm.libsvm.ecl_libsvm_problem" inherit_type="local" line="9" name="ECL_LibSVM_Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="248">
+   <Type>record</Type>
+   <Field name="elements"/>
+   <Field name="entries"/>
+   <Field name="features"/>
+   <Field name="max_value"/>
+   <Field name="y"/>
+   <Signature>ECL_LibSVM_Problem</Signature><Field name="x"/>
+  </Definition>
+  <Definition body="306" end="321" fullname="ml.svm.libsvm.r8entry" inherit_type="local" line="10" name="R8Entry" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="296">
+   <Type>record</Type>
+   <Signature>R8Entry</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="336" end="355" fullname="ml.svm.libsvm.libsvm_node" inherit_type="local" line="11" name="LibSVM_Node" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="322">
+   <Type>record</Type>
+   <Field name="indx"/>
+   <Signature>LibSVM_Node</Signature><Field name="value"/>
+  </Definition>
+  <Definition body="370" end="393" fullname="ml.svm.libsvm.svm_feature" inherit_type="local" line="12" name="SVM_Feature" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="356">
+   <Type>record</Type>
+   <Field name="nominal"/>
+   <Signature>SVM_Feature</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="409" end="433" fullname="ml.svm.libsvm.svm_instance" inherit_type="local" line="13" name="SVM_Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="394">
+   <Type>record</Type>
+   <Field name="rid"/>
+   <Field name="y"/>
+   <Field name="max_value"/>
+   <Signature>SVM_Instance</Signature><Field name="x"/>
+  </Definition>
+  <Definition body="453" end="3453" exported="1" fullname="ML.SVM.LibSVM.Converted" inherit_type="local" line="14" name="Converted" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="434">
+   <Type>module</Type>
+   <Definition body="595" end="2140" exported="1" fullname="ml.svm.libsvm.converted.libsvmdata2instance" inherit_type="local" line="16" name="LIBSVMDATA2Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="531">
+    <Type>function</Type>
+    <Signature>DATASET(SVM_Instance) LIBSVMDATA2Instance(STRING fname)</Signature><Params>
+     <Param name="fname"/>
+    </Params>
+   </Definition>
+   <Definition body="2332" end="3448" exported="1" fullname="ml.svm.libsvm.converted.instance2problem" inherit_type="local" line="61" name="Instance2Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="2243">
+    <Type>function</Type>
+    <Signature>DATASET(ECL_LibSVM_Problem)
+         Instance2Problem(DATASET(SVM_Instance) ds)</Signature><Params>
+     <Param name="ds"/>
+    </Params>
+   </Definition>
+   <Signature>Converted</Signature><Parents/>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../types.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/></Meta>

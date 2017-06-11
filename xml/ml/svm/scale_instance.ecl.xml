@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.scale_instance" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" target="scale_instance.ecl.xml">
+  <Import body="0" end="7" fullname="ML.SVM.Types" inherit_type="local" line="1" name="Types" ref="ml.svm.types" start="7" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="36" end="53" fullname="ml.svm.svm_scale" inherit_type="local" line="3" name="SVM_Scale" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="24">
+   <Type>record</Type>
+   <Field name="x_lower"/>
+   <Field name="x_upper"/>
+   <Field name="y_lower"/>
+   <Field name="y_upper"/>
+   <Field name="y_min"/>
+   <Field name="y_max"/>
+   <Signature>SVM_Scale</Signature><Field name="features"/>
+  </Definition>
+  <Definition body="69" end="89" fullname="ml.svm.svm_instance" inherit_type="local" line="4" name="SVM_Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="54">
+   <Type>record</Type>
+   <Field name="rid"/>
+   <Field name="y"/>
+   <Field name="max_value"/>
+   <Signature>SVM_Instance</Signature><Field name="x"/>
+  </Definition>
+  <Definition body="104" end="123" fullname="ml.svm.svm_feature" inherit_type="local" line="5" name="SVM_Feature" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="90">
+   <Type>record</Type>
+   <Field name="nominal"/>
+   <Signature>SVM_Feature</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="140" end="161" fullname="ml.svm.feature_scale" inherit_type="local" line="6" name="Feature_Scale" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="124">
+   <Type>record</Type>
+   <Field name="nominal"/>
+   <Field name="min_value"/>
+   <Signature>Feature_Scale</Signature><Field name="max_value"/>
+  </Definition>
+  <Definition body="235" end="1077" exported="1" fullname="ml.svm.scale_instance" inherit_type="local" line="8" name="scale_instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="163">
+   <Type>function</Type>
+   <Signature>scale_instance(DATASET(SVM_Scale) f, DATASET(SVM_Instance) ds)</Signature><Params>
+    <Param name="f"/>
+    <Param name="ds"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="types.ecl.xml"/></Meta>

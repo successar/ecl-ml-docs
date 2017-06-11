@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Utils.ToTraining" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/ToTraining.ecl" target="totraining.ecl.xml">
+  <Definition body="35" end="471" exported="1" fullname="testingsuite.utils.totraining" inherit_type="local" line="1" name="ToTraining" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/ToTraining.ecl" start="0">
+   <Type>macro</Type>
+   <Signature>ToTraining(Resdata, dOut)</Signature><Params>
+    <Param name="Resdata"/>
+    <Param name="dOut"/>
+   </Params>
+  </Definition>
+ </Source>
+</Meta>

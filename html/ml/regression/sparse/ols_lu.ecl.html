@@ -1,0 +1,825 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+				std.str
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : NumericField
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : OLS_LU(DATASET(NumericField) X,DATASET(NumericField) Y)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : DATASET(Mat.Types.Element) mBetas
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : CoRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(NumericField) Independents
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(NumericField) Dependents
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : mY
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : mX
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : mXt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(NumericField) Betas
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(NumericField) modelY
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : corr_ds
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(CoRec) RSquared
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(NumericField) var_covar
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Anova
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : SE
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : tStat
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : dist
+			<ul>
+				
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Multiplier
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : LowDensity
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : high
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Low
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : pVal
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(CoRec) AdjRSquared
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ConfInt(Types.t_fieldReal level)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(AICRec) AIC
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : DATASET(FTestRec) FTest
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : NumericField
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : OLS_LU(DATASET(NumericField) X,DATASET(NumericField) Y)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="ols.ecl.html">
+					ml.regression.sparse.ols
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : DATASET(Mat.Types.Element) mBetas
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : CoRec
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(NumericField) Independents
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(NumericField) Dependents
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : mY
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : mX
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : mXt
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(NumericField) Betas
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(NumericField) modelY
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : corr_ds
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(CoRec) RSquared
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(NumericField) var_covar
+		
+		<br/>
+		<a href="ols.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Anova
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : SE
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : tStat
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : dist
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Multiplier
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : LowDensity
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : high
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Low
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		<a href="../../distribution.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : pVal
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(CoRec) AdjRSquared
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ConfInt(Types.t_fieldReal level)
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(AICRec) AIC
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : DATASET(FTestRec) FTest
+		
+		<br/>
+		<a href="../iregression.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

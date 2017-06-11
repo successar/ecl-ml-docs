@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.ToField" sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" target="tofield.ecl.xml">
+  <Definition body="1894" end="4709" exported="1" fullname="ml.tofield" inherit_type="local" line="34" name="ToField" source="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" start="1843">
+   <Type>macro</Type>
+   <Signature>ToField(dIn,dOut,idfield='',datafields='')</Signature><Params>
+    <Param name="dIn"/>
+    <Param name="dOut"/>
+    <Param name="idfield"/>
+    <Param name="datafields"/>
+   </Params>
+  </Definition>
+ </Source>
+</Meta>

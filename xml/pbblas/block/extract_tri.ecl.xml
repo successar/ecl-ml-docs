@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Source name="PBblas.Block.Extract_Tri" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/Extract_Tri.ecl" target="extract_tri.ecl.xml">
+  <Import body="0" end="148" fullname="PBblas.Types" inherit_type="local" line="4" name="Types" ref="pbblas.types" start="148" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="173" end="189" fullname="pbblas.block.matrix_t" inherit_type="local" line="5" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Extract_Tri.ecl" start="162">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="204" end="223" fullname="pbblas.block.dimension_t" inherit_type="local" line="6" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Extract_Tri.ecl" start="190">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="235" end="251" inherit_type="local" line="7" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Extract_Tri.ecl" start="224">
+   <Signature>Triangle</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="263" end="279" inherit_type="local" line="8" name="Diagonal" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Extract_Tri.ecl" start="252">
+   <Signature>Diagonal</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="408" end="986" exported="1" fullname="pbblas.block.extract_tri" inherit_type="local" line="10" name="Extract_Tri" source="/media/sarthak/Data/ecl-ml/PBblas/Block/Extract_Tri.ecl" start="281">
+   <Type>embed</Type>
+   <Signature>matrix_t Extract_Tri(dimension_t m, dimension_t n,
+                            Triangle tri, Diagonal dt, matrix_t a)</Signature><Params>
+    <Param name="m"/>
+    <Param name="n"/>
+    <Param name="tri"/>
+    <Param name="dt"/>
+    <Param name="a"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

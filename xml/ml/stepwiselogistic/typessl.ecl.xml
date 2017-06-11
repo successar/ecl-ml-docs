@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.StepwiseLogistic.TypesSL" sourcePath="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/TypesSL.ecl" target="typessl.ecl.xml">
+  <Definition body="29" end="341" exported="1" fullname="ML.StepwiseLogistic.TypesSL" inherit_type="local" line="3" name="TypesSL" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/TypesSL.ecl" start="12">
+   <Type>module</Type>
+   <Definition body="56" end="88" exported="1" fullname="ml.stepwiselogistic.typessl.parameter" inherit_type="local" line="4" name="Parameter" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/TypesSL.ecl" start="37">
+    <Type>record</Type>
+    <Signature>Parameter</Signature><Field name="number"/>
+   </Definition>
+   <Definition body="108" end="197" exported="1" fullname="ml.stepwiselogistic.typessl.paramrec" inherit_type="local" line="8" name="ParamRec" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/TypesSL.ecl" start="90">
+    <Type>record</Type>
+    <Field name="Op"/>
+    <Field name="ParamNum"/>
+    <Field name="Deviance"/>
+    <Signature>ParamRec</Signature><Field name="AIC"/>
+   </Definition>
+   <Definition body="216" end="335" exported="1" fullname="ml.stepwiselogistic.typessl.steprec" inherit_type="local" line="15" name="StepRec" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/TypesSL.ecl" start="199">
+    <Type>record</Type>
+    <Field name="Initial"/>
+    <Field name="ParamSteps"/>
+    <Field name="Final"/>
+    <Signature>StepRec</Signature><Field name="AIC"/>
+   </Definition>
+   <Signature>TypesSL</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+</Meta>

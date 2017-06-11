@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.Forecast" sourcePath="/media/sarthak/Data/ecl-ml/TS/Forecast.ecl" target="forecast.ecl.xml">
+  <Definition body="360" end="744" exported="1" fullname="ts.forecast" inherit_type="local" line="5" name="Forecast" source="/media/sarthak/Data/ecl-ml/TS/Forecast.ecl" start="168">
+   <Type>function</Type>
+   <Signature>DATASET(TS.Types.ModelObs)
+       Forecast(DATASET(TS.Types.UniObservation) obs,
+                DATASET(TS.Types.Model_Parameters) parms,
+                UNSIGNED2 forecast_periods)</Signature><Params>
+    <Param name="obs"/>
+    <Param name="parms"/>
+    <Param name="forecast_periods"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="164" fullname="TS" inherit_type="local" line="4" name="TS" ref="ts" start="164" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" name="TS.SeriesByModel" target="seriesbymodel.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" name="TS.EstimatedObs" target="estimatedobs.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" name="TS.ExtendedParameters" target="extendedparameters.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" name="TS.DifferenceSeries" target="differenceseries.ecl.xml"/></Meta>

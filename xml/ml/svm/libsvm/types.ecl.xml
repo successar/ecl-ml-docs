@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.LibSVM.Types" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" target="types.ecl.xml">
+  <Definition body="69" end="2717" exported="1" fullname="ML.SVM.LibSVM.Types" inherit_type="local" line="2" name="Types" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="54">
+   <Type>module</Type>
+   <Definition body="178" end="224" exported="1" inherit_type="local" line="4" name="LibSVM_Output" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="156">
+    <Signature>LibSVM_Output</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="249" end="309" exported="1" inherit_type="local" line="5" name="LibSVM_Kernel" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="227">
+    <Signature>LibSVM_Kernel</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="333" end="399" exported="1" inherit_type="local" line="6" name="LibSVM_Type" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="312">
+    <Signature>LibSVM_Type</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="423" end="582" exported="1" fullname="ml.svm.libsvm.types.libsvm_node" inherit_type="local" line="7" name="LibSVM_Node" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="402">
+    <Type>record</Type>
+    <Field name="indx"/>
+    <Signature>LibSVM_Node</Signature><Field name="value"/>
+   </Definition>
+   <Definition body="602" end="629" exported="1" fullname="ml.svm.libsvm.types.r8entry" inherit_type="local" line="11" name="R8Entry" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="585">
+    <Type>record</Type>
+    <Signature>R8Entry</Signature><Field name="v"/>
+   </Definition>
+   <Definition body="649" end="679" exported="1" fullname="ml.svm.libsvm.types.i4entry" inherit_type="local" line="14" name="I4Entry" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="632">
+    <Type>record</Type>
+    <Signature>I4Entry</Signature><Field name="v"/>
+   </Definition>
+   <Definition body="710" end="910" exported="1" fullname="ml.svm.libsvm.types.ecl_libsvm_problem" inherit_type="local" line="17" name="ECL_LibSVM_Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="682">
+    <Type>record</Type>
+    <Field name="elements"/>
+    <Field name="entries"/>
+    <Field name="features"/>
+    <Field name="max_value"/>
+    <Field name="y"/>
+    <Signature>ECL_LibSVM_Problem</Signature><Field name="x"/>
+   </Definition>
+   <Definition body="943" end="1143" exported="1" fullname="ml.svm.libsvm.types.ecl_libsvm_parameter" inherit_type="local" line="25" name="ECL_LibSVM_Parameter" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="913">
+    <Type>record</Type>
+    <Field name="svmType"/>
+    <Field name="kernelType"/>
+    <Field name="degree"/>
+    <Field name="gamma"/>
+    <Signature>ECL_LibSVM_Parameter</Signature><Field name="coef0"/>
+   </Definition>
+   <Definition body="1177" end="1771" exported="1" fullname="ml.svm.libsvm.types.ecl_libsvm_train_param" inherit_type="local" line="32" name="ECL_LibSVM_Train_Param" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="1146">
+    <Type>record</Type>
+    <Field name="svmType"/>
+    <Field name="kernelType"/>
+    <Field name="degree"/>
+    <Field name="gamma"/>
+    <Field name="coef0"/>
+    <Field name="cache_size"/>
+    <Field name="eps"/>
+    <Field name="C"/>
+    <Field name="nu"/>
+    <Field name="p"/>
+    <Field name="nr_weight"/>
+    <Field name="shrinking"/>
+    <Field name="prob_est"/>
+    <Field name="lbl"/>
+    <Signature>ECL_LibSVM_Train_Param</Signature><Field name="weight"/>
+   </Definition>
+   <Definition body="1800" end="2473" exported="1" fullname="ml.svm.libsvm.types.ecl_libsvm_model" inherit_type="local" line="44" name="ECL_LibSVM_Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="1774">
+    <Type>record</Type>
+    <Field name="svmType"/>
+    <Field name="kernelType"/>
+    <Field name="degree"/>
+    <Field name="gamma"/>
+    <Field name="coef0"/>
+    <Field name="k"/>
+    <Field name="l"/>
+    <Field name="elements"/>
+    <Field name="pairs_A"/>
+    <Field name="pairs_B"/>
+    <Field name="nr_label"/>
+    <Field name="nr_nSV"/>
+    <Field name="sv"/>
+    <Field name="sv_coef"/>
+    <Field name="rho"/>
+    <Field name="probA"/>
+    <Field name="probB"/>
+    <Field name="labels"/>
+    <Signature>ECL_LibSVM_Model</Signature><Field name="nSV"/>
+   </Definition>
+   <Definition body="2506" end="2576" exported="1" fullname="ml.svm.libsvm.types.crossvalidate_result" inherit_type="local" line="61" name="CrossValidate_Result" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="2476">
+    <Type>record</Type>
+    <Field name="mse"/>
+    <Field name="r_sq"/>
+    <Signature>CrossValidate_Result</Signature><Field name="correct"/>
+   </Definition>
+   <Definition body="2701" end="2712" exported="1" fullname="ml.svm.libsvm.types.libsvm_version_set" inherit_type="local" line="67" name="LibSVM_Version_set" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" start="2656">
+    <Signature>SET OF UNSIGNED2 LibSVM_Version_set</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Types</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

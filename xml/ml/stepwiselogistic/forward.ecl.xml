@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Source name="ML.StepwiseLogistic.Forward" sourcePath="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" target="forward.ecl.xml">
+  <Definition body="302" end="2571" exported="1" fullname="ml.stepwiselogistic.forward" inherit_type="local" line="8" name="Forward" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="159">
+   <Type>module</Type>
+   <Params>
+    <Param name="Ridge"/>
+    <Param name="Epsilon"/>
+    <Param name="MaxIter"/>
+   </Params>
+   <Parents>
+    <Parent line="8" name="StepLogistic" ref="ml.stepwiselogistic.steplogistic" target="steplogistic.ecl.xml"/>
+   </Parents>
+   <Definition body="394" end="413" fullname="ml.stepwiselogistic.steplogistic.parameter" inherit_type="inherited" line="11" name="Parameter" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/StepwiseLogistic/StepLogistic.ecl" start="375" target="steplogistic.ecl.xml">
+    <Type>record</Type>
+    <Signature>Parameter</Signature><Field name="number"/>
+   </Definition>
+   <Definition body="452" end="2563" exported="1" fullname="ml.stepwiselogistic.forward.regression" inherit_type="local" line="11" name="Regression" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="370">
+    <Type>module</Type>
+    <Params>
+     <Param name="X"/>
+     <Param name="Y"/>
+    </Params>
+    <Parents/>
+    <Definition body="501" end="676" fullname="ml.stepwiselogistic.forward.regression.indices" inherit_type="local" line="13" name="Indices" shared="1" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="465">
+     <Signature>DATASET(Parameter) Indices</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="866" end="964" fullname="ml.stepwiselogistic.forward.regression.initialstep" inherit_type="local" line="19" name="InitialStep" shared="1" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="828">
+     <Signature>DATASET(StepRec) InitialStep</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2149" end="2317" exported="1" fullname="ml.stepwiselogistic.forward.regression.steps" inherit_type="local" line="52" name="Steps" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="2117">
+     <Signature>DATASET(StepRec) Steps</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2341" end="2362" fullname="ml.stepwiselogistic.forward.regression.beststep" inherit_type="local" line="56" name="BestStep" shared="1" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="2323">
+     <Signature>BestStep</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2504" end="2521" exported="1" fullname="ml.stepwiselogistic.forward.regression.bestmodel" inherit_type="local" line="60" name="BestModel" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="2485">
+     <Signature>BestModel</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>Regression(DATASET(Types.NumericField) X,DATASET(Types.DiscreteField) Y)</Signature><Definition body="2540" end="2556" exported="1" fullname="ml.stepwiselogistic.forward.regression.mapx" inherit_type="local" line="61" name="MapX" source="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/Forward.ecl" start="2526">
+     <Signature>MapX</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="434" end="452" fullname="ml.stepwiselogistic.steplogistic.paramrec" inherit_type="inherited" line="12" name="ParamRec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/StepwiseLogistic/StepLogistic.ecl" start="416" target="steplogistic.ecl.xml">
+    <Type>record</Type>
+    <Field name="Op"/>
+    <Field name="ParamNum"/>
+    <Field name="Deviance"/>
+    <Signature>ParamRec</Signature><Field name="AIC"/>
+   </Definition>
+   <Definition body="472" end="489" fullname="ml.stepwiselogistic.steplogistic.steprec" inherit_type="inherited" line="13" name="StepRec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/StepwiseLogistic/StepLogistic.ecl" start="455" target="steplogistic.ecl.xml">
+    <Type>record</Type>
+    <Field name="Initial"/>
+    <Field name="ParamSteps"/>
+    <Field name="Final"/>
+    <Signature>StepRec</Signature><Field name="AIC"/>
+   </Definition>
+   <Definition body="541" end="667" fullname="ml.stepwiselogistic.steplogistic.rebasex" inherit_type="inherited" line="15" name="RebaseX" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/StepwiseLogistic/StepLogistic.ecl" start="493" target="steplogistic.ecl.xml">
+    <Type>function</Type>
+    <Signature>RebaseX(DATASET(Types.NumericField) X)</Signature><Params>
+     <Param name="X"/>
+    </Params>
+   </Definition>
+   <Definition body="742" end="833" exported="1" fullname="ml.stepwiselogistic.steplogistic.extractx" inherit_type="inherited" line="21" name="ExtractX" source="/media/sarthak/Data/ecl-ml/./ML/StepwiseLogistic/StepLogistic.ecl" start="671" target="steplogistic.ecl.xml">
+    <Type>function</Type>
+    <Signature>ExtractX(DATASET(Types.NumericField) X, DATASET(Parameter) M)</Signature><Params>
+     <Param name="X"/>
+     <Param name="M"/>
+    </Params>
+   </Definition>
+   <Definition body="5439" end="5451" exported="1" fullname="ml.classify.default.base" inherit_type="inherited" line="95" name="Base" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5425" target="../classify.ecl.xml">
+    <Signature>Base</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="5714" end="6068" fullname="ml.classify.default.combinemodels" inherit_type="override" line="97" name="CombineModels" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5624" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)</Signature><Params>
+     <Param name="sofar"/>
+     <Param name="new"/>
+    </Params>
+   </Definition>
+   <Definition body="6436" end="6483" exported="1" fullname="ml.classify.default.learnd" inherit_type="override" line="107" name="LearnD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="6351" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="6802" end="6852" exported="1" fullname="ml.classify.default.classifyd" inherit_type="override" line="111" name="ClassifyD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="6715" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="6941" end="7053" exported="1" fullname="ml.classify.default.testd" inherit_type="override" line="112" name="TestD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="6857" target="../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+    <Parents/>
+    <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../classify.ecl.xml">
+     <Signature>J</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../classify.ecl.xml">
+     <Type>record</Type>
+     <Field name="classifier"/>
+     <Field name="c_actual"/>
+     <Field name="c_modeled"/>
+     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+    </Definition>
+    <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../classify.ecl.xml">
+     <Signature>class_cnt</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../classify.ecl.xml">
+     <Signature>cfmx</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../classify.ecl.xml">
+     <Signature>cross_raw</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../classify.ecl.xml">
+     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../classify.ecl.xml">
+     <Signature>RecallByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../classify.ecl.xml">
+     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../classify.ecl.xml">
+     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../classify.ecl.xml">
+     <Signature>Accuracy</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="7141" end="7253" exported="1" fullname="ml.classify.default.testc" inherit_type="override" line="117" name="TestC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7058" target="../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+    <Parents/>
+    <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../classify.ecl.xml">
+     <Signature>J</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../classify.ecl.xml">
+     <Type>record</Type>
+     <Field name="classifier"/>
+     <Field name="c_actual"/>
+     <Field name="c_modeled"/>
+     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+    </Definition>
+    <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../classify.ecl.xml">
+     <Signature>class_cnt</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../classify.ecl.xml">
+     <Signature>cfmx</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../classify.ecl.xml">
+     <Signature>cross_raw</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../classify.ecl.xml">
+     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../classify.ecl.xml">
+     <Signature>RecallByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../classify.ecl.xml">
+     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../classify.ecl.xml">
+     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../classify.ecl.xml">
+     <Signature>Accuracy</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="7361" end="7787" exported="1" fullname="ml.classify.default.learndconcat" inherit_type="override" line="122" name="LearnDConcat" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7258" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="fnc"/>
+    </Params>
+   </Definition>
+   <Definition body="7894" end="8320" exported="1" fullname="ml.classify.default.learncconcat" inherit_type="override" line="131" name="LearnCConcat" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7792" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="fnc"/>
+    </Params>
+   </Definition>
+   <Definition body="26164" end="26205" fullname="ml.classify.logistic_model.logis_model" inherit_type="inherited" line="425" name="Logis_Model" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="26143" target="../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Field name="class_number"/>
+    <Field name="w"/>
+    <Signature>Logis_Model</Signature><Field name="SE"/>
+   </Definition>
+   <Definition body="26232" end="26294" fullname="ml.classify.logistic_model.zstat_model" inherit_type="inherited" line="429" name="ZStat_Model" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="26211" target="../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Field name="class_number"/>
+    <Field name="w"/>
+    <Field name="SE"/>
+    <Field name="z"/>
+    <Signature>ZStat_Model</Signature><Field name="pVal"/>
+   </Definition>
+   <Definition body="26323" end="26390" fullname="ml.classify.logistic_model.confint_model" inherit_type="inherited" line="434" name="ConfInt_Model" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="26300" target="../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Field name="class_number"/>
+    <Field name="w"/>
+    <Field name="lowerCI"/>
+    <Signature>ConfInt_Model</Signature><Field name="UpperCI"/>
+   </Definition>
+   <Definition body="26417" end="26804" fullname="ml.classify.logistic_model.deviancerec" inherit_type="inherited" line="439" name="DevianceRec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="26396" target="../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="classifier"/>
+    <Field name="c_actual"/>
+    <Field name="c_modeled"/>
+    <Field name="LL"/>
+    <Signature>DevianceRec</Signature><Field name="isGreater"/>
+   </Definition>
+   <Definition body="26831" end="26927" fullname="ml.classify.logistic_model.residdevrec" inherit_type="inherited" line="448" name="ResidDevRec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="26810" target="../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="classifier"/>
+    <Field name="Deviance"/>
+    <Signature>ResidDevRec</Signature><Field name="DF"/>
+   </Definition>
+   <Definition body="27226" end="27299" exported="1" fullname="ml.classify.logistic_model.model" inherit_type="inherited" line="456" name="Model" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="27178" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="27324" end="27354" fullname="ML.Distribution.Normal" inherit_type="inherited" line="461" name="norm_dist" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="27305" target="../distribution.ecl.xml">
+    <Type>module</Type>
+    <Signature>norm_dist</Signature><Parents>
+     <Parent line="27" name="Default" ref="ml.distribution.default" target="../distribution.ecl.xml"/>
+    </Parents>
+   </Definition>
+   <Definition body="27600" end="27644" exported="1" fullname="ml.classify.logistic_model.zstat" inherit_type="override" line="468" name="ZStat" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="27552" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ZStat(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="27914" end="28081" exported="1" fullname="ml.classify.logistic_model.confint" inherit_type="override" line="475" name="ConfInt" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="27839" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ConfInt(Types.t_fieldReal level, DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="level"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="28468" end="28509" exported="1" fullname="ml.classify.logistic_model.classifyc" inherit_type="override" line="487" name="ClassifyC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="28382" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="29330" end="30458" exported="1" fullname="ml.classify.logistic_model.deviancec" inherit_type="override" line="507" name="DevianceC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29210" target="../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="mod"/>
+    </Params>
+    <Parents/>
+    <Definition body="29357" end="29459" fullname="ml.classify.logistic_model.deviancec.dev" inherit_type="local" line="508" name="Dev" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29344" target="../classify.ecl.xml">
+     <Signature>Dev</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29566" end="29644" fullname="ml.classify.logistic_model.deviancec.ndev" inherit_type="local" line="510" name="NDev" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29552" target="../classify.ecl.xml">
+     <Signature>NDev</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29667" end="29774" exported="1" fullname="ml.classify.logistic_model.deviancec.devres" inherit_type="local" line="511" name="DevRes" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29651" target="../classify.ecl.xml">
+     <Signature>DevRes</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29798" end="29906" exported="1" fullname="ml.classify.logistic_model.deviancec.devnull" inherit_type="local" line="512" name="DevNull" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29781" target="../classify.ecl.xml">
+     <Signature>DevNull</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29924" end="29953" fullname="ml.classify.logistic_model.deviancec.p" inherit_type="local" line="513" name="p" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29913" target="../classify.ecl.xml">
+     <Signature>p</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29978" end="30105" exported="1" fullname="ml.classify.logistic_model.deviancec.residdev" inherit_type="local" line="514" name="ResidDev" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29960" target="../classify.ecl.xml">
+     <Signature>ResidDev</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="30129" end="30257" exported="1" fullname="ml.classify.logistic_model.deviancec.nulldev" inherit_type="local" line="515" name="NullDev" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="30112" target="../classify.ecl.xml">
+     <Signature>NullDev</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>DevianceC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)</Signature><Definition body="30277" end="30449" exported="1" fullname="ml.classify.logistic_model.deviancec.aic" inherit_type="local" line="516" name="AIC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="30264" target="../classify.ecl.xml">
+     <Signature>AIC</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="30527" end="31684" exported="1" fullname="ml.classify.logistic_model.aod" inherit_type="inherited" line="520" name="AOD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="30464" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>AOD(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)</Signature><Params>
+     <Param name="R1"/>
+     <Param name="R2"/>
+    </Params>
+   </Definition>
+   <Definition body="31813" end="31876" exported="1" fullname="ml.classify.logistic_model.devianced" inherit_type="override" line="544" name="DevianceD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="31691" target="../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="mod"/>
+    </Params>
+    <Parents/>
+    <Definition body="29357" end="29459" fullname="ml.classify.logistic_model.deviancec.dev" inherit_type="local" line="508" name="Dev" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29344" target="../classify.ecl.xml">
+     <Signature>Dev</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29566" end="29644" fullname="ml.classify.logistic_model.deviancec.ndev" inherit_type="local" line="510" name="NDev" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29552" target="../classify.ecl.xml">
+     <Signature>NDev</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29667" end="29774" exported="1" fullname="ml.classify.logistic_model.deviancec.devres" inherit_type="local" line="511" name="DevRes" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29651" target="../classify.ecl.xml">
+     <Signature>DevRes</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29798" end="29906" exported="1" fullname="ml.classify.logistic_model.deviancec.devnull" inherit_type="local" line="512" name="DevNull" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29781" target="../classify.ecl.xml">
+     <Signature>DevNull</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29924" end="29953" fullname="ml.classify.logistic_model.deviancec.p" inherit_type="local" line="513" name="p" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29913" target="../classify.ecl.xml">
+     <Signature>p</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="29978" end="30105" exported="1" fullname="ml.classify.logistic_model.deviancec.residdev" inherit_type="local" line="514" name="ResidDev" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="29960" target="../classify.ecl.xml">
+     <Signature>ResidDev</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="30129" end="30257" exported="1" fullname="ml.classify.logistic_model.deviancec.nulldev" inherit_type="local" line="515" name="NullDev" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="30112" target="../classify.ecl.xml">
+     <Signature>NullDev</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>DevianceD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)</Signature><Definition body="30277" end="30449" exported="1" fullname="ml.classify.logistic_model.deviancec.aic" inherit_type="local" line="516" name="AIC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="30264" target="../classify.ecl.xml">
+     <Signature>AIC</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="36928" end="36978" exported="1" fullname="ml.classify.logistic_sparse.learncs" inherit_type="override" line="644" name="LearnCS" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="36843" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnCS(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="37067" end="37100" exported="1" fullname="ml.classify.logistic_sparse.learnc" inherit_type="override" line="645" name="LearnC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="36983" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Signature>Forward(REAL8 Ridge=0.00001, REAL8 Epsilon=0.000000001, UNSIGNED2 MaxIter=200)</Signature><Definition body="37191" end="37961" exported="1" fullname="ml.classify.logistic_sparse.classifys" inherit_type="override" line="646" name="ClassifyS" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="37105" target="../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyS(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="44" fullname="ML.Utils" inherit_type="local" line="3" name="Utils" ref="ml.utils" start="44" target="../utils.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="70" fullname="ML.Classify" inherit_type="local" line="4" name="Classify" ref="ml.classify" start="70" target="../classify.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="102" fullname="ML.StepwiseLogistic.TypesSL" inherit_type="local" line="5" name="TypesSL" ref="ml.stepwiselogistic.typessl" start="102" target="typessl.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="149" fullname="std.Str" inherit_type="local" line="6" name="Str" ref="std.str" start="149" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Classify.ecl" name="ML.Classify" target="../classify.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" name="ML.NaiveBayes" target="../naivebayes.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="../fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" name="ML.NeuralNetworks" target="../neuralnetworks.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../../pbblas/autobvmap.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../pbblas/hadamardproduct.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../pbblas/pb_dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="../appendid.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" name="ML.Mat.InsertColumn" target="../mat/insertcolumn.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="../mat/identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="../mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="../mat/strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="../mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="../mat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Add.ecl" name="ML.Mat.Add" target="../mat/add.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="../mat/sub.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" name="ML.Mat.Inv" target="../mat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" name="ML.Mat.Decomp" target="../mat/decomp.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="../mat/setdimension.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" name="ML.Mat.Substitute" target="../mat/substitute.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" name="ML.Mat.LowerTriangle" target="../mat/lowertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" name="ML.Mat.UpperTriangle" target="../mat/uppertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" name="ML.Mat.Householder" target="../mat/householder.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" name="ML.Mat.Det" target="../mat/det.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" name="PBblas.Vector2Diag" target="../../pbblas/vector2diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_diag" target="../../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgetrf.ecl" name="PBblas.PB_dgetrf" target="../../pbblas/pb_dgetrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" name="PBblas.PB_dtrsm" target="../../pbblas/pb_dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="../../pbblas/pb_dtran.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" name="ML.DMat.Trans" target="../dmat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" name="ML.DMat.Inv" target="../dmat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" name="PBblas.PB_dpotrf" target="../../pbblas/pb_dpotrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" name="ML.Trees" target="../trees.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" name="ML.Sampling" target="../sampling.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" name="ML.Ensemble" target="../ensemble.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../svm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="../svm/libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" name="ML.SVM.Converted" target="../svm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" name="ML.SVM.train" target="../svm/train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="../svm/libsvm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" name="ML.SVM.LibSVM.svm_train" target="../svm/libsvm/svm_train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="../svm/libsvm/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" name="ML.SVM.predict" target="../svm/predict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" name="ML.SVM.LibSVM.SVM_Predict" target="../svm/libsvm/svm_predict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/StepLogistic.ecl" name="ML.StepwiseLogistic.StepLogistic" target="steplogistic.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/StepwiseLogistic/TypesSL.ecl" name="ML.StepwiseLogistic.TypesSL" target="typessl.ecl.xml"/></Meta>

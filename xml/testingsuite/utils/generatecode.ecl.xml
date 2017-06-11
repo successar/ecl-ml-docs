@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Utils.GenerateCode" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode.ecl" target="generatecode.ecl.xml">
+  <Definition body="97" end="1647" exported="1" fullname="testingsuite.utils.generatecode" inherit_type="local" line="1" name="GenerateCode" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode.ecl" start="0">
+   <Type>macro</Type>
+   <Signature>GenerateCode(algorithm, datasetNames, performance_scores, c_no_of_elements, repeat_no=1)</Signature><Params>
+    <Param name="algorithm"/>
+    <Param name="datasetNames"/>
+    <Param name="performance_scores"/>
+    <Param name="c_no_of_elements"/>
+    <Param name="repeat_no"/>
+   </Params>
+  </Definition>
+ </Source>
+</Meta>

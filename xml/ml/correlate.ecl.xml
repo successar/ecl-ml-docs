@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Correlate" sourcePath="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" target="correlate.ecl.xml">
+  <Definition body="87" end="6303" exported="1" fullname="ml.correlate" inherit_type="local" line="3" name="Correlate" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="37">
+   <Type>module</Type>
+   <Params>
+    <Param name="d"/>
+   </Params>
+   <Parents/>
+   <Definition body="1144" end="1223" exported="1" fullname="ml.correlate.simple" inherit_type="local" line="43" name="Simple" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="1128">
+    <Signature>Simple</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2449" end="2502" exported="1" fullname="ml.correlate.kendall" inherit_type="local" line="86" name="Kendall" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="2432">
+    <Signature>Kendall</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Correlate(DATASET(Types.NumericField) d)</Signature><Definition body="2928" end="6297" exported="1" fullname="ml.correlate.mutualinfo" inherit_type="local" line="94" name="MutualInfo" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="2854">
+    <Type>function</Type>
+    <Signature>MutualInfo(UNSIGNED cVec,UNSIGNED units=2,UNSIGNED buckets = 10)</Signature><Params>
+     <Param name="cVec"/>
+     <Param name="units"/>
+     <Param name="buckets"/>
+    </Params>
+   </Definition>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" name="ML.Discretize" target="discretize.ecl.xml"/></Meta>

@@ -1,0 +1,331 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ts
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../ml/pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : UniObservation
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : t_value
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : NumericField
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : season_adj
+			<ul>
+				
+		<li>
+			RECORD : ExtendedObs
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : ExtendedObs markObs(UniObservation obs, UNSIGNED seasons)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : t_value AdjustPrototype(UNSIGNED f, t_value v)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : t_value MultiplyAdj(UNSIGNED f, t_value v)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : t_value AddAdj(UNSIGNED f, t_value v)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : UniObservation adj_obs(ExtendedObs obs,
+                                NumericField f,
+                                AdjustPrototype func)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DATASET(UniObservation) ApplyAdj(DATASET(UniObservation) ts,
+                                          DATASET(NumericField) adj,
+                                          UNSIGNED seasons,
+                                          UNSIGNED adj_col,
+                                          AdjustPrototype func)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DATASET(UniObservation) Multiply(DATASET(UniObservation) ts,
+                                          DATASET(NumericField) adj,
+                                          UNSIGNED seasons,
+                                          UNSIGNED adj_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DATASET(UniObservation) Add(DATASET(UniObservation) ts,
+                                     DATASET(NumericField) adj,
+                                     UNSIGNeD seasons,
+                                     UNSIGNED adj_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : UniObservation
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : t_value
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : NumericField
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : season_adj
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : ExtendedObs
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : ExtendedObs markObs(UniObservation obs, UNSIGNED seasons)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : t_value AdjustPrototype(UNSIGNED f, t_value v)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : t_value MultiplyAdj(UNSIGNED f, t_value v)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : t_value AddAdj(UNSIGNED f, t_value v)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : UniObservation adj_obs(ExtendedObs obs,
+                                NumericField f,
+                                AdjustPrototype func)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DATASET(UniObservation) ApplyAdj(DATASET(UniObservation) ts,
+                                          DATASET(NumericField) adj,
+                                          UNSIGNED seasons,
+                                          UNSIGNED adj_col,
+                                          AdjustPrototype func)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DATASET(UniObservation) Multiply(DATASET(UniObservation) ts,
+                                          DATASET(NumericField) adj,
+                                          UNSIGNED seasons,
+                                          UNSIGNED adj_col)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+		
+		@content : Apply multiplicative seasonal adjustment factor to the series.
+		<br/>
+		
+		@return : the adjusted time series.
+		<br/>
+		
+		@param : ts the time series
+		<br/>
+		
+		@param : adj the adjustment factor, the season corresponds to the row
+		<br/>
+		
+		@param : seasons the number of seasons
+		<br/>
+		
+		@param : adj_col the column number of the seasonal factor.
+		<br/>
+		
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DATASET(UniObservation) Add(DATASET(UniObservation) ts,
+                                     DATASET(NumericField) adj,
+                                     UNSIGNeD seasons,
+                                     UNSIGNED adj_col)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+		
+		@content : Apply additive seasonal adjustment factor to the series.
+		<br/>
+		
+		@param : ts the time series
+		<br/>
+		
+		@param : adj the adjustment to be added, the season corresponds to the row
+		<br/>
+		
+		@param : seasons the number of seasons
+		<br/>
+		
+		@param : adj_col the column number of the seasonal factor
+		<br/>
+		
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

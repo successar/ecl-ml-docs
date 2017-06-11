@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Source name="PBblas.BLAS.dgemm" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" target="dgemm.ecl.xml">
+  <Import body="0" end="371" fullname="PBblas.Types" inherit_type="local" line="6" name="Types" ref="pbblas.types" start="371" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="399" end="418" fullname="pbblas.blas.dimension_t" inherit_type="local" line="7" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="385">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="433" end="448" fullname="pbblas.blas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="419">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="463" end="479" fullname="pbblas.blas.matrix_t" inherit_type="local" line="9" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="449">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="724" end="1458" exported="1" fullname="pbblas.blas.dgemm" inherit_type="local" line="11" name="dgemm" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="481">
+   <Type>embed</Type>
+   <Signature>matrix_t dgemm(BOOLEAN transposeA, BOOLEAN transposeB,
+                      dimension_t M, dimension_t N, dimension_t K,
+                      value_t alpha, matrix_t A, matrix_t B,
+                      value_t beta, matrix_t C=[])</Signature><Params>
+    <Param name="transposeA"/>
+    <Param name="transposeB"/>
+    <Param name="M"/>
+    <Param name="N"/>
+    <Param name="K"/>
+    <Param name="alpha"/>
+    <Param name="A"/>
+    <Param name="B"/>
+    <Param name="beta"/>
+    <Param name="C"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

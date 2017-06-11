@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Types.ecl" name="TestingSuite.Utils.Types" target="types.ecl.xml"/><Source name="TestingSuite.Utils.Student_T_Test" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Student_T_Test.ecl" target="student_t_test.ecl.xml">
+  <Import body="0" end="7" fullname="TestingSuite.Utils.Types" inherit_type="local" line="1" name="UTypes" ref="testingsuite.utils.types" start="7" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="71" end="468" fullname="testingsuite.utils.t_test_distribution_table" inherit_type="local" line="2" name="T_Test_Distribution_Table" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Student_T_Test.ecl" start="43">
+   <Signature>T_Test_Distribution_Table</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="561" end="1168" exported="1" fullname="testingsuite.utils.student_t_test" inherit_type="local" line="13" name="Student_T_Test" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Student_T_Test.ecl" start="470">
+   <Type>function</Type>
+   <Signature>STRING Student_T_Test(DATASET(UTypes.result_rec) A, DATASET(UTypes.result_rec) B)</Signature><Params>
+    <Param name="A"/>
+    <Param name="B"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

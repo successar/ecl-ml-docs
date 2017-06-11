@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Decomp" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" target="decomp.ecl.xml">
+  <Definition body="71" end="5361" exported="1" fullname="ML.Mat.Decomp" inherit_type="local" line="3" name="Decomp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="55">
+   <Type>module</Type>
+   <Definition body="249" end="894" exported="1" fullname="ml.mat.decomp.b_sub" inherit_type="local" line="7" name="b_sub" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="182">
+    <Type>function</Type>
+    <Signature>b_sub(DATASET(Types.Element) U, DATASET(Types.Element) B)</Signature><Params>
+     <Param name="U"/>
+     <Param name="B"/>
+    </Params>
+   </Definition>
+   <Definition body="1065" end="1558" exported="1" fullname="ml.mat.decomp.f_sub" inherit_type="local" line="29" name="f_sub" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="998">
+    <Type>function</Type>
+    <Signature>f_sub(DATASET(Types.Element) L, DATASET(Types.Element) B)</Signature><Params>
+     <Param name="L"/>
+     <Param name="B"/>
+    </Params>
+   </Definition>
+   <Definition body="2006" end="2486" exported="1" fullname="ml.mat.decomp.cholesky" inherit_type="local" line="51" name="Cholesky" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="1934">
+    <Type>function</Type>
+    <Signature>DATASET(Types.Element) Cholesky(DATASET(Types.Element) matrix)</Signature><Params>
+     <Param name="matrix"/>
+    </Params>
+   </Definition>
+   <Definition body="3044" end="3861" exported="1" fullname="ml.mat.decomp.lu" inherit_type="local" line="76" name="LU" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="2978">
+    <Type>function</Type>
+    <Signature>DATASET(Types.Element) LU(DATASET(Types.Element) matrix)</Signature><Params>
+     <Param name="matrix"/>
+    </Params>
+   </Definition>
+   <Definition body="4028" end="4080" exported="1" fullname="ml.mat.decomp.lcomp" inherit_type="local" line="102" name="LComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="3985">
+    <Type>function</Type>
+    <Signature>LComp(DATASET(Types.Element) l_u)</Signature><Params>
+     <Param name="l_u"/>
+    </Params>
+   </Definition>
+   <Definition body="4124" end="4151" exported="1" fullname="ml.mat.decomp.ucomp" inherit_type="local" line="103" name="UComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="4081">
+    <Type>function</Type>
+    <Signature>UComp(DATASET(Types.Element) l_u)</Signature><Params>
+     <Param name="l_u"/>
+    </Params>
+   </Definition>
+   <Definition body="4490" end="4514" inherit_type="local" line="113" name="qr_comp" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="4473">
+    <Signature>qr_comp</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4581" end="5180" exported="1" fullname="ml.mat.decomp.qr" inherit_type="local" line="114" name="QR" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="4515">
+    <Type>function</Type>
+    <Signature>DATASET(Types.Element) QR(DATASET(Types.Element) matrix)</Signature><Params>
+     <Param name="matrix"/>
+    </Params>
+   </Definition>
+   <Definition body="5228" end="5267" exported="1" fullname="ml.mat.decomp.qcomp" inherit_type="local" line="134" name="QComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="5182">
+    <Type>function</Type>
+    <Signature>QComp(DATASET(Types.Element) matrix)</Signature><Params>
+     <Param name="matrix"/>
+    </Params>
+   </Definition>
+   <Definition body="5314" end="5353" exported="1" fullname="ml.mat.decomp.rcomp" inherit_type="local" line="135" name="RComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="5268">
+    <Type>function</Type>
+    <Signature>RComp(DATASET(Types.Element) matrix)</Signature><Params>
+     <Param name="matrix"/>
+    </Params>
+   </Definition>
+   <Signature>Decomp</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="setdimension.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="sub.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" name="ML.Mat.Substitute" target="substitute.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" name="ML.Mat.LowerTriangle" target="lowertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" name="ML.Mat.UpperTriangle" target="uppertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" name="ML.Mat.Householder" target="householder.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="vec.ecl.xml"/></Meta>

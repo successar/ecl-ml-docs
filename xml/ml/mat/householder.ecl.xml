@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Householder" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" target="householder.ecl.xml">
+  <Definition body="143" end="2266" exported="1" fullname="ml.mat.householder" inherit_type="local" line="3" name="Householder" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="55">
+   <Type>module</Type>
+   <Params>
+    <Param name="X"/>
+    <Param name="k"/>
+    <Param name="Dim"/>
+   </Params>
+   <Parents/>
+   <Definition body="422" end="2159" exported="1" fullname="ML.Mat.Householder.HTA" inherit_type="local" line="12" name="HTA" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="409">
+    <Type>module</Type>
+    <Definition body="451" end="668" exported="1" fullname="ML.Mat.Householder.HTA.Default" inherit_type="local" line="13" name="Default" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="434" virtual="1">
+     <Type>module</Type>
+     <Definition body="490" end="581" exported="1" fullname="ml.mat.householder.hta.default.identitym" inherit_type="local" line="14" name="IdentityM" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="471">
+      <Signature>IdentityM</Signature><Type>attribute</Type>
+     </Definition>
+     <Definition body="629" end="656" exported="1" fullname="ml.mat.householder.hta.default.hreflection" inherit_type="local" line="15" name="hReflection" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="585">
+      <Signature>DATASET(Types.Element) hReflection</Signature><Type>attribute</Type>
+     </Definition>
+     <Signature>Default</Signature><Parents/>
+    </Definition>
+    <Definition body="1126" end="1353" exported="1" fullname="ML.Mat.Householder.HTA.Atkinson" inherit_type="local" line="29" name="Atkinson" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="1108">
+     <Type>module</Type>
+     <Definition body="490" end="581" exported="1" fullname="ml.mat.householder.hta.default.identitym" inherit_type="inherited" line="14" name="IdentityM" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="471">
+      <Signature>IdentityM</Signature><Type>attribute</Type>
+     </Definition>
+     <Definition body="1261" end="1345" exported="1" fullname="ml.mat.householder.hta.atkinson.hreflection" inherit_type="override" line="32" name="hReflection" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="1217">
+      <Signature>DATASET(Types.Element) hReflection</Signature><Type>attribute</Type>
+     </Definition>
+     <Signature>Atkinson</Signature><Parents>
+      <Parent line="13" name="Default" ref="ml.mat.householder.hta.default" target="householder.ecl.xml"/>
+     </Parents>
+    </Definition>
+    <Definition body="1439" end="2151" exported="1" fullname="ML.Mat.Householder.HTA.Golub" inherit_type="local" line="36" name="Golub" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="1424">
+     <Type>module</Type>
+     <Definition body="490" end="581" exported="1" fullname="ml.mat.householder.hta.default.identitym" inherit_type="inherited" line="14" name="IdentityM" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="471">
+      <Signature>IdentityM</Signature><Type>attribute</Type>
+     </Definition>
+     <Definition body="2068" end="2143" exported="1" fullname="ml.mat.householder.hta.golub.hreflection" inherit_type="override" line="49" name="hReflection" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="2024">
+      <Signature>DATASET(Types.Element) hReflection</Signature><Type>attribute</Type>
+     </Definition>
+     <Signature>Golub</Signature><Parents>
+      <Parent line="13" name="Default" ref="ml.mat.householder.hta.default" target="householder.ecl.xml"/>
+     </Parents>
+    </Definition>
+    <Signature>HTA</Signature><Parents/>
+   </Definition>
+   <Signature>Householder(DATASET(Types.VecElement) X, Types.t_Index k, Types.t_Index Dim=1)</Signature><Definition body="2215" end="2260" exported="1" fullname="ml.mat.householder.reflection" inherit_type="local" line="54" name="Reflection" source="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" start="2162">
+    <Type>function</Type>
+    <Signature>Reflection(HTA.Default Control = HTA.Golub)</Signature><Params>
+     <Param name="Control"/>
+    </Params>
+   </Definition>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="sub.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/></Meta>

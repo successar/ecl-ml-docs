@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.continious_ecoliDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ecoliDS.ecl" target="continious_ecolids.ecl.xml">
+  <Definition body="46" end="18322" exported="1" fullname="TestingSuite.Classification.Datasets.continious_ecoliDS" inherit_type="local" line="2" name="continious_ecoliDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ecoliDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="91" end="393" fullname="testingsuite.classification.datasets.continious_ecolids.continious_ecolirecord" inherit_type="local" line="3" name="continious_ecoliRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ecoliDS.ecl" start="59">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="mcg"/>
+    <Field name="gvh"/>
+    <Field name="lip"/>
+    <Field name="chg"/>
+    <Field name="aac"/>
+    <Field name="alm1"/>
+    <Field name="alm2"/>
+    <Signature>continious_ecoliRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="415" end="18317" exported="1" fullname="testingsuite.classification.datasets.continious_ecolids.content" inherit_type="local" line="14" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ecoliDS.ecl" start="398">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>continious_ecoliDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

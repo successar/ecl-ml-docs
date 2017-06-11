@@ -1,0 +1,1 @@
+<folder name="benchmarks"><file name="classify_dense_logisticregression.ecl.xml">ML/Tests/Benchmarks/Classify_Dense_LogisticRegression.ecl.xml</file><file name="classify_sparse_logisticregression.ecl.xml">ML/Tests/Benchmarks/Classify_Sparse_LogisticRegression.ecl.xml</file><file name="cluster_doc.ecl.xml">ML/Tests/Benchmarks/Cluster_doc.ecl.xml</file></folder>

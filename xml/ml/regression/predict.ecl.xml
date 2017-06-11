@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Regression.Predict" sourcePath="/media/sarthak/Data/ecl-ml/ML/Regression/Predict.ecl" target="predict.ecl.xml">
+  <Import body="0" end="47" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="47" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="58" fullname="ML.Types" inherit_type="local" line="3" name="Types" ref="ml.types" start="58" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="75" fullname="ML.Mat.Types" inherit_type="local" line="4" name="MatTypes" ref="ml.mat.types" start="75" target="../mat/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="116" end="136" fullname="ml.regression.numericfield" inherit_type="local" line="5" name="NumericField" source="/media/sarthak/Data/ecl-ml/ML/Regression/Predict.ecl" start="101">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="number"/>
+   <Signature>NumericField</Signature><Field name="value"/>
+  </Definition>
+  <Definition body="231" end="690" exported="1" fullname="ml.regression.predict" inherit_type="local" line="7" name="Predict" source="/media/sarthak/Data/ecl-ml/ML/Regression/Predict.ecl" start="138">
+   <Type>function</Type>
+   <Signature>DATASET(NumericField) Predict(DATASET(NumericField) X, DATASET(NumericField) model)</Signature><Params>
+    <Param name="X"/>
+    <Param name="model"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" name="ML.Mat.InsertColumn" target="../mat/insertcolumn.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="../mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="../mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="../mat/strict.ecl.xml"/></Meta>

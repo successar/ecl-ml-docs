@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Explanatory.IrisDS" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/IrisDS.ecl" target="irisds.ecl.xml">
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="../../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="40" end="194" fullname="ml.tests.explanatory.dsrecord" inherit_type="local" line="4" name="dsRecord" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/IrisDS.ecl" start="29">
+   <Type>record</Type>
+   <Field name="a1"/>
+   <Field name="a2"/>
+   <Field name="a3"/>
+   <Field name="a4"/>
+   <Signature>dsRecord</Signature><Field name="class"/>
+  </Definition>
+  <Definition body="211" end="3383" exported="1" fullname="ml.tests.explanatory.irisds" inherit_type="local" line="11" name="irisDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/IrisDS.ecl" start="195">
+   <Signature>irisDS</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/></Meta>

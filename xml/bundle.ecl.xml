@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl" name="std.BundleBase" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl"/><Source name="Bundle" sourcePath="/media/sarthak/Data/ecl-ml/Bundle.ecl" target="bundle.ecl.xml">
+  <Definition body="28" end="319" exported="1" fullname="Bundle" inherit_type="local" line="2" name="Bundle" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="12">
+   <Type>module</Type>
+   <Definition body="68" end="74" exported="1" fullname="bundle.name" inherit_type="override" line="3" name="Name" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="54">
+    <Signature>Name</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="98" end="126" exported="1" fullname="bundle.description" inherit_type="override" line="4" name="Description" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="77">
+    <Signature>Description</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="146" end="163" exported="1" fullname="bundle.authors" inherit_type="override" line="5" name="Authors" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="129">
+    <Signature>Authors</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="183" end="202" exported="1" fullname="bundle.license" inherit_type="override" line="6" name="License" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="166">
+    <Signature>License</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="224" end="259" exported="1" fullname="bundle.copyright" inherit_type="override" line="7" name="Copyright" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="205">
+    <Signature>Copyright</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="281" end="285" exported="1" fullname="bundle.dependson" inherit_type="inherited" line="8" name="DependsOn" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="262">
+    <Signature>DependsOn</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="305" end="314" exported="1" fullname="bundle.version" inherit_type="override" line="9" name="Version" source="/media/sarthak/Data/ecl-ml/Bundle.ecl" start="288">
+    <Signature>Version</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="431" end="459" exported="1" fullname="std.bundlebase.propertyrecord" inherit_type="inherited" line="10" name="PropertyRecord" source="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl" start="407" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl">
+    <Type>record</Type>
+    <Attr name="$_payload_"/>
+    <Field name="key"/>
+    <Signature>rtyRecord  { UTF8 key</Signature><Field name="value"/>
+   </Definition>
+   <Definition body="1873" end="1905" exported="1" fullname="std.bundlebase.properties" inherit_type="inherited" line="65" name="Properties" source="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl" start="1853" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl">
+    <Signature>uired version of pla</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2159" end="2163" exported="1" fullname="std.bundlebase.platformversion" inherit_type="inherited" line="72" name="PlatformVersion" source="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl" start="2127" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl">
+    <Signature></Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Bundle</Signature><Parents>
+    <Parent line="5" name="BundleBase" ref="std.bundlebase" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/BundleBase.ecl"/>
+   </Parents>
+  </Definition>
+  <Import body="0" end="7" fullname="std" inherit_type="local" line="1" name="std" ref="std" remotescope="1" start="7" target="std/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>

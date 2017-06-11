@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="types.ecl.xml"/><Source name="ML.Docs.Trans" sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" target="trans.ecl.xml">
+  <Definition body="249" end="2308" exported="1" fullname="ml.docs.trans" inherit_type="local" line="5" name="Trans" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="203">
+   <Type>module</Type>
+   <Params>
+    <Param name="j"/>
+   </Params>
+   <Parents/>
+   <Definition body="430" end="773" exported="1" fullname="ml.docs.trans.wordbag" inherit_type="local" line="10" name="WordBag" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="413">
+    <Signature>WordBag</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="798" end="1163" exported="1" fullname="ml.docs.trans.wordscounted" inherit_type="local" line="24" name="WordsCounted" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="776">
+    <Signature>WordsCounted</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Trans(DATASET(Types.OWordElement) j)</Signature><Definition body="1598" end="2302" exported="1" fullname="ml.docs.trans.tfidf" inherit_type="local" line="43" name="TfIdf" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="1534">
+    <Type>function</Type>
+    <Signature>TfIdf(REAL nLowThreshold=.05,UNSIGNED iLowDocCount=200)</Signature><Params>
+     <Param name="nLowThreshold"/>
+     <Param name="iLowDocCount"/>
+    </Params>
+   </Definition>
+  </Definition>
+  <Import body="0" end="188" fullname="ML.Docs.Types" inherit_type="local" line="3" name="Types" ref="ml.docs.types" start="188" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>

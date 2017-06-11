@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.train" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" target="train.ecl.xml">
+  <Import body="0" end="7" fullname="ML.SVM.Types" inherit_type="local" line="1" name="Types" ref="ml.svm.types" start="7" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="28" fullname="ML.SVM.LibSVM.Types" inherit_type="local" line="2" name="LibSVM_Types" ref="ml.svm.libsvm.types" start="28" target="libsvm/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="72" fullname="ML.SVM.LibSVM" inherit_type="local" line="3" name="LibSVM" ref="ml.svm.libsvm" remotescope="1" start="72" target="libsvm/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="94" fullname="ML.SVM.LibSVM.Converted" inherit_type="local" line="4" name="Converted" ref="ml.svm.libsvm.converted" start="94" target="libsvm/converted.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="154" end="181" fullname="ml.svm.parms" inherit_type="local" line="6" name="Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="146">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="coef0"/>
+   <Field name="eps"/>
+   <Field name="nu"/>
+   <Field name="p"/>
+   <Field name="nr_weight"/>
+   <Field name="shrinking"/>
+   <Field name="prob_est"/>
+   <Field name="lbl"/>
+   <Field name="weight"/>
+   <Field name="gamma"/>
+   <Signature>Parms</Signature><Field name="C"/>
+  </Definition>
+  <Definition body="193" end="213" fullname="ml.svm.instance" inherit_type="local" line="7" name="Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="182">
+   <Type>record</Type>
+   <Field name="rid"/>
+   <Field name="y"/>
+   <Field name="max_value"/>
+   <Signature>Instance</Signature><Field name="x"/>
+  </Definition>
+  <Definition body="222" end="235" fullname="ml.svm.model" inherit_type="local" line="8" name="Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="214">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="gamma"/>
+   <Field name="coef0"/>
+   <Field name="k"/>
+   <Field name="l"/>
+   <Field name="sv"/>
+   <Field name="sv_coef"/>
+   <Field name="rho"/>
+   <Field name="probA"/>
+   <Field name="probB"/>
+   <Field name="labels"/>
+   <Signature>Model</Signature><Field name="nSV"/>
+  </Definition>
+  <Definition body="246" end="279" fullname="ml.svm.problem" inherit_type="local" line="9" name="Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="236">
+   <Type>record</Type>
+   <Field name="elements"/>
+   <Field name="entries"/>
+   <Field name="features"/>
+   <Field name="max_value"/>
+   <Field name="y"/>
+   <Signature>Problem</Signature><Field name="x"/>
+  </Definition>
+  <Definition body="295" end="332" fullname="ml.svm.libsvm_parms" inherit_type="local" line="10" name="LibSVM_Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="280">
+   <Type>record</Type>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="gamma"/>
+   <Field name="coef0"/>
+   <Field name="cache_size"/>
+   <Field name="eps"/>
+   <Field name="C"/>
+   <Field name="nu"/>
+   <Field name="p"/>
+   <Field name="nr_weight"/>
+   <Field name="shrinking"/>
+   <Field name="prob_est"/>
+   <Field name="lbl"/>
+   <Signature>LibSVM_Parms</Signature><Field name="weight"/>
+  </Definition>
+  <Definition body="348" end="379" fullname="ml.svm.libsvm_model" inherit_type="local" line="11" name="LibSVM_Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="333">
+   <Type>record</Type>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="gamma"/>
+   <Field name="coef0"/>
+   <Field name="k"/>
+   <Field name="l"/>
+   <Field name="elements"/>
+   <Field name="pairs_A"/>
+   <Field name="pairs_B"/>
+   <Field name="nr_label"/>
+   <Field name="nr_nSV"/>
+   <Field name="sv"/>
+   <Field name="sv_coef"/>
+   <Field name="rho"/>
+   <Field name="probA"/>
+   <Field name="probB"/>
+   <Field name="labels"/>
+   <Signature>LibSVM_Model</Signature><Field name="nSV"/>
+  </Definition>
+  <Definition body="389" end="403" fullname="ml.svm.svm_sv" inherit_type="local" line="12" name="SVM_SV" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="380">
+   <Type>record</Type>
+   <Field name="v_ord"/>
+   <Signature>SVM_SV</Signature><Field name="features"/>
+  </Definition>
+  <Definition body="418" end="437" fullname="ml.svm.svm_feature" inherit_type="local" line="13" name="SVM_Feature" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="404">
+   <Type>record</Type>
+   <Field name="nominal"/>
+   <Signature>SVM_Feature</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="508" end="1980" exported="1" fullname="ml.svm.train" inherit_type="local" line="16" name="train" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="440">
+   <Type>function</Type>
+   <Signature>DATASET(Model) train(DATASET(Parms) p, DATASET(Instance) d)</Signature><Params>
+    <Param name="p"/>
+    <Param name="d"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="libsvm/converted.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="libsvm/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" name="ML.SVM.LibSVM.svm_train" target="libsvm/svm_train.ecl.xml"/></Meta>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Docs.Tokenize" sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" target="tokenize.ecl.xml">
+  <Definition body="305" end="4292" exported="1" fullname="ML.Docs.Tokenize" inherit_type="local" line="6" name="Tokenize" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="287">
+   <Type>module</Type>
+   <Definition body="432" end="498" exported="1" fullname="ml.docs.tokenize.enumerate" inherit_type="local" line="9" name="Enumerate" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="391">
+    <Type>function</Type>
+    <Signature>Enumerate(DATASET(Types.Raw) r)</Signature><Params>
+     <Param name="r"/>
+    </Params>
+   </Definition>
+   <Definition body="693" end="1539" exported="1" fullname="ml.docs.tokenize.clean" inherit_type="local" line="14" name="Clean" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="656">
+    <Type>function</Type>
+    <Signature>Clean(DATASET(Types.Raw) r)</Signature><Params>
+     <Param name="r"/>
+    </Params>
+   </Definition>
+   <Definition body="1743" end="1973" exported="1" fullname="ml.docs.tokenize.split" inherit_type="local" line="32" name="Split" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="1706">
+    <Type>function</Type>
+    <Signature>Split(DATASET(Types.Raw) r)</Signature><Params>
+     <Param name="r"/>
+    </Params>
+   </Definition>
+   <Definition body="2259" end="2662" exported="1" fullname="ml.docs.tokenize.lexicon" inherit_type="local" line="47" name="Lexicon" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="2212">
+    <Type>function</Type>
+    <Signature>Lexicon(DATASET(Types.WordElement) r)</Signature><Params>
+     <Param name="r"/>
+    </Params>
+   </Definition>
+   <Definition body="3057" end="3601" exported="1" fullname="ml.docs.tokenize.too" inherit_type="local" line="67" name="ToO" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="2981">
+    <Type>function</Type>
+    <Signature>ToO(DATASET(Types.WordElement) r, DATASET(Types.LexiconElement) l)</Signature><Params>
+     <Param name="r"/>
+     <Param name="l"/>
+    </Params>
+   </Definition>
+   <Definition body="3771" end="3995" exported="1" fullname="ml.docs.tokenize.macfromo" inherit_type="local" line="85" name="macFromO" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="3711">
+    <Type>macro</Type>
+    <Signature>macFromO(infile,idfield,textfield,lexicon,outfile)</Signature><Params>
+     <Param name="infile"/>
+     <Param name="idfield"/>
+     <Param name="textfield"/>
+     <Param name="Lexicon"/>
+     <Param name="outfile"/>
+    </Params>
+   </Definition>
+   <Definition body="4075" end="4286" exported="1" fullname="ml.docs.tokenize.fromo" inherit_type="local" line="96" name="FromO" source="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" start="3997">
+    <Type>function</Type>
+    <Signature>FromO(DATASET(Types.OWordElement) d,DATASET(Types.LexiconElement) l)</Signature><Params>
+     <Param name="d"/>
+     <Param name="l"/>
+    </Params>
+   </Definition>
+   <Signature>Tokenize</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="250" fullname="ML.Docs.Types" inherit_type="local" line="4" name="Types" ref="ml.docs.types" start="250" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="271" fullname="std.Str" inherit_type="local" line="5" name="Str" ref="std.str" start="271" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="3076" fullname="ML" inherit_type="local" line="68" name="ML" ref="ml" start="3076" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="types.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/></Meta>

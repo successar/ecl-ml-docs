@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="VL.Google" sourcePath="/media/sarthak/Data/ecl-ml/VL/Google.ecl" target="google.ecl.xml">
+  <Definition body="308" end="4570" exported="1" fullname="VL.Google" inherit_type="local" line="6" name="Google" source="/media/sarthak/Data/ecl-ml/VL/Google.ecl" start="293">
+   <Type>module</Type>
+   <Definition body="548" end="1859" fullname="vl.google.formatchartdata" inherit_type="local" line="9" name="FormatChartData" shared="1" source="/media/sarthak/Data/ecl-ml/VL/Google.ecl" start="458">
+    <Type>function</Type>
+    <Signature>TRING FormatChartData(DATASET(VL.Types.CartesianData) d,STRING sChartType='Std')FUNCTION</Signature><Params>
+     <Param name="d"/>
+     <Param name="sChartType"/>
+    </Params>
+   </Definition>
+   <Definition body="2093" end="2566" fullname="vl.google.chartoptions" inherit_type="local" line="27" name="ChartOptions" shared="1" source="/media/sarthak/Data/ecl-ml/VL/Google.ecl" start="2044">
+    <Type>function</Type>
+    <Signature>(VL.Styles.Default p)FUNCTION
+    sOpt''+</Signature><Params>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="2705" end="2977" fullname="vl.google.pageoptions" inherit_type="local" line="40" name="PageOptions" shared="1" source="/media/sarthak/Data/ecl-ml/VL/Google.ecl" start="2639">
+    <Type>function</Type>
+    <Signature>Name,VL.Styles.Default p)FUNCTION
+    sOpt''+
+      IF(p.Float</Signature><Params>
+     <Param name="sChartName"/>
+     <Param name="p"/>
+    </Params>
+   </Definition>
+   <Definition body="3225" end="4200" fullname="vl.google.defaulttemplate" inherit_type="local" line="49" name="DefaultTemplate" shared="1" source="/media/sarthak/Data/ecl-ml/VL/Google.ecl" start="3103">
+    <Type>function</Type>
+    <Signature>STRING sChartName,DATASET(VL.Types.CartesianData) d,VL.Styles.Default s)''+
+    '&lt;html&gt;&lt;head&gt;&lt;META http-equiv="Content-T</Signature><Params>
+     <Param name="sChartType"/>
+     <Param name="sChartName"/>
+     <Param name="d"/>
+     <Param name="s"/>
+    </Params>
+   </Definition>
+   <Definition body="4406" end="4562" exported="1" fullname="vl.google.cartesian" inherit_type="local" line="65" name="Cartesian" source="/media/sarthak/Data/ecl-ml/VL/Google.ecl" start="4279">
+    <Type>function</Type>
+    <Signature>Types.CartesianData) d,VL.Styles.Default s=VL.Styles.Default)FUNCTION
+    RETURN OUTPUT(DATASET([{'CHARTCODE',DefaultTemplate</Signature><Params>
+     <Param name="sChartType"/>
+     <Param name="sChartName"/>
+     <Param name="d"/>
+     <Param name="s"/>
+    </Params>
+   </Definition>
+   <Signature>T GoogleMODUL</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="288" fullname="VL" inherit_type="local" line="5" name="VL" ref="vl" start="288" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" name="VL.Styles" target="styles.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Types.ecl" name="VL.Types" target="types.ecl.xml"/></Meta>

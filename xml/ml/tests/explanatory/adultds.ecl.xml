@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Explanatory.AdultDS" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" target="adultds.ecl.xml">
+  <Definition body="105" end="2218874" exported="1" fullname="ML.Tests.Explanatory.AdultDS" inherit_type="local" line="4" name="AdultDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" start="88">
+   <Type>module</Type>
+   <Definition body="138" end="696" fullname="ml.tests.explanatory.adultds.adultrecord" inherit_type="local" line="5" name="AdultRecord" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" start="116">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="Age"/>
+    <Field name="WorkClass"/>
+    <Field name="fnlwgt"/>
+    <Field name="education"/>
+    <Field name="education_num"/>
+    <Field name="marital_status"/>
+    <Field name="occupation"/>
+    <Field name="relationship"/>
+    <Field name="race"/>
+    <Field name="sex"/>
+    <Field name="capital_gain"/>
+    <Field name="capital_loss"/>
+    <Field name="hours_per_week"/>
+    <Field name="native_country"/>
+    <Signature>AdultRecord</Signature><Field name="Outcome"/>
+   </Definition>
+   <Definition body="718" end="1479775" exported="1" fullname="ml.tests.explanatory.adultds.train_data" inherit_type="local" line="23" name="Train_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" start="698">
+    <Signature>Train_Data</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1479796" end="2218868" exported="1" fullname="ml.tests.explanatory.adultds.test_data" inherit_type="local" line="32585" name="Test_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" start="1479777">
+    <Signature>Test_Data</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>AdultDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="58" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="58" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="69" fullname="ML.Types" inherit_type="local" line="3" name="Types" ref="ml.types" start="69" target="../../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/></Meta>

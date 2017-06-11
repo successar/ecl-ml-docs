@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="Examples.Sentilyze.KeywordCount.Generate" sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" target="generate.ecl.xml">
+  <Definition body="348" end="1157" exported="1" fullname="examples.sentilyze.keywordcount.generate" inherit_type="local" line="10" name="Generate" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="280">
+   <Type>module</Type>
+   <Params>
+    <Param name="T"/>
+    <Param name="nWords"/>
+   </Params>
+   <Parents/>
+   <Definition body="374" end="425" fullname="examples.sentilyze.keywordcount.generate.dtokens" inherit_type="local" line="11" name="dTokens" shared="1" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="357">
+    <Signature>dTokens</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="445" end="480" fullname="examples.sentilyze.keywordcount.generate.dlexicon" inherit_type="local" line="12" name="dLexicon" shared="1" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="427">
+    <Signature>dLexicon</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="507" end="948" exported="1" fullname="examples.sentilyze.keywordcount.generate.keywords_tfidf" inherit_type="local" line="14" name="Keywords_TFIDF" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="483">
+    <Signature>Keywords_TFIDF</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>Generate(DATASET(ML.Docs.Types.Raw) T,UNSIGNED nWords=100)</Signature><Definition body="1043" end="1151" exported="1" fullname="examples.sentilyze.keywordcount.generate.keywords_mi" inherit_type="local" line="27" name="Keywords_MI" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="952">
+    <Type>function</Type>
+    <Signature>Keywords_MI(DATASET(ML.Docs.Types.Raw) O, UNSIGNED nThreshold=0,UNSIGNED units=2)</Signature><Params>
+     <Param name="O"/>
+     <Param name="nThreshold"/>
+     <Param name="units"/>
+    </Params>
+   </Definition>
+  </Definition>
+  <Import body="0" end="235" fullname="Examples.Sentilyze" inherit_type="local" line="7" name="Sentilyze" ref="examples.sentilyze" start="235" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="275" fullname="ML" inherit_type="local" line="8" name="ML" ref="ml" remotescope="1" start="275" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="../../../ml/docs/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" name="ML.Docs.Tokenize" target="../../../ml/docs/tokenize.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../../ml/config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" name="ML.Docs.CoLocation" target="../../../ml/docs/colocation.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" name="ML.Docs.Trans" target="../../../ml/docs/trans.ecl.xml"/></Meta>

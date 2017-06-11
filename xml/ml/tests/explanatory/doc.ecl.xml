@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Explanatory.Doc" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" target="doc.ecl.xml">
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Docs" inherit_type="local" line="2" name="Docs" ref="ml.docs" remotescope="1" start="18" target="../../docs/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="1302" end="1365" fullname="ml.tests.explanatory.d" inherit_type="local" line="16" name="d" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1299">
+   <Signature>d</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1372" end="1431" fullname="ml.tests.explanatory.d1" inherit_type="local" line="18" name="d1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1367">
+   <Signature>d1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1441" end="1470" fullname="ml.tests.explanatory.d2" inherit_type="local" line="20" name="d2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1436">
+   <Signature>d2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1480" end="1505" fullname="ml.tests.explanatory.d3" inherit_type="local" line="22" name="d3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1475">
+   <Signature>d3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1515" end="1540" fullname="ml.tests.explanatory.d4" inherit_type="local" line="24" name="d4" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1510">
+   <Signature>d4</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1551" end="1578" fullname="ml.tests.explanatory.lex" inherit_type="local" line="26" name="lex" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1545">
+   <Signature>lex</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1589" end="1616" fullname="ml.tests.explanatory.o1" inherit_type="local" line="28" name="o1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1584">
+   <Signature>o1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1679" end="1708" fullname="ml.tests.explanatory.o2" inherit_type="local" line="32" name="o2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Doc.ecl" start="1674">
+   <Signature>o2</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="../../docs/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" name="ML.Docs.Tokenize" target="../../docs/tokenize.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" name="ML.Docs.Trans" target="../../docs/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/></Meta>

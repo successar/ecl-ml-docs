@@ -1,0 +1,378 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml.svm
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="libsvm/pkg.toc.html">
+				ml.svm.libsvm
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SVM_Model
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : SVM_Output
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SVM_Instance
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SVM_Prediction
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SVM_Pred_Values
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : SVM_Pred_Prob_Est
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			EMBED : SVM_Predict
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : LibSVM_Node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Predict(DATASET(Model) models, DATASET(SVM_Instance) d)
+			<ul>
+				
+		<li>
+			TRANSFORM : LibSVM.Types.LibSVM_Node cvtNode(SVM.Types.SVM_Feature f)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Work_SV
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Work_SV cvtSV(SVM.Types.SVM_SV sv_rec)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Work1
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : LibSVM_Node normN(LibSVM_Node node)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : svm_mdls
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Prediction
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Pred_Values
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Pred_Prob_Est
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : Model
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SVM_Model
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : SVM_Output
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SVM_Instance
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SVM_Prediction
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SVM_Pred_Values
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : SVM_Pred_Prob_Est
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	EMBED : SVM_Predict
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : LibSVM_Node
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : Predict(DATASET(Model) models, DATASET(SVM_Instance) d)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	TRANSFORM : LibSVM.Types.LibSVM_Node cvtNode(SVM.Types.SVM_Feature f)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Work_SV
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : Work_SV cvtSV(SVM.Types.SVM_SV sv_rec)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Work1
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : LibSVM_Node normN(LibSVM_Node node)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : svm_mdls
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Prediction
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Pred_Values
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Pred_Prob_Est
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

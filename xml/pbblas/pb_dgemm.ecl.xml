@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.PB_dgemm" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" target="pb_dgemm.ecl.xml">
+  <Import body="0" end="127" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" start="127" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="142" fullname="PBblas.Types" inherit_type="local" line="4" name="Types" ref="pbblas.types" start="142" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="163" fullname="PBblas.IMatrix_Map" inherit_type="local" line="5" name="IMatrix_Map" ref="pbblas.imatrix_map" start="163" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="190" fullname="PBblas.BLAS" inherit_type="local" line="6" name="BLAS" ref="pbblas.blas" remotescope="1" start="190" target="blas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="217" end="236" fullname="pbblas.layout_part" inherit_type="local" line="7" name="Layout_Part" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="203">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="253" end="274" fullname="pbblas.layout_target" inherit_type="local" line="8" name="Layout_Target" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="237">
+   <Type>record</Type>
+   <Field name="t_part_id"/>
+   <Field name="t_node_id"/>
+   <Field name="t_block_row"/>
+   <Field name="t_block_col"/>
+   <Field name="t_term"/>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Layout_Target</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="285" end="300" fullname="pbblas.value_t" inherit_type="local" line="9" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="275">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="310" end="336" fullname="pbblas.emptyc" inherit_type="local" line="10" name="emptyC" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="301">
+   <Signature>emptyC</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="366" end="370" fullname="pbblas.empty_array" inherit_type="local" line="11" name="empty_array" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="337">
+   <Signature>SET OF value_t empty_array</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="669" end="6252" exported="1" fullname="pbblas.pb_dgemm" inherit_type="local" line="13" name="PB_dgemm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="372">
+   <Type>function</Type>
+   <Signature>PB_dgemm(BOOLEAN transposeA, BOOLEAN transposeB, value_t alpha,
+                IMatrix_Map map_a, DATASET(Layout_Part) A_in,
+                IMatrix_Map map_b, DATASET(Layout_Part) B_in,
+                IMatrix_Map map_c, DATASET(Layout_Part) C=emptyC,
+                value_t beta=0.0)</Signature><Params>
+    <Param name="transposeA"/>
+    <Param name="transposeB"/>
+    <Param name="alpha"/>
+    <Param name="map_a"/>
+    <Param name="A_in"/>
+    <Param name="map_b"/>
+    <Param name="B_in"/>
+    <Param name="map_c"/>
+    <Param name="C"/>
+    <Param name="beta"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="blas/dscal.ecl.xml"/></Meta>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.Vector2Diag" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" target="vector2diag.ecl.xml">
+  <Import body="0" end="90" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" start="90" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="105" fullname="PBblas.IMatrix_Map" inherit_type="local" line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" start="105" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="132" fullname="PBblas.Types" inherit_type="local" line="5" name="Types" ref="pbblas.types" start="132" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="153" fullname="PBblas.Constants" inherit_type="local" line="6" name="Constants" ref="pbblas.constants" start="153" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="178" fullname="PBblas.Block" inherit_type="local" line="7" name="Block" ref="pbblas.block" remotescope="1" start="178" target="block/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="231" end="250" fullname="pbblas.part" inherit_type="local" line="9" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" start="224">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="261" end="276" fullname="pbblas.value_t" inherit_type="local" line="10" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" start="251">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="285" end="311" fullname="pbblas.dim_t" inherit_type="local" line="11" name="dim_t" source="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" start="277">
+   <Signature>dim_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="409" end="1838" exported="1" fullname="pbblas.vector2diag" inherit_type="local" line="13" name="Vector2Diag" source="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" start="313">
+   <Type>function</Type>
+   <Signature>DATASET(Part)
+       Vector2Diag(IMatrix_Map x_map, DATASET(Part) X, IMatrix_Map d_map)</Signature><Params>
+    <Param name="x_map"/>
+    <Param name="X"/>
+    <Param name="d_map"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_diag" target="block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/></Meta>

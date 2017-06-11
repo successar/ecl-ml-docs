@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Clustering.Datasets.ionek_f_four_c_fourDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_four_c_fourDS.ecl" target="ionek_f_four_c_fourds.ecl.xml">
+  <Definition body="49" end="78598" exported="1" fullname="TestingSuite.Clustering.Datasets.ionek_f_four_c_fourDS" inherit_type="local" line="2" name="ionek_f_four_c_fourDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_four_c_fourDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="97" end="328" fullname="testingsuite.clustering.datasets.ionek_f_four_c_fourds.ionek_f_four_c_fourrecord" inherit_type="local" line="3" name="ionek_f_four_c_fourRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_four_c_fourDS.ecl" start="62">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="features_1"/>
+    <Field name="features_2"/>
+    <Field name="features_3"/>
+    <Field name="features_4"/>
+    <Signature>ionek_f_four_c_fourRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="350" end="78593" exported="1" fullname="testingsuite.clustering.datasets.ionek_f_four_c_fourds.content" inherit_type="local" line="11" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_four_c_fourDS.ecl" start="333">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>ionek_f_four_c_fourDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

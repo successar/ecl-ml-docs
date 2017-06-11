@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.HadamardProduct" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" target="hadamardproduct.ecl.xml">
+  <Import body="0" end="86" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" start="86" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="101" fullname="PBblas.IMatrix_Map" inherit_type="local" line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" start="101" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="128" fullname="PBblas.Types" inherit_type="local" line="5" name="Types" ref="pbblas.types" start="128" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="149" fullname="PBblas.Constants" inherit_type="local" line="6" name="Constants" ref="pbblas.constants" start="149" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="174" fullname="PBblas.BLAS" inherit_type="local" line="7" name="BLAS" ref="pbblas.blas" remotescope="1" start="174" target="blas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="194" fullname="std.system.Thorlib" inherit_type="local" line="8" name="Thorlib" ref="std.system.thorlib" start="194" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="236" end="267" fullname="pbblas.dimension_incompatz" inherit_type="local" line="9" name="Dimension_IncompatZ" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="214">
+   <Signature>Dimension_IncompatZ</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="290" end="320" fullname="pbblas.dimension_incompat" inherit_type="local" line="10" name="Dimension_Incompat" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="268">
+   <Signature>Dimension_Incompat</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="360" end="379" fullname="pbblas.part" inherit_type="local" line="12" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="353">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="390" end="405" fullname="pbblas.value_t" inherit_type="local" line="13" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="380">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="632" end="2346" exported="1" fullname="pbblas.hadamardproduct" inherit_type="local" line="19" name="HadamardProduct" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="534">
+   <Type>function</Type>
+   <Signature>DATASET(Part)
+      HadamardProduct(IMatrix_Map x_map, DATASET(Part) X, DATASET(Part) Y)</Signature><Params>
+    <Param name="x_map"/>
+    <Param name="X"/>
+    <Param name="Y"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="maker8set.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/></Meta>

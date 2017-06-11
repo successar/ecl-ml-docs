@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.PB_daxpy" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" target="pb_daxpy.ecl.xml">
+  <Import body="0" end="64" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" start="64" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="79" fullname="PBblas.IMatrix_Map" inherit_type="local" line="3" name="IMatrix_Map" ref="pbblas.imatrix_map" start="79" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="106" fullname="PBblas.Types" inherit_type="local" line="4" name="Types" ref="pbblas.types" start="106" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="127" fullname="PBblas.Constants" inherit_type="local" line="5" name="Constants" ref="pbblas.constants" start="127" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="152" fullname="PBblas.BLAS" inherit_type="local" line="6" name="BLAS" ref="pbblas.blas" remotescope="1" start="152" target="blas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="172" fullname="std.system.Thorlib" inherit_type="local" line="7" name="Thorlib" ref="std.system.thorlib" start="172" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="199" end="218" fullname="pbblas.part" inherit_type="local" line="8" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="192">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="229" end="244" fullname="pbblas.value_t" inherit_type="local" line="9" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="219">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="267" end="298" fullname="pbblas.dimension_incompatz" inherit_type="local" line="10" name="Dimension_IncompatZ" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="245">
+   <Signature>Dimension_IncompatZ</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="321" end="351" fullname="pbblas.dimension_incompat" inherit_type="local" line="11" name="Dimension_Incompat" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="299">
+   <Signature>Dimension_Incompat</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="420" end="1775" exported="1" fullname="pbblas.pb_daxpy" inherit_type="local" line="13" name="PB_daxpy" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="353">
+   <Type>function</Type>
+   <Signature>PB_daxpy(value_t alpha, DATASET(Part) X, DATASET(Part) Y)</Signature><Params>
+    <Param name="alpha"/>
+    <Param name="X"/>
+    <Param name="Y"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="blas/daxpy.ecl.xml"/></Meta>

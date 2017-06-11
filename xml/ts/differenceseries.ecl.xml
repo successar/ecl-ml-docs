@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.DifferenceSeries" sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" target="differenceseries.ecl.xml">
+  <Import body="0" end="58" fullname="TS.Types" inherit_type="local" line="2" name="Types" ref="ts.types" start="58" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="79" end="95" fullname="ts.modelobs" inherit_type="local" line="3" name="ModelObs" source="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" start="68">
+   <Type>record</Type>
+   <Field name="period"/>
+   <Field name="dependent"/>
+   <Signature>ModelObs</Signature><Field name="model_id"/>
+  </Definition>
+  <Definition body="103" end="121" fullname="ts.spec" inherit_type="local" line="4" name="Spec" source="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" start="96">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Signature>Spec</Signature><Field name="degree"/>
+  </Definition>
+  <Definition body="298" end="1399" exported="1" fullname="ts.differenceseries" inherit_type="local" line="5" name="DifferenceSeries" source="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" start="122">
+   <Type>function</Type>
+   <Signature>DATASET(ModelObs)
+       DifferenceSeries(DATASET(ModelObs) obs,
+                        DATASET(Spec) degree_spec,
+                        BOOLEAN keepInitial=FALSE)</Signature><Params>
+    <Param name="obs"/>
+    <Param name="degree_spec"/>
+    <Param name="keepInitial"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/></Meta>

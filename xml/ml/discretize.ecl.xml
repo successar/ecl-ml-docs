@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Discretize" sourcePath="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" target="discretize.ecl.xml">
+  <Definition body="465" end="3910" exported="1" fullname="ML.Discretize" inherit_type="local" line="10" name="Discretize" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="445">
+   <Type>module</Type>
+   <Definition body="655" end="688" exported="1" inherit_type="local" line="16" name="c_Method" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="637">
+    <Signature>c_Method</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="707" end="920" exported="1" fullname="ml.discretize.r_method" inherit_type="local" line="17" name="r_Method" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="689">
+    <Type>record</Type>
+    <Field name="fields"/>
+    <Field name="method"/>
+    <Field name="iParam1"/>
+    <Field name="rParam1"/>
+    <Signature>r_Method</Signature><Field name="rParam2"/>
+   </Definition>
+   <Definition body="1334" end="1391" exported="1" fullname="ml.discretize.i_byrounding" inherit_type="local" line="31" name="i_ByRounding" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="1252">
+    <Type>function</Type>
+    <Signature>i_ByRounding(SET OF Types.t_FieldNumber f,REAL Scale=1.0,REAL Delta=0.0)</Signature><Params>
+     <Param name="f"/>
+     <Param name="Scale"/>
+     <Param name="Delta"/>
+    </Params>
+   </Definition>
+   <Definition body="1497" end="1597" exported="1" fullname="ml.discretize.byrounding" inherit_type="local" line="33" name="ByRounding" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="1416">
+    <Type>function</Type>
+    <Signature>ByRounding(DATASET(Types.NumericField) d,REAL Scale=1.0,REAL Delta=0.0)</Signature><Params>
+     <Param name="d"/>
+     <Param name="Scale"/>
+     <Param name="Delta"/>
+    </Params>
+   </Definition>
+   <Definition body="1962" end="2012" exported="1" fullname="ml.discretize.i_bybucketing" inherit_type="local" line="40" name="i_ByBucketing" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="1874">
+    <Type>function</Type>
+    <Signature>i_ByBucketing(SET OF Types.t_FieldNumber f,Types.t_Discrete N=Config.Discrete)</Signature><Params>
+     <Param name="f"/>
+     <Param name="N"/>
+    </Params>
+   </Definition>
+   <Definition body="2100" end="2296" exported="1" fullname="ml.discretize.bybucketing" inherit_type="local" line="41" name="ByBucketing" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="2013">
+    <Type>function</Type>
+    <Signature>ByBucketing(DATASET(Types.NumericField) d,Types.t_Discrete N=Config.Discrete)</Signature><Params>
+     <Param name="d"/>
+     <Param name="N"/>
+    </Params>
+   </Definition>
+   <Definition body="2598" end="2645" exported="1" fullname="ml.discretize.i_bytiling" inherit_type="local" line="50" name="i_ByTiling" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="2513">
+    <Type>function</Type>
+    <Signature>i_ByTiling(SET OF Types.t_FieldNumber f,Types.t_Discrete N=Config.Discrete)</Signature><Params>
+     <Param name="f"/>
+     <Param name="N"/>
+    </Params>
+   </Definition>
+   <Definition body="2730" end="2924" exported="1" fullname="ml.discretize.bytiling" inherit_type="local" line="51" name="ByTiling" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="2646">
+    <Type>function</Type>
+    <Signature>ByTiling(DATASET(Types.NumericField) d,Types.t_Discrete N=Config.Discrete)</Signature><Params>
+     <Param name="d"/>
+     <Param name="N"/>
+    </Params>
+   </Definition>
+   <Definition body="3307" end="3904" exported="1" fullname="ml.discretize.do" inherit_type="local" line="62" name="Do" source="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" start="3239">
+    <Type>function</Type>
+    <Signature>Do(DATASET(Types.NumericField) d, DATASET(r_Method) to_do)</Signature><Params>
+     <Param name="d"/>
+     <Param name="to_do"/>
+    </Params>
+   </Definition>
+   <Signature>Discretize</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="387" fullname="ML" inherit_type="local" line="7" name="ML" ref="ml" start="387" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="398" fullname="ML.Types" inherit_type="local" line="8" name="Types" ref="ml.types" start="398" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="424" fullname="ML.Config" inherit_type="local" line="9" name="Config" ref="ml.config" start="424" target="config.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="mat/has.ecl.xml"/></Meta>

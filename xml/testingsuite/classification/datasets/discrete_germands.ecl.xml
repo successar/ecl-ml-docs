@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.discrete_GermanDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_GermanDS.ecl" target="discrete_germands.ecl.xml">
+  <Definition body="45" end="69943" exported="1" fullname="TestingSuite.Classification.Datasets.discrete_GermanDS" inherit_type="local" line="2" name="discrete_GermanDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_GermanDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="89" end="1195" fullname="testingsuite.classification.datasets.discrete_germands.discrete_germanrecord" inherit_type="local" line="3" name="discrete_GermanRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_GermanDS.ecl" start="58">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="Status"/>
+    <Field name="Duration"/>
+    <Field name="Credit"/>
+    <Field name="Purpose"/>
+    <Field name="Credit_amount"/>
+    <Field name="Savings_account_bonds"/>
+    <Field name="employment"/>
+    <Field name="Installment_rate"/>
+    <Field name="Personal_status_and_sex"/>
+    <Field name="Other_debtors_guarantors"/>
+    <Field name="Present_residence_since"/>
+    <Field name="Property"/>
+    <Field name="Age"/>
+    <Field name="Other_installment_plans"/>
+    <Field name="Housing"/>
+    <Field name="Number_of_existing_credits_at_this_bank"/>
+    <Field name="Job"/>
+    <Field name="Number_of_people_being_liable"/>
+    <Field name="Telephone"/>
+    <Field name="foreign_worker"/>
+    <Field name="N1"/>
+    <Field name="N2"/>
+    <Field name="N3"/>
+    <Field name="N4"/>
+    <Signature>discrete_GermanRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="1217" end="69938" exported="1" fullname="testingsuite.classification.datasets.discrete_germands.content" inherit_type="local" line="31" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_GermanDS.ecl" start="1200">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>discrete_GermanDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.continious_segmentationDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_segmentationDS.ecl" target="continious_segmentationds.ecl.xml">
+  <Definition body="53" end="416550" exported="1" fullname="TestingSuite.Classification.Datasets.continious_segmentationDS" inherit_type="local" line="2" name="continious_segmentationDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_segmentationDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="105" end="768" fullname="testingsuite.classification.datasets.continious_segmentationds.continious_segmentationrecord" inherit_type="local" line="3" name="continious_segmentationRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_segmentationDS.ecl" start="66">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="A1"/>
+    <Field name="A2"/>
+    <Field name="A3"/>
+    <Field name="A4"/>
+    <Field name="A5"/>
+    <Field name="A6"/>
+    <Field name="A7"/>
+    <Field name="A8"/>
+    <Field name="A9"/>
+    <Field name="A10"/>
+    <Field name="A11"/>
+    <Field name="A12"/>
+    <Field name="A13"/>
+    <Field name="A14"/>
+    <Field name="A15"/>
+    <Field name="A16"/>
+    <Field name="A17"/>
+    <Field name="A18"/>
+    <Field name="A19"/>
+    <Signature>continious_segmentationRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="790" end="416545" exported="1" fullname="testingsuite.classification.datasets.continious_segmentationds.content" inherit_type="local" line="26" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_segmentationDS.ecl" start="773">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>continious_segmentationDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.PB_dtrsm" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" target="pb_dtrsm.ecl.xml">
+  <Import body="0" end="439" fullname="PBblas" inherit_type="local" line="8" name="PBblas" ref="pbblas" start="439" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="454" fullname="PBblas.Constants" inherit_type="local" line="9" name="Constants" ref="pbblas.constants" start="454" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="479" fullname="PBblas.Types" inherit_type="local" line="10" name="Types" ref="pbblas.types" start="479" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="500" fullname="PBblas.BLAS" inherit_type="local" line="11" name="BLAS" ref="pbblas.blas" remotescope="1" start="500" target="blas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="520" fullname="std.system.Thorlib" inherit_type="local" line="12" name="Thorlib" ref="std.system.thorlib" start="520" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="552" end="567" fullname="pbblas.value_t" inherit_type="local" line="13" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="540">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="580" end="596" fullname="pbblas.matrix_t" inherit_type="local" line="14" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="568">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="609" end="625" inherit_type="local" line="15" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="597">
+   <Signature>Triangle</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="638" end="660" fullname="pbblas.lower" inherit_type="local" line="16" name="Lower" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="626">
+   <Signature>Lower</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="673" end="695" fullname="pbblas.upper" inherit_type="local" line="17" name="Upper" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="661">
+   <Signature>Upper</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="708" end="724" inherit_type="local" line="18" name="Diagonal" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="696">
+   <Signature>Diagonal</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="737" end="749" inherit_type="local" line="19" name="Side" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="725">
+   <Signature>Side</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="762" end="781" fullname="pbblas.part" inherit_type="local" line="20" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="750">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="794" end="815" fullname="pbblas.target" inherit_type="local" line="21" name="Target" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="782">
+   <Type>record</Type>
+   <Field name="t_part_id"/>
+   <Field name="t_node_id"/>
+   <Field name="t_block_row"/>
+   <Field name="t_block_col"/>
+   <Field name="t_term"/>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Target</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="828" end="847" fullname="pbblas.dimension" inherit_type="local" line="22" name="Dimension" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="816">
+   <Signature>Dimension</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="869" end="906" fullname="pbblas.distribution_error" inherit_type="local" line="23" name="Distribution_Error" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="848">
+   <Signature>Distribution_Error</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="928" end="965" fullname="pbblas.dimension_incompat" inherit_type="local" line="24" name="Dimension_Incompat" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="907">
+   <Signature>Dimension_Incompat</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="987" end="1016" fullname="pbblas.not_square" inherit_type="local" line="25" name="Not_Square" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="966">
+   <Signature>Not_Square</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1028" end="1031" fullname="pbblas.baseterm" inherit_type="local" line="26" name="BaseTerm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1017">
+   <Signature>BaseTerm</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1044" end="1047" fullname="pbblas.rightterm" inherit_type="local" line="27" name="RightTerm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1032">
+   <Signature>RightTerm</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1059" end="1062" fullname="pbblas.leftterm" inherit_type="local" line="28" name="LeftTerm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1048">
+   <Signature>LeftTerm</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1293" end="8571" exported="1" fullname="pbblas.pb_dtrsm" inherit_type="local" line="30" name="PB_dtrsm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1064">
+   <Type>function</Type>
+   <Signature>PB_dtrsm(Side s, Triangle tri, BOOLEAN transposeA, Diagonal diag,
+                value_t alpha,
+                PBblas.IMatrix_Map a_map, DATASET(Part) rawA,
+                PBblas.IMatrix_Map b_map, DATASET(Part) inB)</Signature><Params>
+    <Param name="s"/>
+    <Param name="tri"/>
+    <Param name="transposeA"/>
+    <Param name="diag"/>
+    <Param name="alpha"/>
+    <Param name="a_map"/>
+    <Param name="rawA"/>
+    <Param name="b_map"/>
+    <Param name="inB"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="pb_dtran.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="blas/dtrsm.ecl.xml"/></Meta>

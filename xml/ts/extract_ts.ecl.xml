@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.extract_ts" sourcePath="/media/sarthak/Data/ecl-ml/TS/extract_ts.ecl" target="extract_ts.ecl.xml">
+  <Definition body="429" end="1238" exported="1" fullname="ts.extract_ts" inherit_type="local" line="10" name="extract_ts" source="/media/sarthak/Data/ecl-ml/TS/extract_ts.ecl" start="392">
+   <Type>macro</Type>
+   <Documentation> <content>Extract the univariate time series. The data is required to be in time order, and the time perioods are reqiured to be regular. Missing values are not supported. The user must prepare the file such that these assumptions are met.</content>
+    <return>a Univariate time series dataset</return>
+    <param>dsIn the input time series source data set</param>
+    <param>fieldName the input field name</param>
+   </Documentation>
+   <Signature>extract_ts(dsIn, fieldName)</Signature><Params>
+    <Param name="dsIn"/>
+    <Param name="fieldName"/>
+   </Params>
+  </Definition>
+ </Source>
+</Meta>

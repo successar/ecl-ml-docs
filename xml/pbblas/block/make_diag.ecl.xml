@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Source name="PBblas.Block.make_diag" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" target="make_diag.ecl.xml">
+  <Import body="0" end="119" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" start="119" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="138" end="161" fullname="pbblas.block.matrix_t" inherit_type="local" line="4" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" start="127">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="176" end="202" fullname="pbblas.block.dimension_t" inherit_type="local" line="5" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" start="162">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="213" end="235" fullname="pbblas.block.value_t" inherit_type="local" line="6" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" start="203">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="310" end="674" exported="1" fullname="pbblas.block.make_diag" inherit_type="local" line="8" name="make_diag" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" start="237">
+   <Type>embed</Type>
+   <Signature>matrix_t make_diag(dimension_t m, value_t v=1.0, matrix_t x=[])</Signature><Params>
+    <Param name="m"/>
+    <Param name="v"/>
+    <Param name="x"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

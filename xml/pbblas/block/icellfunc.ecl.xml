@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Source name="PBblas.Block.ICellFunc" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" target="icellfunc.ecl.xml">
+  <Import body="0" end="65" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" start="65" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="83" end="105" fullname="pbblas.block.value_t" inherit_type="local" line="3" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" start="73">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="120" end="146" fullname="pbblas.block.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" start="106">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="216" end="219" exported="1" fullname="pbblas.block.icellfunc" inherit_type="local" line="6" name="ICellFunc" source="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" start="148">
+   <Type>function</Type>
+   <Signature>value_t ICellFunc(value_t v, dimension_t r, dimension_t c)</Signature><Params>
+    <Param name="v"/>
+    <Param name="r"/>
+    <Param name="c"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

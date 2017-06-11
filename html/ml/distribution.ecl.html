@@ -1,0 +1,2386 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/pkg.toc.html">
+				ml.mat
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="mat/vec.ecl.html">
+				ml.mat.vec
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="utils.ecl.html">
+				ml.utils
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : Distribution
+			<ul>
+				
+		<li>
+			RECORD : Layout
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DVec(UNSIGNED Ranges,Types.t_FieldReal low,Types.t_FieldReal width)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Default
+			<ul>
+				
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Uniform(Types.t_FieldReal low,Types.t_FieldReal high,Types.t_Count NRanges = 10000)
+			<ul>
+				
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.t_FieldReal RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Normal(Types.t_FieldReal mean,Types.t_FieldReal sd,Types.t_Count NRanges = 10000)
+			<ul>
+				
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.t_FieldReal Var
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : low
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : high
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Normal2(Types.t_FieldReal mean,Types.t_FieldReal sd,Types.t_Count NRanges = 10000)
+			<ul>
+				
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Types.t_FieldReal Var
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : low
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : high
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : StudentT(Types.t_Discrete v,Types.t_Count NRanges = 10000)
+			<ul>
+				
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Multiplier
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : LowDensity
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : high
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Low
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Exponential(Types.t_FieldReal lamda,Types.t_Count NRanges = 10000)
+			<ul>
+				
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : NTile(Types.t_FieldReal pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : High
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Binomial(Types.t_FieldReal p,Types.t_Count NRanges = 100)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : NegBinomial(Types.t_FieldReal p,Types.t_Count Failures, Types.t_Count NRanges = 1000)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Poisson(Types.t_FieldReal lamda,Types.t_Count NRanges = 100)
+			<ul>
+				
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : FDist(Types.t_Discrete d1, Types.t_Discrete d2, Types.t_Count NRanges = 10000)
+			<ul>
+				
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Multiplier
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : high
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Low
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : ChiSquare(Types.t_Discrete d1, Types.t_Count NRanges = 10000)
+			<ul>
+				
+		<li>
+			FUNCTION : CumulativeV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : InvDensity(Types.t_FieldReal delta)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Discrete
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Multiplier
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : high
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Low
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : RangeWidth
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DensityV()
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : GenData(Types.t_RecordID N,Default dist,Types.t_FieldNumber fld = 1)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : Distribution
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : Layout
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DVec(UNSIGNED Ranges,Types.t_FieldReal low,Types.t_FieldReal width)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : Default
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Uniform(Types.t_FieldReal low,Types.t_FieldReal high,Types.t_Count NRanges = 10000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.t_FieldReal RangeWidth
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Normal(Types.t_FieldReal mean,Types.t_FieldReal sd,Types.t_Count NRanges = 10000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.t_FieldReal Var
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : low
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : high
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Normal2(Types.t_FieldReal mean,Types.t_FieldReal sd,Types.t_Count NRanges = 10000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Types.t_FieldReal Var
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : low
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : high
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : StudentT(Types.t_Discrete v,Types.t_Count NRanges = 10000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Multiplier
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : LowDensity
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : high
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Low
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Exponential(Types.t_FieldReal lamda,Types.t_Count NRanges = 10000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : NTile(Types.t_FieldReal pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : High
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Binomial(Types.t_FieldReal p,Types.t_Count NRanges = 100)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : NegBinomial(Types.t_FieldReal p,Types.t_Count Failures, Types.t_Count NRanges = 1000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Poisson(Types.t_FieldReal lamda,Types.t_Count NRanges = 100)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : FDist(Types.t_Discrete d1, Types.t_Discrete d2, Types.t_Count NRanges = 10000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Multiplier
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : high
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Low
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : ChiSquare(Types.t_Discrete d1, Types.t_Count NRanges = 10000)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="distribution.ecl.html">
+					ml.distribution.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : CumulativeV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Discrete
+		
+		<br/>
+		
+		Inherit Type : inherited
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Multiplier
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : high
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Low
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : RangeWidth
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DensityV()
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	FUNCTION : GenData(Types.t_RecordID N,Default dist,Types.t_FieldNumber fld = 1)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.Types" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" target="types.ecl.xml">
+  <Definition body="213" end="1754" exported="1" fullname="PBblas.Types" inherit_type="local" line="4" name="Types" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="198">
+   <Type>module</Type>
+   <Definition body="245" end="256" exported="1" fullname="pbblas.types.dimension_t" inherit_type="local" line="5" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="223">
+    <Signature>dimension_t</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="325" end="336" exported="1" fullname="pbblas.types.partition_t" inherit_type="local" line="6" name="partition_t" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="303">
+    <Signature>partition_t</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="361" end="372" exported="1" fullname="pbblas.types.node_t" inherit_type="local" line="7" name="node_t" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="339">
+    <Signature>node_t</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="397" end="404" exported="1" fullname="pbblas.types.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="375">
+    <Signature>value_t</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="476" end="490" exported="1" fullname="pbblas.types.matrix_t" inherit_type="local" line="9" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="454">
+    <Signature>matrix_t</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="555" end="590" exported="1" inherit_type="local" line="10" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="533">
+    <Signature>Triangle</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="625" end="667" exported="1" inherit_type="local" line="11" name="Diagonal" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="603">
+    <Signature>Diagonal</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="703" end="732" exported="1" inherit_type="local" line="12" name="Side" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="681">
+    <Signature>Side</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="768" end="779" exported="1" fullname="pbblas.types.t_mu_no" inherit_type="local" line="13" name="t_mu_no" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="746">
+    <Signature>t_mu_no</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="860" end="1048" exported="1" fullname="pbblas.types.layout_cell" inherit_type="local" line="16" name="Layout_Cell" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="838">
+    <Type>record</Type>
+    <Field name="x"/>
+    <Field name="y"/>
+    <Signature>Layout_Cell</Signature><Field name="v"/>
+   </Definition>
+   <Definition body="1084" end="1377" exported="1" fullname="pbblas.types.layout_part" inherit_type="local" line="22" name="Layout_Part" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="1062">
+    <Type>record</Type>
+    <Field name="node_id"/>
+    <Field name="partition_id"/>
+    <Field name="block_row"/>
+    <Field name="block_col"/>
+    <Field name="first_row"/>
+    <Field name="part_rows"/>
+    <Field name="first_col"/>
+    <Field name="part_cols"/>
+    <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   </Definition>
+   <Definition body="1429" end="1616" exported="1" fullname="pbblas.types.layout_target" inherit_type="local" line="34" name="Layout_Target" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="1406">
+    <Type>record</Type>
+    <Field name="t_part_id"/>
+    <Field name="t_node_id"/>
+    <Field name="t_block_row"/>
+    <Field name="t_block_col"/>
+    <Field name="t_term"/>
+    <Field name="node_id"/>
+    <Field name="partition_id"/>
+    <Field name="block_row"/>
+    <Field name="block_col"/>
+    <Field name="first_row"/>
+    <Field name="part_rows"/>
+    <Field name="first_col"/>
+    <Field name="part_cols"/>
+    <Signature>Layout_Target</Signature><Field name="mat_part"/>
+   </Definition>
+   <Definition body="1658" end="1749" exported="1" fullname="pbblas.types.muelement" inherit_type="local" line="43" name="MUElement" source="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" start="1639">
+    <Type>record</Type>
+    <Field name="node_id"/>
+    <Field name="partition_id"/>
+    <Field name="block_row"/>
+    <Field name="block_col"/>
+    <Field name="first_row"/>
+    <Field name="part_rows"/>
+    <Field name="first_col"/>
+    <Field name="part_cols"/>
+    <Field name="mat_part"/>
+    <Signature>MUElement</Signature><Field name="no"/>
+   </Definition>
+   <Signature>Types</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

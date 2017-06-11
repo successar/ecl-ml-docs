@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.Apply2Elements" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" target="apply2elements.ecl.xml">
+  <Import body="0" end="56" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" start="56" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="71" fullname="PBblas.IMatrix_Map" inherit_type="local" line="3" name="IMatrix_Map" ref="pbblas.imatrix_map" start="71" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="98" fullname="PBblas.Types" inherit_type="local" line="4" name="Types" ref="pbblas.types" start="98" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="119" fullname="PBblas.Constants" inherit_type="local" line="5" name="Constants" ref="pbblas.constants" start="119" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="144" fullname="PBblas.BLAS" inherit_type="local" line="6" name="BLAS" ref="pbblas.blas" remotescope="1" start="144" target="blas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="196" end="215" fullname="pbblas.part" inherit_type="local" line="8" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="189">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="226" end="241" fullname="pbblas.value_t" inherit_type="local" line="9" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="216">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="250" end="271" fullname="pbblas.ifunc" inherit_type="local" line="10" name="IFunc" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="242">
+   <Type>function</Type>
+   <Signature>IFunc</Signature><Params>
+    <Param name="v"/>
+    <Param name="r"/>
+    <Param name="c"/>
+   </Params>
+  </Definition>
+  <Definition body="280" end="306" fullname="pbblas.dim_t" inherit_type="local" line="11" name="dim_t" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="272">
+   <Signature>dim_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="397" end="893" exported="1" fullname="pbblas.apply2elements" inherit_type="local" line="13" name="Apply2Elements" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="308">
+   <Type>function</Type>
+   <Signature>DATASET(Part)
+      Apply2Elements(IMatrix_Map x_map, DATASET(Part) X, IFunc f)</Signature><Params>
+    <Param name="x_map"/>
+    <Param name="X"/>
+    <Param name="f"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/></Meta>

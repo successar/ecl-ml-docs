@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="Examples.Sentilyze.KeywordCount.Classify" sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Classify.ecl" target="classify.ecl.xml">
+  <Definition body="438" end="1568" exported="1" fullname="examples.sentilyze.keywordcount.classify" inherit_type="local" line="12" name="Classify" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Classify.ecl" start="390">
+   <Type>function</Type>
+   <Signature>Classify(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+    <Param name="T"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="345" fullname="Examples.Sentilyze" inherit_type="local" line="9" name="Sentilyze" ref="examples.sentilyze" start="345" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="385" fullname="ML" inherit_type="local" line="10" name="ML" ref="ml" remotescope="1" start="385" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="../../../ml/docs/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" name="Examples.Sentilyze.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Strings.ecl" name="Examples.Sentilyze.Strings" target="../strings.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" name="ML.Docs.Tokenize" target="../../../ml/docs/tokenize.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../../ml/config.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/></Meta>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.discrete_letterrecognitionDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_letterrecognitionDS.ecl" target="discrete_letterrecognitionds.ecl.xml">
+  <Definition body="56" end="1074633" exported="1" fullname="TestingSuite.Classification.Datasets.discrete_letterrecognitionDS" inherit_type="local" line="2" name="discrete_letterrecognitionDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_letterrecognitionDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="111" end="749" fullname="testingsuite.classification.datasets.discrete_letterrecognitionds.discrete_letterrecognitionrecord" inherit_type="local" line="3" name="discrete_letterrecognitionRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_letterrecognitionDS.ecl" start="69">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="xbox"/>
+    <Field name="ybox"/>
+    <Field name="width"/>
+    <Field name="high"/>
+    <Field name="onpix"/>
+    <Field name="xbar"/>
+    <Field name="ybar"/>
+    <Field name="x2bar"/>
+    <Field name="y2bar"/>
+    <Field name="xybar"/>
+    <Field name="x2ybar"/>
+    <Field name="xy2bar"/>
+    <Field name="xege"/>
+    <Field name="xegvy"/>
+    <Field name="yege"/>
+    <Field name="yegvx"/>
+    <Signature>discrete_letterrecognitionRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="771" end="1074628" exported="1" fullname="testingsuite.classification.datasets.discrete_letterrecognitionds.content" inherit_type="local" line="23" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_letterrecognitionDS.ecl" start="754">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>discrete_letterrecognitionDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

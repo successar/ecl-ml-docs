@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.Scale" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" target="scale.ecl.xml">
+  <Definition body="117" end="259" exported="1" fullname="ml.mat.scale" inherit_type="local" line="3" name="Scale" source="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" start="55">
+   <Type>function</Type>
+   <Signature>Scale(DATASET(Types.Element) d,Types.t_Value factor)</Signature><Params>
+    <Param name="d"/>
+    <Param name="factor"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Mat.Types" inherit_type="local" line="2" name="Types" ref="ml.mat.types" start="32" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>

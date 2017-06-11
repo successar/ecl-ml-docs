@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Source name="ML.Tests.Deprecated.BWR_testMLAggregates" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregates.ecl" target="bwr_testmlaggregates.ecl.xml"/>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/></Meta>

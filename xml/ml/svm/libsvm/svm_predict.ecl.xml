@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.LibSVM.svm_predict" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" target="svm_predict.ecl.xml">
+  <Import body="0" end="70" fullname="ML.SVM.LibSVM.Types" inherit_type="local" line="3" name="Types" ref="ml.svm.libsvm.types" start="70" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="98" fullname="ML.SVM.LibSVM.Constants" inherit_type="local" line="4" name="Constants" ref="ml.svm.libsvm.constants" start="98" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="130" fullname="ML.SVM.LibSVM.Converted" inherit_type="local" line="5" name="Converted" ref="ml.svm.libsvm.converted" start="130" target="converted.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="174" end="198" fullname="ml.svm.libsvm.model" inherit_type="local" line="7" name="Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="166">
+   <Type>record</Type>
+   <Field name="svmType"/>
+   <Field name="kernelType"/>
+   <Field name="degree"/>
+   <Field name="gamma"/>
+   <Field name="coef0"/>
+   <Field name="k"/>
+   <Field name="l"/>
+   <Field name="elements"/>
+   <Field name="pairs_A"/>
+   <Field name="pairs_B"/>
+   <Field name="nr_label"/>
+   <Field name="nr_nSV"/>
+   <Field name="sv"/>
+   <Field name="sv_coef"/>
+   <Field name="rho"/>
+   <Field name="probA"/>
+   <Field name="probB"/>
+   <Field name="labels"/>
+   <Signature>Model</Signature><Field name="nSV"/>
+  </Definition>
+  <Definition body="207" end="226" fullname="ml.svm.libsvm.node" inherit_type="local" line="8" name="Node" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="199">
+   <Type>record</Type>
+   <Field name="indx"/>
+   <Signature>Node</Signature><Field name="value"/>
+  </Definition>
+  <Definition body="235" end="256" inherit_type="local" line="9" name="Rqst" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="227">
+   <Signature>Rqst</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="267" end="293" fullname="ml.svm.libsvm.errcode" inherit_type="local" line="10" name="ErrCode" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="257">
+   <Signature>ErrCode</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="306" end="321" fullname="ml.svm.libsvm.r8entry" inherit_type="local" line="10" name="R8Entry" source="/media/sarthak/Data/ecl-ml/./ML/SVM/LibSVM/Converted.ecl" start="296">
+   <Type>record</Type>
+   <Signature>R8Entry</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="458" end="5868" exported="1" fullname="ml.svm.libsvm.svm_predict" inherit_type="local" line="12" name="svm_predict" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="320">
+   <Type>embed</Type>
+   <Signature>DATASET(R8Entry) svm_predict(Model ecl_model, DATASET(Node) ecl_nodes,
+                                    Rqst output_request )</Signature><Params>
+    <Param name="ecl_model"/>
+    <Param name="ecl_nodes"/>
+    <Param name="output_request"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../types.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/></Meta>

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.NFoldCrossValidation" sourcePath="/media/sarthak/Data/ecl-ml/ML/NFoldCrossValidation.ecl" target="nfoldcrossvalidation.ecl.xml">
+  <Definition body="97" end="6775" exported="1" fullname="ml.nfoldcrossvalidation" inherit_type="local" line="3" name="NFoldCrossValidation" source="/media/sarthak/Data/ecl-ml/ML/NFoldCrossValidation.ecl" start="28">
+   <Type>macro</Type>
+   <Signature>NFoldCrossValidation(IndepDS, DepDS, LearnerName, NumFolds)</Signature><Params>
+    <Param name="IndepDS"/>
+    <Param name="DepDS"/>
+    <Param name="LearnerName"/>
+    <Param name="NumFolds"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="types.ecl.xml"/></Meta>

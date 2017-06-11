@@ -1,0 +1,432 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : NaiveBayes
+			<ul>
+				
+		<li>
+			ATTRIBUTE : Base
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : SampleCorrection
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LogScale(REAL P)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : ClassifierFeatureClass
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : BayesResult
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : BayesResultD
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : BayesResultC
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : TripleD
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : TripleD form(Types.DiscreteField le, Types.DiscreteField ri)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : AggTripleD
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : AggTripleD FatValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : clCnt_Rec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : AggTripleD SparseValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(clCnt_Rec) CTotals, Types.t_discrete defValue = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Model(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ModelC(DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassProbDistribC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : NaiveBayes
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : Base
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : SampleCorrection
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LogScale(REAL P)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : ClassifierFeatureClass
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : BayesResult
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : BayesResultD
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : BayesResultC
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : TripleD
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : TripleD form(Types.DiscreteField le, Types.DiscreteField ri)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : AggTripleD
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : AggTripleD FatValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : clCnt_Rec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : AggTripleD SparseValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(clCnt_Rec) CTotals, Types.t_discrete defValue = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ModelC(DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassProbDistribC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+</body>
+</html>

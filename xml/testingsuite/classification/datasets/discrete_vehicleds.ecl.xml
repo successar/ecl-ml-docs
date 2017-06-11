@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.discrete_VehicleDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_VehicleDS.ecl" target="discrete_vehicleds.ecl.xml">
+  <Definition body="46" end="88396" exported="1" fullname="TestingSuite.Classification.Datasets.discrete_VehicleDS" inherit_type="local" line="2" name="discrete_VehicleDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_VehicleDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="91" end="1087" fullname="testingsuite.classification.datasets.discrete_vehicleds.discrete_vehiclerecord" inherit_type="local" line="3" name="discrete_VehicleRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_VehicleDS.ecl" start="59">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="COMPACTNESS"/>
+    <Field name="CIRCULARITY"/>
+    <Field name="DISTANCE_CIRCULARITY"/>
+    <Field name="RADIUS_RATIO"/>
+    <Field name="PR_AXIS_ASPECT_RATIO"/>
+    <Field name="MAX_LENGTH_ASPECT_RATIO"/>
+    <Field name="SCATTER_RATIO"/>
+    <Field name="ELONGATEDNESS"/>
+    <Field name="PR_AXIS_RECTANGULARITY"/>
+    <Field name="MAX_LENGTH_RECTANGULARITY"/>
+    <Field name="SCALED_VARIANCE_ALONG_MAJOR_AXIS"/>
+    <Field name="SCALED_VARIANCE_ALONG_MINOR_AXIS"/>
+    <Field name="SCALED_RADIUS_OF_GYRATION"/>
+    <Field name="SKEWNESS_ABOUT_MAJOR_AXIS"/>
+    <Field name="SKEWNESS_ABOUT_MINOR_AXIS"/>
+    <Field name="KURTOSIS_ABOUT_MINOR_AXIS"/>
+    <Field name="KURTOSIS_ABOUT_MAJOR_AXIS"/>
+    <Field name="HOLLOWS_RATIO"/>
+    <Signature>discrete_VehicleRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="1109" end="88391" exported="1" fullname="testingsuite.classification.datasets.discrete_vehicleds.content" inherit_type="local" line="25" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_VehicleDS.ecl" start="1092">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>discrete_VehicleDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

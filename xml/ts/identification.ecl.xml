@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.Identification" sourcePath="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" target="identification.ecl.xml">
+  <Import body="0" end="120" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" remotescope="1" start="120" target="../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="135" fullname="TS.Types" inherit_type="local" line="4" name="Types" ref="ts.types" start="135" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="152" fullname="TS" inherit_type="local" line="5" name="TS" ref="ts" start="152" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="167" end="183" fullname="ts.modelobs" inherit_type="local" line="6" name="ModelObs" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="156">
+   <Type>record</Type>
+   <Field name="period"/>
+   <Field name="dependent"/>
+   <Signature>ModelObs</Signature><Field name="model_id"/>
+  </Definition>
+  <Definition body="301" end="7099" exported="1" fullname="ts.identification" inherit_type="local" line="8" name="Identification" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="185">
+   <Type>module</Type>
+   <Params>
+    <Param name="series"/>
+    <Param name="spec"/>
+   </Params>
+   <Parents/>
+   <Definition body="330" end="362" fullname="ts.identification.model_obs" inherit_type="local" line="10" name="model_obs" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="311">
+    <Signature>model_obs</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="390" end="428" fullname="ts.identification.post_difference" inherit_type="local" line="11" name="post_difference" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="365">
+    <Signature>post_difference</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="447" end="606" fullname="ts.identification.lagrec" inherit_type="local" line="12" name="LagRec" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="431">
+    <Type>record</Type>
+    <Field name="model_id"/>
+    <Field name="period"/>
+    <Field name="lag_per"/>
+    <Field name="v"/>
+    <Field name="k"/>
+    <Signature>LagRec</Signature><Field name="N"/>
+   </Definition>
+   <Definition body="626" end="855" fullname="ts.identification.acf_rec" inherit_type="local" line="20" name="ACF_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="609">
+    <Type>record</Type>
+    <Field name="model_id"/>
+    <Field name="k"/>
+    <Field name="av"/>
+    <Field name="ac"/>
+    <Field name="sq"/>
+    <Field name="sum_sq"/>
+    <Signature>ACF_Rec</Signature><Field name="N"/>
+   </Definition>
+   <Definition body="872" end="943" fullname="ts.identification.cell" inherit_type="local" line="29" name="Cell" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="858">
+    <Type>record</Type>
+    <Field name="x"/>
+    <Field name="y"/>
+    <Field name="v"/>
+    <Signature>Cell</Signature><Field name="model_id"/>
+   </Definition>
+   <Definition body="1083" end="6431" exported="1" fullname="ts.identification.correlations" inherit_type="local" line="33" name="Correlations" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="1021">
+    <Type>function</Type>
+    <Signature>DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)</Signature><Params>
+     <Param name="lags"/>
+    </Params>
+   </Definition>
+   <Definition body="6486" end="6760" exported="1" fullname="ts.identification.acf" inherit_type="local" line="165" name="ACF" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="6434">
+    <Type>function</Type>
+    <Signature>DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)</Signature><Params>
+     <Param name="lags"/>
+    </Params>
+   </Definition>
+   <Signature>Identification(DATASET(Types.UniObservation) series,
+                      DATASET(Types.Ident_Spec) spec)</Signature><Definition body="6816" end="7094" exported="1" fullname="ts.identification.pacf" inherit_type="local" line="174" name="PACF" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="6763">
+    <Type>function</Type>
+    <Signature>DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)</Signature><Params>
+     <Param name="lags"/>
+    </Params>
+   </Definition>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" name="TS.DifferenceSeries" target="differenceseries.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" name="TS.SeriesByModel" target="seriesbymodel.ecl.xml"/></Meta>

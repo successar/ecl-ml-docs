@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Source name="ML.NearestNeighborsSearch" sourcePath="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" target="nearestneighborssearch.ecl.xml">
+  <Definition body="94" end="11743" exported="1" fullname="ML.NearestNeighborsSearch" inherit_type="local" line="4" name="NearestNeighborsSearch" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="63">
+   <Type>module</Type>
+   <Definition body="124" end="196" exported="1" fullname="ml.nearestneighborssearch.leafdata" inherit_type="local" line="5" name="leafData" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="106">
+    <Type>record</Type>
+    <Field name="qp_id"/>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Signature>leafData</Signature><Field name="value"/>
+   </Definition>
+   <Definition body="213" end="399" exported="1" fullname="ml.nearestneighborssearch.nn" inherit_type="local" line="9" name="NN" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="201">
+    <Type>record</Type>
+    <Field name="qp_id"/>
+    <Field name="id"/>
+    <Signature>NN</Signature><Field name="distance"/>
+   </Definition>
+   <Definition body="419" end="565" exported="1" fullname="ML.NearestNeighborsSearch.DEFAULT" inherit_type="local" line="14" name="DEFAULT" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="402" virtual="1">
+    <Type>module</Type>
+    <Definition body="541" end="558" exported="1" fullname="ml.nearestneighborssearch.default.searchc" inherit_type="local" line="15" name="SearchC" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="439">
+     <Type>function</Type>
+     <Signature>SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)</Signature><Params>
+      <Param name="indepData"/>
+      <Param name="queryPointsData"/>
+     </Params>
+    </Definition>
+    <Signature>DEFAULT</Signature><Parents/>
+   </Definition>
+   <Definition body="981" end="11738" exported="1" fullname="ml.nearestneighborssearch.kdtreennsearch" inherit_type="local" line="25" name="KDTreeNNSearch" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="872">
+    <Type>module</Type>
+    <Params>
+     <Param name="NN_count"/>
+     <Param name="Depth"/>
+     <Param name="MedianDepth"/>
+    </Params>
+    <Parents>
+     <Parent line="14" name="DEFAULT" ref="ml.nearestneighborssearch.default" target="nearestneighborssearch.ecl.xml"/>
+    </Parents>
+    <Definition body="1023" end="1968" fullname="ml.nearestneighborssearch.kdtreennsearch.query_point" inherit_type="local" line="26" name="query_point" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="1002">
+     <Type>record</Type>
+     <Field name="id"/>
+     <Field name="p_number"/>
+     <Field name="p_value"/>
+     <Field name="node_id"/>
+     <Field name="split_number"/>
+     <Field name="split_value"/>
+     <Field name="CloseFarSon"/>
+     <Field name="DownUpJump"/>
+     <Field name="NearNeighs"/>
+     <Field name="NNFound"/>
+     <Field name="BallRadius"/>
+     <Field name="BWB"/>
+     <Field name="BOB"/>
+     <Signature>query_point</Signature><Field name="isTerminal"/>
+    </Definition>
+    <Definition body="2144" end="11282" exported="1" fullname="ml.nearestneighborssearch.kdtreennsearch.knneighbors" inherit_type="local" line="42" name="KNNeighbors" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="1973">
+     <Type>function</Type>
+     <Signature>PORT KNNeighbors(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries)  F</Signature><Params>
+      <Param name="queryPointsData"/>
+      <Param name="KDTFullTree"/>
+      <Param name="KDTPartitioned"/>
+      <Param name="KDTBoundaries"/>
+     </Params>
+    </Definition>
+    <Signature>KDTreeNNSearch(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)</Signature><Definition body="11388" end="11731" exported="1" fullname="ml.nearestneighborssearch.kdtreennsearch.searchc" inherit_type="override" line="182" name="SearchC" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="11287">
+     <Type>function</Type>
+     <Signature>PORT SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData) F</Signature><Params>
+      <Param name="indepData"/>
+      <Param name="queryPointsData"/>
+     </Params>
+    </Definition>
+   </Definition>
+   <Signature>NearestNeighborsSearch</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="44" fullname="ML.Trees" inherit_type="local" line="3" name="Trees" ref="ml.trees" start="44" target="trees.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" name="ML.Trees" target="trees.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" name="ML.Sampling" target="sampling.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="appendid.ecl.xml"/></Meta>

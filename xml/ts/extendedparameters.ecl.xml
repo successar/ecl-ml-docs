@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TS.ExtendedParameters" sourcePath="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" target="extendedparameters.ecl.xml">
+  <Import body="0" end="84" fullname="TS" inherit_type="local" line="2" name="TS" ref="ts" start="84" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="95" fullname="TS.Types" inherit_type="local" line="3" name="Types" ref="ts.types" start="95" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="124" end="148" fullname="ts.model_parameters" inherit_type="local" line="4" name="Model_Parameters" source="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" start="105">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="ar_terms"/>
+   <Field name="ma_terms"/>
+   <Field name="constant_term"/>
+   <Field name="ar"/>
+   <Field name="ma"/>
+   <Signature>Model_Parameters</Signature><Field name="c"/>
+  </Definition>
+  <Definition body="164" end="184" fullname="ts.co_efficient" inherit_type="local" line="5" name="Co_efficient" source="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" start="149">
+   <Type>record</Type>
+   <Field name="cv"/>
+   <Signature>Co_efficient</Signature><Field name="lag"/>
+  </Definition>
+  <Definition body="199" end="226" fullname="ts.parm_extend" inherit_type="local" line="6" name="Parm_Extend" source="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" start="185">
+   <Type>record</Type>
+   <Field name="model_id"/>
+   <Field name="degree"/>
+   <Field name="terms"/>
+   <Field name="c"/>
+   <Field name="mu"/>
+   <Field name="theta_phi"/>
+   <Signature>Parm_Extend</Signature><Field name="phi"/>
+  </Definition>
+  <Definition body="332" end="955" exported="1" fullname="ts.extendedparameters" inherit_type="local" line="8" name="ExtendedParameters" source="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" start="228">
+   <Type>function</Type>
+   <Signature>DATASET(Types.Parameter_Extension)
+       ExtendedParameters(DATASET(Model_Parameters) models)</Signature><Params>
+    <Param name="models"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/></Meta>

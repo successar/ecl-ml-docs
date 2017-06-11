@@ -1,0 +1,124 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+				std.system.thorlib
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../ml/pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../pkg.toc.html">
+				ts
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../types.ecl.html">
+				ts.types
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : Co_eff
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Series_Data(DATASET(Co_eff) initial_vals,
+                   REAL8 mult_val=1.0,
+                   REAL8 add_val=0.0,
+                   UNSIGNED2 test_records=100,
+                   REAL8 noise_mean=0.0,
+                   REAL8 noise_var=1.0)
+			<ul>
+				
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : Co_eff
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+		
+		@content : Generate time series data for demonstration of TS attributes. Generates four series of values. A lag period is inferred by the number of start values. The series generated are: flat (a random walk); a slope constructed by adding the additive increment product of the prior value and the multiplicative increment; and the cummulative values of the slope value.
+		<br/>
+		
+		@return : the generated time series.
+		<br/>
+		
+		@param : test records
+		<br/>
+		
+		@param : start values, seasonality or cyclic behavior is entered with this parameter
+		<br/>
+		
+		@param : noise mean, the mean value of normally distributed noise which will be added
+		<br/>
+		
+		@param : noise variance, the variance of the normally distributed noise
+		<br/>
+		
+		@param : multiply value, the multiplicative increment
+		<br/>
+		
+		@param : additive value, the additive increment
+		<br/>
+		
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Series_Data(DATASET(Co_eff) initial_vals,
+                   REAL8 mult_val=1.0,
+                   REAL8 add_val=0.0,
+                   UNSIGNED2 test_records=100,
+                   REAL8 noise_mean=0.0,
+                   REAL8 noise_var=1.0)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+</body>
+</html>

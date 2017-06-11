@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="Examples.Sentilyze.Types" sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" target="types.ecl.xml">
+  <Definition body="191" end="489" exported="1" fullname="Examples.Sentilyze.Types" inherit_type="local" line="6" name="Types" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" start="176">
+   <Type>module</Type>
+   <Definition body="219" end="248" exported="1" fullname="examples.sentilyze.types.tweettype" inherit_type="local" line="7" name="TweetType" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" start="200">
+    <Type>record</Type>
+    <Signature>TweetType</Signature><Field name="tweet"/>
+   </Definition>
+   <Definition body="270" end="298" exported="1" fullname="examples.sentilyze.types.wordtype" inherit_type="local" line="11" name="WordType" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" start="252">
+    <Type>record</Type>
+    <Signature>WordType</Signature><Field name="word"/>
+   </Definition>
+   <Definition body="325" end="391" exported="1" fullname="examples.sentilyze.types.sentimenttype" inherit_type="local" line="15" name="SentimentType" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" start="302">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="tweet"/>
+    <Signature>SentimentType</Signature><Field name="sentiment"/>
+   </Definition>
+   <Definition body="417" end="484" exported="1" fullname="examples.sentilyze.types.languagetype" inherit_type="local" line="21" name="LanguageType" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/Types.ecl" start="395">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="tweet"/>
+    <Signature>LanguageType</Signature><Field name="language"/>
+   </Definition>
+   <Signature>Types</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

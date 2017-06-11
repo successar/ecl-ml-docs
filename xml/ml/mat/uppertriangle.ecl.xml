@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.UpperTriangle" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" target="uppertriangle.ecl.xml">
+  <Definition body="130" end="144" exported="1" fullname="ml.mat.uppertriangle" inherit_type="local" line="3" name="UpperTriangle" source="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" start="76">
+   <Type>function</Type>
+   <Signature>UpperTriangle(DATASET(Types.Element) matrix)</Signature><Params>
+    <Param name="matrix"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat.Types" inherit_type="local" line="1" name="Types" ref="ml.mat.types" start="7" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>

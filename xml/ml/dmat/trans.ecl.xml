@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.DMat.Trans" sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" target="trans.ecl.xml">
+  <Import body="0" end="57" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" remotescope="1" start="57" target="../../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="72" fullname="PBblas.Types" inherit_type="local" line="3" name="Types" ref="pbblas.types" start="72" target="../../pbblas/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="93" fullname="PBblas.IMatrix_Map" inherit_type="local" line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" start="93" target="../../pbblas/imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="120" end="139" fullname="ml.dmat.part" inherit_type="local" line="5" name="Part" source="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" start="113">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="155" end="523" exported="1" fullname="ML.DMat.Trans" inherit_type="local" line="6" name="Trans" source="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" start="140">
+   <Type>module</Type>
+   <Definition body="201" end="353" exported="1" fullname="ml.dmat.trans.tranmap" inherit_type="local" line="7" name="TranMap" source="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" start="165">
+    <Type>module</Type>
+    <Params>
+     <Param name="a_map"/>
+    </Params>
+    <Parents>
+     <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../pbblas/imatrix_map.ecl.xml"/>
+    </Parents>
+    <Definition body="388" end="405" fullname="pbblas.matrix_map.nodes_available" inherit_type="local" line="10" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="363" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>nodes_available</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="433" end="449" fullname="pbblas.matrix_map.this_node" inherit_type="local" line="11" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="408" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>this_node</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="479" end="529" exported="1" fullname="pbblas.matrix_map.row_blocks" inherit_type="override" line="13" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="457" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>row_blocks</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="554" end="604" exported="1" fullname="pbblas.matrix_map.col_blocks" inherit_type="override" line="14" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="532" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>col_blocks</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="629" end="639" fullname="pbblas.matrix_map.block_rows" inherit_type="local" line="15" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="607" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>block_rows</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="686" end="696" fullname="pbblas.matrix_map.block_cols" inherit_type="local" line="16" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="664" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>block_cols</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="748" end="756" exported="1" fullname="pbblas.matrix_map.matrix_rows" inherit_type="override" line="18" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="726" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>matrix_rows</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="781" end="789" exported="1" fullname="pbblas.matrix_map.matrix_cols" inherit_type="override" line="19" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="759" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>matrix_cols</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="817" end="842" exported="1" fullname="pbblas.matrix_map.partitions_used" inherit_type="override" line="20" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="792" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>partitions_used</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="867" end="906" exported="1" fullname="pbblas.matrix_map.nodes_used" inherit_type="override" line="21" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="845" target="../../pbblas/matrix_map.ecl.xml">
+     <Signature>nodes_used</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="965" end="999" exported="1" fullname="pbblas.matrix_map.row_block" inherit_type="override" line="23" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="925" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>row_block(dimension_t mat_row)</Signature><Params>
+      <Param name="mat_row"/>
+     </Params>
+    </Definition>
+    <Definition body="1042" end="1076" exported="1" fullname="pbblas.matrix_map.col_block" inherit_type="override" line="24" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1002" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>col_block(dimension_t mat_col)</Signature><Params>
+      <Param name="mat_col"/>
+     </Params>
+    </Definition>
+    <Definition body="1134" end="1162" exported="1" fullname="pbblas.matrix_map.assigned_part" inherit_type="override" line="25" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1079" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+      <Param name="rb"/>
+      <Param name="cb"/>
+     </Params>
+    </Definition>
+    <Definition body="1203" end="1225" exported="1" fullname="pbblas.matrix_map.assigned_node" inherit_type="override" line="26" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1165" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>assigned_node(partition_t p)</Signature><Params>
+      <Param name="p"/>
+     </Params>
+    </Definition>
+    <Definition body="1264" end="1307" exported="1" fullname="pbblas.matrix_map.first_row" inherit_type="override" line="27" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1228" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>first_row(partition_t p)</Signature><Params>
+      <Param name="p"/>
+     </Params>
+    </Definition>
+    <Definition body="1346" end="1389" exported="1" fullname="pbblas.matrix_map.first_col" inherit_type="override" line="28" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1310" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>first_col(partition_t p)</Signature><Params>
+      <Param name="p"/>
+     </Params>
+    </Definition>
+    <Definition body="1428" end="1473" exported="1" fullname="pbblas.matrix_map.part_rows" inherit_type="override" line="29" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1392" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>part_rows(partition_t p)</Signature><Params>
+      <Param name="p"/>
+     </Params>
+    </Definition>
+    <Signature>TranMap(IMatrix_Map a_map)</Signature><Definition body="1512" end="1557" exported="1" fullname="pbblas.matrix_map.part_cols" inherit_type="override" line="30" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/Matrix_Map.ecl" start="1476" target="../../pbblas/matrix_map.ecl.xml">
+     <Type>function</Type>
+     <Signature>part_cols(partition_t p)</Signature><Params>
+      <Param name="p"/>
+     </Params>
+    </Definition>
+   </Definition>
+   <Definition body="423" end="518" exported="1" fullname="ml.dmat.trans.matrix" inherit_type="local" line="12" name="matrix" source="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" start="357">
+    <Type>function</Type>
+    <Signature>DATASET(Part) matrix(IMatrix_Map a_map, DATASET(Part) a)</Signature><Params>
+     <Param name="a_map"/>
+     <Param name="a"/>
+    </Params>
+   </Definition>
+   <Signature>Trans</Signature><Parents/>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="../../pbblas/pb_dtran.ecl.xml"/></Meta>

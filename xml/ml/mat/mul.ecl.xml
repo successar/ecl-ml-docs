@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Mul" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" target="mul.ecl.xml">
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="32" fullname="ML.Config" inherit_type="local" line="2" name="Config" ref="ml.config" start="32" target="../config.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="60" fullname="ML.Mat.Types" inherit_type="local" line="3" name="Types" ref="ml.mat.types" start="60" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="96" end="140" inherit_type="local" line="5" name="MulMethod" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="84">
+   <Signature>MulMethod</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="206" end="896" fullname="ml.mat.mul_default" inherit_type="local" line="6" name="Mul_Default" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="141">
+   <Type>function</Type>
+   <Signature>Mul_Default(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+    <Param name="l"/>
+    <Param name="r"/>
+   </Params>
+  </Definition>
+  <Definition body="971" end="1948" fullname="ml.mat.mul_symmetricresult" inherit_type="local" line="31" name="Mul_SymmetricResult" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="898">
+   <Type>function</Type>
+   <Signature>Mul_SymmetricResult(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+    <Param name="l"/>
+    <Param name="r"/>
+   </Params>
+  </Definition>
+  <Definition body="2050" end="2491" exported="1" fullname="ml.mat.mul" inherit_type="local" line="66" name="Mul" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="1950">
+   <Type>function</Type>
+   <Signature>Mul(DATASET(Types.Element) l,DATASET(Types.Element) r, MulMethod method=MulMethod.Default)</Signature><Params>
+    <Param name="l"/>
+    <Param name="r"/>
+    <Param name="method"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="strict.ecl.xml"/></Meta>

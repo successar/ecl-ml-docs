@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.LibSVM.LibSVM_Version" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/LibSVM_Version.ecl" target="libsvm_version.ecl.xml">
+  <Definition body="51" end="173" fullname="ml.svm.libsvm.getversion" inherit_type="local" line="2" name="getVersion" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/LibSVM_Version.ecl" start="27">
+   <Type>embed</Type>
+   <Signature>INTEGER4 getVersion()</Signature><Params/>
+  </Definition>
+  <Definition body="199" end="213" exported="1" fullname="ml.svm.libsvm.libsvm_version" inherit_type="local" line="12" name="LibSVM_Version" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/LibSVM_Version.ecl" start="175">
+   <Signature>LibSVM_Version</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+</Meta>

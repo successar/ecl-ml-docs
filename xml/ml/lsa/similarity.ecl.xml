@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.LSA.Similarity" sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/Similarity.ecl" target="similarity.ecl.xml">
+  <Definition body="73" end="833" exported="1" fullname="ML.LSA.Similarity" inherit_type="local" line="4" name="Similarity" source="/media/sarthak/Data/ecl-ml/ML/LSA/Similarity.ecl" start="53">
+   <Type>module</Type>
+   <Definition body="157" end="693" exported="1" fullname="ml.lsa.similarity.cosinesim" inherit_type="local" line="6" name="CosineSim" source="/media/sarthak/Data/ecl-ml/ML/LSA/Similarity.ecl" start="86">
+    <Type>function</Type>
+    <Signature>CosineSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)</Signature><Params>
+     <Param name="D"/>
+     <Param name="Q"/>
+    </Params>
+   </Definition>
+   <Definition body="774" end="827" exported="1" fullname="ml.lsa.similarity.dotproductsim" inherit_type="local" line="22" name="DotProductSim" source="/media/sarthak/Data/ecl-ml/ML/LSA/Similarity.ecl" start="699">
+    <Type>function</Type>
+    <Signature>DotProductSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)</Signature><Params>
+     <Param name="D"/>
+     <Param name="Q"/>
+    </Params>
+   </Definition>
+   <Signature>Similarity</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat.Types" inherit_type="local" line="1" name="Types" ref="ml.mat.types" start="7" target="../mat/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="37" fullname="ML.Mat" inherit_type="local" line="2" name="Mat" ref="ml.mat" remotescope="1" start="37" target="../mat/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="../mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="../mat/strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="../mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="../mat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../mat/vec.ecl.xml"/></Meta>

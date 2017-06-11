@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.continious_ionosphereDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ionosphereDS.ecl" target="continious_ionosphereds.ecl.xml">
+  <Definition body="51" end="90520" exported="1" fullname="TestingSuite.Classification.Datasets.continious_ionosphereDS" inherit_type="local" line="2" name="continious_ionosphereDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ionosphereDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="101" end="1229" fullname="testingsuite.classification.datasets.continious_ionosphereds.continious_ionosphererecord" inherit_type="local" line="3" name="continious_ionosphereRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ionosphereDS.ecl" start="64">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="A1"/>
+    <Field name="A2"/>
+    <Field name="A3"/>
+    <Field name="A4"/>
+    <Field name="A5"/>
+    <Field name="A6"/>
+    <Field name="A7"/>
+    <Field name="A8"/>
+    <Field name="A9"/>
+    <Field name="A10"/>
+    <Field name="A11"/>
+    <Field name="A12"/>
+    <Field name="A13"/>
+    <Field name="A14"/>
+    <Field name="A15"/>
+    <Field name="A16"/>
+    <Field name="A17"/>
+    <Field name="A18"/>
+    <Field name="A19"/>
+    <Field name="A20"/>
+    <Field name="A21"/>
+    <Field name="A22"/>
+    <Field name="A23"/>
+    <Field name="A24"/>
+    <Field name="A25"/>
+    <Field name="A26"/>
+    <Field name="A27"/>
+    <Field name="A28"/>
+    <Field name="A29"/>
+    <Field name="A30"/>
+    <Field name="A31"/>
+    <Field name="A32"/>
+    <Field name="A33"/>
+    <Field name="A34"/>
+    <Signature>continious_ionosphereRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="1251" end="90515" exported="1" fullname="testingsuite.classification.datasets.continious_ionosphereds.content" inherit_type="local" line="41" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ionosphereDS.ecl" start="1234">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>continious_ionosphereDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

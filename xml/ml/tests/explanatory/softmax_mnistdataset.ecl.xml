@@ -1,0 +1,1992 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Source name="ML.Tests.Explanatory.SoftMax_MNISTdataset" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" target="softmax_mnistdataset.ecl.xml">
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="../../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="44" fullname="PBblas" inherit_type="local" line="3" name="PBblas" ref="pbblas" remotescope="1" start="44" target="../../../pbblas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="66" end="92" fullname="ml.tests.explanatory.layout_cell" inherit_type="local" line="4" name="Layout_Cell" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="52">
+   <Type>record</Type>
+   <Field name="x"/>
+   <Field name="y"/>
+   <Signature>Layout_Cell</Signature><Field name="v"/>
+  </Definition>
+  <Definition body="121" end="124" fullname="ml.tests.explanatory.loopnum" inherit_type="local" line="7" name="LoopNum" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="111">
+   <Signature>LoopNum</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="214" end="222" fullname="ml.tests.explanatory.lambda" inherit_type="local" line="9" name="LAMBDA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="205">
+   <Signature>LAMBDA</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="298" end="303" fullname="ml.tests.explanatory.alpha" inherit_type="local" line="10" name="ALPHA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="290">
+   <Signature>ALPHA</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="384" end="9713" fullname="ml.tests.explanatory.value_record" inherit_type="local" line="13" name="value_record" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="369">
+   <Type>record</Type>
+   <Field name="f1"/>
+   <Field name="f2"/>
+   <Field name="f3"/>
+   <Field name="f4"/>
+   <Field name="f5"/>
+   <Field name="f6"/>
+   <Field name="f7"/>
+   <Field name="f8"/>
+   <Field name="f9"/>
+   <Field name="f10"/>
+   <Field name="f11"/>
+   <Field name="f12"/>
+   <Field name="f13"/>
+   <Field name="f14"/>
+   <Field name="f15"/>
+   <Field name="f16"/>
+   <Field name="f17"/>
+   <Field name="f18"/>
+   <Field name="f19"/>
+   <Field name="f20"/>
+   <Field name="f21"/>
+   <Field name="f22"/>
+   <Field name="f23"/>
+   <Field name="f24"/>
+   <Field name="f25"/>
+   <Field name="f26"/>
+   <Field name="f27"/>
+   <Field name="f28"/>
+   <Field name="f29"/>
+   <Field name="f30"/>
+   <Field name="f31"/>
+   <Field name="f32"/>
+   <Field name="f33"/>
+   <Field name="f34"/>
+   <Field name="f35"/>
+   <Field name="f36"/>
+   <Field name="f37"/>
+   <Field name="f38"/>
+   <Field name="f39"/>
+   <Field name="f40"/>
+   <Field name="f41"/>
+   <Field name="f42"/>
+   <Field name="f43"/>
+   <Field name="f44"/>
+   <Field name="f45"/>
+   <Field name="f46"/>
+   <Field name="f47"/>
+   <Field name="f48"/>
+   <Field name="f49"/>
+   <Field name="f50"/>
+   <Field name="f51"/>
+   <Field name="f52"/>
+   <Field name="f53"/>
+   <Field name="f54"/>
+   <Field name="f55"/>
+   <Field name="f56"/>
+   <Field name="f57"/>
+   <Field name="f58"/>
+   <Field name="f59"/>
+   <Field name="f60"/>
+   <Field name="f61"/>
+   <Field name="f62"/>
+   <Field name="f63"/>
+   <Field name="f64"/>
+   <Field name="f65"/>
+   <Field name="f66"/>
+   <Field name="f67"/>
+   <Field name="f68"/>
+   <Field name="f69"/>
+   <Field name="f70"/>
+   <Field name="f71"/>
+   <Field name="f72"/>
+   <Field name="f73"/>
+   <Field name="f74"/>
+   <Field name="f75"/>
+   <Field name="f76"/>
+   <Field name="f77"/>
+   <Field name="f78"/>
+   <Field name="f79"/>
+   <Field name="f80"/>
+   <Field name="f81"/>
+   <Field name="f82"/>
+   <Field name="f83"/>
+   <Field name="f84"/>
+   <Field name="f85"/>
+   <Field name="f86"/>
+   <Field name="f87"/>
+   <Field name="f88"/>
+   <Field name="f89"/>
+   <Field name="f90"/>
+   <Field name="f91"/>
+   <Field name="f92"/>
+   <Field name="f93"/>
+   <Field name="f94"/>
+   <Field name="f95"/>
+   <Field name="f96"/>
+   <Field name="f97"/>
+   <Field name="f98"/>
+   <Field name="f99"/>
+   <Field name="f100"/>
+   <Field name="f101"/>
+   <Field name="f102"/>
+   <Field name="f103"/>
+   <Field name="f104"/>
+   <Field name="f105"/>
+   <Field name="f106"/>
+   <Field name="f107"/>
+   <Field name="f108"/>
+   <Field name="f109"/>
+   <Field name="f110"/>
+   <Field name="f111"/>
+   <Field name="f112"/>
+   <Field name="f113"/>
+   <Field name="f114"/>
+   <Field name="f115"/>
+   <Field name="f116"/>
+   <Field name="f117"/>
+   <Field name="f118"/>
+   <Field name="f119"/>
+   <Field name="f120"/>
+   <Field name="f121"/>
+   <Field name="f122"/>
+   <Field name="f123"/>
+   <Field name="f124"/>
+   <Field name="f125"/>
+   <Field name="f126"/>
+   <Field name="f127"/>
+   <Field name="f128"/>
+   <Field name="f129"/>
+   <Field name="f130"/>
+   <Field name="f131"/>
+   <Field name="f132"/>
+   <Field name="f133"/>
+   <Field name="f134"/>
+   <Field name="f135"/>
+   <Field name="f136"/>
+   <Field name="f137"/>
+   <Field name="f138"/>
+   <Field name="f139"/>
+   <Field name="f140"/>
+   <Field name="f141"/>
+   <Field name="f142"/>
+   <Field name="f143"/>
+   <Field name="f144"/>
+   <Field name="f145"/>
+   <Field name="f146"/>
+   <Field name="f147"/>
+   <Field name="f148"/>
+   <Field name="f149"/>
+   <Field name="f150"/>
+   <Field name="f151"/>
+   <Field name="f152"/>
+   <Field name="f153"/>
+   <Field name="f154"/>
+   <Field name="f155"/>
+   <Field name="f156"/>
+   <Field name="f157"/>
+   <Field name="f158"/>
+   <Field name="f159"/>
+   <Field name="f160"/>
+   <Field name="f161"/>
+   <Field name="f162"/>
+   <Field name="f163"/>
+   <Field name="f164"/>
+   <Field name="f165"/>
+   <Field name="f166"/>
+   <Field name="f167"/>
+   <Field name="f168"/>
+   <Field name="f169"/>
+   <Field name="f170"/>
+   <Field name="f171"/>
+   <Field name="f172"/>
+   <Field name="f173"/>
+   <Field name="f174"/>
+   <Field name="f175"/>
+   <Field name="f176"/>
+   <Field name="f177"/>
+   <Field name="f178"/>
+   <Field name="f179"/>
+   <Field name="f180"/>
+   <Field name="f181"/>
+   <Field name="f182"/>
+   <Field name="f183"/>
+   <Field name="f184"/>
+   <Field name="f185"/>
+   <Field name="f186"/>
+   <Field name="f187"/>
+   <Field name="f188"/>
+   <Field name="f189"/>
+   <Field name="f190"/>
+   <Field name="f191"/>
+   <Field name="f192"/>
+   <Field name="f193"/>
+   <Field name="f194"/>
+   <Field name="f195"/>
+   <Field name="f196"/>
+   <Field name="f197"/>
+   <Field name="f198"/>
+   <Field name="f199"/>
+   <Field name="f200"/>
+   <Field name="f201"/>
+   <Field name="f202"/>
+   <Field name="f203"/>
+   <Field name="f204"/>
+   <Field name="f205"/>
+   <Field name="f206"/>
+   <Field name="f207"/>
+   <Field name="f208"/>
+   <Field name="f209"/>
+   <Field name="f210"/>
+   <Field name="f211"/>
+   <Field name="f212"/>
+   <Field name="f213"/>
+   <Field name="f214"/>
+   <Field name="f215"/>
+   <Field name="f216"/>
+   <Field name="f217"/>
+   <Field name="f218"/>
+   <Field name="f219"/>
+   <Field name="f220"/>
+   <Field name="f221"/>
+   <Field name="f222"/>
+   <Field name="f223"/>
+   <Field name="f224"/>
+   <Field name="f225"/>
+   <Field name="f226"/>
+   <Field name="f227"/>
+   <Field name="f228"/>
+   <Field name="f229"/>
+   <Field name="f230"/>
+   <Field name="f231"/>
+   <Field name="f232"/>
+   <Field name="f233"/>
+   <Field name="f234"/>
+   <Field name="f235"/>
+   <Field name="f236"/>
+   <Field name="f237"/>
+   <Field name="f238"/>
+   <Field name="f239"/>
+   <Field name="f240"/>
+   <Field name="f241"/>
+   <Field name="f242"/>
+   <Field name="f243"/>
+   <Field name="f244"/>
+   <Field name="f245"/>
+   <Field name="f246"/>
+   <Field name="f247"/>
+   <Field name="f248"/>
+   <Field name="f249"/>
+   <Field name="f250"/>
+   <Field name="f251"/>
+   <Field name="f252"/>
+   <Field name="f253"/>
+   <Field name="f254"/>
+   <Field name="f255"/>
+   <Field name="f256"/>
+   <Field name="f257"/>
+   <Field name="f258"/>
+   <Field name="f259"/>
+   <Field name="f260"/>
+   <Field name="f261"/>
+   <Field name="f262"/>
+   <Field name="f263"/>
+   <Field name="f264"/>
+   <Field name="f265"/>
+   <Field name="f266"/>
+   <Field name="f267"/>
+   <Field name="f268"/>
+   <Field name="f269"/>
+   <Field name="f270"/>
+   <Field name="f271"/>
+   <Field name="f272"/>
+   <Field name="f273"/>
+   <Field name="f274"/>
+   <Field name="f275"/>
+   <Field name="f276"/>
+   <Field name="f277"/>
+   <Field name="f278"/>
+   <Field name="f279"/>
+   <Field name="f280"/>
+   <Field name="f281"/>
+   <Field name="f282"/>
+   <Field name="f283"/>
+   <Field name="f284"/>
+   <Field name="f285"/>
+   <Field name="f286"/>
+   <Field name="f287"/>
+   <Field name="f288"/>
+   <Field name="f289"/>
+   <Field name="f290"/>
+   <Field name="f291"/>
+   <Field name="f292"/>
+   <Field name="f293"/>
+   <Field name="f294"/>
+   <Field name="f295"/>
+   <Field name="f296"/>
+   <Field name="f297"/>
+   <Field name="f298"/>
+   <Field name="f299"/>
+   <Field name="f300"/>
+   <Field name="f301"/>
+   <Field name="f302"/>
+   <Field name="f303"/>
+   <Field name="f304"/>
+   <Field name="f305"/>
+   <Field name="f306"/>
+   <Field name="f307"/>
+   <Field name="f308"/>
+   <Field name="f309"/>
+   <Field name="f310"/>
+   <Field name="f311"/>
+   <Field name="f312"/>
+   <Field name="f313"/>
+   <Field name="f314"/>
+   <Field name="f315"/>
+   <Field name="f316"/>
+   <Field name="f317"/>
+   <Field name="f318"/>
+   <Field name="f319"/>
+   <Field name="f320"/>
+   <Field name="f321"/>
+   <Field name="f322"/>
+   <Field name="f323"/>
+   <Field name="f324"/>
+   <Field name="f325"/>
+   <Field name="f326"/>
+   <Field name="f327"/>
+   <Field name="f328"/>
+   <Field name="f329"/>
+   <Field name="f330"/>
+   <Field name="f331"/>
+   <Field name="f332"/>
+   <Field name="f333"/>
+   <Field name="f334"/>
+   <Field name="f335"/>
+   <Field name="f336"/>
+   <Field name="f337"/>
+   <Field name="f338"/>
+   <Field name="f339"/>
+   <Field name="f340"/>
+   <Field name="f341"/>
+   <Field name="f342"/>
+   <Field name="f343"/>
+   <Field name="f344"/>
+   <Field name="f345"/>
+   <Field name="f346"/>
+   <Field name="f347"/>
+   <Field name="f348"/>
+   <Field name="f349"/>
+   <Field name="f350"/>
+   <Field name="f351"/>
+   <Field name="f352"/>
+   <Field name="f353"/>
+   <Field name="f354"/>
+   <Field name="f355"/>
+   <Field name="f356"/>
+   <Field name="f357"/>
+   <Field name="f358"/>
+   <Field name="f359"/>
+   <Field name="f360"/>
+   <Field name="f361"/>
+   <Field name="f362"/>
+   <Field name="f363"/>
+   <Field name="f364"/>
+   <Field name="f365"/>
+   <Field name="f366"/>
+   <Field name="f367"/>
+   <Field name="f368"/>
+   <Field name="f369"/>
+   <Field name="f370"/>
+   <Field name="f371"/>
+   <Field name="f372"/>
+   <Field name="f373"/>
+   <Field name="f374"/>
+   <Field name="f375"/>
+   <Field name="f376"/>
+   <Field name="f377"/>
+   <Field name="f378"/>
+   <Field name="f379"/>
+   <Field name="f380"/>
+   <Field name="f381"/>
+   <Field name="f382"/>
+   <Field name="f383"/>
+   <Field name="f384"/>
+   <Field name="f385"/>
+   <Field name="f386"/>
+   <Field name="f387"/>
+   <Field name="f388"/>
+   <Field name="f389"/>
+   <Field name="f390"/>
+   <Field name="f391"/>
+   <Field name="f392"/>
+   <Field name="f393"/>
+   <Field name="f394"/>
+   <Field name="f395"/>
+   <Field name="f396"/>
+   <Field name="f397"/>
+   <Field name="f398"/>
+   <Field name="f399"/>
+   <Field name="f400"/>
+   <Field name="f401"/>
+   <Field name="f402"/>
+   <Field name="f403"/>
+   <Field name="f404"/>
+   <Field name="f405"/>
+   <Field name="f406"/>
+   <Field name="f407"/>
+   <Field name="f408"/>
+   <Field name="f409"/>
+   <Field name="f410"/>
+   <Field name="f411"/>
+   <Field name="f412"/>
+   <Field name="f413"/>
+   <Field name="f414"/>
+   <Field name="f415"/>
+   <Field name="f416"/>
+   <Field name="f417"/>
+   <Field name="f418"/>
+   <Field name="f419"/>
+   <Field name="f420"/>
+   <Field name="f421"/>
+   <Field name="f422"/>
+   <Field name="f423"/>
+   <Field name="f424"/>
+   <Field name="f425"/>
+   <Field name="f426"/>
+   <Field name="f427"/>
+   <Field name="f428"/>
+   <Field name="f429"/>
+   <Field name="f430"/>
+   <Field name="f431"/>
+   <Field name="f432"/>
+   <Field name="f433"/>
+   <Field name="f434"/>
+   <Field name="f435"/>
+   <Field name="f436"/>
+   <Field name="f437"/>
+   <Field name="f438"/>
+   <Field name="f439"/>
+   <Field name="f440"/>
+   <Field name="f441"/>
+   <Field name="f442"/>
+   <Field name="f443"/>
+   <Field name="f444"/>
+   <Field name="f445"/>
+   <Field name="f446"/>
+   <Field name="f447"/>
+   <Field name="f448"/>
+   <Field name="f449"/>
+   <Field name="f450"/>
+   <Field name="f451"/>
+   <Field name="f452"/>
+   <Field name="f453"/>
+   <Field name="f454"/>
+   <Field name="f455"/>
+   <Field name="f456"/>
+   <Field name="f457"/>
+   <Field name="f458"/>
+   <Field name="f459"/>
+   <Field name="f460"/>
+   <Field name="f461"/>
+   <Field name="f462"/>
+   <Field name="f463"/>
+   <Field name="f464"/>
+   <Field name="f465"/>
+   <Field name="f466"/>
+   <Field name="f467"/>
+   <Field name="f468"/>
+   <Field name="f469"/>
+   <Field name="f470"/>
+   <Field name="f471"/>
+   <Field name="f472"/>
+   <Field name="f473"/>
+   <Field name="f474"/>
+   <Field name="f475"/>
+   <Field name="f476"/>
+   <Field name="f477"/>
+   <Field name="f478"/>
+   <Field name="f479"/>
+   <Field name="f480"/>
+   <Field name="f481"/>
+   <Field name="f482"/>
+   <Field name="f483"/>
+   <Field name="f484"/>
+   <Field name="f485"/>
+   <Field name="f486"/>
+   <Field name="f487"/>
+   <Field name="f488"/>
+   <Field name="f489"/>
+   <Field name="f490"/>
+   <Field name="f491"/>
+   <Field name="f492"/>
+   <Field name="f493"/>
+   <Field name="f494"/>
+   <Field name="f495"/>
+   <Field name="f496"/>
+   <Field name="f497"/>
+   <Field name="f498"/>
+   <Field name="f499"/>
+   <Field name="f500"/>
+   <Field name="f501"/>
+   <Field name="f502"/>
+   <Field name="f503"/>
+   <Field name="f504"/>
+   <Field name="f505"/>
+   <Field name="f506"/>
+   <Field name="f507"/>
+   <Field name="f508"/>
+   <Field name="f509"/>
+   <Field name="f510"/>
+   <Field name="f511"/>
+   <Field name="f512"/>
+   <Field name="f513"/>
+   <Field name="f514"/>
+   <Field name="f515"/>
+   <Field name="f516"/>
+   <Field name="f517"/>
+   <Field name="f518"/>
+   <Field name="f519"/>
+   <Field name="f520"/>
+   <Field name="f521"/>
+   <Field name="f522"/>
+   <Field name="f523"/>
+   <Field name="f524"/>
+   <Field name="f525"/>
+   <Field name="f526"/>
+   <Field name="f527"/>
+   <Field name="f528"/>
+   <Field name="f529"/>
+   <Field name="f530"/>
+   <Field name="f531"/>
+   <Field name="f532"/>
+   <Field name="f533"/>
+   <Field name="f534"/>
+   <Field name="f535"/>
+   <Field name="f536"/>
+   <Field name="f537"/>
+   <Field name="f538"/>
+   <Field name="f539"/>
+   <Field name="f540"/>
+   <Field name="f541"/>
+   <Field name="f542"/>
+   <Field name="f543"/>
+   <Field name="f544"/>
+   <Field name="f545"/>
+   <Field name="f546"/>
+   <Field name="f547"/>
+   <Field name="f548"/>
+   <Field name="f549"/>
+   <Field name="f550"/>
+   <Field name="f551"/>
+   <Field name="f552"/>
+   <Field name="f553"/>
+   <Field name="f554"/>
+   <Field name="f555"/>
+   <Field name="f556"/>
+   <Field name="f557"/>
+   <Field name="f558"/>
+   <Field name="f559"/>
+   <Field name="f560"/>
+   <Field name="f561"/>
+   <Field name="f562"/>
+   <Field name="f563"/>
+   <Field name="f564"/>
+   <Field name="f565"/>
+   <Field name="f566"/>
+   <Field name="f567"/>
+   <Field name="f568"/>
+   <Field name="f569"/>
+   <Field name="f570"/>
+   <Field name="f571"/>
+   <Field name="f572"/>
+   <Field name="f573"/>
+   <Field name="f574"/>
+   <Field name="f575"/>
+   <Field name="f576"/>
+   <Field name="f577"/>
+   <Field name="f578"/>
+   <Field name="f579"/>
+   <Field name="f580"/>
+   <Field name="f581"/>
+   <Field name="f582"/>
+   <Field name="f583"/>
+   <Field name="f584"/>
+   <Field name="f585"/>
+   <Field name="f586"/>
+   <Field name="f587"/>
+   <Field name="f588"/>
+   <Field name="f589"/>
+   <Field name="f590"/>
+   <Field name="f591"/>
+   <Field name="f592"/>
+   <Field name="f593"/>
+   <Field name="f594"/>
+   <Field name="f595"/>
+   <Field name="f596"/>
+   <Field name="f597"/>
+   <Field name="f598"/>
+   <Field name="f599"/>
+   <Field name="f600"/>
+   <Field name="f601"/>
+   <Field name="f602"/>
+   <Field name="f603"/>
+   <Field name="f604"/>
+   <Field name="f605"/>
+   <Field name="f606"/>
+   <Field name="f607"/>
+   <Field name="f608"/>
+   <Field name="f609"/>
+   <Field name="f610"/>
+   <Field name="f611"/>
+   <Field name="f612"/>
+   <Field name="f613"/>
+   <Field name="f614"/>
+   <Field name="f615"/>
+   <Field name="f616"/>
+   <Field name="f617"/>
+   <Field name="f618"/>
+   <Field name="f619"/>
+   <Field name="f620"/>
+   <Field name="f621"/>
+   <Field name="f622"/>
+   <Field name="f623"/>
+   <Field name="f624"/>
+   <Field name="f625"/>
+   <Field name="f626"/>
+   <Field name="f627"/>
+   <Field name="f628"/>
+   <Field name="f629"/>
+   <Field name="f630"/>
+   <Field name="f631"/>
+   <Field name="f632"/>
+   <Field name="f633"/>
+   <Field name="f634"/>
+   <Field name="f635"/>
+   <Field name="f636"/>
+   <Field name="f637"/>
+   <Field name="f638"/>
+   <Field name="f639"/>
+   <Field name="f640"/>
+   <Field name="f641"/>
+   <Field name="f642"/>
+   <Field name="f643"/>
+   <Field name="f644"/>
+   <Field name="f645"/>
+   <Field name="f646"/>
+   <Field name="f647"/>
+   <Field name="f648"/>
+   <Field name="f649"/>
+   <Field name="f650"/>
+   <Field name="f651"/>
+   <Field name="f652"/>
+   <Field name="f653"/>
+   <Field name="f654"/>
+   <Field name="f655"/>
+   <Field name="f656"/>
+   <Field name="f657"/>
+   <Field name="f658"/>
+   <Field name="f659"/>
+   <Field name="f660"/>
+   <Field name="f661"/>
+   <Field name="f662"/>
+   <Field name="f663"/>
+   <Field name="f664"/>
+   <Field name="f665"/>
+   <Field name="f666"/>
+   <Field name="f667"/>
+   <Field name="f668"/>
+   <Field name="f669"/>
+   <Field name="f670"/>
+   <Field name="f671"/>
+   <Field name="f672"/>
+   <Field name="f673"/>
+   <Field name="f674"/>
+   <Field name="f675"/>
+   <Field name="f676"/>
+   <Field name="f677"/>
+   <Field name="f678"/>
+   <Field name="f679"/>
+   <Field name="f680"/>
+   <Field name="f681"/>
+   <Field name="f682"/>
+   <Field name="f683"/>
+   <Field name="f684"/>
+   <Field name="f685"/>
+   <Field name="f686"/>
+   <Field name="f687"/>
+   <Field name="f688"/>
+   <Field name="f689"/>
+   <Field name="f690"/>
+   <Field name="f691"/>
+   <Field name="f692"/>
+   <Field name="f693"/>
+   <Field name="f694"/>
+   <Field name="f695"/>
+   <Field name="f696"/>
+   <Field name="f697"/>
+   <Field name="f698"/>
+   <Field name="f699"/>
+   <Field name="f700"/>
+   <Field name="f701"/>
+   <Field name="f702"/>
+   <Field name="f703"/>
+   <Field name="f704"/>
+   <Field name="f705"/>
+   <Field name="f706"/>
+   <Field name="f707"/>
+   <Field name="f708"/>
+   <Field name="f709"/>
+   <Field name="f710"/>
+   <Field name="f711"/>
+   <Field name="f712"/>
+   <Field name="f713"/>
+   <Field name="f714"/>
+   <Field name="f715"/>
+   <Field name="f716"/>
+   <Field name="f717"/>
+   <Field name="f718"/>
+   <Field name="f719"/>
+   <Field name="f720"/>
+   <Field name="f721"/>
+   <Field name="f722"/>
+   <Field name="f723"/>
+   <Field name="f724"/>
+   <Field name="f725"/>
+   <Field name="f726"/>
+   <Field name="f727"/>
+   <Field name="f728"/>
+   <Field name="f729"/>
+   <Field name="f730"/>
+   <Field name="f731"/>
+   <Field name="f732"/>
+   <Field name="f733"/>
+   <Field name="f734"/>
+   <Field name="f735"/>
+   <Field name="f736"/>
+   <Field name="f737"/>
+   <Field name="f738"/>
+   <Field name="f739"/>
+   <Field name="f740"/>
+   <Field name="f741"/>
+   <Field name="f742"/>
+   <Field name="f743"/>
+   <Field name="f744"/>
+   <Field name="f745"/>
+   <Field name="f746"/>
+   <Field name="f747"/>
+   <Field name="f748"/>
+   <Field name="f749"/>
+   <Field name="f750"/>
+   <Field name="f751"/>
+   <Field name="f752"/>
+   <Field name="f753"/>
+   <Field name="f754"/>
+   <Field name="f755"/>
+   <Field name="f756"/>
+   <Field name="f757"/>
+   <Field name="f758"/>
+   <Field name="f759"/>
+   <Field name="f760"/>
+   <Field name="f761"/>
+   <Field name="f762"/>
+   <Field name="f763"/>
+   <Field name="f764"/>
+   <Field name="f765"/>
+   <Field name="f766"/>
+   <Field name="f767"/>
+   <Field name="f768"/>
+   <Field name="f769"/>
+   <Field name="f770"/>
+   <Field name="f771"/>
+   <Field name="f772"/>
+   <Field name="f773"/>
+   <Field name="f774"/>
+   <Field name="f775"/>
+   <Field name="f776"/>
+   <Field name="f777"/>
+   <Field name="f778"/>
+   <Field name="f779"/>
+   <Field name="f780"/>
+   <Field name="f781"/>
+   <Field name="f782"/>
+   <Field name="f783"/>
+   <Field name="f784"/>
+   <Signature>value_record</Signature><Field name="Label"/>
+  </Definition>
+  <Definition body="33" end="82" fullname="ml.tests.explanatory.__dinprep__1__" inherit_type="local" line="16" name="__dInPrep__1__" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="1">
+   <Signature>/-------------------------------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="144" end="196" fullname="ml.tests.explanatory.__tra__2__" inherit_type="local" line="18" name="__tra__2__" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="100">
+   <Type>transform</Type>
+   <Params>
+    <Param name="L"/>
+    <Param name="C"/>
+   </Params>
+   <Signature>uctured dataset, and appends a unique 1-base</Signature><Return>&lt;unnamed&gt;</Return>
+  </Definition>
+  <Definition body="204" end="238" fullname="ml.tests.explanatory.input_data" inherit_type="local" line="22" name="input_data" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes any structured dataset, and appends a unique 1-based record ID
+// column to it 
+//
+//   dIn       : The name of</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="36" end="57" fullname="ml.tests.explanatory.depdatac_toname" inherit_type="local" line="81" name="depDataC_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//----------------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="38" end="10806" fullname="ml.tests.explanatory.indepdatac_toname" inherit_type="local" line="81" name="indepDataC_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//------------------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="38" end="58" fullname="ml.tests.explanatory.depdatac_tonumber" inherit_type="local" line="83" name="depDataC_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//------------------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="40" end="10807" fullname="ml.tests.explanatory.indepdatac_tonumber" inherit_type="local" line="83" name="indepDataC_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//--------------------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.explanatory.depdatac" inherit_type="local" line="85" name="depDataC" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.explanatory.indepdatac" inherit_type="local" line="85" name="indepDataC" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="14" end="2800" fullname="ml.tests.explanatory.depdatac_map" inherit_type="local" line="87" name="depDataC_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//------------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="16" end="2800" fullname="ml.tests.explanatory.indepdatac_map" inherit_type="local" line="87" name="indepDataC_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//--------------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="9731" end="9801" fullname="ml.tests.explanatory.input_data_tmp" inherit_type="local" line="800" name="input_data_tmp" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="9714">
+   <Signature>input_data_tmp</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="9982" end="24013" fullname="ml.tests.explanatory.sampledata_format" inherit_type="local" line="804" name="Sampledata_Format" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="9962">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="f1"/>
+   <Field name="f2"/>
+   <Field name="f3"/>
+   <Field name="f4"/>
+   <Field name="f5"/>
+   <Field name="f6"/>
+   <Field name="f7"/>
+   <Field name="f8"/>
+   <Field name="f9"/>
+   <Field name="f10"/>
+   <Field name="f11"/>
+   <Field name="f12"/>
+   <Field name="f13"/>
+   <Field name="f14"/>
+   <Field name="f15"/>
+   <Field name="f16"/>
+   <Field name="f17"/>
+   <Field name="f18"/>
+   <Field name="f19"/>
+   <Field name="f20"/>
+   <Field name="f21"/>
+   <Field name="f22"/>
+   <Field name="f23"/>
+   <Field name="f24"/>
+   <Field name="f25"/>
+   <Field name="f26"/>
+   <Field name="f27"/>
+   <Field name="f28"/>
+   <Field name="f29"/>
+   <Field name="f30"/>
+   <Field name="f31"/>
+   <Field name="f32"/>
+   <Field name="f33"/>
+   <Field name="f34"/>
+   <Field name="f35"/>
+   <Field name="f36"/>
+   <Field name="f37"/>
+   <Field name="f38"/>
+   <Field name="f39"/>
+   <Field name="f40"/>
+   <Field name="f41"/>
+   <Field name="f42"/>
+   <Field name="f43"/>
+   <Field name="f44"/>
+   <Field name="f45"/>
+   <Field name="f46"/>
+   <Field name="f47"/>
+   <Field name="f48"/>
+   <Field name="f49"/>
+   <Field name="f50"/>
+   <Field name="f51"/>
+   <Field name="f52"/>
+   <Field name="f53"/>
+   <Field name="f54"/>
+   <Field name="f55"/>
+   <Field name="f56"/>
+   <Field name="f57"/>
+   <Field name="f58"/>
+   <Field name="f59"/>
+   <Field name="f60"/>
+   <Field name="f61"/>
+   <Field name="f62"/>
+   <Field name="f63"/>
+   <Field name="f64"/>
+   <Field name="f65"/>
+   <Field name="f66"/>
+   <Field name="f67"/>
+   <Field name="f68"/>
+   <Field name="f69"/>
+   <Field name="f70"/>
+   <Field name="f71"/>
+   <Field name="f72"/>
+   <Field name="f73"/>
+   <Field name="f74"/>
+   <Field name="f75"/>
+   <Field name="f76"/>
+   <Field name="f77"/>
+   <Field name="f78"/>
+   <Field name="f79"/>
+   <Field name="f80"/>
+   <Field name="f81"/>
+   <Field name="f82"/>
+   <Field name="f83"/>
+   <Field name="f84"/>
+   <Field name="f85"/>
+   <Field name="f86"/>
+   <Field name="f87"/>
+   <Field name="f88"/>
+   <Field name="f89"/>
+   <Field name="f90"/>
+   <Field name="f91"/>
+   <Field name="f92"/>
+   <Field name="f93"/>
+   <Field name="f94"/>
+   <Field name="f95"/>
+   <Field name="f96"/>
+   <Field name="f97"/>
+   <Field name="f98"/>
+   <Field name="f99"/>
+   <Field name="f100"/>
+   <Field name="f101"/>
+   <Field name="f102"/>
+   <Field name="f103"/>
+   <Field name="f104"/>
+   <Field name="f105"/>
+   <Field name="f106"/>
+   <Field name="f107"/>
+   <Field name="f108"/>
+   <Field name="f109"/>
+   <Field name="f110"/>
+   <Field name="f111"/>
+   <Field name="f112"/>
+   <Field name="f113"/>
+   <Field name="f114"/>
+   <Field name="f115"/>
+   <Field name="f116"/>
+   <Field name="f117"/>
+   <Field name="f118"/>
+   <Field name="f119"/>
+   <Field name="f120"/>
+   <Field name="f121"/>
+   <Field name="f122"/>
+   <Field name="f123"/>
+   <Field name="f124"/>
+   <Field name="f125"/>
+   <Field name="f126"/>
+   <Field name="f127"/>
+   <Field name="f128"/>
+   <Field name="f129"/>
+   <Field name="f130"/>
+   <Field name="f131"/>
+   <Field name="f132"/>
+   <Field name="f133"/>
+   <Field name="f134"/>
+   <Field name="f135"/>
+   <Field name="f136"/>
+   <Field name="f137"/>
+   <Field name="f138"/>
+   <Field name="f139"/>
+   <Field name="f140"/>
+   <Field name="f141"/>
+   <Field name="f142"/>
+   <Field name="f143"/>
+   <Field name="f144"/>
+   <Field name="f145"/>
+   <Field name="f146"/>
+   <Field name="f147"/>
+   <Field name="f148"/>
+   <Field name="f149"/>
+   <Field name="f150"/>
+   <Field name="f151"/>
+   <Field name="f152"/>
+   <Field name="f153"/>
+   <Field name="f154"/>
+   <Field name="f155"/>
+   <Field name="f156"/>
+   <Field name="f157"/>
+   <Field name="f158"/>
+   <Field name="f159"/>
+   <Field name="f160"/>
+   <Field name="f161"/>
+   <Field name="f162"/>
+   <Field name="f163"/>
+   <Field name="f164"/>
+   <Field name="f165"/>
+   <Field name="f166"/>
+   <Field name="f167"/>
+   <Field name="f168"/>
+   <Field name="f169"/>
+   <Field name="f170"/>
+   <Field name="f171"/>
+   <Field name="f172"/>
+   <Field name="f173"/>
+   <Field name="f174"/>
+   <Field name="f175"/>
+   <Field name="f176"/>
+   <Field name="f177"/>
+   <Field name="f178"/>
+   <Field name="f179"/>
+   <Field name="f180"/>
+   <Field name="f181"/>
+   <Field name="f182"/>
+   <Field name="f183"/>
+   <Field name="f184"/>
+   <Field name="f185"/>
+   <Field name="f186"/>
+   <Field name="f187"/>
+   <Field name="f188"/>
+   <Field name="f189"/>
+   <Field name="f190"/>
+   <Field name="f191"/>
+   <Field name="f192"/>
+   <Field name="f193"/>
+   <Field name="f194"/>
+   <Field name="f195"/>
+   <Field name="f196"/>
+   <Field name="f197"/>
+   <Field name="f198"/>
+   <Field name="f199"/>
+   <Field name="f200"/>
+   <Field name="f201"/>
+   <Field name="f202"/>
+   <Field name="f203"/>
+   <Field name="f204"/>
+   <Field name="f205"/>
+   <Field name="f206"/>
+   <Field name="f207"/>
+   <Field name="f208"/>
+   <Field name="f209"/>
+   <Field name="f210"/>
+   <Field name="f211"/>
+   <Field name="f212"/>
+   <Field name="f213"/>
+   <Field name="f214"/>
+   <Field name="f215"/>
+   <Field name="f216"/>
+   <Field name="f217"/>
+   <Field name="f218"/>
+   <Field name="f219"/>
+   <Field name="f220"/>
+   <Field name="f221"/>
+   <Field name="f222"/>
+   <Field name="f223"/>
+   <Field name="f224"/>
+   <Field name="f225"/>
+   <Field name="f226"/>
+   <Field name="f227"/>
+   <Field name="f228"/>
+   <Field name="f229"/>
+   <Field name="f230"/>
+   <Field name="f231"/>
+   <Field name="f232"/>
+   <Field name="f233"/>
+   <Field name="f234"/>
+   <Field name="f235"/>
+   <Field name="f236"/>
+   <Field name="f237"/>
+   <Field name="f238"/>
+   <Field name="f239"/>
+   <Field name="f240"/>
+   <Field name="f241"/>
+   <Field name="f242"/>
+   <Field name="f243"/>
+   <Field name="f244"/>
+   <Field name="f245"/>
+   <Field name="f246"/>
+   <Field name="f247"/>
+   <Field name="f248"/>
+   <Field name="f249"/>
+   <Field name="f250"/>
+   <Field name="f251"/>
+   <Field name="f252"/>
+   <Field name="f253"/>
+   <Field name="f254"/>
+   <Field name="f255"/>
+   <Field name="f256"/>
+   <Field name="f257"/>
+   <Field name="f258"/>
+   <Field name="f259"/>
+   <Field name="f260"/>
+   <Field name="f261"/>
+   <Field name="f262"/>
+   <Field name="f263"/>
+   <Field name="f264"/>
+   <Field name="f265"/>
+   <Field name="f266"/>
+   <Field name="f267"/>
+   <Field name="f268"/>
+   <Field name="f269"/>
+   <Field name="f270"/>
+   <Field name="f271"/>
+   <Field name="f272"/>
+   <Field name="f273"/>
+   <Field name="f274"/>
+   <Field name="f275"/>
+   <Field name="f276"/>
+   <Field name="f277"/>
+   <Field name="f278"/>
+   <Field name="f279"/>
+   <Field name="f280"/>
+   <Field name="f281"/>
+   <Field name="f282"/>
+   <Field name="f283"/>
+   <Field name="f284"/>
+   <Field name="f285"/>
+   <Field name="f286"/>
+   <Field name="f287"/>
+   <Field name="f288"/>
+   <Field name="f289"/>
+   <Field name="f290"/>
+   <Field name="f291"/>
+   <Field name="f292"/>
+   <Field name="f293"/>
+   <Field name="f294"/>
+   <Field name="f295"/>
+   <Field name="f296"/>
+   <Field name="f297"/>
+   <Field name="f298"/>
+   <Field name="f299"/>
+   <Field name="f300"/>
+   <Field name="f301"/>
+   <Field name="f302"/>
+   <Field name="f303"/>
+   <Field name="f304"/>
+   <Field name="f305"/>
+   <Field name="f306"/>
+   <Field name="f307"/>
+   <Field name="f308"/>
+   <Field name="f309"/>
+   <Field name="f310"/>
+   <Field name="f311"/>
+   <Field name="f312"/>
+   <Field name="f313"/>
+   <Field name="f314"/>
+   <Field name="f315"/>
+   <Field name="f316"/>
+   <Field name="f317"/>
+   <Field name="f318"/>
+   <Field name="f319"/>
+   <Field name="f320"/>
+   <Field name="f321"/>
+   <Field name="f322"/>
+   <Field name="f323"/>
+   <Field name="f324"/>
+   <Field name="f325"/>
+   <Field name="f326"/>
+   <Field name="f327"/>
+   <Field name="f328"/>
+   <Field name="f329"/>
+   <Field name="f330"/>
+   <Field name="f331"/>
+   <Field name="f332"/>
+   <Field name="f333"/>
+   <Field name="f334"/>
+   <Field name="f335"/>
+   <Field name="f336"/>
+   <Field name="f337"/>
+   <Field name="f338"/>
+   <Field name="f339"/>
+   <Field name="f340"/>
+   <Field name="f341"/>
+   <Field name="f342"/>
+   <Field name="f343"/>
+   <Field name="f344"/>
+   <Field name="f345"/>
+   <Field name="f346"/>
+   <Field name="f347"/>
+   <Field name="f348"/>
+   <Field name="f349"/>
+   <Field name="f350"/>
+   <Field name="f351"/>
+   <Field name="f352"/>
+   <Field name="f353"/>
+   <Field name="f354"/>
+   <Field name="f355"/>
+   <Field name="f356"/>
+   <Field name="f357"/>
+   <Field name="f358"/>
+   <Field name="f359"/>
+   <Field name="f360"/>
+   <Field name="f361"/>
+   <Field name="f362"/>
+   <Field name="f363"/>
+   <Field name="f364"/>
+   <Field name="f365"/>
+   <Field name="f366"/>
+   <Field name="f367"/>
+   <Field name="f368"/>
+   <Field name="f369"/>
+   <Field name="f370"/>
+   <Field name="f371"/>
+   <Field name="f372"/>
+   <Field name="f373"/>
+   <Field name="f374"/>
+   <Field name="f375"/>
+   <Field name="f376"/>
+   <Field name="f377"/>
+   <Field name="f378"/>
+   <Field name="f379"/>
+   <Field name="f380"/>
+   <Field name="f381"/>
+   <Field name="f382"/>
+   <Field name="f383"/>
+   <Field name="f384"/>
+   <Field name="f385"/>
+   <Field name="f386"/>
+   <Field name="f387"/>
+   <Field name="f388"/>
+   <Field name="f389"/>
+   <Field name="f390"/>
+   <Field name="f391"/>
+   <Field name="f392"/>
+   <Field name="f393"/>
+   <Field name="f394"/>
+   <Field name="f395"/>
+   <Field name="f396"/>
+   <Field name="f397"/>
+   <Field name="f398"/>
+   <Field name="f399"/>
+   <Field name="f400"/>
+   <Field name="f401"/>
+   <Field name="f402"/>
+   <Field name="f403"/>
+   <Field name="f404"/>
+   <Field name="f405"/>
+   <Field name="f406"/>
+   <Field name="f407"/>
+   <Field name="f408"/>
+   <Field name="f409"/>
+   <Field name="f410"/>
+   <Field name="f411"/>
+   <Field name="f412"/>
+   <Field name="f413"/>
+   <Field name="f414"/>
+   <Field name="f415"/>
+   <Field name="f416"/>
+   <Field name="f417"/>
+   <Field name="f418"/>
+   <Field name="f419"/>
+   <Field name="f420"/>
+   <Field name="f421"/>
+   <Field name="f422"/>
+   <Field name="f423"/>
+   <Field name="f424"/>
+   <Field name="f425"/>
+   <Field name="f426"/>
+   <Field name="f427"/>
+   <Field name="f428"/>
+   <Field name="f429"/>
+   <Field name="f430"/>
+   <Field name="f431"/>
+   <Field name="f432"/>
+   <Field name="f433"/>
+   <Field name="f434"/>
+   <Field name="f435"/>
+   <Field name="f436"/>
+   <Field name="f437"/>
+   <Field name="f438"/>
+   <Field name="f439"/>
+   <Field name="f440"/>
+   <Field name="f441"/>
+   <Field name="f442"/>
+   <Field name="f443"/>
+   <Field name="f444"/>
+   <Field name="f445"/>
+   <Field name="f446"/>
+   <Field name="f447"/>
+   <Field name="f448"/>
+   <Field name="f449"/>
+   <Field name="f450"/>
+   <Field name="f451"/>
+   <Field name="f452"/>
+   <Field name="f453"/>
+   <Field name="f454"/>
+   <Field name="f455"/>
+   <Field name="f456"/>
+   <Field name="f457"/>
+   <Field name="f458"/>
+   <Field name="f459"/>
+   <Field name="f460"/>
+   <Field name="f461"/>
+   <Field name="f462"/>
+   <Field name="f463"/>
+   <Field name="f464"/>
+   <Field name="f465"/>
+   <Field name="f466"/>
+   <Field name="f467"/>
+   <Field name="f468"/>
+   <Field name="f469"/>
+   <Field name="f470"/>
+   <Field name="f471"/>
+   <Field name="f472"/>
+   <Field name="f473"/>
+   <Field name="f474"/>
+   <Field name="f475"/>
+   <Field name="f476"/>
+   <Field name="f477"/>
+   <Field name="f478"/>
+   <Field name="f479"/>
+   <Field name="f480"/>
+   <Field name="f481"/>
+   <Field name="f482"/>
+   <Field name="f483"/>
+   <Field name="f484"/>
+   <Field name="f485"/>
+   <Field name="f486"/>
+   <Field name="f487"/>
+   <Field name="f488"/>
+   <Field name="f489"/>
+   <Field name="f490"/>
+   <Field name="f491"/>
+   <Field name="f492"/>
+   <Field name="f493"/>
+   <Field name="f494"/>
+   <Field name="f495"/>
+   <Field name="f496"/>
+   <Field name="f497"/>
+   <Field name="f498"/>
+   <Field name="f499"/>
+   <Field name="f500"/>
+   <Field name="f501"/>
+   <Field name="f502"/>
+   <Field name="f503"/>
+   <Field name="f504"/>
+   <Field name="f505"/>
+   <Field name="f506"/>
+   <Field name="f507"/>
+   <Field name="f508"/>
+   <Field name="f509"/>
+   <Field name="f510"/>
+   <Field name="f511"/>
+   <Field name="f512"/>
+   <Field name="f513"/>
+   <Field name="f514"/>
+   <Field name="f515"/>
+   <Field name="f516"/>
+   <Field name="f517"/>
+   <Field name="f518"/>
+   <Field name="f519"/>
+   <Field name="f520"/>
+   <Field name="f521"/>
+   <Field name="f522"/>
+   <Field name="f523"/>
+   <Field name="f524"/>
+   <Field name="f525"/>
+   <Field name="f526"/>
+   <Field name="f527"/>
+   <Field name="f528"/>
+   <Field name="f529"/>
+   <Field name="f530"/>
+   <Field name="f531"/>
+   <Field name="f532"/>
+   <Field name="f533"/>
+   <Field name="f534"/>
+   <Field name="f535"/>
+   <Field name="f536"/>
+   <Field name="f537"/>
+   <Field name="f538"/>
+   <Field name="f539"/>
+   <Field name="f540"/>
+   <Field name="f541"/>
+   <Field name="f542"/>
+   <Field name="f543"/>
+   <Field name="f544"/>
+   <Field name="f545"/>
+   <Field name="f546"/>
+   <Field name="f547"/>
+   <Field name="f548"/>
+   <Field name="f549"/>
+   <Field name="f550"/>
+   <Field name="f551"/>
+   <Field name="f552"/>
+   <Field name="f553"/>
+   <Field name="f554"/>
+   <Field name="f555"/>
+   <Field name="f556"/>
+   <Field name="f557"/>
+   <Field name="f558"/>
+   <Field name="f559"/>
+   <Field name="f560"/>
+   <Field name="f561"/>
+   <Field name="f562"/>
+   <Field name="f563"/>
+   <Field name="f564"/>
+   <Field name="f565"/>
+   <Field name="f566"/>
+   <Field name="f567"/>
+   <Field name="f568"/>
+   <Field name="f569"/>
+   <Field name="f570"/>
+   <Field name="f571"/>
+   <Field name="f572"/>
+   <Field name="f573"/>
+   <Field name="f574"/>
+   <Field name="f575"/>
+   <Field name="f576"/>
+   <Field name="f577"/>
+   <Field name="f578"/>
+   <Field name="f579"/>
+   <Field name="f580"/>
+   <Field name="f581"/>
+   <Field name="f582"/>
+   <Field name="f583"/>
+   <Field name="f584"/>
+   <Field name="f585"/>
+   <Field name="f586"/>
+   <Field name="f587"/>
+   <Field name="f588"/>
+   <Field name="f589"/>
+   <Field name="f590"/>
+   <Field name="f591"/>
+   <Field name="f592"/>
+   <Field name="f593"/>
+   <Field name="f594"/>
+   <Field name="f595"/>
+   <Field name="f596"/>
+   <Field name="f597"/>
+   <Field name="f598"/>
+   <Field name="f599"/>
+   <Field name="f600"/>
+   <Field name="f601"/>
+   <Field name="f602"/>
+   <Field name="f603"/>
+   <Field name="f604"/>
+   <Field name="f605"/>
+   <Field name="f606"/>
+   <Field name="f607"/>
+   <Field name="f608"/>
+   <Field name="f609"/>
+   <Field name="f610"/>
+   <Field name="f611"/>
+   <Field name="f612"/>
+   <Field name="f613"/>
+   <Field name="f614"/>
+   <Field name="f615"/>
+   <Field name="f616"/>
+   <Field name="f617"/>
+   <Field name="f618"/>
+   <Field name="f619"/>
+   <Field name="f620"/>
+   <Field name="f621"/>
+   <Field name="f622"/>
+   <Field name="f623"/>
+   <Field name="f624"/>
+   <Field name="f625"/>
+   <Field name="f626"/>
+   <Field name="f627"/>
+   <Field name="f628"/>
+   <Field name="f629"/>
+   <Field name="f630"/>
+   <Field name="f631"/>
+   <Field name="f632"/>
+   <Field name="f633"/>
+   <Field name="f634"/>
+   <Field name="f635"/>
+   <Field name="f636"/>
+   <Field name="f637"/>
+   <Field name="f638"/>
+   <Field name="f639"/>
+   <Field name="f640"/>
+   <Field name="f641"/>
+   <Field name="f642"/>
+   <Field name="f643"/>
+   <Field name="f644"/>
+   <Field name="f645"/>
+   <Field name="f646"/>
+   <Field name="f647"/>
+   <Field name="f648"/>
+   <Field name="f649"/>
+   <Field name="f650"/>
+   <Field name="f651"/>
+   <Field name="f652"/>
+   <Field name="f653"/>
+   <Field name="f654"/>
+   <Field name="f655"/>
+   <Field name="f656"/>
+   <Field name="f657"/>
+   <Field name="f658"/>
+   <Field name="f659"/>
+   <Field name="f660"/>
+   <Field name="f661"/>
+   <Field name="f662"/>
+   <Field name="f663"/>
+   <Field name="f664"/>
+   <Field name="f665"/>
+   <Field name="f666"/>
+   <Field name="f667"/>
+   <Field name="f668"/>
+   <Field name="f669"/>
+   <Field name="f670"/>
+   <Field name="f671"/>
+   <Field name="f672"/>
+   <Field name="f673"/>
+   <Field name="f674"/>
+   <Field name="f675"/>
+   <Field name="f676"/>
+   <Field name="f677"/>
+   <Field name="f678"/>
+   <Field name="f679"/>
+   <Field name="f680"/>
+   <Field name="f681"/>
+   <Field name="f682"/>
+   <Field name="f683"/>
+   <Field name="f684"/>
+   <Field name="f685"/>
+   <Field name="f686"/>
+   <Field name="f687"/>
+   <Field name="f688"/>
+   <Field name="f689"/>
+   <Field name="f690"/>
+   <Field name="f691"/>
+   <Field name="f692"/>
+   <Field name="f693"/>
+   <Field name="f694"/>
+   <Field name="f695"/>
+   <Field name="f696"/>
+   <Field name="f697"/>
+   <Field name="f698"/>
+   <Field name="f699"/>
+   <Field name="f700"/>
+   <Field name="f701"/>
+   <Field name="f702"/>
+   <Field name="f703"/>
+   <Field name="f704"/>
+   <Field name="f705"/>
+   <Field name="f706"/>
+   <Field name="f707"/>
+   <Field name="f708"/>
+   <Field name="f709"/>
+   <Field name="f710"/>
+   <Field name="f711"/>
+   <Field name="f712"/>
+   <Field name="f713"/>
+   <Field name="f714"/>
+   <Field name="f715"/>
+   <Field name="f716"/>
+   <Field name="f717"/>
+   <Field name="f718"/>
+   <Field name="f719"/>
+   <Field name="f720"/>
+   <Field name="f721"/>
+   <Field name="f722"/>
+   <Field name="f723"/>
+   <Field name="f724"/>
+   <Field name="f725"/>
+   <Field name="f726"/>
+   <Field name="f727"/>
+   <Field name="f728"/>
+   <Field name="f729"/>
+   <Field name="f730"/>
+   <Field name="f731"/>
+   <Field name="f732"/>
+   <Field name="f733"/>
+   <Field name="f734"/>
+   <Field name="f735"/>
+   <Field name="f736"/>
+   <Field name="f737"/>
+   <Field name="f738"/>
+   <Field name="f739"/>
+   <Field name="f740"/>
+   <Field name="f741"/>
+   <Field name="f742"/>
+   <Field name="f743"/>
+   <Field name="f744"/>
+   <Field name="f745"/>
+   <Field name="f746"/>
+   <Field name="f747"/>
+   <Field name="f748"/>
+   <Field name="f749"/>
+   <Field name="f750"/>
+   <Field name="f751"/>
+   <Field name="f752"/>
+   <Field name="f753"/>
+   <Field name="f754"/>
+   <Field name="f755"/>
+   <Field name="f756"/>
+   <Field name="f757"/>
+   <Field name="f758"/>
+   <Field name="f759"/>
+   <Field name="f760"/>
+   <Field name="f761"/>
+   <Field name="f762"/>
+   <Field name="f763"/>
+   <Field name="f764"/>
+   <Field name="f765"/>
+   <Field name="f766"/>
+   <Field name="f767"/>
+   <Field name="f768"/>
+   <Field name="f769"/>
+   <Field name="f770"/>
+   <Field name="f771"/>
+   <Field name="f772"/>
+   <Field name="f773"/>
+   <Field name="f774"/>
+   <Field name="f775"/>
+   <Field name="f776"/>
+   <Field name="f777"/>
+   <Field name="f778"/>
+   <Field name="f779"/>
+   <Field name="f780"/>
+   <Field name="f781"/>
+   <Field name="f782"/>
+   <Field name="f783"/>
+   <Signature>Sampledata_Format</Signature><Field name="f784"/>
+  </Definition>
+  <Definition body="24029" end="24066" fullname="ml.tests.explanatory.sample_table" inherit_type="local" line="1591" name="sample_table" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24014">
+   <Signature>sample_table</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24135" end="24184" fullname="ml.tests.explanatory.labeldata_format" inherit_type="local" line="1594" name="labeldata_Format" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24116">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Signature>labeldata_Format</Signature><Field name="Label"/>
+  </Definition>
+  <Definition body="24200" end="24236" fullname="ml.tests.explanatory.label_table" inherit_type="local" line="1599" name="label_table" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24186">
+   <Signature>label_table</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24449" end="24488" fullname="ml.tests.explanatory.label" inherit_type="local" line="1606" name="label" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24441">
+   <Signature>label</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24554" end="24580" fullname="ml.tests.explanatory.numclass" inherit_type="local" line="1610" name="Numclass" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24543">
+   <Signature>Numclass</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24633" end="24669" fullname="ml.tests.explanatory.inputsize" inherit_type="local" line="1612" name="InputSize" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24621">
+   <Signature>InputSize</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24717" end="24756" fullname="ml.tests.explanatory.t1" inherit_type="local" line="1614" name="T1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24712">
+   <Signature>T1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24796" end="24821" fullname="ml.tests.explanatory.inttheta" inherit_type="local" line="1616" name="IntTHETA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24785">
+   <Signature>IntTHETA</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24906" end="24908" fullname="ml.tests.explanatory.prows" inherit_type="local" line="1619" name="prows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24889">
+   <Signature>UNSIGNED4 prows</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24926" end="24928" fullname="ml.tests.explanatory.pcols" inherit_type="local" line="1620" name="pcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24909">
+   <Signature>UNSIGNED4 pcols</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24948" end="24950" fullname="ml.tests.explanatory.maxrows" inherit_type="local" line="1621" name="Maxrows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24929">
+   <Signature>UNSIGNED4 Maxrows</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24970" end="24972" fullname="ml.tests.explanatory.maxcols" inherit_type="local" line="1622" name="Maxcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24951">
+   <Signature>UNSIGNED4 Maxcols</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="24982" end="25070" fullname="ML.Classify.SoftMax" inherit_type="local" line="1623" name="trainer" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="24973" target="../../classify.ecl.xml">
+   <Type>module</Type>
+   <Definition body="5439" end="5451" exported="1" fullname="ml.classify.default.base" inherit_type="inherited" line="95" name="Base" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5425" target="../../classify.ecl.xml">
+    <Signature>Base</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="5714" end="6068" fullname="ml.classify.default.combinemodels" inherit_type="override" line="97" name="CombineModels" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5624" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)</Signature><Params>
+     <Param name="sofar"/>
+     <Param name="new"/>
+    </Params>
+   </Definition>
+   <Definition body="6436" end="6483" exported="1" fullname="ml.classify.default.learnd" inherit_type="override" line="107" name="LearnD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="6351" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="6802" end="6852" exported="1" fullname="ml.classify.default.classifyd" inherit_type="override" line="111" name="ClassifyD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="6715" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="6941" end="7053" exported="1" fullname="ml.classify.default.testd" inherit_type="override" line="112" name="TestD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="6857" target="../../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+    <Parents/>
+    <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+     <Signature>J</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+     <Type>record</Type>
+     <Field name="classifier"/>
+     <Field name="c_actual"/>
+     <Field name="c_modeled"/>
+     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+    </Definition>
+    <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+     <Signature>class_cnt</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+     <Signature>cfmx</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+     <Signature>cross_raw</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+     <Signature>RecallByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+     <Signature>Accuracy</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="7141" end="7253" exported="1" fullname="ml.classify.default.testc" inherit_type="override" line="117" name="TestC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7058" target="../../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+    <Parents/>
+    <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+     <Signature>J</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+     <Type>record</Type>
+     <Field name="classifier"/>
+     <Field name="c_actual"/>
+     <Field name="c_modeled"/>
+     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+    </Definition>
+    <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+     <Signature>class_cnt</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+     <Signature>cfmx</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+     <Signature>cross_raw</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+     <Signature>RecallByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+     <Signature>Accuracy</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="7361" end="7787" exported="1" fullname="ml.classify.default.learndconcat" inherit_type="override" line="122" name="LearnDConcat" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7258" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="fnc"/>
+    </Params>
+   </Definition>
+   <Definition body="7894" end="8320" exported="1" fullname="ml.classify.default.learncconcat" inherit_type="override" line="131" name="LearnCConcat" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7792" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="fnc"/>
+    </Params>
+   </Definition>
+   <Definition body="60546" end="60595" exported="1" fullname="ml.classify.softmax.learnc" inherit_type="override" line="1121" name="LearnC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="60461" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="60646" end="60706" exported="1" fullname="ml.classify.softmax.model" inherit_type="local" line="1122" name="Model" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="60598" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="60816" end="64534" exported="1" fullname="ml.classify.softmax.classprobdistribc" inherit_type="local" line="1126" name="ClassProbDistribC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="60722" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassProbDistribC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="64657" end="65106" exported="1" fullname="ml.classify.softmax.classifyc" inherit_type="override" line="1194" name="ClassifyC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="64571" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Signature>trainer</Signature><Parents>
+    <Parent line="94" name="Default" ref="ml.classify.default" target="../../classify.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="25102" end="25137" fullname="ml.tests.explanatory.parameters" inherit_type="local" line="1626" name="Parameters" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25089">
+   <Signature>Parameters</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25188" end="25215" fullname="ml.tests.explanatory.mod" inherit_type="local" line="1628" name="mod" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25182">
+   <Signature>mod</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25226" end="25249" fullname="ml.tests.explanatory.mxstats" inherit_type="local" line="1629" name="mXstats" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25216">
+   <Signature>mXstats</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25257" end="25271" fullname="ml.tests.explanatory.mx_n" inherit_type="local" line="1630" name="mX_n" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25250">
+   <Signature>mX_n</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25279" end="25293" fullname="ml.tests.explanatory.mx_m" inherit_type="local" line="1631" name="mX_m" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25272">
+   <Signature>mX_m</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25389" end="25401" fullname="ml.tests.explanatory.model" inherit_type="local" line="1635" name="Model" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25381">
+   <Signature>Model</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25409" end="25455" fullname="ml.tests.explanatory.dist" inherit_type="local" line="1636" name="dist" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25402">
+   <Signature>dist</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="25469" end="25506" fullname="ml.tests.explanatory.classified" inherit_type="local" line="1637" name="classified" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl" start="25456">
+   <Signature>classified</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="../../appendid.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/RandMat.ecl" name="ML.Mat.RandMat" target="../../mat/randmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="../../mat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Classify.ecl" name="ML.Classify" target="../../classify.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" name="ML.NaiveBayes" target="../../naivebayes.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="../../fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" name="ML.NeuralNetworks" target="../../neuralnetworks.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../../../pbblas/autobvmap.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../../pbblas/hadamardproduct.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../../pbblas/pb_dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" name="ML.Mat.InsertColumn" target="../../mat/insertcolumn.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="../../mat/identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="../../mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="../../mat/strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="../../mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Add.ecl" name="ML.Mat.Add" target="../../mat/add.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="../../mat/sub.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" name="ML.Mat.Inv" target="../../mat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" name="ML.Mat.Decomp" target="../../mat/decomp.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="../../mat/setdimension.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" name="ML.Mat.Substitute" target="../../mat/substitute.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" name="ML.Mat.LowerTriangle" target="../../mat/lowertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" name="ML.Mat.UpperTriangle" target="../../mat/uppertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" name="ML.Mat.Householder" target="../../mat/householder.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" name="ML.Mat.Det" target="../../mat/det.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" name="PBblas.Vector2Diag" target="../../../pbblas/vector2diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_diag" target="../../../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgetrf.ecl" name="PBblas.PB_dgetrf" target="../../../pbblas/pb_dgetrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" name="PBblas.PB_dtrsm" target="../../../pbblas/pb_dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="../../../pbblas/pb_dtran.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" name="ML.DMat.Trans" target="../../dmat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" name="ML.DMat.Inv" target="../../dmat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" name="PBblas.PB_dpotrf" target="../../../pbblas/pb_dpotrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" name="ML.Trees" target="../../trees.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" name="ML.Sampling" target="../../sampling.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" name="ML.Ensemble" target="../../ensemble.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../../svm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="../../svm/libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" name="ML.SVM.Converted" target="../../svm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" name="ML.SVM.train" target="../../svm/train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="../../svm/libsvm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" name="ML.SVM.LibSVM.svm_train" target="../../svm/libsvm/svm_train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="../../svm/libsvm/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" name="ML.SVM.LibSVM.SVM_Predict" target="../../svm/libsvm/svm_predict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" name="ML.SVM.predict" target="../../svm/predict.ecl.xml"/></Meta>

@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.SVM.Converted" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" target="converted.ecl.xml">
+  <Definition body="139" end="9098" exported="1" fullname="ML.SVM.Converted" inherit_type="local" line="5" name="Converted" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="120">
+   <Type>module</Type>
+   <Definition body="392" end="1194" exported="1" fullname="ml.svm.converted.toinstance" inherit_type="local" line="9" name="ToInstance" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="274">
+    <Type>function</Type>
+    <Signature>ToInstance(DATASET(ML_Types.NumericField) Ind,
+                    DATASET(ML_Types.NumericField) Dep=dummy)</Signature><Params>
+     <Param name="Ind"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="1252" end="1255" fullname="ml.svm.converted.field_id" inherit_type="local" line="33" name="Field_ID" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1234">
+    <Signature>Field_ID</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1276" end="1290" fullname="ml.svm.converted.s_type_id" inherit_type="local" line="34" name="s_type_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1258">
+    <Signature>s_type_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1323" end="1338" fullname="ml.svm.converted.k_type_id" inherit_type="local" line="35" name="k_type_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1305">
+    <Signature>k_type_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1370" end="1385" fullname="ml.svm.converted.degree_id" inherit_type="local" line="36" name="degree_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1352">
+    <Signature>degree_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1417" end="1432" fullname="ml.svm.converted.gamma_id" inherit_type="local" line="37" name="gamma_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1399">
+    <Signature>gamma_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1464" end="1478" fullname="ml.svm.converted.coef0_id" inherit_type="local" line="38" name="coef0_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1446">
+    <Signature>coef0_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1507" end="1521" fullname="ml.svm.converted.k_id" inherit_type="local" line="39" name="k_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1493">
+    <Signature>k_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1554" end="1564" fullname="ml.svm.converted.l_id" inherit_type="local" line="40" name="l_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1540">
+    <Signature>l_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1607" end="1617" fullname="ml.svm.converted.pairs_a_id" inherit_type="local" line="41" name="pairs_a_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1587">
+    <Signature>pairs_a_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1654" end="1670" fullname="ml.svm.converted.pairs_b_id" inherit_type="local" line="42" name="pairs_b_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1634">
+    <Signature>pairs_b_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1701" end="1717" fullname="ml.svm.converted.n_label_id" inherit_type="local" line="43" name="n_label_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1681">
+    <Signature>n_label_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1745" end="1761" fullname="ml.svm.converted.n_sv_id" inherit_type="local" line="44" name="n_sv_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1728">
+    <Signature>n_sv_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1790" end="1799" fullname="ml.svm.converted.lf_id" inherit_type="local" line="45" name="lf_id" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="1775">
+    <Signature>lf_id</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2688" end="5698" exported="1" fullname="ml.svm.converted.frommodel" inherit_type="local" line="68" name="FromModel" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="2621">
+    <Type>function</Type>
+    <Signature>FromModel(UNSIGNED id_base, DATASET(SVM.Types.Model) mdl)</Signature><Params>
+     <Param name="id_base"/>
+     <Param name="mdl"/>
+    </Params>
+   </Definition>
+   <Definition body="7054" end="9093" exported="1" fullname="ml.svm.converted.tomodel" inherit_type="local" line="158" name="ToModel" source="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" start="7001">
+    <Type>function</Type>
+    <Signature>ToModel(DATASET(ML_Types.NumericField) mdl)</Signature><Params>
+     <Param name="mdl"/>
+    </Params>
+   </Definition>
+   <Signature>Converted</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="72" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="72" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="83" fullname="ML.SVM" inherit_type="local" line="3" name="SVM" ref="ml.svm" start="83" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="98" fullname="ML.Types" inherit_type="local" line="4" name="ML_Types" ref="ml.types" start="98" target="../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="types.ecl.xml"/></Meta>

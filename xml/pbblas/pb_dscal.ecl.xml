@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.PB_dscal" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" target="pb_dscal.ecl.xml">
+  <Import body="0" end="7" fullname="PBblas" inherit_type="local" line="1" name="PBblas" ref="pbblas" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="22" fullname="PBblas.IMatrix_Map" inherit_type="local" line="2" name="IMatrix_Map" ref="pbblas.imatrix_map" start="22" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="49" fullname="PBblas.Types" inherit_type="local" line="3" name="Types" ref="pbblas.types" start="49" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="70" fullname="PBblas.Constants" inherit_type="local" line="4" name="Constants" ref="pbblas.constants" start="70" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="95" fullname="PBblas.BLAS" inherit_type="local" line="5" name="BLAS" ref="pbblas.blas" remotescope="1" start="95" target="blas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="115" fullname="std.system.Thorlib" inherit_type="local" line="6" name="Thorlib" ref="std.system.thorlib" start="115" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="142" end="161" fullname="pbblas.part" inherit_type="local" line="7" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" start="135">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="172" end="187" fullname="pbblas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" start="162">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="239" end="444" exported="1" fullname="pbblas.pb_dscal" inherit_type="local" line="10" name="PB_dscal" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" start="189">
+   <Type>function</Type>
+   <Signature>PB_dscal(value_t alpha, DATASET(Part) X)</Signature><Params>
+    <Param name="alpha"/>
+    <Param name="X"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="blas/dscal.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/></Meta>

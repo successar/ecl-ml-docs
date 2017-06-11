@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Tests.Explanatory.Distribution2" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Distribution2.ecl" target="distribution2.ecl.xml">
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="57" end="90" fullname="ML.Distribution.Poisson" inherit_type="local" line="3" name="a" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Distribution2.ecl" start="53" target="../../distribution.ecl.xml">
+   <Type>module</Type>
+   <Definition body="1265" end="1270" exported="1" fullname="ml.distribution.default.rangewidth" inherit_type="inherited" line="28" name="RangeWidth" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="1245" target="../../distribution.ecl.xml">
+    <Signature>RangeWidth</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1706" end="1958" exported="1" fullname="ml.distribution.default.cumulativev" inherit_type="override" line="33" name="CumulativeV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="1683" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>CumulativeV()</Signature><Params/>
+   </Definition>
+   <Definition body="2078" end="2754" exported="1" fullname="ml.distribution.default.cumulative" inherit_type="override" line="42" name="Cumulative" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2018" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="2864" end="3358" exported="1" fullname="ml.distribution.default.ntile" inherit_type="override" line="54" name="NTile" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2809" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
+     <Param name="Pc"/>
+    </Params>
+   </Definition>
+   <Definition body="3406" end="3411" exported="1" fullname="ml.distribution.default.invdensity" inherit_type="inherited" line="63" name="InvDensity" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3361" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>InvDensity(Types.t_FieldReal delta)</Signature><Params>
+     <Param name="delta"/>
+    </Params>
+   </Definition>
+   <Definition body="12123" end="12166" exported="1" fullname="ml.distribution.poisson.density" inherit_type="override" line="204" name="Density" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="12066" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
+     <Param name="RH"/>
+    </Params>
+   </Definition>
+   <Definition body="12189" end="12314" exported="1" fullname="ml.distribution.poisson.densityv" inherit_type="override" line="205" name="DensityV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="12169" target="../../distribution.ecl.xml">
+    <Type>function</Type>
+    <Signature>DensityV()</Signature><Params/>
+   </Definition>
+   <Definition body="12413" end="12419" exported="1" fullname="ml.distribution.poisson.discrete" inherit_type="override" line="208" name="Discrete" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="12395" target="../../distribution.ecl.xml">
+    <Signature>Discrete</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>a</Signature><Parents>
+    <Parent line="27" name="Default" ref="ml.distribution.default" target="../../distribution.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="216" end="251" fullname="ml.tests.explanatory.b" inherit_type="local" line="8" name="b" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Distribution2.ecl" start="212">
+   <Signature>b</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/></Meta>

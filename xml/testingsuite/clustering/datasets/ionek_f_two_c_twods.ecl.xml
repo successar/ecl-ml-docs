@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Clustering.Datasets.ionek_f_two_c_twoDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_two_c_twoDS.ecl" target="ionek_f_two_c_twods.ecl.xml">
+  <Definition body="47" end="50301" exported="1" fullname="TestingSuite.Clustering.Datasets.ionek_f_two_c_twoDS" inherit_type="local" line="2" name="ionek_f_two_c_twoDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_two_c_twoDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="93" end="248" fullname="testingsuite.clustering.datasets.ionek_f_two_c_twods.ionek_f_two_c_tworecord" inherit_type="local" line="3" name="ionek_f_two_c_twoRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_two_c_twoDS.ecl" start="60">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="features_1"/>
+    <Field name="features_2"/>
+    <Signature>ionek_f_two_c_twoRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="270" end="50296" exported="1" fullname="testingsuite.clustering.datasets.ionek_f_two_c_twods.content" inherit_type="local" line="9" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_two_c_twoDS.ecl" start="253">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>ionek_f_two_c_twoDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

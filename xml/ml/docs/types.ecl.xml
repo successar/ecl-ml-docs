@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Docs.Types" sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" target="types.ecl.xml">
+  <Definition body="15" end="658" exported="1" fullname="ML.Docs.Types" inherit_type="local" line="1" name="Types" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="0">
+   <Type>module</Type>
+   <Definition body="41" end="51" exported="1" fullname="ml.docs.types.t_docid" inherit_type="local" line="3" name="t_DocID" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="24">
+    <Signature>t_DocID</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="68" end="76" exported="1" fullname="ml.docs.types.t_line" inherit_type="local" line="4" name="t_Line" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="52">
+    <Signature>t_Line</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="93" end="101" exported="1" fullname="ml.docs.types.t_word" inherit_type="local" line="5" name="t_Word" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="77">
+    <Signature>t_Word</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="120" end="131" exported="1" fullname="ml.docs.types.t_wordid" inherit_type="local" line="6" name="t_WordId" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="102">
+    <Signature>t_WordId</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="152" end="163" exported="1" fullname="ml.docs.types.t_position" inherit_type="local" line="7" name="t_Position" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="132">
+    <Signature>t_Position</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="181" end="191" exported="1" fullname="ml.docs.types.t_count" inherit_type="local" line="8" name="t_Count" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="164">
+    <Signature>t_Count</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="209" end="215" exported="1" fullname="ml.docs.types.t_value" inherit_type="local" line="9" name="t_Value" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="192">
+    <Signature>t_Value</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="230" end="276" exported="1" fullname="ml.docs.types.raw" inherit_type="local" line="11" name="Raw" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="217">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Signature>Raw</Signature><Field name="txt"/>
+   </Definition>
+   <Definition body="299" end="359" exported="1" fullname="ml.docs.types.wordelement" inherit_type="local" line="16" name="WordElement" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="278">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="pos"/>
+    <Signature>WordElement</Signature><Field name="word"/>
+   </Definition>
+   <Definition body="383" end="524" exported="1" fullname="ml.docs.types.owordelement" inherit_type="local" line="22" name="OWordElement" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="361">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="pos"/>
+    <Field name="word"/>
+    <Field name="total_words"/>
+    <Field name="total_docs"/>
+    <Signature>OWordElement</Signature><Field name="words_in_doc"/>
+   </Definition>
+   <Definition body="550" end="652" exported="1" fullname="ml.docs.types.lexiconelement" inherit_type="local" line="31" name="LexiconElement" source="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" start="526">
+    <Type>record</Type>
+    <Field name="word_id"/>
+    <Field name="total_words"/>
+    <Field name="total_docs"/>
+    <Signature>LexiconElement</Signature><Field name="word"/>
+   </Definition>
+   <Signature>Types</Signature><Parents/>
+  </Definition>
+ </Source>
+</Meta>

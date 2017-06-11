@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.Identity" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" target="identity.ecl.xml">
+  <Definition body="65" end="118" exported="1" fullname="ml.mat.identity" inherit_type="local" line="3" name="Identity" source="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" start="26">
+   <Type>function</Type>
+   <Signature>Identity(UNSIGNED4 dimension)</Signature><Params>
+    <Param name="dimension"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/></Meta>

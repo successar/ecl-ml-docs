@@ -1,0 +1,423 @@
+{
+    "root": {
+        "ml": {
+            "distribution.ecl.xml": "ML/Distribution.ecl.xml",
+            "tofield.ecl.xml": "ML/ToField.ecl.xml",
+            "neuralnetworks.ecl.xml": "ML/NeuralNetworks.ecl.xml",
+            "regression": {
+                "dense": {
+                    "ols_cholesky.ecl.xml": "ML/Regression/Dense/OLS_Cholesky.ecl.xml",
+                    "ols.ecl.xml": "ML/Regression/Dense/OLS.ecl.xml",
+                    "ols_lu.ecl.xml": "ML/Regression/Dense/OLS_LU.ecl.xml"
+                },
+                "iregression.ecl.xml": "ML/Regression/IRegression.ecl.xml",
+                "sparse": {
+                    "ols_cholesky.ecl.xml": "ML/Regression/Sparse/OLS_Cholesky.ecl.xml",
+                    "ols.ecl.xml": "ML/Regression/Sparse/OLS.ecl.xml",
+                    "ols_lu.ecl.xml": "ML/Regression/Sparse/OLS_LU.ecl.xml"
+                },
+                "predict.ecl.xml": "ML/Regression/Predict.ecl.xml"
+            },
+            "version.ecl.xml": "ML/Version.ecl.xml",
+            "sampling.ecl.xml": "ML/Sampling.ecl.xml",
+            "regress_poly_x.ecl.xml": "ML/Regress_Poly_X.ecl.xml",
+            "generate.ecl.xml": "ML/Generate.ecl.xml",
+            "cluster.ecl.xml": "ML/Cluster.ecl.xml",
+            "correlate.ecl.xml": "ML/Correlate.ecl.xml",
+            "dmat": {
+                "scale.ecl.xml": "ML/DMat/Scale.ecl.xml",
+                "inv.ecl.xml": "ML/DMat/Inv.ecl.xml",
+                "sub.ecl.xml": "ML/DMat/Sub.ecl.xml",
+                "add.ecl.xml": "ML/DMat/Add.ecl.xml",
+                "decomp.ecl.xml": "ML/DMat/Decomp.ecl.xml",
+                "converted.ecl.xml": "ML/DMat/Converted.ecl.xml",
+                "identity.ecl.xml": "ML/DMat/Identity.ecl.xml",
+                "mul.ecl.xml": "ML/DMat/Mul.ecl.xml",
+                "trans.ecl.xml": "ML/DMat/Trans.ecl.xml"
+            },
+            "deeplearning.ecl.xml": "ML/DeepLearning.ecl.xml",
+            "docs": {
+                "colocation.ecl.xml": "ML/Docs/CoLocation.ecl.xml",
+                "porterstem.ecl.xml": "ML/Docs/PorterStem.ecl.xml",
+                "porterstemc.ecl.xml": "ML/Docs/PorterStemC.ecl.xml",
+                "tokenize.ecl.xml": "ML/Docs/Tokenize.ecl.xml",
+                "types.ecl.xml": "ML/Docs/Types.ecl.xml",
+                "trans.ecl.xml": "ML/Docs/Trans.ecl.xml"
+            },
+            "utils.ecl.xml": "ML/Utils.ecl.xml",
+            "mat": {
+                "mahalanobis.ecl.xml": "ML/Mat/Mahalanobis.ecl.xml",
+                "svd.ecl.xml": "ML/Mat/Svd.ecl.xml",
+                "substitute.ecl.xml": "ML/Mat/Substitute.ecl.xml",
+                "householder.ecl.xml": "ML/Mat/Householder.ecl.xml",
+                "sub.ecl.xml": "ML/Mat/Sub.ecl.xml",
+                "uppertriangle.ecl.xml": "ML/Mat/UpperTriangle.ecl.xml",
+                "has.ecl.xml": "ML/Mat/Has.ecl.xml",
+                "rounddelta.ecl.xml": "ML/Mat/RoundDelta.ecl.xml",
+                "scale.ecl.xml": "ML/Mat/Scale.ecl.xml",
+                "each.ecl.xml": "ML/Mat/Each.ecl.xml",
+                "add.ecl.xml": "ML/Mat/Add.ecl.xml",
+                "thin.ecl.xml": "ML/Mat/Thin.ecl.xml",
+                "is.ecl.xml": "ML/Mat/Is.ecl.xml",
+                "randmat.ecl.xml": "ML/Mat/RandMat.ecl.xml",
+                "vec.ecl.xml": "ML/Mat/Vec.ecl.xml",
+                "mu.ecl.xml": "ML/Mat/MU.ecl.xml",
+                "trans.ecl.xml": "ML/Mat/Trans.ecl.xml",
+                "setdimension.ecl.xml": "ML/Mat/SetDimension.ecl.xml",
+                "lowertriangle.ecl.xml": "ML/Mat/LowerTriangle.ecl.xml",
+                "inv.ecl.xml": "ML/Mat/Inv.ecl.xml",
+                "det.ecl.xml": "ML/Mat/Det.ecl.xml",
+                "rankelements.ecl.xml": "ML/Mat/RankElements.ecl.xml",
+                "mul.ecl.xml": "ML/Mat/Mul.ecl.xml",
+                "types.ecl.xml": "ML/Mat/Types.ecl.xml",
+                "identity.ecl.xml": "ML/Mat/Identity.ecl.xml",
+                "cov.ecl.xml": "ML/Mat/Cov.ecl.xml",
+                "strict.ecl.xml": "ML/Mat/Strict.ecl.xml",
+                "pow.ecl.xml": "ML/Mat/Pow.ecl.xml",
+                "insertcolumn.ecl.xml": "ML/Mat/InsertColumn.ecl.xml",
+                "eig.ecl.xml": "ML/Mat/eig.ecl.xml",
+                "pca.ecl.xml": "ML/Mat/Pca.ecl.xml",
+                "lanczos.ecl.xml": "ML/Mat/Lanczos.ecl.xml",
+                "decomp.ecl.xml": "ML/Mat/Decomp.ecl.xml",
+                "debug.ecl.xml": "ML/Mat/Debug.ecl.xml",
+                "repmat.ecl.xml": "ML/Mat/Repmat.ecl.xml",
+                "eq.ecl.xml": "ML/Mat/Eq.ecl.xml"
+            },
+            "types.ecl.xml": "ML/Types.ecl.xml",
+            "stepregression": {
+                "stepregression.ecl.xml": "ML/StepRegression/StepRegression.ecl.xml",
+                "backwardregression.ecl.xml": "ML/StepRegression/BackwardRegression.ecl.xml",
+                "forwardregression.ecl.xml": "ML/StepRegression/ForwardRegression.ecl.xml",
+                "bidirecregression.ecl.xml": "ML/StepRegression/BidirecRegression.ecl.xml"
+            },
+            "appendid.ecl.xml": "ML/AppendID.ecl.xml",
+            "trees.ecl.xml": "ML/Trees.ecl.xml",
+            "config.ecl.xml": "ML/Config.ecl.xml",
+            "discretize.ecl.xml": "ML/Discretize.ecl.xml",
+            "fieldaggregates.ecl.xml": "ML/FieldAggregates.ecl.xml",
+            "classify.ecl.xml": "ML/Classify.ecl.xml",
+            "naivebayes.ecl.xml": "ML/NaiveBayes.ecl.xml",
+            "tests": {
+                "benchmarks": {
+                    "classify_dense_logisticregression.ecl.xml": "ML/Tests/Benchmarks/Classify_Dense_LogisticRegression.ecl.xml",
+                    "classify_sparse_logisticregression.ecl.xml": "ML/Tests/Benchmarks/Classify_Sparse_LogisticRegression.ecl.xml",
+                    "cluster_doc.ecl.xml": "ML/Tests/Benchmarks/Cluster_doc.ecl.xml"
+                },
+                "explanatory": {
+                    "sparseautoencoder_mnist_test_detailed.ecl.xml": "ML/Tests/Explanatory/SparseAutoencoder_MNIST_test_detailed.ecl.xml",
+                    "discretefield.ecl.xml": "ML/Tests/Explanatory/DiscreteField.ecl.xml",
+                    "decisiontree.ecl.xml": "ML/Tests/Explanatory/DecisionTree.ecl.xml",
+                    "fieldaggregate.ecl.xml": "ML/Tests/Explanatory/FieldAggregate.ecl.xml",
+                    "sparseautoencoder_cancerdataset_test.ecl.xml": "ML/Tests/Explanatory/SparseAutoencoder_Cancerdataset_test.ecl.xml",
+                    "neuralnetworks_test.ecl.xml": "ML/Tests/Explanatory/NeuralNetworks_test.ecl.xml",
+                    "adultds.ecl.xml": "ML/Tests/Explanatory/AdultDS.ecl.xml",
+                    "logisticregressionstatistics.ecl.xml": "ML/Tests/Explanatory/LogisticRegressionStatistics.ecl.xml",
+                    "neuralnetworksclassifier_cancerdata_test.ecl.xml": "ML/Tests/Explanatory/NeuralNetworksClassifier_CancerData_test.ecl.xml",
+                    "distribution2.ecl.xml": "ML/Tests/Explanatory/Distribution2.ecl.xml",
+                    "stepwiselogistic.ecl.xml": "ML/Tests/Explanatory/StepwiseLogistic.ecl.xml",
+                    "naive_bayes.ecl.xml": "ML/Tests/Explanatory/Naive_Bayes.ecl.xml",
+                    "samplingds.ecl.xml": "ML/Tests/Explanatory/samplingDS.ecl.xml",
+                    "kdtrees.ecl.xml": "ML/Tests/Explanatory/KDTrees.ecl.xml",
+                    "numericfield.ecl.xml": "ML/Tests/Explanatory/NumericField.ecl.xml",
+                    "binaryc45iris.ecl.xml": "ML/Tests/Explanatory/BinaryC45Iris.ecl.xml",
+                    "10crossvalidation.ecl.xml": "ML/Tests/Explanatory/10CrossValidation.ecl.xml",
+                    "monkds.ecl.xml": "ML/Tests/Explanatory/MonkDS.ecl.xml",
+                    "randomforest.ecl.xml": "ML/Tests/Explanatory/RandomForest.ecl.xml",
+                    "discretize.ecl.xml": "ML/Tests/Explanatory/Discretize.ecl.xml",
+                    "sparseautoencoder_mnist_test.ecl.xml": "ML/Tests/Explanatory/SparseAutoencoder_MNIST_test.ecl.xml",
+                    "doc.ecl.xml": "ML/Tests/Explanatory/Doc.ecl.xml",
+                    "association_marvel_comics.ecl.xml": "ML/Tests/Explanatory/Association_Marvel_Comics.ecl.xml",
+                    "codingdatamodel.ecl.xml": "ML/Tests/Explanatory/codingDataModel.ecl.xml",
+                    "bwr_agglo.ecl.xml": "ML/Tests/Explanatory/BWR_Agglo.ecl.xml",
+                    "linearregressionstatistics.ecl.xml": "ML/Tests/Explanatory/LinearRegressionStatistics.ecl.xml",
+                    "cluster.ecl.xml": "ML/Tests/Explanatory/Cluster.ecl.xml",
+                    "knn_kdtree.ecl.xml": "ML/Tests/Explanatory/KNN_KDTree.ecl.xml",
+                    "discretize2.ecl.xml": "ML/Tests/Explanatory/Discretize2.ecl.xml",
+                    "softmax.ecl.xml": "ML/Tests/Explanatory/SoftMax.ecl.xml",
+                    "distribution.ecl.xml": "ML/Tests/Explanatory/Distribution.ecl.xml",
+                    "randomforestcontinuous.ecl.xml": "ML/Tests/Explanatory/RandomForestContinuous.ecl.xml",
+                    "stacked_sparseautoencoder_test.ecl.xml": "ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl.xml",
+                    "stacked_sparseautoencoder_mnist_test.ecl.xml": "ML/Tests/Explanatory/Stacked_SparseAutoencoder_MNIST_test.ecl.xml",
+                    "stepregressionexample.ecl.xml": "ML/Tests/Explanatory/StepRegressionExample.ecl.xml",
+                    "classify2.ecl.xml": "ML/Tests/Explanatory/Classify2.ecl.xml",
+                    "irisds.ecl.xml": "ML/Tests/Explanatory/IrisDS.ecl.xml",
+                    "association.ecl.xml": "ML/Tests/Explanatory/Association.ecl.xml",
+                    "regressionpoly.ecl.xml": "ML/Tests/Explanatory/RegressionPoly.ecl.xml",
+                    "foldtest.ecl.xml": "ML/Tests/Explanatory/FoldTest.ecl.xml",
+                    "binaryc45vertical.ecl.xml": "ML/Tests/Explanatory/BinaryC45Vertical.ecl.xml",
+                    "qr_decomposition.ecl.xml": "ML/Tests/Explanatory/QR_Decomposition.ecl.xml",
+                    "neuralnetworksclassifier_mnist_test.ecl.xml": "ML/Tests/Explanatory/NeuralNetworksClassifier_MNIST_test.ecl.xml",
+                    "softmax_cancerdataset.ecl.xml": "ML/Tests/Explanatory/SoftMax_CancerDataset.ecl.xml",
+                    "classify_logistic.ecl.xml": "ML/Tests/Explanatory/classify_logistic.ecl.xml",
+                    "regression.ecl.xml": "ML/Tests/Explanatory/Regression.ecl.xml",
+                    "sparseautoencoder_mnist_error.ecl.xml": "ML/Tests/Explanatory/SparseAutoencoder_MNIST_Error.ecl.xml",
+                    "classify.ecl.xml": "ML/Tests/Explanatory/Classify.ecl.xml",
+                    "bwr_classifytext.ecl.xml": "ML/Tests/Explanatory/BWR_ClassifyText.ecl.xml",
+                    "samplingtest.ecl.xml": "ML/Tests/Explanatory/SamplingTest.ecl.xml",
+                    "sparsenaivebayes.ecl.xml": "ML/Tests/Explanatory/SparseNaiveBayes.ecl.xml",
+                    "distribution3.ecl.xml": "ML/Tests/Explanatory/Distribution3.ecl.xml",
+                    "assocrandom.ecl.xml": "ML/Tests/Explanatory/AssocRandom.ecl.xml",
+                    "neuralnetworksclassifier_test.ecl.xml": "ML/Tests/Explanatory/NeuralNetworksClassifier_test.ecl.xml",
+                    "softmax_mnistdataset.ecl.xml": "ML/Tests/Explanatory/SoftMax_MNISTdataset.ecl.xml",
+                    "regression2.ecl.xml": "ML/Tests/Explanatory/Regression2.ecl.xml",
+                    "bwr_testofregressionols_lubothdenseandsparse.ecl.xml": "ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl.xml",
+                    "sparseautoencoder_test.ecl.xml": "ML/Tests/Explanatory/SparseAutoencoder_test.ecl.xml"
+                },
+                "validation": {
+                    "mahout_k-means_synthetic_control.ecl.xml": "ML/Tests/Validation/mahout_k-means_synthetic_control.ecl.xml",
+                    "eig.ecl.xml": "ML/Tests/Validation/eig.ecl.xml",
+                    "pca.ecl.xml": "ML/Tests/Validation/Pca.ecl.xml",
+                    "lanczos.ecl.xml": "ML/Tests/Validation/Lanczos.ecl.xml",
+                    "lda_cmpr2blei.ecl.xml": "ML/Tests/Validation/lda_cmpr2blei.ecl.xml",
+                    "concord.ecl.xml": "ML/Tests/Validation/Concord.ecl.xml",
+                    "validate_gammas.ecl.xml": "ML/Tests/Validation/Validate_Gammas.ecl.xml"
+                },
+                "deprecated": {
+                    "irisplantds.ecl.xml": "ML/Tests/Deprecated/IrisPlantDS.ecl.xml",
+                    "bwr_testagglo.ecl.xml": "ML/Tests/Deprecated/BWR_testAgglo.ecl.xml",
+                    "chickweight.ecl.xml": "ML/Tests/Deprecated/ChickWeight.ecl.xml",
+                    "bwr_testclassifylogistic.ecl.xml": "ML/Tests/Deprecated/BWR_testClassifyLogistic.ecl.xml",
+                    "bwr_testgendata.ecl.xml": "ML/Tests/Deprecated/BWR_testGenData.ecl.xml",
+                    "bwr_testregression.ecl.xml": "ML/Tests/Deprecated/BWR_testRegression.ecl.xml",
+                    "bwr_testmlaggregatesntilesfunctions.ecl.xml": "ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl.xml",
+                    "bwr_testmlaggregates.ecl.xml": "ML/Tests/Deprecated/BWR_testMLAggregates.ecl.xml",
+                    "bwr_testranked.ecl.xml": "ML/Tests/Deprecated/BWR_testRanked.ecl.xml",
+                    "bwr_testbucketfunctions.ecl.xml": "ML/Tests/Deprecated/BWR_testBucketFunctions.ecl.xml",
+                    "bwr_testregressionpoly.ecl.xml": "ML/Tests/Deprecated/BWR_testRegressionPoly.ecl.xml",
+                    "bwr_testmlaggregatescardinality.ecl.xml": "ML/Tests/Deprecated/BWR_testMLAggregatesCardinality.ecl.xml"
+                }
+            },
+            "ensemble.ecl.xml": "ML/Ensemble.ecl.xml",
+            "lsa": {
+                "randomisedsvd.ecl.xml": "ML/LSA/RandomisedSVD.ecl.xml",
+                "lsa.ecl.xml": "ML/LSA/lsa.ecl.xml",
+                "tests": {
+                    "test.ecl.xml": "ML/LSA/Tests/Test.ecl.xml",
+                    "clustering.ecl.xml": "ML/LSA/Tests/Clustering.ecl.xml",
+                    "docretreival.ecl.xml": "ML/LSA/Tests/DocRetreival.ecl.xml",
+                    "largeperformance.ecl.xml": "ML/LSA/Tests/LargePerformance.ecl.xml",
+                    "classifybysvm.ecl.xml": "ML/LSA/Tests/ClassifyBySVM.ecl.xml",
+                    "randomtest.ecl.xml": "ML/LSA/Tests/Randomtest.ecl.xml",
+                    "classifybyknn.ecl.xml": "ML/LSA/Tests/ClassifyByKNN.ecl.xml",
+                    "knn_dotprod.ecl.xml": "ML/LSA/Tests/KNN_DotProd.ecl.xml"
+                },
+                "densesvd": {
+                    "eigc.ecl.xml": "ML/LSA/DenseSVD/EigC.ecl.xml",
+                    "helpers.ecl.xml": "ML/LSA/DenseSVD/Helpers.ecl.xml",
+                    "svd.ecl.xml": "ML/LSA/DenseSVD/SVD.ecl.xml",
+                    "eig.ecl.xml": "ML/LSA/DenseSVD/Eig.ecl.xml",
+                    "lapack_dsyev.ecl.xml": "ML/LSA/DenseSVD/lapack_dsyev.ecl.xml",
+                    "qr.ecl.xml": "ML/LSA/DenseSVD/QR.ecl.xml",
+                    "eigen_dsyev.ecl.xml": "ML/LSA/DenseSVD/eigen_dsyev.ecl.xml"
+                },
+                "similarity.ecl.xml": "ML/LSA/Similarity.ecl.xml"
+            },
+            "stepwiselogistic": {
+                "forward.ecl.xml": "ML/StepwiseLogistic/Forward.ecl.xml",
+                "bidirectional.ecl.xml": "ML/StepwiseLogistic/Bidirectional.ecl.xml",
+                "steplogistic.ecl.xml": "ML/StepwiseLogistic/StepLogistic.ecl.xml",
+                "backward.ecl.xml": "ML/StepwiseLogistic/Backward.ecl.xml",
+                "typessl.ecl.xml": "ML/StepwiseLogistic/TypesSL.ecl.xml"
+            },
+            "lazy.ecl.xml": "ML/Lazy.ecl.xml",
+            "nearestneighborssearch.ecl.xml": "ML/NearestNeighborsSearch.ecl.xml",
+            "populationestimate.ecl.xml": "ML/PopulationEstimate.ecl.xml",
+            "fromfield.ecl.xml": "ML/FromField.ecl.xml",
+            "nfoldcrossvalidation.ecl.xml": "ML/NFoldCrossValidation.ecl.xml",
+            "svm": {
+                "scale_factors.ecl.xml": "ML/SVM/scale_factors.ecl.xml",
+                "predict.ecl.xml": "ML/SVM/predict.ecl.xml",
+                "libsvm": {
+                    "svm_cross_validate.ecl.xml": "ML/SVM/LibSVM/svm_cross_validate.ecl.xml",
+                    "constants.ecl.xml": "ML/SVM/LibSVM/Constants.ecl.xml",
+                    "svm_train.ecl.xml": "ML/SVM/LibSVM/svm_train.ecl.xml",
+                    "converted.ecl.xml": "ML/SVM/LibSVM/Converted.ecl.xml",
+                    "libsvm_version.ecl.xml": "ML/SVM/LibSVM/LibSVM_Version.ecl.xml",
+                    "test": {
+                        "file_conversion.ecl.xml": "ML/SVM/LibSVM/Test/file_conversion.ecl.xml",
+                        "run_heart_scale.ecl.xml": "ML/SVM/LibSVM/Test/run_heart_scale.ecl.xml"
+                    },
+                    "types.ecl.xml": "ML/SVM/LibSVM/Types.ecl.xml",
+                    "svm_predict.ecl.xml": "ML/SVM/LibSVM/svm_predict.ecl.xml"
+                },
+                "train.ecl.xml": "ML/SVM/train.ecl.xml",
+                "cross_validate.ecl.xml": "ML/SVM/cross_validate.ecl.xml",
+                "converted.ecl.xml": "ML/SVM/Converted.ecl.xml",
+                "grid_search.ecl.xml": "ML/SVM/grid_search.ecl.xml",
+                "types.ecl.xml": "ML/SVM/Types.ecl.xml",
+                "scale_instance.ecl.xml": "ML/SVM/scale_instance.ecl.xml"
+            },
+            "associate.ecl.xml": "ML/Associate.ecl.xml"
+        },
+        "vl": {
+            "formatcartesiandata.ecl.xml": "VL/FormatCartesianData.ecl.xml",
+            "geo.ecl.xml": "VL/Geo.ecl.xml",
+            "google.ecl.xml": "VL/Google.ecl.xml",
+            "styles.ecl.xml": "VL/Styles.ecl.xml",
+            "d3_samples.ecl.xml": "VL/D3_Samples.ecl.xml",
+            "google_samples.ecl.xml": "VL/Google_Samples.ecl.xml",
+            "swapaxes.ecl.xml": "VL/SwapAxes.ecl.xml",
+            "d3.ecl.xml": "VL/D3.ecl.xml",
+            "types.ecl.xml": "VL/Types.ecl.xml",
+            "chart.ecl.xml": "VL/Chart.ecl.xml"
+        },
+        "pbblas": {
+            "pb_dgetrf.ecl.xml": "PBblas/PB_dgetrf.ecl.xml",
+            "apply2elements.ecl.xml": "PBblas/Apply2Elements.ecl.xml",
+            "pb_dtrsm.ecl.xml": "PBblas/PB_dtrsm.ecl.xml",
+            "pb_extract_tri.ecl.xml": "PBblas/PB_Extract_Tri.ecl.xml",
+            "hadamardproduct.ecl.xml": "PBblas/HadamardProduct.ecl.xml",
+            "matrix_map.ecl.xml": "PBblas/Matrix_Map.ecl.xml",
+            "pb_dbvmm.ecl.xml": "PBblas/PB_dbvmm.ecl.xml",
+            "blas": {
+                "dtrsm.ecl.xml": "PBblas/BLAS/dtrsm.ecl.xml",
+                "daxpy.ecl.xml": "PBblas/BLAS/daxpy.ecl.xml",
+                "dgemm.ecl.xml": "PBblas/BLAS/dgemm.ecl.xml",
+                "dasum.ecl.xml": "PBblas/BLAS/dasum.ecl.xml",
+                "dscal.ecl.xml": "PBblas/BLAS/dscal.ecl.xml",
+                "dsyrk.ecl.xml": "PBblas/BLAS/dsyrk.ecl.xml"
+            },
+            "pb_daxpy.ecl.xml": "PBblas/PB_daxpy.ecl.xml",
+            "types.ecl.xml": "PBblas/Types.ecl.xml",
+            "ielementfunc.ecl.xml": "PBblas/IElementFunc.ecl.xml",
+            "autobvmap.ecl.xml": "PBblas/AutoBVMap.ecl.xml",
+            "constants.ecl.xml": "PBblas/Constants.ecl.xml",
+            "mu.ecl.xml": "PBblas/MU.ecl.xml",
+            "pb_dscal.ecl.xml": "PBblas/PB_dscal.ecl.xml",
+            "pb_dpotrf.ecl.xml": "PBblas/PB_dpotrf.ecl.xml",
+            "tests": {
+                "multiply.ecl.xml": "PBblas/Tests/Multiply.ecl.xml",
+                "diffreport.ecl.xml": "PBblas/Tests/DiffReport.ecl.xml",
+                "maptest.ecl.xml": "PBblas/Tests/MapTest.ecl.xml",
+                "factor.ecl.xml": "PBblas/Tests/Factor.ecl.xml",
+                "solve.ecl.xml": "PBblas/Tests/Solve.ecl.xml"
+            },
+            "block": {
+                "icellfunc.ecl.xml": "PBblas/Block/ICellFunc.ecl.xml",
+                "extract_diag.ecl.xml": "PBblas/Block/extract_diag.ecl.xml",
+                "apply2cells.ecl.xml": "PBblas/Block/Apply2Cells.ecl.xml",
+                "make_diag.ecl.xml": "PBblas/Block/make_diag.ecl.xml",
+                "extract_tri.ecl.xml": "PBblas/Block/Extract_Tri.ecl.xml",
+                "dgetf2.ecl.xml": "PBblas/Block/dgetf2.ecl.xml",
+                "make_vector.ecl.xml": "PBblas/Block/make_vector.ecl.xml",
+                "trace.ecl.xml": "PBblas/Block/trace.ecl.xml"
+            },
+            "pb_dtran.ecl.xml": "PBblas/PB_dtran.ecl.xml",
+            "maker8set.ecl.xml": "PBblas/MakeR8Set.ecl.xml",
+            "pb_dasum.ecl.xml": "PBblas/PB_dasum.ecl.xml",
+            "imatrix_map.ecl.xml": "PBblas/IMatrix_Map.ecl.xml",
+            "pb_dbvrk.ecl.xml": "PBblas/PB_dbvrk.ecl.xml",
+            "pb_dgemm.ecl.xml": "PBblas/PB_dgemm.ecl.xml",
+            "vector2diag.ecl.xml": "PBblas/Vector2Diag.ecl.xml",
+            "lapack": {
+                "dpotf2.ecl.xml": "PBblas/LAPACK/dpotf2.ecl.xml"
+            }
+        },
+        "ts": {
+            "differenceseries.ecl.xml": "TS/DifferenceSeries.ecl.xml",
+            "estimation.ecl.xml": "TS/Estimation.ecl.xml",
+            "identification.ecl.xml": "TS/Identification.ecl.xml",
+            "lagcorrelations.ecl.xml": "TS/LagCorrelations.ecl.xml",
+            "seriesbymodel.ecl.xml": "TS/SeriesByModel.ecl.xml",
+            "season_adj.ecl.xml": "TS/season_adj.ecl.xml",
+            "extract_ts.ecl.xml": "TS/extract_ts.ecl.xml",
+            "accumseries.ecl.xml": "TS/AccumSeries.ecl.xml",
+            "forecast.ecl.xml": "TS/Forecast.ecl.xml",
+            "extendedparameters.ecl.xml": "TS/ExtendedParameters.ecl.xml",
+            "estimatedobs.ecl.xml": "TS/EstimatedObs.ecl.xml",
+            "types.ecl.xml": "TS/Types.ecl.xml",
+            "diagnosis.ecl.xml": "TS/Diagnosis.ecl.xml",
+            "demo": {
+                "bwr_demo_identification.ecl.xml": "TS/Demo/BWR_Demo_Identification.ecl.xml",
+                "bwr_demo_estimate.ecl.xml": "TS/Demo/BWR_Demo_Estimate.ecl.xml",
+                "bwr_compare_2_r_arima.ecl.xml": "TS/Demo/BWR_Compare_2_R_ARIMA.ecl.xml",
+                "series_data.ecl.xml": "TS/Demo/Series_Data.ecl.xml"
+            }
+        },
+        "testingsuite": {
+            "classification": {
+                "testrandomforestclassificationd.ecl.xml": "TestingSuite/Classification/TestRandomForestClassificationD.ecl.xml",
+                "testrandomforestclassificationc.ecl.xml": "TestingSuite/Classification/TestRandomForestClassificationC.ecl.xml",
+                "testlogisticregression.ecl.xml": "TestingSuite/Classification/TestLogisticRegression.ecl.xml",
+                "testdecisiontreeclassifier.ecl.xml": "TestingSuite/Classification/TestDecisionTreeClassifier.ecl.xml",
+                "datasets": {
+                    "continious_ecolids.ecl.xml": "TestingSuite/Classification/Datasets/continious_ecoliDS.ecl.xml",
+                    "discrete_soybeands.ecl.xml": "TestingSuite/Classification/Datasets/discrete_soybeanDS.ecl.xml",
+                    "continious_segmentationds.ecl.xml": "TestingSuite/Classification/Datasets/continious_segmentationDS.ecl.xml",
+                    "discrete_vehicleds.ecl.xml": "TestingSuite/Classification/Datasets/discrete_VehicleDS.ecl.xml",
+                    "discrete_germands.ecl.xml": "TestingSuite/Classification/Datasets/discrete_GermanDS.ecl.xml",
+                    "continious_ringnormdatads.ecl.xml": "TestingSuite/Classification/Datasets/continious_ringnormDataDS.ecl.xml",
+                    "discrete_satimagesds.ecl.xml": "TestingSuite/Classification/Datasets/discrete_satimagesDS.ecl.xml",
+                    "continious_waveformds.ecl.xml": "TestingSuite/Classification/Datasets/continious_waveformDS.ecl.xml",
+                    "discrete_housevoteds.ecl.xml": "TestingSuite/Classification/Datasets/discrete_houseVoteDS.ecl.xml",
+                    "continious_ionosphereds.ecl.xml": "TestingSuite/Classification/Datasets/continious_ionosphereDS.ecl.xml",
+                    "continious_glassds.ecl.xml": "TestingSuite/Classification/Datasets/continious_glassDS.ecl.xml",
+                    "discrete_letterrecognitionds.ecl.xml": "TestingSuite/Classification/Datasets/discrete_letterrecognitionDS.ecl.xml",
+                    "discrete_liverds.ecl.xml": "TestingSuite/Classification/Datasets/discrete_liverDS.ecl.xml"
+                }
+            },
+            "testrandomforestclassifierd.ecl.xml": "TestingSuite/TestRandomForestClassifierD.ecl.xml",
+            "utils": {
+                "totesting.ecl.xml": "TestingSuite/Utils/ToTesting.ecl.xml",
+                "generatecode_r.ecl.xml": "TestingSuite/Utils/GenerateCode_R.ecl.xml",
+                "getnumberoffields.ecl.xml": "TestingSuite/Utils/GetNumberofFields.ecl.xml",
+                "types.ecl.xml": "TestingSuite/Utils/Types.ecl.xml",
+                "generatecode_k.ecl.xml": "TestingSuite/Utils/GenerateCode_k.ecl.xml",
+                "generatecode.ecl.xml": "TestingSuite/Utils/GenerateCode.ecl.xml",
+                "student_t_test.ecl.xml": "TestingSuite/Utils/Student_T_Test.ecl.xml",
+                "totraining.ecl.xml": "TestingSuite/Utils/ToTraining.ecl.xml"
+            },
+            "benchmarkresults": {
+                "kmeans_performance_scores.ecl.xml": "TestingSuite/BenchmarkResults/kmeans_performance_scores.ecl.xml",
+                "rfc_performance_scores_c.ecl.xml": "TestingSuite/BenchmarkResults/rfc_performance_scores_c.ecl.xml",
+                "rfc_performance_scores_d.ecl.xml": "TestingSuite/BenchmarkResults/rfc_performance_scores_d.ecl.xml",
+                "dtc_performance_scores.ecl.xml": "TestingSuite/BenchmarkResults/dtc_performance_scores.ecl.xml"
+            },
+            "regression": {
+                "testlinearregression.ecl.xml": "TestingSuite/Regression/TestLinearRegression.ecl.xml",
+                "datasets": {
+                    "friedman1ds.ecl.xml": "TestingSuite/Regression/Datasets/friedman1DS.ecl.xml",
+                    "friedman3ds.ecl.xml": "TestingSuite/Regression/Datasets/friedman3DS.ecl.xml",
+                    "testdecisiontreeregressor.ecl.xml": "TestingSuite/Regression/Datasets/TestDecisionTreeRegressor.ecl.xml",
+                    "abaloneds.ecl.xml": "TestingSuite/Regression/Datasets/AbaloneDS.ecl.xml",
+                    "housingds.ecl.xml": "TestingSuite/Regression/Datasets/housingDS.ecl.xml",
+                    "servods.ecl.xml": "TestingSuite/Regression/Datasets/servoDS.ecl.xml",
+                    "friedman2ds.ecl.xml": "TestingSuite/Regression/Datasets/friedman2DS.ecl.xml"
+                }
+            },
+            "testkmeans.ecl.xml": "TestingSuite/TestKmeans.ecl.xml",
+            "slimmer_testall.ecl.xml": "TestingSuite/slimmer_TestAll.ecl.xml",
+            "testrandomforestclassifierc.ecl.xml": "TestingSuite/TestRandomForestClassifierC.ecl.xml",
+            "testdecisiontreeclassifier.ecl.xml": "TestingSuite/TestDecisionTreeClassifier.ecl.xml",
+            "testlinearregression.ecl.xml": "TestingSuite/TestLinearRegression.ecl.xml",
+            "clustering": {
+                "testkmeans.ecl.xml": "TestingSuite/Clustering/TestKMeans.ecl.xml",
+                "datasets": {
+                    "ionek_f_four_c_fourds.ecl.xml": "TestingSuite/Clustering/Datasets/ionek_f_four_c_fourDS.ecl.xml",
+                    "ionek_f_twofiftysix_c_eightds.ecl.xml": "TestingSuite/Clustering/Datasets/ionek_f_twofiftysix_c_eightDS.ecl.xml",
+                    "ionek_f_two_c_twods.ecl.xml": "TestingSuite/Clustering/Datasets/ionek_f_two_c_twoDS.ecl.xml",
+                    "ionek_f_sixteen_c_eightds.ecl.xml": "TestingSuite/Clustering/Datasets/ionek_f_sixteen_c_eightDS.ecl.xml",
+                    "ionek_f_fiveonetwo_c_twods.ecl.xml": "TestingSuite/Clustering/Datasets/ionek_f_fiveonetwo_c_twoDS.ecl.xml",
+                    "ionek_f_eight_c_sixds.ecl.xml": "TestingSuite/Clustering/Datasets/ionek_f_eight_c_sixDS.ecl.xml",
+                    "ionek_f_thirty_two_c_eightds.ecl.xml": "TestingSuite/Clustering/Datasets/ionek_f_thirty_two_c_eightDS.ecl.xml"
+                }
+            }
+        },
+        "bundle.ecl.xml": "Bundle.ecl.xml",
+        "examples": {
+            "sentilyze": {
+                "keywordcount": {
+                    "generate.ecl.xml": "Examples/Sentilyze/KeywordCount/Generate.ecl.xml",
+                    "classify.ecl.xml": "Examples/Sentilyze/KeywordCount/Classify.ecl.xml"
+                },
+                "types.ecl.xml": "Examples/Sentilyze/Types.ecl.xml",
+                "preprocess.ecl.xml": "Examples/Sentilyze/PreProcess.ecl.xml",
+                "strings.ecl.xml": "Examples/Sentilyze/Strings.ecl.xml",
+                "naivebayes": {
+                    "model.ecl.xml": "Examples/Sentilyze/NaiveBayes/Model.ecl.xml",
+                    "classify.ecl.xml": "Examples/Sentilyze/NaiveBayes/Classify.ecl.xml"
+                }
+            }
+        }
+    }
+}

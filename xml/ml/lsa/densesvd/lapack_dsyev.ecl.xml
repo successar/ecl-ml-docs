@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Source name="ML.LSA.DenseSVD.lapack_dsyev" sourcePath="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" target="lapack_dsyev.ecl.xml">
+  <Import body="0" end="7" fullname="PBblas.Types" inherit_type="local" line="1" name="Types" ref="pbblas.types" start="7" target="../../../pbblas/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="35" end="54" fullname="ml.lsa.densesvd.dimension_t" inherit_type="local" line="2" name="dimension_t" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="21">
+   <Signature>dimension_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="69" end="84" fullname="ml.lsa.densesvd.value_t" inherit_type="local" line="3" name="value_t" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="55">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="99" end="115" fullname="ml.lsa.densesvd.matrix_t" inherit_type="local" line="4" name="matrix_t" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="85">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="175" end="1081" exported="1" fullname="ml.lsa.densesvd.lapack_dsyev" inherit_type="local" line="6" name="lapack_dsyev" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="117">
+   <Type>embed</Type>
+   <Signature>matrix_t lapack_dsyev(dimension_t N, matrix_t A)</Signature><Params>
+    <Param name="N"/>
+    <Param name="A"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

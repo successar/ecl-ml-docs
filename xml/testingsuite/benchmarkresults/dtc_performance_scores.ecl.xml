@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Types.ecl" name="TestingSuite.Utils.Types" target="../utils/types.ecl.xml"/><Source name="TestingSuite.BenchmarkResults.dtc_performance_scores" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/BenchmarkResults/dtc_performance_scores.ecl" target="dtc_performance_scores.ecl.xml">
+  <Definition body="74" end="1729" exported="1" fullname="testingsuite.benchmarkresults.dtc_performance_scores" inherit_type="local" line="2" name="dtc_performance_scores" source="/media/sarthak/Data/ecl-ml/TestingSuite/BenchmarkResults/dtc_performance_scores.ecl" start="42">
+   <Signature>dtc_performance_scores</Signature><Type>attribute</Type>
+  </Definition>
+  <Import body="0" end="7" fullname="TestingSuite.Utils.Types" inherit_type="local" line="1" name="Types" ref="testingsuite.utils.types" start="7" target="../utils/types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>

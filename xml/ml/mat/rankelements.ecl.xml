@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="ML.Mat.RankElements" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/RankElements.ecl" target="rankelements.ecl.xml">
+  <Definition body="88" end="500" exported="1" fullname="ml.mat.rankelements" inherit_type="local" line="3" name="RankElements" source="/media/sarthak/Data/ecl-ml/ML/Mat/RankElements.ecl" start="12">
+   <Type>function</Type>
+   <Signature>RankElements(DATASET(ML.Mat.Types.Element) A, UNSIGNED groups = 0)</Signature><Params>
+    <Param name="A"/>
+    <Param name="groups"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/></Meta>

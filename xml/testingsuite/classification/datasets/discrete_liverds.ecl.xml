@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.discrete_liverDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_liverDS.ecl" target="discrete_liverds.ecl.xml">
+  <Definition body="44" end="17279" exported="1" fullname="TestingSuite.Classification.Datasets.discrete_liverDS" inherit_type="local" line="2" name="discrete_liverDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_liverDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="87" end="369" fullname="testingsuite.classification.datasets.discrete_liverds.discrete_liverrecord" inherit_type="local" line="3" name="discrete_liverRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_liverDS.ecl" start="57">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="mcv"/>
+    <Field name="alkphos"/>
+    <Field name="sgpt"/>
+    <Field name="sgot"/>
+    <Field name="gammagt"/>
+    <Field name="drinks"/>
+    <Signature>discrete_liverRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="391" end="17274" exported="1" fullname="testingsuite.classification.datasets.discrete_liverds.content" inherit_type="local" line="13" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_liverDS.ecl" start="374">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>discrete_liverDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

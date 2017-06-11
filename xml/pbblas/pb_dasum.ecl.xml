@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="PBblas.PB_dasum" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" target="pb_dasum.ecl.xml">
+  <Import body="0" end="35" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" start="35" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="50" fullname="PBblas.IMatrix_Map" inherit_type="local" line="3" name="IMatrix_Map" ref="pbblas.imatrix_map" start="50" target="imatrix_map.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="77" fullname="PBblas.Types" inherit_type="local" line="4" name="Types" ref="pbblas.types" start="77" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="98" fullname="PBblas.Constants" inherit_type="local" line="5" name="Constants" ref="pbblas.constants" start="98" target="constants.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="123" fullname="PBblas.BLAS" inherit_type="local" line="6" name="BLAS" ref="pbblas.blas" remotescope="1" start="123" target="blas/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="143" end="162" fullname="pbblas.part" inherit_type="local" line="7" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" start="136">
+   <Type>record</Type>
+   <Field name="node_id"/>
+   <Field name="partition_id"/>
+   <Field name="block_row"/>
+   <Field name="block_col"/>
+   <Field name="first_row"/>
+   <Field name="part_rows"/>
+   <Field name="first_col"/>
+   <Field name="part_cols"/>
+   <Signature>Part</Signature><Field name="mat_part"/>
+  </Definition>
+  <Definition body="173" end="188" fullname="pbblas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" start="163">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="200" end="216" fullname="pbblas.matrix_t" inherit_type="local" line="9" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" start="189">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="287" end="514" exported="1" fullname="pbblas.pb_dasum" inherit_type="local" line="11" name="PB_dasum" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" start="218">
+   <Type>function</Type>
+   <Signature>value_t PB_dasum(PBblas.IMatrix_Map x_map, DATASET(Part) X)</Signature><Params>
+    <Param name="x_map"/>
+    <Param name="X"/>
+   </Params>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" name="PBblas.BLAS.dasum" target="blas/dasum.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="constants.ecl.xml"/></Meta>

@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Source name="ML.Tests.Deprecated.BWR_testMLAggregatesNTilesFunctions" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" target="bwr_testmlaggregatesntilesfunctions.ecl.xml">
+  <Import body="0" end="11" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="11" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="31" end="123" fullname="ml.tests.deprecated.value_record" inherit_type="local" line="4" name="value_record" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" start="16">
+   <Type>record</Type>
+   <Field name="rid"/>
+   <Field name="height"/>
+   <Field name="weight"/>
+   <Field name="age"/>
+   <Signature>value_record</Signature><Field name="species"/>
+  </Definition>
+  <Definition body="145" end="767" fullname="ml.tests.deprecated.d" inherit_type="local" line="12" name="d" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" start="141">
+   <Signature>d</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1033" end="1063" fullname="ml.tests.deprecated.speciesfeaturesimple" inherit_type="local" line="35" name="SpeciesFeatureSimple" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" start="1010">
+   <Signature>SpeciesFeatureSimple</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1148" end="1178" fullname="ml.tests.deprecated.speciesfeatureranked" inherit_type="local" line="38" name="SpeciesFeatureRanked" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" start="1125">
+   <Signature>SpeciesFeatureRanked</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1245" end="1268" fullname="ML.FieldAggregates" inherit_type="local" line="41" name="F1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" start="1240" target="../../fieldaggregates.ecl.xml">
+   <Type>module</Type>
+   <Definition body="517" end="549" exported="1" fullname="ml.fieldaggregates.simple" inherit_type="local" line="16" name="Simple" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="502" target="../../fieldaggregates.ecl.xml">
+    <Signature>Simple</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="726" end="729" exported="1" fullname="ml.fieldaggregates.simpleranked" inherit_type="local" line="27" name="SimpleRanked" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="704" target="../../fieldaggregates.ecl.xml">
+    <Signature>SimpleRanked</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1080" end="1213" exported="1" fullname="ml.fieldaggregates.medians" inherit_type="local" line="31" name="Medians" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="1064" target="../../fieldaggregates.ecl.xml">
+    <Signature>Medians</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1815" end="1876" exported="1" fullname="ml.fieldaggregates.minmednext" inherit_type="local" line="38" name="MinMedNext" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="1796" target="../../fieldaggregates.ecl.xml">
+    <Signature>MinMedNext</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2148" end="2228" exported="1" fullname="ml.fieldaggregates.buckets" inherit_type="local" line="45" name="Buckets" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="2112" target="../../fieldaggregates.ecl.xml">
+    <Type>function</Type>
+    <Signature>Buckets(Types.t_Discrete n)</Signature><Params>
+     <Param name="n"/>
+    </Params>
+   </Definition>
+   <Definition body="2270" end="2426" exported="1" fullname="ml.fieldaggregates.bucketranges" inherit_type="local" line="46" name="BucketRanges" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="2229" target="../../fieldaggregates.ecl.xml">
+    <Type>function</Type>
+    <Signature>BucketRanges(Types.t_Discrete n)</Signature><Params>
+     <Param name="n"/>
+    </Params>
+   </Definition>
+   <Definition body="2594" end="2631" fullname="ml.fieldaggregates.t" inherit_type="local" line="55" name="T" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="2583" target="../../fieldaggregates.ecl.xml">
+    <Signature>T</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2727" end="2991" exported="1" fullname="ml.fieldaggregates.modes" inherit_type="local" line="58" name="Modes" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="2713" target="../../fieldaggregates.ecl.xml">
+    <Signature>Modes</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3013" end="3074" exported="1" fullname="ml.fieldaggregates.cardinality" inherit_type="local" line="62" name="Cardinality" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="2993" target="../../fieldaggregates.ecl.xml">
+    <Signature>Cardinality</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3238" end="3374" exported="1" fullname="ml.fieldaggregates.rankedinput" inherit_type="local" line="74" name="RankedInput" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="3217" target="../../fieldaggregates.ecl.xml">
+    <Signature>RankedInput</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3621" end="3781" exported="1" fullname="ml.fieldaggregates.ntiles" inherit_type="local" line="83" name="NTiles" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="3586" target="../../fieldaggregates.ecl.xml">
+    <Type>function</Type>
+    <Signature>NTiles(Types.t_Discrete n)</Signature><Params>
+     <Param name="n"/>
+    </Params>
+   </Definition>
+   <Definition body="3822" end="4040" exported="1" fullname="ml.fieldaggregates.ntileranges" inherit_type="local" line="86" name="NTileRanges" source="/media/sarthak/Data/ecl-ml/./ML/FieldAggregates.ecl" start="3782" target="../../fieldaggregates.ecl.xml">
+    <Type>function</Type>
+    <Signature>NTileRanges(Types.t_Discrete n)</Signature><Params>
+     <Param name="n"/>
+    </Params>
+   </Definition>
+   <Signature>F1</Signature><Parents/>
+  </Definition>
+  <Definition body="1319" end="1352" fullname="ml.tests.deprecated.speciesfeaturentiles" inherit_type="local" line="44" name="SpeciesFeatureNTiles" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" start="1296">
+   <Signature>SpeciesFeatureNTiles</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1438" end="1476" fullname="ml.tests.deprecated.chickweightntileranges" inherit_type="local" line="46" name="ChickWeightNTileRanges" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testMLAggregatesNTilesFunctions.ecl" start="1413">
+   <Signature>ChickWeightNTileRanges</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="29" end="91" fullname="ml.tests.deprecated.o_toname" inherit_type="local" line="81" name="o_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//---------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="31" end="92" fullname="ml.tests.deprecated.o_tonumber" inherit_type="local" line="83" name="o_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//-----------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.deprecated.o" inherit_type="local" line="85" name="o" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="7" end="2800" fullname="ml.tests.deprecated.o_map" inherit_type="local" line="87" name="o_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//-----</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/></Meta>

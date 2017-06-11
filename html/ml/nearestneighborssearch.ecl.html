@@ -1,0 +1,219 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="trees.ecl.html">
+				ml.trees
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			MODULE : NearestNeighborsSearch
+			<ul>
+				
+		<li>
+			RECORD : leafData
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : NN
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : DEFAULT
+			<ul>
+				
+		<li>
+			FUNCTION : SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : KDTreeNNSearch(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)
+			<ul>
+				
+		<li>
+			RECORD : query_point
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : PORT KNNeighbors(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries)  F
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : PORT SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData) F
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	MODULE : NearestNeighborsSearch
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : leafData
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : NN
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : DEFAULT
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	FUNCTION : SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : KDTreeNNSearch(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="nearestneighborssearch.ecl.html">
+					ml.nearestneighborssearch.default
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	RECORD : query_point
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : PORT KNNeighbors(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries)  F
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : PORT SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData) F
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	
+</body>
+</html>

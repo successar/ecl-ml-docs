@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Source name="ML.Tests.Benchmarks.Cluster_doc" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Benchmarks/Cluster_doc.ecl" target="cluster_doc.ecl.xml">
+  <Import body="0" end="547" fullname="ML" inherit_type="local" line="12" name="ML" ref="ml" start="547" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="561" end="583" fullname="ml.tests.benchmarks.lmatrix" inherit_type="local" line="14" name="lMatrix" source="/media/sarthak/Data/ecl-ml/ML/Tests/Benchmarks/Cluster_doc.ecl" start="552">
+   <Type>record</Type>
+   <Field name="id"/>
+   <Field name="number"/>
+   <Signature>lMatrix</Signature><Field name="value"/>
+  </Definition>
+  <Definition body="602" end="2589" fullname="ml.tests.benchmarks.ddocumentmatrix" inherit_type="local" line="16" name="dDocumentMatrix" source="/media/sarthak/Data/ecl-ml/ML/Tests/Benchmarks/Cluster_doc.ecl" start="585">
+   <Signature>dDocumentMatrix</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="38" end="91" fullname="ml.tests.benchmarks.dcentroids_toname" inherit_type="local" line="81" name="dCentroids_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//------------------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="40" end="92" fullname="ml.tests.benchmarks.dcentroids_tonumber" inherit_type="local" line="83" name="dCentroids_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//--------------------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.benchmarks.dcentroids" inherit_type="local" line="85" name="dCentroids" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="16" end="2800" fullname="ml.tests.benchmarks.dcentroids_map" inherit_type="local" line="87" name="dCentroids_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//--------------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2727" end="2853" fullname="ml.tests.benchmarks.dcentroidmatrix" inherit_type="local" line="121" name="dCentroidMatrix" source="/media/sarthak/Data/ecl-ml/ML/Tests/Benchmarks/Cluster_doc.ecl" start="2710">
+   <Signature>dCentroidMatrix</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3015" end="3067" fullname="ML.Cluster.KMeans" inherit_type="local" line="132" name="KMeans" source="/media/sarthak/Data/ecl-ml/ML/Tests/Benchmarks/Cluster_doc.ecl" start="3007" target="../../cluster.ecl.xml">
+   <Type>module</Type>
+   <Definition body="15397" end="15439" fullname="ml.cluster.kmeans.ioffset" inherit_type="local" line="222" name="iOffset" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="15381" target="../../cluster.ecl.xml">
+    <Signature>iOffset</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="15696" end="15853" fullname="ml.cluster.kmeans.literations" inherit_type="local" line="227" name="lIterations" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="15676" target="../../cluster.ecl.xml">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Signature>lIterations</Signature><Field name="values"/>
+   </Definition>
+   <Definition body="16000" end="16082" fullname="ml.cluster.kmeans.dresult" inherit_type="local" line="234" name="dResult" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="15928" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.NumericField dResult(UNSIGNED n=n,DATASET(lIterations) d)</Signature><Params>
+     <Param name="n"/>
+     <Param name="d"/>
+    </Params>
+   </Definition>
+   <Definition body="16450" end="16554" fullname="ml.cluster.kmeans.ddelta" inherit_type="local" line="242" name="dDelta" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="16379" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>dDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)</Signature><Params>
+     <Param name="n01"/>
+     <Param name="n02"/>
+     <Param name="d"/>
+    </Params>
+   </Definition>
+   <Definition body="16770" end="17155" fullname="ml.cluster.kmeans.ddistancedelta" inherit_type="local" line="246" name="dDistanceDelta" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="16691" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>dDistanceDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)</Signature><Params>
+     <Param name="n01"/>
+     <Param name="n02"/>
+     <Param name="d"/>
+    </Params>
+   </Definition>
+   <Definition body="19703" end="19834" fullname="ml.cluster.kmeans.diterations" inherit_type="local" line="285" name="dIterations" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="19683" target="../../cluster.ecl.xml">
+    <Signature>dIterations</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="19911" end="19923" exported="1" fullname="ml.cluster.kmeans.allresults" inherit_type="local" line="288" name="AllResults" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="19880" target="../../cluster.ecl.xml">
+    <Signature>lIterations AllResults</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="20108" end="20139" exported="1" fullname="ml.cluster.kmeans.convergence" inherit_type="local" line="292" name="Convergence" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="20079" target="../../cluster.ecl.xml">
+    <Signature>UNSIGNED Convergence</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="20385" end="20415" exported="1" fullname="ml.cluster.kmeans.result" inherit_type="local" line="296" name="Result" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="20292" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.NumericField Result(UNSIGNED n=Convergence,DATASET(lIterations) d=dIterations)</Signature><Params>
+     <Param name="n"/>
+     <Param name="d"/>
+    </Params>
+   </Definition>
+   <Definition body="20541" end="20595" exported="1" fullname="ml.cluster.kmeans.delta" inherit_type="local" line="297" name="Delta" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="20420" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>Types.NumericField Delta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)</Signature><Params>
+     <Param name="n01"/>
+     <Param name="n02"/>
+     <Param name="d"/>
+    </Params>
+   </Definition>
+   <Definition body="20710" end="20772" exported="1" fullname="ml.cluster.kmeans.distancedelta" inherit_type="local" line="298" name="DistanceDelta" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="20600" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>DistanceDelta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)</Signature><Params>
+     <Param name="n01"/>
+     <Param name="n02"/>
+     <Param name="d"/>
+    </Params>
+   </Definition>
+   <Definition body="20915" end="21115" exported="1" fullname="ml.cluster.kmeans.allegiances" inherit_type="local" line="302" name="Allegiances" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="20871" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>Allegiances(UNSIGNED n=Convergence)</Signature><Params>
+     <Param name="n"/>
+    </Params>
+   </Definition>
+   <Definition body="21184" end="21210" exported="1" fullname="ml.cluster.kmeans.allegiance" inherit_type="local" line="303" name="Allegiance" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="21120" target="../../cluster.ecl.xml">
+    <Type>function</Type>
+    <Signature>UNSIGNED Allegiance(UNSIGNED id,UNSIGNED n=Convergence)</Signature><Params>
+     <Param name="id"/>
+     <Param name="n"/>
+    </Params>
+   </Definition>
+   <Signature>KMeans</Signature><Parents/>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Cluster.ecl" name="ML.Cluster" target="../../cluster.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/></Meta>

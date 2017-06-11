@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Source name="PBblas.Block.extract_diag" sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/extract_diag.ecl" target="extract_diag.ecl.xml">
+  <Import body="0" end="35" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" start="35" target="../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="54" end="77" fullname="pbblas.block.matrix_t" inherit_type="local" line="3" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/extract_diag.ecl" start="43">
+   <Signature>matrix_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="86" end="112" fullname="pbblas.block.dim_t" inherit_type="local" line="4" name="dim_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/extract_diag.ecl" start="78">
+   <Signature>dim_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="123" end="145" fullname="pbblas.block.value_t" inherit_type="local" line="5" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/extract_diag.ecl" start="113">
+   <Signature>value_t</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="208" end="488" exported="1" fullname="pbblas.block.extract_diag" inherit_type="local" line="7" name="extract_diag" source="/media/sarthak/Data/ecl-ml/PBblas/Block/extract_diag.ecl" start="147">
+   <Type>function</Type>
+   <Signature>matrix_t extract_diag(dim_t m, dim_t n, matrix_t x)</Signature><Params>
+    <Param name="m"/>
+    <Param name="n"/>
+    <Param name="x"/>
+   </Params>
+  </Definition>
+ </Source>
+ </Meta>

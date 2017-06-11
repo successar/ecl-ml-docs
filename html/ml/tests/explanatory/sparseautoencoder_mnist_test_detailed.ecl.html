@@ -1,0 +1,7014 @@
+<html>
+<head>
+	<title></title>
+	<meta content="">
+	<style></style>
+</head>
+<body>
+	<h2>Imports	</h2>
+	<ul>
+		
+		<li>
+			
+			<a href="../../pkg.toc.html">
+				ml
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../types.ecl.html">
+				ml.types
+			</a>
+			
+		</li>
+		
+		<li>
+			
+			<a href="../../../pbblas/pkg.toc.html">
+				pbblas
+			</a>
+			
+		</li>
+		
+	</ul>
+	<h2>Tree</h2>
+	<ul>
+		
+		<li>
+			RECORD : Layout_Cell
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Layout_Part
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : INTEGER4 hl
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : INTEGER4 f
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : value_record
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /-------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : uctured dataset, and appends a unique 1-base
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes any structured dataset, and appends a unique 1-based record ID
+// column to it 
+//
+//   dIn       : The name of
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //------------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : //--------------------------------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : //--------------
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : input_data_tmp
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : Sampledata_Format
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : sample_table
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : REAL8 sparsityParam
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : REAL8 BETA
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : REAL8 ALPHA
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : REAL8 LAMBDA
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED2 MaxIter
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED4 prows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED4 pcols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED4 Maxrows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : UNSIGNED4 Maxcols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : IntW
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Intb
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : X
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : dt
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : dTmp
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : d
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : m
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : m_1
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : sparsityParam_
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : sparsityParam_1
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			RECORD : sizeRec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : havemaxrow
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : havemaxcol
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : havemaxrowcol
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : dstats
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : d_n
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : d_m
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : output_num
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : derivemap
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : MapMatrix
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : rowcol
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : sizeTable
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : dmap
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ddist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Ymap
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Ydist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w1_mat
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w1_mat_x
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w1_mat_y
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : w1map
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w1dist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w2_mat
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w2_mat_x
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w2_mat_y
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : w2map
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : w2dist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : b1vec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : b1vec_x
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : b1vecmap
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : b1vecdist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : b2vec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : b2vec_x
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : b2vecmap
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : b2vecdist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.value_t sp_reci(PBblas.Types.value_t v,PBblas.Types.dimension_t r,PBblas.Types.dimension_t c)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.value_t sp_1_reci(PBblas.Types.value_t v,PBblas.Types.dimension_t r,PBblas.Types.dimension_t c)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.value_t sp_delta(PBblas.Types.value_t v,PBblas.Types.dimension_t r,PBblas.Types.dimension_t c)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.value_t siggrad(PBblas.Types.value_t v, PBblas.Types.dimension_t r, PBblas.Types.dimension_t c)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : Types.value_t sigmoid(PBblas.Types.value_t v, PBblas.Types.dimension_t r, PBblas.Types.dimension_t c)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : b1map
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : b2map
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : a2map
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : a3map
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : HL_nodes
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Hiddmap
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			MODULE : Ones_VecMap
+			<ul>
+				
+		<li>
+			ATTRIBUTE : nodes_available
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : this_node
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : row_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : col_blocks
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : block_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_rows
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : matrix_cols
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : partitions_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : nodes_used
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : row_block(dimension_t mat_row)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : col_block(dimension_t mat_col)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : assigned_node(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_row(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : first_col(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_rows(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : part_cols(partition_t p)
+			<ul>
+				
+			</ul>
+		</li>
+		
+			</ul>
+		</li>
+		
+		<li>
+			TRANSFORM : Layout_Cell gen(UNSIGNED4 c, UNSIGNED4 NumRows)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Ones_Vec
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : Ones_Vecdist
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FF2(DATASET(Layout_Part) w1, DATASET(Layout_Part) b1v)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : FF3(DATASET(Layout_Part) w2,DATASET(Layout_Part) b2v, DATASET(Layout_Part) a2 )
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DELTA3 (DATASET(Layout_Part) a3 )
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : DELTA2 (DATASET(Layout_Part) w2, DATASET(Layout_Part) a2, DATASET(Layout_Part) d3)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : WeightGrad1 (DATASET(Layout_Part) w1, DATASET(Layout_Part) d2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : WeightGrad2 (DATASET(Layout_Part) w2, DATASET(Layout_Part) d3, DATASET(Layout_Part) a2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BiasGrad1 (DATASET(Layout_Part) d2)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : BiasGrad2 (DATASET(Layout_Part) d3)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			FUNCTION : GradDesUpdate (DATASET(Layout_Part) tobeUpdated, DATASET(Layout_Part) GradDesTerm)
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : a2
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : b2m
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : z3
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : a33
+			<ul>
+				
+			</ul>
+		</li>
+		
+		<li>
+			ATTRIBUTE : ma
+			<ul>
+				
+			</ul>
+		</li>
+		
+	</ul>
+	<hr/>
+	<h2>Descriptions</h2>
+	
+	<p>	RECORD : Layout_Cell
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Layout_Part
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : INTEGER4 hl
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : INTEGER4 f
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : value_record
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /-------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	TRANSFORM : uctured dataset, and appends a unique 1-base
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes any structured dataset, and appends a unique 1-based record ID
+// column to it 
+//
+//   dIn       : The name of
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //------------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : //--------------------------------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('<xml/>')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : //--------------
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : input_data_tmp
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : Sampledata_Format
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : sample_table
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : REAL8 sparsityParam
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : REAL8 BETA
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : REAL8 ALPHA
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : REAL8 LAMBDA
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED2 MaxIter
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED4 prows
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED4 pcols
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED4 Maxrows
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : UNSIGNED4 Maxcols
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : IntW
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Intb
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : X
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : dt
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : dTmp
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : d
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : m
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : m_1
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : sparsityParam_
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : sparsityParam_1
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	RECORD : sizeRec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : havemaxrow
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : havemaxcol
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : havemaxrowcol
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : dstats
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : d_n
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : d_m
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : output_num
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : derivemap
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : MapMatrix
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : rowcol
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/autobvmap.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : sizeTable
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : dmap
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : ddist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : Ymap
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : Ydist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : w1_mat
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : w1_mat_x
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : w1_mat_y
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : w1map
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : w1dist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : w2_mat
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : w2_mat_x
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : w2_mat_y
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : w2map
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : w2dist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : b1vec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : b1vec_x
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : b1vecmap
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : b1vecdist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : b2vec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : b2vec_x
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : b2vecmap
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : b2vecdist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.value_t sp_reci(PBblas.Types.value_t v,PBblas.Types.dimension_t r,PBblas.Types.dimension_t c)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.value_t sp_1_reci(PBblas.Types.value_t v,PBblas.Types.dimension_t r,PBblas.Types.dimension_t c)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.value_t sp_delta(PBblas.Types.value_t v,PBblas.Types.dimension_t r,PBblas.Types.dimension_t c)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.value_t siggrad(PBblas.Types.value_t v, PBblas.Types.dimension_t r, PBblas.Types.dimension_t c)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : Types.value_t sigmoid(PBblas.Types.value_t v, PBblas.Types.dimension_t r, PBblas.Types.dimension_t c)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : b1map
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : b2map
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : a2map
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : a3map
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	ATTRIBUTE : HL_nodes
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	MODULE : Hiddmap
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	MODULE : Ones_VecMap
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		<h4>Parent</h4>
+		<ul>
+			
+			<li>
+				
+				<a href="../../../pbblas/imatrix_map.ecl.html">
+					pbblas.imatrix_map
+				</a>
+				
+			</li>
+			
+		</ul>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	<p>	ATTRIBUTE : nodes_available
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : this_node
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : row_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : col_blocks
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : block_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_rows
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : matrix_cols
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : partitions_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : nodes_used
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : row_block(dimension_t mat_row)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : col_block(dimension_t mat_col)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_part(dimension_t rb, dimension_t cb)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : assigned_node(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_row(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : first_col(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_rows(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : part_cols(partition_t p)
+		
+		<br/>
+		<a href="../../../pbblas/matrix_map.ecl.html">External Link </a>
+		
+		<br/>
+		
+		Inherit Type : override
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	
+	<p>	TRANSFORM : Layout_Cell gen(UNSIGNED4 c, UNSIGNED4 NumRows)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Ones_Vec
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : Ones_Vecdist
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FF2(DATASET(Layout_Part) w1, DATASET(Layout_Part) b1v)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : FF3(DATASET(Layout_Part) w2,DATASET(Layout_Part) b2v, DATASET(Layout_Part) a2 )
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DELTA3 (DATASET(Layout_Part) a3 )
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : DELTA2 (DATASET(Layout_Part) w2, DATASET(Layout_Part) a2, DATASET(Layout_Part) d3)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : WeightGrad1 (DATASET(Layout_Part) w1, DATASET(Layout_Part) d2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : WeightGrad2 (DATASET(Layout_Part) w2, DATASET(Layout_Part) d3, DATASET(Layout_Part) a2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BiasGrad1 (DATASET(Layout_Part) d2)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : BiasGrad2 (DATASET(Layout_Part) d3)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	FUNCTION : GradDesUpdate (DATASET(Layout_Part) tobeUpdated, DATASET(Layout_Part) GradDesTerm)
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : a2
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : b2m
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : z3
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : a33
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+	<p>	ATTRIBUTE : ma
+		
+		<br/>
+		
+		Inherit Type : local
+		<br/>
+		
+	</p>
+	<hr/>
+	
+	
+</body>
+</html>

@@ -1,0 +1,558 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Source name="ML.Tests.Explanatory.FoldTest" sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" target="foldtest.ecl.xml">
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Mat" inherit_type="local" line="2" name="Mat" ref="ml.mat" remotescope="1" start="18" target="../../mat/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="33" fullname="ML.Types" inherit_type="local" line="3" name="Types" ref="ml.types" start="33" target="../../types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Definition body="66" end="92" fullname="ML.Classify.NaiveBayes" inherit_type="local" line="4" name="BayesModule" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="52" target="../../classify.ecl.xml">
+   <Type>module</Type>
+   <Definition body="5439" end="5451" exported="1" fullname="ml.classify.default.base" inherit_type="inherited" line="95" name="Base" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5425" target="../../classify.ecl.xml">
+    <Signature>Base</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="5714" end="6068" fullname="ml.classify.default.combinemodels" inherit_type="override" line="97" name="CombineModels" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5624" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)</Signature><Params>
+     <Param name="sofar"/>
+     <Param name="new"/>
+    </Params>
+   </Definition>
+   <Definition body="6941" end="7053" exported="1" fullname="ml.classify.default.testd" inherit_type="override" line="112" name="TestD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="6857" target="../../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+    <Parents/>
+    <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+     <Signature>J</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+     <Type>record</Type>
+     <Field name="classifier"/>
+     <Field name="c_actual"/>
+     <Field name="c_modeled"/>
+     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+    </Definition>
+    <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+     <Signature>class_cnt</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+     <Signature>cfmx</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+     <Signature>cross_raw</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+     <Signature>RecallByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+     <Signature>Accuracy</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="7141" end="7253" exported="1" fullname="ml.classify.default.testc" inherit_type="override" line="117" name="TestC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7058" target="../../classify.ecl.xml">
+    <Type>module</Type>
+    <Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+    <Parents/>
+    <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+     <Signature>J</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+     <Type>record</Type>
+     <Field name="classifier"/>
+     <Field name="c_actual"/>
+     <Field name="c_modeled"/>
+     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+    </Definition>
+    <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+     <Signature>class_cnt</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+     <Signature>cfmx</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+     <Signature>cross_raw</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+     <Signature>RecallByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+    </Definition>
+    <Signature>TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+     <Signature>Accuracy</Signature><Type>attribute</Type>
+    </Definition>
+   </Definition>
+   <Definition body="7361" end="7787" exported="1" fullname="ml.classify.default.learndconcat" inherit_type="override" line="122" name="LearnDConcat" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7258" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="fnc"/>
+    </Params>
+   </Definition>
+   <Definition body="7894" end="8320" exported="1" fullname="ml.classify.default.learncconcat" inherit_type="override" line="131" name="LearnCConcat" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="7792" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="fnc"/>
+    </Params>
+   </Definition>
+   <Definition body="10327" end="10409" exported="1" fullname="ml.classify.naivebayes.learnd" inherit_type="override" line="159" name="LearnD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="10241" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="10575" end="10632" exported="1" fullname="ml.classify.naivebayes.model" inherit_type="local" line="163" name="Model" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="10527" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="10987" end="11080" exported="1" fullname="ml.classify.naivebayes.classprobdistribd" inherit_type="local" line="168" name="ClassProbDistribD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="10891" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="11245" end="11330" exported="1" fullname="ml.classify.naivebayes.classifyd" inherit_type="override" line="172" name="ClassifyD" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="11158" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="12285" end="12350" exported="1" fullname="ml.classify.naivebayes.learnc" inherit_type="override" line="182" name="LearnC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="12200" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+    </Params>
+   </Definition>
+   <Definition body="12493" end="12551" exported="1" fullname="ml.classify.naivebayes.modelc" inherit_type="local" line="186" name="ModelC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="12444" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ModelC(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="12909" end="12985" exported="1" fullname="ml.classify.naivebayes.classprobdistribc" inherit_type="local" line="191" name="ClassProbDistribC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="12814" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassProbDistribC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="13151" end="13219" exported="1" fullname="ml.classify.naivebayes.classifyc" inherit_type="override" line="195" name="ClassifyC" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="13065" target="../../classify.ecl.xml">
+    <Type>function</Type>
+    <Signature>ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Signature>BayesModule</Signature><Parents>
+    <Parent line="94" name="Default" ref="ml.classify.default" target="../../classify.ecl.xml"/>
+   </Parents>
+  </Definition>
+  <Definition body="99" end="133" fullname="ml.tests.explanatory.ds" inherit_type="local" line="6" name="ds" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="94">
+   <Signature>ds</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="227" end="262" fullname="ml.tests.explanatory.d2" inherit_type="local" line="10" name="D2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="222">
+   <Signature>D2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="304" end="319" fullname="ml.tests.explanatory.indep" inherit_type="local" line="12" name="indep" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="296">
+   <Signature>indep</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="327" end="341" fullname="ml.tests.explanatory.dep" inherit_type="local" line="13" name="dep" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="320">
+   <Signature>dep</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="33" end="82" fullname="ml.tests.explanatory.__dinprep__61__" inherit_type="local" line="16" name="__dInPrep__61__" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="1">
+   <Signature>/-------------------------------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="144" end="196" fullname="ml.tests.explanatory.__tra__62__" inherit_type="local" line="18" name="__tra__62__" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="100">
+   <Type>transform</Type>
+   <Params>
+    <Param name="L"/>
+    <Param name="C"/>
+   </Params>
+   <Signature>uctured dataset, and appends a unique 1-base</Signature><Return>&lt;unnamed&gt;</Return>
+  </Definition>
+  <Definition body="527" end="565" fullname="ml.tests.explanatory.newdependent" inherit_type="local" line="20" name="newDependent" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="513">
+   <Signature>newDependent</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="577" end="617" fullname="ML.Classify.Compare" inherit_type="local" line="21" name="results1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="566" target="../../classify.ecl.xml">
+   <Type>module</Type>
+   <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+    <Signature>J</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="classifier"/>
+    <Field name="c_actual"/>
+    <Field name="c_modeled"/>
+    <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+   </Definition>
+   <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+    <Signature>class_cnt</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+    <Signature>cfmx</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+    <Signature>cross_raw</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+    <Signature>CrossAssignments</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+    <Signature>RecallByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+    <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+    <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+    <Signature>Accuracy</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>results1</Signature><Parents/>
+  </Definition>
+  <Definition body="204" end="238" fullname="ml.tests.explanatory.dorig" inherit_type="local" line="22" name="dOrig" source="/media/sarthak/Data/ecl-ml/./ML/AppendID.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes any structured dataset, and appends a unique 1-based record ID
+// column to it 
+//
+//   dIn       : The name of</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1062" end="1094" fullname="ml.tests.explanatory.model" inherit_type="local" line="32" name="model" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1055">
+   <Signature>model</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1143" end="1174" fullname="ML.Sampling.NFold" inherit_type="local" line="34" name="parts" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1136" target="../../sampling.ecl.xml">
+   <Type>module</Type>
+   <Definition body="8909" end="9000" fullname="ml.sampling.nfold.ds_parts" inherit_type="local" line="169" name="ds_parts" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="8891" target="../../sampling.ecl.xml">
+    <Signature>ds_parts</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="9021" end="9041" exported="1" fullname="ml.sampling.nfold.nfoldlist" inherit_type="local" line="170" name="NFoldList" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="9003" target="../../sampling.ecl.xml">
+    <Signature>NFoldList</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="9117" end="9313" exported="1" fullname="ml.sampling.nfold.foldnds" inherit_type="local" line="171" name="FoldNDS" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="9044" target="../../sampling.ecl.xml">
+    <Type>function</Type>
+    <Signature>FoldNDS(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
+     <Param name="num_fold"/>
+     <Param name="baseId"/>
+    </Params>
+   </Definition>
+   <Signature>parts</Signature><Parents/>
+  </Definition>
+  <Definition body="1230" end="1255" fullname="ml.tests.explanatory.part1" inherit_type="local" line="36" name="part1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1223">
+   <Signature>part1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1263" end="1288" fullname="ml.tests.explanatory.part2" inherit_type="local" line="37" name="part2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1256">
+   <Signature>part2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1296" end="1321" fullname="ml.tests.explanatory.part3" inherit_type="local" line="38" name="part3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1289">
+   <Signature>part3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1329" end="1354" fullname="ml.tests.explanatory.part4" inherit_type="local" line="39" name="part4" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1322">
+   <Signature>part4</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1368" end="1425" fullname="ml.tests.explanatory.alldiscrete" inherit_type="local" line="40" name="AllDiscrete" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1355">
+   <Signature>AllDiscrete</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1436" end="1459" fullname="ml.tests.explanatory.indepall" inherit_type="local" line="41" name="indepAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1426">
+   <Signature>indepAll</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1517" end="1557" fullname="ml.tests.explanatory.classifall" inherit_type="local" line="43" name="classifAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1504">
+   <Signature>classifAll</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1624" end="1717" fullname="ml.tests.explanatory.results" inherit_type="local" line="45" name="results" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1615">
+   <Signature>results</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1724" end="1810" fullname="ml.tests.explanatory.dep1" inherit_type="local" line="46" name="dep1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1718">
+   <Signature>dep1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1817" end="1903" fullname="ml.tests.explanatory.dep2" inherit_type="local" line="47" name="dep2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1811">
+   <Signature>dep2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="1910" end="1996" fullname="ml.tests.explanatory.dep3" inherit_type="local" line="48" name="dep3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1904">
+   <Signature>dep3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2003" end="2089" fullname="ml.tests.explanatory.dep4" inherit_type="local" line="49" name="dep4" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="1997">
+   <Signature>dep4</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2098" end="2125" fullname="ml.tests.explanatory.depall" inherit_type="local" line="50" name="depAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2090">
+   <Signature>depAll</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2202" end="2240" fullname="ML.Classify.Compare" inherit_type="local" line="53" name="compareAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2190" target="../../classify.ecl.xml">
+   <Type>module</Type>
+   <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+    <Signature>J</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="classifier"/>
+    <Field name="c_actual"/>
+    <Field name="c_modeled"/>
+    <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+   </Definition>
+   <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+    <Signature>class_cnt</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+    <Signature>cfmx</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+    <Signature>cross_raw</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+    <Signature>CrossAssignments</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+    <Signature>RecallByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+    <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+    <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+    <Signature>Accuracy</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>compareAll</Signature><Parents/>
+  </Definition>
+  <Definition body="2634" end="2670" fullname="ML.Sampling.NFoldCross" inherit_type="local" line="64" name="CV" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2630" target="../../sampling.ecl.xml">
+   <Type>module</Type>
+   <Definition body="10039" end="10102" fullname="ml.sampling.nfoldcross.distribidx" inherit_type="local" line="186" name="distribIdx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="10018" target="../../sampling.ecl.xml">
+    <Signature>distribIdx</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="10123" end="10176" fullname="ml.sampling.nfoldcross.ds_parts" inherit_type="local" line="187" name="ds_parts" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="10105" target="../../sampling.ecl.xml">
+    <Signature>ds_parts</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="10197" end="10207" exported="1" fullname="ml.sampling.nfoldcross.nfoldlist" inherit_type="local" line="188" name="NFoldList" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="10179" target="../../sampling.ecl.xml">
+    <Signature>NFoldList</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="10289" end="10482" exported="1" fullname="ml.sampling.nfoldcross.foldntrainds" inherit_type="local" line="189" name="FoldNTrainDS" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="10210" target="../../sampling.ecl.xml">
+    <Type>function</Type>
+    <Signature>FoldNTrainDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
+     <Param name="num_fold"/>
+     <Param name="baseId"/>
+    </Params>
+   </Definition>
+   <Definition body="10563" end="10756" exported="1" fullname="ml.sampling.nfoldcross.foldntestds" inherit_type="local" line="193" name="FoldNTestDS" source="/media/sarthak/Data/ecl-ml/./ML/Sampling.ecl" start="10485" target="../../sampling.ecl.xml">
+    <Type>function</Type>
+    <Signature>FoldNTestDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
+     <Param name="num_fold"/>
+     <Param name="baseId"/>
+    </Params>
+   </Definition>
+   <Signature>CV</Signature><Parents/>
+  </Definition>
+  <Definition body="2756" end="2782" fullname="ml.tests.explanatory.train1" inherit_type="local" line="67" name="train1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2747">
+   <Signature>train1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2792" end="2818" fullname="ml.tests.explanatory.train2" inherit_type="local" line="68" name="train2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2783">
+   <Signature>train2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2828" end="2854" fullname="ml.tests.explanatory.train3" inherit_type="local" line="69" name="train3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2819">
+   <Signature>train3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2864" end="2890" fullname="ml.tests.explanatory.train4" inherit_type="local" line="70" name="train4" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2855">
+   <Signature>train4</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2902" end="2963" fullname="ml.tests.explanatory.trainall" inherit_type="local" line="71" name="trainAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="2891">
+   <Signature>trainAll</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3045" end="3146" fullname="ml.tests.explanatory.deptrainall" inherit_type="local" line="73" name="depTrainAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3031">
+   <Signature>depTrainAll</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3255" end="3308" fullname="ml.tests.explanatory.cvmodels" inherit_type="local" line="76" name="CVModels" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3245">
+   <Signature>CVModels</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3342" end="3367" fullname="ml.tests.explanatory.test1" inherit_type="local" line="78" name="test1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3334">
+   <Signature>test1</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3376" end="3401" fullname="ml.tests.explanatory.test2" inherit_type="local" line="79" name="test2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3368">
+   <Signature>test2</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3410" end="3435" fullname="ml.tests.explanatory.test3" inherit_type="local" line="80" name="test3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3402">
+   <Signature>test3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="35" end="86" fullname="ml.tests.explanatory.dmatrix_toname" inherit_type="local" line="81" name="dMatrix_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//---------------------------------</Signature><Params>
+    <Param name="i"/>
+   </Params>
+  </Definition>
+  <Definition body="3444" end="3469" fullname="ml.tests.explanatory.test4" inherit_type="local" line="81" name="test4" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3436">
+   <Signature>test4</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3480" end="3537" fullname="ml.tests.explanatory.testall" inherit_type="local" line="82" name="testAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3470">
+   <Signature>testAll</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="37" end="87" fullname="ml.tests.explanatory.dmatrix_tonumber" inherit_type="local" line="83" name="dMatrix_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Type>function</Type>
+   <Signature>//-----------------------------------</Signature><Params>
+    <Param name="s"/>
+   </Params>
+  </Definition>
+  <Definition body="3618" end="3718" fullname="ml.tests.explanatory.deptestall" inherit_type="local" line="84" name="depTestAll" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3605">
+   <Signature>depTestAll</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="2485" end="2654" fullname="ml.tests.explanatory.dmatrix" inherit_type="local" line="85" name="dMatrix" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
+   <Signature>/---------------------------------------------------------------------------
+// Macro takes a matrix dataset, with each row contianing an ID and one or
+// more axis fields containing numeric values, and expands it into the 
+// NumericField format used by ML.
+//
+//   dIn       : The name of the input dataset
+//   dOut      : The name of the resulting dataset
+//   idfield   : [OPTIONAL] The name of the field that contains the UID for
+//               each row.  If omitted, it is assumed to be the first field.
+//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
+//               fields to be treated as axes.  If omitted, all numeric
+//               fields that are not the UID will be treated as axes.
+//               NOTE: idfield defaults to the first field in the table, so
+//               if that field is specified as an axis field, then the user
+//               should be sure to specify a value in the idfield param.
+//
+//  Along with creating the NumericField table, this macro produces two
+//  simple functions to assist the user in mapping the field names to their
+//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
+//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
+//  name is the name passed into that parameter of the macro.
+//
+//  The macro also produces a mapping table named "dOut_Map", again where
+//  "dOut" refers to the parameter, that contains a table of the field
+//  mappings
+//  
+//  Examples:
+//    ML.ToField(dOrig,dMatrix)
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
+//    dMatrix_ToName(2)  // returns 'field7'
+//    dMatrix_ToNumber('field10') // returns 3
+//    dMatrix_Map // returns the mapping table of field name to number
+//---------------------------------------------------------------------------
+ ToField(dIn,dOut,idfield='',datafields='')MACRO
+  LOADXML('&lt;xml/&gt;')
+  // Variable to contain the name of the field that maps to "id"
+  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
+  // Contains a comma-delimited list of the fields that will be used as axes,
+  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
+  // during normalization
+  #DECLARE(normlist) #SET(normlist,'COUNTER')
+  // Count of the fields that become axes
+  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
+  // A list of every field in the original table and the field number (or "ID")
+  // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3852" end="3904" fullname="ml.tests.explanatory.classcv" inherit_type="local" line="87" name="classCV" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3842">
+   <Signature>classCV</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="13" end="2800" fullname="ml.tests.explanatory.dmatrix_map" inherit_type="local" line="87" name="dMatrix_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
+   <Signature>//-----------</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="3940" end="3982" fullname="ML.Classify.Compare" inherit_type="local" line="89" name="compareCV" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3928" target="../../classify.ecl.xml">
+   <Type>module</Type>
+   <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
+    <Signature>J</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
+    <Type>record</Type>
+    <Field name="classifier"/>
+    <Field name="c_actual"/>
+    <Field name="c_modeled"/>
+    <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+   </Definition>
+   <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
+    <Signature>class_cnt</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
+    <Signature>cfmx</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
+    <Signature>cross_raw</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
+    <Signature>CrossAssignments</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
+    <Signature>RecallByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
+    <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
+    <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+    <Signature>Accuracy</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>compareCV</Signature><Parents/>
+  </Definition>
+  <Definition body="3990" end="4018" fullname="ml.tests.explanatory.ca_3" inherit_type="local" line="90" name="ca_3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="3983">
+   <Signature>ca_3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="4055" end="4080" fullname="ml.tests.explanatory.rec_3" inherit_type="local" line="92" name="rec_3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="4048">
+   <Signature>rec_3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="4118" end="4146" fullname="ml.tests.explanatory.pre_3" inherit_type="local" line="94" name="pre_3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="4111">
+   <Signature>pre_3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="4184" end="4211" fullname="ml.tests.explanatory.fpr_3" inherit_type="local" line="96" name="fpr_3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="4177">
+   <Signature>fpr_3</Signature><Type>attribute</Type>
+  </Definition>
+  <Definition body="4278" end="4297" fullname="ml.tests.explanatory.acc_3" inherit_type="local" line="98" name="acc_3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/FoldTest.ecl" start="4271">
+   <Signature>acc_3</Signature><Type>attribute</Type>
+  </Definition>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Classify.ecl" name="ML.Classify" target="../../classify.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" name="ML.NaiveBayes" target="../../naivebayes.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="../../fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" name="ML.NeuralNetworks" target="../../neuralnetworks.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../../../pbblas/autobvmap.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../../pbblas/hadamardproduct.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../../pbblas/pb_dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="../../appendid.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" name="ML.Mat.InsertColumn" target="../../mat/insertcolumn.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="../../mat/identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="../../mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="../../mat/strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="../../mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="../../mat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Add.ecl" name="ML.Mat.Add" target="../../mat/add.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="../../mat/sub.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" name="ML.Mat.Inv" target="../../mat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" name="ML.Mat.Decomp" target="../../mat/decomp.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="../../mat/setdimension.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" name="ML.Mat.Substitute" target="../../mat/substitute.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" name="ML.Mat.LowerTriangle" target="../../mat/lowertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" name="ML.Mat.UpperTriangle" target="../../mat/uppertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" name="ML.Mat.Householder" target="../../mat/householder.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" name="ML.Mat.Det" target="../../mat/det.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" name="PBblas.Vector2Diag" target="../../../pbblas/vector2diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_diag" target="../../../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgetrf.ecl" name="PBblas.PB_dgetrf" target="../../../pbblas/pb_dgetrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" name="PBblas.PB_dtrsm" target="../../../pbblas/pb_dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="../../../pbblas/pb_dtran.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" name="ML.DMat.Trans" target="../../dmat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" name="ML.DMat.Inv" target="../../dmat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" name="PBblas.PB_dpotrf" target="../../../pbblas/pb_dpotrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" name="ML.Trees" target="../../trees.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" name="ML.Sampling" target="../../sampling.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" name="ML.Ensemble" target="../../ensemble.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../../svm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="../../svm/libsvm/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Converted.ecl" name="ML.SVM.Converted" target="../../svm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" name="ML.SVM.train" target="../../svm/train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="../../svm/libsvm/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" name="ML.SVM.LibSVM.svm_train" target="../../svm/libsvm/svm_train.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Constants.ecl" name="ML.SVM.LibSVM.Constants" target="../../svm/libsvm/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" name="ML.SVM.predict" target="../../svm/predict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" name="ML.SVM.LibSVM.SVM_Predict" target="../../svm/libsvm/svm_predict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" name="ML.Discretize" target="../../discretize.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/samplingDS.ecl" name="ML.Tests.Explanatory.samplingDS" target="samplingds.ecl.xml"/></Meta>

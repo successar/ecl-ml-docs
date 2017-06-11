@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Source name="TestingSuite.Classification.Datasets.discrete_houseVoteDS" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_houseVoteDS.ecl" target="discrete_housevoteds.ecl.xml">
+  <Definition body="48" end="12363" exported="1" fullname="TestingSuite.Classification.Datasets.discrete_houseVoteDS" inherit_type="local" line="2" name="discrete_houseVoteDS" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_houseVoteDS.ecl" start="18">
+   <Type>module</Type>
+   <Definition body="95" end="806" fullname="testingsuite.classification.datasets.discrete_housevoteds.discrete_housevoterecord" inherit_type="local" line="3" name="discrete_houseVoteRECORD" shared="1" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_houseVoteDS.ecl" start="61">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="handicapped"/>
+    <Field name="waterproject"/>
+    <Field name="adoption"/>
+    <Field name="physician"/>
+    <Field name="elsalvador"/>
+    <Field name="religious"/>
+    <Field name="antisatellite"/>
+    <Field name="aid"/>
+    <Field name="mxmissle"/>
+    <Field name="immigration"/>
+    <Field name="synfuels"/>
+    <Field name="education"/>
+    <Field name="superfund"/>
+    <Field name="crime"/>
+    <Field name="dutyfreeexport"/>
+    <Field name="exportact"/>
+    <Signature>discrete_houseVoteRECORD</Signature><Field name="class"/>
+   </Definition>
+   <Definition body="828" end="12358" exported="1" fullname="testingsuite.classification.datasets.discrete_housevoteds.content" inherit_type="local" line="23" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_houseVoteDS.ecl" start="811">
+    <Signature>content</Signature><Type>attribute</Type>
+   </Definition>
+   <Signature>discrete_houseVoteDS</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../../ml/types.ecl.xml"/></Meta>

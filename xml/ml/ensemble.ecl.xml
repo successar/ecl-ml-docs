@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl"/>
+ <Query sourcePath="/media/sarthak/Data/ecl-ml/./ML/FromField.ecl"/>
+ <Source name="ML.Ensemble" sourcePath="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" target="ensemble.ecl.xml">
+  <Definition body="55" end="40203" exported="1" fullname="ML.Ensemble" inherit_type="local" line="3" name="Ensemble" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="37">
+   <Type>module</Type>
+   <Definition body="85" end="264" exported="1" fullname="ml.ensemble.modeld_map" inherit_type="local" line="4" name="modelD_Map" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="65">
+    <Signature>modelD_Map</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="297" end="356" exported="1" fullname="ml.ensemble.modeld_fields" inherit_type="local" line="5" name="modelD_fields" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="267">
+    <Signature>STRING modelD_fields</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="428" end="609" exported="1" fullname="ml.ensemble.modelc_map" inherit_type="local" line="6" name="modelC_Map" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="408">
+    <Signature>modelC_Map</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="642" end="703" exported="1" fullname="ml.ensemble.modelc_fields" inherit_type="local" line="7" name="modelC_fields" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="612">
+    <Signature>STRING modelC_fields</Signature><Type>attribute</Type>
+   </Definition>
+   <Definition body="812" end="911" exported="1" fullname="ml.ensemble.gsplitd" inherit_type="local" line="10" name="gSplitD" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="795">
+    <Type>record</Type>
+    <Field name="node_id"/>
+    <Field name="level"/>
+    <Field name="number"/>
+    <Field name="value"/>
+    <Field name="new_node_id"/>
+    <Field name="support"/>
+    <Signature>gSplitD</Signature><Field name="group_id"/>
+   </Definition>
+   <Definition body="931" end="1030" exported="1" fullname="ml.ensemble.gsplitc" inherit_type="local" line="14" name="gSplitC" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="914">
+    <Type>record</Type>
+    <Field name="node_id"/>
+    <Field name="level"/>
+    <Field name="number"/>
+    <Field name="value"/>
+    <Field name="high_fork"/>
+    <Field name="new_node_id"/>
+    <Signature>gSplitC</Signature><Field name="group_id"/>
+   </Definition>
+   <Definition body="1100" end="1419" fullname="ml.ensemble.gnodeinstdisc" inherit_type="local" line="20" name="gNodeInstDisc" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="1077">
+    <Type>record</Type>
+    <Field name="node_id"/>
+    <Field name="level"/>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Field name="value"/>
+    <Field name="depend"/>
+    <Field name="support"/>
+    <Signature>gNodeInstDisc</Signature><Field name="group_id"/>
+   </Definition>
+   <Definition body="1440" end="1534" fullname="ml.ensemble.gnodethin" inherit_type="local" line="27" name="gNodeThin" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="1422">
+    <Type>record</Type>
+    <Field name="group_id"/>
+    <Signature>gNodeThin</Signature><Field name="node_id"/>
+   </Definition>
+   <Definition body="1560" end="1893" fullname="ml.ensemble.gnodeinstcont" inherit_type="local" line="31" name="gNodeInstCont" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="1537">
+    <Type>record</Type>
+    <Field name="node_id"/>
+    <Field name="level"/>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Field name="value"/>
+    <Field name="depend"/>
+    <Field name="high_fork"/>
+    <Signature>gNodeInstCont</Signature><Field name="group_id"/>
+   </Definition>
+   <Definition body="1919" end="2024" fullname="ml.ensemble.depgroupedrec" inherit_type="local" line="38" name="DepGroupedRec" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="1896">
+    <Type>record</Type>
+    <Field name="id"/>
+    <Field name="number"/>
+    <Field name="value"/>
+    <Field name="group_id"/>
+    <Signature>DepGroupedRec</Signature><Field name="new_id"/>
+   </Definition>
+   <Definition body="2171" end="2268" fullname="ml.ensemble.groupdeprecords" inherit_type="local" line="44" name="GroupDepRecords" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="2078">
+    <Type>transform</Type>
+    <Params>
+     <Param name="l"/>
+     <Param name="r"/>
+    </Params>
+    <Signature>DepGroupedRec GroupDepRecords (Types.DiscreteField l, ML.Sampling.idListGroupRec r)</Signature><Return>depgroupedrec</Return>
+   </Definition>
+   <Definition body="2372" end="3163" fullname="ml.ensemble.gnodexkoutofm" inherit_type="local" line="50" name="gNodexKoutofM" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="2274">
+    <Type>function</Type>
+    <Signature>gNodexKoutofM(DATASET(gNodeThin) topNodes, Types.t_FieldNumber K, Types.t_FieldNumber M)</Signature><Params>
+     <Param name="topNodes"/>
+     <Param name="K"/>
+     <Param name="M"/>
+    </Params>
+   </Definition>
+   <Definition body="3251" end="3833" fullname="ml.ensemble.nxkoutofm" inherit_type="local" line="66" name="NxKoutofM" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="3169">
+    <Type>function</Type>
+    <Signature>NxKoutofM(Types.t_Count N, Types.t_FieldNumber K, Types.t_FieldNumber M)</Signature><Params>
+     <Param name="N"/>
+     <Param name="K"/>
+     <Param name="M"/>
+    </Params>
+   </Definition>
+   <Definition body="3930" end="4024" fullname="ml.ensemble.getdrecords" inherit_type="local" line="79" name="GetDRecords" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="3836">
+    <Type>transform</Type>
+    <Params>
+     <Param name="l"/>
+     <Param name="r"/>
+    </Params>
+    <Signature>Types.DiscreteField GetDRecords(Types.DiscreteField l, ML.Sampling.idListGroupRec r)</Signature><Return>discretefield</Return>
+   </Definition>
+   <Definition body="4129" end="4367" fullname="ml.ensemble.generateroots" inherit_type="local" line="84" name="GenerateRoots" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="4029">
+    <Type>transform</Type>
+    <Params>
+     <Param name="dep"/>
+     <Param name="depSample"/>
+    </Params>
+    <Signature>gNodeInstDisc GenerateRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)</Signature><Return>gnodeinstdisc</Return>
+   </Definition>
+   <Definition body="4471" end="4709" fullname="ml.ensemble.generatecroots" inherit_type="local" line="93" name="GenerateCRoots" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="4370">
+    <Type>transform</Type>
+    <Params>
+     <Param name="dep"/>
+     <Param name="depSample"/>
+    </Params>
+    <Signature>gNodeInstCont GenerateCRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)</Signature><Return>gnodeinstcont</Return>
+   </Definition>
+   <Definition body="4767" end="4982" fullname="ml.ensemble.tonewdiscnode" inherit_type="local" line="102" name="toNewDiscNode" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="4712">
+    <Type>transform</Type>
+    <Params>
+     <Param name="NodeInst"/>
+    </Params>
+    <Signature>gSplitD toNewDiscNode(gNodeInstDisc NodeInst)</Signature><Return>gsplitd</Return>
+   </Definition>
+   <Definition body="5077" end="5171" fullname="ml.ensemble.getcrecords" inherit_type="local" line="108" name="GetCRecords" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="4985">
+    <Type>transform</Type>
+    <Params>
+     <Param name="l"/>
+     <Param name="r"/>
+    </Params>
+    <Signature>Types.NumericField GetCRecords(Types.NumericField l, ML.Sampling.idListGroupRec r)</Signature><Return>numericfield</Return>
+   </Definition>
+   <Definition body="5231" end="5461" fullname="ml.ensemble.tonewcontnode" inherit_type="local" line="113" name="toNewContNode" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="5176">
+    <Type>transform</Type>
+    <Params>
+     <Param name="NodeInst"/>
+    </Params>
+    <Signature>gSplitC toNewContNode(gNodeInstCont NodeInst)</Signature><Return>gsplitc</Return>
+   </Definition>
+   <Definition body="6341" end="13304" exported="1" fullname="ml.ensemble.splitfeaturesamplegi" inherit_type="local" line="126" name="SplitFeatureSampleGI" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="6153">
+    <Type>function</Type>
+    <Signature>SplitFeatureSampleGI(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="treeNum"/>
+     <Param name="fsNum"/>
+     <Param name="Purity"/>
+     <Param name="maxLevel"/>
+    </Params>
+   </Definition>
+   <Definition body="14141" end="22805" exported="1" fullname="ml.ensemble.splitfeaturesampleigr" inherit_type="local" line="211" name="SplitFeatureSampleIGR" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="13969">
+    <Type>function</Type>
+    <Signature>SplitFeatureSampleIGR(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, Types.t_level maxLevel=32)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="treeNum"/>
+     <Param name="fsNum"/>
+     <Param name="maxLevel"/>
+    </Params>
+   </Definition>
+   <Definition body="22873" end="22949" exported="1" fullname="ml.ensemble.fromdiscreteforest" inherit_type="local" line="322" name="FromDiscreteForest" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="22809">
+    <Type>function</Type>
+    <Signature>FromDiscreteForest(DATASET(ML.Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="23002" end="23128" exported="1" fullname="ml.ensemble.todiscreteforest" inherit_type="local" line="326" name="ToDiscreteForest" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="22952">
+    <Type>function</Type>
+    <Signature>ToDiscreteForest(DATASET(gSplitD) nodes)</Signature><Params>
+     <Param name="nodes"/>
+    </Params>
+   </Definition>
+   <Definition body="23322" end="25920" exported="1" fullname="ml.ensemble.gsplitinstancesd" inherit_type="local" line="332" name="gSplitInstancesD" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="23238">
+    <Type>function</Type>
+    <Signature>gSplitInstancesD(DATASET(gSplitD) mod, DATASET(Types.DiscreteField) Indep)</Signature><Params>
+     <Param name="mod"/>
+     <Param name="Indep"/>
+    </Params>
+   </Definition>
+   <Definition body="26093" end="26810" exported="1" fullname="ml.ensemble.classprobdistribforestd" inherit_type="local" line="373" name="ClassProbDistribForestD" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="25991">
+    <Type>function</Type>
+    <Signature>ClassProbDistribForestD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="26977" end="27337" exported="1" fullname="ml.ensemble.classifydforest" inherit_type="local" line="386" name="ClassifyDForest" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="26884">
+    <Type>function</Type>
+    <Signature>ClassifyDForest(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="27859" end="34654" exported="1" fullname="ml.ensemble.rndfeatselbinpartitiongibased" inherit_type="local" line="399" name="RndFeatSelBinPartitionGIBased" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="27680">
+    <Type>function</Type>
+    <Signature>RndFeatSelBinPartitionGIBased(DATASET(gNodeInstCont) nodes, Types.t_Count nTrees, Types.t_Count kFeatSel, Types.t_Count mTotFeats, Types.t_Count p_level, REAL Purity=1.0)</Signature><Params>
+     <Param name="nodes"/>
+     <Param name="nTrees"/>
+     <Param name="kFeatSel"/>
+     <Param name="mTotFeats"/>
+     <Param name="p_level"/>
+     <Param name="Purity"/>
+    </Params>
+   </Definition>
+   <Definition body="35221" end="37513" exported="1" fullname="ml.ensemble.splitfeaturesamplegibin" inherit_type="local" line="507" name="SplitFeatureSampleGIBin" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="35031">
+    <Type>function</Type>
+    <Signature>SplitFeatureSampleGIBin(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="Dep"/>
+     <Param name="treeNum"/>
+     <Param name="fsNum"/>
+     <Param name="Purity"/>
+     <Param name="maxLevel"/>
+    </Params>
+   </Definition>
+   <Definition body="37567" end="37693" exported="1" fullname="ml.ensemble.tocontinuosforest" inherit_type="local" line="538" name="ToContinuosForest" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="37516">
+    <Type>function</Type>
+    <Signature>ToContinuosForest(DATASET(gSplitC) nodes)</Signature><Params>
+     <Param name="nodes"/>
+    </Params>
+   </Definition>
+   <Definition body="37758" end="37834" exported="1" fullname="ml.ensemble.fromcontinuosforest" inherit_type="local" line="543" name="FromContinuosForest" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="37696">
+    <Type>function</Type>
+    <Signature>FromContinuosForest(DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="38022" end="38676" exported="1" fullname="ml.ensemble.gsplitinstc" inherit_type="local" line="548" name="gSplitInstC" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="37944">
+    <Type>function</Type>
+    <Signature>gSplitInstC(DATASET(gSplitC) mod, DATASET(Types.NumericField) Indep)</Signature><Params>
+     <Param name="mod"/>
+     <Param name="Indep"/>
+    </Params>
+   </Definition>
+   <Definition body="38850" end="39670" exported="1" fullname="ml.ensemble.classprobdistribforestc" inherit_type="local" line="558" name="ClassProbDistribForestC" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="38749">
+    <Type>function</Type>
+    <Signature>ClassProbDistribForestC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Definition body="39838" end="40198" exported="1" fullname="ml.ensemble.classifycforest" inherit_type="local" line="571" name="ClassifyCForest" source="/media/sarthak/Data/ecl-ml/ML/Ensemble.ecl" start="39746">
+    <Type>function</Type>
+    <Signature>ClassifyCForest(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+     <Param name="Indep"/>
+     <Param name="mod"/>
+    </Params>
+   </Definition>
+   <Signature>Ensemble</Signature><Parents/>
+  </Definition>
+  <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+  <Import body="0" end="18" fullname="ML.Types" inherit_type="local" line="2" name="Types" ref="ml.types" start="18" target="types.ecl.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" name="ML.Trees" target="trees.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" name="ML.Sampling" target="sampling.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="appendid.ecl.xml"/></Meta>

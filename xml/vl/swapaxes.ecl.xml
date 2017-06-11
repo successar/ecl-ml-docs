@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Meta>
+ <Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Types.ecl" name="VL.Types" target="types.ecl.xml"/><Source name="VL.SwapAxes" sourcePath="/media/sarthak/Data/ecl-ml/VL/SwapAxes.ecl" target="swapaxes.ecl.xml">
+  <Definition body="307" end="485" exported="1" fullname="vl.swapaxes" inherit_type="local" line="5" name="SwapAxes" source="/media/sarthak/Data/ecl-ml/VL/SwapAxes.ecl" start="237">
+   <Type>function</Type>
+   <Signature>RT SwapAxes(DATASET(VL.Types.CartesianData) d,STRING sNewXTitle)FUNC</Signature><Params>
+    <Param name="d"/>
+    <Param name="sNewXTitle"/>
+   </Params>
+  </Definition>
+  <Import body="0" end="232" fullname="VL" inherit_type="local" line="4" name="VL" ref="vl" start="232" target="pkg.toc.xml">
+   <Type>attribute</Type>
+  </Import>
+ </Source>
+ </Meta>
