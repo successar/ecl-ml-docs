@@ -14,7 +14,7 @@
    <Type>record</Type>
    <Field name="mse"/>
    <Field name="r_sq"/>
-   <Signature>Result</Signature><Field name="correct"/>
+   <Signature pre="" post="" name="RESULT">Result</Signature><Field name="correct"/>
   </Definition>
   <Definition body="154" end="180" fullname="ml.svm.libsvm.problem" inherit_type="local" line="7" name="Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="144">
    <Type>record</Type>
@@ -23,7 +23,7 @@
    <Field name="features"/>
    <Field name="max_value"/>
    <Field name="y"/>
-   <Signature>Problem</Signature><Field name="x"/>
+   <Signature pre="" post="" name="PROBLEM">Problem</Signature><Field name="x"/>
   </Definition>
   <Definition body="193" end="223" fullname="ml.svm.libsvm.svm_parms" inherit_type="local" line="8" name="SVM_Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="181">
    <Type>record</Type>
@@ -41,14 +41,14 @@
    <Field name="shrinking"/>
    <Field name="prob_est"/>
    <Field name="lbl"/>
-   <Signature>SVM_Parms</Signature><Field name="weight"/>
+   <Signature pre="" post="" name="SVM_PARMS">SVM_Parms</Signature><Field name="weight"/>
   </Definition>
   <Definition body="234" end="260" fullname="ml.svm.libsvm.errcode" inherit_type="local" line="9" name="ErrCode" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="224">
-   <Signature>ErrCode</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="ERRCODE">ErrCode</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="470" end="5652" exported="1" fullname="ml.svm.libsvm.svm_cross_validate" inherit_type="local" line="10" name="svm_cross_validate" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_cross_validate.ecl" start="261">
    <Type>embed</Type>
-   <Signature>Result svm_cross_validate(SVM_Parms prm,
+   <Signature pre="Result" post="(SVM_Parms prm,&#10;                                 Problem prb,&#10;                                 UNSIGNED2 nr_fold,&#10;                                 UNSIGNED4 err_code=ErrCode)" name="SVM_CROSS_VALIDATE">Result svm_cross_validate(SVM_Parms prm,
                                  Problem prb,
                                  UNSIGNED2 nr_fold,
                                  UNSIGNED4 err_code=ErrCode)</Signature><Params>

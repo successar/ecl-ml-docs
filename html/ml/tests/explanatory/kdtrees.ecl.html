@@ -1,1270 +1,2376 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Tests.Explanatory.KDTrees</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			ATTRIBUTE : TestSize
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="assocrandom.ecl.html">assocrandom.ecl</a>
+				</li>
+				
+				<li>
+					<a href="monkds.ecl.html">monkds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_mnist_error.ecl.html">sparseautoencoder_mnist_error.ecl</a>
+				</li>
+				
+				<li>
+					<a href="association_marvel_comics.ecl.html">association_marvel_comics.ecl</a>
+				</li>
+				
+				<li>
+					<a href="10crossvalidation.ecl.html">10crossvalidation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify2.ecl.html">classify2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworksclassifier_test.ecl.html">neuralnetworksclassifier_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="samplingds.ecl.html">samplingds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="knn_kdtree.ecl.html">knn_kdtree.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregate.ecl.html">fieldaggregate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="association.ecl.html">association.ecl</a>
+				</li>
+				
+				<li>
+					<a href="logisticregressionstatistics.ecl.html">logisticregressionstatistics.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworksclassifier_cancerdata_test.ecl.html">neuralnetworksclassifier_cancerdata_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks_test.ecl.html">neuralnetworks_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="irisds.ecl.html">irisds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="decisiontree.ecl.html">decisiontree.ecl</a>
+				</li>
+				
+				<li>
+					<a href="adultds.ecl.html">adultds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution3.ecl.html">distribution3.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testofregressionols_lubothdenseandsparse.ecl.html">bwr_testofregressionols_lubothdenseandsparse.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepregressionexample.ecl.html">stepregressionexample.ecl</a>
+				</li>
+				
+				<li>
+					<a href="foldtest.ecl.html">foldtest.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_mnist_test_detailed.ecl.html">sparseautoencoder_mnist_test_detailed.ecl</a>
+				</li>
+				
+				<li>
+					<a href="linearregressionstatistics.ecl.html">linearregressionstatistics.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regressionpoly.ecl.html">regressionpoly.ecl</a>
+				</li>
+				
+				<li>
+					<a href="binaryc45vertical.ecl.html">binaryc45vertical.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretefield.ecl.html">discretefield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_classifytext.ecl.html">bwr_classifytext.ecl</a>
+				</li>
+				
+				<li>
+					<a href="softmax_mnistdataset.ecl.html">softmax_mnistdataset.ecl</a>
+				</li>
+				
+				<li>
+					<a href="naive_bayes.ecl.html">naive_bayes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="binaryc45iris.ecl.html">binaryc45iris.ecl</a>
+				</li>
+				
+				<li>
+					<a href="doc.ecl.html">doc.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
+				
+				<li>
+					<a href="codingdatamodel.ecl.html">codingdatamodel.ecl</a>
+				</li>
+				
+				<li>
+					<a href="softmax_cancerdataset.ecl.html">softmax_cancerdataset.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworksclassifier_mnist_test.ecl.html">neuralnetworksclassifier_mnist_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stacked_sparseautoencoder_mnist_test.ecl.html">stacked_sparseautoencoder_mnist_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randomforest.ecl.html">randomforest.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_agglo.ecl.html">bwr_agglo.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify_logistic.ecl.html">classify_logistic.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randomforestcontinuous.ecl.html">randomforestcontinuous.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize2.ecl.html">discretize2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="numericfield.ecl.html">numericfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparsenaivebayes.ecl.html">sparsenaivebayes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_test.ecl.html">sparseautoencoder_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression2.ecl.html">regression2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="samplingtest.ecl.html">samplingtest.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stacked_sparseautoencoder_test.ecl.html">stacked_sparseautoencoder_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression.ecl.html">regression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_mnist_test.ecl.html">sparseautoencoder_mnist_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution2.ecl.html">distribution2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_cancerdataset_test.ecl.html">sparseautoencoder_cancerdataset_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="qr_decomposition.ecl.html">qr_decomposition.ecl</a>
+				</li>
+				
+				<li>
+					<a href="softmax.ecl.html">softmax.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic.ecl.html">stepwiselogistic.ecl</a>
+				</li>
+				
+				<li>
+					<a href="kdtrees.ecl.html">kdtrees.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			MODULE : a1
-			<ul>
-				
-		<li>
-			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : InvDensity(Types.t_FieldReal delta)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Discrete
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.t_FieldReal Var
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : low
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : high
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RangeWidth
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DensityV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : CumulativeV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : b1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : a2
-			<ul>
-				
-		<li>
-			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : InvDensity(Types.t_FieldReal delta)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Discrete
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.t_FieldReal Var
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : low
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : high
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RangeWidth
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DensityV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : CumulativeV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : b2
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : a3
-			<ul>
-				
-		<li>
-			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : InvDensity(Types.t_FieldReal delta)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Discrete
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.t_FieldReal Var
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : low
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : high
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RangeWidth
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DensityV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : CumulativeV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : b3
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : D
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : C
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Res
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Splits
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Partitioned
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Counts
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CountMean
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CountVariance
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Extents
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : FullTree
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Boundaries
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : LowBounds
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UpBounds
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Locations
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	ATTRIBUTE : TestSize
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : a1
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../../distribution.ecl.html">
-					ml.distribution.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Discrete
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.t_FieldReal Var
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : low
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : high
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RangeWidth
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DensityV()
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : CumulativeV()
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : b1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : a2
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../../distribution.ecl.html">
-					ml.distribution.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Discrete
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.t_FieldReal Var
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : low
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : high
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RangeWidth
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DensityV()
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : CumulativeV()
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : b2
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : a3
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../../distribution.ecl.html">
-					ml.distribution.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Discrete
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.t_FieldReal Var
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : low
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : high
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RangeWidth
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : fn_Density(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DensityV()
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : CumulativeV()
-		
-		<br/>
-		<a href="../../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : b3
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : D
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : C
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Res
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Splits
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Partitioned
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Counts
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CountMean
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CountVariance
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Extents
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : FullTree
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Boundaries
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : LowBounds
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UpBounds
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Locations
-		
-		<br/>
-		<a href="../../trees.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Tests.Explanatory.KDTrees</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-tests-explanatory-testsize">
+							<a href="#ml-tests-explanatory-testsize" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TESTSIZE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-testsize">Desc</a>
+							<ul id="ml-tests-explanatory-testsize" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Distribution-Normal">
+							<a href="#ML-Distribution-Normal" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">A1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Distribution-Normal">Desc</a>
+							<ul id="ML-Distribution-Normal" class="accordian-body collapse">
+								<li id="t-ml-distribution-default-ntile">
+							<a href="#ml-distribution-default-ntile" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">NTILE</span>
+								<span class="sign-post">(Types.t_FieldReal Pc)</span>
+							</a> -
+							<a href="#dml-distribution-default-ntile">Desc</a>
+							<ul id="ml-distribution-default-ntile" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-invdensity">
+							<a href="#ml-distribution-default-invdensity" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INVDENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal delta)</span>
+							</a> -
+							<a href="#dml-distribution-default-invdensity">Desc</a>
+							<ul id="ml-distribution-default-invdensity" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-discrete">
+							<a href="#ml-distribution-default-discrete" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DISCRETE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-default-discrete">Desc</a>
+							<ul id="ml-distribution-default-discrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-var">
+							<a href="#ml-distribution-normal-var" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">VAR</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-var">Desc</a>
+							<ul id="ml-distribution-normal-var" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-low">
+							<a href="#ml-distribution-normal-low" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-low">Desc</a>
+							<ul id="ml-distribution-normal-low" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-high">
+							<a href="#ml-distribution-normal-high" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HIGH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-high">Desc</a>
+							<ul id="ml-distribution-normal-high" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-rangewidth">
+							<a href="#ml-distribution-normal-rangewidth" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RANGEWIDTH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-rangewidth">Desc</a>
+							<ul id="ml-distribution-normal-rangewidth" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-fn_density">
+							<a href="#ml-distribution-normal-fn_density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FN_DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</span>
+							</a> -
+							<a href="#dml-distribution-normal-fn_density">Desc</a>
+							<ul id="ml-distribution-normal-fn_density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-density">
+							<a href="#ml-distribution-normal-density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-normal-density">Desc</a>
+							<ul id="ml-distribution-normal-density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-cumulative">
+							<a href="#ml-distribution-normal-cumulative" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">CUMULATIVE</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-normal-cumulative">Desc</a>
+							<ul id="ml-distribution-normal-cumulative" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-densityv">
+							<a href="#ml-distribution-normal-densityv" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DENSITYV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-normal-densityv">Desc</a>
+							<ul id="ml-distribution-normal-densityv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-cumulativev">
+							<a href="#ml-distribution-normal-cumulativev" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CUMULATIVEV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-normal-cumulativev">Desc</a>
+							<ul id="ml-distribution-normal-cumulativev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-b1">
+							<a href="#ml-tests-explanatory-b1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">B1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-b1">Desc</a>
+							<ul id="ml-tests-explanatory-b1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Distribution-Normal">
+							<a href="#ML-Distribution-Normal" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">A2</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Distribution-Normal">Desc</a>
+							<ul id="ML-Distribution-Normal" class="accordian-body collapse">
+								<li id="t-ml-distribution-default-ntile">
+							<a href="#ml-distribution-default-ntile" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">NTILE</span>
+								<span class="sign-post">(Types.t_FieldReal Pc)</span>
+							</a> -
+							<a href="#dml-distribution-default-ntile">Desc</a>
+							<ul id="ml-distribution-default-ntile" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-invdensity">
+							<a href="#ml-distribution-default-invdensity" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INVDENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal delta)</span>
+							</a> -
+							<a href="#dml-distribution-default-invdensity">Desc</a>
+							<ul id="ml-distribution-default-invdensity" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-discrete">
+							<a href="#ml-distribution-default-discrete" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DISCRETE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-default-discrete">Desc</a>
+							<ul id="ml-distribution-default-discrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-var">
+							<a href="#ml-distribution-normal-var" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">VAR</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-var">Desc</a>
+							<ul id="ml-distribution-normal-var" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-low">
+							<a href="#ml-distribution-normal-low" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-low">Desc</a>
+							<ul id="ml-distribution-normal-low" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-high">
+							<a href="#ml-distribution-normal-high" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HIGH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-high">Desc</a>
+							<ul id="ml-distribution-normal-high" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-rangewidth">
+							<a href="#ml-distribution-normal-rangewidth" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RANGEWIDTH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-rangewidth">Desc</a>
+							<ul id="ml-distribution-normal-rangewidth" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-fn_density">
+							<a href="#ml-distribution-normal-fn_density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FN_DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</span>
+							</a> -
+							<a href="#dml-distribution-normal-fn_density">Desc</a>
+							<ul id="ml-distribution-normal-fn_density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-density">
+							<a href="#ml-distribution-normal-density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-normal-density">Desc</a>
+							<ul id="ml-distribution-normal-density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-cumulative">
+							<a href="#ml-distribution-normal-cumulative" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">CUMULATIVE</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-normal-cumulative">Desc</a>
+							<ul id="ml-distribution-normal-cumulative" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-densityv">
+							<a href="#ml-distribution-normal-densityv" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DENSITYV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-normal-densityv">Desc</a>
+							<ul id="ml-distribution-normal-densityv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-cumulativev">
+							<a href="#ml-distribution-normal-cumulativev" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CUMULATIVEV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-normal-cumulativev">Desc</a>
+							<ul id="ml-distribution-normal-cumulativev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-b2">
+							<a href="#ml-tests-explanatory-b2" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">B2</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-b2">Desc</a>
+							<ul id="ml-tests-explanatory-b2" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Distribution-Normal">
+							<a href="#ML-Distribution-Normal" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">A3</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Distribution-Normal">Desc</a>
+							<ul id="ML-Distribution-Normal" class="accordian-body collapse">
+								<li id="t-ml-distribution-default-ntile">
+							<a href="#ml-distribution-default-ntile" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">NTILE</span>
+								<span class="sign-post">(Types.t_FieldReal Pc)</span>
+							</a> -
+							<a href="#dml-distribution-default-ntile">Desc</a>
+							<ul id="ml-distribution-default-ntile" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-invdensity">
+							<a href="#ml-distribution-default-invdensity" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INVDENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal delta)</span>
+							</a> -
+							<a href="#dml-distribution-default-invdensity">Desc</a>
+							<ul id="ml-distribution-default-invdensity" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-discrete">
+							<a href="#ml-distribution-default-discrete" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DISCRETE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-default-discrete">Desc</a>
+							<ul id="ml-distribution-default-discrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-var">
+							<a href="#ml-distribution-normal-var" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">VAR</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-var">Desc</a>
+							<ul id="ml-distribution-normal-var" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-low">
+							<a href="#ml-distribution-normal-low" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-low">Desc</a>
+							<ul id="ml-distribution-normal-low" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-high">
+							<a href="#ml-distribution-normal-high" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HIGH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-high">Desc</a>
+							<ul id="ml-distribution-normal-high" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-rangewidth">
+							<a href="#ml-distribution-normal-rangewidth" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RANGEWIDTH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-normal-rangewidth">Desc</a>
+							<ul id="ml-distribution-normal-rangewidth" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-fn_density">
+							<a href="#ml-distribution-normal-fn_density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FN_DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</span>
+							</a> -
+							<a href="#dml-distribution-normal-fn_density">Desc</a>
+							<ul id="ml-distribution-normal-fn_density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-density">
+							<a href="#ml-distribution-normal-density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-normal-density">Desc</a>
+							<ul id="ml-distribution-normal-density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-cumulative">
+							<a href="#ml-distribution-normal-cumulative" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">CUMULATIVE</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-normal-cumulative">Desc</a>
+							<ul id="ml-distribution-normal-cumulative" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-densityv">
+							<a href="#ml-distribution-normal-densityv" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DENSITYV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-normal-densityv">Desc</a>
+							<ul id="ml-distribution-normal-densityv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-normal-cumulativev">
+							<a href="#ml-distribution-normal-cumulativev" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CUMULATIVEV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-normal-cumulativev">Desc</a>
+							<ul id="ml-distribution-normal-cumulativev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-b3">
+							<a href="#ml-tests-explanatory-b3" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">B3</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-b3">Desc</a>
+							<ul id="ml-tests-explanatory-b3" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-d">
+							<a href="#ml-tests-explanatory-d" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">D</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-d">Desc</a>
+							<ul id="ml-tests-explanatory-d" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Trees-KdTree">
+							<a href="#ML-Trees-KdTree" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">C</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Trees-KdTree">Desc</a>
+							<ul id="ML-Trees-KdTree" class="accordian-body collapse">
+								<li id="t-ml-trees-kdtree-res">
+							<a href="#ml-trees-kdtree-res" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-res">Desc</a>
+							<ul id="ml-trees-kdtree-res" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-splits">
+							<a href="#ml-trees-kdtree-splits" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-splits">Desc</a>
+							<ul id="ml-trees-kdtree-splits" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-partitioned">
+							<a href="#ml-trees-kdtree-partitioned" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARTITIONED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-partitioned">Desc</a>
+							<ul id="ml-trees-kdtree-partitioned" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-counts">
+							<a href="#ml-trees-kdtree-counts" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-counts">Desc</a>
+							<ul id="ml-trees-kdtree-counts" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-countmean">
+							<a href="#ml-trees-kdtree-countmean" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTMEAN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-countmean">Desc</a>
+							<ul id="ml-trees-kdtree-countmean" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-countvariance">
+							<a href="#ml-trees-kdtree-countvariance" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTVARIANCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-countvariance">Desc</a>
+							<ul id="ml-trees-kdtree-countvariance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-extents">
+							<a href="#ml-trees-kdtree-extents" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-extents">Desc</a>
+							<ul id="ml-trees-kdtree-extents" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-fulltree">
+							<a href="#ml-trees-kdtree-fulltree" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FULLTREE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-fulltree">Desc</a>
+							<ul id="ml-trees-kdtree-fulltree" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-boundaries">
+							<a href="#ml-trees-kdtree-boundaries" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BOUNDARIES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-boundaries">Desc</a>
+							<ul id="ml-trees-kdtree-boundaries" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-lowbounds">
+							<a href="#ml-trees-kdtree-lowbounds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOWBOUNDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-lowbounds">Desc</a>
+							<ul id="ml-trees-kdtree-lowbounds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-upbounds">
+							<a href="#ml-trees-kdtree-upbounds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">UPBOUNDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-upbounds">Desc</a>
+							<ul id="ml-trees-kdtree-upbounds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-newinstances">
+							<a href="#ml-trees-kdtree-newinstances" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NEWINSTANCES</span>
+								<span class="sign-post">(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)</span>
+							</a> -
+							<a href="#dml-trees-kdtree-newinstances">Desc</a>
+							<ul id="ml-trees-kdtree-newinstances" class="accordian-body collapse">
+								<li id="t-ml-trees-kdtree-newinstances-locations">
+							<a href="#ml-trees-kdtree-newinstances-locations" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOCATIONS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-newinstances-locations">Desc</a>
+							<ul id="ml-trees-kdtree-newinstances-locations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-tests-explanatory-testsize">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TESTSIZE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-testsize" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Distribution-Normal">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">A1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Distribution-Normal" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../../distribution.ecl.html">
+												ml.distribution.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-distribution-default-ntile">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">NTILE</span>
+									<span class="sign-post">(Types.t_FieldReal Pc)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-ntile" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-invdensity">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INVDENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal delta)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-invdensity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-discrete">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DISCRETE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-discrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-var">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">VAR</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-var" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-low">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-low" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-high">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HIGH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-high" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-rangewidth">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RANGEWIDTH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-rangewidth" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-fn_density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FN_DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-fn_density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-cumulative">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">CUMULATIVE</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-cumulative" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-densityv">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DENSITYV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-densityv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-cumulativev">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CUMULATIVEV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-cumulativev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-b1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">B1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-b1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Distribution-Normal">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">A2</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Distribution-Normal" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../../distribution.ecl.html">
+												ml.distribution.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-distribution-default-ntile">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">NTILE</span>
+									<span class="sign-post">(Types.t_FieldReal Pc)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-ntile" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-invdensity">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INVDENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal delta)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-invdensity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-discrete">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DISCRETE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-discrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-var">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">VAR</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-var" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-low">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-low" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-high">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HIGH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-high" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-rangewidth">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RANGEWIDTH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-rangewidth" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-fn_density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FN_DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-fn_density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-cumulative">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">CUMULATIVE</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-cumulative" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-densityv">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DENSITYV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-densityv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-cumulativev">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CUMULATIVEV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-cumulativev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-b2">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">B2</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-b2" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Distribution-Normal">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">A3</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Distribution-Normal" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../../distribution.ecl.html">
+												ml.distribution.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-distribution-default-ntile">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">NTILE</span>
+									<span class="sign-post">(Types.t_FieldReal Pc)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-ntile" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-invdensity">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INVDENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal delta)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-invdensity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-discrete">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DISCRETE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-discrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-var">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">VAR</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-var" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-low">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-low" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-high">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HIGH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-high" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-rangewidth">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RANGEWIDTH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-rangewidth" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-fn_density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FN_DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal x,Types.t_FieldReal mu,Types.t_FieldReal sig_sq)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-fn_density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-cumulative">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">CUMULATIVE</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-cumulative" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-densityv">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DENSITYV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-densityv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-normal-cumulativev">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CUMULATIVEV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-normal-cumulativev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-b3">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">B3</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-b3" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">D</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-d" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Trees-KdTree">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">C</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Trees-KdTree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-trees-kdtree-res">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-res" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-splits">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-splits" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-partitioned">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARTITIONED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-partitioned" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-counts">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-counts" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-countmean">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTMEAN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-countmean" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-countvariance">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTVARIANCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-countvariance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-extents">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-extents" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-fulltree">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FULLTREE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-fulltree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-boundaries">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BOUNDARIES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-boundaries" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-lowbounds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOWBOUNDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-lowbounds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-upbounds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">UPBOUNDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-upbounds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-newinstances">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NEWINSTANCES</span>
+									<span class="sign-post">(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-newinstances" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-trees-kdtree-newinstances-locations">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOCATIONS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-newinstances-locations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../trees.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

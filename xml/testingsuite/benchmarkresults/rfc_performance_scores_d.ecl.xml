@@ -2,7 +2,7 @@
 <Meta>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Types.ecl" name="TestingSuite.Utils.Types" target="../utils/types.ecl.xml"/><Source name="TestingSuite.BenchmarkResults.rfc_performance_scores_d" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/BenchmarkResults/rfc_performance_scores_d.ecl" target="rfc_performance_scores_d.ecl.xml">
   <Definition body="76" end="1790" exported="1" fullname="testingsuite.benchmarkresults.rfc_performance_scores_d" inherit_type="local" line="2" name="rfc_performance_scores_d" source="/media/sarthak/Data/ecl-ml/TestingSuite/BenchmarkResults/rfc_performance_scores_d.ecl" start="42">
-   <Signature>rfc_performance_scores_d</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RFC_PERFORMANCE_SCORES_D">rfc_performance_scores_d</Signature><Type>attribute</Type>
   </Definition>
   <Import body="0" end="7" fullname="TestingSuite.Utils.Types" inherit_type="local" line="1" name="Types" ref="testingsuite.utils.types" start="7" target="../utils/types.ecl.xml">
    <Type>attribute</Type>

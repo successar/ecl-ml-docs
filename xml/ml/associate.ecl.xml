@@ -10,66 +10,66 @@
    <Parents/>
    <Definition body="173" end="229" fullname="ml.associate.notfirst" inherit_type="local" line="7" name="NotFirst" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="145">
     <Type>function</Type>
-    <Signature>NotFirst(STRING S)</Signature><Params>
+    <Signature pre="" post="(STRING S)" name="NOTFIRST">NotFirst(STRING S)</Signature><Params>
      <Param name="S"/>
     </Params>
    </Definition>
    <Definition body="257" end="333" fullname="ml.associate.notlast" inherit_type="local" line="8" name="NotLast" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="230">
     <Type>function</Type>
-    <Signature>NotLast(STRING S)</Signature><Params>
+    <Signature pre="" post="(STRING S)" name="NOTLAST">NotLast(STRING S)</Signature><Params>
      <Param name="S"/>
     </Params>
    </Definition>
    <Definition body="372" end="493" fullname="ml.associate.notnn" inherit_type="local" line="9" name="NotNN" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="334">
     <Type>function</Type>
-    <Signature>NotNN(STRING S,UNSIGNED2 NN)</Signature><Params>
+    <Signature pre="" post="(STRING S,UNSIGNED2 NN)" name="NOTNN">NotNN(STRING S,UNSIGNED2 NN)</Signature><Params>
      <Param name="S"/>
      <Param name="NN"/>
     </Params>
    </Definition>
    <Definition body="520" end="556" fullname="ml.associate.lastn" inherit_type="local" line="10" name="LastN" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="494">
     <Type>function</Type>
-    <Signature>LastN(STRING S)</Signature><Params>
+    <Signature pre="" post="(STRING S)" name="LASTN">LastN(STRING S)</Signature><Params>
      <Param name="S"/>
     </Params>
    </Definition>
    <Definition body="575" end="599" fullname="ml.associate.records" inherit_type="local" line="12" name="Records" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="558">
-    <Signature>Records</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="RECORDS">Records</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="626" end="685" exported="1" fullname="ml.associate.patternelement" inherit_type="local" line="14" name="PatternElement" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="601">
     <Type>record</Type>
     <Field name="Support"/>
-    <Signature>PatternElement</Signature><Field name="Pat"/>
+    <Signature pre="" post="" name="PATTERNELEMENT">PatternElement</Signature><Field name="Pat"/>
    </Definition>
    <Definition body="705" end="837" exported="1" fullname="ml.associate.apriori1" inherit_type="local" line="19" name="Apriori1" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="687">
-    <Signature>Apriori1</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="APRIORI1">Apriori1</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="859" end="1090" fullname="ml.associate.dpossibles" inherit_type="local" line="27" name="DPossibles" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="839">
-    <Signature>DPossibles</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DPOSSIBLES">DPossibles</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1110" end="1593" exported="1" fullname="ml.associate.apriori2" inherit_type="local" line="33" name="Apriori2" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="1092">
-    <Signature>Apriori2</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="APRIORI2">Apriori2</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1613" end="3775" exported="1" fullname="ml.associate.apriori3" inherit_type="local" line="53" name="Apriori3" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="1595">
-    <Signature>Apriori3</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="APRIORI3">Apriori3</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3973" end="6954" exported="1" fullname="ml.associate.apriorin" inherit_type="local" line="114" name="AprioriN" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="3925">
     <Type>function</Type>
-    <Signature>AprioriN(UNSIGNED2 N,UNSIGNED2 MinN=2)</Signature><Params>
+    <Signature pre="" post="(UNSIGNED2 N,UNSIGNED2 MinN=2)" name="APRIORIN">AprioriN(UNSIGNED2 N,UNSIGNED2 MinN=2)</Signature><Params>
      <Param name="N"/>
      <Param name="MinN"/>
     </Params>
    </Definition>
    <Definition body="7133" end="9389" exported="1" fullname="ml.associate.eclatn" inherit_type="local" line="193" name="EclatN" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="7087">
     <Type>function</Type>
-    <Signature>EclatN(UNSIGNED2 N,UNSIGNED2 MinN=2)</Signature><Params>
+    <Signature pre="" post="(UNSIGNED2 N,UNSIGNED2 MinN=2)" name="ECLATN">EclatN(UNSIGNED2 N,UNSIGNED2 MinN=2)</Signature><Params>
      <Param name="N"/>
      <Param name="MinN"/>
     </Params>
    </Definition>
-   <Signature>Associate(DATASET(Types.ItemElement) d,Types.t_Count M)</Signature><Definition body="9573" end="10674" exported="1" fullname="ml.associate.rules" inherit_type="local" line="243" name="Rules" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="9531">
+   <Signature pre="" post="(DATASET(Types.ItemElement) d,Types.t_Count M)" name="ASSOCIATE">Associate(DATASET(Types.ItemElement) d,Types.t_Count M)</Signature><Definition body="9573" end="10674" exported="1" fullname="ml.associate.rules" inherit_type="local" line="243" name="Rules" source="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" start="9531">
     <Type>function</Type>
-    <Signature>Rules(DATASET(PatternElement) p)</Signature><Params>
+    <Signature pre="" post="(DATASET(PatternElement) p)" name="RULES">Rules(DATASET(PatternElement) p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>

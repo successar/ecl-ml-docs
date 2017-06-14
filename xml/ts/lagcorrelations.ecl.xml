@@ -18,7 +18,7 @@
    <Field name="v"/>
    <Field name="k"/>
    <Field name="N"/>
-   <Signature>LagRec</Signature><Field name="lags"/>
+   <Signature pre="" post="" name="LAGREC">LagRec</Signature><Field name="lags"/>
   </Definition>
   <Definition body="345" end="583" fullname="ts.acf_rec" inherit_type="local" line="16" name="ACF_Rec" source="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" start="335">
    <Type>record</Type>
@@ -29,7 +29,7 @@
    <Field name="ac"/>
    <Field name="sq"/>
    <Field name="sum_sq"/>
-   <Signature>ACF_Rec</Signature><Field name="N"/>
+   <Signature pre="" post="" name="ACF_REC">ACF_Rec</Signature><Field name="N"/>
   </Definition>
   <Definition body="591" end="676" fullname="ts.cell" inherit_type="local" line="26" name="Cell" source="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" start="584">
    <Type>record</Type>
@@ -37,7 +37,7 @@
    <Field name="y"/>
    <Field name="v"/>
    <Field name="model_id"/>
-   <Signature>Cell</Signature><Field name="lags"/>
+   <Signature pre="" post="" name="CELL">Cell</Signature><Field name="lags"/>
   </Definition>
   <Definition body="686" end="786" fullname="ts.obsrec" inherit_type="local" line="30" name="ObsRec" source="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" start="677">
    <Type>record</Type>
@@ -48,7 +48,7 @@
    <Field name="z_bar"/>
    <Field name="N"/>
    <Field name="f_per"/>
-   <Signature>ObsRec</Signature><Field name="l_per"/>
+   <Signature pre="" post="" name="OBSREC">ObsRec</Signature><Field name="l_per"/>
   </Definition>
   <Definition body="809" end="825" fullname="ts.pacf_acf" inherit_type="local" line="37" name="PACF_ACF" source="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" start="798">
    <Type>record</Type>
@@ -59,18 +59,18 @@
    <Field name="ac"/>
    <Field name="ac_t_like"/>
    <Field name="pac"/>
-   <Signature>PACF_ACF</Signature><Field name="pac_t_like"/>
+   <Signature pre="" post="" name="PACF_ACF">PACF_ACF</Signature><Field name="pac_t_like"/>
   </Definition>
   <Definition body="835" end="855" fullname="ts.decobs" inherit_type="local" line="38" name="DecObs" source="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" start="826">
    <Type>record</Type>
    <Field name="period"/>
    <Field name="dependent"/>
    <Field name="model_id"/>
-   <Signature>DecObs</Signature><Field name="lags"/>
+   <Signature pre="" post="" name="DECOBS">DecObs</Signature><Field name="lags"/>
   </Definition>
   <Definition body="927" end="6163" exported="1" fullname="ts.lagcorrelations" inherit_type="local" line="40" name="LagCorrelations" source="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" start="857">
    <Type>function</Type>
-   <Signature>DATASET(PACF_ACF) LagCorrelations(DATASET(DecObs) post_diff)</Signature><Params>
+   <Signature pre="DATASET(PACF_ACF)" post="(DATASET(DecObs) post_diff)" name="LAGCORRELATIONS">DATASET(PACF_ACF) LagCorrelations(DATASET(DecObs) post_diff)</Signature><Params>
     <Param name="post_diff"/>
    </Params>
   </Definition>

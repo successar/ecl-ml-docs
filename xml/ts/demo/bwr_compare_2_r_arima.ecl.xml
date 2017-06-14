@@ -9,7 +9,7 @@
   </Import>
   <Definition body="279" end="545" fullname="ts.demo.arima" inherit_type="local" line="6" name="ARIMA" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="83">
    <Type>embed</Type>
-   <Signature>set of real4 ARIMA(
+   <Signature pre="set of real4" post="(&#10;                   set of real4 t,&#10;                   set of unsigned tsparms=[1,1],&#10;                   set of unsigned o=[1,0,1],&#10;                   boolean with_mean=TRUE)" name="ARIMA">set of real4 ARIMA(
                    set of real4 t,
                    set of unsigned tsparms=[1,1],
                    set of unsigned o=[1,0,1],
@@ -21,10 +21,10 @@
    </Params>
   </Definition>
   <Definition body="563" end="1713" fullname="ts.demo.my_time_series" inherit_type="local" line="22" name="my_time_series" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="547">
-   <Signature>my_time_series</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MY_TIME_SERIES">my_time_series</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1721" end="1776" fullname="ts.demo.ts_0" inherit_type="local" line="23" name="ts_0" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="1714">
-   <Signature>ts_0</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TS_0">ts_0</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1846" end="1917" fullname="ts.demo.enum_recs" inherit_type="local" line="24" name="enum_recs" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="1780">
    <Type>transform</Type>
@@ -32,22 +32,22 @@
     <Param name="lr"/>
     <Param name="cnt"/>
    </Params>
-   <Signature>Types.UniObservation enum_recs(RECORDOF(ts_0) lr, UNSIGNED cnt)</Signature><Return>uniobservation</Return>
+   <Signature pre="Types.UniObservation" post="(RECORDOF(ts_0) lr, UNSIGNED cnt)" name="ENUM_RECS">Types.UniObservation enum_recs(RECORDOF(ts_0) lr, UNSIGNED cnt)</Signature><Return>uniobservation</Return>
   </Definition>
   <Definition body="1925" end="1966" fullname="ts.demo.ts_1" inherit_type="local" line="28" name="ts_1" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="1918">
-   <Signature>ts_1</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TS_1">ts_1</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1980" end="1989" fullname="ts.demo.pdq_parms" inherit_type="local" line="30" name="pdq_parms" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="1968">
-   <Signature>pdq_parms</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="PDQ_PARMS">pdq_parms</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2003" end="2009" fullname="ts.demo.want_const" inherit_type="local" line="31" name="want_const" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="1990">
-   <Signature>want_const</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="WANT_CONST">want_const</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2072" end="2117" fullname="ts.demo.r_model_set" inherit_type="local" line="35" name="r_model_set" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="2058">
-   <Signature>r_model_set</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="R_MODEL_SET">r_model_set</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2132" end="2169" fullname="ts.demo.r_model_out" inherit_type="local" line="36" name="r_model_out" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="2118">
-   <Signature>r_model_out</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="R_MODEL_OUT">r_model_out</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2296" end="2350" fullname="ts.demo.make_coef" inherit_type="local" line="38" name="make_coef" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="2225">
    <Type>transform</Type>
@@ -55,7 +55,7 @@
     <Param name="lr"/>
     <Param name="cnt"/>
    </Params>
-   <Signature>Types.Co_efficient make_coef({TS.Types.t_value cv} lr, UNSIGNED cnt)</Signature><Return>co_efficient</Return>
+   <Signature pre="Types.Co_efficient" post="({TS.Types.t_value cv} lr, UNSIGNED cnt)" name="MAKE_COEF">Types.Co_efficient make_coef({TS.Types.t_value cv} lr, UNSIGNED cnt)</Signature><Return>co_efficient</Return>
   </Definition>
   <Definition body="2450" end="2858" fullname="ts.demo.makeparms" inherit_type="local" line="42" name="makeParms" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="2354">
    <Type>transform</Type>
@@ -64,22 +64,22 @@
     <Param name="coeff"/>
     <Param name="want_const"/>
    </Params>
-   <Signature>Types.Model_Parameters makeParms(SET OF UNSIGNED inp, SET OF REAL8 coeff, BOOLEAN want_const)</Signature><Return>model_parameters</Return>
+   <Signature pre="Types.Model_Parameters" post="(SET OF UNSIGNED inp, SET OF REAL8 coeff, BOOLEAN want_const)" name="MAKEPARMS">Types.Model_Parameters makeParms(SET OF UNSIGNED inp, SET OF REAL8 coeff, BOOLEAN want_const)</Signature><Return>model_parameters</Return>
   </Definition>
   <Definition body="2869" end="2928" fullname="ts.demo.r_model" inherit_type="local" line="53" name="r_model" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="2859">
-   <Signature>r_model</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="R_MODEL">r_model</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2975" end="3004" fullname="ts.demo.r_scored" inherit_type="local" line="55" name="r_scored" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="2964">
-   <Signature>r_scored</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="R_SCORED">r_scored</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3098" end="3189" fullname="ts.demo.model_spec" inherit_type="local" line="61" name="model_spec" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="3085">
-   <Signature>model_spec</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MODEL_SPEC">model_spec</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3204" end="3242" fullname="ts.demo.model_parms" inherit_type="local" line="62" name="model_parms" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="3190">
-   <Signature>model_parms</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MODEL_PARMS">model_parms</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3295" end="3328" fullname="ts.demo.scored" inherit_type="local" line="64" name="scored" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Compare_2_R_ARIMA.ecl" start="3286">
-   <Signature>scored</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SCORED">scored</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/plugins/R.ecllib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/plugins/R.ecllib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" name="TS.Diagnosis" target="../diagnosis.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" name="TS.SeriesByModel" target="../seriesbymodel.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" name="TS.EstimatedObs" target="../estimatedobs.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" name="TS.DifferenceSeries" target="../differenceseries.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" name="TS.ExtendedParameters" target="../extendedparameters.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" name="TS.Estimation" target="../estimation.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" name="TS.LagCorrelations" target="../lagcorrelations.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" name="PBblas.BLAS.dasum" target="../../pbblas/blas/dasum.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" name="PBblas.Block.make_vector" target="../../pbblas/block/make_vector.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_Diag" target="../../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" name="PBblas.Block.Apply2Cells" target="../../pbblas/block/apply2cells.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" name="PBblas.Block.ICellFunc" target="../../pbblas/block/icellfunc.ecl.xml"/></Meta>

@@ -1,486 +1,946 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>Examples.Sentilyze.NaiveBayes.Model</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				examples.sentilyze
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../../ml/pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			TRANSFORM : Types.LexiconElement AddOne(ML.Docs.Types.LexiconElement L)
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
+				
+				<li>
+					<a href="model.ecl.html">model.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.NumericField ToIndep(ML.Docs.Types.OWordElement L)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.NumericField ToDep(Sentilyze.Types.SentimentType L)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dPosiTrainer
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dPosiRaw
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dPosiProcess
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dPosiTagged
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dNegaTrainer
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dNegaRaw
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dNegaProcess
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dNegaTagged
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SentiMerge
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SentiRaw
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SentiWords
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Senticon
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SentiO1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SentiBag
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : nfIndep
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dfIndep
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : nfDep
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dfDep
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SentiModel
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : Model
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Vocab
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	TRANSFORM : Types.LexiconElement AddOne(ML.Docs.Types.LexiconElement L)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.NumericField ToIndep(ML.Docs.Types.OWordElement L)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.NumericField ToDep(Sentilyze.Types.SentimentType L)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dPosiTrainer
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dPosiRaw
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dPosiProcess
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dPosiTagged
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dNegaTrainer
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dNegaRaw
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dNegaProcess
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dNegaTagged
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SentiMerge
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SentiRaw
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SentiWords
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Senticon
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SentiO1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SentiBag
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : nfIndep
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dfIndep
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : nfDep
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dfDep
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SentiModel
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Vocab
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">Examples.Sentilyze.NaiveBayes.Model</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../pkg.toc.html">
+								examples.sentilyze
+							</a>
+							</li>
+						<li>
+							<a href="../../../ml/pkg.toc.html">
+								ml
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-examples-sentilyze-naivebayes-addone">
+							<a href="#examples-sentilyze-naivebayes-addone" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.LexiconElement</span>
+								<span class="sign-name">ADDONE</span>
+								<span class="sign-post">(ML.Docs.Types.LexiconElement L)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-addone">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-addone" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-toindep">
+							<a href="#examples-sentilyze-naivebayes-toindep" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.NumericField</span>
+								<span class="sign-name">TOINDEP</span>
+								<span class="sign-post">(ML.Docs.Types.OWordElement L)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-toindep">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-toindep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-todep">
+							<a href="#examples-sentilyze-naivebayes-todep" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.NumericField</span>
+								<span class="sign-name">TODEP</span>
+								<span class="sign-post">(Sentilyze.Types.SentimentType L)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-todep">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-todep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dpositrainer">
+							<a href="#examples-sentilyze-naivebayes-dpositrainer" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DPOSITRAINER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dpositrainer">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dpositrainer" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dposiraw">
+							<a href="#examples-sentilyze-naivebayes-dposiraw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DPOSIRAW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dposiraw">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dposiraw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dposiprocess">
+							<a href="#examples-sentilyze-naivebayes-dposiprocess" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DPOSIPROCESS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dposiprocess">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dposiprocess" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dpositagged">
+							<a href="#examples-sentilyze-naivebayes-dpositagged" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DPOSITAGGED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dpositagged">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dpositagged" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dnegatrainer">
+							<a href="#examples-sentilyze-naivebayes-dnegatrainer" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DNEGATRAINER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dnegatrainer">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dnegatrainer" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dnegaraw">
+							<a href="#examples-sentilyze-naivebayes-dnegaraw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DNEGARAW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dnegaraw">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dnegaraw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dnegaprocess">
+							<a href="#examples-sentilyze-naivebayes-dnegaprocess" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DNEGAPROCESS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dnegaprocess">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dnegaprocess" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dnegatagged">
+							<a href="#examples-sentilyze-naivebayes-dnegatagged" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DNEGATAGGED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dnegatagged">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dnegatagged" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-sentimerge">
+							<a href="#examples-sentilyze-naivebayes-sentimerge" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SENTIMERGE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-sentimerge">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-sentimerge" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-sentiraw">
+							<a href="#examples-sentilyze-naivebayes-sentiraw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SENTIRAW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-sentiraw">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-sentiraw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-sentiwords">
+							<a href="#examples-sentilyze-naivebayes-sentiwords" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SENTIWORDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-sentiwords">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-sentiwords" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-senticon">
+							<a href="#examples-sentilyze-naivebayes-senticon" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SENTICON</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-senticon">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-senticon" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-sentio1">
+							<a href="#examples-sentilyze-naivebayes-sentio1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SENTIO1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-sentio1">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-sentio1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-sentibag">
+							<a href="#examples-sentilyze-naivebayes-sentibag" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SENTIBAG</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-sentibag">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-sentibag" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-nfindep">
+							<a href="#examples-sentilyze-naivebayes-nfindep" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NFINDEP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-nfindep">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-nfindep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dfindep">
+							<a href="#examples-sentilyze-naivebayes-dfindep" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DFINDEP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dfindep">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dfindep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-nfdep">
+							<a href="#examples-sentilyze-naivebayes-nfdep" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NFDEP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-nfdep">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-nfdep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-dfdep">
+							<a href="#examples-sentilyze-naivebayes-dfdep" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DFDEP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-dfdep">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-dfdep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-sentimodel">
+							<a href="#examples-sentilyze-naivebayes-sentimodel" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SENTIMODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-sentimodel">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-sentimodel" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-Examples-Sentilyze-NaiveBayes-Model">
+							<a href="#Examples-Sentilyze-NaiveBayes-Model" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dExamples-Sentilyze-NaiveBayes-Model">Desc</a>
+							<ul id="Examples-Sentilyze-NaiveBayes-Model" class="accordian-body collapse">
+								<li id="t-examples-sentilyze-naivebayes-model-vocab">
+							<a href="#examples-sentilyze-naivebayes-model-vocab" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VOCAB</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-model-vocab">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-model-vocab" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-naivebayes-model-model">
+							<a href="#examples-sentilyze-naivebayes-model-model" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dexamples-sentilyze-naivebayes-model-model">Desc</a>
+							<ul id="examples-sentilyze-naivebayes-model-model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-addone">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.LexiconElement</span>
+									<span class="sign-name">ADDONE</span>
+									<span class="sign-post">(ML.Docs.Types.LexiconElement L)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-addone" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-toindep">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.NumericField</span>
+									<span class="sign-name">TOINDEP</span>
+									<span class="sign-post">(ML.Docs.Types.OWordElement L)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-toindep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-todep">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.NumericField</span>
+									<span class="sign-name">TODEP</span>
+									<span class="sign-post">(Sentilyze.Types.SentimentType L)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-todep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dpositrainer">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DPOSITRAINER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dpositrainer" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dposiraw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DPOSIRAW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dposiraw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dposiprocess">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DPOSIPROCESS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dposiprocess" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dpositagged">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DPOSITAGGED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dpositagged" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dnegatrainer">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DNEGATRAINER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dnegatrainer" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dnegaraw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DNEGARAW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dnegaraw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dnegaprocess">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DNEGAPROCESS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dnegaprocess" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dnegatagged">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DNEGATAGGED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dnegatagged" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-sentimerge">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SENTIMERGE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-sentimerge" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-sentiraw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SENTIRAW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-sentiraw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-sentiwords">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SENTIWORDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-sentiwords" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-senticon">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SENTICON</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-senticon" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-sentio1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SENTIO1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-sentio1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-sentibag">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SENTIBAG</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-sentibag" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-nfindep">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NFINDEP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-nfindep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dfindep">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DFINDEP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dfindep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-nfdep">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NFDEP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-nfdep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-dfdep">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DFDEP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-dfdep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-sentimodel">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SENTIMODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-sentimodel" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dExamples-Sentilyze-NaiveBayes-Model">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-Examples-Sentilyze-NaiveBayes-Model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-model-vocab">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VOCAB</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-model-vocab" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-naivebayes-model-model">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-naivebayes-model-model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

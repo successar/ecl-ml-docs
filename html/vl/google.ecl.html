@@ -1,146 +1,329 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>VL.Google</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				vl
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : T GoogleMODUL
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : TRING FormatChartData(DATASET(VL.Types.CartesianData) d,STRING sChartType='Std')FUNCTION
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : (VL.Styles.Default p)FUNCTION
-    sOpt''+
-			<ul>
+				<li>
+					<a href="chart.ecl.html">chart.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Name,VL.Styles.Default p)FUNCTION
-    sOpt''+
-      IF(p.Float
-			<ul>
+				<li>
+					<a href="d3.ecl.html">d3.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : STRING sChartName,DATASET(VL.Types.CartesianData) d,VL.Styles.Default s)''+
-    '<html><head><META http-equiv="Content-T
-			<ul>
+				<li>
+					<a href="google.ecl.html">google.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.CartesianData) d,VL.Styles.Default s=VL.Styles.Default)FUNCTION
-    RETURN OUTPUT(DATASET([{'CHARTCODE',DefaultTemplate
-			<ul>
+				<li>
+					<a href="geo.ecl.html">geo.ecl</a>
+				</li>
+				
+				<li>
+					<a href="styles.ecl.html">styles.ecl</a>
+				</li>
+				
+				<li>
+					<a href="formatcartesiandata.ecl.html">formatcartesiandata.ecl</a>
+				</li>
+				
+				<li>
+					<a href="google_samples.ecl.html">google_samples.ecl</a>
+				</li>
+				
+				<li>
+					<a href="swapaxes.ecl.html">swapaxes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="d3_samples.ecl.html">d3_samples.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : T GoogleMODUL
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : TRING FormatChartData(DATASET(VL.Types.CartesianData) d,STRING sChartType='Std')FUNCTION
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : (VL.Styles.Default p)FUNCTION
-    sOpt''+
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Name,VL.Styles.Default p)FUNCTION
-    sOpt''+
-      IF(p.Float
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : STRING sChartName,DATASET(VL.Types.CartesianData) d,VL.Styles.Default s)''+
-    '<html><head><META http-equiv="Content-T
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.CartesianData) d,VL.Styles.Default s=VL.Styles.Default)FUNCTION
-    RETURN OUTPUT(DATASET([{'CHARTCODE',DefaultTemplate
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">VL.Google</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								vl
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-VL-Google">
+							<a href="#VL-Google" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre">T</span>
+								<span class="sign-name">GOOGLE</span>
+								<span class="sign-post">:=MODUL</span>
+							</a> -
+							<a href="#dVL-Google">Desc</a>
+							<ul id="VL-Google" class="accordian-body collapse">
+								<li id="t-vl-google-formatchartdata">
+							<a href="#vl-google-formatchartdata" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">TRING</span>
+								<span class="sign-name">FORMATCHARTDATA</span>
+								<span class="sign-post">(DATASET(VL.Types.CartesianData) d,STRING sChartType='Std'):=FUNCTION</span>
+							</a> -
+							<a href="#dvl-google-formatchartdata">Desc</a>
+							<ul id="vl-google-formatchartdata" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-google-chartoptions">
+							<a href="#vl-google-chartoptions" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CHARTOPTIONS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-google-chartoptions">Desc</a>
+							<ul id="vl-google-chartoptions" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-google-pageoptions">
+							<a href="#vl-google-pageoptions" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PAGEOPTIONS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-google-pageoptions">Desc</a>
+							<ul id="vl-google-pageoptions" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-google-defaulttemplate">
+							<a href="#vl-google-defaulttemplate" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEFAULTTEMPLATE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-google-defaulttemplate">Desc</a>
+							<ul id="vl-google-defaulttemplate" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-google-cartesian">
+							<a href="#vl-google-cartesian" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.</span>
+								<span class="sign-name">CARTESIAN</span>
+								<span class="sign-post">Data) d,VL.Styles.Default s=VL.Styles.Default):=FUNCTION
+    RETURN OUTPUT(DATASET([{'CHARTCODE',DefaultTemplate</span>
+							</a> -
+							<a href="#dvl-google-cartesian">Desc</a>
+							<ul id="vl-google-cartesian" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dVL-Google">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">T</span>
+									<span class="sign-name">GOOGLE</span>
+									<span class="sign-post">:=MODUL</span>
+								</div>
+								<div class="btns">
+									<a href="#t-VL-Google" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dvl-google-formatchartdata">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">TRING</span>
+									<span class="sign-name">FORMATCHARTDATA</span>
+									<span class="sign-post">(DATASET(VL.Types.CartesianData) d,STRING sChartType='Std'):=FUNCTION</span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-google-formatchartdata" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-google-chartoptions">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CHARTOPTIONS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-google-chartoptions" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-google-pageoptions">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PAGEOPTIONS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-google-pageoptions" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-google-defaulttemplate">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEFAULTTEMPLATE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-google-defaulttemplate" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-google-cartesian">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.</span>
+									<span class="sign-name">CARTESIAN</span>
+									<span class="sign-post">Data) d,VL.Styles.Default s=VL.Styles.Default):=FUNCTION
+    RETURN OUTPUT(DATASET([{'CHARTCODE',DefaultTemplate</span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-google-cartesian" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

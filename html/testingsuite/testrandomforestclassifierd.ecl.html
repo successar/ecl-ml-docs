@@ -1,156 +1,298 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TestingSuite.TestRandomForestClassifierD</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../std/pkg.toc.html">
-				std
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../ts/pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../ml/pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../ml/types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				testingsuite
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="benchmarkresults/pkg.toc.html">
-				testingsuite.benchmarkresults
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="utils/pkg.toc.html">
-				testingsuite.utils
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="classification/pkg.toc.html">
-				testingsuite.classification
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MACRO : QualifiedName(prefix, datasetname)
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="clustering/pkg.toc.html">clustering</a>
+				</li>
+				
+				<li>
+					<a href="testrandomforestclassifierd.ecl.html">testrandomforestclassifierd.ecl</a>
+				</li>
+				
+				<li>
+					<a href="testrandomforestclassifierc.ecl.html">testrandomforestclassifierc.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils/pkg.toc.html">utils</a>
+				</li>
+				
+				<li>
+					<a href="testlinearregression.ecl.html">testlinearregression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
+				
+				<li>
+					<a href="slimmer_testall.ecl.html">slimmer_testall.ecl</a>
+				</li>
+				
+				<li>
+					<a href="benchmarkresults/pkg.toc.html">benchmarkresults</a>
+				</li>
+				
+				<li>
+					<a href="testkmeans.ecl.html">testkmeans.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classification/pkg.toc.html">classification</a>
+				</li>
+				
+				<li>
+					<a href="testdecisiontreeclassifier.ecl.html">testdecisiontreeclassifier.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SET OF STRING classificationDatasetNamesD
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : INTEGER c_no_of_elements
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : rf_results
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MACRO : QualifiedName(prefix, datasetname)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SET OF STRING classificationDatasetNamesD
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : INTEGER c_no_of_elements
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : rf_results
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TestingSuite.TestRandomForestClassifierD</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../std/pkg.toc.html">
+								std
+							</a>
+							</li>
+						<li>
+							<a href="../ts/pkg.toc.html">
+								ts
+							</a>
+							</li>
+						<li>
+							<a href="../ml/pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="../ml/types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="pkg.toc.html">
+								testingsuite
+							</a>
+							</li>
+						<li>
+							<a href="benchmarkresults/pkg.toc.html">
+								testingsuite.benchmarkresults
+							</a>
+							</li>
+						<li>
+							<a href="utils/pkg.toc.html">
+								testingsuite.utils
+							</a>
+							</li>
+						<li>
+							<a href="classification/pkg.toc.html">
+								testingsuite.classification
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-testingsuite-qualifiedname">
+							<a href="#testingsuite-qualifiedname" data-toggle="collapse">
+								MACRO :
+								<span class="sign-pre"></span>
+								<span class="sign-name">QUALIFIEDNAME</span>
+								<span class="sign-post">(prefix, datasetname)</span>
+							</a> -
+							<a href="#dtestingsuite-qualifiedname">Desc</a>
+							<ul id="testingsuite-qualifiedname" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-testingsuite-classificationdatasetnamesd">
+							<a href="#testingsuite-classificationdatasetnamesd" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">SET OF STRING</span>
+								<span class="sign-name">CLASSIFICATIONDATASETNAMESD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dtestingsuite-classificationdatasetnamesd">Desc</a>
+							<ul id="testingsuite-classificationdatasetnamesd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-testingsuite-c_no_of_elements">
+							<a href="#testingsuite-c_no_of_elements" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">INTEGER</span>
+								<span class="sign-name">C_NO_OF_ELEMENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dtestingsuite-c_no_of_elements">Desc</a>
+							<ul id="testingsuite-c_no_of_elements" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-testingsuite-rf_results">
+							<a href="#testingsuite-rf_results" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RF_RESULTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dtestingsuite-rf_results">Desc</a>
+							<ul id="testingsuite-rf_results" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dtestingsuite-qualifiedname">
+							<div class="panel-heading">
+								<div class="type">
+									MACRO
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">QUALIFIEDNAME</span>
+									<span class="sign-post">(prefix, datasetname)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-testingsuite-qualifiedname" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dtestingsuite-classificationdatasetnamesd">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">SET OF STRING</span>
+									<span class="sign-name">CLASSIFICATIONDATASETNAMESD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-testingsuite-classificationdatasetnamesd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dtestingsuite-c_no_of_elements">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">INTEGER</span>
+									<span class="sign-name">C_NO_OF_ELEMENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-testingsuite-c_no_of_elements" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dtestingsuite-rf_results">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RF_RESULTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-testingsuite-rf_results" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

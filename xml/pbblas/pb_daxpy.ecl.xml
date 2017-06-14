@@ -29,20 +29,20 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="229" end="244" fullname="pbblas.value_t" inherit_type="local" line="9" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="219">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="267" end="298" fullname="pbblas.dimension_incompatz" inherit_type="local" line="10" name="Dimension_IncompatZ" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="245">
-   <Signature>Dimension_IncompatZ</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_INCOMPATZ">Dimension_IncompatZ</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="321" end="351" fullname="pbblas.dimension_incompat" inherit_type="local" line="11" name="Dimension_Incompat" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="299">
-   <Signature>Dimension_Incompat</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_INCOMPAT">Dimension_Incompat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="420" end="1775" exported="1" fullname="pbblas.pb_daxpy" inherit_type="local" line="13" name="PB_daxpy" source="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" start="353">
    <Type>function</Type>
-   <Signature>PB_daxpy(value_t alpha, DATASET(Part) X, DATASET(Part) Y)</Signature><Params>
+   <Signature pre="" post="(value_t alpha, DATASET(Part) X, DATASET(Part) Y)" name="PB_DAXPY">PB_daxpy(value_t alpha, DATASET(Part) X, DATASET(Part) Y)</Signature><Params>
     <Param name="alpha"/>
     <Param name="X"/>
     <Param name="Y"/>

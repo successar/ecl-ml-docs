@@ -1,296 +1,709 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Associate</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
-				std.str
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="config.ecl.html">
-				ml.config
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Associate(DATASET(Types.ItemElement) d,Types.t_Count M)
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : NotFirst(STRING S)
-			<ul>
+				<li>
+					<a href="nearestneighborssearch.ecl.html">nearestneighborssearch.ecl</a>
+				</li>
+				
+				<li>
+					<a href="ensemble.ecl.html">ensemble.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sampling.ecl.html">sampling.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mat/pkg.toc.html">mat</a>
+				</li>
+				
+				<li>
+					<a href="appendid.ecl.html">appendid.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
+				
+				<li>
+					<a href="lsa/pkg.toc.html">lsa</a>
+				</li>
+				
+				<li>
+					<a href="config.ecl.html">config.ecl</a>
+				</li>
+				
+				<li>
+					<a href="naivebayes.ecl.html">naivebayes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepregression/pkg.toc.html">stepregression</a>
+				</li>
+				
+				<li>
+					<a href="populationestimate.ecl.html">populationestimate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svm/pkg.toc.html">svm</a>
+				</li>
+				
+				<li>
+					<a href="version.ecl.html">version.ecl</a>
+				</li>
+				
+				<li>
+					<a href="generate.ecl.html">generate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="docs/pkg.toc.html">docs</a>
+				</li>
+				
+				<li>
+					<a href="nfoldcrossvalidation.ecl.html">nfoldcrossvalidation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic/pkg.toc.html">stepwiselogistic</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fromfield.ecl.html">fromfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lazy.ecl.html">lazy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="correlate.ecl.html">correlate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="associate.ecl.html">associate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tofield.ecl.html">tofield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks.ecl.html">neuralnetworks.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="deeplearning.ecl.html">deeplearning.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils.ecl.html">utils.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trees.ecl.html">trees.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regress_poly_x.ecl.html">regress_poly_x.ecl</a>
+				</li>
+				
+				<li>
+					<a href="dmat/pkg.toc.html">dmat</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregates.ecl.html">fieldaggregates.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NotLast(STRING S)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NotNN(STRING S,UNSIGNED2 NN)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LastN(STRING S)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Records
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : PatternElement
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Apriori1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DPossibles
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Apriori2
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Apriori3
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : AprioriN(UNSIGNED2 N,UNSIGNED2 MinN=2)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : EclatN(UNSIGNED2 N,UNSIGNED2 MinN=2)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Rules(DATASET(PatternElement) p)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Associate(DATASET(Types.ItemElement) d,Types.t_Count M)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : NotFirst(STRING S)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NotLast(STRING S)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NotNN(STRING S,UNSIGNED2 NN)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : LastN(STRING S)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Records
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : PatternElement
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Apriori1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DPossibles
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Apriori2
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Apriori3
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : AprioriN(UNSIGNED2 N,UNSIGNED2 MinN=2)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : EclatN(UNSIGNED2 N,UNSIGNED2 MinN=2)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Rules(DATASET(PatternElement) p)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Associate</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+								std.str
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="config.ecl.html">
+								ml.config
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-associate">
+							<a href="#ml-associate" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ASSOCIATE</span>
+								<span class="sign-post">(DATASET(Types.ItemElement) d,Types.t_Count M)</span>
+							</a> -
+							<a href="#dml-associate">Desc</a>
+							<ul id="ml-associate" class="accordian-body collapse">
+								<li id="t-ml-associate-notfirst">
+							<a href="#ml-associate-notfirst" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NOTFIRST</span>
+								<span class="sign-post">(STRING S)</span>
+							</a> -
+							<a href="#dml-associate-notfirst">Desc</a>
+							<ul id="ml-associate-notfirst" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-notlast">
+							<a href="#ml-associate-notlast" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NOTLAST</span>
+								<span class="sign-post">(STRING S)</span>
+							</a> -
+							<a href="#dml-associate-notlast">Desc</a>
+							<ul id="ml-associate-notlast" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-notnn">
+							<a href="#ml-associate-notnn" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NOTNN</span>
+								<span class="sign-post">(STRING S,UNSIGNED2 NN)</span>
+							</a> -
+							<a href="#dml-associate-notnn">Desc</a>
+							<ul id="ml-associate-notnn" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-lastn">
+							<a href="#ml-associate-lastn" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LASTN</span>
+								<span class="sign-post">(STRING S)</span>
+							</a> -
+							<a href="#dml-associate-lastn">Desc</a>
+							<ul id="ml-associate-lastn" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-records">
+							<a href="#ml-associate-records" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RECORDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-associate-records">Desc</a>
+							<ul id="ml-associate-records" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-patternelement">
+							<a href="#ml-associate-patternelement" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PATTERNELEMENT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-associate-patternelement">Desc</a>
+							<ul id="ml-associate-patternelement" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-apriori1">
+							<a href="#ml-associate-apriori1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">APRIORI1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-associate-apriori1">Desc</a>
+							<ul id="ml-associate-apriori1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-dpossibles">
+							<a href="#ml-associate-dpossibles" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DPOSSIBLES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-associate-dpossibles">Desc</a>
+							<ul id="ml-associate-dpossibles" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-apriori2">
+							<a href="#ml-associate-apriori2" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">APRIORI2</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-associate-apriori2">Desc</a>
+							<ul id="ml-associate-apriori2" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-apriori3">
+							<a href="#ml-associate-apriori3" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">APRIORI3</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-associate-apriori3">Desc</a>
+							<ul id="ml-associate-apriori3" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-apriorin">
+							<a href="#ml-associate-apriorin" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">APRIORIN</span>
+								<span class="sign-post">(UNSIGNED2 N,UNSIGNED2 MinN=2)</span>
+							</a> -
+							<a href="#dml-associate-apriorin">Desc</a>
+							<ul id="ml-associate-apriorin" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-eclatn">
+							<a href="#ml-associate-eclatn" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ECLATN</span>
+								<span class="sign-post">(UNSIGNED2 N,UNSIGNED2 MinN=2)</span>
+							</a> -
+							<a href="#dml-associate-eclatn">Desc</a>
+							<ul id="ml-associate-eclatn" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-associate-rules">
+							<a href="#ml-associate-rules" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RULES</span>
+								<span class="sign-post">(DATASET(PatternElement) p)</span>
+							</a> -
+							<a href="#dml-associate-rules">Desc</a>
+							<ul id="ml-associate-rules" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-associate">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ASSOCIATE</span>
+									<span class="sign-post">(DATASET(Types.ItemElement) d,Types.t_Count M)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-associate-notfirst">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NOTFIRST</span>
+									<span class="sign-post">(STRING S)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-notfirst" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-notlast">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NOTLAST</span>
+									<span class="sign-post">(STRING S)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-notlast" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-notnn">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NOTNN</span>
+									<span class="sign-post">(STRING S,UNSIGNED2 NN)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-notnn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-lastn">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LASTN</span>
+									<span class="sign-post">(STRING S)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-lastn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-records">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RECORDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-records" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-patternelement">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PATTERNELEMENT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-patternelement" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-apriori1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">APRIORI1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-apriori1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-dpossibles">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DPOSSIBLES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-dpossibles" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-apriori2">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">APRIORI2</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-apriori2" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-apriori3">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">APRIORI3</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-apriori3" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-apriorin">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">APRIORIN</span>
+									<span class="sign-post">(UNSIGNED2 N,UNSIGNED2 MinN=2)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-apriorin" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-eclatn">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ECLATN</span>
+									<span class="sign-post">(UNSIGNED2 N,UNSIGNED2 MinN=2)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-eclatn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-associate-rules">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RULES</span>
+									<span class="sign-post">(DATASET(PatternElement) p)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-associate-rules" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

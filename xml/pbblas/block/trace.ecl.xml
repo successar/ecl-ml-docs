@@ -5,17 +5,17 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="58" end="81" fullname="pbblas.block.matrix_t" inherit_type="local" line="3" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/trace.ecl" start="47">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="96" end="122" fullname="pbblas.block.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/trace.ecl" start="82">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="133" end="155" fullname="pbblas.block.value_t" inherit_type="local" line="5" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/trace.ecl" start="123">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="163" end="190" fullname="pbblas.block.diag" inherit_type="local" line="6" name="diag" source="/media/sarthak/Data/ecl-ml/PBblas/Block/trace.ecl" start="156">
    <Type>function</Type>
-   <Signature>diag</Signature><Params>
+   <Signature pre="" post="" name="DIAG">diag</Signature><Params>
     <Param name="m"/>
     <Param name="n"/>
     <Param name="x"/>
@@ -23,7 +23,7 @@
   </Definition>
   <Definition body="242" end="260" exported="1" fullname="pbblas.block.trace" inherit_type="local" line="8" name="trace" source="/media/sarthak/Data/ecl-ml/PBblas/Block/trace.ecl" start="192">
    <Type>function</Type>
-   <Signature>value_t trace(dimension_t m, matrix_t x)</Signature><Params>
+   <Signature pre="value_t" post="(dimension_t m, matrix_t x)" name="TRACE">value_t trace(dimension_t m, matrix_t x)</Signature><Params>
     <Param name="m"/>
     <Param name="x"/>
    </Params>

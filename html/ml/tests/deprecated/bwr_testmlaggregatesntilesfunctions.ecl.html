@@ -1,175 +1,361 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Tests.Deprecated.BWR_testMLAggregatesNTilesFunctions</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : value_record
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testagglo.ecl.html">bwr_testagglo.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testmlaggregatesntilesfunctions.ecl.html">bwr_testmlaggregatesntilesfunctions.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testclassifylogistic.ecl.html">bwr_testclassifylogistic.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testranked.ecl.html">bwr_testranked.ecl</a>
+				</li>
+				
+				<li>
+					<a href="chickweight.ecl.html">chickweight.ecl</a>
+				</li>
+				
+				<li>
+					<a href="irisplantds.ecl.html">irisplantds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testmlaggregates.ecl.html">bwr_testmlaggregates.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testgendata.ecl.html">bwr_testgendata.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testregressionpoly.ecl.html">bwr_testregressionpoly.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testbucketfunctions.ecl.html">bwr_testbucketfunctions.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testmlaggregatescardinality.ecl.html">bwr_testmlaggregatescardinality.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testregression.ecl.html">bwr_testregression.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : d
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SpeciesFeatureSimple
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SpeciesFeatureRanked
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : F1
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Simple
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SimpleRanked
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Medians
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : MinMedNext
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Buckets(Types.t_Discrete n)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : BucketRanges(Types.t_Discrete n)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : T
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Modes
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Cardinality
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RankedInput
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NTiles(Types.t_Discrete n)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NTileRanges(Types.t_Discrete n)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SpeciesFeatureNTiles
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ChickWeightNTileRanges
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //---------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //-----------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Tests.Deprecated.BWR_testMLAggregatesNTilesFunctions</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-tests-deprecated-value_record">
+							<a href="#ml-tests-deprecated-value_record" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VALUE_RECORD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-value_record">Desc</a>
+							<ul id="ml-tests-deprecated-value_record" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-d">
+							<a href="#ml-tests-deprecated-d" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">D</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-d">Desc</a>
+							<ul id="ml-tests-deprecated-d" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-speciesfeaturesimple">
+							<a href="#ml-tests-deprecated-speciesfeaturesimple" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPECIESFEATURESIMPLE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-speciesfeaturesimple">Desc</a>
+							<ul id="ml-tests-deprecated-speciesfeaturesimple" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-speciesfeatureranked">
+							<a href="#ml-tests-deprecated-speciesfeatureranked" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPECIESFEATURERANKED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-speciesfeatureranked">Desc</a>
+							<ul id="ml-tests-deprecated-speciesfeatureranked" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-FieldAggregates">
+							<a href="#ML-FieldAggregates" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">F1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-FieldAggregates">Desc</a>
+							<ul id="ML-FieldAggregates" class="accordian-body collapse">
+								<li id="t-ml-fieldaggregates-simple">
+							<a href="#ml-fieldaggregates-simple" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SIMPLE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-simple">Desc</a>
+							<ul id="ml-fieldaggregates-simple" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-simpleranked">
+							<a href="#ml-fieldaggregates-simpleranked" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SIMPLERANKED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-simpleranked">Desc</a>
+							<ul id="ml-fieldaggregates-simpleranked" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-medians">
+							<a href="#ml-fieldaggregates-medians" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MEDIANS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-medians">Desc</a>
+							<ul id="ml-fieldaggregates-medians" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-minmednext">
+							<a href="#ml-fieldaggregates-minmednext" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MINMEDNEXT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-minmednext">Desc</a>
+							<ul id="ml-fieldaggregates-minmednext" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-buckets">
+							<a href="#ml-fieldaggregates-buckets" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BUCKETS</span>
+								<span class="sign-post">(Types.t_Discrete n)</span>
+							</a> -
+							<a href="#dml-fieldaggregates-buckets">Desc</a>
+							<ul id="ml-fieldaggregates-buckets" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-bucketranges">
+							<a href="#ml-fieldaggregates-bucketranges" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BUCKETRANGES</span>
+								<span class="sign-post">(Types.t_Discrete n)</span>
+							</a> -
+							<a href="#dml-fieldaggregates-bucketranges">Desc</a>
+							<ul id="ml-fieldaggregates-bucketranges" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-t">
+							<a href="#ml-fieldaggregates-t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-t">Desc</a>
+							<ul id="ml-fieldaggregates-t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-modes">
+							<a href="#ml-fieldaggregates-modes" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-modes">Desc</a>
+							<ul id="ml-fieldaggregates-modes" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-cardinality">
+							<a href="#ml-fieldaggregates-cardinality" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CARDINALITY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-cardinality">Desc</a>
+							<ul id="ml-fieldaggregates-cardinality" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-rankedinput">
+							<a href="#ml-fieldaggregates-rankedinput" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RANKEDINPUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-fieldaggregates-rankedinput">Desc</a>
+							<ul id="ml-fieldaggregates-rankedinput" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-ntiles">
+							<a href="#ml-fieldaggregates-ntiles" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NTILES</span>
+								<span class="sign-post">(Types.t_Discrete n)</span>
+							</a> -
+							<a href="#dml-fieldaggregates-ntiles">Desc</a>
+							<ul id="ml-fieldaggregates-ntiles" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-fieldaggregates-ntileranges">
+							<a href="#ml-fieldaggregates-ntileranges" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NTILERANGES</span>
+								<span class="sign-post">(Types.t_Discrete n)</span>
+							</a> -
+							<a href="#dml-fieldaggregates-ntileranges">Desc</a>
+							<ul id="ml-fieldaggregates-ntileranges" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-speciesfeaturentiles">
+							<a href="#ml-tests-deprecated-speciesfeaturentiles" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPECIESFEATURENTILES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-speciesfeaturentiles">Desc</a>
+							<ul id="ml-tests-deprecated-speciesfeaturentiles" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-chickweightntileranges">
+							<a href="#ml-tests-deprecated-chickweightntileranges" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CHICKWEIGHTNTILERANGES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-chickweightntileranges">Desc</a>
+							<ul id="ml-tests-deprecated-chickweightntileranges" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-o_toname">
+							<a href="#ml-tests-deprecated-o_toname" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">O_TONAME</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-o_toname">Desc</a>
+							<ul id="ml-tests-deprecated-o_toname" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-o_tonumber">
+							<a href="#ml-tests-deprecated-o_tonumber" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">O_TONUMBER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-o_tonumber">Desc</a>
+							<ul id="ml-tests-deprecated-o_tonumber" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-o">
+							<a href="#ml-tests-deprecated-o" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">/---------------------------------------------------------------------------
+// Macr</span>
+								<span class="sign-name">O</span>
+								<span class="sign-post">takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
 //
@@ -195,14 +381,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('<xml/>');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -212,295 +398,514 @@
   // Count of the fields that become axes
   #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
   // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : //-----
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : value_record
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : d
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SpeciesFeatureSimple
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SpeciesFeatureRanked
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : F1
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Simple
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SimpleRanked
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Medians
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : MinMedNext
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Buckets(Types.t_Discrete n)
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : BucketRanges(Types.t_Discrete n)
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : T
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Modes
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Cardinality
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RankedInput
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NTiles(Types.t_Discrete n)
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NTileRanges(Types.t_Discrete n)
-		
-		<br/>
-		<a href="../../fieldaggregates.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : SpeciesFeatureNTiles
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ChickWeightNTileRanges
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //---------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //-----------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
+  // to which it is mapped in the output.  "</span>
+							</a> -
+							<a href="#dml-tests-deprecated-o">Desc</a>
+							<ul id="ml-tests-deprecated-o" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-o_map">
+							<a href="#ml-tests-deprecated-o_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">O_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-o_map">Desc</a>
+							<ul id="ml-tests-deprecated-o_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-tests-deprecated-value_record">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VALUE_RECORD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-value_record" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">D</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-d" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-speciesfeaturesimple">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPECIESFEATURESIMPLE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-speciesfeaturesimple" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-speciesfeatureranked">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPECIESFEATURERANKED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-speciesfeatureranked" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-FieldAggregates">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">F1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-FieldAggregates" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-fieldaggregates-simple">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SIMPLE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-simple" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-simpleranked">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SIMPLERANKED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-simpleranked" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-medians">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MEDIANS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-medians" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-minmednext">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MINMEDNEXT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-minmednext" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-buckets">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BUCKETS</span>
+									<span class="sign-post">(Types.t_Discrete n)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-buckets" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-bucketranges">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BUCKETRANGES</span>
+									<span class="sign-post">(Types.t_Discrete n)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-bucketranges" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-modes">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-modes" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-cardinality">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CARDINALITY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-cardinality" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-rankedinput">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RANKEDINPUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-rankedinput" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-ntiles">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NTILES</span>
+									<span class="sign-post">(Types.t_Discrete n)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-ntiles" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-fieldaggregates-ntileranges">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NTILERANGES</span>
+									<span class="sign-post">(Types.t_Discrete n)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-fieldaggregates-ntileranges" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../fieldaggregates.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-speciesfeaturentiles">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPECIESFEATURENTILES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-speciesfeaturentiles" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-chickweightntileranges">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CHICKWEIGHTNTILERANGES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-chickweightntileranges" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-o_toname">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">O_TONAME</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-o_toname" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-o_tonumber">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">O_TONUMBER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-o_tonumber" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-o">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">/---------------------------------------------------------------------------
+// Macr</span>
+									<span class="sign-name">O</span>
+									<span class="sign-post">takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
 //
@@ -526,14 +931,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('<xml/>');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -543,27 +948,67 @@
   // Count of the fields that become axes
   #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
   // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : //-----
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+  // to which it is mapped in the output.  "</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-o" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-o_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">O_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-o_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

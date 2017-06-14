@@ -1,258 +1,379 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Tests.Deprecated.BWR_testRanked</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.tests.deprecated
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : NumericField
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testagglo.ecl.html">bwr_testagglo.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testmlaggregatesntilesfunctions.ecl.html">bwr_testmlaggregatesntilesfunctions.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testclassifylogistic.ecl.html">bwr_testclassifylogistic.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testranked.ecl.html">bwr_testranked.ecl</a>
+				</li>
+				
+				<li>
+					<a href="chickweight.ecl.html">chickweight.ecl</a>
+				</li>
+				
+				<li>
+					<a href="irisplantds.ecl.html">irisplantds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testmlaggregates.ecl.html">bwr_testmlaggregates.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testgendata.ecl.html">bwr_testgendata.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testregressionpoly.ecl.html">bwr_testregressionpoly.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testbucketfunctions.ecl.html">bwr_testbucketfunctions.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testmlaggregatescardinality.ecl.html">bwr_testmlaggregatescardinality.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testregression.ecl.html">bwr_testregression.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SimpleRankedChickWeight2NumericFieldDS
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RankedChickWeight2NumericFieldDS
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //----------------------------------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //------------------------------------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
-// more axis fields containing numeric values, and expands it into the 
-// NumericField format used by ML.
-//
-//   dIn       : The name of the input dataset
-//   dOut      : The name of the resulting dataset
-//   idfield   : [OPTIONAL] The name of the field that contains the UID for
-//               each row.  If omitted, it is assumed to be the first field.
-//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
-//               fields to be treated as axes.  If omitted, all numeric
-//               fields that are not the UID will be treated as axes.
-//               NOTE: idfield defaults to the first field in the table, so
-//               if that field is specified as an axis field, then the user
-//               should be sure to specify a value in the idfield param.
-//
-//  Along with creating the NumericField table, this macro produces two
-//  simple functions to assist the user in mapping the field names to their
-//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
-//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
-//  name is the name passed into that parameter of the macro.
-//
-//  The macro also produces a mapping table named "dOut_Map", again where
-//  "dOut" refers to the parameter, that contains a table of the field
-//  mappings
-//  
-//  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
-//---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
-  // Variable to contain the name of the field that maps to "id"
-  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
-  // Contains a comma-delimited list of the fields that will be used as axes,
-  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
-  // during normalization
-  #DECLARE(normlist) #SET(normlist,'COUNTER')
-  // Count of the fields that become axes
-  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
-  // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : //------------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : NumericField
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SimpleRankedChickWeight2NumericFieldDS
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RankedChickWeight2NumericFieldDS
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //----------------------------------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //------------------------------------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
-// more axis fields containing numeric values, and expands it into the 
-// NumericField format used by ML.
-//
-//   dIn       : The name of the input dataset
-//   dOut      : The name of the resulting dataset
-//   idfield   : [OPTIONAL] The name of the field that contains the UID for
-//               each row.  If omitted, it is assumed to be the first field.
-//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
-//               fields to be treated as axes.  If omitted, all numeric
-//               fields that are not the UID will be treated as axes.
-//               NOTE: idfield defaults to the first field in the table, so
-//               if that field is specified as an axis field, then the user
-//               should be sure to specify a value in the idfield param.
-//
-//  Along with creating the NumericField table, this macro produces two
-//  simple functions to assist the user in mapping the field names to their
-//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
-//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
-//  name is the name passed into that parameter of the macro.
-//
-//  The macro also produces a mapping table named "dOut_Map", again where
-//  "dOut" refers to the parameter, that contains a table of the field
-//  mappings
-//  
-//  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
-//---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
-  // Variable to contain the name of the field that maps to "id"
-  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
-  // Contains a comma-delimited list of the fields that will be used as axes,
-  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
-  // during normalization
-  #DECLARE(normlist) #SET(normlist,'COUNTER')
-  // Count of the fields that become axes
-  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
-  // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : //------------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Tests.Deprecated.BWR_testRanked</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="../../types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="pkg.toc.html">
+								ml.tests.deprecated
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-tests-deprecated-numericfield">
+							<a href="#ml-tests-deprecated-numericfield" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NUMERICFIELD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-numericfield">Desc</a>
+							<ul id="ml-tests-deprecated-numericfield" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-simplerankedchickweight2numericfieldds">
+							<a href="#ml-tests-deprecated-simplerankedchickweight2numericfieldds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SIMPLERANKEDCHICKWEIGHT2NUMERICFIELDDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-simplerankedchickweight2numericfieldds">Desc</a>
+							<ul id="ml-tests-deprecated-simplerankedchickweight2numericfieldds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-rankedchickweight2numericfieldds">
+							<a href="#ml-tests-deprecated-rankedchickweight2numericfieldds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RANKEDCHICKWEIGHT2NUMERICFIELDDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-rankedchickweight2numericfieldds">Desc</a>
+							<ul id="ml-tests-deprecated-rankedchickweight2numericfieldds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-chickweight2numericfieldds_toname">
+							<a href="#ml-tests-deprecated-chickweight2numericfieldds_toname" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS_TONAME</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-chickweight2numericfieldds_toname">Desc</a>
+							<ul id="ml-tests-deprecated-chickweight2numericfieldds_toname" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-chickweight2numericfieldds_tonumber">
+							<a href="#ml-tests-deprecated-chickweight2numericfieldds_tonumber" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS_TONUMBER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-chickweight2numericfieldds_tonumber">Desc</a>
+							<ul id="ml-tests-deprecated-chickweight2numericfieldds_tonumber" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-chickweight2numericfieldds">
+							<a href="#ml-tests-deprecated-chickweight2numericfieldds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-chickweight2numericfieldds">Desc</a>
+							<ul id="ml-tests-deprecated-chickweight2numericfieldds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-deprecated-chickweight2numericfieldds_map">
+							<a href="#ml-tests-deprecated-chickweight2numericfieldds_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-deprecated-chickweight2numericfieldds_map">Desc</a>
+							<ul id="ml-tests-deprecated-chickweight2numericfieldds_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-tests-deprecated-numericfield">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NUMERICFIELD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-numericfield" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-simplerankedchickweight2numericfieldds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SIMPLERANKEDCHICKWEIGHT2NUMERICFIELDDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-simplerankedchickweight2numericfieldds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-rankedchickweight2numericfieldds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RANKEDCHICKWEIGHT2NUMERICFIELDDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-rankedchickweight2numericfieldds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-chickweight2numericfieldds_toname">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS_TONAME</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-chickweight2numericfieldds_toname" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-chickweight2numericfieldds_tonumber">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS_TONUMBER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-chickweight2numericfieldds_tonumber" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-chickweight2numericfieldds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-chickweight2numericfieldds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-deprecated-chickweight2numericfieldds_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CHICKWEIGHT2NUMERICFIELDDS_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-deprecated-chickweight2numericfieldds_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

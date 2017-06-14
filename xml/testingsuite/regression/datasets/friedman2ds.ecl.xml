@@ -10,15 +10,15 @@
     <Field name="A2"/>
     <Field name="A3"/>
     <Field name="A4"/>
-    <Signature>friedman2RECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="FRIEDMAN2RECORD">friedman2RECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="298" end="453" exported="1" fullname="testingsuite.regression.datasets.friedman2ds.betas" inherit_type="local" line="11" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/friedman2DS.ecl" start="283">
-    <Signature>betas</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BETAS">betas</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="476" end="75801" exported="1" fullname="testingsuite.regression.datasets.friedman2ds.content" inherit_type="local" line="18" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/friedman2DS.ecl" start="459">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>friedman2DS</Signature><Parents/>
+   <Signature pre="" post="" name="FRIEDMAN2DS">friedman2DS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

@@ -1,536 +1,823 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Tests.Benchmarks.Cluster_doc</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : lMatrix
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="classify_sparse_logisticregression.ecl.html">classify_sparse_logisticregression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify_dense_logisticregression.ecl.html">classify_dense_logisticregression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cluster_doc.ecl.html">cluster_doc.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dDocumentMatrix
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //------------------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //--------------------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
-// more axis fields containing numeric values, and expands it into the 
-// NumericField format used by ML.
-//
-//   dIn       : The name of the input dataset
-//   dOut      : The name of the resulting dataset
-//   idfield   : [OPTIONAL] The name of the field that contains the UID for
-//               each row.  If omitted, it is assumed to be the first field.
-//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
-//               fields to be treated as axes.  If omitted, all numeric
-//               fields that are not the UID will be treated as axes.
-//               NOTE: idfield defaults to the first field in the table, so
-//               if that field is specified as an axis field, then the user
-//               should be sure to specify a value in the idfield param.
-//
-//  Along with creating the NumericField table, this macro produces two
-//  simple functions to assist the user in mapping the field names to their
-//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
-//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
-//  name is the name passed into that parameter of the macro.
-//
-//  The macro also produces a mapping table named "dOut_Map", again where
-//  "dOut" refers to the parameter, that contains a table of the field
-//  mappings
-//  
-//  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
-//---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
-  // Variable to contain the name of the field that maps to "id"
-  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
-  // Contains a comma-delimited list of the fields that will be used as axes,
-  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
-  // during normalization
-  #DECLARE(normlist) #SET(normlist,'COUNTER')
-  // Count of the fields that become axes
-  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
-  // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : //--------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dCentroidMatrix
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : KMeans
-			<ul>
-				
-		<li>
-			ATTRIBUTE : iOffset
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : lIterations
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.NumericField dResult(UNSIGNED n=n,DATASET(lIterations) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : dDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : dDistanceDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dIterations
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : lIterations AllResults
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UNSIGNED Convergence
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.NumericField Result(UNSIGNED n=Convergence,DATASET(lIterations) d=dIterations)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.NumericField Delta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DistanceDelta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Allegiances(UNSIGNED n=Convergence)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : UNSIGNED Allegiance(UNSIGNED id,UNSIGNED n=Convergence)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : lMatrix
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dDocumentMatrix
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //------------------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //--------------------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
-// more axis fields containing numeric values, and expands it into the 
-// NumericField format used by ML.
-//
-//   dIn       : The name of the input dataset
-//   dOut      : The name of the resulting dataset
-//   idfield   : [OPTIONAL] The name of the field that contains the UID for
-//               each row.  If omitted, it is assumed to be the first field.
-//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
-//               fields to be treated as axes.  If omitted, all numeric
-//               fields that are not the UID will be treated as axes.
-//               NOTE: idfield defaults to the first field in the table, so
-//               if that field is specified as an axis field, then the user
-//               should be sure to specify a value in the idfield param.
-//
-//  Along with creating the NumericField table, this macro produces two
-//  simple functions to assist the user in mapping the field names to their
-//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
-//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
-//  name is the name passed into that parameter of the macro.
-//
-//  The macro also produces a mapping table named "dOut_Map", again where
-//  "dOut" refers to the parameter, that contains a table of the field
-//  mappings
-//  
-//  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
-//---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
-  // Variable to contain the name of the field that maps to "id"
-  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
-  // Contains a comma-delimited list of the fields that will be used as axes,
-  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
-  // during normalization
-  #DECLARE(normlist) #SET(normlist,'COUNTER')
-  // Count of the fields that become axes
-  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
-  // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : //--------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dCentroidMatrix
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : KMeans
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : iOffset
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : lIterations
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.NumericField dResult(UNSIGNED n=n,DATASET(lIterations) d)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : dDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : dDistanceDelta(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dIterations
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : lIterations AllResults
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UNSIGNED Convergence
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.NumericField Result(UNSIGNED n=Convergence,DATASET(lIterations) d=dIterations)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.NumericField Delta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DistanceDelta(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Allegiances(UNSIGNED n=Convergence)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : UNSIGNED Allegiance(UNSIGNED id,UNSIGNED n=Convergence)
-		
-		<br/>
-		<a href="../../cluster.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Tests.Benchmarks.Cluster_doc</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-tests-benchmarks-lmatrix">
+							<a href="#ml-tests-benchmarks-lmatrix" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LMATRIX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-benchmarks-lmatrix">Desc</a>
+							<ul id="ml-tests-benchmarks-lmatrix" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-benchmarks-ddocumentmatrix">
+							<a href="#ml-tests-benchmarks-ddocumentmatrix" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DDOCUMENTMATRIX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-benchmarks-ddocumentmatrix">Desc</a>
+							<ul id="ml-tests-benchmarks-ddocumentmatrix" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-benchmarks-dcentroids_toname">
+							<a href="#ml-tests-benchmarks-dcentroids_toname" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DCENTROIDS_TONAME</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-benchmarks-dcentroids_toname">Desc</a>
+							<ul id="ml-tests-benchmarks-dcentroids_toname" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-benchmarks-dcentroids_tonumber">
+							<a href="#ml-tests-benchmarks-dcentroids_tonumber" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DCENTROIDS_TONUMBER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-benchmarks-dcentroids_tonumber">Desc</a>
+							<ul id="ml-tests-benchmarks-dcentroids_tonumber" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-benchmarks-dcentroids">
+							<a href="#ml-tests-benchmarks-dcentroids" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DCENTROIDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-benchmarks-dcentroids">Desc</a>
+							<ul id="ml-tests-benchmarks-dcentroids" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-benchmarks-dcentroids_map">
+							<a href="#ml-tests-benchmarks-dcentroids_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DCENTROIDS_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-benchmarks-dcentroids_map">Desc</a>
+							<ul id="ml-tests-benchmarks-dcentroids_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-benchmarks-dcentroidmatrix">
+							<a href="#ml-tests-benchmarks-dcentroidmatrix" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DCENTROIDMATRIX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-benchmarks-dcentroidmatrix">Desc</a>
+							<ul id="ml-tests-benchmarks-dcentroidmatrix" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Cluster-KMeans">
+							<a href="#ML-Cluster-KMeans" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">KMEANS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Cluster-KMeans">Desc</a>
+							<ul id="ML-Cluster-KMeans" class="accordian-body collapse">
+								<li id="t-ml-cluster-kmeans-ioffset">
+							<a href="#ml-cluster-kmeans-ioffset" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">IOFFSET</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-cluster-kmeans-ioffset">Desc</a>
+							<ul id="ml-cluster-kmeans-ioffset" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-literations">
+							<a href="#ml-cluster-kmeans-literations" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LITERATIONS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-cluster-kmeans-literations">Desc</a>
+							<ul id="ml-cluster-kmeans-literations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-dresult">
+							<a href="#ml-cluster-kmeans-dresult" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.NumericField</span>
+								<span class="sign-name">DRESULT</span>
+								<span class="sign-post">(UNSIGNED n=n,DATASET(lIterations) d)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-dresult">Desc</a>
+							<ul id="ml-cluster-kmeans-dresult" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-ddelta">
+							<a href="#ml-cluster-kmeans-ddelta" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DDELTA</span>
+								<span class="sign-post">(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-ddelta">Desc</a>
+							<ul id="ml-cluster-kmeans-ddelta" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-ddistancedelta">
+							<a href="#ml-cluster-kmeans-ddistancedelta" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DDISTANCEDELTA</span>
+								<span class="sign-post">(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-ddistancedelta">Desc</a>
+							<ul id="ml-cluster-kmeans-ddistancedelta" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-diterations">
+							<a href="#ml-cluster-kmeans-diterations" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DITERATIONS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-cluster-kmeans-diterations">Desc</a>
+							<ul id="ml-cluster-kmeans-diterations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-allresults">
+							<a href="#ml-cluster-kmeans-allresults" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">lIterations</span>
+								<span class="sign-name">ALLRESULTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-cluster-kmeans-allresults">Desc</a>
+							<ul id="ml-cluster-kmeans-allresults" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-convergence">
+							<a href="#ml-cluster-kmeans-convergence" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">UNSIGNED</span>
+								<span class="sign-name">CONVERGENCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-cluster-kmeans-convergence">Desc</a>
+							<ul id="ml-cluster-kmeans-convergence" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-result">
+							<a href="#ml-cluster-kmeans-result" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.NumericField</span>
+								<span class="sign-name">RESULT</span>
+								<span class="sign-post">(UNSIGNED n=Convergence,DATASET(lIterations) d=dIterations)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-result">Desc</a>
+							<ul id="ml-cluster-kmeans-result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-delta">
+							<a href="#ml-cluster-kmeans-delta" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.NumericField</span>
+								<span class="sign-name">DELTA</span>
+								<span class="sign-post">(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-delta">Desc</a>
+							<ul id="ml-cluster-kmeans-delta" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-distancedelta">
+							<a href="#ml-cluster-kmeans-distancedelta" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DISTANCEDELTA</span>
+								<span class="sign-post">(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-distancedelta">Desc</a>
+							<ul id="ml-cluster-kmeans-distancedelta" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-allegiances">
+							<a href="#ml-cluster-kmeans-allegiances" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ALLEGIANCES</span>
+								<span class="sign-post">(UNSIGNED n=Convergence)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-allegiances">Desc</a>
+							<ul id="ml-cluster-kmeans-allegiances" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-cluster-kmeans-allegiance">
+							<a href="#ml-cluster-kmeans-allegiance" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">UNSIGNED</span>
+								<span class="sign-name">ALLEGIANCE</span>
+								<span class="sign-post">(UNSIGNED id,UNSIGNED n=Convergence)</span>
+							</a> -
+							<a href="#dml-cluster-kmeans-allegiance">Desc</a>
+							<ul id="ml-cluster-kmeans-allegiance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-tests-benchmarks-lmatrix">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LMATRIX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-benchmarks-lmatrix" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-benchmarks-ddocumentmatrix">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DDOCUMENTMATRIX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-benchmarks-ddocumentmatrix" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-benchmarks-dcentroids_toname">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DCENTROIDS_TONAME</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-benchmarks-dcentroids_toname" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-benchmarks-dcentroids_tonumber">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DCENTROIDS_TONUMBER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-benchmarks-dcentroids_tonumber" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-benchmarks-dcentroids">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DCENTROIDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-benchmarks-dcentroids" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-benchmarks-dcentroids_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DCENTROIDS_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-benchmarks-dcentroids_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-benchmarks-dcentroidmatrix">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DCENTROIDMATRIX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-benchmarks-dcentroidmatrix" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Cluster-KMeans">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">KMEANS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Cluster-KMeans" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-cluster-kmeans-ioffset">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">IOFFSET</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-ioffset" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-literations">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LITERATIONS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-literations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-dresult">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.NumericField</span>
+									<span class="sign-name">DRESULT</span>
+									<span class="sign-post">(UNSIGNED n=n,DATASET(lIterations) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-dresult" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-ddelta">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DDELTA</span>
+									<span class="sign-post">(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-ddelta" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-ddistancedelta">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DDISTANCEDELTA</span>
+									<span class="sign-post">(UNSIGNED n01=n-1,UNSIGNED n02=n,DATASET(lIterations) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-ddistancedelta" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-diterations">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DITERATIONS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-diterations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-allresults">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">lIterations</span>
+									<span class="sign-name">ALLRESULTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-allresults" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-convergence">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UNSIGNED</span>
+									<span class="sign-name">CONVERGENCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-convergence" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-result">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.NumericField</span>
+									<span class="sign-name">RESULT</span>
+									<span class="sign-post">(UNSIGNED n=Convergence,DATASET(lIterations) d=dIterations)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-delta">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.NumericField</span>
+									<span class="sign-name">DELTA</span>
+									<span class="sign-post">(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-delta" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-distancedelta">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DISTANCEDELTA</span>
+									<span class="sign-post">(UNSIGNED n01=Convergence-1,UNSIGNED n02=Convergence,DATASET(lIterations) d=dIterations)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-distancedelta" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-allegiances">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ALLEGIANCES</span>
+									<span class="sign-post">(UNSIGNED n=Convergence)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-allegiances" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-cluster-kmeans-allegiance">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UNSIGNED</span>
+									<span class="sign-name">ALLEGIANCE</span>
+									<span class="sign-post">(UNSIGNED id,UNSIGNED n=Convergence)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-cluster-kmeans-allegiance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../cluster.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

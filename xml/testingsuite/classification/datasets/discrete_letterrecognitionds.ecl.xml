@@ -22,12 +22,12 @@
     <Field name="xegvy"/>
     <Field name="yege"/>
     <Field name="yegvx"/>
-    <Signature>discrete_letterrecognitionRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="DISCRETE_LETTERRECOGNITIONRECORD">discrete_letterrecognitionRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="771" end="1074628" exported="1" fullname="testingsuite.classification.datasets.discrete_letterrecognitionds.content" inherit_type="local" line="23" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_letterrecognitionDS.ecl" start="754">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>discrete_letterrecognitionDS</Signature><Parents/>
+   <Signature pre="" post="" name="DISCRETE_LETTERRECOGNITIONDS">discrete_letterrecognitionDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

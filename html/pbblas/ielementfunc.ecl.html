@@ -1,100 +1,323 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>PBblas.IElementFunc</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				pbblas
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			ATTRIBUTE : value_t
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="mu.ecl.html">mu.ecl</a>
+				</li>
+				
+				<li>
+					<a href="block/pkg.toc.html">block</a>
+				</li>
+				
+				<li>
+					<a href="vector2diag.ecl.html">vector2diag.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dscal.ecl.html">pb_dscal.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_daxpy.ecl.html">pb_daxpy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="autobvmap.ecl.html">autobvmap.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
+				
+				<li>
+					<a href="constants.ecl.html">constants.ecl</a>
+				</li>
+				
+				<li>
+					<a href="ielementfunc.ecl.html">ielementfunc.ecl</a>
+				</li>
+				
+				<li>
+					<a href="apply2elements.ecl.html">apply2elements.ecl</a>
+				</li>
+				
+				<li>
+					<a href="maker8set.ecl.html">maker8set.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lapack/pkg.toc.html">lapack</a>
+				</li>
+				
+				<li>
+					<a href="hadamardproduct.ecl.html">hadamardproduct.ecl</a>
+				</li>
+				
+				<li>
+					<a href="blas/pkg.toc.html">blas</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dpotrf.ecl.html">pb_dpotrf.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dgetrf.ecl.html">pb_dgetrf.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_extract_tri.ecl.html">pb_extract_tri.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dasum.ecl.html">pb_dasum.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dbvrk.ecl.html">pb_dbvrk.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dgemm.ecl.html">pb_dgemm.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dtrsm.ecl.html">pb_dtrsm.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dbvmm.ecl.html">pb_dbvmm.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pb_dtran.ecl.html">pb_dtran.ecl</a>
+				</li>
+				
+				<li>
+					<a href="matrix_map.ecl.html">matrix_map.ecl</a>
+				</li>
+				
+				<li>
+					<a href="imatrix_map.ecl.html">imatrix_map.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dimension_t
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : partition_t
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : value_t IElementFunc(value_t v, dimension_t r, dimension_t c)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	ATTRIBUTE : value_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dimension_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : partition_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : value_t IElementFunc(value_t v, dimension_t r, dimension_t c)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">PBblas.IElementFunc</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								pbblas
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-pbblas-value_t">
+							<a href="#pbblas-value_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VALUE_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-value_t">Desc</a>
+							<ul id="pbblas-value_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-dimension_t">
+							<a href="#pbblas-dimension_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIMENSION_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-dimension_t">Desc</a>
+							<ul id="pbblas-dimension_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-partition_t">
+							<a href="#pbblas-partition_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARTITION_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-partition_t">Desc</a>
+							<ul id="pbblas-partition_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-ielementfunc">
+							<a href="#pbblas-ielementfunc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">value_t</span>
+								<span class="sign-name">IELEMENTFUNC</span>
+								<span class="sign-post">(value_t v, dimension_t r, dimension_t c)</span>
+							</a> -
+							<a href="#dpbblas-ielementfunc">Desc</a>
+							<ul id="pbblas-ielementfunc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dpbblas-value_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VALUE_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-value_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-dimension_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIMENSION_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-dimension_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-partition_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARTITION_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-partition_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-ielementfunc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">value_t</span>
+									<span class="sign-name">IELEMENTFUNC</span>
+									<span class="sign-post">(value_t v, dimension_t r, dimension_t c)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-ielementfunc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

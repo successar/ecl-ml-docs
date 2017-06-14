@@ -7,22 +7,22 @@
   <Definition body="68" end="93" fullname="ts.obsrec" inherit_type="local" line="3" name="ObsRec" source="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" start="59">
    <Type>record</Type>
    <Field name="period"/>
-   <Signature>ObsRec</Signature><Field name="dependent"/>
+   <Signature pre="" post="" name="OBSREC">ObsRec</Signature><Field name="dependent"/>
   </Definition>
   <Definition body="105" end="124" fullname="ts.modelobs" inherit_type="local" line="4" name="ModelObs" source="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" start="94">
    <Type>record</Type>
    <Field name="period"/>
    <Field name="dependent"/>
-   <Signature>ModelObs</Signature><Field name="model_id"/>
+   <Signature pre="" post="" name="MODELOBS">ModelObs</Signature><Field name="model_id"/>
   </Definition>
   <Definition body="138" end="159" fullname="ts.ident_spec" inherit_type="local" line="5" name="Ident_Spec" source="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" start="125">
    <Type>record</Type>
    <Field name="model_id"/>
-   <Signature>Ident_Spec</Signature><Field name="degree"/>
+   <Signature pre="" post="" name="IDENT_SPEC">Ident_Spec</Signature><Field name="degree"/>
   </Definition>
   <Definition body="314" end="581" exported="1" fullname="ts.seriesbymodel" inherit_type="local" line="6" name="SeriesByModel" source="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" start="160">
    <Type>function</Type>
-   <Signature>DATASET(TS.Types.ModelObs)
+   <Signature pre="DATASET(TS.Types.ModelObs)" post="(DATASET(TS.Types.UniObservation) series,&#10;                     DATASET(TS.Types.Ident_Spec) spec)" name="SERIESBYMODEL">DATASET(TS.Types.ModelObs)
        SeriesByModel(DATASET(TS.Types.UniObservation) series,
                      DATASET(TS.Types.Ident_Spec) spec)</Signature><Params>
     <Param name="series"/>

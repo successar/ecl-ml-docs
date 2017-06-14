@@ -5,20 +5,20 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="360" end="379" fullname="pbblas.dimension_t" inherit_type="local" line="6" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" start="346">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="390" end="405" fullname="pbblas.value_t" inherit_type="local" line="7" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" start="380">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="420" end="439" fullname="pbblas.layout_cell" inherit_type="local" line="8" name="Layout_Cell" source="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" start="406">
    <Type>record</Type>
    <Field name="x"/>
    <Field name="y"/>
-   <Signature>Layout_Cell</Signature><Field name="v"/>
+   <Signature pre="" post="" name="LAYOUT_CELL">Layout_Cell</Signature><Field name="v"/>
   </Definition>
   <Definition body="743" end="1636" exported="1" fullname="pbblas.maker8set" inherit_type="local" line="10" name="makeR8Set" source="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" start="441">
    <Type>embed</Type>
-   <Signature>SET OF REAL8 makeR8Set(dimension_t r, dimension_t s,
+   <Signature pre="SET OF REAL8" post="(dimension_t r, dimension_t s,&#10;                              dimension_t first_row, dimension_t first_col,&#10;                              DATASET(Layout_Cell) D,&#10;                              dimension_t insert_columns,&#10;                              value_t insert_value)" name="MAKER8SET">SET OF REAL8 makeR8Set(dimension_t r, dimension_t s,
                               dimension_t first_row, dimension_t first_col,
                               DATASET(Layout_Cell) D,
                               dimension_t insert_columns,

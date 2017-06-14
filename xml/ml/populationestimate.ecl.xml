@@ -5,7 +5,7 @@
    <Type>module</Type>
    <Definition body="508" end="5639" exported="1" fullname="ml.populationestimate.concordv1" inherit_type="local" line="10" name="ConcordV1" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="404">
     <Type>function</Type>
-    <Signature>ConcordV1(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
+    <Signature pre="" post="(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)" name="CONCORDV1">ConcordV1(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
      <Param name="Y"/>
      <Param name="lambda"/>
      <Param name="maxIter"/>
@@ -14,7 +14,7 @@
    </Definition>
    <Definition body="5768" end="13232" exported="1" fullname="ml.populationestimate.concordv2" inherit_type="local" line="122" name="ConcordV2" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="5664">
     <Type>function</Type>
-    <Signature>ConcordV2(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
+    <Signature pre="" post="(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)" name="CONCORDV2">ConcordV2(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
      <Param name="Y"/>
      <Param name="lambda"/>
      <Param name="maxIter"/>
@@ -23,7 +23,7 @@
    </Definition>
    <Definition body="13388" end="22043" exported="1" fullname="ml.populationestimate.concordv2blas" inherit_type="local" line="276" name="ConcordV2Blas" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="13280">
     <Type>function</Type>
-    <Signature>ConcordV2Blas(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
+    <Signature pre="" post="(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)" name="CONCORDV2BLAS">ConcordV2Blas(DATASET(Mat.Types.Element) Y, REAL8 lambda, INTEGER8 maxIter=100, REAL8 tol=0.00001)</Signature><Params>
      <Param name="Y"/>
      <Param name="lambda"/>
      <Param name="maxIter"/>
@@ -32,7 +32,7 @@
    </Definition>
    <Definition body="22267" end="22307" exported="1" fullname="ml.populationestimate.inversecovariance" inherit_type="local" line="450" name="InverseCovariance" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="22151">
     <Type>function</Type>
-    <Signature>InverseCovariance(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)</Signature><Params>
+    <Signature pre="" post="(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)" name="INVERSECOVARIANCE">InverseCovariance(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)</Signature><Params>
      <Param name="Ydata"/>
      <Param name="lambda1"/>
      <Param name="maxIter"/>
@@ -41,14 +41,14 @@
    </Definition>
    <Definition body="22530" end="22613" exported="1" fullname="ml.populationestimate.covariance" inherit_type="local" line="455" name="Covariance" source="/media/sarthak/Data/ecl-ml/ML/PopulationEstimate.ecl" start="22421">
     <Type>function</Type>
-    <Signature>Covariance(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)</Signature><Params>
+    <Signature pre="" post="(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)" name="COVARIANCE">Covariance(DATASET(Mat.Types.Element) Ydata, REAL8 lambda1, INTEGER8 maxIter=100, REAL8 tol=0.0001)</Signature><Params>
      <Param name="Ydata"/>
      <Param name="lambda1"/>
      <Param name="maxIter"/>
      <Param name="tol"/>
     </Params>
    </Definition>
-   <Signature>PopulationEstimate</Signature><Parents/>
+   <Signature pre="" post="" name="POPULATIONESTIMATE">PopulationEstimate</Signature><Parents/>
   </Definition>
   <Import body="0" end="41" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="41" target="pkg.toc.xml">
    <Type>attribute</Type>

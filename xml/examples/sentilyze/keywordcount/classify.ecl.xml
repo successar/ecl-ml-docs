@@ -3,7 +3,7 @@
  <Source name="Examples.Sentilyze.KeywordCount.Classify" sourcePath="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Classify.ecl" target="classify.ecl.xml">
   <Definition body="438" end="1568" exported="1" fullname="examples.sentilyze.keywordcount.classify" inherit_type="local" line="12" name="Classify" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Classify.ecl" start="390">
    <Type>function</Type>
-   <Signature>Classify(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+   <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T)" name="CLASSIFY">Classify(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
     <Param name="T"/>
    </Params>
   </Definition>

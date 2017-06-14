@@ -21,97 +21,97 @@
    <Type>record</Type>
    <Field name="x"/>
    <Field name="y"/>
-   <Signature>Layout_Cell</Signature><Field name="v"/>
+   <Signature pre="" post="" name="LAYOUT_CELL">Layout_Cell</Signature><Field name="v"/>
   </Definition>
   <Definition body="205" end="269" fullname="ml.tests.explanatory.value_record" inherit_type="local" line="9" name="value_record" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="190">
    <Type>record</Type>
    <Field name="id"/>
    <Field name="f1"/>
    <Field name="f2"/>
-   <Signature>value_record</Signature><Field name="f3"/>
+   <Signature pre="" post="" name="VALUE_RECORD">value_record</Signature><Field name="f3"/>
   </Definition>
   <Definition body="283" end="425" fullname="ml.tests.explanatory.input_data" inherit_type="local" line="15" name="input_data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="270">
-   <Signature>input_data</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INPUT_DATA">input_data</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="700" end="705" fullname="ml.tests.explanatory.sparsityparam" inherit_type="local" line="32" name="sparsityParam" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="677">
-   <Signature>REAL8 sparsityParam</Signature><Type>attribute</Type>
+   <Signature pre="REAL8" post="" name="SPARSITYPARAM">REAL8 sparsityParam</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="719" end="724" fullname="ml.tests.explanatory.beta" inherit_type="local" line="33" name="BETA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="706">
-   <Signature>REAL8 BETA</Signature><Type>attribute</Type>
+   <Signature pre="REAL8" post="" name="BETA">REAL8 BETA</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="739" end="744" fullname="ml.tests.explanatory.alpha" inherit_type="local" line="34" name="ALPHA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="725">
-   <Signature>REAL8 ALPHA</Signature><Type>attribute</Type>
+   <Signature pre="REAL8" post="" name="ALPHA">REAL8 ALPHA</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="760" end="764" fullname="ml.tests.explanatory.lambda" inherit_type="local" line="35" name="LAMBDA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="745">
-   <Signature>REAL8 LAMBDA</Signature><Type>attribute</Type>
+   <Signature pre="REAL8" post="" name="LAMBDA">REAL8 LAMBDA</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="785" end="787" fullname="ml.tests.explanatory.maxiter" inherit_type="local" line="36" name="MaxIter" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="765">
-   <Signature>UNSIGNED2 MaxIter</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED2" post="" name="MAXITER">UNSIGNED2 MaxIter</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="805" end="807" fullname="ml.tests.explanatory.prows" inherit_type="local" line="37" name="prows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="788">
-   <Signature>UNSIGNED4 prows</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="PROWS">UNSIGNED4 prows</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="825" end="827" fullname="ml.tests.explanatory.pcols" inherit_type="local" line="38" name="pcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="808">
-   <Signature>UNSIGNED4 pcols</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="PCOLS">UNSIGNED4 pcols</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="847" end="849" fullname="ml.tests.explanatory.maxrows" inherit_type="local" line="39" name="Maxrows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="828">
-   <Signature>UNSIGNED4 Maxrows</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="MAXROWS">UNSIGNED4 Maxrows</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="869" end="871" fullname="ml.tests.explanatory.maxcols" inherit_type="local" line="40" name="Maxcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="850">
-   <Signature>UNSIGNED4 Maxcols</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="MAXCOLS">UNSIGNED4 Maxcols</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="893" end="896" fullname="ml.tests.explanatory.numlayers" inherit_type="local" line="41" name="NumLayers" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="872">
-   <Signature>UNSIGNED NumLayers</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED" post="" name="NUMLAYERS">UNSIGNED NumLayers</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="915" end="976" fullname="ml.tests.explanatory.numhiddennodes" inherit_type="local" line="42" name="numHiddenNodes" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="897">
-   <Signature>numHiddenNodes</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NUMHIDDENNODES">numHiddenNodes</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1007" end="1145" fullname="ML.DeepLearning.StackedSA" inherit_type="local" line="49" name="stackedSA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="995" target="../../deeplearning.ecl.xml">
    <Type>module</Type>
    <Definition body="24404" end="24420" exported="1" fullname="ml.deeplearning.stackedsa.learnc" inherit_type="local" line="455" name="LearnC" source="/media/sarthak/Data/ecl-ml/./ML/DeepLearning.ecl" start="24352" target="../../deeplearning.ecl.xml">
     <Type>function</Type>
-    <Signature>LearnC (DATASET(Types.NumericField) Indep)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep)" name="LEARNC">LearnC (DATASET(Types.NumericField) Indep)</Signature><Params>
      <Param name="Indep"/>
     </Params>
    </Definition>
    <Definition body="24922" end="25144" exported="1" fullname="ml.deeplearning.stackedsa.model" inherit_type="local" line="462" name="Model" source="/media/sarthak/Data/ecl-ml/./ML/DeepLearning.ecl" start="24874" target="../../deeplearning.ecl.xml">
     <Type>function</Type>
-    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="MODEL">Model(DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="25250" end="25972" exported="1" fullname="ml.deeplearning.stackedsa.ssaoutput" inherit_type="local" line="467" name="SSAOutput" source="/media/sarthak/Data/ecl-ml/./ML/DeepLearning.ecl" start="25158" target="../../deeplearning.ecl.xml">
     <Type>function</Type>
-    <Signature>SSAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) LearntMod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) LearntMod)" name="SSAOUTPUT">SSAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) LearntMod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="LearntMod"/>
     </Params>
    </Definition>
-   <Signature>stackedSA</Signature><Parents/>
+   <Signature pre="" post="" name="STACKEDSA">stackedSA</Signature><Parents/>
   </Definition>
   <Definition body="1161" end="1191" fullname="ml.tests.explanatory.learntmodel" inherit_type="local" line="51" name="LearntModel" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="1147">
-   <Signature>LearntModel</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LEARNTMODEL">LearntModel</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1251" end="1281" fullname="ml.tests.explanatory.matrixmodel" inherit_type="local" line="54" name="MatrixModel" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="1237">
-   <Signature>MatrixModel</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIXMODEL">MatrixModel</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1333" end="1378" fullname="ml.tests.explanatory.out" inherit_type="local" line="57" name="Out" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Stacked_SparseAutoencoder_test.ecl" start="1327">
-   <Signature>Out</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="OUT">Out</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="38" end="76" fullname="ml.tests.explanatory.indepdatac_toname" inherit_type="local" line="81" name="indepDataC_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//------------------------------------</Signature><Params>
+   <Signature pre="" post="" name="INDEPDATAC_TONAME">//------------------------------------</Signature><Params>
     <Param name="i"/>
    </Params>
   </Definition>
   <Definition body="40" end="77" fullname="ml.tests.explanatory.indepdatac_tonumber" inherit_type="local" line="83" name="indepDataC_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//--------------------------------------</Signature><Params>
+   <Signature pre="" post="" name="INDEPDATAC_TONUMBER">//--------------------------------------</Signature><Params>
     <Param name="s"/>
    </Params>
   </Definition>
   <Definition body="2485" end="2654" fullname="ml.tests.explanatory.indepdatac" inherit_type="local" line="85" name="indepDataC" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
-   <Signature>/---------------------------------------------------------------------------
+   <Signature pre="" post="" name="INDEPDATAC">/---------------------------------------------------------------------------
 // Macro takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
@@ -138,14 +138,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('&lt;xml/&gt;')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('&lt;xml/&gt;');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -158,7 +158,7 @@
   // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="16" end="2800" fullname="ml.tests.explanatory.indepdatac_map" inherit_type="local" line="87" name="indepDataC_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
-   <Signature>//--------------</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INDEPDATAC_MAP">//--------------</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DeepLearning.ecl" name="ML.DeepLearning" target="../../deeplearning.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" name="ML.NeuralNetworks" target="../../neuralnetworks.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="../../fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../../../pbblas/autobvmap.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../../pbblas/hadamardproduct.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="../../appendid.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../../pbblas/pb_dscal.ecl.xml"/></Meta>

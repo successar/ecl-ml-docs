@@ -15,7 +15,7 @@
    <Field name="ma"/>
    <Field name="c"/>
    <Field name="s_measure"/>
-   <Signature>Model_Score</Signature><Field name="Q_measure"/>
+   <Signature pre="" post="" name="MODEL_SCORE">Model_Score</Signature><Field name="Q_measure"/>
   </Definition>
   <Definition body="105" end="132" fullname="ts.model_parm" inherit_type="local" line="4" name="Model_Parm" source="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" start="92">
    <Type>record</Type>
@@ -26,11 +26,11 @@
    <Field name="constant_term"/>
    <Field name="ar"/>
    <Field name="ma"/>
-   <Signature>Model_Parm</Signature><Field name="c"/>
+   <Signature pre="" post="" name="MODEL_PARM">Model_Parm</Signature><Field name="c"/>
   </Definition>
   <Definition body="288" end="1045" exported="1" fullname="ts.diagnosis" inherit_type="local" line="6" name="Diagnosis" source="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" start="134">
    <Type>function</Type>
-   <Signature>DATASET(TS.Types.Model_Score)
+   <Signature pre="DATASET(TS.Types.Model_Score)" post="(DATASET(TS.Types.UniObservation) obs,&#10;                 DATASET(TS.Types.Model_Parameters) models)" name="DIAGNOSIS">DATASET(TS.Types.Model_Score)
        Diagnosis(DATASET(TS.Types.UniObservation) obs,
                  DATASET(TS.Types.Model_Parameters) models)</Signature><Params>
     <Param name="obs"/>

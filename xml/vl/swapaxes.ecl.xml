@@ -3,7 +3,7 @@
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Types.ecl" name="VL.Types" target="types.ecl.xml"/><Source name="VL.SwapAxes" sourcePath="/media/sarthak/Data/ecl-ml/VL/SwapAxes.ecl" target="swapaxes.ecl.xml">
   <Definition body="307" end="485" exported="1" fullname="vl.swapaxes" inherit_type="local" line="5" name="SwapAxes" source="/media/sarthak/Data/ecl-ml/VL/SwapAxes.ecl" start="237">
    <Type>function</Type>
-   <Signature>RT SwapAxes(DATASET(VL.Types.CartesianData) d,STRING sNewXTitle)FUNC</Signature><Params>
+   <Signature pre="RT" post="(DATASET(VL.Types.CartesianData) d,STRING sNewXTitle):=FUNC" name="SWAPAXES">RT SwapAxes(DATASET(VL.Types.CartesianData) d,STRING sNewXTitle):=FUNC</Signature><Params>
     <Param name="d"/>
     <Param name="sNewXTitle"/>
    </Params>

@@ -1,124 +1,244 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.Demo.Series_Data</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
-				std.system.thorlib
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../ml/pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../types.ecl.html">
-				ts.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Co_eff
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="bwr_demo_identification.ecl.html">bwr_demo_identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_demo_estimate.ecl.html">bwr_demo_estimate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="series_data.ecl.html">series_data.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_compare_2_r_arima.ecl.html">bwr_compare_2_r_arima.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Series_Data(DATASET(Co_eff) initial_vals,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.Demo.Series_Data</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+								std.system.thorlib
+							</a>
+							</li>
+						<li>
+							<a href="../../ml/pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="../pkg.toc.html">
+								ts
+							</a>
+							</li>
+						<li>
+							<a href="../types.ecl.html">
+								ts.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ts-demo-co_eff">
+							<a href="#ts-demo-co_eff" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CO_EFF</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-co_eff">Desc</a>
+							<ul id="ts-demo-co_eff" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-series_data">
+							<a href="#ts-demo-series_data" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SERIES_DATA</span>
+								<span class="sign-post">(DATASET(Co_eff) initial_vals,
                    REAL8 mult_val=1.0,
                    REAL8 add_val=0.0,
                    UNSIGNED2 test_records=100,
                    REAL8 noise_mean=0.0,
-                   REAL8 noise_var=1.0)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Co_eff
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-		
-		@content : Generate time series data for demonstration of TS attributes. Generates four series of values. A lag period is inferred by the number of start values. The series generated are: flat (a random walk); a slope constructed by adding the additive increment product of the prior value and the multiplicative increment; and the cummulative values of the slope value.
-		<br/>
-		
-		@return : the generated time series.
-		<br/>
-		
-		@param : test records
-		<br/>
-		
-		@param : start values, seasonality or cyclic behavior is entered with this parameter
-		<br/>
-		
-		@param : noise mean, the mean value of normally distributed noise which will be added
-		<br/>
-		
-		@param : noise variance, the variance of the normally distributed noise
-		<br/>
-		
-		@param : multiply value, the multiplicative increment
-		<br/>
-		
-		@param : additive value, the additive increment
-		<br/>
-		
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Series_Data(DATASET(Co_eff) initial_vals,
+                   REAL8 noise_var=1.0)</span>
+							</a> -
+							<a href="#dts-demo-series_data">Desc</a>
+							<ul id="ts-demo-series_data" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dts-demo-co_eff">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CO_EFF</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-co_eff" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+									Generate time series data for demonstration of TS attributes. Generates four series of values. A lag period is inferred by the number of start values. The series generated are: flat (a random walk); a slope constructed by adding the additive increment product of the prior value and the multiplicative increment; and the cummulative values of the slope value.
+									</div>
+								</div>
+								<br/>
+								
+								<div class="row">
+									<div class="col-md-1 doc-type">Parameters</div>
+									<div class="col-md-11">
+									<table class="table">
+									<tr>
+											<td width="20%"><b>test</b> </td>
+											<td>records</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>start</b> </td>
+											<td>values, seasonality or cyclic behavior is entered with this parameter</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>noise</b> </td>
+											<td>mean, the mean value of normally distributed noise which will be added</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>noise</b> </td>
+											<td>variance, the variance of the normally distributed noise</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>multiply</b> </td>
+											<td>value, the multiplicative increment</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>additive</b> </td>
+											<td>value, the additive increment</td>
+										</tr>
+									</table>
+									</div>
+								</div>
+								
+								
+								<div class="row">
+									<div class="col-md-1 doc-type">Returns</div>
+									<div class="col-md-11">
+									<table class="table">
+									<tr>
+											<td>the generated time series.</td>
+										</tr>
+									</table>
+									</div>
+								</div>
+								
+								
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-series_data">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SERIES_DATA</span>
+									<span class="sign-post">(DATASET(Co_eff) initial_vals,
                    REAL8 mult_val=1.0,
                    REAL8 add_val=0.0,
                    UNSIGNED2 test_records=100,
                    REAL8 noise_mean=0.0,
-                   REAL8 noise_var=1.0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+                   REAL8 noise_var=1.0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-series_data" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

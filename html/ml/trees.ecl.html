@@ -1,1108 +1,2241 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Trees</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="mat/pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Trees
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : model_Map
-			<ul>
+				<li>
+					<a href="nearestneighborssearch.ecl.html">nearestneighborssearch.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : STRING model_fields
-			<ul>
+				<li>
+					<a href="ensemble.ecl.html">ensemble.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : modelC_Map
-			<ul>
+				<li>
+					<a href="sampling.ecl.html">sampling.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : STRING modelC_fields
-			<ul>
+				<li>
+					<a href="mat/pkg.toc.html">mat</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Node
-			<ul>
+				<li>
+					<a href="appendid.ecl.html">appendid.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : sNode
-			<ul>
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : NodeInstDiscrete
-			<ul>
+				<li>
+					<a href="lsa/pkg.toc.html">lsa</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : wNode
-			<ul>
+				<li>
+					<a href="config.ecl.html">config.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : cNode
-			<ul>
+				<li>
+					<a href="naivebayes.ecl.html">naivebayes.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SplitD
-			<ul>
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SplitF
-			<ul>
+				<li>
+					<a href="stepregression/pkg.toc.html">stepregression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SplitC
-			<ul>
+				<li>
+					<a href="populationestimate.ecl.html">populationestimate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : final_node
-			<ul>
+				<li>
+					<a href="svm/pkg.toc.html">svm</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : final_node_instance
-			<ul>
+				<li>
+					<a href="version.ecl.html">version.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : node_error
-			<ul>
+				<li>
+					<a href="generate.ecl.html">generate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : node_error to_node_error(SplitF l)
-			<ul>
+				<li>
+					<a href="docs/pkg.toc.html">docs</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : KdTree(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)
-			<ul>
+				<li>
+					<a href="nfoldcrossvalidation.ecl.html">nfoldcrossvalidation.ecl</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : Res
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic/pkg.toc.html">stepwiselogistic</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fromfield.ecl.html">fromfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lazy.ecl.html">lazy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="correlate.ecl.html">correlate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="associate.ecl.html">associate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tofield.ecl.html">tofield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks.ecl.html">neuralnetworks.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="deeplearning.ecl.html">deeplearning.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils.ecl.html">utils.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trees.ecl.html">trees.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regress_poly_x.ecl.html">regress_poly_x.ecl</a>
+				</li>
+				
+				<li>
+					<a href="dmat/pkg.toc.html">dmat</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregates.ecl.html">fieldaggregates.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Splits
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Partitioned
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Counts
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CountMean
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CountVariance
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Extents
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : FullTree
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Boundaries
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : LowBounds
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UpBounds
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Locations
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : PartitionGiniImpurityBased	(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : Decision(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : res
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Splits
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : nsplits
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Partitioned
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Modes
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Precision
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Counts
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Purities
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CountMean
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CountVariance
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitsGiniImpurBased(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
-																Types.t_level Depth=10,REAL Purity=1.0)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitsInfoGainRatioBased(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitInstances(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitInstancesD(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : C45PruneTree(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitsIGR_Pruned(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToDiscreteTree(DATASET(SplitD) nodes)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ModelD(DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : BinaryPartitionC	(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitBinaryCBased(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitBinInstances(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToNumericTree(DATASET(SplitC) nodes)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ModelC(DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Trees
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : model_Map
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : STRING model_fields
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : modelC_Map
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : STRING modelC_fields
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Node
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : sNode
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : NodeInstDiscrete
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : wNode
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : cNode
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SplitD
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SplitF
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SplitC
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : final_node
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : final_node_instance
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : node_error
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : node_error to_node_error(SplitF l)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : KdTree(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Res
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Splits
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Partitioned
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Counts
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CountMean
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CountVariance
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Extents
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : FullTree
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Boundaries
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : LowBounds
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UpBounds
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Locations
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	
-	<p>	FUNCTION : PartitionGiniImpurityBased	(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : Decision(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : res
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Splits
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : nsplits
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Partitioned
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Modes
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Precision
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Counts
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Purities
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CountMean
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CountVariance
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : SplitsGiniImpurBased(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
-																Types.t_level Depth=10,REAL Purity=1.0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitsInfoGainRatioBased(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitInstances(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitInstancesD(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassProbDistribD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : C45PruneTree(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitsIGR_Pruned(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToDiscreteTree(DATASET(SplitD) nodes)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ModelD(DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : BinaryPartitionC	(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitBinaryCBased(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitBinInstances(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToNumericTree(DATASET(SplitC) nodes)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ModelC(DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Trees</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="mat/pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Trees">
+							<a href="#ML-Trees" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TREES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Trees">Desc</a>
+							<ul id="ML-Trees" class="accordian-body collapse">
+								<li id="t-ml-trees-model_map">
+							<a href="#ml-trees-model_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-model_map">Desc</a>
+							<ul id="ml-trees-model_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-model_fields">
+							<a href="#ml-trees-model_fields" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">STRING</span>
+								<span class="sign-name">MODEL_FIELDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-model_fields">Desc</a>
+							<ul id="ml-trees-model_fields" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-modelc_map">
+							<a href="#ml-trees-modelc_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODELC_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-modelc_map">Desc</a>
+							<ul id="ml-trees-modelc_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-modelc_fields">
+							<a href="#ml-trees-modelc_fields" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">STRING</span>
+								<span class="sign-name">MODELC_FIELDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-modelc_fields">Desc</a>
+							<ul id="ml-trees-modelc_fields" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-node">
+							<a href="#ml-trees-node" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-node">Desc</a>
+							<ul id="ml-trees-node" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-snode">
+							<a href="#ml-trees-snode" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SNODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-snode">Desc</a>
+							<ul id="ml-trees-snode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-nodeinstdiscrete">
+							<a href="#ml-trees-nodeinstdiscrete" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NODEINSTDISCRETE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-nodeinstdiscrete">Desc</a>
+							<ul id="ml-trees-nodeinstdiscrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-wnode">
+							<a href="#ml-trees-wnode" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">WNODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-wnode">Desc</a>
+							<ul id="ml-trees-wnode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-cnode">
+							<a href="#ml-trees-cnode" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CNODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-cnode">Desc</a>
+							<ul id="ml-trees-cnode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitd">
+							<a href="#ml-trees-splitd" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-splitd">Desc</a>
+							<ul id="ml-trees-splitd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitf">
+							<a href="#ml-trees-splitf" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITF</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-splitf">Desc</a>
+							<ul id="ml-trees-splitf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitc">
+							<a href="#ml-trees-splitc" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-splitc">Desc</a>
+							<ul id="ml-trees-splitc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-final_node">
+							<a href="#ml-trees-final_node" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FINAL_NODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-final_node">Desc</a>
+							<ul id="ml-trees-final_node" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-final_node_instance">
+							<a href="#ml-trees-final_node_instance" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FINAL_NODE_INSTANCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-final_node_instance">Desc</a>
+							<ul id="ml-trees-final_node_instance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-node_error">
+							<a href="#ml-trees-node_error" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NODE_ERROR</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-node_error">Desc</a>
+							<ul id="ml-trees-node_error" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-to_node_error">
+							<a href="#ml-trees-to_node_error" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">node_error</span>
+								<span class="sign-name">TO_NODE_ERROR</span>
+								<span class="sign-post">(SplitF l)</span>
+							</a> -
+							<a href="#dml-trees-to_node_error">Desc</a>
+							<ul id="ml-trees-to_node_error" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree">
+							<a href="#ml-trees-kdtree" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">KDTREE</span>
+								<span class="sign-post">(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)</span>
+							</a> -
+							<a href="#dml-trees-kdtree">Desc</a>
+							<ul id="ml-trees-kdtree" class="accordian-body collapse">
+								<li id="t-ml-trees-kdtree-res">
+							<a href="#ml-trees-kdtree-res" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-res">Desc</a>
+							<ul id="ml-trees-kdtree-res" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-splits">
+							<a href="#ml-trees-kdtree-splits" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-splits">Desc</a>
+							<ul id="ml-trees-kdtree-splits" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-partitioned">
+							<a href="#ml-trees-kdtree-partitioned" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARTITIONED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-partitioned">Desc</a>
+							<ul id="ml-trees-kdtree-partitioned" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-counts">
+							<a href="#ml-trees-kdtree-counts" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-counts">Desc</a>
+							<ul id="ml-trees-kdtree-counts" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-countmean">
+							<a href="#ml-trees-kdtree-countmean" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTMEAN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-countmean">Desc</a>
+							<ul id="ml-trees-kdtree-countmean" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-countvariance">
+							<a href="#ml-trees-kdtree-countvariance" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTVARIANCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-countvariance">Desc</a>
+							<ul id="ml-trees-kdtree-countvariance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-extents">
+							<a href="#ml-trees-kdtree-extents" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-extents">Desc</a>
+							<ul id="ml-trees-kdtree-extents" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-fulltree">
+							<a href="#ml-trees-kdtree-fulltree" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FULLTREE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-fulltree">Desc</a>
+							<ul id="ml-trees-kdtree-fulltree" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-boundaries">
+							<a href="#ml-trees-kdtree-boundaries" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BOUNDARIES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-boundaries">Desc</a>
+							<ul id="ml-trees-kdtree-boundaries" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-lowbounds">
+							<a href="#ml-trees-kdtree-lowbounds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOWBOUNDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-lowbounds">Desc</a>
+							<ul id="ml-trees-kdtree-lowbounds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-upbounds">
+							<a href="#ml-trees-kdtree-upbounds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">UPBOUNDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-upbounds">Desc</a>
+							<ul id="ml-trees-kdtree-upbounds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-kdtree-newinstances">
+							<a href="#ml-trees-kdtree-newinstances" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NEWINSTANCES</span>
+								<span class="sign-post">(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)</span>
+							</a> -
+							<a href="#dml-trees-kdtree-newinstances">Desc</a>
+							<ul id="ml-trees-kdtree-newinstances" class="accordian-body collapse">
+								<li id="t-ml-trees-kdtree-newinstances-locations">
+							<a href="#ml-trees-kdtree-newinstances-locations" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOCATIONS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-kdtree-newinstances-locations">Desc</a>
+							<ul id="ml-trees-kdtree-newinstances-locations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-trees-partitionginiimpuritybased">
+							<a href="#ml-trees-partitionginiimpuritybased" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARTITIONGINIIMPURITYBASED</span>
+								<span class="sign-post">(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)</span>
+							</a> -
+							<a href="#dml-trees-partitionginiimpuritybased">Desc</a>
+							<ul id="ml-trees-partitionginiimpuritybased" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision">
+							<a href="#ml-trees-decision" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DECISION</span>
+								<span class="sign-post">(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)</span>
+							</a> -
+							<a href="#dml-trees-decision">Desc</a>
+							<ul id="ml-trees-decision" class="accordian-body collapse">
+								<li id="t-ml-trees-decision-res">
+							<a href="#ml-trees-decision-res" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-res">Desc</a>
+							<ul id="ml-trees-decision-res" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-splits">
+							<a href="#ml-trees-decision-splits" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-splits">Desc</a>
+							<ul id="ml-trees-decision-splits" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-nsplits">
+							<a href="#ml-trees-decision-nsplits" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NSPLITS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-nsplits">Desc</a>
+							<ul id="ml-trees-decision-nsplits" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-partitioned">
+							<a href="#ml-trees-decision-partitioned" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARTITIONED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-partitioned">Desc</a>
+							<ul id="ml-trees-decision-partitioned" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-modes">
+							<a href="#ml-trees-decision-modes" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-modes">Desc</a>
+							<ul id="ml-trees-decision-modes" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-precision">
+							<a href="#ml-trees-decision-precision" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PRECISION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-precision">Desc</a>
+							<ul id="ml-trees-decision-precision" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-counts">
+							<a href="#ml-trees-decision-counts" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-counts">Desc</a>
+							<ul id="ml-trees-decision-counts" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-purities">
+							<a href="#ml-trees-decision-purities" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PURITIES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-purities">Desc</a>
+							<ul id="ml-trees-decision-purities" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-countmean">
+							<a href="#ml-trees-decision-countmean" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTMEAN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-countmean">Desc</a>
+							<ul id="ml-trees-decision-countmean" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-decision-countvariance">
+							<a href="#ml-trees-decision-countvariance" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COUNTVARIANCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-trees-decision-countvariance">Desc</a>
+							<ul id="ml-trees-decision-countvariance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitsginiimpurbased">
+							<a href="#ml-trees-splitsginiimpurbased" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITSGINIIMPURBASED</span>
+								<span class="sign-post">(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
+																Types.t_level Depth=10,REAL Purity=1.0)</span>
+							</a> -
+							<a href="#dml-trees-splitsginiimpurbased">Desc</a>
+							<ul id="ml-trees-splitsginiimpurbased" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitsinfogainratiobased">
+							<a href="#ml-trees-splitsinfogainratiobased" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITSINFOGAINRATIOBASED</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)</span>
+							</a> -
+							<a href="#dml-trees-splitsinfogainratiobased">Desc</a>
+							<ul id="ml-trees-splitsinfogainratiobased" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitinstances">
+							<a href="#ml-trees-splitinstances" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITINSTANCES</span>
+								<span class="sign-post">(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</span>
+							</a> -
+							<a href="#dml-trees-splitinstances">Desc</a>
+							<ul id="ml-trees-splitinstances" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitinstancesd">
+							<a href="#ml-trees-splitinstancesd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITINSTANCESD</span>
+								<span class="sign-post">(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</span>
+							</a> -
+							<a href="#dml-trees-splitinstancesd">Desc</a>
+							<ul id="ml-trees-splitinstancesd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-classprobdistribd">
+							<a href="#ml-trees-classprobdistribd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSPROBDISTRIBD</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-trees-classprobdistribd">Desc</a>
+							<ul id="ml-trees-classprobdistribd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-c45prunetree">
+							<a href="#ml-trees-c45prunetree" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">C45PRUNETREE</span>
+								<span class="sign-post">(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)</span>
+							</a> -
+							<a href="#dml-trees-c45prunetree">Desc</a>
+							<ul id="ml-trees-c45prunetree" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitsigr_pruned">
+							<a href="#ml-trees-splitsigr_pruned" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITSIGR_PRUNED</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )</span>
+							</a> -
+							<a href="#dml-trees-splitsigr_pruned">Desc</a>
+							<ul id="ml-trees-splitsigr_pruned" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-todiscretetree">
+							<a href="#ml-trees-todiscretetree" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TODISCRETETREE</span>
+								<span class="sign-post">(DATASET(SplitD) nodes)</span>
+							</a> -
+							<a href="#dml-trees-todiscretetree">Desc</a>
+							<ul id="ml-trees-todiscretetree" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-modeld">
+							<a href="#ml-trees-modeld" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODELD</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-trees-modeld">Desc</a>
+							<ul id="ml-trees-modeld" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-classifyd">
+							<a href="#ml-trees-classifyd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYD</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-trees-classifyd">Desc</a>
+							<ul id="ml-trees-classifyd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-binarypartitionc">
+							<a href="#ml-trees-binarypartitionc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BINARYPARTITIONC</span>
+								<span class="sign-post">(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)</span>
+							</a> -
+							<a href="#dml-trees-binarypartitionc">Desc</a>
+							<ul id="ml-trees-binarypartitionc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitbinarycbased">
+							<a href="#ml-trees-splitbinarycbased" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITBINARYCBASED</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)</span>
+							</a> -
+							<a href="#dml-trees-splitbinarycbased">Desc</a>
+							<ul id="ml-trees-splitbinarycbased" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-splitbininstances">
+							<a href="#ml-trees-splitbininstances" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITBININSTANCES</span>
+								<span class="sign-post">(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)</span>
+							</a> -
+							<a href="#dml-trees-splitbininstances">Desc</a>
+							<ul id="ml-trees-splitbininstances" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-tonumerictree">
+							<a href="#ml-trees-tonumerictree" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TONUMERICTREE</span>
+								<span class="sign-post">(DATASET(SplitC) nodes)</span>
+							</a> -
+							<a href="#dml-trees-tonumerictree">Desc</a>
+							<ul id="ml-trees-tonumerictree" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-modelc">
+							<a href="#ml-trees-modelc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODELC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-trees-modelc">Desc</a>
+							<ul id="ml-trees-modelc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-trees-classifyc">
+							<a href="#ml-trees-classifyc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-trees-classifyc">Desc</a>
+							<ul id="ml-trees-classifyc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Trees">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TREES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Trees" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-trees-model_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-model_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-model_fields">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">STRING</span>
+									<span class="sign-name">MODEL_FIELDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-model_fields" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-modelc_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODELC_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-modelc_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-modelc_fields">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">STRING</span>
+									<span class="sign-name">MODELC_FIELDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-modelc_fields" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-node">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-node" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-snode">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SNODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-snode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-nodeinstdiscrete">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NODEINSTDISCRETE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-nodeinstdiscrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-wnode">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">WNODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-wnode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-cnode">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CNODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-cnode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitd">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitf">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITF</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitc">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-final_node">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FINAL_NODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-final_node" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-final_node_instance">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FINAL_NODE_INSTANCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-final_node_instance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-node_error">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NODE_ERROR</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-node_error" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-to_node_error">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">node_error</span>
+									<span class="sign-name">TO_NODE_ERROR</span>
+									<span class="sign-post">(SplitF l)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-to_node_error" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">KDTREE</span>
+									<span class="sign-post">(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-trees-kdtree-res">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-res" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-splits">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-splits" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-partitioned">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARTITIONED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-partitioned" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-counts">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-counts" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-countmean">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTMEAN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-countmean" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-countvariance">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTVARIANCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-countvariance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-extents">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-extents" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-fulltree">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FULLTREE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-fulltree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-boundaries">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BOUNDARIES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-boundaries" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-lowbounds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOWBOUNDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-lowbounds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-upbounds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">UPBOUNDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-upbounds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-kdtree-newinstances">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NEWINSTANCES</span>
+									<span class="sign-post">(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-newinstances" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-trees-kdtree-newinstances-locations">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOCATIONS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-kdtree-newinstances-locations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						
+						<div class="panel panel-info" id="dml-trees-partitionginiimpuritybased">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARTITIONGINIIMPURITYBASED</span>
+									<span class="sign-post">(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-partitionginiimpuritybased" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DECISION</span>
+									<span class="sign-post">(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-trees-decision-res">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-res" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-splits">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-splits" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-nsplits">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NSPLITS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-nsplits" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-partitioned">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARTITIONED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-partitioned" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-modes">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-modes" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-precision">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PRECISION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-precision" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-counts">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-counts" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-purities">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PURITIES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-purities" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-countmean">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTMEAN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-countmean" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-decision-countvariance">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COUNTVARIANCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-decision-countvariance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-trees-splitsginiimpurbased">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITSGINIIMPURBASED</span>
+									<span class="sign-post">(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
+																Types.t_level Depth=10,REAL Purity=1.0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitsginiimpurbased" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitsinfogainratiobased">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITSINFOGAINRATIOBASED</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitsinfogainratiobased" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitinstances">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITINSTANCES</span>
+									<span class="sign-post">(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitinstances" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitinstancesd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITINSTANCESD</span>
+									<span class="sign-post">(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitinstancesd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-classprobdistribd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSPROBDISTRIBD</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-classprobdistribd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-c45prunetree">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">C45PRUNETREE</span>
+									<span class="sign-post">(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-c45prunetree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitsigr_pruned">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITSIGR_PRUNED</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitsigr_pruned" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-todiscretetree">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TODISCRETETREE</span>
+									<span class="sign-post">(DATASET(SplitD) nodes)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-todiscretetree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-modeld">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODELD</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-modeld" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-classifyd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYD</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-classifyd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-binarypartitionc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BINARYPARTITIONC</span>
+									<span class="sign-post">(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-binarypartitionc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitbinarycbased">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITBINARYCBASED</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitbinarycbased" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-splitbininstances">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITBININSTANCES</span>
+									<span class="sign-post">(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-splitbininstances" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-tonumerictree">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TONUMERICTREE</span>
+									<span class="sign-post">(DATASET(SplitC) nodes)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-tonumerictree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-modelc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODELC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-modelc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-trees-classifyc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-trees-classifyc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

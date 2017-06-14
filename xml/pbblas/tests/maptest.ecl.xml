@@ -7,91 +7,91 @@
   <Definition body="658" end="687" fullname="PBblas.AutoBVMap" inherit_type="local" line="12" name="mXmap" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/MapTest.ecl" start="650" target="../autobvmap.ecl.xml">
    <Type>module</Type>
    <Definition body="388" end="405" fullname="pbblas.autobvmap.nodes_available" inherit_type="local" line="12" name="nodes_available" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="363" target="../autobvmap.ecl.xml">
-    <Signature>nodes_available</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NODES_AVAILABLE">nodes_available</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="427" end="3220" fullname="pbblas.autobvmap.mapmatrix" inherit_type="local" line="13" name="MapMatrix" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="408" target="../autobvmap.ecl.xml">
-    <Signature>MapMatrix</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MAPMATRIX">MapMatrix</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3260" end="3276" fullname="pbblas.autobvmap.this_node" inherit_type="local" line="95" name="this_node" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3235" target="../autobvmap.ecl.xml">
-    <Signature>this_node</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="THIS_NODE">this_node</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3306" end="3356" exported="1" fullname="pbblas.autobvmap.row_blocks" inherit_type="override" line="97" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3284" target="../autobvmap.ecl.xml">
-    <Signature>row_blocks</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="ROW_BLOCKS">row_blocks</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3381" end="3431" exported="1" fullname="pbblas.autobvmap.col_blocks" inherit_type="override" line="98" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3359" target="../autobvmap.ecl.xml">
-    <Signature>col_blocks</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="COL_BLOCKS">col_blocks</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3450" end="3461" fullname="pbblas.autobvmap.rowcol" inherit_type="local" line="99" name="rowcol" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3434" target="../autobvmap.ecl.xml">
-    <Signature>rowcol</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="ROWCOL">rowcol</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3486" end="3497" fullname="pbblas.autobvmap.block_rows" inherit_type="local" line="100" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3464" target="../autobvmap.ecl.xml">
-    <Signature>block_rows</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BLOCK_ROWS">block_rows</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3522" end="3533" fullname="pbblas.autobvmap.block_cols" inherit_type="local" line="101" name="block_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3500" target="../autobvmap.ecl.xml">
-    <Signature>block_cols</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BLOCK_COLS">block_cols</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3563" end="3571" exported="1" fullname="pbblas.autobvmap.matrix_rows" inherit_type="override" line="103" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3541" target="../autobvmap.ecl.xml">
-    <Signature>matrix_rows</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MATRIX_ROWS">matrix_rows</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3596" end="3604" exported="1" fullname="pbblas.autobvmap.matrix_cols" inherit_type="override" line="104" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3574" target="../autobvmap.ecl.xml">
-    <Signature>matrix_cols</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MATRIX_COLS">matrix_cols</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3632" end="3657" exported="1" fullname="pbblas.autobvmap.partitions_used" inherit_type="override" line="105" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3607" target="../autobvmap.ecl.xml">
-    <Signature>partitions_used</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="PARTITIONS_USED">partitions_used</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3682" end="3721" exported="1" fullname="pbblas.autobvmap.nodes_used" inherit_type="override" line="106" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3660" target="../autobvmap.ecl.xml">
-    <Signature>nodes_used</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NODES_USED">nodes_used</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3780" end="3814" exported="1" fullname="pbblas.autobvmap.row_block" inherit_type="override" line="108" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3740" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>row_block(dimension_t mat_row)</Signature><Params>
+    <Signature pre="" post="(dimension_t mat_row)" name="ROW_BLOCK">row_block(dimension_t mat_row)</Signature><Params>
      <Param name="mat_row"/>
     </Params>
    </Definition>
    <Definition body="3857" end="3891" exported="1" fullname="pbblas.autobvmap.col_block" inherit_type="override" line="109" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3817" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>col_block(dimension_t mat_col)</Signature><Params>
+    <Signature pre="" post="(dimension_t mat_col)" name="COL_BLOCK">col_block(dimension_t mat_col)</Signature><Params>
      <Param name="mat_col"/>
     </Params>
    </Definition>
    <Definition body="3949" end="3977" exported="1" fullname="pbblas.autobvmap.assigned_part" inherit_type="override" line="110" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3894" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
+    <Signature pre="" post="(dimension_t rb, dimension_t cb)" name="ASSIGNED_PART">assigned_part(dimension_t rb, dimension_t cb)</Signature><Params>
      <Param name="rb"/>
      <Param name="cb"/>
     </Params>
    </Definition>
    <Definition body="4018" end="4040" exported="1" fullname="pbblas.autobvmap.assigned_node" inherit_type="override" line="111" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="3980" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>assigned_node(partition_t p)</Signature><Params>
+    <Signature pre="" post="(partition_t p)" name="ASSIGNED_NODE">assigned_node(partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="4079" end="4122" exported="1" fullname="pbblas.autobvmap.first_row" inherit_type="override" line="112" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4043" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>first_row(partition_t p)</Signature><Params>
+    <Signature pre="" post="(partition_t p)" name="FIRST_ROW">first_row(partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="4161" end="4204" exported="1" fullname="pbblas.autobvmap.first_col" inherit_type="override" line="113" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4125" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>first_col(partition_t p)</Signature><Params>
+    <Signature pre="" post="(partition_t p)" name="FIRST_COL">first_col(partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="4243" end="4288" exported="1" fullname="pbblas.autobvmap.part_rows" inherit_type="override" line="114" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4207" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>part_rows(partition_t p)</Signature><Params>
+    <Signature pre="" post="(partition_t p)" name="PART_ROWS">part_rows(partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="4327" end="4372" exported="1" fullname="pbblas.autobvmap.part_cols" inherit_type="override" line="115" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/AutoBVMap.ecl" start="4291" target="../autobvmap.ecl.xml">
     <Type>function</Type>
-    <Signature>part_cols(partition_t p)</Signature><Params>
+    <Signature pre="" post="(partition_t p)" name="PART_COLS">part_cols(partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
-   <Signature>mXmap</Signature><Parents>
+   <Signature pre="" post="" name="MXMAP">mXmap</Signature><Parents>
     <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../imatrix_map.ecl.xml"/>
    </Parents>
   </Definition>
@@ -100,10 +100,10 @@
    <Field name="m_rows"/>
    <Field name="m_cols"/>
    <Field name="f_b_rows"/>
-   <Signature>sizeRec</Signature><Field name="f_b_cols"/>
+   <Signature pre="" post="" name="SIZEREC">sizeRec</Signature><Field name="f_b_cols"/>
   </Definition>
   <Definition body="951" end="1048" fullname="pbblas.tests.sizetable" inherit_type="local" line="22" name="sizeTable" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/MapTest.ecl" start="939">
-   <Signature>sizeTable</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SIZETABLE">sizeTable</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../autobvmap.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/></Meta>

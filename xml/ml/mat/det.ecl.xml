@@ -3,7 +3,7 @@
  <Source name="ML.Mat.Det" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" target="det.ecl.xml">
   <Definition body="100" end="366" exported="1" fullname="ml.mat.det" inherit_type="local" line="4" name="Det" source="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" start="56">
    <Type>function</Type>
-   <Signature>Det(DATASET(Types.Element) matrix)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) matrix)" name="DET">Det(DATASET(Types.Element) matrix)</Signature><Params>
     <Param name="matrix"/>
    </Params>
   </Definition>

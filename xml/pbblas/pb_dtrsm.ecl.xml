@@ -17,25 +17,25 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="552" end="567" fullname="pbblas.value_t" inherit_type="local" line="13" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="540">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="580" end="596" fullname="pbblas.matrix_t" inherit_type="local" line="14" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="568">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="609" end="625" inherit_type="local" line="15" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="597">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="638" end="660" fullname="pbblas.lower" inherit_type="local" line="16" name="Lower" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="626">
-   <Signature>Lower</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LOWER">Lower</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="673" end="695" fullname="pbblas.upper" inherit_type="local" line="17" name="Upper" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="661">
-   <Signature>Upper</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="UPPER">Upper</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="708" end="724" inherit_type="local" line="18" name="Diagonal" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="696">
-   <Signature>Diagonal</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIAGONAL">Diagonal</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="737" end="749" inherit_type="local" line="19" name="Side" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="725">
-   <Signature>Side</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SIDE">Side</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="762" end="781" fullname="pbblas.part" inherit_type="local" line="20" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="750">
    <Type>record</Type>
@@ -47,7 +47,7 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="794" end="815" fullname="pbblas.target" inherit_type="local" line="21" name="Target" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="782">
    <Type>record</Type>
@@ -64,32 +64,32 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Target</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="TARGET">Target</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="828" end="847" fullname="pbblas.dimension" inherit_type="local" line="22" name="Dimension" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="816">
-   <Signature>Dimension</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION">Dimension</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="869" end="906" fullname="pbblas.distribution_error" inherit_type="local" line="23" name="Distribution_Error" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="848">
-   <Signature>Distribution_Error</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DISTRIBUTION_ERROR">Distribution_Error</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="928" end="965" fullname="pbblas.dimension_incompat" inherit_type="local" line="24" name="Dimension_Incompat" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="907">
-   <Signature>Dimension_Incompat</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_INCOMPAT">Dimension_Incompat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="987" end="1016" fullname="pbblas.not_square" inherit_type="local" line="25" name="Not_Square" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="966">
-   <Signature>Not_Square</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NOT_SQUARE">Not_Square</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1028" end="1031" fullname="pbblas.baseterm" inherit_type="local" line="26" name="BaseTerm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1017">
-   <Signature>BaseTerm</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="BASETERM">BaseTerm</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1044" end="1047" fullname="pbblas.rightterm" inherit_type="local" line="27" name="RightTerm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1032">
-   <Signature>RightTerm</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RIGHTTERM">RightTerm</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1059" end="1062" fullname="pbblas.leftterm" inherit_type="local" line="28" name="LeftTerm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1048">
-   <Signature>LeftTerm</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LEFTTERM">LeftTerm</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1293" end="8571" exported="1" fullname="pbblas.pb_dtrsm" inherit_type="local" line="30" name="PB_dtrsm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" start="1064">
    <Type>function</Type>
-   <Signature>PB_dtrsm(Side s, Triangle tri, BOOLEAN transposeA, Diagonal diag,
+   <Signature pre="" post="(Side s, Triangle tri, BOOLEAN transposeA, Diagonal diag,&#10;                value_t alpha,&#10;                PBblas.IMatrix_Map a_map, DATASET(Part) rawA,&#10;                PBblas.IMatrix_Map b_map, DATASET(Part) inB)" name="PB_DTRSM">PB_dtrsm(Side s, Triangle tri, BOOLEAN transposeA, Diagonal diag,
                 value_t alpha,
                 PBblas.IMatrix_Map a_map, DATASET(Part) rawA,
                 PBblas.IMatrix_Map b_map, DATASET(Part) inB)</Signature><Params>

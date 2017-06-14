@@ -1,260 +1,645 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Mat.Has</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.mat.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Has(DATASET(Types.Element) d)
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : Stats
-			<ul>
+				<li>
+					<a href="householder.ecl.html">householder.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sub.ecl.html">sub.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mu.ecl.html">mu.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lowertriangle.ecl.html">lowertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="uppertriangle.ecl.html">uppertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale.ecl.html">scale.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identity.ecl.html">identity.ecl</a>
+				</li>
+				
+				<li>
+					<a href="inv.ecl.html">inv.ecl</a>
+				</li>
+				
+				<li>
+					<a href="vec.ecl.html">vec.ecl</a>
+				</li>
+				
+				<li>
+					<a href="debug.ecl.html">debug.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eig.ecl.html">eig.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rounddelta.ecl.html">rounddelta.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svd.ecl.html">svd.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rankelements.ecl.html">rankelements.ecl</a>
+				</li>
+				
+				<li>
+					<a href="setdimension.ecl.html">setdimension.ecl</a>
+				</li>
+				
+				<li>
+					<a href="det.ecl.html">det.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mahalanobis.ecl.html">mahalanobis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cov.ecl.html">cov.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randmat.ecl.html">randmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lanczos.ecl.html">lanczos.ecl</a>
+				</li>
+				
+				<li>
+					<a href="add.ecl.html">add.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pow.ecl.html">pow.ecl</a>
+				</li>
+				
+				<li>
+					<a href="insertcolumn.ecl.html">insertcolumn.ecl</a>
+				</li>
+				
+				<li>
+					<a href="has.ecl.html">has.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pca.ecl.html">pca.ecl</a>
+				</li>
+				
+				<li>
+					<a href="thin.ecl.html">thin.ecl</a>
+				</li>
+				
+				<li>
+					<a href="decomp.ecl.html">decomp.ecl</a>
+				</li>
+				
+				<li>
+					<a href="is.ecl.html">is.ecl</a>
+				</li>
+				
+				<li>
+					<a href="repmat.ecl.html">repmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eq.ecl.html">eq.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mul.ecl.html">mul.ecl</a>
+				</li>
+				
+				<li>
+					<a href="each.ecl.html">each.ecl</a>
+				</li>
+				
+				<li>
+					<a href="strict.ecl.html">strict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="substitute.ecl.html">substitute.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Dimension
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Density
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Norm
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : MeanRow
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : MeanCol
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : MaxRow
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : MaxCol
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SumRow
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SumCol
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SDCol
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Has(DATASET(Types.Element) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Stats
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Dimension
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Density
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Norm
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : MeanRow
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : MeanCol
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : MaxRow
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : MaxCol
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SumRow
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SumCol
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SDCol
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Mat.Has</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.mat.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-mat-has">
+							<a href="#ml-mat-has" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HAS</span>
+								<span class="sign-post">(DATASET(Types.Element) d)</span>
+							</a> -
+							<a href="#dml-mat-has">Desc</a>
+							<ul id="ml-mat-has" class="accordian-body collapse">
+								<li id="t-ml-mat-has-stats">
+							<a href="#ml-mat-has-stats" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">STATS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-stats">Desc</a>
+							<ul id="ml-mat-has-stats" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-dimension">
+							<a href="#ml-mat-has-dimension" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIMENSION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-dimension">Desc</a>
+							<ul id="ml-mat-has-dimension" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-density">
+							<a href="#ml-mat-has-density" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DENSITY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-density">Desc</a>
+							<ul id="ml-mat-has-density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-norm">
+							<a href="#ml-mat-has-norm" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NORM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-norm">Desc</a>
+							<ul id="ml-mat-has-norm" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-meanrow">
+							<a href="#ml-mat-has-meanrow" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MEANROW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-meanrow">Desc</a>
+							<ul id="ml-mat-has-meanrow" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-meancol">
+							<a href="#ml-mat-has-meancol" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MEANCOL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-meancol">Desc</a>
+							<ul id="ml-mat-has-meancol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-maxrow">
+							<a href="#ml-mat-has-maxrow" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAXROW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-maxrow">Desc</a>
+							<ul id="ml-mat-has-maxrow" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-maxcol">
+							<a href="#ml-mat-has-maxcol" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAXCOL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-maxcol">Desc</a>
+							<ul id="ml-mat-has-maxcol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-sumrow">
+							<a href="#ml-mat-has-sumrow" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SUMROW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-sumrow">Desc</a>
+							<ul id="ml-mat-has-sumrow" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-sumcol">
+							<a href="#ml-mat-has-sumcol" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SUMCOL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-sumcol">Desc</a>
+							<ul id="ml-mat-has-sumcol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-has-sdcol">
+							<a href="#ml-mat-has-sdcol" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SDCOL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-has-sdcol">Desc</a>
+							<ul id="ml-mat-has-sdcol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-mat-has">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HAS</span>
+									<span class="sign-post">(DATASET(Types.Element) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-mat-has-stats">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">STATS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-stats" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-dimension">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIMENSION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-dimension" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-density">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DENSITY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-norm">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NORM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-norm" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-meanrow">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MEANROW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-meanrow" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-meancol">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MEANCOL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-meancol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-maxrow">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAXROW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-maxrow" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-maxcol">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAXCOL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-maxcol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-sumrow">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SUMROW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-sumrow" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-sumcol">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SUMCOL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-sumcol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-has-sdcol">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SDCOL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-has-sdcol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

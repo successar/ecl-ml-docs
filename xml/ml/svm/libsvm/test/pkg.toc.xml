@@ -1,1 +1,1 @@
-<folder name="test"><file name="file_conversion.ecl.xml">ML/SVM/LibSVM/Test/file_conversion.ecl.xml</file><file name="run_heart_scale.ecl.xml">ML/SVM/LibSVM/Test/run_heart_scale.ecl.xml</file></folder>
+<folder name="test"><file name="run_heart_scale.ecl.xml">ML/SVM/LibSVM/Test/run_heart_scale.ecl.xml</file><file name="file_conversion.ecl.xml">ML/SVM/LibSVM/Test/file_conversion.ecl.xml</file></folder>

@@ -24,12 +24,12 @@
     <Field name="KURTOSIS_ABOUT_MINOR_AXIS"/>
     <Field name="KURTOSIS_ABOUT_MAJOR_AXIS"/>
     <Field name="HOLLOWS_RATIO"/>
-    <Signature>discrete_VehicleRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="DISCRETE_VEHICLERECORD">discrete_VehicleRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="1109" end="88391" exported="1" fullname="testingsuite.classification.datasets.discrete_vehicleds.content" inherit_type="local" line="25" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_VehicleDS.ecl" start="1092">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>discrete_VehicleDS</Signature><Parents/>
+   <Signature pre="" post="" name="DISCRETE_VEHICLEDS">discrete_VehicleDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

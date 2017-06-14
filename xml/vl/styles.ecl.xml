@@ -4,44 +4,44 @@
   <Definition body="244" end="1188" exported="1" fullname="VL.Styles" inherit_type="local" line="4" name="Styles" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="229">
    <Type>module</Type>
    <Definition body="274" end="302" exported="1" inherit_type="local" line="5" name="FloatStyles" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="254">
-    <Signature>RT FloatStylesENUM</Signature><Type>attribute</Type>
+    <Signature pre="RT" post=":=ENUM" name="FLOATSTYLES">RT FloatStyles:=ENUM</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="322" end="681" exported="1" fullname="VL.Styles.Default" inherit_type="local" line="6" name="Default" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="306" virtual="1">
     <Type>module</Type>
     <Definition body="363" end="366" exported="1" fullname="vl.styles.default.title" inherit_type="local" line="7" name="Title" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="342">
-     <Signature>STRING Title''</Signature><Type>attribute</Type>
+     <Signature pre="STRING" post=":='';" name="TITLE">STRING Title:='';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="397" end="401" exported="1" fullname="vl.styles.default.height" inherit_type="local" line="8" name="Height" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="372">
-     <Signature>UNSIGNED2 Height400</Signature><Type>attribute</Type>
+     <Signature pre="UNSIGNED2" post=":=400;" name="HEIGHT">UNSIGNED2 Height:=400;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="431" end="435" exported="1" fullname="vl.styles.default.width" inherit_type="local" line="9" name="Width" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="407">
-     <Signature>NSIGNED2 Width600</Signature><Type>attribute</Type>
+     <Signature pre="NSIGNED2" post=":=600;" name="WIDTH">NSIGNED2 Width:=600;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="462" end="468" exported="1" fullname="vl.styles.default.is3d" inherit_type="local" line="10" name="Is3D" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="441">
-     <Signature>OLEAN Is3DFALSE</Signature><Type>attribute</Type>
+     <Signature pre="OLEAN" post=":=FALSE;" name="IS3D">OLEAN Is3D:=FALSE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="501" end="506" exported="1" fullname="vl.styles.default.showlegend" inherit_type="local" line="11" name="ShowLegend" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="474">
-     <Signature>LEAN ShowLegendTRUE</Signature><Type>attribute</Type>
+     <Signature pre="LEAN" post=":=TRUE;" name="SHOWLEGEND">LEAN ShowLegend:=TRUE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="536" end="553" exported="1" fullname="vl.styles.default.float" inherit_type="local" line="12" name="Float" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="512">
-     <Signature>GNED1 FloatFloatStyles</Signature><Type>attribute</Type>
+     <Signature pre="GNED1" post=":=FloatStyles" name="FLOAT">GNED1 Float:=FloatStyles</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="590" end="598" exported="1" fullname="vl.styles.default.backgroundcolor" inherit_type="local" line="13" name="BackgroundColor" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="559">
-     <Signature>G BackgroundColor'White'</Signature><Type>attribute</Type>
+     <Signature pre="G" post=":='White';" name="BACKGROUNDCOLOR">G BackgroundColor:='White';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="633" end="636" exported="1" fullname="vl.styles.default.chartadvanced" inherit_type="local" line="14" name="ChartAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="604">
-     <Signature>ChartAdvanced''
+     <Signature pre="" post=":='';&#10;    EXPOR" name="CHARTADVANCED">ChartAdvanced:='';
     EXPOR</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="670" end="673" exported="1" fullname="vl.styles.default.htmladvanced" inherit_type="local" line="15" name="HTMLAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="642">
-     <Signature>HTMLAdvanced''
-  END</Signature><Type>attribute</Type>
+     <Signature pre="" post=":='';&#10;  END;" name="HTMLADVANCED">HTMLAdvanced:='';
+  END;</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>T DefaultMODUL</Signature><Parents/>
+    <Signature pre="T" post=":=MODUL" name="DEFAULT">T Default:=MODUL</Signature><Parents/>
    </Definition>
    <Definition body="713" end="842" exported="1" fullname="vl.styles.setvalue" inherit_type="local" line="18" name="SetValue" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="689">
     <Type>macro</Type>
-    <Signature>,i,v)FUNCTIONMACRO</Signature><Params>
+    <Signature pre="" post="" name="SETVALUE">,i,v):=FUNCTIONMACRO</Signature><Params>
      <Param name="m"/>
      <Param name="i"/>
      <Param name="v"/>
@@ -50,76 +50,76 @@
    <Definition body="864" end="964" exported="1" fullname="VL.Styles.Small" inherit_type="local" line="25" name="Small" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="850" virtual="1">
     <Type>module</Type>
     <Definition body="363" end="366" exported="1" fullname="vl.styles.default.title" inherit_type="inherited" line="7" name="Title" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="342">
-     <Signature>STRING Title''</Signature><Type>attribute</Type>
+     <Signature pre="STRING" post=":='';" name="TITLE">STRING Title:='';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="462" end="468" exported="1" fullname="vl.styles.default.is3d" inherit_type="inherited" line="10" name="Is3D" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="441">
-     <Signature>OLEAN Is3DFALSE</Signature><Type>attribute</Type>
+     <Signature pre="OLEAN" post=":=FALSE;" name="IS3D">OLEAN Is3D:=FALSE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="501" end="506" exported="1" fullname="vl.styles.default.showlegend" inherit_type="inherited" line="11" name="ShowLegend" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="474">
-     <Signature>LEAN ShowLegendTRUE</Signature><Type>attribute</Type>
+     <Signature pre="LEAN" post=":=TRUE;" name="SHOWLEGEND">LEAN ShowLegend:=TRUE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="536" end="553" exported="1" fullname="vl.styles.default.float" inherit_type="inherited" line="12" name="Float" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="512">
-     <Signature>GNED1 FloatFloatStyles</Signature><Type>attribute</Type>
+     <Signature pre="GNED1" post=":=FloatStyles" name="FLOAT">GNED1 Float:=FloatStyles</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="590" end="598" exported="1" fullname="vl.styles.default.backgroundcolor" inherit_type="inherited" line="13" name="BackgroundColor" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="559">
-     <Signature>G BackgroundColor'White'</Signature><Type>attribute</Type>
+     <Signature pre="G" post=":='White';" name="BACKGROUNDCOLOR">G BackgroundColor:='White';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="633" end="636" exported="1" fullname="vl.styles.default.chartadvanced" inherit_type="inherited" line="14" name="ChartAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="604">
-     <Signature>ChartAdvanced''
+     <Signature pre="" post=":='';&#10;    EXPOR" name="CHARTADVANCED">ChartAdvanced:='';
     EXPOR</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="670" end="673" exported="1" fullname="vl.styles.default.htmladvanced" inherit_type="inherited" line="15" name="HTMLAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="642">
-     <Signature>HTMLAdvanced''
-  END</Signature><Type>attribute</Type>
+     <Signature pre="" post=":='';&#10;  END;" name="HTMLADVANCED">HTMLAdvanced:='';
+  END;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="918" end="922" exported="1" fullname="vl.styles.small.height" inherit_type="override" line="26" name="Height" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="893">
-     <Signature>100
-     UNSIGNED2</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="HEIGHT">100;
+    EXPORT UNSIGNED2</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="952" end="956" exported="1" fullname="vl.styles.small.width" inherit_type="override" line="27" name="Width" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="928">
-     <Signature>0
-  END
+     <Signature pre="" post="" name="WIDTH">0;
+  END;
   
-   La</Signature><Type>attribute</Type>
+  EXPORT La</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>ault),VIRTUAL</Signature><Parents>
+    <Signature pre="" post="" name="SMALL">ault),VIRTUAL</Signature><Parents>
      <Parent line="6" name="Default" ref="vl.styles.default" target="styles.ecl.xml"/>
     </Parents>
    </Definition>
    <Definition body="986" end="1086" exported="1" fullname="VL.Styles.Large" inherit_type="local" line="30" name="Large" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="972" virtual="1">
     <Type>module</Type>
     <Definition body="363" end="366" exported="1" fullname="vl.styles.default.title" inherit_type="inherited" line="7" name="Title" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="342">
-     <Signature>STRING Title''</Signature><Type>attribute</Type>
+     <Signature pre="STRING" post=":='';" name="TITLE">STRING Title:='';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="462" end="468" exported="1" fullname="vl.styles.default.is3d" inherit_type="inherited" line="10" name="Is3D" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="441">
-     <Signature>OLEAN Is3DFALSE</Signature><Type>attribute</Type>
+     <Signature pre="OLEAN" post=":=FALSE;" name="IS3D">OLEAN Is3D:=FALSE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="501" end="506" exported="1" fullname="vl.styles.default.showlegend" inherit_type="inherited" line="11" name="ShowLegend" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="474">
-     <Signature>LEAN ShowLegendTRUE</Signature><Type>attribute</Type>
+     <Signature pre="LEAN" post=":=TRUE;" name="SHOWLEGEND">LEAN ShowLegend:=TRUE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="536" end="553" exported="1" fullname="vl.styles.default.float" inherit_type="inherited" line="12" name="Float" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="512">
-     <Signature>GNED1 FloatFloatStyles</Signature><Type>attribute</Type>
+     <Signature pre="GNED1" post=":=FloatStyles" name="FLOAT">GNED1 Float:=FloatStyles</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="590" end="598" exported="1" fullname="vl.styles.default.backgroundcolor" inherit_type="inherited" line="13" name="BackgroundColor" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="559">
-     <Signature>G BackgroundColor'White'</Signature><Type>attribute</Type>
+     <Signature pre="G" post=":='White';" name="BACKGROUNDCOLOR">G BackgroundColor:='White';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="633" end="636" exported="1" fullname="vl.styles.default.chartadvanced" inherit_type="inherited" line="14" name="ChartAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="604">
-     <Signature>ChartAdvanced''
+     <Signature pre="" post=":='';&#10;    EXPOR" name="CHARTADVANCED">ChartAdvanced:='';
     EXPOR</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="670" end="673" exported="1" fullname="vl.styles.default.htmladvanced" inherit_type="inherited" line="15" name="HTMLAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="642">
-     <Signature>HTMLAdvanced''
-  END</Signature><Type>attribute</Type>
+     <Signature pre="" post=":='';&#10;  END;" name="HTMLADVANCED">HTMLAdvanced:='';
+  END;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="1040" end="1044" exported="1" fullname="vl.styles.large.height" inherit_type="override" line="31" name="Height" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="1015">
-     <Signature>UNSIGNED2 Widt</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="HEIGHT">EXPORT UNSIGNED2 Widt</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="1074" end="1078" exported="1" fullname="vl.styles.large.width" inherit_type="override" line="32" name="Width" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="1050">
-     <Signature>END
+     <Signature pre="" post="" name="WIDTH">END;
   
-   FloatRi</Signature><Type>attribute</Type>
+  EXPORT FloatRi</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>,VIRTUAL
+    <Signature pre="" post="" name="LARGE">,VIRTUAL
     E</Signature><Parents>
      <Parent line="6" name="Default" ref="vl.styles.default" target="styles.ecl.xml"/>
     </Parents>
@@ -127,40 +127,41 @@
    <Definition body="1113" end="1182" exported="1" fullname="VL.Styles.FloatRight" inherit_type="local" line="35" name="FloatRight" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="1094" virtual="1">
     <Type>module</Type>
     <Definition body="363" end="366" exported="1" fullname="vl.styles.default.title" inherit_type="inherited" line="7" name="Title" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="342">
-     <Signature>STRING Title''</Signature><Type>attribute</Type>
+     <Signature pre="STRING" post=":='';" name="TITLE">STRING Title:='';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="397" end="401" exported="1" fullname="vl.styles.default.height" inherit_type="inherited" line="8" name="Height" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="372">
-     <Signature>UNSIGNED2 Height400</Signature><Type>attribute</Type>
+     <Signature pre="UNSIGNED2" post=":=400;" name="HEIGHT">UNSIGNED2 Height:=400;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="431" end="435" exported="1" fullname="vl.styles.default.width" inherit_type="inherited" line="9" name="Width" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="407">
-     <Signature>NSIGNED2 Width600</Signature><Type>attribute</Type>
+     <Signature pre="NSIGNED2" post=":=600;" name="WIDTH">NSIGNED2 Width:=600;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="462" end="468" exported="1" fullname="vl.styles.default.is3d" inherit_type="inherited" line="10" name="Is3D" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="441">
-     <Signature>OLEAN Is3DFALSE</Signature><Type>attribute</Type>
+     <Signature pre="OLEAN" post=":=FALSE;" name="IS3D">OLEAN Is3D:=FALSE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="501" end="506" exported="1" fullname="vl.styles.default.showlegend" inherit_type="inherited" line="11" name="ShowLegend" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="474">
-     <Signature>LEAN ShowLegendTRUE</Signature><Type>attribute</Type>
+     <Signature pre="LEAN" post=":=TRUE;" name="SHOWLEGEND">LEAN ShowLegend:=TRUE;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="590" end="598" exported="1" fullname="vl.styles.default.backgroundcolor" inherit_type="inherited" line="13" name="BackgroundColor" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="559">
-     <Signature>G BackgroundColor'White'</Signature><Type>attribute</Type>
+     <Signature pre="G" post=":='White';" name="BACKGROUNDCOLOR">G BackgroundColor:='White';</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="633" end="636" exported="1" fullname="vl.styles.default.chartadvanced" inherit_type="inherited" line="14" name="ChartAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="604">
-     <Signature>ChartAdvanced''
+     <Signature pre="" post=":='';&#10;    EXPOR" name="CHARTADVANCED">ChartAdvanced:='';
     EXPOR</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="670" end="673" exported="1" fullname="vl.styles.default.htmladvanced" inherit_type="inherited" line="15" name="HTMLAdvanced" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="642">
-     <Signature>HTMLAdvanced''
-  END</Signature><Type>attribute</Type>
+     <Signature pre="" post=":='';&#10;  END;" name="HTMLADVANCED">HTMLAdvanced:='';
+  END;</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="1156" end="1174" exported="1" fullname="vl.styles.floatright.float" inherit_type="override" line="36" name="Float" source="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" start="1142">
-     <Signature>END
-END</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="FLOAT">END;
+END;</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>,VIRTUAL</Signature><Parents>
+    <Signature pre="" post="" name="FLOATRIGHT">,VIRTUAL
+    EXPORT</Signature><Parents>
      <Parent line="6" name="Default" ref="vl.styles.default" target="styles.ecl.xml"/>
     </Parents>
    </Definition>
-   <Signature>ORT StylesMOD</Signature><Parents/>
+   <Signature pre="ORT" post=":=MOD" name="STYLES">ORT Styles:=MOD</Signature><Parents/>
   </Definition>
  </Source>
 </Meta>

@@ -1,1734 +1,2874 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.StepRegression.BidirecRegression</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.stepregression
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../utils.ecl.html">
-				ml.utils
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
-				std.str
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : OLS2Use
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : DATASET(Mat.Types.Element) mBetas
-			<ul>
+				<li>
+					<a href="forwardregression.ecl.html">forwardregression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bidirecregression.ecl.html">bidirecregression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepregression.ecl.html">stepregression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="backwardregression.ecl.html">backwardregression.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : CoRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) Independents
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) Dependents
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : mY
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : mX
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : mXt
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) Betas
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) modelY
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : corr_ds
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(CoRec) RSquared
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) var_covar
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Anova
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SE
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : tStat
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : dist
-			<ul>
-				
-		<li>
-			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Discrete
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Multiplier
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : LowDensity
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : InvDensity(Types.t_FieldReal delta)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : high
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Low
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RangeWidth
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DensityV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : CumulativeV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : pVal
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(CoRec) AdjRSquared
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ConfInt(Types.t_fieldReal level)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(AICRec) AIC
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(FTestRec) FTest
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : BidirecRegression(DATASET(Types.NumericField) X,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.StepRegression.BidirecRegression</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="pkg.toc.html">
+								ml.stepregression
+							</a>
+							</li>
+						<li>
+							<a href="../types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="../utils.ecl.html">
+								ml.utils
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+								std.str
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-stepregression-ols2use">
+							<a href="#ml-stepregression-ols2use" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OLS2USE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepregression-ols2use">Desc</a>
+							<ul id="ml-stepregression-ols2use" class="accordian-body collapse">
+								<li id="t-ml-regression-sparse-ols_lu-mbetas">
+							<a href="#ml-regression-sparse-ols_lu-mbetas" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(Mat.Types.Element)</span>
+								<span class="sign-name">MBETAS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols_lu-mbetas">Desc</a>
+							<ul id="ml-regression-sparse-ols_lu-mbetas" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-corec">
+							<a href="#ml-regression-iregression-corec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-corec">Desc</a>
+							<ul id="ml-regression-iregression-corec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-independents">
+							<a href="#ml-regression-sparse-ols-independents" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">INDEPENDENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-independents">Desc</a>
+							<ul id="ml-regression-sparse-ols-independents" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-dependents">
+							<a href="#ml-regression-sparse-ols-dependents" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">DEPENDENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-dependents">Desc</a>
+							<ul id="ml-regression-sparse-ols-dependents" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-my">
+							<a href="#ml-regression-sparse-ols-my" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-my">Desc</a>
+							<ul id="ml-regression-sparse-ols-my" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-mx">
+							<a href="#ml-regression-sparse-ols-mx" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-mx">Desc</a>
+							<ul id="ml-regression-sparse-ols-mx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-mxt">
+							<a href="#ml-regression-sparse-ols-mxt" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MXT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-mxt">Desc</a>
+							<ul id="ml-regression-sparse-ols-mxt" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-betas">
+							<a href="#ml-regression-sparse-ols-betas" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">BETAS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-betas">Desc</a>
+							<ul id="ml-regression-sparse-ols-betas" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-modely">
+							<a href="#ml-regression-sparse-ols-modely" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">MODELY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-modely">Desc</a>
+							<ul id="ml-regression-sparse-ols-modely" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-extrapolated">
+							<a href="#ml-regression-sparse-ols-extrapolated" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">EXTRAPOLATED</span>
+								<span class="sign-post">(DATASET(NumericField) newX)</span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-extrapolated">Desc</a>
+							<ul id="ml-regression-sparse-ols-extrapolated" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-corr_ds">
+							<a href="#ml-regression-sparse-ols-corr_ds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CORR_DS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-corr_ds">Desc</a>
+							<ul id="ml-regression-sparse-ols-corr_ds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-rsquared">
+							<a href="#ml-regression-sparse-ols-rsquared" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(CoRec)</span>
+								<span class="sign-name">RSQUARED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-rsquared">Desc</a>
+							<ul id="ml-regression-sparse-ols-rsquared" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-var_covar">
+							<a href="#ml-regression-sparse-ols-var_covar" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">VAR_COVAR</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-var_covar">Desc</a>
+							<ul id="ml-regression-sparse-ols-var_covar" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-anova">
+							<a href="#ml-regression-iregression-anova" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ANOVA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-anova">Desc</a>
+							<ul id="ml-regression-iregression-anova" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-se">
+							<a href="#ml-regression-iregression-se" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-se">Desc</a>
+							<ul id="ml-regression-iregression-se" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-tstat">
+							<a href="#ml-regression-iregression-tstat" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TSTAT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-tstat">Desc</a>
+							<ul id="ml-regression-iregression-tstat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Distribution-StudentT">
+							<a href="#ML-Distribution-StudentT" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Distribution-StudentT">Desc</a>
+							<ul id="ML-Distribution-StudentT" class="accordian-body collapse">
+								<li id="t-ml-distribution-default-cumulative">
+							<a href="#ml-distribution-default-cumulative" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">CUMULATIVE</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-default-cumulative">Desc</a>
+							<ul id="ml-distribution-default-cumulative" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-ntile">
+							<a href="#ml-distribution-default-ntile" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">NTILE</span>
+								<span class="sign-post">(Types.t_FieldReal Pc)</span>
+							</a> -
+							<a href="#dml-distribution-default-ntile">Desc</a>
+							<ul id="ml-distribution-default-ntile" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-discrete">
+							<a href="#ml-distribution-default-discrete" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DISCRETE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-default-discrete">Desc</a>
+							<ul id="ml-distribution-default-discrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-multiplier">
+							<a href="#ml-distribution-studentt-multiplier" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MULTIPLIER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-multiplier">Desc</a>
+							<ul id="ml-distribution-studentt-multiplier" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-lowdensity">
+							<a href="#ml-distribution-studentt-lowdensity" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOWDENSITY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-lowdensity">Desc</a>
+							<ul id="ml-distribution-studentt-lowdensity" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-invdensity">
+							<a href="#ml-distribution-studentt-invdensity" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INVDENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal delta)</span>
+							</a> -
+							<a href="#dml-distribution-studentt-invdensity">Desc</a>
+							<ul id="ml-distribution-studentt-invdensity" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-high">
+							<a href="#ml-distribution-studentt-high" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HIGH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-high">Desc</a>
+							<ul id="ml-distribution-studentt-high" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-low">
+							<a href="#ml-distribution-studentt-low" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-low">Desc</a>
+							<ul id="ml-distribution-studentt-low" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-rangewidth">
+							<a href="#ml-distribution-studentt-rangewidth" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RANGEWIDTH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-rangewidth">Desc</a>
+							<ul id="ml-distribution-studentt-rangewidth" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-density">
+							<a href="#ml-distribution-studentt-density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-studentt-density">Desc</a>
+							<ul id="ml-distribution-studentt-density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-densityv">
+							<a href="#ml-distribution-studentt-densityv" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DENSITYV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-studentt-densityv">Desc</a>
+							<ul id="ml-distribution-studentt-densityv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-cumulativev">
+							<a href="#ml-distribution-studentt-cumulativev" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CUMULATIVEV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-studentt-cumulativev">Desc</a>
+							<ul id="ml-distribution-studentt-cumulativev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-pval">
+							<a href="#ml-regression-iregression-pval" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PVAL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-pval">Desc</a>
+							<ul id="ml-regression-iregression-pval" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-adjrsquared">
+							<a href="#ml-regression-iregression-adjrsquared" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(CoRec)</span>
+								<span class="sign-name">ADJRSQUARED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-adjrsquared">Desc</a>
+							<ul id="ml-regression-iregression-adjrsquared" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-confint">
+							<a href="#ml-regression-iregression-confint" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFINT</span>
+								<span class="sign-post">(Types.t_fieldReal level)</span>
+							</a> -
+							<a href="#dml-regression-iregression-confint">Desc</a>
+							<ul id="ml-regression-iregression-confint" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-aic">
+							<a href="#ml-regression-iregression-aic" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(</span>
+								<span class="sign-name">AIC</span>
+								<span class="sign-post">Rec) AIC</span>
+							</a> -
+							<a href="#dml-regression-iregression-aic">Desc</a>
+							<ul id="ml-regression-iregression-aic" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-ftest">
+							<a href="#ml-regression-iregression-ftest" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(</span>
+								<span class="sign-name">FTEST</span>
+								<span class="sign-post">Rec) FTest</span>
+							</a> -
+							<a href="#dml-regression-iregression-ftest">Desc</a>
+							<ul id="ml-regression-iregression-ftest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-stepregression-bidirecregression">
+							<a href="#ml-stepregression-bidirecregression" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BIDIRECREGRESSION</span>
+								<span class="sign-post">(DATASET(Types.NumericField) X,
 			DATASET(Types.NumericField) Y,
-			DATASET({UNSIGNED4 number}) InputVars)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : DATASET(StepRec) InitialStep
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Parameter
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(Parameter) Indices
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ParamRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : StepRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : BestModel
-			<ul>
-				
-		<li>
-			ATTRIBUTE : DATASET(Mat.Types.Element) mBetas
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : CoRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) Independents
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) Dependents
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : mY
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : mX
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : mXt
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) Betas
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) modelY
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : corr_ds
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(CoRec) RSquared
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(NumericField) var_covar
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Anova
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SE
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : tStat
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : dist
-			<ul>
-				
-		<li>
-			FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Discrete
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Multiplier
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : LowDensity
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : InvDensity(Types.t_FieldReal delta)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : high
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Low
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RangeWidth
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DensityV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : CumulativeV()
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : pVal
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(CoRec) AdjRSquared
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ConfInt(Types.t_fieldReal level)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(AICRec) AIC
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(FTestRec) FTest
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(StepRec) Steps
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : OLS2Use
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../regression/sparse/ols.ecl.html">
-					ml.regression.sparse.ols
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : DATASET(Mat.Types.Element) mBetas
-		
-		<br/>
-		<a href="../regression/sparse/ols_lu.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : CoRec
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) Independents
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) Dependents
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : mY
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : mX
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : mXt
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) Betas
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) modelY
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : corr_ds
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(CoRec) RSquared
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) var_covar
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Anova
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SE
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : tStat
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : dist
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../distribution.ecl.html">
-					ml.distribution.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Discrete
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Multiplier
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : LowDensity
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : high
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Low
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RangeWidth
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DensityV()
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : CumulativeV()
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : pVal
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(CoRec) AdjRSquared
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ConfInt(Types.t_fieldReal level)
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(AICRec) AIC
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(FTestRec) FTest
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	MODULE : BidirecRegression(DATASET(Types.NumericField) X,
+			DATASET({UNSIGNED4 number}) InputVars)</span>
+							</a> -
+							<a href="#dml-stepregression-bidirecregression">Desc</a>
+							<ul id="ml-stepregression-bidirecregression" class="accordian-body collapse">
+								<li id="t-ml-stepregression-bidirecregression-initialstep">
+							<a href="#ml-stepregression-bidirecregression-initialstep" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(StepRec)</span>
+								<span class="sign-name">INITIALSTEP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepregression-bidirecregression-initialstep">Desc</a>
+							<ul id="ml-stepregression-bidirecregression-initialstep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepregression-stepregression-parameter">
+							<a href="#ml-stepregression-stepregression-parameter" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARAMETER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepregression-stepregression-parameter">Desc</a>
+							<ul id="ml-stepregression-stepregression-parameter" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepregression-stepregression-indices">
+							<a href="#ml-stepregression-stepregression-indices" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(Parameter)</span>
+								<span class="sign-name">INDICES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepregression-stepregression-indices">Desc</a>
+							<ul id="ml-stepregression-stepregression-indices" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepregression-stepregression-paramrec">
+							<a href="#ml-stepregression-stepregression-paramrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARAMREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepregression-stepregression-paramrec">Desc</a>
+							<ul id="ml-stepregression-stepregression-paramrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepregression-stepregression-steprec">
+							<a href="#ml-stepregression-stepregression-steprec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">STEPREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepregression-stepregression-steprec">Desc</a>
+							<ul id="ml-stepregression-stepregression-steprec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Regression-Sparse-OLS_LU">
+							<a href="#ML-Regression-Sparse-OLS_LU" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BESTMODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Regression-Sparse-OLS_LU">Desc</a>
+							<ul id="ML-Regression-Sparse-OLS_LU" class="accordian-body collapse">
+								<li id="t-ml-regression-sparse-ols_lu-mbetas">
+							<a href="#ml-regression-sparse-ols_lu-mbetas" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(Mat.Types.Element)</span>
+								<span class="sign-name">MBETAS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols_lu-mbetas">Desc</a>
+							<ul id="ml-regression-sparse-ols_lu-mbetas" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-corec">
+							<a href="#ml-regression-iregression-corec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-corec">Desc</a>
+							<ul id="ml-regression-iregression-corec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-independents">
+							<a href="#ml-regression-sparse-ols-independents" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">INDEPENDENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-independents">Desc</a>
+							<ul id="ml-regression-sparse-ols-independents" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-dependents">
+							<a href="#ml-regression-sparse-ols-dependents" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">DEPENDENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-dependents">Desc</a>
+							<ul id="ml-regression-sparse-ols-dependents" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-my">
+							<a href="#ml-regression-sparse-ols-my" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-my">Desc</a>
+							<ul id="ml-regression-sparse-ols-my" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-mx">
+							<a href="#ml-regression-sparse-ols-mx" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-mx">Desc</a>
+							<ul id="ml-regression-sparse-ols-mx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-mxt">
+							<a href="#ml-regression-sparse-ols-mxt" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MXT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-mxt">Desc</a>
+							<ul id="ml-regression-sparse-ols-mxt" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-betas">
+							<a href="#ml-regression-sparse-ols-betas" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">BETAS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-betas">Desc</a>
+							<ul id="ml-regression-sparse-ols-betas" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-modely">
+							<a href="#ml-regression-sparse-ols-modely" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">MODELY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-modely">Desc</a>
+							<ul id="ml-regression-sparse-ols-modely" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-extrapolated">
+							<a href="#ml-regression-sparse-ols-extrapolated" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">EXTRAPOLATED</span>
+								<span class="sign-post">(DATASET(NumericField) newX)</span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-extrapolated">Desc</a>
+							<ul id="ml-regression-sparse-ols-extrapolated" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-corr_ds">
+							<a href="#ml-regression-sparse-ols-corr_ds" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CORR_DS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-corr_ds">Desc</a>
+							<ul id="ml-regression-sparse-ols-corr_ds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-rsquared">
+							<a href="#ml-regression-sparse-ols-rsquared" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(CoRec)</span>
+								<span class="sign-name">RSQUARED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-rsquared">Desc</a>
+							<ul id="ml-regression-sparse-ols-rsquared" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-sparse-ols-var_covar">
+							<a href="#ml-regression-sparse-ols-var_covar" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(NumericField)</span>
+								<span class="sign-name">VAR_COVAR</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-sparse-ols-var_covar">Desc</a>
+							<ul id="ml-regression-sparse-ols-var_covar" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-anova">
+							<a href="#ml-regression-iregression-anova" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ANOVA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-anova">Desc</a>
+							<ul id="ml-regression-iregression-anova" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-se">
+							<a href="#ml-regression-iregression-se" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-se">Desc</a>
+							<ul id="ml-regression-iregression-se" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-tstat">
+							<a href="#ml-regression-iregression-tstat" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TSTAT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-tstat">Desc</a>
+							<ul id="ml-regression-iregression-tstat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Distribution-StudentT">
+							<a href="#ML-Distribution-StudentT" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Distribution-StudentT">Desc</a>
+							<ul id="ML-Distribution-StudentT" class="accordian-body collapse">
+								<li id="t-ml-distribution-default-cumulative">
+							<a href="#ml-distribution-default-cumulative" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">CUMULATIVE</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-default-cumulative">Desc</a>
+							<ul id="ml-distribution-default-cumulative" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-ntile">
+							<a href="#ml-distribution-default-ntile" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">NTILE</span>
+								<span class="sign-post">(Types.t_FieldReal Pc)</span>
+							</a> -
+							<a href="#dml-distribution-default-ntile">Desc</a>
+							<ul id="ml-distribution-default-ntile" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-default-discrete">
+							<a href="#ml-distribution-default-discrete" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DISCRETE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-default-discrete">Desc</a>
+							<ul id="ml-distribution-default-discrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-multiplier">
+							<a href="#ml-distribution-studentt-multiplier" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MULTIPLIER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-multiplier">Desc</a>
+							<ul id="ml-distribution-studentt-multiplier" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-lowdensity">
+							<a href="#ml-distribution-studentt-lowdensity" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOWDENSITY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-lowdensity">Desc</a>
+							<ul id="ml-distribution-studentt-lowdensity" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-invdensity">
+							<a href="#ml-distribution-studentt-invdensity" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INVDENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal delta)</span>
+							</a> -
+							<a href="#dml-distribution-studentt-invdensity">Desc</a>
+							<ul id="ml-distribution-studentt-invdensity" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-high">
+							<a href="#ml-distribution-studentt-high" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HIGH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-high">Desc</a>
+							<ul id="ml-distribution-studentt-high" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-low">
+							<a href="#ml-distribution-studentt-low" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-low">Desc</a>
+							<ul id="ml-distribution-studentt-low" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-rangewidth">
+							<a href="#ml-distribution-studentt-rangewidth" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RANGEWIDTH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-distribution-studentt-rangewidth">Desc</a>
+							<ul id="ml-distribution-studentt-rangewidth" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-density">
+							<a href="#ml-distribution-studentt-density" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.t_FieldReal</span>
+								<span class="sign-name">DENSITY</span>
+								<span class="sign-post">(Types.t_FieldReal RH)</span>
+							</a> -
+							<a href="#dml-distribution-studentt-density">Desc</a>
+							<ul id="ml-distribution-studentt-density" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-densityv">
+							<a href="#ml-distribution-studentt-densityv" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DENSITYV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-studentt-densityv">Desc</a>
+							<ul id="ml-distribution-studentt-densityv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-distribution-studentt-cumulativev">
+							<a href="#ml-distribution-studentt-cumulativev" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CUMULATIVEV</span>
+								<span class="sign-post">()</span>
+							</a> -
+							<a href="#dml-distribution-studentt-cumulativev">Desc</a>
+							<ul id="ml-distribution-studentt-cumulativev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-pval">
+							<a href="#ml-regression-iregression-pval" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PVAL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-pval">Desc</a>
+							<ul id="ml-regression-iregression-pval" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-adjrsquared">
+							<a href="#ml-regression-iregression-adjrsquared" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(CoRec)</span>
+								<span class="sign-name">ADJRSQUARED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-regression-iregression-adjrsquared">Desc</a>
+							<ul id="ml-regression-iregression-adjrsquared" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-confint">
+							<a href="#ml-regression-iregression-confint" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFINT</span>
+								<span class="sign-post">(Types.t_fieldReal level)</span>
+							</a> -
+							<a href="#dml-regression-iregression-confint">Desc</a>
+							<ul id="ml-regression-iregression-confint" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-aic">
+							<a href="#ml-regression-iregression-aic" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(</span>
+								<span class="sign-name">AIC</span>
+								<span class="sign-post">Rec) AIC</span>
+							</a> -
+							<a href="#dml-regression-iregression-aic">Desc</a>
+							<ul id="ml-regression-iregression-aic" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-regression-iregression-ftest">
+							<a href="#ml-regression-iregression-ftest" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(</span>
+								<span class="sign-name">FTEST</span>
+								<span class="sign-post">Rec) FTest</span>
+							</a> -
+							<a href="#dml-regression-iregression-ftest">Desc</a>
+							<ul id="ml-regression-iregression-ftest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-stepregression-bidirecregression-steps">
+							<a href="#ml-stepregression-bidirecregression-steps" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(StepRec)</span>
+								<span class="sign-name">STEPS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepregression-bidirecregression-steps">Desc</a>
+							<ul id="ml-stepregression-bidirecregression-steps" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-stepregression-ols2use">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OLS2USE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-ols2use" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../regression/sparse/ols.ecl.html">
+												ml.regression.sparse.ols
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-regression-sparse-ols_lu-mbetas">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Mat.Types.Element)</span>
+									<span class="sign-name">MBETAS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols_lu-mbetas" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols_lu.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-corec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-corec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-independents">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">INDEPENDENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-independents" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-dependents">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">DEPENDENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-dependents" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-my">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-my" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-mx">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-mx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-mxt">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MXT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-mxt" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-betas">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">BETAS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-betas" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-modely">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">MODELY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-modely" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-extrapolated">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">EXTRAPOLATED</span>
+									<span class="sign-post">(DATASET(NumericField) newX)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-extrapolated" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-corr_ds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CORR_DS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-corr_ds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-rsquared">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(CoRec)</span>
+									<span class="sign-name">RSQUARED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-rsquared" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-var_covar">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">VAR_COVAR</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-var_covar" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-anova">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ANOVA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-anova" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-se">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-se" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-tstat">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TSTAT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-tstat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Distribution-StudentT">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Distribution-StudentT" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../distribution.ecl.html">
+												ml.distribution.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-distribution-default-cumulative">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">CUMULATIVE</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-cumulative" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-ntile">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">NTILE</span>
+									<span class="sign-post">(Types.t_FieldReal Pc)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-ntile" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-discrete">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DISCRETE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-discrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-multiplier">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MULTIPLIER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-multiplier" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-lowdensity">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOWDENSITY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-lowdensity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-invdensity">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INVDENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal delta)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-invdensity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-high">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HIGH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-high" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-low">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-low" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-rangewidth">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RANGEWIDTH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-rangewidth" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-densityv">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DENSITYV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-densityv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-cumulativev">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CUMULATIVEV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-cumulativev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-regression-iregression-pval">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PVAL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-pval" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-adjrsquared">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(CoRec)</span>
+									<span class="sign-name">ADJRSQUARED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-adjrsquared" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-confint">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFINT</span>
+									<span class="sign-post">(Types.t_fieldReal level)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-confint" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-aic">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(</span>
+									<span class="sign-name">AIC</span>
+									<span class="sign-post">Rec) AIC</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-aic" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-ftest">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(</span>
+									<span class="sign-name">FTEST</span>
+									<span class="sign-post">Rec) FTest</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-ftest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-stepregression-bidirecregression">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BIDIRECREGRESSION</span>
+									<span class="sign-post">(DATASET(Types.NumericField) X,
 			DATASET(Types.NumericField) Y,
-			DATASET({UNSIGNED4 number}) InputVars)
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="stepregression.ecl.html">
-					ml.stepregression.stepregression
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : DATASET(StepRec) InitialStep
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Parameter
-		
-		<br/>
-		<a href="stepregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(Parameter) Indices
-		
-		<br/>
-		<a href="stepregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ParamRec
-		
-		<br/>
-		<a href="stepregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : StepRec
-		
-		<br/>
-		<a href="stepregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : BestModel
-		
-		<br/>
-		<a href="../regression/sparse/ols_lu.ecl.html">External Link </a>
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../regression/sparse/ols.ecl.html">
-					ml.regression.sparse.ols
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : DATASET(Mat.Types.Element) mBetas
-		
-		<br/>
-		<a href="../regression/sparse/ols_lu.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : CoRec
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) Independents
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) Dependents
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : mY
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : mX
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : mXt
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) Betas
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) modelY
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : corr_ds
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(CoRec) RSquared
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(NumericField) var_covar
-		
-		<br/>
-		<a href="../regression/sparse/ols.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Anova
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SE
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : tStat
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : dist
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../distribution.ecl.html">
-					ml.distribution.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : Types.t_FieldReal Cumulative(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal NTile(Types.t_FieldReal Pc)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Discrete
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Multiplier
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : LowDensity
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : InvDensity(Types.t_FieldReal delta)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : high
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Low
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RangeWidth
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.t_FieldReal Density(Types.t_FieldReal RH)
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DensityV()
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : CumulativeV()
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : pVal
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(CoRec) AdjRSquared
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ConfInt(Types.t_fieldReal level)
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(AICRec) AIC
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(FTestRec) FTest
-		
-		<br/>
-		<a href="../regression/iregression.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : DATASET(StepRec) Steps
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+			DATASET({UNSIGNED4 number}) InputVars)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-bidirecregression" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="stepregression.ecl.html">
+												ml.stepregression.stepregression
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-stepregression-bidirecregression-initialstep">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(StepRec)</span>
+									<span class="sign-name">INITIALSTEP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-bidirecregression-initialstep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepregression-stepregression-parameter">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARAMETER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-stepregression-parameter" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="stepregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepregression-stepregression-indices">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Parameter)</span>
+									<span class="sign-name">INDICES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-stepregression-indices" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="stepregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepregression-stepregression-paramrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARAMREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-stepregression-paramrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="stepregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepregression-stepregression-steprec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">STEPREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-stepregression-steprec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="stepregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Regression-Sparse-OLS_LU">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BESTMODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Regression-Sparse-OLS_LU" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols_lu.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../regression/sparse/ols.ecl.html">
+												ml.regression.sparse.ols
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-regression-sparse-ols_lu-mbetas">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Mat.Types.Element)</span>
+									<span class="sign-name">MBETAS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols_lu-mbetas" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols_lu.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-corec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-corec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-independents">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">INDEPENDENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-independents" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-dependents">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">DEPENDENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-dependents" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-my">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-my" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-mx">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-mx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-mxt">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MXT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-mxt" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-betas">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">BETAS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-betas" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-modely">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">MODELY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-modely" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-extrapolated">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">EXTRAPOLATED</span>
+									<span class="sign-post">(DATASET(NumericField) newX)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-extrapolated" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-corr_ds">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CORR_DS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-corr_ds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-rsquared">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(CoRec)</span>
+									<span class="sign-name">RSQUARED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-rsquared" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-sparse-ols-var_covar">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(NumericField)</span>
+									<span class="sign-name">VAR_COVAR</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-sparse-ols-var_covar" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/sparse/ols.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-anova">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ANOVA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-anova" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-se">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-se" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-tstat">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TSTAT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-tstat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Distribution-StudentT">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Distribution-StudentT" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../distribution.ecl.html">
+												ml.distribution.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-distribution-default-cumulative">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">CUMULATIVE</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-cumulative" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-ntile">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">NTILE</span>
+									<span class="sign-post">(Types.t_FieldReal Pc)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-ntile" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-default-discrete">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DISCRETE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-default-discrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-multiplier">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MULTIPLIER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-multiplier" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-lowdensity">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOWDENSITY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-lowdensity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-invdensity">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INVDENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal delta)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-invdensity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-high">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HIGH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-high" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-low">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-low" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-rangewidth">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RANGEWIDTH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-rangewidth" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-density">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.t_FieldReal</span>
+									<span class="sign-name">DENSITY</span>
+									<span class="sign-post">(Types.t_FieldReal RH)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-density" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-densityv">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DENSITYV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-densityv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-distribution-studentt-cumulativev">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CUMULATIVEV</span>
+									<span class="sign-post">()</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-distribution-studentt-cumulativev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-regression-iregression-pval">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PVAL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-pval" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-adjrsquared">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(CoRec)</span>
+									<span class="sign-name">ADJRSQUARED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-adjrsquared" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-confint">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFINT</span>
+									<span class="sign-post">(Types.t_fieldReal level)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-confint" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-aic">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(</span>
+									<span class="sign-name">AIC</span>
+									<span class="sign-post">Rec) AIC</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-aic" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-regression-iregression-ftest">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(</span>
+									<span class="sign-name">FTEST</span>
+									<span class="sign-post">Rec) FTest</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-regression-iregression-ftest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../regression/iregression.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-stepregression-bidirecregression-steps">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(StepRec)</span>
+									<span class="sign-name">STEPS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepregression-bidirecregression-steps" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

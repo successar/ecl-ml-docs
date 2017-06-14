@@ -20,17 +20,17 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_PART">Layout_Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="294" end="309" fullname="pbblas.value_t" inherit_type="local" line="10" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dbvrk.ecl" start="284">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="319" end="345" fullname="pbblas.emptyc" inherit_type="local" line="11" name="emptyC" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dbvrk.ecl" start="310">
-   <Signature>emptyC</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="EMPTYC">emptyC</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="557" end="2590" exported="1" fullname="pbblas.pb_dbvrk" inherit_type="local" line="13" name="PB_dbvrk" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dbvrk.ecl" start="347">
    <Type>function</Type>
-   <Signature>PB_dbvrk(BOOLEAN transposeA, value_t alpha, PBblas.IMatrix_Map a_map,
+   <Signature pre="" post="(BOOLEAN transposeA, value_t alpha, PBblas.IMatrix_Map a_map,&#10;                DATASET(Layout_Part) A, PBblas.IMatrix_Map c_map,&#10;                value_t beta=0.0, DATASET(Layout_Part) C=emptyC)" name="PB_DBVRK">PB_dbvrk(BOOLEAN transposeA, value_t alpha, PBblas.IMatrix_Map a_map,
                 DATASET(Layout_Part) A, PBblas.IMatrix_Map c_map,
                 value_t beta=0.0, DATASET(Layout_Part) C=emptyC)</Signature><Params>
     <Param name="transposeA"/>

@@ -29,14 +29,14 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="172" end="187" fullname="pbblas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" start="162">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="239" end="444" exported="1" fullname="pbblas.pb_dscal" inherit_type="local" line="10" name="PB_dscal" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" start="189">
    <Type>function</Type>
-   <Signature>PB_dscal(value_t alpha, DATASET(Part) X)</Signature><Params>
+   <Signature pre="" post="(value_t alpha, DATASET(Part) X)" name="PB_DSCAL">PB_dscal(value_t alpha, DATASET(Part) X)</Signature><Params>
     <Param name="alpha"/>
     <Param name="X"/>
    </Params>

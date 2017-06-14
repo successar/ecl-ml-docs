@@ -5,19 +5,19 @@
    <Type>module</Type>
    <Definition body="455" end="525" exported="1" fullname="ml.mat.mu.to" inherit_type="local" line="8" name="To" source="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" start="398">
     <Type>function</Type>
-    <Signature>To(DATASET(Types.Element) d, Types.t_mu_no num)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) d, Types.t_mu_no num)" name="TO">To(DATASET(Types.Element) d, Types.t_mu_no num)</Signature><Params>
      <Param name="d"/>
      <Param name="num"/>
     </Params>
    </Definition>
    <Definition body="587" end="647" exported="1" fullname="ml.mat.mu.from" inherit_type="local" line="9" name="From" source="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" start="526">
     <Type>function</Type>
-    <Signature>From(DATASET(Types.MUElement) d, Types.t_mu_no num)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.MUElement) d, Types.t_mu_no num)" name="FROM">From(DATASET(Types.MUElement) d, Types.t_mu_no num)</Signature><Params>
      <Param name="d"/>
      <Param name="num"/>
     </Params>
    </Definition>
-   <Signature>MU</Signature><Parents/>
+   <Signature pre="" post="" name="MU">MU</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

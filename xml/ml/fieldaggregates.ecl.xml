@@ -8,50 +8,50 @@
    </Params>
    <Parents/>
    <Definition body="517" end="549" exported="1" fullname="ml.fieldaggregates.simple" inherit_type="local" line="16" name="Simple" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="502">
-    <Signature>Simple</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SIMPLE">Simple</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="726" end="729" exported="1" fullname="ml.fieldaggregates.simpleranked" inherit_type="local" line="27" name="SimpleRanked" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="704">
-    <Signature>SimpleRanked</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SIMPLERANKED">SimpleRanked</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1080" end="1213" exported="1" fullname="ml.fieldaggregates.medians" inherit_type="local" line="31" name="Medians" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="1064">
-    <Signature>Medians</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MEDIANS">Medians</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1815" end="1876" exported="1" fullname="ml.fieldaggregates.minmednext" inherit_type="local" line="38" name="MinMedNext" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="1796">
-    <Signature>MinMedNext</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MINMEDNEXT">MinMedNext</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2148" end="2228" exported="1" fullname="ml.fieldaggregates.buckets" inherit_type="local" line="45" name="Buckets" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="2112">
     <Type>function</Type>
-    <Signature>Buckets(Types.t_Discrete n)</Signature><Params>
+    <Signature pre="" post="(Types.t_Discrete n)" name="BUCKETS">Buckets(Types.t_Discrete n)</Signature><Params>
      <Param name="n"/>
     </Params>
    </Definition>
    <Definition body="2270" end="2426" exported="1" fullname="ml.fieldaggregates.bucketranges" inherit_type="local" line="46" name="BucketRanges" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="2229">
     <Type>function</Type>
-    <Signature>BucketRanges(Types.t_Discrete n)</Signature><Params>
+    <Signature pre="" post="(Types.t_Discrete n)" name="BUCKETRANGES">BucketRanges(Types.t_Discrete n)</Signature><Params>
      <Param name="n"/>
     </Params>
    </Definition>
    <Definition body="2594" end="2631" fullname="ml.fieldaggregates.t" inherit_type="local" line="55" name="T" shared="1" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="2583">
-    <Signature>T</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T">T</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2727" end="2991" exported="1" fullname="ml.fieldaggregates.modes" inherit_type="local" line="58" name="Modes" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="2713">
-    <Signature>Modes</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MODES">Modes</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3013" end="3074" exported="1" fullname="ml.fieldaggregates.cardinality" inherit_type="local" line="62" name="Cardinality" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="2993">
-    <Signature>Cardinality</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CARDINALITY">Cardinality</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3238" end="3374" exported="1" fullname="ml.fieldaggregates.rankedinput" inherit_type="local" line="74" name="RankedInput" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="3217">
-    <Signature>RankedInput</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="RANKEDINPUT">RankedInput</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3621" end="3781" exported="1" fullname="ml.fieldaggregates.ntiles" inherit_type="local" line="83" name="NTiles" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="3586">
     <Type>function</Type>
-    <Signature>NTiles(Types.t_Discrete n)</Signature><Params>
+    <Signature pre="" post="(Types.t_Discrete n)" name="NTILES">NTiles(Types.t_Discrete n)</Signature><Params>
      <Param name="n"/>
     </Params>
    </Definition>
-   <Signature>FieldAggregates(DATASET(Types.NumericField) d)</Signature><Definition body="3822" end="4040" exported="1" fullname="ml.fieldaggregates.ntileranges" inherit_type="local" line="86" name="NTileRanges" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="3782">
+   <Signature pre="" post="(DATASET(Types.NumericField) d)" name="FIELDAGGREGATES">FieldAggregates(DATASET(Types.NumericField) d)</Signature><Definition body="3822" end="4040" exported="1" fullname="ml.fieldaggregates.ntileranges" inherit_type="local" line="86" name="NTileRanges" source="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" start="3782">
     <Type>function</Type>
-    <Signature>NTileRanges(Types.t_Discrete n)</Signature><Params>
+    <Signature pre="" post="(Types.t_Discrete n)" name="NTILERANGES">NTileRanges(Types.t_Discrete n)</Signature><Params>
      <Param name="n"/>
     </Params>
    </Definition>

@@ -15,28 +15,28 @@
    <Type>record</Type>
    <Field name="id"/>
    <Field name="number"/>
-   <Signature>NumericField</Signature><Field name="value"/>
+   <Signature pre="" post="" name="NUMERICFIELD">NumericField</Signature><Field name="value"/>
   </Definition>
   <Definition body="617" end="678" fullname="ml.tests.deprecated.simplerankedchickweight2numericfieldds" inherit_type="local" line="27" name="SimpleRankedChickWeight2NumericFieldDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testRanked.ecl" start="576">
-   <Signature>SimpleRankedChickWeight2NumericFieldDS</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SIMPLERANKEDCHICKWEIGHT2NUMERICFIELDDS">SimpleRankedChickWeight2NumericFieldDS</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1142" end="1202" fullname="ml.tests.deprecated.rankedchickweight2numericfieldds" inherit_type="local" line="43" name="RankedChickWeight2NumericFieldDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testRanked.ecl" start="1107">
-   <Signature>RankedChickWeight2NumericFieldDS</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RANKEDCHICKWEIGHT2NUMERICFIELDDS">RankedChickWeight2NumericFieldDS</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="54" end="113" fullname="ml.tests.deprecated.chickweight2numericfieldds_toname" inherit_type="local" line="81" name="ChickWeight2NumericFieldDS_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//----------------------------------------------------</Signature><Params>
+   <Signature pre="" post="" name="CHICKWEIGHT2NUMERICFIELDDS_TONAME">//----------------------------------------------------</Signature><Params>
     <Param name="i"/>
    </Params>
   </Definition>
   <Definition body="56" end="114" fullname="ml.tests.deprecated.chickweight2numericfieldds_tonumber" inherit_type="local" line="83" name="ChickWeight2NumericFieldDS_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//------------------------------------------------------</Signature><Params>
+   <Signature pre="" post="" name="CHICKWEIGHT2NUMERICFIELDDS_TONUMBER">//------------------------------------------------------</Signature><Params>
     <Param name="s"/>
    </Params>
   </Definition>
   <Definition body="2485" end="2654" fullname="ml.tests.deprecated.chickweight2numericfieldds" inherit_type="local" line="85" name="ChickWeight2NumericFieldDS" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
-   <Signature>/---------------------------------------------------------------------------
+   <Signature pre="" post="" name="CHICKWEIGHT2NUMERICFIELDDS">/---------------------------------------------------------------------------
 // Macro takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
@@ -63,14 +63,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('&lt;xml/&gt;')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('&lt;xml/&gt;');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -83,7 +83,7 @@
   // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="32" end="2800" fullname="ml.tests.deprecated.chickweight2numericfieldds_map" inherit_type="local" line="87" name="ChickWeight2NumericFieldDS_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
-   <Signature>//------------------------------</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="CHICKWEIGHT2NUMERICFIELDDS_MAP">//------------------------------</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/ChickWeight.ecl" name="ML.Tests.Deprecated.ChickWeight" target="chickweight.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/></Meta>

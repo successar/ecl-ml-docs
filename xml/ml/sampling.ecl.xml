@@ -4,26 +4,26 @@
   <Definition body="240" end="10767" exported="1" fullname="ML.Sampling" inherit_type="local" line="9" name="Sampling" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="222">
    <Type>module</Type>
    <Definition body="267" end="295" inherit_type="local" line="10" name="g_Method" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="249">
-    <Signature>g_Method</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="G_METHOD">g_Method</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="314" end="325" fullname="ml.sampling.t_index" inherit_type="local" line="11" name="t_Index" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="297">
-    <Signature>t_Index</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_INDEX">t_Index</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="346" end="408" exported="1" fullname="ml.sampling.idlistrec" inherit_type="local" line="12" name="idListRec" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="327">
     <Type>record</Type>
     <Field name="id"/>
-    <Signature>idListRec</Signature><Field name="oldId"/>
+    <Signature pre="" post="" name="IDLISTREC">idListRec</Signature><Field name="oldId"/>
    </Definition>
    <Definition body="434" end="480" exported="1" fullname="ml.sampling.idlistgrouprec" inherit_type="local" line="16" name="idListGroupRec" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="410">
     <Type>record</Type>
     <Field name="id"/>
     <Field name="oldId"/>
-    <Signature>idListGroupRec</Signature><Field name="gNum"/>
+    <Signature pre="" post="" name="IDLISTGROUPREC">idListGroupRec</Signature><Field name="gNum"/>
    </Definition>
    <Definition body="501" end="565" fullname="ml.sampling.idfoldrec" inherit_type="local" line="19" name="idFoldRec" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="482">
     <Type>record</Type>
     <Field name="fold"/>
-    <Signature>idFoldRec</Signature><Field name="id"/>
+    <Signature pre="" post="" name="IDFOLDREC">idFoldRec</Signature><Field name="id"/>
    </Definition>
    <Definition body="703" end="828" fullname="ml.sampling.createidrecs" inherit_type="local" line="23" name="CreateIdRecs" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="567">
     <Type>transform</Type>
@@ -33,11 +33,11 @@
      <Param name="origSize"/>
      <Param name="method"/>
     </Params>
-    <Signature>Types.NumericField CreateIdRecs(Types.NumericField L, INTEGER C, INTEGER origSize, Types.t_Discrete method = g_Method.Zeroing)</Signature><Return>numericfield</Return>
+    <Signature pre="Types.NumericField" post="(Types.NumericField L, INTEGER C, INTEGER origSize, Types.t_Discrete method = g_Method.Zeroing)" name="CREATEIDRECS">Types.NumericField CreateIdRecs(Types.NumericField L, INTEGER C, INTEGER origSize, Types.t_Discrete method = g_Method.Zeroing)</Signature><Return>numericfield</Return>
    </Definition>
    <Definition body="940" end="1095" fullname="ml.sampling.generateidlist" inherit_type="local" line="28" name="GenerateIdList" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="831">
     <Type>function</Type>
-    <Signature>GenerateIdList(Types.t_Count origSize, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)</Signature><Params>
+    <Signature pre="" post="(Types.t_Count origSize, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)" name="GENERATEIDLIST">GenerateIdList(Types.t_Count origSize, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)</Signature><Params>
      <Param name="origSize"/>
      <Param name="pctSize"/>
      <Param name="baseId"/>
@@ -48,14 +48,14 @@
     <Field name="id"/>
     <Field name="number"/>
     <Field name="value"/>
-    <Signature>dsRecordRnd</Signature><Field name="rnd"/>
+    <Signature pre="" post="" name="DSRECORDRND">dsRecordRnd</Signature><Field name="rnd"/>
    </Definition>
    <Definition body="1238" end="1290" fullname="ml.sampling.addrandom" inherit_type="local" line="34" name="AddRandom" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="1185">
     <Type>transform</Type>
     <Params>
      <Param name="l"/>
     </Params>
-    <Signature>dsRecordRnd AddRandom(Types.NumericField l)</Signature><Return>dsrecordrnd</Return>
+    <Signature pre="dsRecordRnd" post="(Types.NumericField l)" name="ADDRANDOM">dsRecordRnd AddRandom(Types.NumericField l)</Signature><Return>dsrecordrnd</Return>
    </Definition>
    <Definition body="1366" end="1453" fullname="ml.sampling.getrecords" inherit_type="local" line="38" name="GetRecords" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="1292">
     <Type>transform</Type>
@@ -63,18 +63,18 @@
      <Param name="l"/>
      <Param name="r"/>
     </Params>
-    <Signature>Types.NumericField GetRecords(Types.NumericField l, idListRec r)</Signature><Return>numericfield</Return>
+    <Signature pre="Types.NumericField" post="(Types.NumericField l, idListRec r)" name="GETRECORDS">Types.NumericField GetRecords(Types.NumericField l, idListRec r)</Signature><Return>numericfield</Return>
    </Definition>
    <Definition body="1477" end="1543" fullname="ml.sampling.dsdiscrecrnd" inherit_type="local" line="43" name="dsDiscRecRnd" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="1455">
     <Type>record</Type>
     <Field name="id"/>
     <Field name="number"/>
     <Field name="value"/>
-    <Signature>dsDiscRecRnd</Signature><Field name="rnd"/>
+    <Signature pre="" post="" name="DSDISCRECRND">dsDiscRecRnd</Signature><Field name="rnd"/>
    </Definition>
    <Definition body="1857" end="2640" exported="1" fullname="ml.sampling.generatensamplelist" inherit_type="local" line="50" name="GenerateNSampleList" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="1790">
     <Type>function</Type>
-    <Signature>GenerateNSampleList(t_Index N, Types.t_RecordID origSize)</Signature><Params>
+    <Signature pre="" post="(t_Index N, Types.t_RecordID origSize)" name="GENERATENSAMPLELIST">GenerateNSampleList(t_Index N, Types.t_RecordID origSize)</Signature><Params>
      <Param name="N"/>
      <Param name="origSize"/>
     </Params>
@@ -87,13 +87,13 @@
     </Params>
     <Parents/>
     <Definition body="2995" end="3005" exported="1" fullname="ml.sampling.generateddata.genidlist" inherit_type="local" line="75" name="genIdList" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="2977">
-     <Signature>genIdList</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="GENIDLIST">genIdList</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="3029" end="3039" exported="1" fullname="ml.sampling.generateddata.origdataset" inherit_type="local" line="76" name="origDataset" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3008">
-     <Signature>origDataset</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="ORIGDATASET">origDataset</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>GeneratedData(DATASET(idListRec) dsIdList, DATASET( Types.NumericField) origData)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
-     <Signature>genSubSample</Signature><Type>attribute</Type>
+    <Signature pre="" post="(DATASET(idListRec) dsIdList, DATASET( Types.NumericField) origData)" name="GENERATEDDATA">GeneratedData(DATASET(idListRec) dsIdList, DATASET( Types.NumericField) origData)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
+     <Signature pre="" post="" name="GENSUBSAMPLE">genSubSample</Signature><Type>attribute</Type>
     </Definition>
    </Definition>
    <Definition body="3823" end="4274" exported="1" fullname="ml.sampling.rndsamplewithoutreplace" inherit_type="local" line="88" name="RndSampleWithoutReplace" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3687">
@@ -105,13 +105,13 @@
     </Params>
     <Parents/>
     <Definition body="2995" end="3005" exported="1" fullname="ml.sampling.generateddata.genidlist" inherit_type="local" line="75" name="genIdList" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="2977">
-     <Signature>genIdList</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="GENIDLIST">genIdList</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="3029" end="3039" exported="1" fullname="ml.sampling.generateddata.origdataset" inherit_type="local" line="76" name="origDataset" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3008">
-     <Signature>origDataset</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="ORIGDATASET">origDataset</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>RndSampleWithoutReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
-     <Signature>genSubSample</Signature><Type>attribute</Type>
+    <Signature pre="" post="(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)" name="RNDSAMPLEWITHOUTREPLACE">RndSampleWithoutReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
+     <Signature pre="" post="" name="GENSUBSAMPLE">genSubSample</Signature><Type>attribute</Type>
     </Definition>
    </Definition>
    <Definition body="4965" end="5191" exported="1" fullname="ml.sampling.rndsamplewithreplace" inherit_type="local" line="107" name="RndSampleWithReplace" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="4832">
@@ -123,13 +123,13 @@
     </Params>
     <Parents/>
     <Definition body="2995" end="3005" exported="1" fullname="ml.sampling.generateddata.genidlist" inherit_type="local" line="75" name="genIdList" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="2977">
-     <Signature>genIdList</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="GENIDLIST">genIdList</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="3029" end="3039" exported="1" fullname="ml.sampling.generateddata.origdataset" inherit_type="local" line="76" name="origDataset" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3008">
-     <Signature>origDataset</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="ORIGDATASET">origDataset</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>RndSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
-     <Signature>genSubSample</Signature><Type>attribute</Type>
+    <Signature pre="" post="(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)" name="RNDSAMPLEWITHREPLACE">RndSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
+     <Signature pre="" post="" name="GENSUBSAMPLE">genSubSample</Signature><Type>attribute</Type>
     </Definition>
    </Definition>
    <Definition body="6256" end="7327" exported="1" fullname="ml.sampling.stratsamplewithreplace" inherit_type="local" line="126" name="StratSampleWithReplace" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="6085">
@@ -142,18 +142,18 @@
     </Params>
     <Parents/>
     <Definition body="2995" end="3005" exported="1" fullname="ml.sampling.generateddata.genidlist" inherit_type="local" line="75" name="genIdList" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="2977">
-     <Signature>genIdList</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="GENIDLIST">genIdList</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="3029" end="3039" exported="1" fullname="ml.sampling.generateddata.origdataset" inherit_type="local" line="76" name="origDataset" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3008">
-     <Signature>origDataset</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="ORIGDATASET">origDataset</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>StratSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0, Types.t_FieldNumber fieldClass = 0)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
-     <Signature>genSubSample</Signature><Type>attribute</Type>
+    <Signature pre="" post="(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0, Types.t_FieldNumber fieldClass = 0)" name="STRATSAMPLEWITHREPLACE">StratSampleWithReplace(DATASET(Types.NumericField) originalData, Types.t_Discrete pctSize = 100, Types.t_RecordID baseId = 0, Types.t_FieldNumber fieldClass = 0)</Signature><Definition body="3162" end="3187" exported="1" fullname="ml.sampling.generateddata.gensubsample" inherit_type="local" line="78" name="genSubSample" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="3141">
+     <Signature pre="" post="" name="GENSUBSAMPLE">genSubSample</Signature><Type>attribute</Type>
     </Definition>
    </Definition>
    <Definition body="7846" end="8142" exported="1" fullname="ml.sampling.discretedepnfolds" inherit_type="local" line="151" name="DiscreteDepNFolds" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="7746">
     <Type>function</Type>
-    <Signature>DiscreteDepNFolds(DATASET(Types.DiscreteField) originalData, Types.t_FieldNumber num_part)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) originalData, Types.t_FieldNumber num_part)" name="DISCRETEDEPNFOLDS">DiscreteDepNFolds(DATASET(Types.DiscreteField) originalData, Types.t_FieldNumber num_part)</Signature><Params>
      <Param name="originalData"/>
      <Param name="num_part"/>
     </Params>
@@ -167,14 +167,14 @@
     </Params>
     <Parents/>
     <Definition body="8909" end="9000" fullname="ml.sampling.nfold.ds_parts" inherit_type="local" line="169" name="ds_parts" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="8891">
-     <Signature>ds_parts</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="DS_PARTS">ds_parts</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="9021" end="9041" exported="1" fullname="ml.sampling.nfold.nfoldlist" inherit_type="local" line="170" name="NFoldList" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="9003">
-     <Signature>NFoldList</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="NFOLDLIST">NFoldList</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>NFold(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)</Signature><Definition body="9117" end="9313" exported="1" fullname="ml.sampling.nfold.foldnds" inherit_type="local" line="171" name="FoldNDS" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="9044">
+    <Signature pre="" post="(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)" name="NFOLD">NFold(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)</Signature><Definition body="9117" end="9313" exported="1" fullname="ml.sampling.nfold.foldnds" inherit_type="local" line="171" name="FoldNDS" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="9044">
      <Type>function</Type>
-     <Signature>FoldNDS(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
+     <Signature pre="" post="(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)" name="FOLDNDS">FoldNDS(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
       <Param name="num_fold"/>
       <Param name="baseId"/>
      </Params>
@@ -189,30 +189,30 @@
     </Params>
     <Parents/>
     <Definition body="10039" end="10102" fullname="ml.sampling.nfoldcross.distribidx" inherit_type="local" line="186" name="distribIdx" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="10018">
-     <Signature>distribIdx</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="DISTRIBIDX">distribIdx</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="10123" end="10176" fullname="ml.sampling.nfoldcross.ds_parts" inherit_type="local" line="187" name="ds_parts" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="10105">
-     <Signature>ds_parts</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="DS_PARTS">ds_parts</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="10197" end="10207" exported="1" fullname="ml.sampling.nfoldcross.nfoldlist" inherit_type="local" line="188" name="NFoldList" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="10179">
-     <Signature>NFoldList</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="NFOLDLIST">NFoldList</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="10289" end="10482" exported="1" fullname="ml.sampling.nfoldcross.foldntrainds" inherit_type="local" line="189" name="FoldNTrainDS" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="10210">
      <Type>function</Type>
-     <Signature>FoldNTrainDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
+     <Signature pre="" post="(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)" name="FOLDNTRAINDS">FoldNTrainDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
       <Param name="num_fold"/>
       <Param name="baseId"/>
      </Params>
     </Definition>
-    <Signature>NFoldCross(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)</Signature><Definition body="10563" end="10756" exported="1" fullname="ml.sampling.nfoldcross.foldntestds" inherit_type="local" line="193" name="FoldNTestDS" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="10485">
+    <Signature pre="" post="(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)" name="NFOLDCROSS">NFoldCross(DATASET(Types.NumericField) originalData, Types.t_Discrete num_part, Types.t_FieldNumber fieldDistrib = 0)</Signature><Definition body="10563" end="10756" exported="1" fullname="ml.sampling.nfoldcross.foldntestds" inherit_type="local" line="193" name="FoldNTestDS" source="/media/sarthak/Data/ecl-ml/ML/Sampling.ecl" start="10485">
      <Type>function</Type>
-     <Signature>FoldNTestDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
+     <Signature pre="" post="(Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)" name="FOLDNTESTDS">FoldNTestDS (Types.t_Discrete num_fold, Types.t_RecordID baseId = 0)</Signature><Params>
       <Param name="num_fold"/>
       <Param name="baseId"/>
      </Params>
     </Definition>
    </Definition>
-   <Signature>Sampling</Signature><Parents/>
+   <Signature pre="" post="" name="SAMPLING">Sampling</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

@@ -4,22 +4,22 @@
   <Definition body="107" end="793" exported="1" fullname="ML.Generate" inherit_type="local" line="5" name="Generate" source="/media/sarthak/Data/ecl-ml/ML/Generate.ecl" start="89">
    <Type>module</Type>
    <Definition body="137" end="201" exported="1" inherit_type="local" line="7" name="tp_Method" source="/media/sarthak/Data/ecl-ml/ML/Generate.ecl" start="118">
-    <Signature>tp_Method</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TP_METHOD">tp_Method</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="237" end="346" exported="1" fullname="ml.generate.methodname" inherit_type="local" line="8" name="MethodName" source="/media/sarthak/Data/ecl-ml/ML/Generate.ecl" start="204">
     <Type>function</Type>
-    <Signature>MethodName(tp_Method x)</Signature><Params>
+    <Signature pre="" post="(tp_Method x)" name="METHODNAME">MethodName(tp_Method x)</Signature><Params>
      <Param name="x"/>
     </Params>
    </Definition>
    <Definition body="723" end="788" exported="1" fullname="ml.generate.topoly" inherit_type="local" line="18" name="ToPoly" source="/media/sarthak/Data/ecl-ml/ML/Generate.ecl" start="653">
     <Type>function</Type>
-    <Signature>ToPoly(DATASET(Types.NumericField) seedCol, UNSIGNED maxN=6)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) seedCol, UNSIGNED maxN=6)" name="TOPOLY">ToPoly(DATASET(Types.NumericField) seedCol, UNSIGNED maxN=6)</Signature><Params>
      <Param name="seedCol"/>
      <Param name="maxN"/>
     </Params>
    </Definition>
-   <Signature>Generate</Signature><Parents/>
+   <Signature pre="" post="" name="GENERATE">Generate</Signature><Parents/>
   </Definition>
   <Import body="0" end="70" fullname="ML.Types" inherit_type="local" line="4" name="Types" ref="ml.types" start="70" target="types.ecl.xml">
    <Type>attribute</Type>

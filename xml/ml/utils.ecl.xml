@@ -4,99 +4,99 @@
   <Definition body="171" end="14776" exported="1" fullname="ML.Utils" inherit_type="local" line="6" name="Utils" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="156">
    <Type>module</Type>
    <Definition body="192" end="221" exported="1" fullname="ml.utils.pi" inherit_type="local" line="8" name="Pi" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="180">
-    <Signature>Pi</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="PI">Pi</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="236" end="242" exported="1" fullname="ml.utils.base" inherit_type="local" line="9" name="Base" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="222">
-    <Signature>Base</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BASE">Base</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="325" end="439" exported="1" fullname="ml.utils.fac" inherit_type="local" line="11" name="Fac" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="293">
     <Type>embed</Type>
-    <Signature>REAL8 Fac(UNSIGNED2 i)</Signature><Params>
+    <Signature pre="REAL8" post="(UNSIGNED2 i)" name="FAC">REAL8 Fac(UNSIGNED2 i)</Signature><Params>
      <Param name="i"/>
     </Params>
    </Definition>
    <Definition body="806" end="961" exported="1" fullname="ml.utils.doublefac" inherit_type="local" line="24" name="DoubleFac" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="769">
     <Type>embed</Type>
-    <Signature>REAL8 DoubleFac(INTEGER2 i)</Signature><Params>
+    <Signature pre="REAL8" post="(INTEGER2 i)" name="DOUBLEFAC">REAL8 DoubleFac(INTEGER2 i)</Signature><Params>
      <Param name="i"/>
     </Params>
    </Definition>
    <Definition body="1181" end="1207" exported="1" fullname="ml.utils.nck" inherit_type="local" line="35" name="NCK" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="1138">
     <Type>function</Type>
-    <Signature>REAL8 NCK(INTEGER2 N, INTEGER2 K)</Signature><Params>
+    <Signature pre="REAL8" post="(INTEGER2 N, INTEGER2 K)" name="NCK">REAL8 NCK(INTEGER2 N, INTEGER2 K)</Signature><Params>
      <Param name="N"/>
      <Param name="K"/>
     </Params>
    </Definition>
    <Definition body="1431" end="1752" exported="1" fullname="ml.utils.poly" inherit_type="local" line="39" name="Poly" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="1381">
     <Type>embed</Type>
-    <Signature>REAL8 Poly(REAL8 x, SET OF REAL8 Coeffs)</Signature><Params>
+    <Signature pre="REAL8" post="(REAL8 x, SET OF REAL8 Coeffs)" name="POLY">REAL8 Poly(REAL8 x, SET OF REAL8 Coeffs)</Signature><Params>
      <Param name="x"/>
      <Param name="Coeffs"/>
     </Params>
    </Definition>
    <Definition body="1788" end="2336" exported="1" fullname="ml.utils.stirlingformula" inherit_type="local" line="52" name="stirlingFormula" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="1754">
     <Type>function</Type>
-    <Signature>stirlingFormula(real8 x)</Signature><Params>
+    <Signature pre="" post="(real8 x)" name="STIRLINGFORMULA">stirlingFormula(real8 x)</Signature><Params>
      <Param name="x"/>
     </Params>
    </Definition>
    <Definition body="2427" end="2499" exported="1" fullname="ml.utils.gamma" inherit_type="local" line="74" name="gamma" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="2397">
     <Type>embed</Type>
-    <Signature>REAL8 gamma(REAL8 x)</Signature><Params>
+    <Signature pre="REAL8" post="(REAL8 x)" name="GAMMA">REAL8 gamma(REAL8 x)</Signature><Params>
      <Param name="x"/>
     </Params>
    </Definition>
    <Definition body="2623" end="3134" exported="1" fullname="ml.utils.lowergamma" inherit_type="local" line="83" name="lowerGamma" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="2578">
     <Type>embed</Type>
-    <Signature>REAL8 lowerGamma(REAL8 x, REAL8 y)</Signature><Params>
+    <Signature pre="REAL8" post="(REAL8 x, REAL8 y)" name="LOWERGAMMA">REAL8 lowerGamma(REAL8 x, REAL8 y)</Signature><Params>
      <Param name="x"/>
      <Param name="y"/>
     </Params>
    </Definition>
    <Definition body="3257" end="3772" exported="1" fullname="ml.utils.uppergamma" inherit_type="local" line="120" name="upperGamma" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="3212">
     <Type>embed</Type>
-    <Signature>REAL8 upperGamma(REAL8 x, REAL8 y)</Signature><Params>
+    <Signature pre="REAL8" post="(REAL8 x, REAL8 y)" name="UPPERGAMMA">REAL8 upperGamma(REAL8 x, REAL8 y)</Signature><Params>
      <Param name="x"/>
      <Param name="y"/>
     </Params>
    </Definition>
    <Definition body="3864" end="4600" exported="1" fullname="ml.utils.beta" inherit_type="local" line="157" name="Beta" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="3832">
     <Type>function</Type>
-    <Signature>Beta(REAL8 x, REAL8 y)</Signature><Params>
+    <Signature pre="" post="(REAL8 x, REAL8 y)" name="BETA">Beta(REAL8 x, REAL8 y)</Signature><Params>
      <Param name="x"/>
      <Param name="y"/>
     </Params>
    </Definition>
    <Definition body="4790" end="5500" exported="1" fullname="ml.utils.fat" inherit_type="local" line="184" name="Fat" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="4723">
     <Type>function</Type>
-    <Signature>Fat(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)" name="FAT">Fat(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)</Signature><Params>
      <Param name="d0"/>
      <Param name="v"/>
     </Params>
    </Definition>
    <Definition body="5607" end="6318" exported="1" fullname="ml.utils.fatd" inherit_type="local" line="201" name="FatD" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="5539">
     <Type>function</Type>
-    <Signature>FatD(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)" name="FATD">FatD(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)</Signature><Params>
      <Param name="d0"/>
      <Param name="v"/>
     </Params>
    </Definition>
    <Definition body="6376" end="8169" exported="1" fullname="ml.utils.sparsearfffiletodiscretefield" inherit_type="local" line="217" name="SparseARFFfileToDiscreteField" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="6320">
     <Type>function</Type>
-    <Signature>SparseARFFfileToDiscreteField(STRING fileName)</Signature><Params>
+    <Signature pre="" post="(STRING fileName)" name="SPARSEARFFFILETODISCRETEFIELD">SparseARFFfileToDiscreteField(STRING fileName)</Signature><Params>
      <Param name="fileName"/>
     </Params>
    </Definition>
    <Definition body="8233" end="8688" exported="1" fullname="ml.utils.sparsearfffiletodiscretefieldcounted" inherit_type="local" line="251" name="SparseARFFfileToDiscreteFieldCounted" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="8170">
     <Type>function</Type>
-    <Signature>SparseARFFfileToDiscreteFieldCounted(STRING fileName)</Signature><Params>
+    <Signature pre="" post="(STRING fileName)" name="SPARSEARFFFILETODISCRETEFIELDCOUNTED">SparseARFFfileToDiscreteFieldCounted(STRING fileName)</Signature><Params>
      <Param name="fileName"/>
     </Params>
    </Definition>
    <Definition body="8792" end="9574" exported="1" fullname="ml.utils.gini" inherit_type="local" line="260" name="Gini" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="8757">
     <Type>macro</Type>
-    <Signature>Gini(infile,pivot,target)</Signature><Params>
+    <Signature pre="" post="(infile,pivot,target)" name="GINI">Gini(infile,pivot,target)</Signature><Params>
      <Param name="infile"/>
      <Param name="pivot"/>
      <Param name="target"/>
@@ -104,7 +104,7 @@
    </Definition>
    <Definition body="9860" end="10426" exported="1" fullname="ml.utils.mac_sequenceinfield" inherit_type="local" line="279" name="mac_SequenceInField" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="9803">
     <Type>macro</Type>
-    <Signature>mac_SequenceInField(infile,infield,seq,outfile)</Signature><Params>
+    <Signature pre="" post="(infile,infield,seq,outfile)" name="MAC_SEQUENCEINFIELD">mac_SequenceInField(infile,infield,seq,outfile)</Signature><Params>
      <Param name="infile"/>
      <Param name="infield"/>
      <Param name="seq"/>
@@ -113,7 +113,7 @@
    </Definition>
    <Definition body="10668" end="10859" exported="1" fullname="ml.utils.rebasediscrete" inherit_type="local" line="311" name="RebaseDiscrete" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="10580">
     <Type>function</Type>
-    <Signature>RebaseDiscrete(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)" name="REBASEDISCRETE">RebaseDiscrete(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)</Signature><Params>
      <Param name="cl"/>
      <Param name="new_lowval"/>
     </Params>
@@ -127,30 +127,30 @@
     <Definition body="10946" end="11017" fullname="ml.utils.rebasenumericfield.maprec" inherit_type="local" line="318" name="MapRec" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="10931">
      <Type>record</Type>
      <Field name="old"/>
-     <Signature>MapRec</Signature><Field name="new"/>
+     <Signature pre="" post="" name="MAPREC">MapRec</Signature><Field name="new"/>
     </Definition>
     <Definition body="11132" end="11315" exported="1" fullname="ml.utils.rebasenumericfield.mapping" inherit_type="local" line="324" name="Mapping" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="11081">
      <Type>function</Type>
-     <Signature>Mapping(Types.t_FieldNumber new_lowval=1)</Signature><Params>
+     <Signature pre="" post="(Types.t_FieldNumber new_lowval=1)" name="MAPPING">Mapping(Types.t_FieldNumber new_lowval=1)</Signature><Params>
       <Param name="new_lowval"/>
      </Params>
     </Definition>
     <Definition body="11360" end="11504" exported="1" fullname="ml.utils.rebasenumericfield.tonew" inherit_type="local" line="332" name="ToNew" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="11319">
      <Type>function</Type>
-     <Signature>ToNew(DATASET(MapRec) MapTable)</Signature><Params>
+     <Signature pre="" post="(DATASET(MapRec) MapTable)" name="TONEW">ToNew(DATASET(MapRec) MapTable)</Signature><Params>
       <Param name="MapTable"/>
      </Params>
     </Definition>
     <Definition body="11581" end="11725" exported="1" fullname="ml.utils.rebasenumericfield.toold" inherit_type="local" line="336" name="ToOld" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="11508">
      <Type>function</Type>
-     <Signature>ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</Signature><Params>
+     <Signature pre="" post="(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)" name="TOOLD">ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</Signature><Params>
       <Param name="cl"/>
       <Param name="MapTable"/>
      </Params>
     </Definition>
-    <Signature>RebaseNumericField(DATASET(Types.NumericField) cl)</Signature><Definition body="11818" end="11979" exported="1" fullname="ml.utils.rebasenumericfield.tooldfromelemtopart" inherit_type="local" line="340" name="ToOldFromElemToPart" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="11731">
+    <Signature pre="" post="(DATASET(Types.NumericField) cl)" name="REBASENUMERICFIELD">RebaseNumericField(DATASET(Types.NumericField) cl)</Signature><Definition body="11818" end="11979" exported="1" fullname="ml.utils.rebasenumericfield.tooldfromelemtopart" inherit_type="local" line="340" name="ToOldFromElemToPart" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="11731">
      <Type>function</Type>
-     <Signature>ToOldFromElemToPart(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</Signature><Params>
+     <Signature pre="" post="(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)" name="TOOLDFROMELEMTOPART">ToOldFromElemToPart(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</Signature><Params>
       <Param name="cl"/>
       <Param name="MapTable"/>
      </Params>
@@ -165,23 +165,23 @@
     <Definition body="12076" end="12141" fullname="ml.utils.rebasenumericfieldid.maprec" inherit_type="local" line="347" name="MapRec" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="12061">
      <Type>record</Type>
      <Field name="old"/>
-     <Signature>MapRec</Signature><Field name="new"/>
+     <Signature pre="" post="" name="MAPREC">MapRec</Signature><Field name="new"/>
     </Definition>
     <Definition body="12250" end="12429" exported="1" fullname="ml.utils.rebasenumericfieldid.mappingid" inherit_type="local" line="353" name="MappingID" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="12197">
      <Type>function</Type>
-     <Signature>MappingID(Types.t_FieldNumber new_lowval=1)</Signature><Params>
+     <Signature pre="" post="(Types.t_FieldNumber new_lowval=1)" name="MAPPINGID">MappingID(Types.t_FieldNumber new_lowval=1)</Signature><Params>
       <Param name="new_lowval"/>
      </Params>
     </Definition>
     <Definition body="12476" end="12612" exported="1" fullname="ml.utils.rebasenumericfieldid.tonew" inherit_type="local" line="363" name="ToNew" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="12435">
      <Type>function</Type>
-     <Signature>ToNew(DATASET(MapRec) MapTable)</Signature><Params>
+     <Signature pre="" post="(DATASET(MapRec) MapTable)" name="TONEW">ToNew(DATASET(MapRec) MapTable)</Signature><Params>
       <Param name="MapTable"/>
      </Params>
     </Definition>
-    <Signature>RebaseNumericFieldID(DATASET(Types.NumericField) cl)</Signature><Definition body="12689" end="12825" exported="1" fullname="ml.utils.rebasenumericfieldid.toold" inherit_type="local" line="367" name="ToOld" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="12616">
+    <Signature pre="" post="(DATASET(Types.NumericField) cl)" name="REBASENUMERICFIELDID">RebaseNumericFieldID(DATASET(Types.NumericField) cl)</Signature><Definition body="12689" end="12825" exported="1" fullname="ml.utils.rebasenumericfieldid.toold" inherit_type="local" line="367" name="ToOld" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="12616">
      <Type>function</Type>
-     <Signature>ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</Signature><Params>
+     <Signature pre="" post="(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)" name="TOOLD">ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</Signature><Params>
       <Param name="cl"/>
       <Param name="MapTable"/>
      </Params>
@@ -189,43 +189,43 @@
    </Definition>
    <Definition body="12905" end="12961" exported="1" fullname="ml.utils.notfirst" inherit_type="local" line="374" name="NotFirst" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="12876">
     <Type>function</Type>
-    <Signature>NotFirst(STRING S)</Signature><Params>
+    <Signature pre="" post="(STRING S)" name="NOTFIRST">NotFirst(STRING S)</Signature><Params>
      <Param name="S"/>
     </Params>
    </Definition>
    <Definition body="12990" end="13066" exported="1" fullname="ml.utils.notlast" inherit_type="local" line="375" name="NotLast" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="12962">
     <Type>function</Type>
-    <Signature>NotLast(STRING S)</Signature><Params>
+    <Signature pre="" post="(STRING S)" name="NOTLAST">NotLast(STRING S)</Signature><Params>
      <Param name="S"/>
     </Params>
    </Definition>
    <Definition body="13106" end="13317" exported="1" fullname="ml.utils.notnn" inherit_type="local" line="376" name="NotNN" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="13067">
     <Type>function</Type>
-    <Signature>NotNN(STRING S,UNSIGNED2 NN)</Signature><Params>
+    <Signature pre="" post="(STRING S,UNSIGNED2 NN)" name="NOTNN">NotNN(STRING S,UNSIGNED2 NN)</Signature><Params>
      <Param name="S"/>
      <Param name="NN"/>
     </Params>
    </Definition>
    <Definition body="13344" end="13380" exported="1" fullname="ml.utils.lastn" inherit_type="local" line="379" name="LastN" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="13318">
     <Type>function</Type>
-    <Signature>LastN(STRING S)</Signature><Params>
+    <Signature pre="" post="(STRING S)" name="LASTN">LastN(STRING S)</Signature><Params>
      <Param name="S"/>
     </Params>
    </Definition>
    <Definition body="13549" end="14269" exported="1" fullname="ml.utils.nchoosek" inherit_type="local" line="383" name="NchooseK" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="13504">
     <Type>function</Type>
-    <Signature>NchooseK(UNSIGNED1 N, UNSIGNED1 K)</Signature><Params>
+    <Signature pre="" post="(UNSIGNED1 N, UNSIGNED1 K)" name="NCHOOSEK">NchooseK(UNSIGNED1 N, UNSIGNED1 K)</Signature><Params>
      <Param name="N"/>
      <Param name="K"/>
     </Params>
    </Definition>
    <Definition body="14326" end="14747" exported="1" fullname="ml.utils.togroundtruth" inherit_type="local" line="406" name="ToGroundTruth" source="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" start="14271">
     <Type>function</Type>
-    <Signature>ToGroundTruth(DATASET(Types.NumericField) Y )</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Y )" name="TOGROUNDTRUTH">ToGroundTruth(DATASET(Types.NumericField) Y )</Signature><Params>
      <Param name="Y"/>
     </Params>
    </Definition>
-   <Signature>Utils</Signature><Parents/>
+   <Signature pre="" post="" name="UTILS">Utils</Signature><Parents/>
   </Definition>
   <Import body="0" end="83" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="83" target="pkg.toc.xml">
    <Type>attribute</Type>

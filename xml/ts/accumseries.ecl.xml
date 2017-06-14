@@ -8,16 +8,16 @@
    <Type>record</Type>
    <Field name="period"/>
    <Field name="dependent"/>
-   <Signature>ModelObs</Signature><Field name="model_id"/>
+   <Signature pre="" post="" name="MODELOBS">ModelObs</Signature><Field name="model_id"/>
   </Definition>
   <Definition body="114" end="132" fullname="ts.spec" inherit_type="local" line="4" name="Spec" source="/media/sarthak/Data/ecl-ml/TS/AccumSeries.ecl" start="107">
    <Type>record</Type>
    <Field name="model_id"/>
-   <Signature>Spec</Signature><Field name="degree"/>
+   <Signature pre="" post="" name="SPEC">Spec</Signature><Field name="degree"/>
   </Definition>
   <Definition body="246" end="1368" exported="1" fullname="ts.accumseries" inherit_type="local" line="5" name="AccumSeries" source="/media/sarthak/Data/ecl-ml/TS/AccumSeries.ecl" start="133">
    <Type>function</Type>
-   <Signature>AccumSeries(DATASET(Types.ModelObs) obs,
+   <Signature pre="" post="(DATASET(Types.ModelObs) obs,&#10;                        DATASET(Types.Ident_Spec) degree_spec)" name="ACCUMSERIES">AccumSeries(DATASET(Types.ModelObs) obs,
                         DATASET(Types.Ident_Spec) degree_spec)</Signature><Params>
     <Param name="obs"/>
     <Param name="degree_spec"/>

@@ -20,7 +20,7 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_PART">Layout_Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="221" end="242" fullname="pbblas.layout_target" inherit_type="local" line="7" name="Layout_Target" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="205">
    <Type>record</Type>
@@ -37,26 +37,26 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Target</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_TARGET">Layout_Target</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="253" end="268" fullname="pbblas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="243">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="279" end="295" fullname="pbblas.matrix_t" inherit_type="local" line="9" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="269">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="310" end="329" fullname="pbblas.dimension_t" inherit_type="local" line="10" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="296">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="339" end="365" fullname="pbblas.emptyc" inherit_type="local" line="11" name="emptyC" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="330">
-   <Signature>emptyC</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="EMPTYC">emptyC</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="390" end="394" fullname="pbblas.empty_matrix" inherit_type="local" line="12" name="empty_matrix" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="366">
-   <Signature>matrix_t empty_matrix</Signature><Type>attribute</Type>
+   <Signature pre="matrix_t" post="" name="EMPTY_MATRIX">matrix_t empty_matrix</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="570" end="1210" fullname="pbblas.dtran" inherit_type="local" line="15" name="dtran" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="439">
    <Type>embed</Type>
-   <Signature>matrix_t dtran(dimension_t m, dimension_t n,
+   <Signature pre="matrix_t" post="(dimension_t m, dimension_t n,&#10;               value_t alpha, matrix_t A,&#10;               value_t beta,  matrix_t C)" name="DTRAN">matrix_t dtran(dimension_t m, dimension_t n,
                value_t alpha, matrix_t A,
                value_t beta,  matrix_t C)</Signature><Params>
     <Param name="m"/>
@@ -69,7 +69,7 @@
   </Definition>
   <Definition body="1388" end="3479" exported="1" fullname="pbblas.pb_dtran" inherit_type="local" line="40" name="PB_dtran" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" start="1212">
    <Type>function</Type>
-   <Signature>PB_dtran(IMatrix_Map map_a, IMatrix_Map map_c,
+   <Signature pre="" post="(IMatrix_Map map_a, IMatrix_Map map_c,&#10;                value_t alpha, DATASET(Layout_Part) A,&#10;                value_t beta=0.0, DATASET(Layout_Part) C=emptyC)" name="PB_DTRAN">PB_dtran(IMatrix_Map map_a, IMatrix_Map map_c,
                 value_t alpha, DATASET(Layout_Part) A,
                 value_t beta=0.0, DATASET(Layout_Part) C=emptyC)</Signature><Params>
     <Param name="map_a"/>

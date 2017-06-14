@@ -26,25 +26,25 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="226" end="241" fullname="pbblas.value_t" inherit_type="local" line="9" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="216">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="250" end="271" fullname="pbblas.ifunc" inherit_type="local" line="10" name="IFunc" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="242">
    <Type>function</Type>
-   <Signature>IFunc</Signature><Params>
+   <Signature pre="" post="" name="IFUNC">IFunc</Signature><Params>
     <Param name="v"/>
     <Param name="r"/>
     <Param name="c"/>
    </Params>
   </Definition>
   <Definition body="280" end="306" fullname="pbblas.dim_t" inherit_type="local" line="11" name="dim_t" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="272">
-   <Signature>dim_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIM_T">dim_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="397" end="893" exported="1" fullname="pbblas.apply2elements" inherit_type="local" line="13" name="Apply2Elements" source="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" start="308">
    <Type>function</Type>
-   <Signature>DATASET(Part)
+   <Signature pre="DATASET(Part)" post="(IMatrix_Map x_map, DATASET(Part) X, IFunc f)" name="APPLY2ELEMENTS">DATASET(Part)
       Apply2Elements(IMatrix_Map x_map, DATASET(Part) X, IFunc f)</Signature><Params>
     <Param name="x_map"/>
     <Param name="X"/>

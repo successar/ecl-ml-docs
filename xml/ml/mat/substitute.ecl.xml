@@ -3,7 +3,7 @@
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.Substitute" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" target="substitute.ecl.xml">
   <Definition body="127" end="700" exported="1" fullname="ml.mat.substitute" inherit_type="local" line="4" name="Substitute" source="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" start="56">
    <Type>function</Type>
-   <Signature>Substitute(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) l,DATASET(Types.Element) r)" name="SUBSTITUTE">Substitute(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
     <Param name="l"/>
     <Param name="r"/>
    </Params>

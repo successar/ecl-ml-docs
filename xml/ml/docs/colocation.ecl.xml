@@ -5,24 +5,24 @@
    <Type>module</Type>
    <Definition body="111" end="155" exported="1" fullname="ml.docs.colocation.words" inherit_type="local" line="5" name="Words" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="70">
     <Type>function</Type>
-    <Signature>Words(DATASET(Docs.Types.Raw) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(Docs.Types.Raw) d)" name="WORDS">Words(DATASET(Docs.Types.Raw) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="213" end="242" exported="1" fullname="ml.docs.colocation.lexicon" inherit_type="local" line="6" name="Lexicon" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="158">
     <Type>function</Type>
-    <Signature>Lexicon(DATASET(Docs.Types.WordElement) Words)</Signature><Params>
+    <Signature pre="" post="(DATASET(Docs.Types.WordElement) Words)" name="LEXICON">Lexicon(DATASET(Docs.Types.WordElement) Words)</Signature><Params>
      <Param name="Words"/>
     </Params>
    </Definition>
    <Definition body="270" end="319" exported="1" fullname="ml.docs.colocation.allngramslayout" inherit_type="local" line="8" name="AllNGramsLayout" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="246">
     <Type>record</Type>
     <Field name="id"/>
-    <Signature>AllNGramsLayout</Signature><Field name="ngram"/>
+    <Signature pre="" post="" name="ALLNGRAMSLAYOUT">AllNGramsLayout</Signature><Field name="ngram"/>
    </Definition>
    <Definition body="1064" end="2193" exported="1" fullname="ml.docs.colocation.allngrams" inherit_type="local" line="19" name="AllNGrams" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="897">
     <Type>function</Type>
-    <Signature>AllNGramsLayout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)</Signature><Params>
+    <Signature pre="" post="Layout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)" name="ALLNGRAMS">AllNGramsLayout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)</Signature><Params>
      <Param name="Words"/>
      <Param name="Lexicon"/>
      <Param name="n"/>
@@ -30,7 +30,7 @@
    </Definition>
    <Definition body="2737" end="4530" exported="1" fullname="ml.docs.colocation.mutualinfo" inherit_type="local" line="47" name="MutualInfo" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="2624">
     <Type>function</Type>
-    <Signature>MutualInfo(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)</Signature><Params>
+    <Signature pre="" post="(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)" name="MUTUALINFO">MutualInfo(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)</Signature><Params>
      <Param name="dIn"/>
      <Param name="dOut"/>
      <Param name="minf"/>
@@ -39,14 +39,14 @@
    </Definition>
    <Definition body="4930" end="5186" exported="1" fullname="ml.docs.colocation.support" inherit_type="local" line="103" name="Support" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="4844">
     <Type>function</Type>
-    <Signature>Docs.Types.t_value Support(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)</Signature><Params>
+    <Signature pre="Docs.Types.t_value" post="(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)" name="SUPPORT">Docs.Types.t_value Support(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)</Signature><Params>
      <Param name="ssNGrams"/>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="5568" end="5694" exported="1" fullname="ml.docs.colocation.confidence" inherit_type="local" line="113" name="Confidence" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="5464">
     <Type>function</Type>
-    <Signature>Docs.Types.t_value Confidence(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</Signature><Params>
+    <Signature pre="Docs.Types.t_value" post="(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)" name="CONFIDENCE">Docs.Types.t_value Confidence(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</Signature><Params>
      <Param name="ss01"/>
      <Param name="ss02"/>
      <Param name="d"/>
@@ -54,7 +54,7 @@
    </Definition>
    <Definition body="6074" end="6246" exported="1" fullname="ml.docs.colocation.lift" inherit_type="local" line="123" name="Lift" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="5976">
     <Type>function</Type>
-    <Signature>Docs.Types.t_value Lift(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</Signature><Params>
+    <Signature pre="Docs.Types.t_value" post="(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)" name="LIFT">Docs.Types.t_value Lift(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</Signature><Params>
      <Param name="ss01"/>
      <Param name="ss02"/>
      <Param name="d"/>
@@ -62,7 +62,7 @@
    </Definition>
    <Definition body="6633" end="6766" exported="1" fullname="ml.docs.colocation.conviction" inherit_type="local" line="134" name="Conviction" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="6529">
     <Type>function</Type>
-    <Signature>Docs.Types.t_value Conviction(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</Signature><Params>
+    <Signature pre="Docs.Types.t_value" post="(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)" name="CONVICTION">Docs.Types.t_value Conviction(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</Signature><Params>
      <Param name="ss01"/>
      <Param name="ss02"/>
      <Param name="d"/>
@@ -73,17 +73,17 @@
     <Field name="ngram"/>
     <Field name="doccount"/>
     <Field name="pct"/>
-    <Signature>NGramsLayout</Signature><Field name="idf"/>
+    <Signature pre="" post="" name="NGRAMSLAYOUT">NGramsLayout</Signature><Field name="idf"/>
    </Definition>
    <Definition body="7175" end="7502" exported="1" fullname="ml.docs.colocation.ngrams" inherit_type="local" line="145" name="NGrams" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="7117">
     <Type>function</Type>
-    <Signature>NGramsLayout NGrams(DATASET(AllNGramsLayout) d01)</Signature><Params>
+    <Signature pre="" post="Layout NGrams(DATASET(AllNGramsLayout) d01)" name="NGRAMS">NGramsLayout NGrams(DATASET(AllNGramsLayout) d01)</Signature><Params>
      <Param name="d01"/>
     </Params>
    </Definition>
    <Definition body="7809" end="8335" exported="1" fullname="ml.docs.colocation.subgrams" inherit_type="local" line="155" name="SubGrams" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="7767">
     <Type>function</Type>
-    <Signature>SubGrams(DATASET(NGramsLayout) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(NGramsLayout) d)" name="SUBGRAMS">SubGrams(DATASET(NGramsLayout) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
@@ -93,28 +93,28 @@
     <Field name="doccount"/>
     <Field name="pct"/>
     <Field name="idf"/>
-    <Signature>SubGramsLayout</Signature><Field name="components"/>
+    <Signature pre="" post="" name="SUBGRAMSLAYOUT">SubGramsLayout</Signature><Field name="components"/>
    </Definition>
    <Definition body="8658" end="9024" exported="1" fullname="ml.docs.colocation.pmi" inherit_type="local" line="172" name="PMI" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="8619">
     <Type>function</Type>
-    <Signature>PMI(DATASET(SubGramsLayout) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(SubGramsLayout) d)" name="PMI">PMI(DATASET(SubGramsLayout) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="9309" end="10096" exported="1" fullname="ml.docs.colocation.splitcompare" inherit_type="local" line="188" name="SplitCompare" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="9263">
     <Type>function</Type>
-    <Signature>SplitCompare(DATASET(NGramsLayout) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(NGramsLayout) d)" name="SPLITCOMPARE">SplitCompare(DATASET(NGramsLayout) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="10467" end="10912" exported="1" fullname="ml.docs.colocation.showphrase" inherit_type="local" line="205" name="ShowPhrase" source="/media/sarthak/Data/ecl-ml/ML/Docs/CoLocation.ecl" start="10388">
     <Type>function</Type>
-    <Signature>STRING ShowPhrase(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)</Signature><Params>
+    <Signature pre="STRING" post="(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)" name="SHOWPHRASE">STRING ShowPhrase(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)</Signature><Params>
      <Param name="Lexicon"/>
      <Param name="s"/>
     </Params>
    </Definition>
-   <Signature>CoLocation</Signature><Parents/>
+   <Signature pre="" post="" name="COLOCATION">CoLocation</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML.Docs" inherit_type="local" line="1" name="Docs" ref="ml.docs" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

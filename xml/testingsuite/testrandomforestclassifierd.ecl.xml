@@ -27,19 +27,19 @@
   </Import>
   <Definition body="252" end="327" fullname="testingsuite.qualifiedname" inherit_type="local" line="10" name="QualifiedName" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="216">
    <Type>macro</Type>
-   <Signature>QualifiedName(prefix, datasetname)</Signature><Params>
+   <Signature pre="" post="(prefix, datasetname)" name="QUALIFIEDNAME">QualifiedName(prefix, datasetname)</Signature><Params>
     <Param name="prefix"/>
     <Param name="datasetname"/>
    </Params>
   </Definition>
   <Definition body="374" end="566" fullname="testingsuite.classificationdatasetnamesd" inherit_type="local" line="15" name="classificationDatasetNamesD" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="330">
-   <Signature>SET OF STRING classificationDatasetNamesD</Signature><Type>attribute</Type>
+   <Signature pre="SET OF STRING" post="" name="CLASSIFICATIONDATASETNAMESD">SET OF STRING classificationDatasetNamesD</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="645" end="681" fullname="testingsuite.c_no_of_elements" inherit_type="local" line="21" name="c_no_of_elements" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="618">
-   <Signature>INTEGER c_no_of_elements</Signature><Type>attribute</Type>
+   <Signature pre="INTEGER" post="" name="C_NO_OF_ELEMENTS">INTEGER c_no_of_elements</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="696" end="857" fullname="testingsuite.rf_results" inherit_type="local" line="23" name="rf_results" source="/media/sarthak/Data/ecl-ml/TestingSuite/TestRandomForestClassifierD.ecl" start="683">
-   <Signature>rf_results</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RF_RESULTS">rf_results</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../ml/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/Types.ecl" name="TestingSuite.Utils.Types" target="utils/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode.ecl" name="TestingSuite.Utils.GenerateCode" target="utils/generatecode.ecl.xml"/></Meta>

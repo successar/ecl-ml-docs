@@ -10,12 +10,12 @@
     <Field name="features_2"/>
     <Field name="features_3"/>
     <Field name="features_4"/>
-    <Signature>ionek_f_four_c_fourRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="IONEK_F_FOUR_C_FOURRECORD">ionek_f_four_c_fourRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="350" end="78593" exported="1" fullname="testingsuite.clustering.datasets.ionek_f_four_c_fourds.content" inherit_type="local" line="11" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_four_c_fourDS.ecl" start="333">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>ionek_f_four_c_fourDS</Signature><Parents/>
+   <Signature pre="" post="" name="IONEK_F_FOUR_C_FOURDS">ionek_f_four_c_fourDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

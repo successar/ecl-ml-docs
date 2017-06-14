@@ -5,10 +5,10 @@
    <Type>macro</Type>
    <Documentation> <content>Extract the univariate time series. The data is required to be in time order, and the time perioods are reqiured to be regular. Missing values are not supported. The user must prepare the file such that these assumptions are met.</content>
     <return>a Univariate time series dataset</return>
-    <param>dsIn the input time series source data set</param>
-    <param>fieldName the input field name</param>
+    <param><name>dsIn</name><desc>the input time series source data set</desc></param>
+    <param><name>fieldName</name><desc>the input field name</desc></param>
    </Documentation>
-   <Signature>extract_ts(dsIn, fieldName)</Signature><Params>
+   <Signature pre="" post="(dsIn, fieldName)" name="EXTRACT_TS">extract_ts(dsIn, fieldName)</Signature><Params>
     <Param name="dsIn"/>
     <Param name="fieldName"/>
    </Params>

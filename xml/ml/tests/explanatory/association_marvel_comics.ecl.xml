@@ -14,85 +14,85 @@
    <Type>record</Type>
    <Field name="filler"/>
    <Field name="recordid"/>
-   <Signature>layout_vertices</Signature><Field name="values"/>
+   <Signature pre="" post="" name="LAYOUT_VERTICES">layout_vertices</Signature><Field name="values"/>
   </Definition>
   <Definition body="1009" end="1024" fullname="ml.tests.explanatory.dropzone_ip" inherit_type="local" line="25" name="DropZone_IP" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="992">
-   <Signature>DropZone_IP</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DROPZONE_IP">DropZone_IP</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1066" end="1098" fullname="ml.tests.explanatory.folder_location" inherit_type="local" line="26" name="Folder_Location" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="1047">
-   <Signature>Folder_Location</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="FOLDER_LOCATION">Folder_Location</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1151" end="1172" fullname="ml.tests.explanatory.marvel_inputfile" inherit_type="local" line="27" name="Marvel_Inputfile" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="1132">
-   <Signature>Marvel_Inputfile</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MARVEL_INPUTFILE">Marvel_Inputfile</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1282" end="1429" fullname="ml.tests.explanatory.raw_inputfile" inherit_type="local" line="30" name="raw_inputfile" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="1262">
-   <Signature>raw_inputfile</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RAW_INPUTFILE">raw_inputfile</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1456" end="1723" fullname="ml.tests.explanatory.character_vertex" inherit_type="local" line="32" name="character_vertex" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="1434">
-   <Signature>character_vertex</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="CHARACTER_VERTEX">character_vertex</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1750" end="2024" fullname="ml.tests.explanatory.comicbook_vertex" inherit_type="local" line="38" name="comicbook_vertex" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="1728">
-   <Signature>comicbook_vertex</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="COMICBOOK_VERTEX">comicbook_vertex</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2051" end="2436" fullname="ml.tests.explanatory.raw_inputfilechar" inherit_type="local" line="44" name="raw_inputfilechar" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="2029">
-   <Signature>raw_inputfilechar</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RAW_INPUTFILECHAR">raw_inputfilechar</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2490" end="2736" fullname="ml.tests.explanatory.raw_inputfilecomic" inherit_type="local" line="51" name="raw_inputfilecomic" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="2468">
-   <Signature>raw_inputfilecomic</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RAW_INPUTFILECOMIC">raw_inputfilecomic</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2791" end="3017" fullname="ml.tests.explanatory.characterspercomicbk" inherit_type="local" line="57" name="characterspercomicbk" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="2768">
-   <Signature>characterspercomicbk</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="CHARACTERSPERCOMICBK">characterspercomicbk</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3083" end="3323" fullname="ml.tests.explanatory.inputfile" inherit_type="local" line="63" name="inputfile" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="3065">
-   <Signature>inputfile</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INPUTFILE">inputfile</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3712" end="3782" fullname="ml.tests.explanatory.transformfile" inherit_type="local" line="74" name="TransformFile" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="3695">
-   <Signature>TransformFile</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRANSFORMFILE">TransformFile</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3799" end="3839" fullname="ml.tests.explanatory.enumerate" inherit_type="local" line="75" name="Enumerate" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="3783">
-   <Signature>Enumerate</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="ENUMERATE">Enumerate</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3856" end="3888" fullname="ml.tests.explanatory.splitfields" inherit_type="local" line="76" name="SplitFields" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="3840">
-   <Signature>SplitFields</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SPLITFIELDS">SplitFields</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3903" end="3939" fullname="ml.tests.explanatory.lexicon" inherit_type="local" line="77" name="Lexicon" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="3889">
-   <Signature>Lexicon</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LEXICON">Lexicon</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="3958" end="3998" fullname="ml.tests.explanatory.tokenizefields" inherit_type="local" line="78" name="TokenizeFields" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="3940">
-   <Signature>TokenizeFields</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TOKENIZEFIELDS">TokenizeFields</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="4013" end="4049" fullname="ml.tests.explanatory.wordbag" inherit_type="local" line="79" name="WordBag" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="3999">
-   <Signature>WordBag</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="WORDBAG">WordBag</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="4065" end="4203" fullname="ml.tests.explanatory.forassoc" inherit_type="local" line="81" name="ForAssoc" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="4051">
-   <Signature>ForAssoc</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="FORASSOC">ForAssoc</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="4247" end="4282" fullname="ml.tests.explanatory.associationsapriori3" inherit_type="local" line="85" name="AssociationsApriori3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="4223">
-   <Signature>AssociationsApriori3</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="ASSOCIATIONSAPRIORI3">AssociationsApriori3</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="4305" end="4341" fullname="ml.tests.explanatory.associationseclat" inherit_type="local" line="86" name="AssociationsEclat" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="4283">
-   <Signature>AssociationsEclat</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="ASSOCIATIONSECLAT">AssociationsEclat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="4363" end="4944" fullname="ml.tests.explanatory.return_ml_results" inherit_type="local" line="88" name="Return_ML_Results" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="4343">
-   <Signature>Return_ML_Results</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RETURN_ML_RESULTS">Return_ML_Results</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="5367" end="6792" fullname="ml.tests.explanatory.fnfindcaptainamerica" inherit_type="local" line="106" name="fnFindCaptainAmerica" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="5290">
    <Type>function</Type>
-   <Signature>fnFindCaptainAmerica(dataset(recordof(AssociationsApriori3)) Associations)</Signature><Params>
+   <Signature pre="" post="(dataset(recordof(AssociationsApriori3)) Associations)" name="FNFINDCAPTAINAMERICA">fnFindCaptainAmerica(dataset(recordof(AssociationsApriori3)) Associations)</Signature><Params>
     <Param name="Associations"/>
    </Params>
   </Definition>
   <Definition body="6816" end="7326" fullname="ml.tests.explanatory.trassociationseclat" inherit_type="local" line="134" name="TrAssociationsEclat" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="6794">
-   <Signature>TrAssociationsEclat</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRASSOCIATIONSECLAT">TrAssociationsEclat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="7354" end="7398" fullname="ml.tests.explanatory.ca_associationsapriori3" inherit_type="local" line="141" name="CA_AssociationsApriori3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="7328">
-   <Signature>CA_AssociationsApriori3</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="CA_ASSOCIATIONSAPRIORI3">CA_AssociationsApriori3</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="7422" end="7465" fullname="ml.tests.explanatory.ca_associationseclat" inherit_type="local" line="142" name="CA_AssociationsEclat" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="7399">
-   <Signature>CA_AssociationsEclat</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="CA_ASSOCIATIONSECLAT">CA_AssociationsEclat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="7492" end="7798" fullname="ml.tests.explanatory.return_captain_america" inherit_type="local" line="144" name="Return_Captain_America" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/Association_Marvel_Comics.ecl" start="7467">
-   <Signature>Return_Captain_America</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RETURN_CAPTAIN_AMERICA">Return_Captain_America</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="../../docs/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" name="ML.Docs.Tokenize" target="../../docs/tokenize.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" name="ML.Docs.Trans" target="../../docs/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Associate.ecl" name="ML.Associate" target="../../associate.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/></Meta>

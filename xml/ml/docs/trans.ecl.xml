@@ -8,14 +8,14 @@
    </Params>
    <Parents/>
    <Definition body="430" end="773" exported="1" fullname="ml.docs.trans.wordbag" inherit_type="local" line="10" name="WordBag" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="413">
-    <Signature>WordBag</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="WORDBAG">WordBag</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="798" end="1163" exported="1" fullname="ml.docs.trans.wordscounted" inherit_type="local" line="24" name="WordsCounted" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="776">
-    <Signature>WordsCounted</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="WORDSCOUNTED">WordsCounted</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Trans(DATASET(Types.OWordElement) j)</Signature><Definition body="1598" end="2302" exported="1" fullname="ml.docs.trans.tfidf" inherit_type="local" line="43" name="TfIdf" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="1534">
+   <Signature pre="" post="(DATASET(Types.OWordElement) j)" name="TRANS">Trans(DATASET(Types.OWordElement) j)</Signature><Definition body="1598" end="2302" exported="1" fullname="ml.docs.trans.tfidf" inherit_type="local" line="43" name="TfIdf" source="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" start="1534">
     <Type>function</Type>
-    <Signature>TfIdf(REAL nLowThreshold=.05,UNSIGNED iLowDocCount=200)</Signature><Params>
+    <Signature pre="" post="(REAL nLowThreshold=.05,UNSIGNED iLowDocCount=200)" name="TFIDF">TfIdf(REAL nLowThreshold=.05,UNSIGNED iLowDocCount=200)</Signature><Params>
      <Param name="nLowThreshold"/>
      <Param name="iLowDocCount"/>
     </Params>

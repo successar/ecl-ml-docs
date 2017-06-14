@@ -1,1128 +1,2085 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Tests.Explanatory.SparseAutoencoder_test</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../../pbblas/pkg.toc.html">
-				pbblas
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Layout_Cell
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="assocrandom.ecl.html">assocrandom.ecl</a>
+				</li>
+				
+				<li>
+					<a href="monkds.ecl.html">monkds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_mnist_error.ecl.html">sparseautoencoder_mnist_error.ecl</a>
+				</li>
+				
+				<li>
+					<a href="association_marvel_comics.ecl.html">association_marvel_comics.ecl</a>
+				</li>
+				
+				<li>
+					<a href="10crossvalidation.ecl.html">10crossvalidation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify2.ecl.html">classify2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworksclassifier_test.ecl.html">neuralnetworksclassifier_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="samplingds.ecl.html">samplingds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="knn_kdtree.ecl.html">knn_kdtree.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregate.ecl.html">fieldaggregate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="association.ecl.html">association.ecl</a>
+				</li>
+				
+				<li>
+					<a href="logisticregressionstatistics.ecl.html">logisticregressionstatistics.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworksclassifier_cancerdata_test.ecl.html">neuralnetworksclassifier_cancerdata_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks_test.ecl.html">neuralnetworks_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="irisds.ecl.html">irisds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="decisiontree.ecl.html">decisiontree.ecl</a>
+				</li>
+				
+				<li>
+					<a href="adultds.ecl.html">adultds.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution3.ecl.html">distribution3.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_testofregressionols_lubothdenseandsparse.ecl.html">bwr_testofregressionols_lubothdenseandsparse.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepregressionexample.ecl.html">stepregressionexample.ecl</a>
+				</li>
+				
+				<li>
+					<a href="foldtest.ecl.html">foldtest.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_mnist_test_detailed.ecl.html">sparseautoencoder_mnist_test_detailed.ecl</a>
+				</li>
+				
+				<li>
+					<a href="linearregressionstatistics.ecl.html">linearregressionstatistics.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regressionpoly.ecl.html">regressionpoly.ecl</a>
+				</li>
+				
+				<li>
+					<a href="binaryc45vertical.ecl.html">binaryc45vertical.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretefield.ecl.html">discretefield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_classifytext.ecl.html">bwr_classifytext.ecl</a>
+				</li>
+				
+				<li>
+					<a href="softmax_mnistdataset.ecl.html">softmax_mnistdataset.ecl</a>
+				</li>
+				
+				<li>
+					<a href="naive_bayes.ecl.html">naive_bayes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="binaryc45iris.ecl.html">binaryc45iris.ecl</a>
+				</li>
+				
+				<li>
+					<a href="doc.ecl.html">doc.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
+				
+				<li>
+					<a href="codingdatamodel.ecl.html">codingdatamodel.ecl</a>
+				</li>
+				
+				<li>
+					<a href="softmax_cancerdataset.ecl.html">softmax_cancerdataset.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworksclassifier_mnist_test.ecl.html">neuralnetworksclassifier_mnist_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stacked_sparseautoencoder_mnist_test.ecl.html">stacked_sparseautoencoder_mnist_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randomforest.ecl.html">randomforest.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_agglo.ecl.html">bwr_agglo.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify_logistic.ecl.html">classify_logistic.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randomforestcontinuous.ecl.html">randomforestcontinuous.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize2.ecl.html">discretize2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="numericfield.ecl.html">numericfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparsenaivebayes.ecl.html">sparsenaivebayes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_test.ecl.html">sparseautoencoder_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression2.ecl.html">regression2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="samplingtest.ecl.html">samplingtest.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stacked_sparseautoencoder_test.ecl.html">stacked_sparseautoencoder_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression.ecl.html">regression.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_mnist_test.ecl.html">sparseautoencoder_mnist_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution2.ecl.html">distribution2.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sparseautoencoder_cancerdataset_test.ecl.html">sparseautoencoder_cancerdataset_test.ecl</a>
+				</li>
+				
+				<li>
+					<a href="qr_decomposition.ecl.html">qr_decomposition.ecl</a>
+				</li>
+				
+				<li>
+					<a href="softmax.ecl.html">softmax.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic.ecl.html">stepwiselogistic.ecl</a>
+				</li>
+				
+				<li>
+					<a href="kdtrees.ecl.html">kdtrees.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : INTEGER4 hl
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : INTEGER4 f
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : value_record
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : input_data
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : REAL8 sparsityParam
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : REAL8 BETA
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : REAL8 ALPHA
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : REAL8 LAMBDA
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UNSIGNED2 MaxIter
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UNSIGNED4 prows
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UNSIGNED4 pcols
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UNSIGNED4 Maxrows
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : UNSIGNED4 Maxcols
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : IntW
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Intb
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : SA
-			<ul>
-				
-		<li>
-			MODULE : SA(DATASET(Types.NumericField) X, DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : d
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : m
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : m_1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : sparsityParam_
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : sparsityParam_1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : sizeRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : havemaxrow
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : havemaxcol
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : havemaxrowcol
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dstats
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : d_n
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : d_m
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : output_num
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : sizeTable
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Mod
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LearnC (DATASET(Types.NumericField) Indep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Model(DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ExtractWeights (DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ExtractBias (DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ExtractW1 (DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ExtractW2 (DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Extractb1 (DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Extractb2 (DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : LearntModel
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : MatrixModel
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Out
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Extractedweights
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ExtractedBias
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //------------------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : //--------------------------------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
-// more axis fields containing numeric values, and expands it into the 
-// NumericField format used by ML.
-//
-//   dIn       : The name of the input dataset
-//   dOut      : The name of the resulting dataset
-//   idfield   : [OPTIONAL] The name of the field that contains the UID for
-//               each row.  If omitted, it is assumed to be the first field.
-//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
-//               fields to be treated as axes.  If omitted, all numeric
-//               fields that are not the UID will be treated as axes.
-//               NOTE: idfield defaults to the first field in the table, so
-//               if that field is specified as an axis field, then the user
-//               should be sure to specify a value in the idfield param.
-//
-//  Along with creating the NumericField table, this macro produces two
-//  simple functions to assist the user in mapping the field names to their
-//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
-//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
-//  name is the name passed into that parameter of the macro.
-//
-//  The macro also produces a mapping table named "dOut_Map", again where
-//  "dOut" refers to the parameter, that contains a table of the field
-//  mappings
-//  
-//  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
-//---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
-  // Variable to contain the name of the field that maps to "id"
-  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
-  // Contains a comma-delimited list of the fields that will be used as axes,
-  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
-  // during normalization
-  #DECLARE(normlist) #SET(normlist,'COUNTER')
-  // Count of the fields that become axes
-  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
-  // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : //--------------
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Layout_Cell
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : INTEGER4 hl
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : INTEGER4 f
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : value_record
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : input_data
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : REAL8 sparsityParam
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : REAL8 BETA
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : REAL8 ALPHA
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : REAL8 LAMBDA
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UNSIGNED2 MaxIter
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UNSIGNED4 prows
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UNSIGNED4 pcols
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UNSIGNED4 Maxrows
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : UNSIGNED4 Maxcols
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : IntW
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Intb
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : SA
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	MODULE : SA(DATASET(Types.NumericField) X, DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : d
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : m
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : m_1
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : sparsityParam_
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : sparsityParam_1
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : sizeRec
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : havemaxrow
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : havemaxcol
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : havemaxrowcol
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dstats
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : d_n
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : d_m
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : output_num
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : sizeTable
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Mod
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : LearnC (DATASET(Types.NumericField) Indep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SAOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ExtractWeights (DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ExtractBias (DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ExtractW1 (DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ExtractW2 (DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Extractb1 (DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Extractb2 (DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../../deeplearning.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : LearntModel
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : MatrixModel
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Out
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Extractedweights
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ExtractedBias
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //------------------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : //--------------------------------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : /---------------------------------------------------------------------------
-// Macro takes a matrix dataset, with each row contianing an ID and one or
-// more axis fields containing numeric values, and expands it into the 
-// NumericField format used by ML.
-//
-//   dIn       : The name of the input dataset
-//   dOut      : The name of the resulting dataset
-//   idfield   : [OPTIONAL] The name of the field that contains the UID for
-//               each row.  If omitted, it is assumed to be the first field.
-//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the
-//               fields to be treated as axes.  If omitted, all numeric
-//               fields that are not the UID will be treated as axes.
-//               NOTE: idfield defaults to the first field in the table, so
-//               if that field is specified as an axis field, then the user
-//               should be sure to specify a value in the idfield param.
-//
-//  Along with creating the NumericField table, this macro produces two
-//  simple functions to assist the user in mapping the field names to their
-//  corresponding numbers.  These are "STRING dOut_ToName(UNSIGNED)" and
-//  "UNSIGNED dOut_ToNumber(STRING)", where the "dOut" portion of the function
-//  name is the name passed into that parameter of the macro.
-//
-//  The macro also produces a mapping table named "dOut_Map", again where
-//  "dOut" refers to the parameter, that contains a table of the field
-//  mappings
-//  
-//  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
-//---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('<xml/>')
-  // Variable to contain the name of the field that maps to "id"
-  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
-  // Contains a comma-delimited list of the fields that will be used as axes,
-  // beginning with "COUNTER" so it can be #EXPANDED into a CHOOSE call
-  // during normalization
-  #DECLARE(normlist) #SET(normlist,'COUNTER')
-  // Count of the fields that become axes
-  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)
-  // A list of every field in the original table and the field number (or "ID")
-  // to which it is mapped in the output.  "
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : //--------------
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Tests.Explanatory.SparseAutoencoder_test</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="../../types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="../../../pbblas/pkg.toc.html">
+								pbblas
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-tests-explanatory-layout_cell">
+							<a href="#ml-tests-explanatory-layout_cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAYOUT_CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-layout_cell">Desc</a>
+							<ul id="ml-tests-explanatory-layout_cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-hl">
+							<a href="#ml-tests-explanatory-hl" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">INTEGER4</span>
+								<span class="sign-name">HL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-hl">Desc</a>
+							<ul id="ml-tests-explanatory-hl" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-f">
+							<a href="#ml-tests-explanatory-f" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">INTEGER4</span>
+								<span class="sign-name">F</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-f">Desc</a>
+							<ul id="ml-tests-explanatory-f" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-value_record">
+							<a href="#ml-tests-explanatory-value_record" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VALUE_RECORD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-value_record">Desc</a>
+							<ul id="ml-tests-explanatory-value_record" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-input_data">
+							<a href="#ml-tests-explanatory-input_data" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INPUT_DATA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-input_data">Desc</a>
+							<ul id="ml-tests-explanatory-input_data" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-sparsityparam">
+							<a href="#ml-tests-explanatory-sparsityparam" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">SPARSITYPARAM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-sparsityparam">Desc</a>
+							<ul id="ml-tests-explanatory-sparsityparam" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-beta">
+							<a href="#ml-tests-explanatory-beta" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">BETA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-beta">Desc</a>
+							<ul id="ml-tests-explanatory-beta" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-alpha">
+							<a href="#ml-tests-explanatory-alpha" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">ALPHA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-alpha">Desc</a>
+							<ul id="ml-tests-explanatory-alpha" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-lambda">
+							<a href="#ml-tests-explanatory-lambda" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">LAMBDA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-lambda">Desc</a>
+							<ul id="ml-tests-explanatory-lambda" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-maxiter">
+							<a href="#ml-tests-explanatory-maxiter" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">UNSIGNED2</span>
+								<span class="sign-name">MAXITER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-maxiter">Desc</a>
+							<ul id="ml-tests-explanatory-maxiter" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-prows">
+							<a href="#ml-tests-explanatory-prows" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">UNSIGNED4</span>
+								<span class="sign-name">PROWS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-prows">Desc</a>
+							<ul id="ml-tests-explanatory-prows" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-pcols">
+							<a href="#ml-tests-explanatory-pcols" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">UNSIGNED4</span>
+								<span class="sign-name">PCOLS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-pcols">Desc</a>
+							<ul id="ml-tests-explanatory-pcols" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-maxrows">
+							<a href="#ml-tests-explanatory-maxrows" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">UNSIGNED4</span>
+								<span class="sign-name">MAXROWS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-maxrows">Desc</a>
+							<ul id="ml-tests-explanatory-maxrows" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-maxcols">
+							<a href="#ml-tests-explanatory-maxcols" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">UNSIGNED4</span>
+								<span class="sign-name">MAXCOLS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-maxcols">Desc</a>
+							<ul id="ml-tests-explanatory-maxcols" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-intw">
+							<a href="#ml-tests-explanatory-intw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INTW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-intw">Desc</a>
+							<ul id="ml-tests-explanatory-intw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-intb">
+							<a href="#ml-tests-explanatory-intb" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INTB</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-intb">Desc</a>
+							<ul id="ml-tests-explanatory-intb" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-DeepLearning-Sparse_Autoencoder">
+							<a href="#ML-DeepLearning-Sparse_Autoencoder" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-DeepLearning-Sparse_Autoencoder">Desc</a>
+							<ul id="ML-DeepLearning-Sparse_Autoencoder" class="accordian-body collapse">
+								<li id="t-ml-deeplearning-sparse_autoencoder-sa">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SA</span>
+								<span class="sign-post">(DATASET(Types.NumericField) X, DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa" class="accordian-body collapse">
+								<li id="t-ml-deeplearning-sparse_autoencoder-sa-d">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-d" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">D</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-d">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-d" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-m">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-m" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">M</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-m">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-m" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-m_1">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-m_1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">M_1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-m_1">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-m_1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-sparsityparam_">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-sparsityparam_" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPARSITYPARAM_</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-sparsityparam_">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-sparsityparam_" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-sparsityparam_1">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-sparsityparam_1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPARSITYPARAM_1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-sparsityparam_1">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-sparsityparam_1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-sizerec">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-sizerec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SIZEREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-sizerec">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-sizerec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-havemaxrow">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-havemaxrow" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HAVEMAXROW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-havemaxrow">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-havemaxrow" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-havemaxcol">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-havemaxcol" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HAVEMAXCOL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-havemaxcol">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-havemaxcol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-havemaxrowcol">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-havemaxrowcol" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HAVEMAXROWCOL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-havemaxrowcol">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-havemaxrowcol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-dstats">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-dstats" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DSTATS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-dstats">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-dstats" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-d_n">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-d_n" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">D_N</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-d_n">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-d_n" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-d_m">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-d_m" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">D_M</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-d_m">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-d_m" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-output_num">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-output_num" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OUTPUT_NUM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-output_num">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-output_num" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-sizetable">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-sizetable" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SIZETABLE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-sizetable">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-sizetable" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-sa-mod">
+							<a href="#ml-deeplearning-sparse_autoencoder-sa-mod" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MOD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-sa-mod">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-sa-mod" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-learnc">
+							<a href="#ml-deeplearning-sparse_autoencoder-learnc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEARNC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-learnc">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-learnc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-model">
+							<a href="#ml-deeplearning-sparse_autoencoder-model" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-model">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-saoutput">
+							<a href="#ml-deeplearning-sparse_autoencoder-saoutput" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SAOUTPUT</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-saoutput">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-saoutput" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-extractweights">
+							<a href="#ml-deeplearning-sparse_autoencoder-extractweights" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTWEIGHTS</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-extractweights">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-extractweights" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-extractbias">
+							<a href="#ml-deeplearning-sparse_autoencoder-extractbias" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTBIAS</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-extractbias">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-extractbias" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-extractw1">
+							<a href="#ml-deeplearning-sparse_autoencoder-extractw1" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTW1</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-extractw1">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-extractw1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-extractw2">
+							<a href="#ml-deeplearning-sparse_autoencoder-extractw2" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTW2</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-extractw2">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-extractw2" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-extractb1">
+							<a href="#ml-deeplearning-sparse_autoencoder-extractb1" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTB1</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-extractb1">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-extractb1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-deeplearning-sparse_autoencoder-extractb2">
+							<a href="#ml-deeplearning-sparse_autoencoder-extractb2" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTB2</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-deeplearning-sparse_autoencoder-extractb2">Desc</a>
+							<ul id="ml-deeplearning-sparse_autoencoder-extractb2" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-learntmodel">
+							<a href="#ml-tests-explanatory-learntmodel" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEARNTMODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-learntmodel">Desc</a>
+							<ul id="ml-tests-explanatory-learntmodel" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-matrixmodel">
+							<a href="#ml-tests-explanatory-matrixmodel" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MATRIXMODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-matrixmodel">Desc</a>
+							<ul id="ml-tests-explanatory-matrixmodel" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-out">
+							<a href="#ml-tests-explanatory-out" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-out">Desc</a>
+							<ul id="ml-tests-explanatory-out" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-extractedweights">
+							<a href="#ml-tests-explanatory-extractedweights" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTEDWEIGHTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-extractedweights">Desc</a>
+							<ul id="ml-tests-explanatory-extractedweights" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-extractedbias">
+							<a href="#ml-tests-explanatory-extractedbias" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTEDBIAS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-extractedbias">Desc</a>
+							<ul id="ml-tests-explanatory-extractedbias" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-indepdatac_toname">
+							<a href="#ml-tests-explanatory-indepdatac_toname" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INDEPDATAC_TONAME</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-indepdatac_toname">Desc</a>
+							<ul id="ml-tests-explanatory-indepdatac_toname" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-indepdatac_tonumber">
+							<a href="#ml-tests-explanatory-indepdatac_tonumber" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INDEPDATAC_TONUMBER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-indepdatac_tonumber">Desc</a>
+							<ul id="ml-tests-explanatory-indepdatac_tonumber" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-indepdatac">
+							<a href="#ml-tests-explanatory-indepdatac" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INDEPDATAC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-indepdatac">Desc</a>
+							<ul id="ml-tests-explanatory-indepdatac" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-explanatory-indepdatac_map">
+							<a href="#ml-tests-explanatory-indepdatac_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INDEPDATAC_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-explanatory-indepdatac_map">Desc</a>
+							<ul id="ml-tests-explanatory-indepdatac_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-tests-explanatory-layout_cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAYOUT_CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-layout_cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-hl">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">INTEGER4</span>
+									<span class="sign-name">HL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-hl" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-f">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">INTEGER4</span>
+									<span class="sign-name">F</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-f" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-value_record">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VALUE_RECORD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-value_record" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-input_data">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INPUT_DATA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-input_data" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-sparsityparam">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">SPARSITYPARAM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-sparsityparam" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-beta">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">BETA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-beta" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-alpha">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">ALPHA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-alpha" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-lambda">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">LAMBDA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-lambda" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-maxiter">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UNSIGNED2</span>
+									<span class="sign-name">MAXITER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-maxiter" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-prows">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UNSIGNED4</span>
+									<span class="sign-name">PROWS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-prows" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-pcols">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UNSIGNED4</span>
+									<span class="sign-name">PCOLS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-pcols" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-maxrows">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UNSIGNED4</span>
+									<span class="sign-name">MAXROWS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-maxrows" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-maxcols">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UNSIGNED4</span>
+									<span class="sign-name">MAXCOLS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-maxcols" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-intw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INTW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-intw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-intb">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INTB</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-intb" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-DeepLearning-Sparse_Autoencoder">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-DeepLearning-Sparse_Autoencoder" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SA</span>
+									<span class="sign-post">(DATASET(Types.NumericField) X, DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">D</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-d" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-m">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">M</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-m" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-m_1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">M_1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-m_1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-sparsityparam_">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPARSITYPARAM_</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-sparsityparam_" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-sparsityparam_1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPARSITYPARAM_1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-sparsityparam_1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-sizerec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SIZEREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-sizerec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-havemaxrow">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HAVEMAXROW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-havemaxrow" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-havemaxcol">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HAVEMAXCOL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-havemaxcol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-havemaxrowcol">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HAVEMAXROWCOL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-havemaxrowcol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-dstats">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DSTATS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-dstats" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-d_n">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">D_N</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-d_n" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-d_m">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">D_M</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-d_m" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-output_num">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OUTPUT_NUM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-output_num" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-sizetable">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SIZETABLE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-sizetable" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-sa-mod">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MOD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-sa-mod" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-learnc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEARNC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 BETA=0.1, REAL8 sparsityParam=0.1 , REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-learnc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-model">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-saoutput">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SAOUTPUT</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-saoutput" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-extractweights">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTWEIGHTS</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-extractweights" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-extractbias">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTBIAS</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-extractbias" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-extractw1">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTW1</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-extractw1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-extractw2">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTW2</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-extractw2" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-extractb1">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTB1</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-extractb1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-deeplearning-sparse_autoencoder-extractb2">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTB2</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-deeplearning-sparse_autoencoder-extractb2" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../deeplearning.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-learntmodel">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEARNTMODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-learntmodel" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-matrixmodel">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MATRIXMODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-matrixmodel" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-out">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-out" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-extractedweights">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTEDWEIGHTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-extractedweights" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-extractedbias">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTEDBIAS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-extractedbias" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-indepdatac_toname">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INDEPDATAC_TONAME</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-indepdatac_toname" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-indepdatac_tonumber">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INDEPDATAC_TONUMBER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-indepdatac_tonumber" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-indepdatac">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INDEPDATAC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-indepdatac" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-explanatory-indepdatac_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INDEPDATAC_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-explanatory-indepdatac_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

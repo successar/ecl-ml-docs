@@ -5,17 +5,17 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="133" end="152" fullname="pbblas.blas.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" start="119">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="167" end="182" fullname="pbblas.blas.value_t" inherit_type="local" line="5" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" start="153">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="197" end="213" fullname="pbblas.blas.matrix_t" inherit_type="local" line="6" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" start="183">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="321" end="598" exported="1" fullname="pbblas.blas.dscal" inherit_type="local" line="8" name="dscal" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" start="215">
    <Type>embed</Type>
-   <Signature>matrix_t dscal(dimension_t N, value_t alpha, matrix_t X,
+   <Signature pre="matrix_t" post="(dimension_t N, value_t alpha, matrix_t X,&#10;                      dimension_t incX)" name="DSCAL">matrix_t dscal(dimension_t N, value_t alpha, matrix_t X,
                       dimension_t incX)</Signature><Params>
     <Param name="N"/>
     <Param name="alpha"/>

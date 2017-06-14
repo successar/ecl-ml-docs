@@ -5,19 +5,19 @@
    <Type>module</Type>
    <Definition body="480" end="550" exported="1" fullname="pbblas.mu.to" inherit_type="local" line="7" name="To" source="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" start="419">
     <Type>function</Type>
-    <Signature>To(DATASET(Types.Layout_Part) d, Types.t_mu_no num)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Layout_Part) d, Types.t_mu_no num)" name="TO">To(DATASET(Types.Layout_Part) d, Types.t_mu_no num)</Signature><Params>
      <Param name="d"/>
      <Param name="num"/>
     </Params>
    </Definition>
    <Definition body="620" end="684" exported="1" fullname="pbblas.mu.from" inherit_type="local" line="8" name="From" source="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" start="559">
     <Type>function</Type>
-    <Signature>From(DATASET(Types.MUElement) d, Types.t_mu_no num)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.MUElement) d, Types.t_mu_no num)" name="FROM">From(DATASET(Types.MUElement) d, Types.t_mu_no num)</Signature><Params>
      <Param name="d"/>
      <Param name="num"/>
     </Params>
    </Definition>
-   <Signature>MU</Signature><Parents/>
+   <Signature pre="" post="" name="MU">MU</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="PBblas" inherit_type="local" line="1" name="PBblas" ref="pbblas" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

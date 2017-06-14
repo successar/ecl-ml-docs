@@ -4,24 +4,24 @@
   <Definition body="17" end="212" exported="1" fullname="ML.Version" inherit_type="local" line="1" name="Version" source="/media/sarthak/Data/ecl-ml/ML/Version.ecl" start="0">
    <Type>module</Type>
    <Definition body="41" end="44" exported="1" fullname="ml.version.major" inherit_type="local" line="3" name="major" source="/media/sarthak/Data/ecl-ml/ML/Version.ecl" start="26">
-    <Signature>major</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MAJOR">major</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="60" end="63" exported="1" fullname="ml.version.minor" inherit_type="local" line="4" name="minor" source="/media/sarthak/Data/ecl-ml/ML/Version.ecl" start="45">
-    <Signature>minor</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MINOR">minor</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="79" end="82" exported="1" fullname="ml.version.point" inherit_type="local" line="5" name="point" source="/media/sarthak/Data/ecl-ml/ML/Version.ecl" start="64">
-    <Signature>point</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="POINT">point</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="101" end="104" exported="1" fullname="ml.version.sequence" inherit_type="local" line="6" name="sequence" source="/media/sarthak/Data/ecl-ml/ML/Version.ecl" start="83">
-    <Signature>sequence</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SEQUENCE">sequence</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="123" end="132" exported="1" fullname="ml.version.maturity" inherit_type="local" line="7" name="maturity" source="/media/sarthak/Data/ecl-ml/ML/Version.ecl" start="105">
-    <Signature>maturity</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MATURITY">maturity</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="157" end="206" exported="1" fullname="ml.version.versionstring" inherit_type="local" line="9" name="versionString" source="/media/sarthak/Data/ecl-ml/ML/Version.ecl" start="134">
-    <Signature>versionString</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="VERSIONSTRING">versionString</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Version</Signature><Parents/>
+   <Signature pre="" post="" name="VERSION">Version</Signature><Parents/>
   </Definition>
  </Source>
 </Meta>

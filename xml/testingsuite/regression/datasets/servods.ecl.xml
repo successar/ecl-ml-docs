@@ -10,15 +10,15 @@
     <Field name="screw"/>
     <Field name="pgain"/>
     <Field name="vgain"/>
-    <Signature>servoRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="SERVORECORD">servoRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="306" end="497" exported="1" fullname="testingsuite.regression.datasets.servods.betas" inherit_type="local" line="11" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/servoDS.ecl" start="291">
-    <Signature>betas</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BETAS">betas</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="520" end="7464" exported="1" fullname="testingsuite.regression.datasets.servods.content" inherit_type="local" line="18" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/servoDS.ecl" start="503">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>servoDS</Signature><Parents/>
+   <Signature pre="" post="" name="SERVODS">servoDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

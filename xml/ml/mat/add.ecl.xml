@@ -3,7 +3,7 @@
  <Source name="ML.Mat.Add" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Add.ecl" target="add.ecl.xml">
   <Definition body="313" end="1068" exported="1" fullname="ml.mat.add" inherit_type="local" line="5" name="Add" source="/media/sarthak/Data/ecl-ml/ML/Mat/Add.ecl" start="249">
    <Type>function</Type>
-   <Signature>Add(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) l,DATASET(Types.Element) r)" name="ADD">Add(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
     <Param name="l"/>
     <Param name="r"/>
    </Params>

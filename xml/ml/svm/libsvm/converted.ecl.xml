@@ -17,45 +17,45 @@
    <Field name="features"/>
    <Field name="max_value"/>
    <Field name="y"/>
-   <Signature>ECL_LibSVM_Problem</Signature><Field name="x"/>
+   <Signature pre="" post="" name="ECL_LIBSVM_PROBLEM">ECL_LibSVM_Problem</Signature><Field name="x"/>
   </Definition>
   <Definition body="306" end="321" fullname="ml.svm.libsvm.r8entry" inherit_type="local" line="10" name="R8Entry" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="296">
    <Type>record</Type>
-   <Signature>R8Entry</Signature><Field name="v"/>
+   <Signature pre="" post="" name="R8ENTRY">R8Entry</Signature><Field name="v"/>
   </Definition>
   <Definition body="336" end="355" fullname="ml.svm.libsvm.libsvm_node" inherit_type="local" line="11" name="LibSVM_Node" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="322">
    <Type>record</Type>
    <Field name="indx"/>
-   <Signature>LibSVM_Node</Signature><Field name="value"/>
+   <Signature pre="" post="" name="LIBSVM_NODE">LibSVM_Node</Signature><Field name="value"/>
   </Definition>
   <Definition body="370" end="393" fullname="ml.svm.libsvm.svm_feature" inherit_type="local" line="12" name="SVM_Feature" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="356">
    <Type>record</Type>
    <Field name="nominal"/>
-   <Signature>SVM_Feature</Signature><Field name="v"/>
+   <Signature pre="" post="" name="SVM_FEATURE">SVM_Feature</Signature><Field name="v"/>
   </Definition>
   <Definition body="409" end="433" fullname="ml.svm.libsvm.svm_instance" inherit_type="local" line="13" name="SVM_Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="394">
    <Type>record</Type>
    <Field name="rid"/>
    <Field name="y"/>
    <Field name="max_value"/>
-   <Signature>SVM_Instance</Signature><Field name="x"/>
+   <Signature pre="" post="" name="SVM_INSTANCE">SVM_Instance</Signature><Field name="x"/>
   </Definition>
   <Definition body="453" end="3453" exported="1" fullname="ML.SVM.LibSVM.Converted" inherit_type="local" line="14" name="Converted" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="434">
    <Type>module</Type>
    <Definition body="595" end="2140" exported="1" fullname="ml.svm.libsvm.converted.libsvmdata2instance" inherit_type="local" line="16" name="LIBSVMDATA2Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="531">
     <Type>function</Type>
-    <Signature>DATASET(SVM_Instance) LIBSVMDATA2Instance(STRING fname)</Signature><Params>
+    <Signature pre="DATASET(SVM_Instance)" post="(STRING fname)" name="LIBSVMDATA2INSTANCE">DATASET(SVM_Instance) LIBSVMDATA2Instance(STRING fname)</Signature><Params>
      <Param name="fname"/>
     </Params>
    </Definition>
    <Definition body="2332" end="3448" exported="1" fullname="ml.svm.libsvm.converted.instance2problem" inherit_type="local" line="61" name="Instance2Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" start="2243">
     <Type>function</Type>
-    <Signature>DATASET(ECL_LibSVM_Problem)
+    <Signature pre="DATASET(ECL_LibSVM_Problem)" post="(DATASET(SVM_Instance) ds)" name="INSTANCE2PROBLEM">DATASET(ECL_LibSVM_Problem)
          Instance2Problem(DATASET(SVM_Instance) ds)</Signature><Params>
      <Param name="ds"/>
     </Params>
    </Definition>
-   <Signature>Converted</Signature><Parents/>
+   <Signature pre="" post="" name="CONVERTED">Converted</Signature><Parents/>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../types.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/></Meta>

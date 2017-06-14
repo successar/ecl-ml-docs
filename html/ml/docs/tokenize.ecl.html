@@ -1,188 +1,389 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Docs.Tokenize</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.docs.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
-				std.str
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Tokenize
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : Enumerate(DATASET(Types.Raw) r)
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="porterstemc.ecl.html">porterstemc.ecl</a>
+				</li>
+				
+				<li>
+					<a href="colocation.ecl.html">colocation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="porterstem.ecl.html">porterstem.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tokenize.ecl.html">tokenize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Clean(DATASET(Types.Raw) r)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Split(DATASET(Types.Raw) r)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Lexicon(DATASET(Types.WordElement) r)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToO(DATASET(Types.WordElement) r, DATASET(Types.LexiconElement) l)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MACRO : macFromO(infile,idfield,textfield,lexicon,outfile)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromO(DATASET(Types.OWordElement) d,DATASET(Types.LexiconElement) l)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Tokenize
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : Enumerate(DATASET(Types.Raw) r)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Clean(DATASET(Types.Raw) r)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Split(DATASET(Types.Raw) r)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Lexicon(DATASET(Types.WordElement) r)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToO(DATASET(Types.WordElement) r, DATASET(Types.LexiconElement) l)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MACRO : macFromO(infile,idfield,textfield,lexicon,outfile)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromO(DATASET(Types.OWordElement) d,DATASET(Types.LexiconElement) l)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Docs.Tokenize</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="types.ecl.html">
+								ml.docs.types
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+								std.str
+							</a>
+							</li>
+						<li>
+							<a href="../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Docs-Tokenize">
+							<a href="#ML-Docs-Tokenize" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOKENIZE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Docs-Tokenize">Desc</a>
+							<ul id="ML-Docs-Tokenize" class="accordian-body collapse">
+								<li id="t-ml-docs-tokenize-enumerate">
+							<a href="#ml-docs-tokenize-enumerate" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ENUMERATE</span>
+								<span class="sign-post">(DATASET(Types.Raw) r)</span>
+							</a> -
+							<a href="#dml-docs-tokenize-enumerate">Desc</a>
+							<ul id="ml-docs-tokenize-enumerate" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-tokenize-clean">
+							<a href="#ml-docs-tokenize-clean" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLEAN</span>
+								<span class="sign-post">(DATASET(Types.Raw) r)</span>
+							</a> -
+							<a href="#dml-docs-tokenize-clean">Desc</a>
+							<ul id="ml-docs-tokenize-clean" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-tokenize-split">
+							<a href="#ml-docs-tokenize-split" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLIT</span>
+								<span class="sign-post">(DATASET(Types.Raw) r)</span>
+							</a> -
+							<a href="#dml-docs-tokenize-split">Desc</a>
+							<ul id="ml-docs-tokenize-split" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-tokenize-lexicon">
+							<a href="#ml-docs-tokenize-lexicon" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEXICON</span>
+								<span class="sign-post">(DATASET(Types.WordElement) r)</span>
+							</a> -
+							<a href="#dml-docs-tokenize-lexicon">Desc</a>
+							<ul id="ml-docs-tokenize-lexicon" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-tokenize-too">
+							<a href="#ml-docs-tokenize-too" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOO</span>
+								<span class="sign-post">(DATASET(Types.WordElement) r, DATASET(Types.LexiconElement) l)</span>
+							</a> -
+							<a href="#dml-docs-tokenize-too">Desc</a>
+							<ul id="ml-docs-tokenize-too" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-tokenize-macfromo">
+							<a href="#ml-docs-tokenize-macfromo" data-toggle="collapse">
+								MACRO :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MACFROMO</span>
+								<span class="sign-post">(infile,idfield,textfield,lexicon,outfile)</span>
+							</a> -
+							<a href="#dml-docs-tokenize-macfromo">Desc</a>
+							<ul id="ml-docs-tokenize-macfromo" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-tokenize-fromo">
+							<a href="#ml-docs-tokenize-fromo" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMO</span>
+								<span class="sign-post">(DATASET(Types.OWordElement) d,DATASET(Types.LexiconElement) l)</span>
+							</a> -
+							<a href="#dml-docs-tokenize-fromo">Desc</a>
+							<ul id="ml-docs-tokenize-fromo" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Docs-Tokenize">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOKENIZE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Docs-Tokenize" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-docs-tokenize-enumerate">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ENUMERATE</span>
+									<span class="sign-post">(DATASET(Types.Raw) r)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-tokenize-enumerate" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-tokenize-clean">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLEAN</span>
+									<span class="sign-post">(DATASET(Types.Raw) r)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-tokenize-clean" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-tokenize-split">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLIT</span>
+									<span class="sign-post">(DATASET(Types.Raw) r)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-tokenize-split" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-tokenize-lexicon">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEXICON</span>
+									<span class="sign-post">(DATASET(Types.WordElement) r)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-tokenize-lexicon" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-tokenize-too">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOO</span>
+									<span class="sign-post">(DATASET(Types.WordElement) r, DATASET(Types.LexiconElement) l)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-tokenize-too" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-tokenize-macfromo">
+							<div class="panel-heading">
+								<div class="type">
+									MACRO
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MACFROMO</span>
+									<span class="sign-post">(infile,idfield,textfield,lexicon,outfile)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-tokenize-macfromo" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-tokenize-fromo">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMO</span>
+									<span class="sign-post">(DATASET(Types.OWordElement) d,DATASET(Types.LexiconElement) l)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-tokenize-fromo" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

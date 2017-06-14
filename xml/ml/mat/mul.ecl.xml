@@ -11,25 +11,25 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="96" end="140" inherit_type="local" line="5" name="MulMethod" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="84">
-   <Signature>MulMethod</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MULMETHOD">MulMethod</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="206" end="896" fullname="ml.mat.mul_default" inherit_type="local" line="6" name="Mul_Default" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="141">
    <Type>function</Type>
-   <Signature>Mul_Default(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) l,DATASET(Types.Element) r)" name="MUL_DEFAULT">Mul_Default(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
     <Param name="l"/>
     <Param name="r"/>
    </Params>
   </Definition>
   <Definition body="971" end="1948" fullname="ml.mat.mul_symmetricresult" inherit_type="local" line="31" name="Mul_SymmetricResult" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="898">
    <Type>function</Type>
-   <Signature>Mul_SymmetricResult(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) l,DATASET(Types.Element) r)" name="MUL_SYMMETRICRESULT">Mul_SymmetricResult(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
     <Param name="l"/>
     <Param name="r"/>
    </Params>
   </Definition>
   <Definition body="2050" end="2491" exported="1" fullname="ml.mat.mul" inherit_type="local" line="66" name="Mul" source="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" start="1950">
    <Type>function</Type>
-   <Signature>Mul(DATASET(Types.Element) l,DATASET(Types.Element) r, MulMethod method=MulMethod.Default)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) l,DATASET(Types.Element) r, MulMethod method=MulMethod.Default)" name="MUL">Mul(DATASET(Types.Element) l,DATASET(Types.Element) r, MulMethod method=MulMethod.Default)</Signature><Params>
     <Param name="l"/>
     <Param name="r"/>
     <Param name="method"/>

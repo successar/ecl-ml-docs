@@ -12,15 +12,15 @@
     <Field name="a4"/>
     <Field name="a5"/>
     <Field name="a6"/>
-    <Signature>monkRecord</Signature><Field name="id"/>
+    <Signature pre="" post="" name="MONKRECORD">monkRecord</Signature><Field name="id"/>
    </Definition>
    <Definition body="661" end="3509" exported="1" fullname="ml.tests.explanatory.monkds.train_data" inherit_type="local" line="21" name="Train_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/MonkDS.ecl" start="641">
-    <Signature>Train_Data</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TRAIN_DATA">Train_Data</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3530" end="13384" exported="1" fullname="ml.tests.explanatory.monkds.test_data" inherit_type="local" line="147" name="Test_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/MonkDS.ecl" start="3511">
-    <Signature>Test_Data</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TEST_DATA">Test_Data</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>MonkDS</Signature><Parents/>
+   <Signature pre="" post="" name="MONKDS">MonkDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="../../pkg.toc.xml">
    <Type>attribute</Type>

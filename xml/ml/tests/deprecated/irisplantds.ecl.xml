@@ -9,10 +9,10 @@
    <Field name="sepal_width"/>
    <Field name="petal_length"/>
    <Field name="petal_width"/>
-   <Signature>layout_iris</Signature><Field name="class_name"/>
+   <Signature pre="" post="" name="LAYOUT_IRIS">layout_iris</Signature><Field name="class_name"/>
   </Definition>
   <Definition body="295" end="11213" exported="1" fullname="ml.tests.deprecated.irisplantds" inherit_type="local" line="14" name="IrisPlantDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/IrisPlantDS.ecl" start="272">
-   <Signature>IrisPlantDS</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="IRISPLANTDS">IrisPlantDS</Signature><Type>attribute</Type>
   </Definition>
  </Source>
 </Meta>

@@ -3,7 +3,7 @@
  <Source name="ML.SVM.scale_factors" sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/scale_factors.ecl" target="scale_factors.ecl.xml">
   <Definition body="201" end="1309" exported="1" fullname="ml.svm.scale_factors" inherit_type="local" line="3" name="scale_factors" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_factors.ecl" start="68">
    <Type>function</Type>
-   <Signature>DATASET(Types.SVM_Scale)
+   <Signature pre="DATASET(Types.SVM_Scale)" post="(Types.Scale_Parms parms,&#10;                     DATASET(Types.SVM_Instance) ds)" name="SCALE_FACTORS">DATASET(Types.SVM_Scale)
        scale_factors(Types.Scale_Parms parms,
                      DATASET(Types.SVM_Instance) ds)</Signature><Params>
     <Param name="parms"/>

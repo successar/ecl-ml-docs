@@ -3,7 +3,7 @@
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.LowerTriangle" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" target="lowertriangle.ecl.xml">
   <Definition body="155" end="169" exported="1" fullname="ml.mat.lowertriangle" inherit_type="local" line="4" name="LowerTriangle" source="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" start="101">
    <Type>function</Type>
-   <Signature>LowerTriangle(DATASET(Types.Element) matrix)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) matrix)" name="LOWERTRIANGLE">LowerTriangle(DATASET(Types.Element) matrix)</Signature><Params>
     <Param name="matrix"/>
    </Params>
   </Definition>

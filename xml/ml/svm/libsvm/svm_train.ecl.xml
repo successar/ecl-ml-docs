@@ -30,7 +30,7 @@
    <Field name="probA"/>
    <Field name="probB"/>
    <Field name="labels"/>
-   <Signature>ECL_LibSVM_Model</Signature><Field name="nSV"/>
+   <Signature pre="" post="" name="ECL_LIBSVM_MODEL">ECL_LibSVM_Model</Signature><Field name="nSV"/>
   </Definition>
   <Definition body="194" end="220" fullname="ml.svm.libsvm.problem" inherit_type="local" line="7" name="Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" start="184">
    <Type>record</Type>
@@ -39,7 +39,7 @@
    <Field name="features"/>
    <Field name="max_value"/>
    <Field name="y"/>
-   <Signature>Problem</Signature><Field name="x"/>
+   <Signature pre="" post="" name="PROBLEM">Problem</Signature><Field name="x"/>
   </Definition>
   <Definition body="233" end="263" fullname="ml.svm.libsvm.svm_parms" inherit_type="local" line="8" name="SVM_Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" start="221">
    <Type>record</Type>
@@ -57,14 +57,14 @@
    <Field name="shrinking"/>
    <Field name="prob_est"/>
    <Field name="lbl"/>
-   <Signature>SVM_Parms</Signature><Field name="weight"/>
+   <Signature pre="" post="" name="SVM_PARMS">SVM_Parms</Signature><Field name="weight"/>
   </Definition>
   <Definition body="274" end="300" fullname="ml.svm.libsvm.errcode" inherit_type="local" line="9" name="ErrCode" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" start="264">
-   <Signature>ErrCode</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="ERRCODE">ErrCode</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="410" end="7633" fullname="ml.svm.libsvm.svm_train_d" inherit_type="local" line="10" name="svm_train_d" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" start="301">
    <Type>embed</Type>
-   <Signature>DATA svm_train_d(SVM_Parms prm,
+   <Signature pre="DATA" post="(SVM_Parms prm,&#10;                 Problem prb,&#10;                 UNSIGNED4 err_code=ErrCode)" name="SVM_TRAIN_D">DATA svm_train_d(SVM_Parms prm,
                  Problem prb,
                  UNSIGNED4 err_code=ErrCode)</Signature><Params>
     <Param name="prm"/>
@@ -74,7 +74,7 @@
   </Definition>
   <Definition body="7711" end="7762" exported="1" fullname="ml.svm.libsvm.svm_train" inherit_type="local" line="212" name="svm_train" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_train.ecl" start="7635">
    <Type>function</Type>
-   <Signature>ECL_LibSVM_Model svm_train(SVM_Parms prm, Problem prb)</Signature><Params>
+   <Signature pre="ECL_LibSVM_Model" post="(SVM_Parms prm, Problem prb)" name="SVM_TRAIN">ECL_LibSVM_Model svm_train(SVM_Parms prm, Problem prb)</Signature><Params>
     <Param name="prm"/>
     <Param name="prb"/>
    </Params>

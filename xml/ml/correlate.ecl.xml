@@ -8,14 +8,14 @@
    </Params>
    <Parents/>
    <Definition body="1144" end="1223" exported="1" fullname="ml.correlate.simple" inherit_type="local" line="43" name="Simple" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="1128">
-    <Signature>Simple</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SIMPLE">Simple</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2449" end="2502" exported="1" fullname="ml.correlate.kendall" inherit_type="local" line="86" name="Kendall" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="2432">
-    <Signature>Kendall</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="KENDALL">Kendall</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Correlate(DATASET(Types.NumericField) d)</Signature><Definition body="2928" end="6297" exported="1" fullname="ml.correlate.mutualinfo" inherit_type="local" line="94" name="MutualInfo" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="2854">
+   <Signature pre="" post="(DATASET(Types.NumericField) d)" name="CORRELATE">Correlate(DATASET(Types.NumericField) d)</Signature><Definition body="2928" end="6297" exported="1" fullname="ml.correlate.mutualinfo" inherit_type="local" line="94" name="MutualInfo" source="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" start="2854">
     <Type>function</Type>
-    <Signature>MutualInfo(UNSIGNED cVec,UNSIGNED units=2,UNSIGNED buckets = 10)</Signature><Params>
+    <Signature pre="" post="(UNSIGNED cVec,UNSIGNED units=2,UNSIGNED buckets = 10)" name="MUTUALINFO">MutualInfo(UNSIGNED cVec,UNSIGNED units=2,UNSIGNED buckets = 10)</Signature><Params>
      <Param name="cVec"/>
      <Param name="units"/>
      <Param name="buckets"/>

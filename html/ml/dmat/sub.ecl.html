@@ -1,389 +1,719 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.DMat.Sub</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pbblas/pkg.toc.html">
-				pbblas
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../pbblas/types.ecl.html">
-				pbblas.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Part
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="decomp.ecl.html">decomp.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale.ecl.html">scale.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identity.ecl.html">identity.ecl</a>
+				</li>
+				
+				<li>
+					<a href="add.ecl.html">add.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mul.ecl.html">mul.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sub.ecl.html">sub.ecl</a>
+				</li>
+				
+				<li>
+					<a href="inv.ecl.html">inv.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			MODULE : IMatrix_Map
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Types.dimension_t  matrix_rows
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.dimension_t  matrix_cols
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.node_t       nodes_used
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.partition_t  partitions_used
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.partition_t  row_blocks
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Types.partition_t  col_blocks
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.dimension_t  row_block(Types.dimension_t mat_row)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.dimension_t  col_block(Types.dimension_t mat_col)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.partition_t  assigned_part(Types.dimension_t rb, Types.dimension_t cb)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.node_t       assigned_node(Types.partition_t p)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.dimension_t  first_row(Types.partition_t p)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.dimension_t  first_col(Types.partition_t p)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.dimension_t  part_rows(Types.partition_t p)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Types.dimension_t  part_cols(Types.partition_t p)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Part) Sub(IMatrix_Map m_map, DATASET(Part) minuend,
-                         IMatrix_Map s_map, DATASET(Part) subtrahend)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Part
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : IMatrix_Map
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Types.dimension_t  matrix_rows
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.dimension_t  matrix_cols
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.node_t       nodes_used
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.partition_t  partitions_used
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.partition_t  row_blocks
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Types.partition_t  col_blocks
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.dimension_t  row_block(Types.dimension_t mat_row)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.dimension_t  col_block(Types.dimension_t mat_col)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.partition_t  assigned_part(Types.dimension_t rb, Types.dimension_t cb)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.node_t       assigned_node(Types.partition_t p)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.dimension_t  first_row(Types.partition_t p)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.dimension_t  first_col(Types.partition_t p)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.dimension_t  part_rows(Types.partition_t p)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Types.dimension_t  part_cols(Types.partition_t p)
-		
-		<br/>
-		<a href="../../pbblas/imatrix_map.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : DATASET(Part) Sub(IMatrix_Map m_map, DATASET(Part) minuend,
-                         IMatrix_Map s_map, DATASET(Part) subtrahend)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.DMat.Sub</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pbblas/pkg.toc.html">
+								pbblas
+							</a>
+							</li>
+						<li>
+							<a href="../../pbblas/types.ecl.html">
+								pbblas.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-dmat-part">
+							<a href="#ml-dmat-part" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PART</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-dmat-part">Desc</a>
+							<ul id="ml-dmat-part" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-PBblas-IMatrix_Map">
+							<a href="#PBblas-IMatrix_Map" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">IMATRIX_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dPBblas-IMatrix_Map">Desc</a>
+							<ul id="PBblas-IMatrix_Map" class="accordian-body collapse">
+								<li id="t-pbblas-imatrix_map-matrix_rows">
+							<a href="#pbblas-imatrix_map-matrix_rows" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">MATRIX_ROWS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-matrix_rows">Desc</a>
+							<ul id="pbblas-imatrix_map-matrix_rows" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-matrix_cols">
+							<a href="#pbblas-imatrix_map-matrix_cols" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">MATRIX_COLS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-matrix_cols">Desc</a>
+							<ul id="pbblas-imatrix_map-matrix_cols" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-nodes_used">
+							<a href="#pbblas-imatrix_map-nodes_used" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.node_t</span>
+								<span class="sign-name">NODES_USED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-nodes_used">Desc</a>
+							<ul id="pbblas-imatrix_map-nodes_used" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-partitions_used">
+							<a href="#pbblas-imatrix_map-partitions_used" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.partition_t</span>
+								<span class="sign-name">PARTITIONS_USED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-partitions_used">Desc</a>
+							<ul id="pbblas-imatrix_map-partitions_used" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-row_blocks">
+							<a href="#pbblas-imatrix_map-row_blocks" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.partition_t</span>
+								<span class="sign-name">ROW_BLOCKS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-row_blocks">Desc</a>
+							<ul id="pbblas-imatrix_map-row_blocks" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-col_blocks">
+							<a href="#pbblas-imatrix_map-col_blocks" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">Types.partition_t</span>
+								<span class="sign-name">COL_BLOCKS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-col_blocks">Desc</a>
+							<ul id="pbblas-imatrix_map-col_blocks" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-row_block">
+							<a href="#pbblas-imatrix_map-row_block" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">ROW_BLOCK</span>
+								<span class="sign-post">(Types.dimension_t mat_row)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-row_block">Desc</a>
+							<ul id="pbblas-imatrix_map-row_block" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-col_block">
+							<a href="#pbblas-imatrix_map-col_block" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">COL_BLOCK</span>
+								<span class="sign-post">(Types.dimension_t mat_col)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-col_block">Desc</a>
+							<ul id="pbblas-imatrix_map-col_block" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-assigned_part">
+							<a href="#pbblas-imatrix_map-assigned_part" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.partition_t</span>
+								<span class="sign-name">ASSIGNED_PART</span>
+								<span class="sign-post">(Types.dimension_t rb, Types.dimension_t cb)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-assigned_part">Desc</a>
+							<ul id="pbblas-imatrix_map-assigned_part" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-assigned_node">
+							<a href="#pbblas-imatrix_map-assigned_node" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.node_t</span>
+								<span class="sign-name">ASSIGNED_NODE</span>
+								<span class="sign-post">(Types.partition_t p)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-assigned_node">Desc</a>
+							<ul id="pbblas-imatrix_map-assigned_node" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-first_row">
+							<a href="#pbblas-imatrix_map-first_row" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">FIRST_ROW</span>
+								<span class="sign-post">(Types.partition_t p)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-first_row">Desc</a>
+							<ul id="pbblas-imatrix_map-first_row" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-first_col">
+							<a href="#pbblas-imatrix_map-first_col" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">FIRST_COL</span>
+								<span class="sign-post">(Types.partition_t p)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-first_col">Desc</a>
+							<ul id="pbblas-imatrix_map-first_col" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-part_rows">
+							<a href="#pbblas-imatrix_map-part_rows" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">PART_ROWS</span>
+								<span class="sign-post">(Types.partition_t p)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-part_rows">Desc</a>
+							<ul id="pbblas-imatrix_map-part_rows" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-imatrix_map-part_cols">
+							<a href="#pbblas-imatrix_map-part_cols" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Types.dimension_t</span>
+								<span class="sign-name">PART_COLS</span>
+								<span class="sign-post">(Types.partition_t p)</span>
+							</a> -
+							<a href="#dpbblas-imatrix_map-part_cols">Desc</a>
+							<ul id="pbblas-imatrix_map-part_cols" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-dmat-sub">
+							<a href="#ml-dmat-sub" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Part)</span>
+								<span class="sign-name">SUB</span>
+								<span class="sign-post">(IMatrix_Map m_map, DATASET(Part) minuend,
+                         IMatrix_Map s_map, DATASET(Part) subtrahend)</span>
+							</a> -
+							<a href="#dml-dmat-sub">Desc</a>
+							<ul id="ml-dmat-sub" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-dmat-part">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PART</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-part" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dPBblas-IMatrix_Map">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">IMATRIX_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-PBblas-IMatrix_Map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dpbblas-imatrix_map-matrix_rows">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">MATRIX_ROWS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-matrix_rows" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-matrix_cols">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">MATRIX_COLS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-matrix_cols" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-nodes_used">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.node_t</span>
+									<span class="sign-name">NODES_USED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-nodes_used" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-partitions_used">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.partition_t</span>
+									<span class="sign-name">PARTITIONS_USED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-partitions_used" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-row_blocks">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.partition_t</span>
+									<span class="sign-name">ROW_BLOCKS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-row_blocks" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-col_blocks">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.partition_t</span>
+									<span class="sign-name">COL_BLOCKS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-col_blocks" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-row_block">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">ROW_BLOCK</span>
+									<span class="sign-post">(Types.dimension_t mat_row)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-row_block" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-col_block">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">COL_BLOCK</span>
+									<span class="sign-post">(Types.dimension_t mat_col)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-col_block" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-assigned_part">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.partition_t</span>
+									<span class="sign-name">ASSIGNED_PART</span>
+									<span class="sign-post">(Types.dimension_t rb, Types.dimension_t cb)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-assigned_part" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-assigned_node">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.node_t</span>
+									<span class="sign-name">ASSIGNED_NODE</span>
+									<span class="sign-post">(Types.partition_t p)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-assigned_node" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-first_row">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">FIRST_ROW</span>
+									<span class="sign-post">(Types.partition_t p)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-first_row" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-first_col">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">FIRST_COL</span>
+									<span class="sign-post">(Types.partition_t p)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-first_col" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-part_rows">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">PART_ROWS</span>
+									<span class="sign-post">(Types.partition_t p)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-part_rows" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-imatrix_map-part_cols">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.dimension_t</span>
+									<span class="sign-name">PART_COLS</span>
+									<span class="sign-post">(Types.partition_t p)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-imatrix_map-part_cols" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../../pbblas/imatrix_map.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-dmat-sub">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Part)</span>
+									<span class="sign-name">SUB</span>
+									<span class="sign-post">(IMatrix_Map m_map, DATASET(Part) minuend,
+                         IMatrix_Map s_map, DATASET(Part) subtrahend)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-sub" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -29,19 +29,19 @@
    <Field name="shrinking"/>
    <Field name="prob_est"/>
    <Field name="lbl"/>
-   <Signature>G_Result</Signature><Field name="weight"/>
+   <Signature pre="" post="" name="G_RESULT">G_Result</Signature><Field name="weight"/>
   </Definition>
   <Definition body="191" end="212" fullname="ml.svm.grid_plan" inherit_type="local" line="7" name="Grid_Plan" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="179">
    <Type>record</Type>
    <Field name="folds"/>
    <Field name="log2_C"/>
-   <Signature>Grid_Plan</Signature><Field name="log2_gamma"/>
+   <Signature pre="" post="" name="GRID_PLAN">Grid_Plan</Signature><Field name="log2_gamma"/>
   </Definition>
   <Definition body="225" end="246" fullname="ml.svm.grid_args" inherit_type="local" line="8" name="Grid_Args" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="213">
    <Type>record</Type>
    <Field name="start"/>
    <Field name="stop"/>
-   <Signature>Grid_Args</Signature><Field name="max_incr"/>
+   <Signature pre="" post="" name="GRID_ARGS">Grid_Args</Signature><Field name="max_incr"/>
   </Definition>
   <Definition body="256" end="277" fullname="ml.svm.t_base" inherit_type="local" line="9" name="T_Base" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="247">
    <Type>record</Type>
@@ -56,7 +56,7 @@
    <Field name="shrinking"/>
    <Field name="prob_est"/>
    <Field name="lbl"/>
-   <Signature>T_Base</Signature><Field name="weight"/>
+   <Signature pre="" post="" name="T_BASE">T_Base</Signature><Field name="weight"/>
   </Definition>
   <Definition body="287" end="314" fullname="ml.svm.t_parm" inherit_type="local" line="10" name="T_Parm" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="278">
    <Type>record</Type>
@@ -74,18 +74,18 @@
    <Field name="lbl"/>
    <Field name="weight"/>
    <Field name="gamma"/>
-   <Signature>T_Parm</Signature><Field name="C"/>
+   <Signature pre="" post="" name="T_PARM">T_Parm</Signature><Field name="C"/>
   </Definition>
   <Definition body="322" end="342" fullname="ml.svm.inst" inherit_type="local" line="11" name="Inst" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="315">
    <Type>record</Type>
    <Field name="rid"/>
    <Field name="y"/>
    <Field name="max_value"/>
-   <Signature>Inst</Signature><Field name="x"/>
+   <Signature pre="" post="" name="INST">Inst</Signature><Field name="x"/>
   </Definition>
   <Definition body="410" end="1543" exported="1" fullname="ml.svm.grid_search" inherit_type="local" line="12" name="grid_search" source="/media/sarthak/Data/ecl-ml/ML/SVM/grid_search.ecl" start="343">
    <Type>function</Type>
-   <Signature>grid_search(Grid_Plan plan, T_Base base, DATASET(Inst) d)</Signature><Params>
+   <Signature pre="" post="(Grid_Plan plan, T_Base base, DATASET(Inst) d)" name="GRID_SEARCH">grid_search(Grid_Plan plan, T_Base base, DATASET(Inst) d)</Signature><Params>
     <Param name="plan"/>
     <Param name="base"/>
     <Param name="d"/>

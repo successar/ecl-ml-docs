@@ -29,14 +29,14 @@
    <Field name="lbl"/>
    <Field name="weight"/>
    <Field name="gamma"/>
-   <Signature>Parms</Signature><Field name="C"/>
+   <Signature pre="" post="" name="PARMS">Parms</Signature><Field name="C"/>
   </Definition>
   <Definition body="193" end="213" fullname="ml.svm.instance" inherit_type="local" line="7" name="Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="182">
    <Type>record</Type>
    <Field name="rid"/>
    <Field name="y"/>
    <Field name="max_value"/>
-   <Signature>Instance</Signature><Field name="x"/>
+   <Signature pre="" post="" name="INSTANCE">Instance</Signature><Field name="x"/>
   </Definition>
   <Definition body="222" end="235" fullname="ml.svm.model" inherit_type="local" line="8" name="Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="214">
    <Type>record</Type>
@@ -54,7 +54,7 @@
    <Field name="probA"/>
    <Field name="probB"/>
    <Field name="labels"/>
-   <Signature>Model</Signature><Field name="nSV"/>
+   <Signature pre="" post="" name="MODEL">Model</Signature><Field name="nSV"/>
   </Definition>
   <Definition body="246" end="279" fullname="ml.svm.problem" inherit_type="local" line="9" name="Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="236">
    <Type>record</Type>
@@ -63,7 +63,7 @@
    <Field name="features"/>
    <Field name="max_value"/>
    <Field name="y"/>
-   <Signature>Problem</Signature><Field name="x"/>
+   <Signature pre="" post="" name="PROBLEM">Problem</Signature><Field name="x"/>
   </Definition>
   <Definition body="295" end="332" fullname="ml.svm.libsvm_parms" inherit_type="local" line="10" name="LibSVM_Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="280">
    <Type>record</Type>
@@ -81,7 +81,7 @@
    <Field name="shrinking"/>
    <Field name="prob_est"/>
    <Field name="lbl"/>
-   <Signature>LibSVM_Parms</Signature><Field name="weight"/>
+   <Signature pre="" post="" name="LIBSVM_PARMS">LibSVM_Parms</Signature><Field name="weight"/>
   </Definition>
   <Definition body="348" end="379" fullname="ml.svm.libsvm_model" inherit_type="local" line="11" name="LibSVM_Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="333">
    <Type>record</Type>
@@ -103,21 +103,21 @@
    <Field name="probA"/>
    <Field name="probB"/>
    <Field name="labels"/>
-   <Signature>LibSVM_Model</Signature><Field name="nSV"/>
+   <Signature pre="" post="" name="LIBSVM_MODEL">LibSVM_Model</Signature><Field name="nSV"/>
   </Definition>
   <Definition body="389" end="403" fullname="ml.svm.svm_sv" inherit_type="local" line="12" name="SVM_SV" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="380">
    <Type>record</Type>
    <Field name="v_ord"/>
-   <Signature>SVM_SV</Signature><Field name="features"/>
+   <Signature pre="" post="" name="SVM_SV">SVM_SV</Signature><Field name="features"/>
   </Definition>
   <Definition body="418" end="437" fullname="ml.svm.svm_feature" inherit_type="local" line="13" name="SVM_Feature" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="404">
    <Type>record</Type>
    <Field name="nominal"/>
-   <Signature>SVM_Feature</Signature><Field name="v"/>
+   <Signature pre="" post="" name="SVM_FEATURE">SVM_Feature</Signature><Field name="v"/>
   </Definition>
   <Definition body="508" end="1980" exported="1" fullname="ml.svm.train" inherit_type="local" line="16" name="train" source="/media/sarthak/Data/ecl-ml/ML/SVM/train.ecl" start="440">
    <Type>function</Type>
-   <Signature>DATASET(Model) train(DATASET(Parms) p, DATASET(Instance) d)</Signature><Params>
+   <Signature pre="DATASET(Model)" post="(DATASET(Parms) p, DATASET(Instance) d)" name="TRAIN">DATASET(Model) train(DATASET(Parms) p, DATASET(Instance) d)</Signature><Params>
     <Param name="p"/>
     <Param name="d"/>
    </Params>

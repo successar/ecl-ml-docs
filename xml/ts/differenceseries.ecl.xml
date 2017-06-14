@@ -8,16 +8,16 @@
    <Type>record</Type>
    <Field name="period"/>
    <Field name="dependent"/>
-   <Signature>ModelObs</Signature><Field name="model_id"/>
+   <Signature pre="" post="" name="MODELOBS">ModelObs</Signature><Field name="model_id"/>
   </Definition>
   <Definition body="103" end="121" fullname="ts.spec" inherit_type="local" line="4" name="Spec" source="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" start="96">
    <Type>record</Type>
    <Field name="model_id"/>
-   <Signature>Spec</Signature><Field name="degree"/>
+   <Signature pre="" post="" name="SPEC">Spec</Signature><Field name="degree"/>
   </Definition>
   <Definition body="298" end="1399" exported="1" fullname="ts.differenceseries" inherit_type="local" line="5" name="DifferenceSeries" source="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" start="122">
    <Type>function</Type>
-   <Signature>DATASET(ModelObs)
+   <Signature pre="DATASET(ModelObs)" post="(DATASET(ModelObs) obs,&#10;                        DATASET(Spec) degree_spec,&#10;                        BOOLEAN keepInitial=FALSE)" name="DIFFERENCESERIES">DATASET(ModelObs)
        DifferenceSeries(DATASET(ModelObs) obs,
                         DATASET(Spec) degree_spec,
                         BOOLEAN keepInitial=FALSE)</Signature><Params>

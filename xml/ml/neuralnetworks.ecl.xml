@@ -22,7 +22,7 @@
    <Type>record</Type>
    <Field name="x"/>
    <Field name="y"/>
-   <Signature>Layout_Cell</Signature><Field name="v"/>
+   <Signature pre="" post="" name="LAYOUT_CELL">Layout_Cell</Signature><Field name="v"/>
   </Definition>
   <Definition body="146" end="172" fullname="ml.layout_part" inherit_type="local" line="7" name="Layout_Part" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="132">
    <Type>record</Type>
@@ -34,7 +34,7 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_PART">Layout_Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="312" end="30180" exported="1" fullname="ml.neuralnetworks" inherit_type="local" line="9" name="NeuralNetworks" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="174">
    <Type>module</Type>
@@ -47,32 +47,32 @@
    </Params>
    <Parents/>
    <Definition body="530" end="1595" exported="1" fullname="ml.neuralnetworks.intbias" inherit_type="local" line="14" name="IntBias" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="513">
-    <Signature>IntBias</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="INTBIAS">IntBias</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2355" end="3625" exported="1" fullname="ml.neuralnetworks.intweights" inherit_type="local" line="47" name="IntWeights" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="2335">
-    <Signature>IntWeights</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="INTWEIGHTS">IntWeights</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3846" end="4066" exported="1" fullname="ml.neuralnetworks.model" inherit_type="local" line="82" name="Model" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="3798">
     <Type>function</Type>
-    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="MODEL">Model(DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="4127" end="4220" exported="1" fullname="ml.neuralnetworks.extractweights" inherit_type="local" line="87" name="ExtractWeights" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="4069">
     <Type>function</Type>
-    <Signature>ExtractWeights (DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="EXTRACTWEIGHTS">ExtractWeights (DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="4278" end="4520" exported="1" fullname="ml.neuralnetworks.extractbias" inherit_type="local" line="92" name="ExtractBias" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="4223">
     <Type>function</Type>
-    <Signature>ExtractBias (DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="EXTRACTBIAS">ExtractBias (DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="24498" end="24556" exported="1" fullname="ml.neuralnetworks.nnlearn" inherit_type="local" line="447" name="NNLearn" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="24284">
     <Type>function</Type>
-    <Signature>NNLearn(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)" name="NNLEARN">NNLearn(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
      <Param name="IntW"/>
@@ -84,14 +84,14 @@
    </Definition>
    <Definition body="24781" end="29317" exported="1" fullname="ml.neuralnetworks.nnoutput" inherit_type="local" line="449" name="NNOutput" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="24690">
     <Type>function</Type>
-    <Signature>NNOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)" name="NNOUTPUT">NNOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Learntmod"/>
     </Params>
    </Definition>
-   <Signature>NeuralNetworks (DATASET(Types.DiscreteField) net,UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)</Signature><Definition body="29430" end="30154" exported="1" fullname="ml.neuralnetworks.nnclassify" inherit_type="local" line="536" name="NNClassify" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="29337">
+   <Signature pre="" post="(DATASET(Types.DiscreteField) net,UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)" name="NEURALNETWORKS">NeuralNetworks (DATASET(Types.DiscreteField) net,UNSIGNED4 prows=0, UNSIGNED4 pcols=0, UNSIGNED4 Maxrows=0, UNSIGNED4 Maxcols=0)</Signature><Definition body="29430" end="30154" exported="1" fullname="ml.neuralnetworks.nnclassify" inherit_type="local" line="536" name="NNClassify" source="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" start="29337">
     <Type>function</Type>
-    <Signature>NNClassify(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)" name="NNCLASSIFY">NNClassify(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Learntmod"/>
     </Params>

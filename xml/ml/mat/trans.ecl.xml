@@ -3,7 +3,7 @@
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.Trans" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" target="trans.ecl.xml">
   <Definition body="97" end="184" exported="1" fullname="ml.mat.trans" inherit_type="local" line="4" name="Trans" source="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" start="56">
    <Type>function</Type>
-   <Signature>Trans(DATASET(Types.Element) d)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) d)" name="TRANS">Trans(DATASET(Types.Element) d)</Signature><Params>
     <Param name="d"/>
    </Params>
   </Definition>

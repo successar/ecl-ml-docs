@@ -1,331 +1,687 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.season_adj</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../ml/pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : UniObservation
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extendedparameters.ecl.html">extendedparameters.ecl</a>
+				</li>
+				
+				<li>
+					<a href="forecast.ecl.html">forecast.ecl</a>
+				</li>
+				
+				<li>
+					<a href="diagnosis.ecl.html">diagnosis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extract_ts.ecl.html">extract_ts.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimatedobs.ecl.html">estimatedobs.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lagcorrelations.ecl.html">lagcorrelations.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimation.ecl.html">estimation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="differenceseries.ecl.html">differenceseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="demo/pkg.toc.html">demo</a>
+				</li>
+				
+				<li>
+					<a href="accumseries.ecl.html">accumseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="seriesbymodel.ecl.html">seriesbymodel.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identification.ecl.html">identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="season_adj.ecl.html">season_adj.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_value
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : NumericField
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : season_adj
-			<ul>
-				
-		<li>
-			RECORD : ExtendedObs
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : ExtendedObs markObs(UniObservation obs, UNSIGNED seasons)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : t_value AdjustPrototype(UNSIGNED f, t_value v)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : t_value MultiplyAdj(UNSIGNED f, t_value v)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : t_value AddAdj(UNSIGNED f, t_value v)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : UniObservation adj_obs(ExtendedObs obs,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.season_adj</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ts
+							</a>
+							</li>
+						<li>
+							<a href="../ml/pkg.toc.html">
+								ml
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ts-uniobservation">
+							<a href="#ts-uniobservation" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">UNIOBSERVATION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-uniobservation">Desc</a>
+							<ul id="ts-uniobservation" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-t_value">
+							<a href="#ts-t_value" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_VALUE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-t_value">Desc</a>
+							<ul id="ts-t_value" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-numericfield">
+							<a href="#ts-numericfield" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NUMERICFIELD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-numericfield">Desc</a>
+							<ul id="ts-numericfield" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-TS-season_adj">
+							<a href="#TS-season_adj" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SEASON_ADJ</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dTS-season_adj">Desc</a>
+							<ul id="TS-season_adj" class="accordian-body collapse">
+								<li id="t-ts-season_adj-extendedobs">
+							<a href="#ts-season_adj-extendedobs" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTENDEDOBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-season_adj-extendedobs">Desc</a>
+							<ul id="ts-season_adj-extendedobs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-markobs">
+							<a href="#ts-season_adj-markobs" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">ExtendedObs</span>
+								<span class="sign-name">MARKOBS</span>
+								<span class="sign-post">(UniObservation obs, UNSIGNED seasons)</span>
+							</a> -
+							<a href="#dts-season_adj-markobs">Desc</a>
+							<ul id="ts-season_adj-markobs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-adjustprototype">
+							<a href="#ts-season_adj-adjustprototype" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">t_value</span>
+								<span class="sign-name">ADJUSTPROTOTYPE</span>
+								<span class="sign-post">(UNSIGNED f, t_value v)</span>
+							</a> -
+							<a href="#dts-season_adj-adjustprototype">Desc</a>
+							<ul id="ts-season_adj-adjustprototype" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-multiplyadj">
+							<a href="#ts-season_adj-multiplyadj" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">t_value</span>
+								<span class="sign-name">MULTIPLYADJ</span>
+								<span class="sign-post">(UNSIGNED f, t_value v)</span>
+							</a> -
+							<a href="#dts-season_adj-multiplyadj">Desc</a>
+							<ul id="ts-season_adj-multiplyadj" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-addadj">
+							<a href="#ts-season_adj-addadj" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">t_value</span>
+								<span class="sign-name">ADDADJ</span>
+								<span class="sign-post">(UNSIGNED f, t_value v)</span>
+							</a> -
+							<a href="#dts-season_adj-addadj">Desc</a>
+							<ul id="ts-season_adj-addadj" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-adj_obs">
+							<a href="#ts-season_adj-adj_obs" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">UniObservation</span>
+								<span class="sign-name">ADJ_OBS</span>
+								<span class="sign-post">(ExtendedObs obs,
                                 NumericField f,
-                                AdjustPrototype func)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(UniObservation) ApplyAdj(DATASET(UniObservation) ts,
+                                AdjustPrototype func)</span>
+							</a> -
+							<a href="#dts-season_adj-adj_obs">Desc</a>
+							<ul id="ts-season_adj-adj_obs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-applyadj">
+							<a href="#ts-season_adj-applyadj" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(UniObservation)</span>
+								<span class="sign-name">APPLYADJ</span>
+								<span class="sign-post">(DATASET(UniObservation) ts,
                                           DATASET(NumericField) adj,
                                           UNSIGNED seasons,
                                           UNSIGNED adj_col,
-                                          AdjustPrototype func)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(UniObservation) Multiply(DATASET(UniObservation) ts,
+                                          AdjustPrototype func)</span>
+							</a> -
+							<a href="#dts-season_adj-applyadj">Desc</a>
+							<ul id="ts-season_adj-applyadj" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-multiply">
+							<a href="#ts-season_adj-multiply" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(UniObservation)</span>
+								<span class="sign-name">MULTIPLY</span>
+								<span class="sign-post">(DATASET(UniObservation) ts,
                                           DATASET(NumericField) adj,
                                           UNSIGNED seasons,
-                                          UNSIGNED adj_col)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(UniObservation) Add(DATASET(UniObservation) ts,
+                                          UNSIGNED adj_col)</span>
+							</a> -
+							<a href="#dts-season_adj-multiply">Desc</a>
+							<ul id="ts-season_adj-multiply" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-season_adj-add">
+							<a href="#ts-season_adj-add" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(UniObservation)</span>
+								<span class="sign-name">ADD</span>
+								<span class="sign-post">(DATASET(UniObservation) ts,
                                      DATASET(NumericField) adj,
                                      UNSIGNeD seasons,
-                                     UNSIGNED adj_col)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : UniObservation
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_value
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : NumericField
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : season_adj
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	RECORD : ExtendedObs
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : ExtendedObs markObs(UniObservation obs, UNSIGNED seasons)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : t_value AdjustPrototype(UNSIGNED f, t_value v)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : t_value MultiplyAdj(UNSIGNED f, t_value v)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : t_value AddAdj(UNSIGNED f, t_value v)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : UniObservation adj_obs(ExtendedObs obs,
+                                     UNSIGNED adj_col)</span>
+							</a> -
+							<a href="#dts-season_adj-add">Desc</a>
+							<ul id="ts-season_adj-add" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dts-uniobservation">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">UNIOBSERVATION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-uniobservation" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-t_value">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_VALUE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-t_value" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-numericfield">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NUMERICFIELD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-numericfield" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dTS-season_adj">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SEASON_ADJ</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-TS-season_adj" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dts-season_adj-extendedobs">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTENDEDOBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-extendedobs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-markobs">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">ExtendedObs</span>
+									<span class="sign-name">MARKOBS</span>
+									<span class="sign-post">(UniObservation obs, UNSIGNED seasons)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-markobs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-adjustprototype">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">t_value</span>
+									<span class="sign-name">ADJUSTPROTOTYPE</span>
+									<span class="sign-post">(UNSIGNED f, t_value v)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-adjustprototype" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-multiplyadj">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">t_value</span>
+									<span class="sign-name">MULTIPLYADJ</span>
+									<span class="sign-post">(UNSIGNED f, t_value v)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-multiplyadj" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-addadj">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">t_value</span>
+									<span class="sign-name">ADDADJ</span>
+									<span class="sign-post">(UNSIGNED f, t_value v)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-addadj" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-adj_obs">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">UniObservation</span>
+									<span class="sign-name">ADJ_OBS</span>
+									<span class="sign-post">(ExtendedObs obs,
                                 NumericField f,
-                                AdjustPrototype func)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(UniObservation) ApplyAdj(DATASET(UniObservation) ts,
+                                AdjustPrototype func)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-adj_obs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-applyadj">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(UniObservation)</span>
+									<span class="sign-name">APPLYADJ</span>
+									<span class="sign-post">(DATASET(UniObservation) ts,
                                           DATASET(NumericField) adj,
                                           UNSIGNED seasons,
                                           UNSIGNED adj_col,
-                                          AdjustPrototype func)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(UniObservation) Multiply(DATASET(UniObservation) ts,
+                                          AdjustPrototype func)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-applyadj" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-multiply">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(UniObservation)</span>
+									<span class="sign-name">MULTIPLY</span>
+									<span class="sign-post">(DATASET(UniObservation) ts,
                                           DATASET(NumericField) adj,
                                           UNSIGNED seasons,
-                                          UNSIGNED adj_col)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-		
-		@content : Apply multiplicative seasonal adjustment factor to the series.
-		<br/>
-		
-		@return : the adjusted time series.
-		<br/>
-		
-		@param : ts the time series
-		<br/>
-		
-		@param : adj the adjustment factor, the season corresponds to the row
-		<br/>
-		
-		@param : seasons the number of seasons
-		<br/>
-		
-		@param : adj_col the column number of the seasonal factor.
-		<br/>
-		
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(UniObservation) Add(DATASET(UniObservation) ts,
+                                          UNSIGNED adj_col)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-multiply" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+									Apply multiplicative seasonal adjustment factor to the series.
+									</div>
+								</div>
+								<br/>
+								
+								<div class="row">
+									<div class="col-md-1 doc-type">Parameters</div>
+									<div class="col-md-11">
+									<table class="table">
+									<tr>
+											<td width="20%"><b>ts</b> </td>
+											<td>the time series</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>adj</b> </td>
+											<td>the adjustment factor, the season corresponds to the row</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>seasons</b> </td>
+											<td>the number of seasons</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>adj_col</b> </td>
+											<td>the column number of the seasonal factor.</td>
+										</tr>
+									</table>
+									</div>
+								</div>
+								
+								
+								<div class="row">
+									<div class="col-md-1 doc-type">Returns</div>
+									<div class="col-md-11">
+									<table class="table">
+									<tr>
+											<td>the adjusted time series.</td>
+										</tr>
+									</table>
+									</div>
+								</div>
+								
+								
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-season_adj-add">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(UniObservation)</span>
+									<span class="sign-name">ADD</span>
+									<span class="sign-post">(DATASET(UniObservation) ts,
                                      DATASET(NumericField) adj,
                                      UNSIGNeD seasons,
-                                     UNSIGNED adj_col)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-		
-		@content : Apply additive seasonal adjustment factor to the series.
-		<br/>
-		
-		@param : ts the time series
-		<br/>
-		
-		@param : adj the adjustment to be added, the season corresponds to the row
-		<br/>
-		
-		@param : seasons the number of seasons
-		<br/>
-		
-		@param : adj_col the column number of the seasonal factor
-		<br/>
-		
-		
-	</p>
-	<hr/>
-	
-	
-	
+                                     UNSIGNED adj_col)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-season_adj-add" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								<div class="row">
+									<div class="col-md-12">
+									Apply additive seasonal adjustment factor to the series.
+									</div>
+								</div>
+								<br/>
+								
+								<div class="row">
+									<div class="col-md-1 doc-type">Parameters</div>
+									<div class="col-md-11">
+									<table class="table">
+									<tr>
+											<td width="20%"><b>ts</b> </td>
+											<td>the time series</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>adj</b> </td>
+											<td>the adjustment to be added, the season corresponds to the row</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>seasons</b> </td>
+											<td>the number of seasons</td>
+										</tr>
+									<tr>
+											<td width="20%"><b>adj_col</b> </td>
+											<td>the column number of the seasonal factor</td>
+										</tr>
+									</table>
+									</div>
+								</div>
+								
+								
+								
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

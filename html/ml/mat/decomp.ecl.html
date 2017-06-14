@@ -1,234 +1,606 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Mat.Decomp</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.mat.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Decomp
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : b_sub(DATASET(Types.Element) U, DATASET(Types.Element) B)
-			<ul>
+				<li>
+					<a href="householder.ecl.html">householder.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sub.ecl.html">sub.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mu.ecl.html">mu.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lowertriangle.ecl.html">lowertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="uppertriangle.ecl.html">uppertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale.ecl.html">scale.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identity.ecl.html">identity.ecl</a>
+				</li>
+				
+				<li>
+					<a href="inv.ecl.html">inv.ecl</a>
+				</li>
+				
+				<li>
+					<a href="vec.ecl.html">vec.ecl</a>
+				</li>
+				
+				<li>
+					<a href="debug.ecl.html">debug.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eig.ecl.html">eig.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rounddelta.ecl.html">rounddelta.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svd.ecl.html">svd.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rankelements.ecl.html">rankelements.ecl</a>
+				</li>
+				
+				<li>
+					<a href="setdimension.ecl.html">setdimension.ecl</a>
+				</li>
+				
+				<li>
+					<a href="det.ecl.html">det.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mahalanobis.ecl.html">mahalanobis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cov.ecl.html">cov.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randmat.ecl.html">randmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lanczos.ecl.html">lanczos.ecl</a>
+				</li>
+				
+				<li>
+					<a href="add.ecl.html">add.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pow.ecl.html">pow.ecl</a>
+				</li>
+				
+				<li>
+					<a href="insertcolumn.ecl.html">insertcolumn.ecl</a>
+				</li>
+				
+				<li>
+					<a href="has.ecl.html">has.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pca.ecl.html">pca.ecl</a>
+				</li>
+				
+				<li>
+					<a href="thin.ecl.html">thin.ecl</a>
+				</li>
+				
+				<li>
+					<a href="decomp.ecl.html">decomp.ecl</a>
+				</li>
+				
+				<li>
+					<a href="is.ecl.html">is.ecl</a>
+				</li>
+				
+				<li>
+					<a href="repmat.ecl.html">repmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eq.ecl.html">eq.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mul.ecl.html">mul.ecl</a>
+				</li>
+				
+				<li>
+					<a href="each.ecl.html">each.ecl</a>
+				</li>
+				
+				<li>
+					<a href="strict.ecl.html">strict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="substitute.ecl.html">substitute.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : f_sub(DATASET(Types.Element) L, DATASET(Types.Element) B)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.Element) Cholesky(DATASET(Types.Element) matrix)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.Element) LU(DATASET(Types.Element) matrix)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LComp(DATASET(Types.Element) l_u)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : UComp(DATASET(Types.Element) l_u)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : qr_comp
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.Element) QR(DATASET(Types.Element) matrix)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : QComp(DATASET(Types.Element) matrix)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RComp(DATASET(Types.Element) matrix)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Decomp
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : b_sub(DATASET(Types.Element) U, DATASET(Types.Element) B)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : f_sub(DATASET(Types.Element) L, DATASET(Types.Element) B)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.Element) Cholesky(DATASET(Types.Element) matrix)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.Element) LU(DATASET(Types.Element) matrix)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : LComp(DATASET(Types.Element) l_u)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : UComp(DATASET(Types.Element) l_u)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : qr_comp
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.Element) QR(DATASET(Types.Element) matrix)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : QComp(DATASET(Types.Element) matrix)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RComp(DATASET(Types.Element) matrix)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Mat.Decomp</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.mat.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Mat-Decomp">
+							<a href="#ML-Mat-Decomp" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DECOMP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Mat-Decomp">Desc</a>
+							<ul id="ML-Mat-Decomp" class="accordian-body collapse">
+								<li id="t-ml-mat-decomp-b_sub">
+							<a href="#ml-mat-decomp-b_sub" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">B_SUB</span>
+								<span class="sign-post">(DATASET(Types.Element) U, DATASET(Types.Element) B)</span>
+							</a> -
+							<a href="#dml-mat-decomp-b_sub">Desc</a>
+							<ul id="ml-mat-decomp-b_sub" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-f_sub">
+							<a href="#ml-mat-decomp-f_sub" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">F_SUB</span>
+								<span class="sign-post">(DATASET(Types.Element) L, DATASET(Types.Element) B)</span>
+							</a> -
+							<a href="#dml-mat-decomp-f_sub">Desc</a>
+							<ul id="ml-mat-decomp-f_sub" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-cholesky">
+							<a href="#ml-mat-decomp-cholesky" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.Element)</span>
+								<span class="sign-name">CHOLESKY</span>
+								<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+							</a> -
+							<a href="#dml-mat-decomp-cholesky">Desc</a>
+							<ul id="ml-mat-decomp-cholesky" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-lu">
+							<a href="#ml-mat-decomp-lu" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.Element)</span>
+								<span class="sign-name">LU</span>
+								<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+							</a> -
+							<a href="#dml-mat-decomp-lu">Desc</a>
+							<ul id="ml-mat-decomp-lu" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-lcomp">
+							<a href="#ml-mat-decomp-lcomp" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LCOMP</span>
+								<span class="sign-post">(DATASET(Types.Element) l_u)</span>
+							</a> -
+							<a href="#dml-mat-decomp-lcomp">Desc</a>
+							<ul id="ml-mat-decomp-lcomp" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-ucomp">
+							<a href="#ml-mat-decomp-ucomp" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">UCOMP</span>
+								<span class="sign-post">(DATASET(Types.Element) l_u)</span>
+							</a> -
+							<a href="#dml-mat-decomp-ucomp">Desc</a>
+							<ul id="ml-mat-decomp-ucomp" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">QR_COMP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-qr">
+							<a href="#ml-mat-decomp-qr" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.Element)</span>
+								<span class="sign-name">QR</span>
+								<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+							</a> -
+							<a href="#dml-mat-decomp-qr">Desc</a>
+							<ul id="ml-mat-decomp-qr" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-qcomp">
+							<a href="#ml-mat-decomp-qcomp" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">QCOMP</span>
+								<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+							</a> -
+							<a href="#dml-mat-decomp-qcomp">Desc</a>
+							<ul id="ml-mat-decomp-qcomp" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-decomp-rcomp">
+							<a href="#ml-mat-decomp-rcomp" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RCOMP</span>
+								<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+							</a> -
+							<a href="#dml-mat-decomp-rcomp">Desc</a>
+							<ul id="ml-mat-decomp-rcomp" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Mat-Decomp">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DECOMP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Mat-Decomp" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-mat-decomp-b_sub">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">B_SUB</span>
+									<span class="sign-post">(DATASET(Types.Element) U, DATASET(Types.Element) B)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-b_sub" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-f_sub">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">F_SUB</span>
+									<span class="sign-post">(DATASET(Types.Element) L, DATASET(Types.Element) B)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-f_sub" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-cholesky">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.Element)</span>
+									<span class="sign-name">CHOLESKY</span>
+									<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-cholesky" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-lu">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.Element)</span>
+									<span class="sign-name">LU</span>
+									<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-lu" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-lcomp">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LCOMP</span>
+									<span class="sign-post">(DATASET(Types.Element) l_u)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-lcomp" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-ucomp">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">UCOMP</span>
+									<span class="sign-post">(DATASET(Types.Element) l_u)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-ucomp" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">QR_COMP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-qr">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.Element)</span>
+									<span class="sign-name">QR</span>
+									<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-qr" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-qcomp">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">QCOMP</span>
+									<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-qcomp" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-decomp-rcomp">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RCOMP</span>
+									<span class="sign-post">(DATASET(Types.Element) matrix)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-decomp-rcomp" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

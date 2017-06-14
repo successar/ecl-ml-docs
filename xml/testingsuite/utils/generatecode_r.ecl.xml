@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Utils.GenerateCode_R" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode_R.ecl" target="generatecode_r.ecl.xml">
   <Definition body="48" end="2091" exported="1" fullname="testingsuite.utils.generatecode_r" inherit_type="local" line="1" name="GenerateCode_R" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode_R.ecl" start="0">
    <Type>macro</Type>
-   <Signature>GenerateCode_R(algorithm, datasetNames)</Signature><Params>
+   <Signature pre="" post="(algorithm, datasetNames)" name="GENERATECODE_R">GenerateCode_R(algorithm, datasetNames)</Signature><Params>
     <Param name="algorithm"/>
     <Param name="datasetNames"/>
    </Params>

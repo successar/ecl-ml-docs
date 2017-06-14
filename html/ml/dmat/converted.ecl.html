@@ -1,248 +1,490 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.DMat.Converted</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pbblas/pkg.toc.html">
-				pbblas
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../pbblas/types.ecl.html">
-				pbblas.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../mat/types.ecl.html">
-				ml.mat.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Layout_Part
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="decomp.ecl.html">decomp.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale.ecl.html">scale.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identity.ecl.html">identity.ecl</a>
+				</li>
+				
+				<li>
+					<a href="add.ecl.html">add.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mul.ecl.html">mul.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sub.ecl.html">sub.ecl</a>
+				</li>
+				
+				<li>
+					<a href="inv.ecl.html">inv.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : Layout_Cell
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : Converted
-			<ul>
-				
-		<li>
-			RECORD : Work1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromCells(PBblas.IMatrix_Map mat_map, DATASET(Layout_Cell) cells,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.DMat.Converted</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pbblas/pkg.toc.html">
+								pbblas
+							</a>
+							</li>
+						<li>
+							<a href="../../pbblas/types.ecl.html">
+								pbblas.types
+							</a>
+							</li>
+						<li>
+							<a href="../types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="../mat/types.ecl.html">
+								ml.mat.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-dmat-layout_part">
+							<a href="#ml-dmat-layout_part" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAYOUT_PART</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-dmat-layout_part">Desc</a>
+							<ul id="ml-dmat-layout_part" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-dmat-layout_cell">
+							<a href="#ml-dmat-layout_cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAYOUT_CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-dmat-layout_cell">Desc</a>
+							<ul id="ml-dmat-layout_cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-DMat-Converted">
+							<a href="#ML-DMat-Converted" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONVERTED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-DMat-Converted">Desc</a>
+							<ul id="ML-DMat-Converted" class="accordian-body collapse">
+								<li id="t-ml-dmat-converted-work1">
+							<a href="#ml-dmat-converted-work1" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">WORK1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-dmat-converted-work1">Desc</a>
+							<ul id="ml-dmat-converted-work1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-dmat-converted-fromcells">
+							<a href="#ml-dmat-converted-fromcells" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMCELLS</span>
+								<span class="sign-post">(PBblas.IMatrix_Map mat_map, DATASET(Layout_Cell) cells,
                    Types.dimension_t insert_columns=0,
-                   Types.value_t insert_value=0.0d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromPart2Cell(DATASET(Layout_Part) part_recs)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromNumericFieldDS(DATASET(ML_Types.NumericField) cells,
+                   Types.value_t insert_value=0.0d)</span>
+							</a> -
+							<a href="#dml-dmat-converted-fromcells">Desc</a>
+							<ul id="ml-dmat-converted-fromcells" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-dmat-converted-frompart2cell">
+							<a href="#ml-dmat-converted-frompart2cell" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMPART2CELL</span>
+								<span class="sign-post">(DATASET(Layout_Part) part_recs)</span>
+							</a> -
+							<a href="#dml-dmat-converted-frompart2cell">Desc</a>
+							<ul id="ml-dmat-converted-frompart2cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-dmat-converted-fromnumericfieldds">
+							<a href="#ml-dmat-converted-fromnumericfieldds" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMNUMERICFIELDDS</span>
+								<span class="sign-post">(DATASET(ML_Types.NumericField) cells,
                            PBblas.IMatrix_Map mat_map,
                            Types.dimension_t insert_columns=0,
-                           Types.value_t insert_value=0.0d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromPart2DS(DATASET(Layout_Part) part_recs)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromElement(DATASET(Mat_Types.Element) elms,
+                           Types.value_t insert_value=0.0d)</span>
+							</a> -
+							<a href="#dml-dmat-converted-fromnumericfieldds">Desc</a>
+							<ul id="ml-dmat-converted-fromnumericfieldds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-dmat-converted-frompart2ds">
+							<a href="#ml-dmat-converted-frompart2ds" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMPART2DS</span>
+								<span class="sign-post">(DATASET(Layout_Part) part_recs)</span>
+							</a> -
+							<a href="#dml-dmat-converted-frompart2ds">Desc</a>
+							<ul id="ml-dmat-converted-frompart2ds" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-dmat-converted-fromelement">
+							<a href="#ml-dmat-converted-fromelement" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMELEMENT</span>
+								<span class="sign-post">(DATASET(Mat_Types.Element) elms,
                      PBblas.IMatrix_Map mat_map,
                      Types.dimension_t ins_cols=0,
-                     Types.value_t ins_val=0.0d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromPart2Elm(DATASET(Layout_Part) part_recs)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Layout_Part
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Layout_Cell
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : Converted
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	RECORD : Work1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromCells(PBblas.IMatrix_Map mat_map, DATASET(Layout_Cell) cells,
+                     Types.value_t ins_val=0.0d)</span>
+							</a> -
+							<a href="#dml-dmat-converted-fromelement">Desc</a>
+							<ul id="ml-dmat-converted-fromelement" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-dmat-converted-frompart2elm">
+							<a href="#ml-dmat-converted-frompart2elm" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMPART2ELM</span>
+								<span class="sign-post">(DATASET(Layout_Part) part_recs)</span>
+							</a> -
+							<a href="#dml-dmat-converted-frompart2elm">Desc</a>
+							<ul id="ml-dmat-converted-frompart2elm" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-dmat-layout_part">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAYOUT_PART</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-layout_part" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-dmat-layout_cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAYOUT_CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-layout_cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-DMat-Converted">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONVERTED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-DMat-Converted" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-dmat-converted-work1">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">WORK1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-converted-work1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-dmat-converted-fromcells">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMCELLS</span>
+									<span class="sign-post">(PBblas.IMatrix_Map mat_map, DATASET(Layout_Cell) cells,
                    Types.dimension_t insert_columns=0,
-                   Types.value_t insert_value=0.0d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromPart2Cell(DATASET(Layout_Part) part_recs)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromNumericFieldDS(DATASET(ML_Types.NumericField) cells,
+                   Types.value_t insert_value=0.0d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-converted-fromcells" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-dmat-converted-frompart2cell">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMPART2CELL</span>
+									<span class="sign-post">(DATASET(Layout_Part) part_recs)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-converted-frompart2cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-dmat-converted-fromnumericfieldds">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMNUMERICFIELDDS</span>
+									<span class="sign-post">(DATASET(ML_Types.NumericField) cells,
                            PBblas.IMatrix_Map mat_map,
                            Types.dimension_t insert_columns=0,
-                           Types.value_t insert_value=0.0d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromPart2DS(DATASET(Layout_Part) part_recs)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromElement(DATASET(Mat_Types.Element) elms,
+                           Types.value_t insert_value=0.0d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-converted-fromnumericfieldds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-dmat-converted-frompart2ds">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMPART2DS</span>
+									<span class="sign-post">(DATASET(Layout_Part) part_recs)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-converted-frompart2ds" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-dmat-converted-fromelement">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMELEMENT</span>
+									<span class="sign-post">(DATASET(Mat_Types.Element) elms,
                      PBblas.IMatrix_Map mat_map,
                      Types.dimension_t ins_cols=0,
-                     Types.value_t ins_val=0.0d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromPart2Elm(DATASET(Layout_Part) part_recs)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+                     Types.value_t ins_val=0.0d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-converted-fromelement" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-dmat-converted-frompart2elm">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMPART2ELM</span>
+									<span class="sign-post">(DATASET(Layout_Part) part_recs)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-dmat-converted-frompart2elm" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -1,154 +1,331 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.LibSVM.svm_predict</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.svm.libsvm.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="constants.ecl.html">
-				ml.svm.libsvm.constants
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="converted.ecl.html">
-				ml.svm.libsvm.converted
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Model
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="constants.ecl.html">constants.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svm_predict.ecl.html">svm_predict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svm_cross_validate.ecl.html">svm_cross_validate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="test/pkg.toc.html">test</a>
+				</li>
+				
+				<li>
+					<a href="svm_train.ecl.html">svm_train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="libsvm_version.ecl.html">libsvm_version.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : Node
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Rqst
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ErrCode
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : R8Entry
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : DATASET(R8Entry) svm_predict(Model ecl_model, DATASET(Node) ecl_nodes,
-                                    Rqst output_request )
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Node
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Rqst
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ErrCode
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : R8Entry
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : DATASET(R8Entry) svm_predict(Model ecl_model, DATASET(Node) ecl_nodes,
-                                    Rqst output_request )
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.LibSVM.svm_predict</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="types.ecl.html">
+								ml.svm.libsvm.types
+							</a>
+							</li>
+						<li>
+							<a href="constants.ecl.html">
+								ml.svm.libsvm.constants
+							</a>
+							</li>
+						<li>
+							<a href="converted.ecl.html">
+								ml.svm.libsvm.converted
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-svm-libsvm-model">
+							<a href="#ml-svm-libsvm-model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-model">Desc</a>
+							<ul id="ml-svm-libsvm-model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-node">
+							<a href="#ml-svm-libsvm-node" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-node">Desc</a>
+							<ul id="ml-svm-libsvm-node" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RQST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-errcode">
+							<a href="#ml-svm-libsvm-errcode" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ERRCODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-errcode">Desc</a>
+							<ul id="ml-svm-libsvm-errcode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-r8entry">
+							<a href="#ml-svm-libsvm-r8entry" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">R8ENTRY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-r8entry">Desc</a>
+							<ul id="ml-svm-libsvm-r8entry" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-svm_predict">
+							<a href="#ml-svm-libsvm-svm_predict" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">DATASET(R8Entry)</span>
+								<span class="sign-name">SVM_PREDICT</span>
+								<span class="sign-post">(Model ecl_model, DATASET(Node) ecl_nodes,
+                                    Rqst output_request )</span>
+							</a> -
+							<a href="#dml-svm-libsvm-svm_predict">Desc</a>
+							<ul id="ml-svm-libsvm-svm_predict" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-svm-libsvm-model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-node">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-node" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RQST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-errcode">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ERRCODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-errcode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-r8entry">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">R8ENTRY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-r8entry" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-svm_predict">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(R8Entry)</span>
+									<span class="sign-name">SVM_PREDICT</span>
+									<span class="sign-post">(Model ecl_model, DATASET(Node) ecl_nodes,
+                                    Rqst output_request )</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-svm_predict" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

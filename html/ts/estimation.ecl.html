@@ -1,186 +1,420 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.Estimation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../pbblas/pkg.toc.html">
-				pbblas
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			ATTRIBUTE : value_t
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extendedparameters.ecl.html">extendedparameters.ecl</a>
+				</li>
+				
+				<li>
+					<a href="forecast.ecl.html">forecast.ecl</a>
+				</li>
+				
+				<li>
+					<a href="diagnosis.ecl.html">diagnosis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extract_ts.ecl.html">extract_ts.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimatedobs.ecl.html">estimatedobs.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lagcorrelations.ecl.html">lagcorrelations.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimation.ecl.html">estimation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="differenceseries.ecl.html">differenceseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="demo/pkg.toc.html">demo</a>
+				</li>
+				
+				<li>
+					<a href="accumseries.ecl.html">accumseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="seriesbymodel.ecl.html">seriesbymodel.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identification.ecl.html">identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="season_adj.ecl.html">season_adj.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : dim_t
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : matrix_t
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Model_cell
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Extend_Spec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Init_Work
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Irls_Work
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(TS.Types.Model_Parameters)
-       Estimation(DATASET(TS.Types.UniObservation) obs,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.Estimation</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ts
+							</a>
+							</li>
+						<li>
+							<a href="../pbblas/pkg.toc.html">
+								pbblas
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ts-value_t">
+							<a href="#ts-value_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VALUE_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-value_t">Desc</a>
+							<ul id="ts-value_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-dim_t">
+							<a href="#ts-dim_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIM_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-dim_t">Desc</a>
+							<ul id="ts-dim_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-matrix_t">
+							<a href="#ts-matrix_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MATRIX_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-matrix_t">Desc</a>
+							<ul id="ts-matrix_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-model_cell">
+							<a href="#ts-model_cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-model_cell">Desc</a>
+							<ul id="ts-model_cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-extend_spec">
+							<a href="#ts-extend_spec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTEND_SPEC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-extend_spec">Desc</a>
+							<ul id="ts-extend_spec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-init_work">
+							<a href="#ts-init_work" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INIT_WORK</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-init_work">Desc</a>
+							<ul id="ts-init_work" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-irls_work">
+							<a href="#ts-irls_work" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">IRLS_WORK</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-irls_work">Desc</a>
+							<ul id="ts-irls_work" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-estimation">
+							<a href="#ts-estimation" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(TS.Types.Model_Parameters)</span>
+								<span class="sign-name">ESTIMATION</span>
+								<span class="sign-post">(DATASET(TS.Types.UniObservation) obs,
                   DATASET(TS.Types.Model_Spec) spec,
-                  UNSIGNED2 maxIter=100, REAL4 epsilon=0.001)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	ATTRIBUTE : value_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : dim_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : matrix_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Model_cell
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Extend_Spec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Init_Work
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Irls_Work
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(TS.Types.Model_Parameters)
-       Estimation(DATASET(TS.Types.UniObservation) obs,
+                  UNSIGNED2 maxIter=100, REAL4 epsilon=0.001)</span>
+							</a> -
+							<a href="#dts-estimation">Desc</a>
+							<ul id="ts-estimation" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dts-value_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VALUE_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-value_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-dim_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIM_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-dim_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-matrix_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MATRIX_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-matrix_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-model_cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-model_cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-extend_spec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTEND_SPEC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-extend_spec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-init_work">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INIT_WORK</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-init_work" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-irls_work">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">IRLS_WORK</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-irls_work" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-estimation">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(TS.Types.Model_Parameters)</span>
+									<span class="sign-name">ESTIMATION</span>
+									<span class="sign-post">(DATASET(TS.Types.UniObservation) obs,
                   DATASET(TS.Types.Model_Spec) spec,
-                  UNSIGNED2 maxIter=100, REAL4 epsilon=0.001)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+                  UNSIGNED2 maxIter=100, REAL4 epsilon=0.001)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-estimation" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

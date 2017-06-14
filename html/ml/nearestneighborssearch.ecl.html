@@ -1,219 +1,551 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.NearestNeighborsSearch</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="trees.ecl.html">
-				ml.trees
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : NearestNeighborsSearch
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			RECORD : leafData
-			<ul>
+				<li>
+					<a href="nearestneighborssearch.ecl.html">nearestneighborssearch.ecl</a>
+				</li>
+				
+				<li>
+					<a href="ensemble.ecl.html">ensemble.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sampling.ecl.html">sampling.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mat/pkg.toc.html">mat</a>
+				</li>
+				
+				<li>
+					<a href="appendid.ecl.html">appendid.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
+				
+				<li>
+					<a href="lsa/pkg.toc.html">lsa</a>
+				</li>
+				
+				<li>
+					<a href="config.ecl.html">config.ecl</a>
+				</li>
+				
+				<li>
+					<a href="naivebayes.ecl.html">naivebayes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepregression/pkg.toc.html">stepregression</a>
+				</li>
+				
+				<li>
+					<a href="populationestimate.ecl.html">populationestimate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svm/pkg.toc.html">svm</a>
+				</li>
+				
+				<li>
+					<a href="version.ecl.html">version.ecl</a>
+				</li>
+				
+				<li>
+					<a href="generate.ecl.html">generate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="docs/pkg.toc.html">docs</a>
+				</li>
+				
+				<li>
+					<a href="nfoldcrossvalidation.ecl.html">nfoldcrossvalidation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic/pkg.toc.html">stepwiselogistic</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fromfield.ecl.html">fromfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lazy.ecl.html">lazy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="correlate.ecl.html">correlate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="associate.ecl.html">associate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tofield.ecl.html">tofield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks.ecl.html">neuralnetworks.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="deeplearning.ecl.html">deeplearning.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils.ecl.html">utils.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trees.ecl.html">trees.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regress_poly_x.ecl.html">regress_poly_x.ecl</a>
+				</li>
+				
+				<li>
+					<a href="dmat/pkg.toc.html">dmat</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregates.ecl.html">fieldaggregates.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : NN
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : DEFAULT
-			<ul>
-				
-		<li>
-			FUNCTION : SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : KDTreeNNSearch(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)
-			<ul>
-				
-		<li>
-			RECORD : query_point
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : PORT KNNeighbors(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries)  F
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : PORT SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData) F
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : NearestNeighborsSearch
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	RECORD : leafData
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : NN
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : DEFAULT
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	MODULE : KDTreeNNSearch(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="nearestneighborssearch.ecl.html">
-					ml.nearestneighborssearch.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	RECORD : query_point
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : PORT KNNeighbors(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries)  F
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : PORT SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData) F
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.NearestNeighborsSearch</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="trees.ecl.html">
+								ml.trees
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-NearestNeighborsSearch">
+							<a href="#ML-NearestNeighborsSearch" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NEARESTNEIGHBORSSEARCH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-NearestNeighborsSearch">Desc</a>
+							<ul id="ML-NearestNeighborsSearch" class="accordian-body collapse">
+								<li id="t-ml-nearestneighborssearch-leafdata">
+							<a href="#ml-nearestneighborssearch-leafdata" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEAFDATA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-nearestneighborssearch-leafdata">Desc</a>
+							<ul id="ml-nearestneighborssearch-leafdata" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-nearestneighborssearch-nn">
+							<a href="#ml-nearestneighborssearch-nn" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-nearestneighborssearch-nn">Desc</a>
+							<ul id="ml-nearestneighborssearch-nn" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-NearestNeighborsSearch-DEFAULT">
+							<a href="#ML-NearestNeighborsSearch-DEFAULT" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEFAULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-NearestNeighborsSearch-DEFAULT">Desc</a>
+							<ul id="ML-NearestNeighborsSearch-DEFAULT" class="accordian-body collapse">
+								<li id="t-ml-nearestneighborssearch-default-searchc">
+							<a href="#ml-nearestneighborssearch-default-searchc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SEARCHC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)</span>
+							</a> -
+							<a href="#dml-nearestneighborssearch-default-searchc">Desc</a>
+							<ul id="ml-nearestneighborssearch-default-searchc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-nearestneighborssearch-kdtreennsearch">
+							<a href="#ml-nearestneighborssearch-kdtreennsearch" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">KDTREENNSEARCH</span>
+								<span class="sign-post">(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)</span>
+							</a> -
+							<a href="#dml-nearestneighborssearch-kdtreennsearch">Desc</a>
+							<ul id="ml-nearestneighborssearch-kdtreennsearch" class="accordian-body collapse">
+								<li id="t-ml-nearestneighborssearch-kdtreennsearch-query_point">
+							<a href="#ml-nearestneighborssearch-kdtreennsearch-query_point" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">QUERY_POINT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-nearestneighborssearch-kdtreennsearch-query_point">Desc</a>
+							<ul id="ml-nearestneighborssearch-kdtreennsearch-query_point" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-nearestneighborssearch-kdtreennsearch-knneighbors">
+							<a href="#ml-nearestneighborssearch-kdtreennsearch-knneighbors" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">PORT</span>
+								<span class="sign-name">KNNEIGHBORS</span>
+								<span class="sign-post">(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries) := F</span>
+							</a> -
+							<a href="#dml-nearestneighborssearch-kdtreennsearch-knneighbors">Desc</a>
+							<ul id="ml-nearestneighborssearch-kdtreennsearch-knneighbors" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-nearestneighborssearch-kdtreennsearch-searchc">
+							<a href="#ml-nearestneighborssearch-kdtreennsearch-searchc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">PORT</span>
+								<span class="sign-name">SEARCHC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData):= F</span>
+							</a> -
+							<a href="#dml-nearestneighborssearch-kdtreennsearch-searchc">Desc</a>
+							<ul id="ml-nearestneighborssearch-kdtreennsearch-searchc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-NearestNeighborsSearch">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NEARESTNEIGHBORSSEARCH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-NearestNeighborsSearch" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-nearestneighborssearch-leafdata">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEAFDATA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-nearestneighborssearch-leafdata" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-nearestneighborssearch-nn">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-nearestneighborssearch-nn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-NearestNeighborsSearch-DEFAULT">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEFAULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-NearestNeighborsSearch-DEFAULT" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-nearestneighborssearch-default-searchc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SEARCHC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-nearestneighborssearch-default-searchc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-nearestneighborssearch-kdtreennsearch">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">KDTREENNSEARCH</span>
+									<span class="sign-post">(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-nearestneighborssearch-kdtreennsearch" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="nearestneighborssearch.ecl.html">
+												ml.nearestneighborssearch.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-nearestneighborssearch-kdtreennsearch-query_point">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">QUERY_POINT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-nearestneighborssearch-kdtreennsearch-query_point" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-nearestneighborssearch-kdtreennsearch-knneighbors">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">PORT</span>
+									<span class="sign-name">KNNEIGHBORS</span>
+									<span class="sign-post">(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries) := F</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-nearestneighborssearch-kdtreennsearch-knneighbors" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-nearestneighborssearch-kdtreennsearch-searchc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">PORT</span>
+									<span class="sign-name">SEARCHC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData):= F</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-nearestneighborssearch-kdtreennsearch-searchc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

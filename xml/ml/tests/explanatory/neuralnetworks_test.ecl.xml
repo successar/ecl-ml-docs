@@ -18,80 +18,80 @@
    <Type>record</Type>
    <Field name="x"/>
    <Field name="y"/>
-   <Signature>Layout_Cell</Signature><Field name="v"/>
+   <Signature pre="" post="" name="LAYOUT_CELL">Layout_Cell</Signature><Field name="v"/>
   </Definition>
   <Definition body="456" end="527" fullname="ml.tests.explanatory.net" inherit_type="local" line="9" name="net" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="450">
-   <Signature>net</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NET">net</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="557" end="607" fullname="ml.tests.explanatory.label_record" inherit_type="local" line="17" name="label_record" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="542">
    <Type>record</Type>
    <Field name="id"/>
    <Field name="f1"/>
-   <Signature>label_record</Signature><Field name="f2"/>
+   <Signature pre="" post="" name="LABEL_RECORD">label_record</Signature><Field name="f2"/>
   </Definition>
   <Definition body="623" end="687" fullname="ml.tests.explanatory.value_record" inherit_type="local" line="22" name="value_record" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="608">
    <Type>record</Type>
    <Field name="id"/>
    <Field name="f1"/>
    <Field name="f2"/>
-   <Signature>value_record</Signature><Field name="f3"/>
+   <Signature pre="" post="" name="VALUE_RECORD">value_record</Signature><Field name="f3"/>
   </Definition>
   <Definition body="701" end="843" fullname="ml.tests.explanatory.input_data" inherit_type="local" line="28" name="input_data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="688">
-   <Signature>input_data</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INPUT_DATA">input_data</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="852" end="967" fullname="ml.tests.explanatory.label" inherit_type="local" line="36" name="label" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="844">
-   <Signature>label</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LABEL">label</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1306" end="1311" fullname="ml.tests.explanatory.alpha" inherit_type="local" line="54" name="ALPHA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1292">
-   <Signature>REAL8 ALPHA</Signature><Type>attribute</Type>
+   <Signature pre="REAL8" post="" name="ALPHA">REAL8 ALPHA</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1327" end="1331" fullname="ml.tests.explanatory.lambda" inherit_type="local" line="55" name="LAMBDA" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1312">
-   <Signature>REAL8 LAMBDA</Signature><Type>attribute</Type>
+   <Signature pre="REAL8" post="" name="LAMBDA">REAL8 LAMBDA</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1352" end="1354" fullname="ml.tests.explanatory.maxiter" inherit_type="local" line="56" name="MaxIter" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1332">
-   <Signature>UNSIGNED2 MaxIter</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED2" post="" name="MAXITER">UNSIGNED2 MaxIter</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1372" end="1374" fullname="ml.tests.explanatory.prows" inherit_type="local" line="57" name="prows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1355">
-   <Signature>UNSIGNED4 prows</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="PROWS">UNSIGNED4 prows</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1392" end="1394" fullname="ml.tests.explanatory.pcols" inherit_type="local" line="58" name="pcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1375">
-   <Signature>UNSIGNED4 pcols</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="PCOLS">UNSIGNED4 pcols</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1414" end="1416" fullname="ml.tests.explanatory.maxrows" inherit_type="local" line="59" name="Maxrows" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1395">
-   <Signature>UNSIGNED4 Maxrows</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="MAXROWS">UNSIGNED4 Maxrows</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1436" end="1438" fullname="ml.tests.explanatory.maxcols" inherit_type="local" line="60" name="Maxcols" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1417">
-   <Signature>UNSIGNED4 Maxcols</Signature><Type>attribute</Type>
+   <Signature pre="UNSIGNED4" post="" name="MAXCOLS">UNSIGNED4 Maxcols</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1479" end="1535" fullname="ML.NeuralNetworks" inherit_type="local" line="62" name="NN" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1474" target="../../neuralnetworks.ecl.xml">
    <Type>module</Type>
    <Definition body="530" end="1595" exported="1" fullname="ml.neuralnetworks.intbias" inherit_type="local" line="14" name="IntBias" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="513" target="../../neuralnetworks.ecl.xml">
-    <Signature>IntBias</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="INTBIAS">IntBias</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2355" end="3625" exported="1" fullname="ml.neuralnetworks.intweights" inherit_type="local" line="47" name="IntWeights" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="2335" target="../../neuralnetworks.ecl.xml">
-    <Signature>IntWeights</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="INTWEIGHTS">IntWeights</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3846" end="4066" exported="1" fullname="ml.neuralnetworks.model" inherit_type="local" line="82" name="Model" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="3798" target="../../neuralnetworks.ecl.xml">
     <Type>function</Type>
-    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="MODEL">Model(DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="4127" end="4220" exported="1" fullname="ml.neuralnetworks.extractweights" inherit_type="local" line="87" name="ExtractWeights" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="4069" target="../../neuralnetworks.ecl.xml">
     <Type>function</Type>
-    <Signature>ExtractWeights (DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="EXTRACTWEIGHTS">ExtractWeights (DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="4278" end="4520" exported="1" fullname="ml.neuralnetworks.extractbias" inherit_type="local" line="92" name="ExtractBias" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="4223" target="../../neuralnetworks.ecl.xml">
     <Type>function</Type>
-    <Signature>ExtractBias (DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="EXTRACTBIAS">ExtractBias (DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="24498" end="24556" exported="1" fullname="ml.neuralnetworks.nnlearn" inherit_type="local" line="447" name="NNLearn" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="24284" target="../../neuralnetworks.ecl.xml">
     <Type>function</Type>
-    <Signature>NNLearn(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)" name="NNLEARN">NNLearn(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) Dep,DATASET(Mat.Types.MUElement) IntW, DATASET(Mat.Types.MUElement) Intb, REAL8 LAMBDA=0.001, REAL8 ALPHA=0.1, UNSIGNED2 MaxIter=100)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
      <Param name="IntW"/>
@@ -103,70 +103,70 @@
    </Definition>
    <Definition body="24781" end="29317" exported="1" fullname="ml.neuralnetworks.nnoutput" inherit_type="local" line="449" name="NNOutput" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="24690" target="../../neuralnetworks.ecl.xml">
     <Type>function</Type>
-    <Signature>NNOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)" name="NNOUTPUT">NNOutput(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Learntmod"/>
     </Params>
    </Definition>
    <Definition body="29430" end="30154" exported="1" fullname="ml.neuralnetworks.nnclassify" inherit_type="local" line="536" name="NNClassify" source="/media/sarthak/Data/ecl-ml/./ML/NeuralNetworks.ecl" start="29337" target="../../neuralnetworks.ecl.xml">
     <Type>function</Type>
-    <Signature>NNClassify(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)" name="NNCLASSIFY">NNClassify(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) Learntmod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Learntmod"/>
     </Params>
    </Definition>
-   <Signature>NN</Signature><Parents/>
+   <Signature pre="" post="" name="NN">NN</Signature><Parents/>
   </Definition>
   <Definition body="1614" end="1629" fullname="ml.tests.explanatory.intw" inherit_type="local" line="64" name="IntW" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1607">
-   <Signature>IntW</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INTW">IntW</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1637" end="1649" fullname="ml.tests.explanatory.intb" inherit_type="local" line="65" name="Intb" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1630">
-   <Signature>Intb</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INTB">Intb</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1750" end="1820" fullname="ml.tests.explanatory.learntmodel" inherit_type="local" line="70" name="Learntmodel" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1736">
-   <Signature>Learntmodel</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LEARNTMODEL">Learntmodel</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1882" end="1905" fullname="ml.tests.explanatory.nnmodel" inherit_type="local" line="72" name="NNModel" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1872">
-   <Signature>NNModel</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NNMODEL">NNModel</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1955" end="1987" fullname="ml.tests.explanatory.fw" inherit_type="local" line="75" name="FW" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="1950">
-   <Signature>FW</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="FW">FW</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2027" end="2056" fullname="ml.tests.explanatory.fb" inherit_type="local" line="78" name="FB" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="2022">
-   <Signature>FB</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="FB">FB</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="36" end="64" fullname="ml.tests.explanatory.depdatac_toname" inherit_type="local" line="81" name="depDataC_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//----------------------------------</Signature><Params>
+   <Signature pre="" post="" name="DEPDATAC_TONAME">//----------------------------------</Signature><Params>
     <Param name="i"/>
    </Params>
   </Definition>
   <Definition body="38" end="76" fullname="ml.tests.explanatory.indepdatac_toname" inherit_type="local" line="81" name="indepDataC_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//------------------------------------</Signature><Params>
+   <Signature pre="" post="" name="INDEPDATAC_TONAME">//------------------------------------</Signature><Params>
     <Param name="i"/>
    </Params>
   </Definition>
   <Definition body="2099" end="2135" fullname="ml.tests.explanatory.aend" inherit_type="local" line="82" name="AEnd" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="2092">
-   <Signature>AEnd</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="AEND">AEnd</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="38" end="65" fullname="ml.tests.explanatory.depdatac_tonumber" inherit_type="local" line="83" name="depDataC_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//------------------------------------</Signature><Params>
+   <Signature pre="" post="" name="DEPDATAC_TONUMBER">//------------------------------------</Signature><Params>
     <Param name="s"/>
    </Params>
   </Definition>
   <Definition body="40" end="77" fullname="ml.tests.explanatory.indepdatac_tonumber" inherit_type="local" line="83" name="indepDataC_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//--------------------------------------</Signature><Params>
+   <Signature pre="" post="" name="INDEPDATAC_TONUMBER">//--------------------------------------</Signature><Params>
     <Param name="s"/>
    </Params>
   </Definition>
   <Definition body="2212" end="2251" fullname="ml.tests.explanatory.class" inherit_type="local" line="85" name="Class" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/NeuralNetworks_test.ecl" start="2204">
-   <Signature>Class</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="CLASS">Class</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2485" end="2654" fullname="ml.tests.explanatory.depdatac" inherit_type="local" line="85" name="depDataC" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
-   <Signature>/---------------------------------------------------------------------------
+   <Signature pre="" post="" name="DEPDATAC">/---------------------------------------------------------------------------
 // Macro takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
@@ -193,14 +193,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('&lt;xml/&gt;')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('&lt;xml/&gt;');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -213,7 +213,7 @@
   // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="2485" end="2654" fullname="ml.tests.explanatory.indepdatac" inherit_type="local" line="85" name="indepDataC" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
-   <Signature>/---------------------------------------------------------------------------
+   <Signature pre="" post="" name="INDEPDATAC">/---------------------------------------------------------------------------
 // Macro takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
@@ -240,14 +240,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('&lt;xml/&gt;')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('&lt;xml/&gt;');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -260,10 +260,10 @@
   // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="14" end="2800" fullname="ml.tests.explanatory.depdatac_map" inherit_type="local" line="87" name="depDataC_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
-   <Signature>//------------</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DEPDATAC_MAP">//------------</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="16" end="2800" fullname="ml.tests.explanatory.indepdatac_map" inherit_type="local" line="87" name="indepDataC_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
-   <Signature>//--------------</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INDEPDATAC_MAP">//--------------</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/NeuralNetworks.ecl" name="ML.NeuralNetworks" target="../../neuralnetworks.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FromField.ecl" name="ML.FromField" target="../../fromfield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/AutoBVMap.ecl" name="PBblas.AutoBVMap" target="../../../pbblas/autobvmap.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MU.ecl" name="PBblas.MU" target="../../../pbblas/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Apply2Elements.ecl" name="PBblas.Apply2Elements" target="../../../pbblas/apply2elements.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" name="PBblas.IElementFunc" target="../../../pbblas/ielementfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_daxpy.ecl" name="PBblas.PB_daxpy" target="../../../pbblas/pb_daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" name="PBblas.HadamardProduct" target="../../../pbblas/hadamardproduct.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" name="ML.AppendID" target="../../appendid.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../../pbblas/pb_dscal.ecl.xml"/></Meta>

@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Classification.TestDecisionTreeClassifier" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestDecisionTreeClassifier.ecl" target="testdecisiontreeclassifier.ecl.xml">
   <Definition body="249" end="3477" exported="1" fullname="testingsuite.classification.testdecisiontreeclassifier" inherit_type="local" line="10" name="TestDecisionTreeClassifier" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestDecisionTreeClassifier.ecl" start="186">
    <Type>macro</Type>
-   <Signature>TestDecisionTreeClassifier(raw_dataset_name, repeats)</Signature><Params>
+   <Signature pre="" post="(raw_dataset_name, repeats)" name="TESTDECISIONTREECLASSIFIER">TestDecisionTreeClassifier(raw_dataset_name, repeats)</Signature><Params>
     <Param name="raw_dataset_name"/>
     <Param name="repeats"/>
    </Params>

@@ -5,17 +5,17 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="399" end="418" fullname="pbblas.blas.dimension_t" inherit_type="local" line="7" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="385">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="433" end="448" fullname="pbblas.blas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="419">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="463" end="479" fullname="pbblas.blas.matrix_t" inherit_type="local" line="9" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="449">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="724" end="1458" exported="1" fullname="pbblas.blas.dgemm" inherit_type="local" line="11" name="dgemm" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" start="481">
    <Type>embed</Type>
-   <Signature>matrix_t dgemm(BOOLEAN transposeA, BOOLEAN transposeB,
+   <Signature pre="matrix_t" post="(BOOLEAN transposeA, BOOLEAN transposeB,&#10;                      dimension_t M, dimension_t N, dimension_t K,&#10;                      value_t alpha, matrix_t A, matrix_t B,&#10;                      value_t beta, matrix_t C=[])" name="DGEMM">matrix_t dgemm(BOOLEAN transposeA, BOOLEAN transposeB,
                       dimension_t M, dimension_t N, dimension_t K,
                       value_t alpha, matrix_t A, matrix_t B,
                       value_t beta, matrix_t C=[])</Signature><Params>

@@ -1,170 +1,367 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.grid_search</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.svm
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.svm.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
-				std.system.thorlib
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : G_Result
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="libsvm/pkg.toc.html">libsvm</a>
+				</li>
+				
+				<li>
+					<a href="scale_instance.ecl.html">scale_instance.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
+				
+				<li>
+					<a href="grid_search.ecl.html">grid_search.ecl</a>
+				</li>
+				
+				<li>
+					<a href="predict.ecl.html">predict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cross_validate.ecl.html">cross_validate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="train.ecl.html">train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale_factors.ecl.html">scale_factors.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : Grid_Plan
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Grid_Args
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : T_Base
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : T_Parm
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Inst
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : grid_search(Grid_Plan plan, T_Base base, DATASET(Inst) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : G_Result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Grid_Plan
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Grid_Args
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : T_Base
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : T_Parm
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Inst
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : grid_search(Grid_Plan plan, T_Base base, DATASET(Inst) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.grid_search</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml.svm
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.svm.types
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+								std.system.thorlib
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-svm-g_result">
+							<a href="#ml-svm-g_result" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">G_RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-g_result">Desc</a>
+							<ul id="ml-svm-g_result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-grid_plan">
+							<a href="#ml-svm-grid_plan" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GRID_PLAN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-grid_plan">Desc</a>
+							<ul id="ml-svm-grid_plan" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-grid_args">
+							<a href="#ml-svm-grid_args" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GRID_ARGS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-grid_args">Desc</a>
+							<ul id="ml-svm-grid_args" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-t_base">
+							<a href="#ml-svm-t_base" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_BASE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-t_base">Desc</a>
+							<ul id="ml-svm-t_base" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-t_parm">
+							<a href="#ml-svm-t_parm" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_PARM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-t_parm">Desc</a>
+							<ul id="ml-svm-t_parm" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-inst">
+							<a href="#ml-svm-inst" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-inst">Desc</a>
+							<ul id="ml-svm-inst" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-grid_search">
+							<a href="#ml-svm-grid_search" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GRID_SEARCH</span>
+								<span class="sign-post">(Grid_Plan plan, T_Base base, DATASET(Inst) d)</span>
+							</a> -
+							<a href="#dml-svm-grid_search">Desc</a>
+							<ul id="ml-svm-grid_search" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-svm-g_result">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">G_RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-g_result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-grid_plan">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GRID_PLAN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-grid_plan" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-grid_args">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GRID_ARGS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-grid_args" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-t_base">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_BASE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-t_base" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-t_parm">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_PARM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-t_parm" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-inst">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-inst" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-grid_search">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GRID_SEARCH</span>
+									<span class="sign-post">(Grid_Plan plan, T_Base base, DATASET(Inst) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-grid_search" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

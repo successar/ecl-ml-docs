@@ -23,20 +23,20 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="380" end="392" inherit_type="local" line="10" name="Side" source="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" start="373">
-   <Signature>Side</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SIDE">Side</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="404" end="420" inherit_type="local" line="11" name="Triangle" source="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" start="393">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="432" end="448" inherit_type="local" line="12" name="Diagonal" source="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" start="421">
-   <Signature>Diagonal</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIAGONAL">Diagonal</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="523" end="1662" exported="1" fullname="ml.dmat.inv" inherit_type="local" line="14" name="Inv" source="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" start="450">
    <Type>function</Type>
-   <Signature>Inv(IMatrix_Map map_a, DATASET(Part) A, BOOLEAN findLeft=FALSE)</Signature><Params>
+   <Signature pre="" post="(IMatrix_Map map_a, DATASET(Part) A, BOOLEAN findLeft=FALSE)" name="INV">Inv(IMatrix_Map map_a, DATASET(Part) A, BOOLEAN findLeft=FALSE)</Signature><Params>
     <Param name="map_a"/>
     <Param name="A"/>
     <Param name="findLeft"/>

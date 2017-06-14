@@ -26,87 +26,87 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="156" end="176" fullname="PBblas.IMatrix_Map" inherit_type="local" line="8" name="IMatrix_Map" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="142" target="../../../pbblas/imatrix_map.ecl.xml">
    <Type>module</Type>
    <Definition body="110" end="109" exported="1" fullname="pbblas.imatrix_map.matrix_rows" inherit_type="local" line="5" name="matrix_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="71" target="../../../pbblas/imatrix_map.ecl.xml">
-    <Signature>Types.dimension_t  matrix_rows</Signature><Type>attribute</Type>
+    <Signature pre="Types.dimension_t" post="" name="MATRIX_ROWS">Types.dimension_t  matrix_rows</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="151" end="150" exported="1" fullname="pbblas.imatrix_map.matrix_cols" inherit_type="local" line="6" name="matrix_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="112" target="../../../pbblas/imatrix_map.ecl.xml">
-    <Signature>Types.dimension_t  matrix_cols</Signature><Type>attribute</Type>
+    <Signature pre="Types.dimension_t" post="" name="MATRIX_COLS">Types.dimension_t  matrix_cols</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="191" end="190" exported="1" fullname="pbblas.imatrix_map.nodes_used" inherit_type="local" line="7" name="nodes_used" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="153" target="../../../pbblas/imatrix_map.ecl.xml">
-    <Signature>Types.node_t       nodes_used</Signature><Type>attribute</Type>
+    <Signature pre="Types.node_t" post="" name="NODES_USED">Types.node_t       nodes_used</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="236" end="235" exported="1" fullname="pbblas.imatrix_map.partitions_used" inherit_type="local" line="8" name="partitions_used" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="193" target="../../../pbblas/imatrix_map.ecl.xml">
-    <Signature>Types.partition_t  partitions_used</Signature><Type>attribute</Type>
+    <Signature pre="Types.partition_t" post="" name="PARTITIONS_USED">Types.partition_t  partitions_used</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="276" end="275" exported="1" fullname="pbblas.imatrix_map.row_blocks" inherit_type="local" line="9" name="row_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="238" target="../../../pbblas/imatrix_map.ecl.xml">
-    <Signature>Types.partition_t  row_blocks</Signature><Type>attribute</Type>
+    <Signature pre="Types.partition_t" post="" name="ROW_BLOCKS">Types.partition_t  row_blocks</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="316" end="315" exported="1" fullname="pbblas.imatrix_map.col_blocks" inherit_type="local" line="10" name="col_blocks" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="278" target="../../../pbblas/imatrix_map.ecl.xml">
-    <Signature>Types.partition_t  col_blocks</Signature><Type>attribute</Type>
+    <Signature pre="Types.partition_t" post="" name="COL_BLOCKS">Types.partition_t  col_blocks</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="382" end="381" exported="1" fullname="pbblas.imatrix_map.row_block" inherit_type="local" line="11" name="row_block" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="318" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.dimension_t  row_block(Types.dimension_t mat_row)</Signature><Params>
+    <Signature pre="Types.dimension_t" post="(Types.dimension_t mat_row)" name="ROW_BLOCK">Types.dimension_t  row_block(Types.dimension_t mat_row)</Signature><Params>
      <Param name="mat_row"/>
     </Params>
    </Definition>
    <Definition body="448" end="447" exported="1" fullname="pbblas.imatrix_map.col_block" inherit_type="local" line="12" name="col_block" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="384" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.dimension_t  col_block(Types.dimension_t mat_col)</Signature><Params>
+    <Signature pre="Types.dimension_t" post="(Types.dimension_t mat_col)" name="COL_BLOCK">Types.dimension_t  col_block(Types.dimension_t mat_col)</Signature><Params>
      <Param name="mat_col"/>
     </Params>
    </Definition>
    <Definition body="535" end="534" exported="1" fullname="pbblas.imatrix_map.assigned_part" inherit_type="local" line="13" name="assigned_part" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="450" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.partition_t  assigned_part(Types.dimension_t rb, Types.dimension_t cb)</Signature><Params>
+    <Signature pre="Types.partition_t" post="(Types.dimension_t rb, Types.dimension_t cb)" name="ASSIGNED_PART">Types.partition_t  assigned_part(Types.dimension_t rb, Types.dimension_t cb)</Signature><Params>
      <Param name="rb"/>
      <Param name="cb"/>
     </Params>
    </Definition>
    <Definition body="599" end="598" exported="1" fullname="pbblas.imatrix_map.assigned_node" inherit_type="local" line="14" name="assigned_node" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="537" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.node_t       assigned_node(Types.partition_t p)</Signature><Params>
+    <Signature pre="Types.node_t" post="(Types.partition_t p)" name="ASSIGNED_NODE">Types.node_t       assigned_node(Types.partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="659" end="658" exported="1" fullname="pbblas.imatrix_map.first_row" inherit_type="local" line="15" name="first_row" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="601" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.dimension_t  first_row(Types.partition_t p)</Signature><Params>
+    <Signature pre="Types.dimension_t" post="(Types.partition_t p)" name="FIRST_ROW">Types.dimension_t  first_row(Types.partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="719" end="718" exported="1" fullname="pbblas.imatrix_map.first_col" inherit_type="local" line="16" name="first_col" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="661" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.dimension_t  first_col(Types.partition_t p)</Signature><Params>
+    <Signature pre="Types.dimension_t" post="(Types.partition_t p)" name="FIRST_COL">Types.dimension_t  first_col(Types.partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="779" end="778" exported="1" fullname="pbblas.imatrix_map.part_rows" inherit_type="local" line="17" name="part_rows" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="721" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.dimension_t  part_rows(Types.partition_t p)</Signature><Params>
+    <Signature pre="Types.dimension_t" post="(Types.partition_t p)" name="PART_ROWS">Types.dimension_t  part_rows(Types.partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
    <Definition body="839" end="838" exported="1" fullname="pbblas.imatrix_map.part_cols" inherit_type="local" line="18" name="part_cols" source="/media/sarthak/Data/ecl-ml/./PBblas/IMatrix_Map.ecl" start="781" target="../../../pbblas/imatrix_map.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.dimension_t  part_cols(Types.partition_t p)</Signature><Params>
+    <Signature pre="Types.dimension_t" post="(Types.partition_t p)" name="PART_COLS">Types.dimension_t  part_cols(Types.partition_t p)</Signature><Params>
      <Param name="p"/>
     </Params>
    </Definition>
-   <Signature>IMatrix_Map</Signature><Parents/>
+   <Signature pre="" post="" name="IMATRIX_MAP">IMatrix_Map</Signature><Parents/>
   </Definition>
   <Definition body="184" end="196" inherit_type="local" line="9" name="Side" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="177">
-   <Signature>Side</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SIDE">Side</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="208" end="224" inherit_type="local" line="10" name="Triangle" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="197">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="236" end="252" inherit_type="local" line="11" name="Diagonal" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="225">
-   <Signature>Diagonal</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIAGONAL">Diagonal</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="302" end="1137" exported="1" fullname="ml.lsa.densesvd.qr" inherit_type="local" line="13" name="QR" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="254">
    <Type>module</Type>
@@ -116,17 +116,17 @@
    </Params>
    <Parents/>
    <Definition body="329" end="352" inherit_type="local" line="14" name="qr_comp" shared="1" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="312">
-    <Signature>qr_comp</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="QR_COMP">qr_comp</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="369" end="1043" exported="1" fullname="ml.lsa.densesvd.qr.qr" inherit_type="local" line="15" name="QR" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="355">
     <Type>function</Type>
-    <Signature>QR()</Signature><Params/>
+    <Signature pre="" post="()" name="QR">QR()</Signature><Params/>
    </Definition>
    <Definition body="1062" end="1088" exported="1" fullname="ml.lsa.densesvd.qr.qcomp" inherit_type="local" line="27" name="QComp" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="1047">
-    <Signature>QComp</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="QCOMP">QComp</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>QR(IMatrix_map d_map, DATASET(Part) D)</Signature><Definition body="1106" end="1132" exported="1" fullname="ml.lsa.densesvd.qr.rcomp" inherit_type="local" line="28" name="RComp" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="1091">
-    <Signature>RComp</Signature><Type>attribute</Type>
+   <Signature pre="" post="(IMatrix_map d_map, DATASET(Part) D)" name="QR">QR(IMatrix_map d_map, DATASET(Part) D)</Signature><Definition body="1106" end="1132" exported="1" fullname="ml.lsa.densesvd.qr.rcomp" inherit_type="local" line="28" name="RComp" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/QR.ecl" start="1091">
+    <Signature pre="" post="" name="RCOMP">RComp</Signature><Type>attribute</Type>
    </Definition>
   </Definition>
  </Source>

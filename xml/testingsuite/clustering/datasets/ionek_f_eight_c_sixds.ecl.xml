@@ -14,12 +14,12 @@
     <Field name="features_6"/>
     <Field name="features_7"/>
     <Field name="features_8"/>
-    <Signature>ionek_f_eight_c_sixDSRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="IONEK_F_EIGHT_C_SIXDSRECORD">ionek_f_eight_c_sixDSRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="504" end="136508" exported="1" fullname="testingsuite.clustering.datasets.ionek_f_eight_c_sixds.content" inherit_type="local" line="15" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_eight_c_sixDS.ecl" start="487">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>ionek_f_eight_c_sixDS</Signature><Parents/>
+   <Signature pre="" post="" name="IONEK_F_EIGHT_C_SIXDS">ionek_f_eight_c_sixDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

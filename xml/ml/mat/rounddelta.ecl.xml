@@ -3,7 +3,7 @@
  <Source name="ML.Mat.RoundDelta" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/RoundDelta.ecl" target="rounddelta.ecl.xml">
   <Definition body="157" end="328" exported="1" fullname="ml.mat.rounddelta" inherit_type="local" line="4" name="RoundDelta" source="/media/sarthak/Data/ecl-ml/ML/Mat/RoundDelta.ecl" start="78">
    <Type>function</Type>
-   <Signature>RoundDelta(DATASET(Types.Element) d, REAL delta=Config.RoundingError)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) d, REAL delta=Config.RoundingError)" name="ROUNDDELTA">RoundDelta(DATASET(Types.Element) d, REAL delta=Config.RoundingError)</Signature><Params>
     <Param name="d"/>
     <Param name="delta"/>
    </Params>

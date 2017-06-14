@@ -9,13 +9,13 @@
   </Import>
   <Definition body="98" end="387" fullname="ml.mat.inverse" inherit_type="local" line="4" name="Inverse" source="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" start="57">
    <Type>function</Type>
-   <Signature>Inverse(DATASET(Types.Element) matrix)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) matrix)" name="INVERSE">Inverse(DATASET(Types.Element) matrix)</Signature><Params>
     <Param name="matrix"/>
    </Params>
   </Definition>
   <Definition body="432" end="503" exported="1" fullname="ml.mat.inv" inherit_type="local" line="14" name="Inv" source="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" start="388">
    <Type>function</Type>
-   <Signature>Inv(DATASET(Types.Element) matrix)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) matrix)" name="INV">Inv(DATASET(Types.Element) matrix)</Signature><Params>
     <Param name="matrix"/>
    </Params>
   </Definition>

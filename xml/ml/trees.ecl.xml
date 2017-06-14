@@ -10,16 +10,16 @@
   <Definition body="68" end="59715" exported="1" fullname="ML.Trees" inherit_type="local" line="5" name="Trees" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="53">
    <Type>module</Type>
    <Definition body="97" end="259" exported="1" fullname="ml.trees.model_map" inherit_type="local" line="6" name="model_Map" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="78">
-    <Signature>model_Map</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MODEL_MAP">model_Map</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="291" end="341" exported="1" fullname="ml.trees.model_fields" inherit_type="local" line="7" name="model_fields" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="262">
-    <Signature>STRING model_fields</Signature><Type>attribute</Type>
+    <Signature pre="STRING" post="" name="MODEL_FIELDS">STRING model_fields</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="413" end="577" exported="1" fullname="ml.trees.modelc_map" inherit_type="local" line="8" name="modelC_Map" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="393">
-    <Signature>modelC_Map</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MODELC_MAP">modelC_Map</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="610" end="662" exported="1" fullname="ml.trees.modelc_fields" inherit_type="local" line="9" name="modelC_fields" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="580">
-    <Signature>STRING modelC_fields</Signature><Type>attribute</Type>
+    <Signature pre="STRING" post="" name="MODELC_FIELDS">STRING modelC_fields</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="728" end="784" exported="1" fullname="ml.trees.node" inherit_type="local" line="10" name="Node" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="714">
     <Type>record</Type>
@@ -27,7 +27,7 @@
     <Field name="level"/>
     <Field name="id"/>
     <Field name="number"/>
-    <Signature>Node</Signature><Field name="value"/>
+    <Signature pre="" post="" name="NODE">Node</Signature><Field name="value"/>
    </Definition>
    <Definition body="801" end="890" exported="1" fullname="ml.trees.snode" inherit_type="local" line="14" name="sNode" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="787">
     <Type>record</Type>
@@ -37,7 +37,7 @@
     <Field name="id"/>
     <Field name="number"/>
     <Field name="value"/>
-    <Signature>sNode</Signature><Field name="HighBranch"/>
+    <Signature pre="" post="" name="SNODE">sNode</Signature><Field name="HighBranch"/>
    </Definition>
    <Definition body="919" end="1126" exported="1" fullname="ml.trees.nodeinstdiscrete" inherit_type="local" line="19" name="NodeInstDiscrete" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="893">
     <Type>record</Type>
@@ -47,7 +47,7 @@
     <Field name="number"/>
     <Field name="value"/>
     <Field name="depend"/>
-    <Signature>NodeInstDiscrete</Signature><Field name="support"/>
+    <Signature pre="" post="" name="NODEINSTDISCRETE">NodeInstDiscrete</Signature><Field name="support"/>
    </Definition>
    <Definition body="1143" end="1161" exported="1" fullname="ml.trees.wnode" inherit_type="local" line="25" name="wNode" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="1129">
     <Type>record</Type>
@@ -57,7 +57,7 @@
     <Field name="number"/>
     <Field name="value"/>
     <Field name="depend"/>
-    <Signature>wNode</Signature><Field name="support"/>
+    <Signature pre="" post="" name="WNODE">wNode</Signature><Field name="support"/>
    </Definition>
    <Definition body="1179" end="1317" exported="1" fullname="ml.trees.cnode" inherit_type="local" line="26" name="cNode" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="1164">
     <Type>record</Type>
@@ -67,7 +67,7 @@
     <Field name="id"/>
     <Field name="number"/>
     <Field name="value"/>
-    <Signature>cNode</Signature><Field name="high_fork"/>
+    <Signature pre="" post="" name="CNODE">cNode</Signature><Field name="high_fork"/>
    </Definition>
    <Definition body="1336" end="1719" exported="1" fullname="ml.trees.splitd" inherit_type="local" line="32" name="SplitD" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="1320">
     <Type>record</Type>
@@ -76,7 +76,7 @@
     <Field name="number"/>
     <Field name="value"/>
     <Field name="new_node_id"/>
-    <Signature>SplitD</Signature><Field name="support"/>
+    <Signature pre="" post="" name="SPLITD">SplitD</Signature><Field name="support"/>
    </Definition>
    <Definition body="1738" end="1746" exported="1" fullname="ml.trees.splitf" inherit_type="local" line="39" name="SplitF" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="1722">
     <Type>record</Type>
@@ -85,7 +85,7 @@
     <Field name="number"/>
     <Field name="value"/>
     <Field name="new_node_id"/>
-    <Signature>SplitF</Signature><Field name="support"/>
+    <Signature pre="" post="" name="SPLITF">SplitF</Signature><Field name="support"/>
    </Definition>
    <Definition body="1765" end="2141" exported="1" fullname="ml.trees.splitc" inherit_type="local" line="40" name="SplitC" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="1749">
     <Type>record</Type>
@@ -94,7 +94,7 @@
     <Field name="number"/>
     <Field name="value"/>
     <Field name="high_fork"/>
-    <Signature>SplitC</Signature><Field name="new_node_id"/>
+    <Signature pre="" post="" name="SPLITC">SplitC</Signature><Field name="new_node_id"/>
    </Definition>
    <Definition body="2205" end="2596" fullname="ml.trees.final_node" inherit_type="local" line="48" name="final_node" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="2185">
     <Type>record</Type>
@@ -102,7 +102,7 @@
     <Field name="root_level"/>
     <Field name="final_node"/>
     <Field name="final_level"/>
-    <Signature>final_node</Signature><Field name="final_class"/>
+    <Signature pre="" post="" name="FINAL_NODE">final_node</Signature><Field name="final_class"/>
    </Definition>
    <Definition body="2627" end="2796" fullname="ml.trees.final_node_instance" inherit_type="local" line="55" name="final_node_instance" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="2598">
     <Type>record</Type>
@@ -113,7 +113,7 @@
     <Field name="final_class"/>
     <Field name="instance_id"/>
     <Field name="instance_class"/>
-    <Signature>final_node_instance</Signature><Field name="match"/>
+    <Signature pre="" post="" name="FINAL_NODE_INSTANCE">final_node_instance</Signature><Field name="match"/>
    </Definition>
    <Definition body="2818" end="2965" fullname="ml.trees.node_error" inherit_type="local" line="60" name="node_error" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="2798">
     <Type>record</Type>
@@ -124,14 +124,14 @@
     <Field name="final_class"/>
     <Field name="e"/>
     <Field name="cnt"/>
-    <Signature>node_error</Signature><Field name="NxErr_est"/>
+    <Signature pre="" post="" name="NODE_ERROR">node_error</Signature><Field name="NxErr_est"/>
    </Definition>
    <Definition body="3060" end="3211" fullname="ml.trees.to_node_error" inherit_type="local" line="66" name="to_node_error" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="3017">
     <Type>transform</Type>
     <Params>
      <Param name="l"/>
     </Params>
-    <Signature>node_error to_node_error(SplitF l)</Signature><Return>node_error</Return>
+    <Signature pre="node_error" post="(SplitF l)" name="TO_NODE_ERROR">node_error to_node_error(SplitF l)</Signature><Return>node_error</Return>
    </Definition>
    <Definition body="3785" end="12018" exported="1" fullname="ml.trees.kdtree" inherit_type="local" line="78" name="KdTree" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="3684">
     <Type>module</Type>
@@ -142,53 +142,53 @@
     </Params>
     <Parents/>
     <Definition body="8288" end="8330" fullname="ml.trees.kdtree.res" inherit_type="local" line="133" name="Res" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="8275">
-     <Signature>Res</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="RES">Res</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8349" end="8360" exported="1" fullname="ml.trees.kdtree.splits" inherit_type="local" line="134" name="Splits" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="8333">
-     <Signature>Splits</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="SPLITS">Splits</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8435" end="8447" exported="1" fullname="ml.trees.kdtree.partitioned" inherit_type="local" line="135" name="Partitioned" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="8414">
-     <Signature>Partitioned</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="PARTITIONED">Partitioned</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8505" end="8582" exported="1" fullname="ml.trees.kdtree.counts" inherit_type="local" line="136" name="Counts" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="8489">
-     <Signature>Counts</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="COUNTS">Counts</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8653" end="8670" exported="1" fullname="ml.trees.kdtree.countmean" inherit_type="local" line="137" name="CountMean" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="8634">
-     <Signature>CountMean</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="COUNTMEAN">CountMean</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8696" end="8718" exported="1" fullname="ml.trees.kdtree.countvariance" inherit_type="local" line="138" name="CountVariance" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="8673">
-     <Signature>CountVariance</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="COUNTVARIANCE">CountVariance</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8738" end="8852" exported="1" fullname="ml.trees.kdtree.extents" inherit_type="local" line="139" name="Extents" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="8721">
-     <Signature>Extents</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="EXTENTS">Extents</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="9342" end="9390" exported="1" fullname="ml.trees.kdtree.fulltree" inherit_type="local" line="146" name="FullTree" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="9324">
-     <Signature>FullTree</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="FULLTREE">FullTree</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="10587" end="10613" exported="1" fullname="ml.trees.kdtree.boundaries" inherit_type="local" line="160" name="Boundaries" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="10568">
-     <Signature>Boundaries</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="BOUNDARIES">Boundaries</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="10636" end="10666" exported="1" fullname="ml.trees.kdtree.lowbounds" inherit_type="local" line="161" name="LowBounds" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="10618">
-     <Signature>LowBounds</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="LOWBOUNDS">LowBounds</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="10688" end="10720" exported="1" fullname="ml.trees.kdtree.upbounds" inherit_type="local" line="162" name="UpBounds" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="10671">
-     <Signature>UpBounds</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="UPBOUNDS">UpBounds</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>KdTree(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)</Signature><Definition body="10810" end="12012" exported="1" fullname="ml.trees.kdtree.newinstances" inherit_type="local" line="163" name="NewInstances" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="10723">
+    <Signature pre="" post="(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)" name="KDTREE">KdTree(DATASET(ML.Types.NumericField) f,Types.t_level Depth=10,Types.t_level MedianDepth=0)</Signature><Definition body="10810" end="12012" exported="1" fullname="ml.trees.kdtree.newinstances" inherit_type="local" line="163" name="NewInstances" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="10723">
      <Type>module</Type>
      <Params>
       <Param name="newData"/>
       <Param name="model"/>
      </Params>
      <Parents/>
-     <Signature>NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)</Signature><Definition body="11953" end="12005" exported="1" fullname="ml.trees.kdtree.newinstances.locations" inherit_type="local" line="180" name="Locations" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="11935">
-      <Signature>Locations</Signature><Type>attribute</Type>
+     <Signature pre="" post="(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)" name="NEWINSTANCES">NewInstances(DATASET(Types.NumericField) newData, DATASET(Node) model= Splits)</Signature><Definition body="11953" end="12005" exported="1" fullname="ml.trees.kdtree.newinstances.locations" inherit_type="local" line="180" name="Locations" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="11935">
+      <Signature pre="" post="" name="LOCATIONS">Locations</Signature><Type>attribute</Type>
      </Definition>
     </Definition>
    </Definition>
    <Definition body="12399" end="16824" exported="1" fullname="ml.trees.partitionginiimpuritybased" inherit_type="local" line="187" name="PartitionGiniImpurityBased" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="12300">
     <Type>function</Type>
-    <Signature>PartitionGiniImpurityBased	(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)</Signature><Params>
+    <Signature pre="" post="(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)" name="PARTITIONGINIIMPURITYBASED">PartitionGiniImpurityBased	(DATASET(wNode) nodes, Types.t_level p_level, REAL Purity=1.0)</Signature><Params>
      <Param name="nodes"/>
      <Param name="p_level"/>
      <Param name="Purity"/>
@@ -204,39 +204,39 @@
     </Params>
     <Parents/>
     <Definition body="22337" end="22381" fullname="ml.trees.decision.res" inherit_type="local" line="322" name="res" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="22324">
-     <Signature>res</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="RES">res</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="22740" end="22850" exported="1" fullname="ml.trees.decision.splits" inherit_type="local" line="330" name="Splits" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="22724">
-     <Signature>Splits</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="SPLITS">Splits</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="22921" end="22933" fullname="ml.trees.decision.nsplits" inherit_type="local" line="331" name="nsplits" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="22904">
-     <Signature>nsplits</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="NSPLITS">nsplits</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="22957" end="22980" exported="1" fullname="ml.trees.decision.partitioned" inherit_type="local" line="332" name="Partitioned" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="22936">
-     <Signature>Partitioned</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="PARTITIONED">Partitioned</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="23606" end="23684" exported="1" fullname="ml.trees.decision.modes" inherit_type="local" line="347" name="Modes" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="23591">
-     <Signature>Modes</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="MODES">Modes</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="23706" end="23748" exported="1" fullname="ml.trees.decision.precision" inherit_type="local" line="348" name="Precision" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="23687">
-     <Signature>Precision</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="PRECISION">Precision</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="23767" end="23869" exported="1" fullname="ml.trees.decision.counts" inherit_type="local" line="349" name="Counts" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="23751">
-     <Signature>Counts</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="COUNTS">Counts</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="23939" end="23988" exported="1" fullname="ml.trees.decision.purities" inherit_type="local" line="350" name="Purities" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="23921">
-     <Signature>Purities</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="PURITIES">Purities</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="24010" end="24027" exported="1" fullname="ml.trees.decision.countmean" inherit_type="local" line="351" name="CountMean" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="23991">
-     <Signature>CountMean</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="COUNTMEAN">CountMean</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>Decision(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)</Signature><Definition body="24053" end="24075" exported="1" fullname="ml.trees.decision.countvariance" inherit_type="local" line="352" name="CountVariance" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="24030">
-     <Signature>CountVariance</Signature><Type>attribute</Type>
+    <Signature pre="" post="(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)" name="DECISION">Decision(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,Types.t_level Depth=10,REAL Purity=1.0)</Signature><Definition body="24053" end="24075" exported="1" fullname="ml.trees.decision.countvariance" inherit_type="local" line="352" name="CountVariance" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="24030">
+     <Signature pre="" post="" name="COUNTVARIANCE">CountVariance</Signature><Type>attribute</Type>
     </Definition>
    </Definition>
    <Definition body="24416" end="25506" exported="1" fullname="ml.trees.splitsginiimpurbased" inherit_type="local" line="357" name="SplitsGiniImpurBased" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="24257">
     <Type>function</Type>
-    <Signature>SplitsGiniImpurBased(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
+    <Signature pre="" post="(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&#9;Types.t_level Depth=10,REAL Purity=1.0)" name="SPLITSGINIIMPURBASED">SplitsGiniImpurBased(DATASET(ML.Types.DiscreteField) ind,DATASET(ML.Types.DiscreteField) dep,
 																Types.t_level Depth=10,REAL Purity=1.0)</Signature><Params>
      <Param name="ind"/>
      <Param name="dep"/>
@@ -246,35 +246,35 @@
    </Definition>
    <Definition body="25723" end="32076" exported="1" fullname="ml.trees.splitsinfogainratiobased" inherit_type="local" line="383" name="SplitsInfoGainRatioBased" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="25619">
     <Type>function</Type>
-    <Signature>SplitsInfoGainRatioBased(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)" name="SPLITSINFOGAINRATIOBASED">SplitsInfoGainRatioBased(DATASET(Types.DiscreteField) indep, DATASET(Types.DiscreteField) dep)</Signature><Params>
      <Param name="indep"/>
      <Param name="dep"/>
     </Params>
    </Definition>
    <Definition body="32307" end="32826" exported="1" fullname="ml.trees.splitinstances" inherit_type="local" line="490" name="SplitInstances" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="32223">
     <Type>function</Type>
-    <Signature>SplitInstances(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</Signature><Params>
+    <Signature pre="" post="(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)" name="SPLITINSTANCES">SplitInstances(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</Signature><Params>
      <Param name="mod"/>
      <Param name="Indep"/>
     </Params>
    </Definition>
    <Definition body="32914" end="35011" exported="1" fullname="ml.trees.splitinstancesd" inherit_type="local" line="499" name="SplitInstancesD" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="32829">
     <Type>function</Type>
-    <Signature>SplitInstancesD(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</Signature><Params>
+    <Signature pre="" post="(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)" name="SPLITINSTANCESD">SplitInstancesD(DATASET(Splitf) mod, DATASET(ML.Types.DiscreteField) Indep)</Signature><Params>
      <Param name="mod"/>
      <Param name="Indep"/>
     </Params>
    </Definition>
    <Definition body="35109" end="35509" exported="1" fullname="ml.trees.classprobdistribd" inherit_type="local" line="531" name="ClassProbDistribD" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="35014">
     <Type>function</Type>
-    <Signature>ClassProbDistribD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)" name="CLASSPROBDISTRIBD">ClassProbDistribD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="36068" end="42486" exported="1" fullname="ml.trees.c45prunetree" inherit_type="local" line="549" name="C45PruneTree" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="35932">
     <Type>function</Type>
-    <Signature>C45PruneTree(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)</Signature><Params>
+    <Signature pre="" post="(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)" name="C45PRUNETREE">C45PruneTree(DATASET(Splitf) nodes, DATASET(ML.Types.DiscreteField) Indep, DATASET(ML.Types.DiscreteField) Dep, REAL z=0.67449)</Signature><Params>
      <Param name="nodes"/>
      <Param name="Indep"/>
      <Param name="Dep"/>
@@ -283,7 +283,7 @@
    </Definition>
    <Definition body="42907" end="43406" exported="1" fullname="ml.trees.splitsigr_pruned" inherit_type="local" line="660" name="SplitsIGR_Pruned" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="42770">
     <Type>function</Type>
-    <Signature>SplitsIGR_Pruned(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )" name="SPLITSIGR_PRUNED">SplitsIGR_Pruned(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, INTEGER1 numFolds = 3, REAL z = 0.67449 )</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
      <Param name="numFolds"/>
@@ -292,26 +292,26 @@
    </Definition>
    <Definition body="43456" end="43581" exported="1" fullname="ml.trees.todiscretetree" inherit_type="local" line="670" name="ToDiscreteTree" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="43409">
     <Type>function</Type>
-    <Signature>ToDiscreteTree(DATASET(SplitD) nodes)</Signature><Params>
+    <Signature pre="" post="(DATASET(SplitD) nodes)" name="TODISCRETETREE">ToDiscreteTree(DATASET(SplitD) nodes)</Signature><Params>
      <Param name="nodes"/>
     </Params>
    </Definition>
    <Definition body="43633" end="43707" exported="1" fullname="ml.trees.modeld" inherit_type="local" line="675" name="ModelD" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="43584">
     <Type>function</Type>
-    <Signature>ModelD(DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="MODELD">ModelD(DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="43797" end="44151" exported="1" fullname="ml.trees.classifyd" inherit_type="local" line="679" name="ClassifyD" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="43710">
     <Type>function</Type>
-    <Signature>ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)" name="CLASSIFYD">ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="44414" end="55408" exported="1" fullname="ml.trees.binarypartitionc" inherit_type="local" line="691" name="BinaryPartitionC" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="44315">
     <Type>function</Type>
-    <Signature>BinaryPartitionC	(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)</Signature><Params>
+    <Signature pre="" post="(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)" name="BINARYPARTITIONC">BinaryPartitionC	(DATASET(cNode) nodes, Types.t_level p_level, Types.t_Count minNumObj=2)</Signature><Params>
      <Param name="nodes"/>
      <Param name="p_level"/>
      <Param name="minNumObj"/>
@@ -319,7 +319,7 @@
    </Definition>
    <Definition body="55870" end="57771" exported="1" fullname="ml.trees.splitbinarycbased" inherit_type="local" line="854" name="SplitBinaryCBased" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="55720">
     <Type>function</Type>
-    <Signature>SplitBinaryCBased(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)" name="SPLITBINARYCBASED">SplitBinaryCBased(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count minNumObj=2, Types.t_level maxLevel=32)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
      <Param name="minNumObj"/>
@@ -328,31 +328,31 @@
    </Definition>
    <Definition body="57966" end="58527" exported="1" fullname="ml.trees.splitbininstances" inherit_type="local" line="885" name="SplitBinInstances" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="57880">
     <Type>function</Type>
-    <Signature>SplitBinInstances(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)</Signature><Params>
+    <Signature pre="" post="(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)" name="SPLITBININSTANCES">SplitBinInstances(DATASET(SplitC) mod, DATASET(ML.Types.NumericField) Indep)</Signature><Params>
      <Param name="mod"/>
      <Param name="Indep"/>
     </Params>
    </Definition>
    <Definition body="58576" end="58702" exported="1" fullname="ml.trees.tonumerictree" inherit_type="local" line="894" name="ToNumericTree" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="58530">
     <Type>function</Type>
-    <Signature>ToNumericTree(DATASET(SplitC) nodes)</Signature><Params>
+    <Signature pre="" post="(DATASET(SplitC) nodes)" name="TONUMERICTREE">ToNumericTree(DATASET(SplitC) nodes)</Signature><Params>
      <Param name="nodes"/>
     </Params>
    </Definition>
    <Definition body="58754" end="58829" exported="1" fullname="ml.trees.modelc" inherit_type="local" line="899" name="ModelC" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="58705">
     <Type>function</Type>
-    <Signature>ModelC(DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="MODELC">ModelC(DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="58918" end="59710" exported="1" fullname="ml.trees.classifyc" inherit_type="local" line="903" name="ClassifyC" source="/media/sarthak/Data/ecl-ml/ML/Trees.ecl" start="58832">
     <Type>function</Type>
-    <Signature>ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)" name="CLASSIFYC">ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="mod"/>
     </Params>
    </Definition>
-   <Signature>Trees</Signature><Parents/>
+   <Signature pre="" post="" name="TREES">Trees</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

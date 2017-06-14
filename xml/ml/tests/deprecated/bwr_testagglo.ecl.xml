@@ -8,50 +8,50 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="40" end="1294" fullname="ml.tests.deprecated.d" inherit_type="local" line="4" name="d" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="36">
-   <Signature>d</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D">d</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1357" end="1414" fullname="ml.tests.deprecated.d1" inherit_type="local" line="17" name="d1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1352">
-   <Signature>d1</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D1">d1</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1421" end="1450" fullname="ml.tests.deprecated.d2" inherit_type="local" line="19" name="d2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1416">
-   <Signature>d2</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D2">d2</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1457" end="1482" fullname="ml.tests.deprecated.d3" inherit_type="local" line="21" name="d3" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1452">
-   <Signature>d3</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D3">d3</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1489" end="1514" fullname="ml.tests.deprecated.d4" inherit_type="local" line="23" name="d4" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1484">
-   <Signature>d4</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D4">d4</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1622" end="1649" fullname="ml.tests.deprecated.lex" inherit_type="local" line="25" name="lex" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1616">
-   <Signature>lex</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LEX">lex</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1656" end="1683" fullname="ml.tests.deprecated.o1" inherit_type="local" line="27" name="o1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1651">
-   <Signature>o1</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="O1">o1</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1690" end="1714" fullname="ml.tests.deprecated.o2" inherit_type="local" line="29" name="o2" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1685">
-   <Signature>o2</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="O2">o2</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1721" end="1841" fullname="ml.tests.deprecated.nf" inherit_type="local" line="31" name="NF" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1716">
-   <Signature>NF</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NF">NF</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1847" end="1872" fullname="ML.Cluster.AggloN" inherit_type="local" line="33" name="A" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/BWR_testAgglo.ecl" start="1843" target="../../cluster.ecl.xml">
    <Type>module</Type>
    <Definition body="25934" end="26003" fullname="ml.cluster.agglon.res" inherit_type="local" line="386" name="res" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="25921" target="../../cluster.ecl.xml">
-    <Signature>res</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="RES">res</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="26025" end="26070" exported="1" fullname="ml.cluster.agglon.dendrogram" inherit_type="local" line="387" name="Dendrogram" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="26005" target="../../cluster.ecl.xml">
-    <Signature>Dendrogram</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DENDROGRAM">Dendrogram</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="26250" end="26321" exported="1" fullname="ml.cluster.agglon.newickdendrogram" inherit_type="local" line="392" name="NewickDendrogram" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="26224" target="../../cluster.ecl.xml">
-    <Signature>NewickDendrogram</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NEWICKDENDROGRAM">NewickDendrogram</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="26342" end="26387" exported="1" fullname="ml.cluster.agglon.distances" inherit_type="local" line="393" name="Distances" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="26323" target="../../cluster.ecl.xml">
-    <Signature>Distances</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DISTANCES">Distances</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="26776" end="26834" exported="1" fullname="ml.cluster.agglon.clusters" inherit_type="local" line="401" name="Clusters" source="/media/sarthak/Data/ecl-ml/./ML/Cluster.ecl" start="26758" target="../../cluster.ecl.xml">
-    <Signature>Clusters</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CLUSTERS">Clusters</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>A</Signature><Parents/>
+   <Signature pre="" post="" name="A">A</Signature><Parents/>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Types.ecl" name="ML.Docs.Types" target="../../docs/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Tokenize.ecl" name="ML.Docs.Tokenize" target="../../docs/tokenize.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/Trans.ecl" name="ML.Docs.Trans" target="../../docs/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Cluster.ecl" name="ML.Cluster" target="../../cluster.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/></Meta>

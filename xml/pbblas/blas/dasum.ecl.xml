@@ -5,17 +5,17 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="66" end="88" fullname="pbblas.blas.value_t" inherit_type="local" line="3" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" start="56">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="103" end="129" fullname="pbblas.blas.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" start="89">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="141" end="164" fullname="pbblas.blas.matrix_t" inherit_type="local" line="5" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" start="130">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="234" end="407" exported="1" fullname="pbblas.blas.dasum" inherit_type="local" line="7" name="dasum" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" start="166">
    <Type>embed</Type>
-   <Signature>value_t dasum(dimension_t m, matrix_t x, dimension_t incx)</Signature><Params>
+   <Signature pre="value_t" post="(dimension_t m, matrix_t x, dimension_t incx)" name="DASUM">value_t dasum(dimension_t m, matrix_t x, dimension_t incx)</Signature><Params>
     <Param name="m"/>
     <Param name="x"/>
     <Param name="incx"/>

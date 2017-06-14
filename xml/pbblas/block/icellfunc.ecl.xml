@@ -5,14 +5,14 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="83" end="105" fullname="pbblas.block.value_t" inherit_type="local" line="3" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" start="73">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="120" end="146" fullname="pbblas.block.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" start="106">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="216" end="219" exported="1" fullname="pbblas.block.icellfunc" inherit_type="local" line="6" name="ICellFunc" source="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" start="148">
    <Type>function</Type>
-   <Signature>value_t ICellFunc(value_t v, dimension_t r, dimension_t c)</Signature><Params>
+   <Signature pre="value_t" post="(value_t v, dimension_t r, dimension_t c)" name="ICELLFUNC">value_t ICellFunc(value_t v, dimension_t r, dimension_t c)</Signature><Params>
     <Param name="v"/>
     <Param name="r"/>
     <Param name="c"/>

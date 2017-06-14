@@ -26,12 +26,12 @@
     <Field name="A18"/>
     <Field name="A19"/>
     <Field name="A20"/>
-    <Signature>continious_ringnormDataRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="CONTINIOUS_RINGNORMDATARECORD">continious_ringnormDataRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="821" end="1810686" exported="1" fullname="testingsuite.classification.datasets.continious_ringnormdatads.content" inherit_type="local" line="27" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_ringnormDataDS.ecl" start="804">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>continious_ringnormDataDS</Signature><Parents/>
+   <Signature pre="" post="" name="CONTINIOUS_RINGNORMDATADS">continious_ringnormDataDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

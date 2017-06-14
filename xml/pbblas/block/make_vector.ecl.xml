@@ -5,35 +5,35 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="42" end="65" fullname="pbblas.block.matrix_t" inherit_type="local" line="3" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" start="31">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="80" end="106" fullname="pbblas.block.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" start="66">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="117" end="139" fullname="pbblas.block.value_t" inherit_type="local" line="5" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" start="107">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="148" end="173" fullname="pbblas.block.cell" inherit_type="local" line="7" name="Cell" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" start="141">
    <Type>record</Type>
-   <Signature>Cell</Signature><Field name="v"/>
+   <Signature pre="" post="" name="CELL">Cell</Signature><Field name="v"/>
   </Definition>
   <Definition body="201" end="231" fullname="pbblas.block.makecell" inherit_type="local" line="10" name="makeCell" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" start="174">
    <Type>transform</Type>
    <Params>
     <Param name="v"/>
    </Params>
-   <Signature>Cell makeCell(value_t v)</Signature><Return>cell</Return>
+   <Signature pre="Cell" post="(value_t v)" name="MAKECELL">Cell makeCell(value_t v)</Signature><Return>cell</Return>
   </Definition>
   <Definition body="272" end="297" fullname="pbblas.block.vec_dataset" inherit_type="local" line="13" name="vec_dataset" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" start="232">
    <Type>function</Type>
-   <Signature>vec_dataset(dimension_t m, value_t v)</Signature><Params>
+   <Signature pre="" post="(dimension_t m, value_t v)" name="VEC_DATASET">vec_dataset(dimension_t m, value_t v)</Signature><Params>
     <Param name="m"/>
     <Param name="v"/>
    </Params>
   </Definition>
   <Definition body="359" end="386" exported="1" fullname="pbblas.block.make_vector" inherit_type="local" line="15" name="make_vector" source="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" start="299">
    <Type>function</Type>
-   <Signature>matrix_t make_vector(dimension_t m, value_t v=1.0)</Signature><Params>
+   <Signature pre="matrix_t" post="(dimension_t m, value_t v=1.0)" name="MAKE_VECTOR">matrix_t make_vector(dimension_t m, value_t v=1.0)</Signature><Params>
     <Param name="m"/>
     <Param name="v"/>
    </Params>

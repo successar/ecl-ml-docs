@@ -1,324 +1,660 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Tests.Validation.Validate_Gammas</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../utils.ecl.html">
-				ml.utils
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../../python/pkg.toc.html">
-				python
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			EMBED : REAL8 scipy_gamma(REAL8 x)
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="eig.ecl.html">eig.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mahout_k-means_synthetic_control.ecl.html">mahout_k-means_synthetic_control.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lda_cmpr2blei.ecl.html">lda_cmpr2blei.ecl</a>
+				</li>
+				
+				<li>
+					<a href="validate_gammas.ecl.html">validate_gammas.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lanczos.ecl.html">lanczos.ecl</a>
+				</li>
+				
+				<li>
+					<a href="concord.ecl.html">concord.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pca.ecl.html">pca.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 scipy_lowerGamma(REAL8 x, REAL8 z)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 scipy_upperGamma(REAL8 x, REAL8 z)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SET OF REAL8 tv
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SET OF REAL8 sv
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : REAL8 epsilon
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Work1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Work1 makeT(UNSIGNED ts)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : STRING range_cat(REAL8 x, REAL8 z)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : STRING cat(REAL8 x, REAL8 z)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : test_set
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : bad_result
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : test_sum
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Passed_Action
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Failed_Action
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Validate_Gammas
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	EMBED : REAL8 scipy_gamma(REAL8 x)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 scipy_lowerGamma(REAL8 x, REAL8 z)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 scipy_upperGamma(REAL8 x, REAL8 z)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SET OF REAL8 tv
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SET OF REAL8 sv
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : REAL8 epsilon
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Work1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Work1 makeT(UNSIGNED ts)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : STRING range_cat(REAL8 x, REAL8 z)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : STRING cat(REAL8 x, REAL8 z)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : test_set
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : bad_result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : test_sum
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Passed_Action
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Failed_Action
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Validate_Gammas
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Tests.Validation.Validate_Gammas</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../utils.ecl.html">
+								ml.utils
+							</a>
+							</li>
+						<li>
+							<a href="../../../python/pkg.toc.html">
+								python
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-tests-validation-scipy_gamma">
+							<a href="#ml-tests-validation-scipy_gamma" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">SCIPY_GAMMA</span>
+								<span class="sign-post">(REAL8 x)</span>
+							</a> -
+							<a href="#dml-tests-validation-scipy_gamma">Desc</a>
+							<ul id="ml-tests-validation-scipy_gamma" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-scipy_lowergamma">
+							<a href="#ml-tests-validation-scipy_lowergamma" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">SCIPY_LOWERGAMMA</span>
+								<span class="sign-post">(REAL8 x, REAL8 z)</span>
+							</a> -
+							<a href="#dml-tests-validation-scipy_lowergamma">Desc</a>
+							<ul id="ml-tests-validation-scipy_lowergamma" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-scipy_uppergamma">
+							<a href="#ml-tests-validation-scipy_uppergamma" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">SCIPY_UPPERGAMMA</span>
+								<span class="sign-post">(REAL8 x, REAL8 z)</span>
+							</a> -
+							<a href="#dml-tests-validation-scipy_uppergamma">Desc</a>
+							<ul id="ml-tests-validation-scipy_uppergamma" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-tv">
+							<a href="#ml-tests-validation-tv" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">SET OF REAL8</span>
+								<span class="sign-name">TV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-tv">Desc</a>
+							<ul id="ml-tests-validation-tv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-sv">
+							<a href="#ml-tests-validation-sv" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">SET OF REAL8</span>
+								<span class="sign-name">SV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-sv">Desc</a>
+							<ul id="ml-tests-validation-sv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-epsilon">
+							<a href="#ml-tests-validation-epsilon" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">EPSILON</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-epsilon">Desc</a>
+							<ul id="ml-tests-validation-epsilon" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-work1">
+							<a href="#ml-tests-validation-work1" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">WORK1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-work1">Desc</a>
+							<ul id="ml-tests-validation-work1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-maket">
+							<a href="#ml-tests-validation-maket" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Work1</span>
+								<span class="sign-name">MAKET</span>
+								<span class="sign-post">(UNSIGNED ts)</span>
+							</a> -
+							<a href="#dml-tests-validation-maket">Desc</a>
+							<ul id="ml-tests-validation-maket" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-range_cat">
+							<a href="#ml-tests-validation-range_cat" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">STRING</span>
+								<span class="sign-name">RANGE_CAT</span>
+								<span class="sign-post">(REAL8 x, REAL8 z)</span>
+							</a> -
+							<a href="#dml-tests-validation-range_cat">Desc</a>
+							<ul id="ml-tests-validation-range_cat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-cat">
+							<a href="#ml-tests-validation-cat" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">STRING</span>
+								<span class="sign-name">CAT</span>
+								<span class="sign-post">(REAL8 x, REAL8 z)</span>
+							</a> -
+							<a href="#dml-tests-validation-cat">Desc</a>
+							<ul id="ml-tests-validation-cat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-test_set">
+							<a href="#ml-tests-validation-test_set" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TEST_SET</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-test_set">Desc</a>
+							<ul id="ml-tests-validation-test_set" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-bad_result">
+							<a href="#ml-tests-validation-bad_result" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BAD_RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-bad_result">Desc</a>
+							<ul id="ml-tests-validation-bad_result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-test_sum">
+							<a href="#ml-tests-validation-test_sum" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TEST_SUM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-test_sum">Desc</a>
+							<ul id="ml-tests-validation-test_sum" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-passed_action">
+							<a href="#ml-tests-validation-passed_action" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PASSED_ACTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-passed_action">Desc</a>
+							<ul id="ml-tests-validation-passed_action" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-failed_action">
+							<a href="#ml-tests-validation-failed_action" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FAILED_ACTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-failed_action">Desc</a>
+							<ul id="ml-tests-validation-failed_action" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-validate_gammas">
+							<a href="#ml-tests-validation-validate_gammas" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VALIDATE_GAMMAS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-validate_gammas">Desc</a>
+							<ul id="ml-tests-validation-validate_gammas" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-tests-validation-scipy_gamma">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">SCIPY_GAMMA</span>
+									<span class="sign-post">(REAL8 x)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-scipy_gamma" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-scipy_lowergamma">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">SCIPY_LOWERGAMMA</span>
+									<span class="sign-post">(REAL8 x, REAL8 z)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-scipy_lowergamma" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-scipy_uppergamma">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">SCIPY_UPPERGAMMA</span>
+									<span class="sign-post">(REAL8 x, REAL8 z)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-scipy_uppergamma" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-tv">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">SET OF REAL8</span>
+									<span class="sign-name">TV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-tv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-sv">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">SET OF REAL8</span>
+									<span class="sign-name">SV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-sv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-epsilon">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">EPSILON</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-epsilon" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-work1">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">WORK1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-work1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-maket">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Work1</span>
+									<span class="sign-name">MAKET</span>
+									<span class="sign-post">(UNSIGNED ts)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-maket" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-range_cat">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">STRING</span>
+									<span class="sign-name">RANGE_CAT</span>
+									<span class="sign-post">(REAL8 x, REAL8 z)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-range_cat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-cat">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">STRING</span>
+									<span class="sign-name">CAT</span>
+									<span class="sign-post">(REAL8 x, REAL8 z)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-cat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-test_set">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TEST_SET</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-test_set" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-bad_result">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BAD_RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-bad_result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-test_sum">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TEST_SUM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-test_sum" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-passed_action">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PASSED_ACTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-passed_action" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-failed_action">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FAILED_ACTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-failed_action" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-validate_gammas">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VALIDATE_GAMMAS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-validate_gammas" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -5,17 +5,17 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="35" end="54" fullname="ml.lsa.densesvd.dimension_t" inherit_type="local" line="2" name="dimension_t" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="21">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="69" end="84" fullname="ml.lsa.densesvd.value_t" inherit_type="local" line="3" name="value_t" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="55">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="99" end="115" fullname="ml.lsa.densesvd.matrix_t" inherit_type="local" line="4" name="matrix_t" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="85">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="175" end="1081" exported="1" fullname="ml.lsa.densesvd.lapack_dsyev" inherit_type="local" line="6" name="lapack_dsyev" source="/media/sarthak/Data/ecl-ml/ML/LSA/DenseSVD/lapack_dsyev.ecl" start="117">
    <Type>embed</Type>
-   <Signature>matrix_t lapack_dsyev(dimension_t N, matrix_t A)</Signature><Params>
+   <Signature pre="matrix_t" post="(dimension_t N, matrix_t A)" name="LAPACK_DSYEV">matrix_t lapack_dsyev(dimension_t N, matrix_t A)</Signature><Params>
     <Param name="N"/>
     <Param name="A"/>
    </Params>

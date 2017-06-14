@@ -2,7 +2,7 @@
 <Meta>
  <Source name="TestingSuite.Regression.Datasets.TestDecisionTreeRegressor" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/TestDecisionTreeRegressor.ecl" target="testdecisiontreeregressor.ecl.xml">
   <Definition body="35" end="43" exported="1" fullname="testingsuite.regression.datasets.testdecisiontreeregressor" inherit_type="local" line="1" name="TestDecisionTreeRegressor" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/TestDecisionTreeRegressor.ecl" start="0">
-   <Signature>TestDecisionTreeRegressor</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TESTDECISIONTREEREGRESSOR">TestDecisionTreeRegressor</Signature><Type>attribute</Type>
   </Definition>
  </Source>
 </Meta>

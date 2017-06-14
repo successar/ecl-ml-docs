@@ -1,332 +1,656 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.Demo.BWR_Compare_2_R_ARIMA</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../r/pkg.toc.html">
-				r
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			EMBED : set of real4 ARIMA(
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="bwr_demo_identification.ecl.html">bwr_demo_identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_demo_estimate.ecl.html">bwr_demo_estimate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="series_data.ecl.html">series_data.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_compare_2_r_arima.ecl.html">bwr_compare_2_r_arima.ecl</a>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.Demo.BWR_Compare_2_R_ARIMA</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../r/pkg.toc.html">
+								r
+							</a>
+							</li>
+						<li>
+							<a href="../pkg.toc.html">
+								ts
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ts-demo-arima">
+							<a href="#ts-demo-arima" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">set of real4</span>
+								<span class="sign-name">ARIMA</span>
+								<span class="sign-post">(
                    set of real4 t,
                    set of unsigned tsparms=[1,1],
                    set of unsigned o=[1,0,1],
-                   boolean with_mean=TRUE)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : my_time_series
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ts_0
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.UniObservation enum_recs(RECORDOF(ts_0) lr, UNSIGNED cnt)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ts_1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : pdq_parms
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : want_const
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : r_model_set
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : r_model_out
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.Co_efficient make_coef({TS.Types.t_value cv} lr, UNSIGNED cnt)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.Model_Parameters makeParms(SET OF UNSIGNED inp, SET OF REAL8 coeff, BOOLEAN want_const)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : r_model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : r_scored
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : model_spec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : model_parms
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : scored
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	EMBED : set of real4 ARIMA(
+                   boolean with_mean=TRUE)</span>
+							</a> -
+							<a href="#dts-demo-arima">Desc</a>
+							<ul id="ts-demo-arima" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-my_time_series">
+							<a href="#ts-demo-my_time_series" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MY_TIME_SERIES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-my_time_series">Desc</a>
+							<ul id="ts-demo-my_time_series" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-ts_0">
+							<a href="#ts-demo-ts_0" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TS_0</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-ts_0">Desc</a>
+							<ul id="ts-demo-ts_0" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-enum_recs">
+							<a href="#ts-demo-enum_recs" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.UniObservation</span>
+								<span class="sign-name">ENUM_RECS</span>
+								<span class="sign-post">(RECORDOF(ts_0) lr, UNSIGNED cnt)</span>
+							</a> -
+							<a href="#dts-demo-enum_recs">Desc</a>
+							<ul id="ts-demo-enum_recs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-ts_1">
+							<a href="#ts-demo-ts_1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TS_1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-ts_1">Desc</a>
+							<ul id="ts-demo-ts_1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-pdq_parms">
+							<a href="#ts-demo-pdq_parms" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PDQ_PARMS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-pdq_parms">Desc</a>
+							<ul id="ts-demo-pdq_parms" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-want_const">
+							<a href="#ts-demo-want_const" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">WANT_CONST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-want_const">Desc</a>
+							<ul id="ts-demo-want_const" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-r_model_set">
+							<a href="#ts-demo-r_model_set" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">R_MODEL_SET</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-r_model_set">Desc</a>
+							<ul id="ts-demo-r_model_set" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-r_model_out">
+							<a href="#ts-demo-r_model_out" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">R_MODEL_OUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-r_model_out">Desc</a>
+							<ul id="ts-demo-r_model_out" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-make_coef">
+							<a href="#ts-demo-make_coef" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.Co_efficient</span>
+								<span class="sign-name">MAKE_COEF</span>
+								<span class="sign-post">({TS.Types.t_value cv} lr, UNSIGNED cnt)</span>
+							</a> -
+							<a href="#dts-demo-make_coef">Desc</a>
+							<ul id="ts-demo-make_coef" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-makeparms">
+							<a href="#ts-demo-makeparms" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.Model_Parameters</span>
+								<span class="sign-name">MAKEPARMS</span>
+								<span class="sign-post">(SET OF UNSIGNED inp, SET OF REAL8 coeff, BOOLEAN want_const)</span>
+							</a> -
+							<a href="#dts-demo-makeparms">Desc</a>
+							<ul id="ts-demo-makeparms" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-r_model">
+							<a href="#ts-demo-r_model" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">R_MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-r_model">Desc</a>
+							<ul id="ts-demo-r_model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-r_scored">
+							<a href="#ts-demo-r_scored" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">R_SCORED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-r_scored">Desc</a>
+							<ul id="ts-demo-r_scored" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-model_spec">
+							<a href="#ts-demo-model_spec" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_SPEC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-model_spec">Desc</a>
+							<ul id="ts-demo-model_spec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-model_parms">
+							<a href="#ts-demo-model_parms" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_PARMS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-model_parms">Desc</a>
+							<ul id="ts-demo-model_parms" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-scored">
+							<a href="#ts-demo-scored" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SCORED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-scored">Desc</a>
+							<ul id="ts-demo-scored" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dts-demo-arima">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">set of real4</span>
+									<span class="sign-name">ARIMA</span>
+									<span class="sign-post">(
                    set of real4 t,
                    set of unsigned tsparms=[1,1],
                    set of unsigned o=[1,0,1],
-                   boolean with_mean=TRUE)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : my_time_series
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ts_0
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.UniObservation enum_recs(RECORDOF(ts_0) lr, UNSIGNED cnt)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ts_1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : pdq_parms
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : want_const
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : r_model_set
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : r_model_out
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.Co_efficient make_coef({TS.Types.t_value cv} lr, UNSIGNED cnt)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.Model_Parameters makeParms(SET OF UNSIGNED inp, SET OF REAL8 coeff, BOOLEAN want_const)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : r_model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : r_scored
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : model_spec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : model_parms
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : scored
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+                   boolean with_mean=TRUE)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-arima" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-my_time_series">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MY_TIME_SERIES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-my_time_series" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-ts_0">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TS_0</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-ts_0" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-enum_recs">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.UniObservation</span>
+									<span class="sign-name">ENUM_RECS</span>
+									<span class="sign-post">(RECORDOF(ts_0) lr, UNSIGNED cnt)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-enum_recs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-ts_1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TS_1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-ts_1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-pdq_parms">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PDQ_PARMS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-pdq_parms" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-want_const">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">WANT_CONST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-want_const" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-r_model_set">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">R_MODEL_SET</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-r_model_set" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-r_model_out">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">R_MODEL_OUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-r_model_out" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-make_coef">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.Co_efficient</span>
+									<span class="sign-name">MAKE_COEF</span>
+									<span class="sign-post">({TS.Types.t_value cv} lr, UNSIGNED cnt)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-make_coef" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-makeparms">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.Model_Parameters</span>
+									<span class="sign-name">MAKEPARMS</span>
+									<span class="sign-post">(SET OF UNSIGNED inp, SET OF REAL8 coeff, BOOLEAN want_const)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-makeparms" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-r_model">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">R_MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-r_model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-r_scored">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">R_SCORED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-r_scored" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-model_spec">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_SPEC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-model_spec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-model_parms">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_PARMS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-model_parms" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-scored">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SCORED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-scored" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

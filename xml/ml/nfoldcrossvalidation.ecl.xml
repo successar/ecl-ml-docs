@@ -3,7 +3,7 @@
  <Source name="ML.NFoldCrossValidation" sourcePath="/media/sarthak/Data/ecl-ml/ML/NFoldCrossValidation.ecl" target="nfoldcrossvalidation.ecl.xml">
   <Definition body="97" end="6775" exported="1" fullname="ml.nfoldcrossvalidation" inherit_type="local" line="3" name="NFoldCrossValidation" source="/media/sarthak/Data/ecl-ml/ML/NFoldCrossValidation.ecl" start="28">
    <Type>macro</Type>
-   <Signature>NFoldCrossValidation(IndepDS, DepDS, LearnerName, NumFolds)</Signature><Params>
+   <Signature pre="" post="(IndepDS, DepDS, LearnerName, NumFolds)" name="NFOLDCROSSVALIDATION">NFoldCrossValidation(IndepDS, DepDS, LearnerName, NumFolds)</Signature><Params>
     <Param name="IndepDS"/>
     <Param name="DepDS"/>
     <Param name="LearnerName"/>

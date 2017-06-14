@@ -3,7 +3,7 @@
  <Source name="ML.Mat.Sub" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" target="sub.ecl.xml">
   <Definition body="120" end="884" exported="1" fullname="ml.mat.sub" inherit_type="local" line="4" name="Sub" source="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" start="56">
    <Type>function</Type>
-   <Signature>Sub(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) l,DATASET(Types.Element) r)" name="SUB">Sub(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
     <Param name="l"/>
     <Param name="r"/>
    </Params>

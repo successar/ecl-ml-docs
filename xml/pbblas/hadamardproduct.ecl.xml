@@ -20,10 +20,10 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="236" end="267" fullname="pbblas.dimension_incompatz" inherit_type="local" line="9" name="Dimension_IncompatZ" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="214">
-   <Signature>Dimension_IncompatZ</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_INCOMPATZ">Dimension_IncompatZ</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="290" end="320" fullname="pbblas.dimension_incompat" inherit_type="local" line="10" name="Dimension_Incompat" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="268">
-   <Signature>Dimension_Incompat</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_INCOMPAT">Dimension_Incompat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="360" end="379" fullname="pbblas.part" inherit_type="local" line="12" name="Part" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="353">
    <Type>record</Type>
@@ -35,14 +35,14 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="390" end="405" fullname="pbblas.value_t" inherit_type="local" line="13" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="380">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="632" end="2346" exported="1" fullname="pbblas.hadamardproduct" inherit_type="local" line="19" name="HadamardProduct" source="/media/sarthak/Data/ecl-ml/PBblas/HadamardProduct.ecl" start="534">
    <Type>function</Type>
-   <Signature>DATASET(Part)
+   <Signature pre="DATASET(Part)" post="(IMatrix_Map x_map, DATASET(Part) X, DATASET(Part) Y)" name="HADAMARDPRODUCT">DATASET(Part)
       HadamardProduct(IMatrix_Map x_map, DATASET(Part) X, DATASET(Part) Y)</Signature><Params>
     <Param name="x_map"/>
     <Param name="X"/>

@@ -1,334 +1,801 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Types</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="mat/pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Types
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : t_RecordID
-			<ul>
+				<li>
+					<a href="nearestneighborssearch.ecl.html">nearestneighborssearch.ecl</a>
+				</li>
+				
+				<li>
+					<a href="ensemble.ecl.html">ensemble.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sampling.ecl.html">sampling.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mat/pkg.toc.html">mat</a>
+				</li>
+				
+				<li>
+					<a href="appendid.ecl.html">appendid.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
+				
+				<li>
+					<a href="lsa/pkg.toc.html">lsa</a>
+				</li>
+				
+				<li>
+					<a href="config.ecl.html">config.ecl</a>
+				</li>
+				
+				<li>
+					<a href="naivebayes.ecl.html">naivebayes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
+				
+				<li>
+					<a href="stepregression/pkg.toc.html">stepregression</a>
+				</li>
+				
+				<li>
+					<a href="populationestimate.ecl.html">populationestimate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svm/pkg.toc.html">svm</a>
+				</li>
+				
+				<li>
+					<a href="version.ecl.html">version.ecl</a>
+				</li>
+				
+				<li>
+					<a href="generate.ecl.html">generate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="docs/pkg.toc.html">docs</a>
+				</li>
+				
+				<li>
+					<a href="nfoldcrossvalidation.ecl.html">nfoldcrossvalidation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic/pkg.toc.html">stepwiselogistic</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fromfield.ecl.html">fromfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lazy.ecl.html">lazy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="correlate.ecl.html">correlate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="associate.ecl.html">associate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tofield.ecl.html">tofield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks.ecl.html">neuralnetworks.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="deeplearning.ecl.html">deeplearning.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils.ecl.html">utils.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trees.ecl.html">trees.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regress_poly_x.ecl.html">regress_poly_x.ecl</a>
+				</li>
+				
+				<li>
+					<a href="dmat/pkg.toc.html">dmat</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregates.ecl.html">fieldaggregates.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_FieldNumber
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_FieldReal
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_FieldSign
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_Discrete
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_Item
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_Count
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : NumericField
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : DiscreteField
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : l_result
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ItemElement
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToMatrix(DATASET(NumericField) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromMatrix(DATASET(Mat.Types.Element) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_node
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_level
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : NodeID
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Types
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : t_RecordID
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_FieldNumber
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_FieldReal
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_FieldSign
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_Discrete
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_Item
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_Count
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : NumericField
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : DiscreteField
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : l_result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ItemElement
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToMatrix(DATASET(NumericField) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromMatrix(DATASET(Mat.Types.Element) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_node
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_level
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : NodeID
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Types</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="mat/pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Types">
+							<a href="#ML-Types" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TYPES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Types">Desc</a>
+							<ul id="ML-Types" class="accordian-body collapse">
+								<li id="t-ml-types-t_recordid">
+							<a href="#ml-types-t_recordid" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_RECORDID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_recordid">Desc</a>
+							<ul id="ml-types-t_recordid" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_fieldnumber">
+							<a href="#ml-types-t_fieldnumber" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_FIELDNUMBER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_fieldnumber">Desc</a>
+							<ul id="ml-types-t_fieldnumber" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_fieldreal">
+							<a href="#ml-types-t_fieldreal" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_FIELDREAL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_fieldreal">Desc</a>
+							<ul id="ml-types-t_fieldreal" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_fieldsign">
+							<a href="#ml-types-t_fieldsign" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_FIELDSIGN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_fieldsign">Desc</a>
+							<ul id="ml-types-t_fieldsign" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_discrete">
+							<a href="#ml-types-t_discrete" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_DISCRETE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_discrete">Desc</a>
+							<ul id="ml-types-t_discrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_item">
+							<a href="#ml-types-t_item" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_ITEM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_item">Desc</a>
+							<ul id="ml-types-t_item" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_count">
+							<a href="#ml-types-t_count" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_COUNT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_count">Desc</a>
+							<ul id="ml-types-t_count" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-numericfield">
+							<a href="#ml-types-numericfield" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NUMERICFIELD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-numericfield">Desc</a>
+							<ul id="ml-types-numericfield" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-discretefield">
+							<a href="#ml-types-discretefield" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DISCRETEFIELD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-discretefield">Desc</a>
+							<ul id="ml-types-discretefield" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-l_result">
+							<a href="#ml-types-l_result" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">L_RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-l_result">Desc</a>
+							<ul id="ml-types-l_result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-itemelement">
+							<a href="#ml-types-itemelement" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ITEMELEMENT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-itemelement">Desc</a>
+							<ul id="ml-types-itemelement" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-tomatrix">
+							<a href="#ml-types-tomatrix" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOMATRIX</span>
+								<span class="sign-post">(DATASET(NumericField) d)</span>
+							</a> -
+							<a href="#dml-types-tomatrix">Desc</a>
+							<ul id="ml-types-tomatrix" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-frommatrix">
+							<a href="#ml-types-frommatrix" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMMATRIX</span>
+								<span class="sign-post">(DATASET(Mat.Types.Element) d)</span>
+							</a> -
+							<a href="#dml-types-frommatrix">Desc</a>
+							<ul id="ml-types-frommatrix" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_node">
+							<a href="#ml-types-t_node" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_NODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_node">Desc</a>
+							<ul id="ml-types-t_node" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-t_level">
+							<a href="#ml-types-t_level" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_LEVEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-t_level">Desc</a>
+							<ul id="ml-types-t_level" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-types-nodeid">
+							<a href="#ml-types-nodeid" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NODEID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-types-nodeid">Desc</a>
+							<ul id="ml-types-nodeid" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Types">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TYPES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Types" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-types-t_recordid">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_RECORDID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_recordid" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_fieldnumber">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_FIELDNUMBER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_fieldnumber" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_fieldreal">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_FIELDREAL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_fieldreal" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_fieldsign">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_FIELDSIGN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_fieldsign" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_discrete">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_DISCRETE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_discrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_item">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_ITEM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_item" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_count">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_COUNT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_count" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-numericfield">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NUMERICFIELD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-numericfield" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-discretefield">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DISCRETEFIELD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-discretefield" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-l_result">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">L_RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-l_result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-itemelement">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ITEMELEMENT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-itemelement" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-tomatrix">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOMATRIX</span>
+									<span class="sign-post">(DATASET(NumericField) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-tomatrix" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-frommatrix">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMMATRIX</span>
+									<span class="sign-post">(DATASET(Mat.Types.Element) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-frommatrix" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_node">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_NODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_node" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-t_level">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_LEVEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-t_level" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-types-nodeid">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NODEID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-types-nodeid" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

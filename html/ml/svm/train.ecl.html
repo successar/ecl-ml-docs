@@ -1,214 +1,440 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.train</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.svm.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="libsvm/types.ecl.html">
-				ml.svm.libsvm.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="libsvm/pkg.toc.html">
-				ml.svm.libsvm
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="libsvm/converted.ecl.html">
-				ml.svm.libsvm.converted
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Parms
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="libsvm/pkg.toc.html">libsvm</a>
+				</li>
+				
+				<li>
+					<a href="scale_instance.ecl.html">scale_instance.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
+				
+				<li>
+					<a href="grid_search.ecl.html">grid_search.ecl</a>
+				</li>
+				
+				<li>
+					<a href="predict.ecl.html">predict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cross_validate.ecl.html">cross_validate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="train.ecl.html">train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale_factors.ecl.html">scale_factors.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : Instance
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Problem
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : LibSVM_Parms
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : LibSVM_Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_SV
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Feature
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Model) train(DATASET(Parms) p, DATASET(Instance) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Parms
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Instance
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Problem
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : LibSVM_Parms
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : LibSVM_Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_SV
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Feature
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Model) train(DATASET(Parms) p, DATASET(Instance) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.train</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="types.ecl.html">
+								ml.svm.types
+							</a>
+							</li>
+						<li>
+							<a href="libsvm/types.ecl.html">
+								ml.svm.libsvm.types
+							</a>
+							</li>
+						<li>
+							<a href="libsvm/pkg.toc.html">
+								ml.svm.libsvm
+							</a>
+							</li>
+						<li>
+							<a href="libsvm/converted.ecl.html">
+								ml.svm.libsvm.converted
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-svm-parms">
+							<a href="#ml-svm-parms" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARMS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-parms">Desc</a>
+							<ul id="ml-svm-parms" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-instance">
+							<a href="#ml-svm-instance" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">INSTANCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-instance">Desc</a>
+							<ul id="ml-svm-instance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-model">
+							<a href="#ml-svm-model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-model">Desc</a>
+							<ul id="ml-svm-model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-problem">
+							<a href="#ml-svm-problem" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PROBLEM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-problem">Desc</a>
+							<ul id="ml-svm-problem" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm_parms">
+							<a href="#ml-svm-libsvm_parms" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LIBSVM_PARMS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm_parms">Desc</a>
+							<ul id="ml-svm-libsvm_parms" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm_model">
+							<a href="#ml-svm-libsvm_model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LIBSVM_MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm_model">Desc</a>
+							<ul id="ml-svm-libsvm_model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_sv">
+							<a href="#ml-svm-svm_sv" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_SV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_sv">Desc</a>
+							<ul id="ml-svm-svm_sv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_feature">
+							<a href="#ml-svm-svm_feature" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_FEATURE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_feature">Desc</a>
+							<ul id="ml-svm-svm_feature" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-train">
+							<a href="#ml-svm-train" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Model)</span>
+								<span class="sign-name">TRAIN</span>
+								<span class="sign-post">(DATASET(Parms) p, DATASET(Instance) d)</span>
+							</a> -
+							<a href="#dml-svm-train">Desc</a>
+							<ul id="ml-svm-train" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-svm-parms">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARMS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-parms" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-instance">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">INSTANCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-instance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-problem">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PROBLEM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-problem" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm_parms">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LIBSVM_PARMS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm_parms" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm_model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LIBSVM_MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm_model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_sv">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_SV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_sv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_feature">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_FEATURE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_feature" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-train">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Model)</span>
+									<span class="sign-name">TRAIN</span>
+									<span class="sign-post">(DATASET(Parms) p, DATASET(Instance) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-train" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

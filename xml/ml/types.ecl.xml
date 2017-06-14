@@ -4,74 +4,74 @@
   <Definition body="37" end="2217" exported="1" fullname="ML.Types" inherit_type="local" line="2" name="Types" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="22">
    <Type>module</Type>
    <Definition body="698" end="708" exported="1" fullname="ml.types.t_recordid" inherit_type="local" line="12" name="t_RecordID" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="678">
-    <Signature>t_RecordID</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_RECORDID">t_RecordID</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="732" end="743" exported="1" fullname="ml.types.t_fieldnumber" inherit_type="local" line="13" name="t_FieldNumber" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="709">
-    <Signature>t_FieldNumber</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_FIELDNUMBER">t_FieldNumber</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="765" end="772" exported="1" fullname="ml.types.t_fieldreal" inherit_type="local" line="14" name="t_FieldReal" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="744">
-    <Signature>t_FieldReal</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_FIELDREAL">t_FieldReal</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="794" end="804" exported="1" fullname="ml.types.t_fieldsign" inherit_type="local" line="15" name="t_FieldSign" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="773">
-    <Signature>t_FieldSign</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_FIELDSIGN">t_FieldSign</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="825" end="835" exported="1" fullname="ml.types.t_discrete" inherit_type="local" line="16" name="t_Discrete" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="805">
-    <Signature>t_Discrete</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_DISCRETE">t_Discrete</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="966" end="977" exported="1" fullname="ml.types.t_item" inherit_type="local" line="17" name="t_Item" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="950">
-    <Signature>t_Item</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_ITEM">t_Item</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1043" end="1055" exported="1" fullname="ml.types.t_count" inherit_type="local" line="18" name="t_Count" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="1026">
-    <Signature>t_Count</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_COUNT">t_Count</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1113" end="1187" exported="1" fullname="ml.types.numericfield" inherit_type="local" line="20" name="NumericField" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="1091">
     <Type>record</Type>
     <Field name="id"/>
     <Field name="number"/>
-    <Signature>NumericField</Signature><Field name="value"/>
+    <Signature pre="" post="" name="NUMERICFIELD">NumericField</Signature><Field name="value"/>
    </Definition>
    <Definition body="1212" end="1285" exported="1" fullname="ml.types.discretefield" inherit_type="local" line="26" name="DiscreteField" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="1189">
     <Type>record</Type>
     <Field name="id"/>
     <Field name="number"/>
-    <Signature>DiscreteField</Signature><Field name="value"/>
+    <Signature pre="" post="" name="DISCRETEFIELD">DiscreteField</Signature><Field name="value"/>
    </Definition>
    <Definition body="1305" end="1378" exported="1" fullname="ml.types.l_result" inherit_type="local" line="32" name="l_result" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="1287">
     <Type>record</Type>
     <Field name="id"/>
     <Field name="number"/>
     <Field name="value"/>
-    <Signature>l_result</Signature><Field name="conf"/>
+    <Signature pre="" post="" name="L_RESULT">l_result</Signature><Field name="conf"/>
    </Definition>
    <Definition body="1401" end="1447" exported="1" fullname="ml.types.itemelement" inherit_type="local" line="36" name="ItemElement" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="1380">
     <Type>record</Type>
     <Field name="value"/>
-    <Signature>ItemElement</Signature><Field name="id"/>
+    <Signature pre="" post="" name="ITEMELEMENT">ItemElement</Signature><Field name="id"/>
    </Definition>
    <Definition body="1492" end="1706" exported="1" fullname="ml.types.tomatrix" inherit_type="local" line="41" name="ToMatrix" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="1450">
     <Type>function</Type>
-    <Signature>ToMatrix(DATASET(NumericField) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(NumericField) d)" name="TOMATRIX">ToMatrix(DATASET(NumericField) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="1757" end="1957" exported="1" fullname="ml.types.frommatrix" inherit_type="local" line="45" name="FromMatrix" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="1708">
     <Type>function</Type>
-    <Signature>FromMatrix(DATASET(Mat.Types.Element) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(Mat.Types.Element) d)" name="FROMMATRIX">FromMatrix(DATASET(Mat.Types.Element) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="2019" end="2029" exported="1" fullname="ml.types.t_node" inherit_type="local" line="50" name="t_node" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="2002">
-    <Signature>t_node</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_NODE">t_node</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2111" end="2122" exported="1" fullname="ml.types.t_level" inherit_type="local" line="51" name="t_level" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="2094">
-    <Signature>t_level</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_LEVEL">t_level</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2162" end="2212" exported="1" fullname="ml.types.nodeid" inherit_type="local" line="52" name="NodeID" source="/media/sarthak/Data/ecl-ml/ML/Types.ecl" start="2145">
     <Type>record</Type>
     <Field name="node_id"/>
-    <Signature>NodeID</Signature><Field name="level"/>
+    <Signature pre="" post="" name="NODEID">NodeID</Signature><Field name="level"/>
    </Definition>
-   <Signature>Types</Signature><Parents/>
+   <Signature pre="" post="" name="TYPES">Types</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="Mat" ref="ml.mat" remotescope="1" start="7" target="mat/pkg.toc.xml">
    <Type>attribute</Type>

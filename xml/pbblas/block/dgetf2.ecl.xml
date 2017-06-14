@@ -8,23 +8,23 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="419" end="438" fullname="pbblas.block.dimension_t" inherit_type="local" line="10" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" start="405">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="453" end="469" inherit_type="local" line="11" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" start="439">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="484" end="500" fullname="pbblas.block.matrix_t" inherit_type="local" line="12" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" start="470">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="520" end="548" fullname="pbblas.block.not_positivedefz" inherit_type="local" line="13" name="Not_PositiveDefZ" source="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" start="501">
-   <Signature>Not_PositiveDefZ</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NOT_POSITIVEDEFZ">Not_PositiveDefZ</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="568" end="595" fullname="pbblas.block.not_positivedef" inherit_type="local" line="14" name="Not_PositiveDef" source="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" start="549">
-   <Signature>Not_PositiveDef</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NOT_POSITIVEDEF">Not_PositiveDef</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="780" end="1932" exported="1" fullname="pbblas.block.dgetf2" inherit_type="local" line="16" name="dgetf2" source="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" start="597">
    <Type>embed</Type>
-   <Signature>matrix_t dgetf2(dimension_t m, dimension_t n, matrix_t a,
+   <Signature pre="matrix_t" post="(dimension_t m, dimension_t n, matrix_t a,&#10;                       UNSIGNED4 errCode=Not_PositiveDefZ,&#10;                       VARSTRING errMsg=Not_PositiveDef)" name="DGETF2">matrix_t dgetf2(dimension_t m, dimension_t n, matrix_t a,
                        UNSIGNED4 errCode=Not_PositiveDefZ,
                        VARSTRING errMsg=Not_PositiveDef)</Signature><Params>
     <Param name="m"/>

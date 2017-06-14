@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Utils.ToTesting" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/ToTesting.ecl" target="totesting.ecl.xml">
   <Definition body="34" end="499" exported="1" fullname="testingsuite.utils.totesting" inherit_type="local" line="1" name="ToTesting" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/ToTesting.ecl" start="0">
    <Type>macro</Type>
-   <Signature>ToTesting(Resdata, dOut)</Signature><Params>
+   <Signature pre="" post="(Resdata, dOut)" name="TOTESTING">ToTesting(Resdata, dOut)</Signature><Params>
     <Param name="Resdata"/>
     <Param name="dOut"/>
    </Params>

@@ -1,254 +1,552 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.LibSVM.Types</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Types
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : LibSVM_Output
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : LibSVM_Kernel
-			<ul>
+				<li>
+					<a href="constants.ecl.html">constants.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : LibSVM_Type
-			<ul>
+				<li>
+					<a href="svm_predict.ecl.html">svm_predict.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : LibSVM_Node
-			<ul>
+				<li>
+					<a href="svm_cross_validate.ecl.html">svm_cross_validate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : R8Entry
-			<ul>
+				<li>
+					<a href="test/pkg.toc.html">test</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : I4Entry
-			<ul>
+				<li>
+					<a href="svm_train.ecl.html">svm_train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="libsvm_version.ecl.html">libsvm_version.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : ECL_LibSVM_Problem
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ECL_LibSVM_Parameter
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ECL_LibSVM_Train_Param
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ECL_LibSVM_Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : CrossValidate_Result
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SET OF UNSIGNED2 LibSVM_Version_set
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Types
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : LibSVM_Output
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : LibSVM_Kernel
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : LibSVM_Type
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : LibSVM_Node
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : R8Entry
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : I4Entry
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ECL_LibSVM_Problem
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ECL_LibSVM_Parameter
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ECL_LibSVM_Train_Param
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ECL_LibSVM_Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : CrossValidate_Result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SET OF UNSIGNED2 LibSVM_Version_set
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.LibSVM.Types</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-SVM-LibSVM-Types">
+							<a href="#ML-SVM-LibSVM-Types" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TYPES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-SVM-LibSVM-Types">Desc</a>
+							<ul id="ML-SVM-LibSVM-Types" class="accordian-body collapse">
+								<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LIBSVM_OUTPUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LIBSVM_KERNEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LIBSVM_TYPE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-libsvm_node">
+							<a href="#ml-svm-libsvm-types-libsvm_node" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LIBSVM_NODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-libsvm_node">Desc</a>
+							<ul id="ml-svm-libsvm-types-libsvm_node" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-r8entry">
+							<a href="#ml-svm-libsvm-types-r8entry" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">R8ENTRY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-r8entry">Desc</a>
+							<ul id="ml-svm-libsvm-types-r8entry" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-i4entry">
+							<a href="#ml-svm-libsvm-types-i4entry" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">I4ENTRY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-i4entry">Desc</a>
+							<ul id="ml-svm-libsvm-types-i4entry" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-ecl_libsvm_problem">
+							<a href="#ml-svm-libsvm-types-ecl_libsvm_problem" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ECL_LIBSVM_PROBLEM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-ecl_libsvm_problem">Desc</a>
+							<ul id="ml-svm-libsvm-types-ecl_libsvm_problem" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-ecl_libsvm_parameter">
+							<a href="#ml-svm-libsvm-types-ecl_libsvm_parameter" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ECL_LIBSVM_PARAMETER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-ecl_libsvm_parameter">Desc</a>
+							<ul id="ml-svm-libsvm-types-ecl_libsvm_parameter" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-ecl_libsvm_train_param">
+							<a href="#ml-svm-libsvm-types-ecl_libsvm_train_param" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ECL_LIBSVM_TRAIN_PARAM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-ecl_libsvm_train_param">Desc</a>
+							<ul id="ml-svm-libsvm-types-ecl_libsvm_train_param" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-ecl_libsvm_model">
+							<a href="#ml-svm-libsvm-types-ecl_libsvm_model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ECL_LIBSVM_MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-ecl_libsvm_model">Desc</a>
+							<ul id="ml-svm-libsvm-types-ecl_libsvm_model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-crossvalidate_result">
+							<a href="#ml-svm-libsvm-types-crossvalidate_result" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSSVALIDATE_RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-crossvalidate_result">Desc</a>
+							<ul id="ml-svm-libsvm-types-crossvalidate_result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-types-libsvm_version_set">
+							<a href="#ml-svm-libsvm-types-libsvm_version_set" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">SET OF UNSIGNED2</span>
+								<span class="sign-name">LIBSVM_VERSION_SET</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-types-libsvm_version_set">Desc</a>
+							<ul id="ml-svm-libsvm-types-libsvm_version_set" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-SVM-LibSVM-Types">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TYPES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-SVM-LibSVM-Types" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LIBSVM_OUTPUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LIBSVM_KERNEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LIBSVM_TYPE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-libsvm_node">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LIBSVM_NODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-libsvm_node" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-r8entry">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">R8ENTRY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-r8entry" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-i4entry">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">I4ENTRY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-i4entry" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-ecl_libsvm_problem">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ECL_LIBSVM_PROBLEM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-ecl_libsvm_problem" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-ecl_libsvm_parameter">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ECL_LIBSVM_PARAMETER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-ecl_libsvm_parameter" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-ecl_libsvm_train_param">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ECL_LIBSVM_TRAIN_PARAM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-ecl_libsvm_train_param" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-ecl_libsvm_model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ECL_LIBSVM_MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-ecl_libsvm_model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-crossvalidate_result">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSSVALIDATE_RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-crossvalidate_result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-types-libsvm_version_set">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">SET OF UNSIGNED2</span>
+									<span class="sign-name">LIBSVM_VERSION_SET</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-types-libsvm_version_set" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -8,23 +8,23 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="405" end="424" fullname="pbblas.lapack.dimension_t" inherit_type="local" line="12" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" start="391">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="439" end="455" inherit_type="local" line="13" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" start="425">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="470" end="486" fullname="pbblas.lapack.matrix_t" inherit_type="local" line="14" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" start="456">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="506" end="534" fullname="pbblas.lapack.not_positivedefz" inherit_type="local" line="15" name="Not_PositiveDefZ" source="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" start="487">
-   <Signature>Not_PositiveDefZ</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NOT_POSITIVEDEFZ">Not_PositiveDefZ</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="554" end="581" fullname="pbblas.lapack.not_positivedef" inherit_type="local" line="16" name="Not_PositiveDef" source="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" start="535">
-   <Signature>Not_PositiveDef</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="NOT_POSITIVEDEF">Not_PositiveDef</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="808" end="2780" exported="1" fullname="pbblas.lapack.dpotf2" inherit_type="local" line="18" name="dpotf2" source="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" start="583">
    <Type>embed</Type>
-   <Signature>matrix_t dpotf2(Triangle tri, dimension_t r, matrix_t A,
+   <Signature pre="matrix_t" post="(Triangle tri, dimension_t r, matrix_t A,&#10;                       BOOLEAN clear=TRUE,&#10;                       UNSIGNED4 errCode=Not_PositiveDefZ,&#10;                       VARSTRING errMsg=Not_PositiveDef)" name="DPOTF2">matrix_t dpotf2(Triangle tri, dimension_t r, matrix_t A,
                        BOOLEAN clear=TRUE,
                        UNSIGNED4 errCode=Not_PositiveDefZ,
                        VARSTRING errMsg=Not_PositiveDef)</Signature><Params>

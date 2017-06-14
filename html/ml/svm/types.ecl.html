@@ -1,442 +1,901 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.Types</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="libsvm/types.ecl.html">
-				ml.svm.libsvm.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Types
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : Model_ID
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : R8Entry
-			<ul>
+				<li>
+					<a href="libsvm/pkg.toc.html">libsvm</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : I4Entry
-			<ul>
+				<li>
+					<a href="scale_instance.ecl.html">scale_instance.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SVM_Type
-			<ul>
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Kernel_Type
-			<ul>
+				<li>
+					<a href="grid_search.ecl.html">grid_search.ecl</a>
+				</li>
+				
+				<li>
+					<a href="predict.ecl.html">predict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cross_validate.ecl.html">cross_validate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="train.ecl.html">train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale_factors.ecl.html">scale_factors.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Feature
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Instance
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_SV
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Grid_Args
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Grid_Plan
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Training_Base
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Training_Parameters
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : CrossValidate_Result
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : GridSearch_Result
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Feature_Scale
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Class_Scale
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Scale_Parms
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Scale
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Prediction
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Pred_Values
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Pred_Prob_Est
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Types
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Model_ID
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : R8Entry
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : I4Entry
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SVM_Type
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Kernel_Type
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Feature
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Instance
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_SV
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Grid_Args
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Grid_Plan
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Training_Base
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Training_Parameters
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : CrossValidate_Result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : GridSearch_Result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Feature_Scale
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Class_Scale
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Scale_Parms
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Scale
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Prediction
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Pred_Values
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Pred_Prob_Est
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.Types</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="libsvm/types.ecl.html">
+								ml.svm.libsvm.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-SVM-Types">
+							<a href="#ML-SVM-Types" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TYPES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-SVM-Types">Desc</a>
+							<ul id="ML-SVM-Types" class="accordian-body collapse">
+								<li id="t-ml-svm-types-model_id">
+							<a href="#ml-svm-types-model_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-model_id">Desc</a>
+							<ul id="ml-svm-types-model_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-r8entry">
+							<a href="#ml-svm-types-r8entry" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">R8ENTRY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-r8entry">Desc</a>
+							<ul id="ml-svm-types-r8entry" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-i4entry">
+							<a href="#ml-svm-types-i4entry" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">I4ENTRY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-i4entry">Desc</a>
+							<ul id="ml-svm-types-i4entry" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_TYPE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">KERNEL_TYPE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_feature">
+							<a href="#ml-svm-types-svm_feature" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_FEATURE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_feature">Desc</a>
+							<ul id="ml-svm-types-svm_feature" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_instance">
+							<a href="#ml-svm-types-svm_instance" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_INSTANCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_instance">Desc</a>
+							<ul id="ml-svm-types-svm_instance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_sv">
+							<a href="#ml-svm-types-svm_sv" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_SV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_sv">Desc</a>
+							<ul id="ml-svm-types-svm_sv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_grid_args">
+							<a href="#ml-svm-types-svm_grid_args" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_GRID_ARGS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_grid_args">Desc</a>
+							<ul id="ml-svm-types-svm_grid_args" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_grid_plan">
+							<a href="#ml-svm-types-svm_grid_plan" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_GRID_PLAN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_grid_plan">Desc</a>
+							<ul id="ml-svm-types-svm_grid_plan" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-training_base">
+							<a href="#ml-svm-types-training_base" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TRAINING_BASE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-training_base">Desc</a>
+							<ul id="ml-svm-types-training_base" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-training_parameters">
+							<a href="#ml-svm-types-training_parameters" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TRAINING_PARAMETERS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-training_parameters">Desc</a>
+							<ul id="ml-svm-types-training_parameters" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-model">
+							<a href="#ml-svm-types-model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-model">Desc</a>
+							<ul id="ml-svm-types-model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-crossvalidate_result">
+							<a href="#ml-svm-types-crossvalidate_result" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSSVALIDATE_RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-crossvalidate_result">Desc</a>
+							<ul id="ml-svm-types-crossvalidate_result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-gridsearch_result">
+							<a href="#ml-svm-types-gridsearch_result" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GRIDSEARCH_RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-gridsearch_result">Desc</a>
+							<ul id="ml-svm-types-gridsearch_result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-feature_scale">
+							<a href="#ml-svm-types-feature_scale" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FEATURE_SCALE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-feature_scale">Desc</a>
+							<ul id="ml-svm-types-feature_scale" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-class_scale">
+							<a href="#ml-svm-types-class_scale" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASS_SCALE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-class_scale">Desc</a>
+							<ul id="ml-svm-types-class_scale" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-scale_parms">
+							<a href="#ml-svm-types-scale_parms" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SCALE_PARMS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-scale_parms">Desc</a>
+							<ul id="ml-svm-types-scale_parms" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_scale">
+							<a href="#ml-svm-types-svm_scale" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_SCALE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_scale">Desc</a>
+							<ul id="ml-svm-types-svm_scale" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_prediction">
+							<a href="#ml-svm-types-svm_prediction" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PREDICTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_prediction">Desc</a>
+							<ul id="ml-svm-types-svm_prediction" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_pred_values">
+							<a href="#ml-svm-types-svm_pred_values" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PRED_VALUES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_pred_values">Desc</a>
+							<ul id="ml-svm-types-svm_pred_values" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-types-svm_pred_prob_est">
+							<a href="#ml-svm-types-svm_pred_prob_est" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PRED_PROB_EST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-types-svm_pred_prob_est">Desc</a>
+							<ul id="ml-svm-types-svm_pred_prob_est" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-SVM-Types">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TYPES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-SVM-Types" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-svm-types-model_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-model_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-r8entry">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">R8ENTRY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-r8entry" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-i4entry">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">I4ENTRY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-i4entry" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_TYPE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">KERNEL_TYPE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_feature">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_FEATURE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_feature" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_instance">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_INSTANCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_instance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_sv">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_SV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_sv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_grid_args">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_GRID_ARGS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_grid_args" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_grid_plan">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_GRID_PLAN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_grid_plan" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-training_base">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TRAINING_BASE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-training_base" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-training_parameters">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TRAINING_PARAMETERS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-training_parameters" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-crossvalidate_result">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSSVALIDATE_RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-crossvalidate_result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-gridsearch_result">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GRIDSEARCH_RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-gridsearch_result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-feature_scale">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FEATURE_SCALE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-feature_scale" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-class_scale">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASS_SCALE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-class_scale" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-scale_parms">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SCALE_PARMS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-scale_parms" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_scale">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_SCALE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_scale" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_prediction">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PREDICTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_prediction" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_pred_values">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PRED_VALUES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_pred_values" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-types-svm_pred_prob_est">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PRED_PROB_EST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-types-svm_pred_prob_est" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

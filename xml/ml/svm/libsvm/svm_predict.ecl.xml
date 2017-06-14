@@ -30,26 +30,26 @@
    <Field name="probA"/>
    <Field name="probB"/>
    <Field name="labels"/>
-   <Signature>Model</Signature><Field name="nSV"/>
+   <Signature pre="" post="" name="MODEL">Model</Signature><Field name="nSV"/>
   </Definition>
   <Definition body="207" end="226" fullname="ml.svm.libsvm.node" inherit_type="local" line="8" name="Node" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="199">
    <Type>record</Type>
    <Field name="indx"/>
-   <Signature>Node</Signature><Field name="value"/>
+   <Signature pre="" post="" name="NODE">Node</Signature><Field name="value"/>
   </Definition>
   <Definition body="235" end="256" inherit_type="local" line="9" name="Rqst" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="227">
-   <Signature>Rqst</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RQST">Rqst</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="267" end="293" fullname="ml.svm.libsvm.errcode" inherit_type="local" line="10" name="ErrCode" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="257">
-   <Signature>ErrCode</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="ERRCODE">ErrCode</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="306" end="321" fullname="ml.svm.libsvm.r8entry" inherit_type="local" line="10" name="R8Entry" source="/media/sarthak/Data/ecl-ml/./ML/SVM/LibSVM/Converted.ecl" start="296">
    <Type>record</Type>
-   <Signature>R8Entry</Signature><Field name="v"/>
+   <Signature pre="" post="" name="R8ENTRY">R8Entry</Signature><Field name="v"/>
   </Definition>
   <Definition body="458" end="5868" exported="1" fullname="ml.svm.libsvm.svm_predict" inherit_type="local" line="12" name="svm_predict" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/svm_predict.ecl" start="320">
    <Type>embed</Type>
-   <Signature>DATASET(R8Entry) svm_predict(Model ecl_model, DATASET(Node) ecl_nodes,
+   <Signature pre="DATASET(R8Entry)" post="(Model ecl_model, DATASET(Node) ecl_nodes,&#10;                                    Rqst output_request )" name="SVM_PREDICT">DATASET(R8Entry) svm_predict(Model ecl_model, DATASET(Node) ecl_nodes,
                                     Rqst output_request )</Signature><Params>
     <Param name="ecl_model"/>
     <Param name="ecl_nodes"/>

@@ -1,649 +1,1280 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Lazy</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Lazy
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			RECORD : l_result
-			<ul>
+				<li>
+					<a href="nearestneighborssearch.ecl.html">nearestneighborssearch.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : KNN(CONST Types.t_count NN_count=5)
-			<ul>
+				<li>
+					<a href="ensemble.ecl.html">ensemble.ecl</a>
+				</li>
 				
-		<li>
-			FUNCTION : MajorityVote(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)
-			<ul>
+				<li>
+					<a href="sampling.ecl.html">sampling.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyC(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)
-			<ul>
+				<li>
+					<a href="mat/pkg.toc.html">mat</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : TestC(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)
-			<ul>
+				<li>
+					<a href="appendid.ecl.html">appendid.ecl</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : J
-			<ul>
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ConfMatrix_Rec
-			<ul>
+				<li>
+					<a href="lsa/pkg.toc.html">lsa</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : class_cnt
-			<ul>
+				<li>
+					<a href="config.ecl.html">config.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cfmx
-			<ul>
+				<li>
+					<a href="naivebayes.ecl.html">naivebayes.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cross_raw
-			<ul>
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CrossAssignments
-			<ul>
+				<li>
+					<a href="stepregression/pkg.toc.html">stepregression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RecallByClass
-			<ul>
+				<li>
+					<a href="populationestimate.ecl.html">populationestimate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : PrecisionByClass
-			<ul>
+				<li>
+					<a href="svm/pkg.toc.html">svm</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : FP_Rate_ByClass
-			<ul>
+				<li>
+					<a href="version.ecl.html">version.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Accuracy
-			<ul>
+				<li>
+					<a href="generate.ecl.html">generate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : KNN_KDTree(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=15)
-			<ul>
+				<li>
+					<a href="docs/pkg.toc.html">docs</a>
+				</li>
 				
-		<li>
-			FUNCTION : MajorityVote(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)
-			<ul>
+				<li>
+					<a href="nfoldcrossvalidation.ecl.html">nfoldcrossvalidation.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : TestC(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : J
-			<ul>
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ConfMatrix_Rec
-			<ul>
+				<li>
+					<a href="stepwiselogistic/pkg.toc.html">stepwiselogistic</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fromfield.ecl.html">fromfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lazy.ecl.html">lazy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="correlate.ecl.html">correlate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="associate.ecl.html">associate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tofield.ecl.html">tofield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks.ecl.html">neuralnetworks.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="deeplearning.ecl.html">deeplearning.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils.ecl.html">utils.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trees.ecl.html">trees.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regress_poly_x.ecl.html">regress_poly_x.ecl</a>
+				</li>
+				
+				<li>
+					<a href="dmat/pkg.toc.html">dmat</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregates.ecl.html">fieldaggregates.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : class_cnt
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cfmx
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cross_raw
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CrossAssignments
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RecallByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : PrecisionByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : FP_Rate_ByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Accuracy
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyC(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Lazy
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	RECORD : l_result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : KNN(CONST Types.t_count NN_count=5)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : MajorityVote(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : TestC(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : J
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ConfMatrix_Rec
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : class_cnt
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cfmx
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cross_raw
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CrossAssignments
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RecallByClass
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : PrecisionByClass
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : FP_Rate_ByClass
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Accuracy
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	
-	<p>	MODULE : KNN_KDTree(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=15)
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="lazy.ecl.html">
-					ml.lazy.knn
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : MajorityVote(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : TestC(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : J
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ConfMatrix_Rec
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : class_cnt
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cfmx
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cross_raw
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CrossAssignments
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RecallByClass
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : PrecisionByClass
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : FP_Rate_ByClass
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Accuracy
-		
-		<br/>
-		<a href="classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Lazy</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Lazy">
+							<a href="#ML-Lazy" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAZY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Lazy">Desc</a>
+							<ul id="ML-Lazy" class="accordian-body collapse">
+								<li id="t-ml-lazy-l_result">
+							<a href="#ml-lazy-l_result" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">L_RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-lazy-l_result">Desc</a>
+							<ul id="ml-lazy-l_result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-lazy-knn">
+							<a href="#ml-lazy-knn" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">KNN</span>
+								<span class="sign-post">(CONST Types.t_count NN_count=5)</span>
+							</a> -
+							<a href="#dml-lazy-knn">Desc</a>
+							<ul id="ml-lazy-knn" class="accordian-body collapse">
+								<li id="t-ml-lazy-knn-majorityvote">
+							<a href="#ml-lazy-knn-majorityvote" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAJORITYVOTE</span>
+								<span class="sign-post">(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)</span>
+							</a> -
+							<a href="#dml-lazy-knn-majorityvote">Desc</a>
+							<ul id="ml-lazy-knn-majorityvote" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-lazy-knn-classifyc">
+							<a href="#ml-lazy-knn-classifyc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)</span>
+							</a> -
+							<a href="#dml-lazy-knn-classifyc">Desc</a>
+							<ul id="ml-lazy-knn-classifyc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-lazy-knn-testc">
+							<a href="#ml-lazy-knn-testc" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TESTC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)</span>
+							</a> -
+							<a href="#dml-lazy-knn-testc">Desc</a>
+							<ul id="ml-lazy-knn-testc" class="accordian-body collapse">
+								<li id="t-ml-classify-compare-j">
+							<a href="#ml-classify-compare-j" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">J</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-j">Desc</a>
+							<ul id="ml-classify-compare-j" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-confmatrix_rec">
+							<a href="#ml-classify-compare-confmatrix_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFMATRIX_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-confmatrix_rec">Desc</a>
+							<ul id="ml-classify-compare-confmatrix_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-class_cnt">
+							<a href="#ml-classify-compare-class_cnt" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASS_CNT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-class_cnt">Desc</a>
+							<ul id="ml-classify-compare-class_cnt" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cfmx">
+							<a href="#ml-classify-compare-cfmx" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CFMX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cfmx">Desc</a>
+							<ul id="ml-classify-compare-cfmx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cross_raw">
+							<a href="#ml-classify-compare-cross_raw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSS_RAW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cross_raw">Desc</a>
+							<ul id="ml-classify-compare-cross_raw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-crossassignments">
+							<a href="#ml-classify-compare-crossassignments" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSSASSIGNMENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-crossassignments">Desc</a>
+							<ul id="ml-classify-compare-crossassignments" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-recallbyclass">
+							<a href="#ml-classify-compare-recallbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RECALLBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-recallbyclass">Desc</a>
+							<ul id="ml-classify-compare-recallbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-precisionbyclass">
+							<a href="#ml-classify-compare-precisionbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PRECISIONBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-precisionbyclass">Desc</a>
+							<ul id="ml-classify-compare-precisionbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-fp_rate_byclass">
+							<a href="#ml-classify-compare-fp_rate_byclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FP_RATE_BYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-fp_rate_byclass">Desc</a>
+							<ul id="ml-classify-compare-fp_rate_byclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-accuracy">
+							<a href="#ml-classify-compare-accuracy" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACCURACY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-accuracy">Desc</a>
+							<ul id="ml-classify-compare-accuracy" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-lazy-knn_kdtree">
+							<a href="#ml-lazy-knn_kdtree" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">KNN_KDTREE</span>
+								<span class="sign-post">(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=15)</span>
+							</a> -
+							<a href="#dml-lazy-knn_kdtree">Desc</a>
+							<ul id="ml-lazy-knn_kdtree" class="accordian-body collapse">
+								<li id="t-ml-lazy-knn-majorityvote">
+							<a href="#ml-lazy-knn-majorityvote" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAJORITYVOTE</span>
+								<span class="sign-post">(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)</span>
+							</a> -
+							<a href="#dml-lazy-knn-majorityvote">Desc</a>
+							<ul id="ml-lazy-knn-majorityvote" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-lazy-knn-testc">
+							<a href="#ml-lazy-knn-testc" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TESTC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)</span>
+							</a> -
+							<a href="#dml-lazy-knn-testc">Desc</a>
+							<ul id="ml-lazy-knn-testc" class="accordian-body collapse">
+								<li id="t-ml-classify-compare-j">
+							<a href="#ml-classify-compare-j" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">J</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-j">Desc</a>
+							<ul id="ml-classify-compare-j" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-confmatrix_rec">
+							<a href="#ml-classify-compare-confmatrix_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFMATRIX_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-confmatrix_rec">Desc</a>
+							<ul id="ml-classify-compare-confmatrix_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-class_cnt">
+							<a href="#ml-classify-compare-class_cnt" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASS_CNT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-class_cnt">Desc</a>
+							<ul id="ml-classify-compare-class_cnt" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cfmx">
+							<a href="#ml-classify-compare-cfmx" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CFMX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cfmx">Desc</a>
+							<ul id="ml-classify-compare-cfmx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cross_raw">
+							<a href="#ml-classify-compare-cross_raw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSS_RAW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cross_raw">Desc</a>
+							<ul id="ml-classify-compare-cross_raw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-crossassignments">
+							<a href="#ml-classify-compare-crossassignments" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSSASSIGNMENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-crossassignments">Desc</a>
+							<ul id="ml-classify-compare-crossassignments" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-recallbyclass">
+							<a href="#ml-classify-compare-recallbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RECALLBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-recallbyclass">Desc</a>
+							<ul id="ml-classify-compare-recallbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-precisionbyclass">
+							<a href="#ml-classify-compare-precisionbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PRECISIONBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-precisionbyclass">Desc</a>
+							<ul id="ml-classify-compare-precisionbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-fp_rate_byclass">
+							<a href="#ml-classify-compare-fp_rate_byclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FP_RATE_BYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-fp_rate_byclass">Desc</a>
+							<ul id="ml-classify-compare-fp_rate_byclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-accuracy">
+							<a href="#ml-classify-compare-accuracy" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACCURACY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-accuracy">Desc</a>
+							<ul id="ml-classify-compare-accuracy" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-lazy-knn_kdtree-classifyc">
+							<a href="#ml-lazy-knn_kdtree-classifyc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)</span>
+							</a> -
+							<a href="#dml-lazy-knn_kdtree-classifyc">Desc</a>
+							<ul id="ml-lazy-knn_kdtree-classifyc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Lazy">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAZY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Lazy" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-lazy-l_result">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">L_RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-l_result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-lazy-knn">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">KNN</span>
+									<span class="sign-post">(CONST Types.t_count NN_count=5)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-lazy-knn-majorityvote">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAJORITYVOTE</span>
+									<span class="sign-post">(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn-majorityvote" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-lazy-knn-classifyc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn-classifyc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-lazy-knn-testc">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TESTC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn-testc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-classify-compare-j">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">J</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-j" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-confmatrix_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFMATRIX_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-confmatrix_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-class_cnt">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASS_CNT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-class_cnt" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cfmx">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CFMX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cfmx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cross_raw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSS_RAW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cross_raw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-crossassignments">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSSASSIGNMENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-crossassignments" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-recallbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RECALLBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-recallbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-precisionbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PRECISIONBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-precisionbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-fp_rate_byclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FP_RATE_BYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-fp_rate_byclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-accuracy">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACCURACY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-accuracy" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						
+						<div class="panel panel-info" id="dml-lazy-knn_kdtree">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">KNN_KDTREE</span>
+									<span class="sign-post">(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=15)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn_kdtree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="lazy.ecl.html">
+												ml.lazy.knn
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-lazy-knn-majorityvote">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAJORITYVOTE</span>
+									<span class="sign-post">(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn-majorityvote" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-lazy-knn-testc">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TESTC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn-testc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-classify-compare-j">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">J</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-j" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-confmatrix_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFMATRIX_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-confmatrix_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-class_cnt">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASS_CNT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-class_cnt" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cfmx">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CFMX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cfmx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cross_raw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSS_RAW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cross_raw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-crossassignments">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSSASSIGNMENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-crossassignments" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-recallbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RECALLBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-recallbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-precisionbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PRECISIONBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-precisionbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-fp_rate_byclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FP_RATE_BYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-fp_rate_byclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-accuracy">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACCURACY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-accuracy" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-lazy-knn_kdtree-classifyc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lazy-knn_kdtree-classifyc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

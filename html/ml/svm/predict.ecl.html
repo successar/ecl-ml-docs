@@ -1,378 +1,770 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.predict</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.svm
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="libsvm/pkg.toc.html">
-				ml.svm.libsvm
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Model
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="libsvm/pkg.toc.html">libsvm</a>
+				</li>
+				
+				<li>
+					<a href="scale_instance.ecl.html">scale_instance.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
+				
+				<li>
+					<a href="grid_search.ecl.html">grid_search.ecl</a>
+				</li>
+				
+				<li>
+					<a href="predict.ecl.html">predict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cross_validate.ecl.html">cross_validate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="train.ecl.html">train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale_factors.ecl.html">scale_factors.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : SVM_Output
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Instance
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Prediction
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Pred_Values
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Pred_Prob_Est
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : SVM_Predict
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : LibSVM_Node
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : Predict(DATASET(Model) models, DATASET(SVM_Instance) d)
-			<ul>
-				
-		<li>
-			TRANSFORM : LibSVM.Types.LibSVM_Node cvtNode(SVM.Types.SVM_Feature f)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Work_SV
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Work_SV cvtSV(SVM.Types.SVM_SV sv_rec)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Work1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : LibSVM_Node normN(LibSVM_Node node)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : svm_mdls
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Prediction
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Pred_Values
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Pred_Prob_Est
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Model
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : SVM_Output
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Instance
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Prediction
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Pred_Values
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Pred_Prob_Est
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : SVM_Predict
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : LibSVM_Node
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : Predict(DATASET(Model) models, DATASET(SVM_Instance) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	TRANSFORM : LibSVM.Types.LibSVM_Node cvtNode(SVM.Types.SVM_Feature f)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Work_SV
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Work_SV cvtSV(SVM.Types.SVM_SV sv_rec)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Work1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : LibSVM_Node normN(LibSVM_Node node)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : svm_mdls
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Prediction
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Pred_Values
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Pred_Prob_Est
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.predict</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml.svm
+							</a>
+							</li>
+						<li>
+							<a href="libsvm/pkg.toc.html">
+								ml.svm.libsvm
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-svm-model">
+							<a href="#ml-svm-model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-model">Desc</a>
+							<ul id="ml-svm-model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_model">
+							<a href="#ml-svm-svm_model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_model">Desc</a>
+							<ul id="ml-svm-svm_model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-">
+							<a href="#" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_OUTPUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#d">Desc</a>
+							<ul id="" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_instance">
+							<a href="#ml-svm-svm_instance" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_INSTANCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_instance">Desc</a>
+							<ul id="ml-svm-svm_instance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_prediction">
+							<a href="#ml-svm-svm_prediction" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PREDICTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_prediction">Desc</a>
+							<ul id="ml-svm-svm_prediction" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_pred_values">
+							<a href="#ml-svm-svm_pred_values" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PRED_VALUES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_pred_values">Desc</a>
+							<ul id="ml-svm-svm_pred_values" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_pred_prob_est">
+							<a href="#ml-svm-svm_pred_prob_est" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PRED_PROB_EST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_pred_prob_est">Desc</a>
+							<ul id="ml-svm-svm_pred_prob_est" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-svm_predict">
+							<a href="#ml-svm-svm_predict" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PREDICT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-svm_predict">Desc</a>
+							<ul id="ml-svm-svm_predict" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm_node">
+							<a href="#ml-svm-libsvm_node" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LIBSVM_NODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm_node">Desc</a>
+							<ul id="ml-svm-libsvm_node" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict">
+							<a href="#ml-svm-predict" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PREDICT</span>
+								<span class="sign-post">(DATASET(Model) models, DATASET(SVM_Instance) d)</span>
+							</a> -
+							<a href="#dml-svm-predict">Desc</a>
+							<ul id="ml-svm-predict" class="accordian-body collapse">
+								<li id="t-ml-svm-predict-cvtnode">
+							<a href="#ml-svm-predict-cvtnode" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">LibSVM.Types.LibSVM_Node</span>
+								<span class="sign-name">CVTNODE</span>
+								<span class="sign-post">(SVM.Types.SVM_Feature f)</span>
+							</a> -
+							<a href="#dml-svm-predict-cvtnode">Desc</a>
+							<ul id="ml-svm-predict-cvtnode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-work_sv">
+							<a href="#ml-svm-predict-work_sv" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">WORK_SV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-predict-work_sv">Desc</a>
+							<ul id="ml-svm-predict-work_sv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-cvtsv">
+							<a href="#ml-svm-predict-cvtsv" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Work_SV</span>
+								<span class="sign-name">CVTSV</span>
+								<span class="sign-post">(SVM.Types.SVM_SV sv_rec)</span>
+							</a> -
+							<a href="#dml-svm-predict-cvtsv">Desc</a>
+							<ul id="ml-svm-predict-cvtsv" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-work1">
+							<a href="#ml-svm-predict-work1" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">WORK1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-predict-work1">Desc</a>
+							<ul id="ml-svm-predict-work1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-normn">
+							<a href="#ml-svm-predict-normn" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">LibSVM_Node</span>
+								<span class="sign-name">NORMN</span>
+								<span class="sign-post">(LibSVM_Node node)</span>
+							</a> -
+							<a href="#dml-svm-predict-normn">Desc</a>
+							<ul id="ml-svm-predict-normn" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-svm_mdls">
+							<a href="#ml-svm-predict-svm_mdls" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_MDLS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-predict-svm_mdls">Desc</a>
+							<ul id="ml-svm-predict-svm_mdls" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-prediction">
+							<a href="#ml-svm-predict-prediction" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PREDICTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-predict-prediction">Desc</a>
+							<ul id="ml-svm-predict-prediction" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-pred_values">
+							<a href="#ml-svm-predict-pred_values" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PRED_VALUES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-predict-pred_values">Desc</a>
+							<ul id="ml-svm-predict-pred_values" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-predict-pred_prob_est">
+							<a href="#ml-svm-predict-pred_prob_est" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PRED_PROB_EST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-predict-pred_prob_est">Desc</a>
+							<ul id="ml-svm-predict-pred_prob_est" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-svm-model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="d">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_OUTPUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_instance">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_INSTANCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_instance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_prediction">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PREDICTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_prediction" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_pred_values">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PRED_VALUES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_pred_values" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_pred_prob_est">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PRED_PROB_EST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_pred_prob_est" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-svm_predict">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PREDICT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-svm_predict" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm_node">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LIBSVM_NODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm_node" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PREDICT</span>
+									<span class="sign-post">(DATASET(Model) models, DATASET(SVM_Instance) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-svm-predict-cvtnode">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">LibSVM.Types.LibSVM_Node</span>
+									<span class="sign-name">CVTNODE</span>
+									<span class="sign-post">(SVM.Types.SVM_Feature f)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-cvtnode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-work_sv">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">WORK_SV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-work_sv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-cvtsv">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Work_SV</span>
+									<span class="sign-name">CVTSV</span>
+									<span class="sign-post">(SVM.Types.SVM_SV sv_rec)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-cvtsv" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-work1">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">WORK1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-work1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-normn">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">LibSVM_Node</span>
+									<span class="sign-name">NORMN</span>
+									<span class="sign-post">(LibSVM_Node node)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-normn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-svm_mdls">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_MDLS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-svm_mdls" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-prediction">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PREDICTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-prediction" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-pred_values">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PRED_VALUES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-pred_values" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-predict-pred_prob_est">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PRED_PROB_EST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-predict-pred_prob_est" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

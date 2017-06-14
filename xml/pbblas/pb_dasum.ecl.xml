@@ -26,17 +26,17 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="173" end="188" fullname="pbblas.value_t" inherit_type="local" line="8" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" start="163">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="200" end="216" fullname="pbblas.matrix_t" inherit_type="local" line="9" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" start="189">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="287" end="514" exported="1" fullname="pbblas.pb_dasum" inherit_type="local" line="11" name="PB_dasum" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dasum.ecl" start="218">
    <Type>function</Type>
-   <Signature>value_t PB_dasum(PBblas.IMatrix_Map x_map, DATASET(Part) X)</Signature><Params>
+   <Signature pre="value_t" post="(PBblas.IMatrix_Map x_map, DATASET(Part) X)" name="PB_DASUM">value_t PB_dasum(PBblas.IMatrix_Map x_map, DATASET(Part) X)</Signature><Params>
     <Param name="x_map"/>
     <Param name="X"/>
    </Params>

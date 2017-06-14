@@ -30,12 +30,12 @@
     <Field name="N2"/>
     <Field name="N3"/>
     <Field name="N4"/>
-    <Signature>discrete_GermanRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="DISCRETE_GERMANRECORD">discrete_GermanRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="1217" end="69938" exported="1" fullname="testingsuite.classification.datasets.discrete_germands.content" inherit_type="local" line="31" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_GermanDS.ecl" start="1200">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>discrete_GermanDS</Signature><Parents/>
+   <Signature pre="" post="" name="DISCRETE_GERMANDS">discrete_GermanDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

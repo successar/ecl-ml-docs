@@ -14,11 +14,11 @@
    <Type>record</Type>
    <Field name="id"/>
    <Field name="number"/>
-   <Signature>NumericField</Signature><Field name="value"/>
+   <Signature pre="" post="" name="NUMERICFIELD">NumericField</Signature><Field name="value"/>
   </Definition>
   <Definition body="231" end="690" exported="1" fullname="ml.regression.predict" inherit_type="local" line="7" name="Predict" source="/media/sarthak/Data/ecl-ml/ML/Regression/Predict.ecl" start="138">
    <Type>function</Type>
-   <Signature>DATASET(NumericField) Predict(DATASET(NumericField) X, DATASET(NumericField) model)</Signature><Params>
+   <Signature pre="DATASET(NumericField)" post="(DATASET(NumericField) X, DATASET(NumericField) model)" name="PREDICT">DATASET(NumericField) Predict(DATASET(NumericField) X, DATASET(NumericField) model)</Signature><Params>
     <Param name="X"/>
     <Param name="model"/>
    </Params>

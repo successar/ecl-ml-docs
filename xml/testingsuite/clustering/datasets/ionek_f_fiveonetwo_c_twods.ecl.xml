@@ -518,12 +518,12 @@
     <Field name="features_510"/>
     <Field name="features_511"/>
     <Field name="features_512"/>
-    <Signature>ionek_f_fiveonetwo_c_twoRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="IONEK_F_FIVEONETWO_C_TWORECORD">ionek_f_fiveonetwo_c_twoRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="20580" end="7465075" exported="1" fullname="testingsuite.clustering.datasets.ionek_f_fiveonetwo_c_twods.content" inherit_type="local" line="519" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_fiveonetwo_c_twoDS.ecl" start="20563">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>ionek_f_fiveonetwo_c_twoDS</Signature><Parents/>
+   <Signature pre="" post="" name="IONEK_F_FIVEONETWO_C_TWODS">ionek_f_fiveonetwo_c_twoDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

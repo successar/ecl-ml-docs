@@ -3,7 +3,7 @@
  <Source name="ML.Mat.Pow" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Pow.ecl" target="pow.ecl.xml">
   <Definition body="172" end="609" exported="1" fullname="ml.mat.pow" inherit_type="local" line="5" name="Pow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Pow.ecl" start="121">
    <Type>function</Type>
-   <Signature>Pow(DATASET(Types.Element) d,UNSIGNED2 n)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) d,UNSIGNED2 n)" name="POW">Pow(DATASET(Types.Element) d,UNSIGNED2 n)</Signature><Params>
     <Param name="d"/>
     <Param name="n"/>
    </Params>

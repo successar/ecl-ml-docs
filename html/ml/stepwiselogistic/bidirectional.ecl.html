@@ -1,1603 +1,2699 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.StepwiseLogistic.Bidirectional</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../utils.ecl.html">
-				ml.utils
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../classify.ecl.html">
-				ml.classify
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="typessl.ecl.html">
-				ml.stepwiselogistic.typessl
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
-				std.str
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Bidirectional(REAL8 Ridge=0.00001, REAL8 Epsilon=0.000000001, UNSIGNED2 MaxIter=200)
-			<ul>
-				
-		<li>
-			MODULE : Regression(DATASET(Types.NumericField) X,DATASET(Types.DiscreteField) Y, DATASET(Parameter) InputVars)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : DATASET(Parameter) Indices
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(StepRec) InitialStep
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(StepRec) Steps
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : BestStep
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : BestModel
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : MapX
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Parameter
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ParamRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : StepRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RebaseX(DATASET(Types.NumericField) X)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ExtractX(DATASET(Types.NumericField) X, DATASET(Parameter) M)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Base
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : J
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ConfMatrix_Rec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : class_cnt
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cfmx
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cross_raw
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CrossAssignments
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RecallByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : PrecisionByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : FP_Rate_ByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Accuracy
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : J
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ConfMatrix_Rec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : class_cnt
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cfmx
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : cross_raw
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : CrossAssignments
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : RecallByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : PrecisionByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : FP_Rate_ByClass
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Accuracy
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Logis_Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ZStat_Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ConfInt_Model
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : DevianceRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ResidDevRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Model(DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : norm_dist
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ZStat(DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ConfInt(Types.t_fieldReal level, DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : DevianceC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Dev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : NDev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DevRes
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DevNull
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : p
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ResidDev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : NullDev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : AIC
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : AOD(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : DevianceD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Dev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : NDev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DevRes
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DevNull
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : p
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ResidDev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : NullDev
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : AIC
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LearnCS(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyS(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Bidirectional(REAL8 Ridge=0.00001, REAL8 Epsilon=0.000000001, UNSIGNED2 MaxIter=200)
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="steplogistic.ecl.html">
-					ml.stepwiselogistic.steplogistic
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	MODULE : Regression(DATASET(Types.NumericField) X,DATASET(Types.DiscreteField) Y, DATASET(Parameter) InputVars)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : DATASET(Parameter) Indices
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(StepRec) InitialStep
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(StepRec) Steps
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : BestStep
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : BestModel
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : MapX
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	RECORD : Parameter
-		
-		<br/>
-		<a href="steplogistic.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ParamRec
-		
-		<br/>
-		<a href="steplogistic.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : StepRec
-		
-		<br/>
-		<a href="steplogistic.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RebaseX(DATASET(Types.NumericField) X)
-		
-		<br/>
-		<a href="steplogistic.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ExtractX(DATASET(Types.NumericField) X, DATASET(Parameter) M)
-		
-		<br/>
-		<a href="steplogistic.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Base
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : CombineModels(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : LearnD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : TestD(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : J
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ConfMatrix_Rec
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : class_cnt
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cfmx
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cross_raw
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CrossAssignments
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RecallByClass
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : PrecisionByClass
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : FP_Rate_ByClass
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Accuracy
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	MODULE : TestC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : J
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ConfMatrix_Rec
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : class_cnt
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cfmx
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : cross_raw
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : CrossAssignments
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : RecallByClass
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : PrecisionByClass
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : FP_Rate_ByClass
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Accuracy
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : LearnDConcat(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : LearnCConcat(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Logis_Model
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ZStat_Model
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ConfInt_Model
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : DevianceRec
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ResidDevRec
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Model(DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : norm_dist
-		
-		<br/>
-		<a href="../distribution.ecl.html">External Link </a>
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="../distribution.ecl.html">
-					ml.distribution.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ZStat(DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ConfInt(Types.t_fieldReal level, DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : DevianceC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Dev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : NDev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DevRes
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DevNull
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : p
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ResidDev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : NullDev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : AIC
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : AOD(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : DevianceD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Dev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : NDev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DevRes
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DevNull
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : p
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ResidDev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : NullDev
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : AIC
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : LearnCS(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : LearnC(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyS(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		<a href="../classify.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="backward.ecl.html">backward.ecl</a>
+				</li>
+				
+				<li>
+					<a href="typessl.ecl.html">typessl.ecl</a>
+				</li>
+				
+				<li>
+					<a href="forward.ecl.html">forward.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bidirectional.ecl.html">bidirectional.ecl</a>
+				</li>
+				
+				<li>
+					<a href="steplogistic.ecl.html">steplogistic.ecl</a>
+				</li>
+				
+			</ul>
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.StepwiseLogistic.Bidirectional</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="../types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="../utils.ecl.html">
+								ml.utils
+							</a>
+							</li>
+						<li>
+							<a href="../classify.ecl.html">
+								ml.classify
+							</a>
+							</li>
+						<li>
+							<a href="typessl.ecl.html">
+								ml.stepwiselogistic.typessl
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+								std.str
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-stepwiselogistic-bidirectional">
+							<a href="#ml-stepwiselogistic-bidirectional" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BIDIRECTIONAL</span>
+								<span class="sign-post">(REAL8 Ridge=0.00001, REAL8 Epsilon=0.000000001, UNSIGNED2 MaxIter=200)</span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional" class="accordian-body collapse">
+								<li id="t-ml-stepwiselogistic-bidirectional-regression">
+							<a href="#ml-stepwiselogistic-bidirectional-regression" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REGRESSION</span>
+								<span class="sign-post">(DATASET(Types.NumericField) X,DATASET(Types.DiscreteField) Y, DATASET(Parameter) InputVars)</span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional-regression">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional-regression" class="accordian-body collapse">
+								<li id="t-ml-stepwiselogistic-bidirectional-regression-indices">
+							<a href="#ml-stepwiselogistic-bidirectional-regression-indices" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(Parameter)</span>
+								<span class="sign-name">INDICES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional-regression-indices">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional-regression-indices" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-bidirectional-regression-initialstep">
+							<a href="#ml-stepwiselogistic-bidirectional-regression-initialstep" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(StepRec)</span>
+								<span class="sign-name">INITIALSTEP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional-regression-initialstep">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional-regression-initialstep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-bidirectional-regression-steps">
+							<a href="#ml-stepwiselogistic-bidirectional-regression-steps" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(StepRec)</span>
+								<span class="sign-name">STEPS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional-regression-steps">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional-regression-steps" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-bidirectional-regression-beststep">
+							<a href="#ml-stepwiselogistic-bidirectional-regression-beststep" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BESTSTEP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional-regression-beststep">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional-regression-beststep" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-bidirectional-regression-bestmodel">
+							<a href="#ml-stepwiselogistic-bidirectional-regression-bestmodel" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BESTMODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional-regression-bestmodel">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional-regression-bestmodel" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-bidirectional-regression-mapx">
+							<a href="#ml-stepwiselogistic-bidirectional-regression-mapx" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAPX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-bidirectional-regression-mapx">Desc</a>
+							<ul id="ml-stepwiselogistic-bidirectional-regression-mapx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-steplogistic-parameter">
+							<a href="#ml-stepwiselogistic-steplogistic-parameter" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARAMETER</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-steplogistic-parameter">Desc</a>
+							<ul id="ml-stepwiselogistic-steplogistic-parameter" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-steplogistic-paramrec">
+							<a href="#ml-stepwiselogistic-steplogistic-paramrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARAMREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-steplogistic-paramrec">Desc</a>
+							<ul id="ml-stepwiselogistic-steplogistic-paramrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-steplogistic-steprec">
+							<a href="#ml-stepwiselogistic-steplogistic-steprec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">STEPREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-stepwiselogistic-steplogistic-steprec">Desc</a>
+							<ul id="ml-stepwiselogistic-steplogistic-steprec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-steplogistic-rebasex">
+							<a href="#ml-stepwiselogistic-steplogistic-rebasex" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REBASEX</span>
+								<span class="sign-post">(DATASET(Types.NumericField) X)</span>
+							</a> -
+							<a href="#dml-stepwiselogistic-steplogistic-rebasex">Desc</a>
+							<ul id="ml-stepwiselogistic-steplogistic-rebasex" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-stepwiselogistic-steplogistic-extractx">
+							<a href="#ml-stepwiselogistic-steplogistic-extractx" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EXTRACTX</span>
+								<span class="sign-post">(DATASET(Types.NumericField) X, DATASET(Parameter) M)</span>
+							</a> -
+							<a href="#dml-stepwiselogistic-steplogistic-extractx">Desc</a>
+							<ul id="ml-stepwiselogistic-steplogistic-extractx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-base">
+							<a href="#ml-classify-default-base" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BASE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-default-base">Desc</a>
+							<ul id="ml-classify-default-base" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-combinemodels">
+							<a href="#ml-classify-default-combinemodels" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COMBINEMODELS</span>
+								<span class="sign-post">(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)</span>
+							</a> -
+							<a href="#dml-classify-default-combinemodels">Desc</a>
+							<ul id="ml-classify-default-combinemodels" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-learnd">
+							<a href="#ml-classify-default-learnd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEARND</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+							</a> -
+							<a href="#dml-classify-default-learnd">Desc</a>
+							<ul id="ml-classify-default-learnd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-classifyd">
+							<a href="#ml-classify-default-classifyd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYD</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-default-classifyd">Desc</a>
+							<ul id="ml-classify-default-classifyd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-testd">
+							<a href="#ml-classify-default-testd" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TESTD</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+							</a> -
+							<a href="#dml-classify-default-testd">Desc</a>
+							<ul id="ml-classify-default-testd" class="accordian-body collapse">
+								<li id="t-ml-classify-compare-j">
+							<a href="#ml-classify-compare-j" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">J</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-j">Desc</a>
+							<ul id="ml-classify-compare-j" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-confmatrix_rec">
+							<a href="#ml-classify-compare-confmatrix_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFMATRIX_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-confmatrix_rec">Desc</a>
+							<ul id="ml-classify-compare-confmatrix_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-class_cnt">
+							<a href="#ml-classify-compare-class_cnt" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASS_CNT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-class_cnt">Desc</a>
+							<ul id="ml-classify-compare-class_cnt" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cfmx">
+							<a href="#ml-classify-compare-cfmx" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CFMX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cfmx">Desc</a>
+							<ul id="ml-classify-compare-cfmx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cross_raw">
+							<a href="#ml-classify-compare-cross_raw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSS_RAW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cross_raw">Desc</a>
+							<ul id="ml-classify-compare-cross_raw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-crossassignments">
+							<a href="#ml-classify-compare-crossassignments" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSSASSIGNMENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-crossassignments">Desc</a>
+							<ul id="ml-classify-compare-crossassignments" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-recallbyclass">
+							<a href="#ml-classify-compare-recallbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RECALLBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-recallbyclass">Desc</a>
+							<ul id="ml-classify-compare-recallbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-precisionbyclass">
+							<a href="#ml-classify-compare-precisionbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PRECISIONBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-precisionbyclass">Desc</a>
+							<ul id="ml-classify-compare-precisionbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-fp_rate_byclass">
+							<a href="#ml-classify-compare-fp_rate_byclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FP_RATE_BYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-fp_rate_byclass">Desc</a>
+							<ul id="ml-classify-compare-fp_rate_byclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-accuracy">
+							<a href="#ml-classify-compare-accuracy" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACCURACY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-accuracy">Desc</a>
+							<ul id="ml-classify-compare-accuracy" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-testc">
+							<a href="#ml-classify-default-testc" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TESTC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+							</a> -
+							<a href="#dml-classify-default-testc">Desc</a>
+							<ul id="ml-classify-default-testc" class="accordian-body collapse">
+								<li id="t-ml-classify-compare-j">
+							<a href="#ml-classify-compare-j" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">J</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-j">Desc</a>
+							<ul id="ml-classify-compare-j" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-confmatrix_rec">
+							<a href="#ml-classify-compare-confmatrix_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFMATRIX_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-confmatrix_rec">Desc</a>
+							<ul id="ml-classify-compare-confmatrix_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-class_cnt">
+							<a href="#ml-classify-compare-class_cnt" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASS_CNT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-class_cnt">Desc</a>
+							<ul id="ml-classify-compare-class_cnt" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cfmx">
+							<a href="#ml-classify-compare-cfmx" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CFMX</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cfmx">Desc</a>
+							<ul id="ml-classify-compare-cfmx" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-cross_raw">
+							<a href="#ml-classify-compare-cross_raw" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSS_RAW</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-cross_raw">Desc</a>
+							<ul id="ml-classify-compare-cross_raw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-crossassignments">
+							<a href="#ml-classify-compare-crossassignments" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CROSSASSIGNMENTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-crossassignments">Desc</a>
+							<ul id="ml-classify-compare-crossassignments" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-recallbyclass">
+							<a href="#ml-classify-compare-recallbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RECALLBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-recallbyclass">Desc</a>
+							<ul id="ml-classify-compare-recallbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-precisionbyclass">
+							<a href="#ml-classify-compare-precisionbyclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PRECISIONBYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-precisionbyclass">Desc</a>
+							<ul id="ml-classify-compare-precisionbyclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-fp_rate_byclass">
+							<a href="#ml-classify-compare-fp_rate_byclass" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FP_RATE_BYCLASS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-fp_rate_byclass">Desc</a>
+							<ul id="ml-classify-compare-fp_rate_byclass" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-compare-accuracy">
+							<a href="#ml-classify-compare-accuracy" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACCURACY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-compare-accuracy">Desc</a>
+							<ul id="ml-classify-compare-accuracy" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-learndconcat">
+							<a href="#ml-classify-default-learndconcat" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEARNDCONCAT</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)</span>
+							</a> -
+							<a href="#dml-classify-default-learndconcat">Desc</a>
+							<ul id="ml-classify-default-learndconcat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-default-learncconcat">
+							<a href="#ml-classify-default-learncconcat" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEARNCCONCAT</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)</span>
+							</a> -
+							<a href="#dml-classify-default-learncconcat">Desc</a>
+							<ul id="ml-classify-default-learncconcat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-logis_model">
+							<a href="#ml-classify-logistic_model-logis_model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LOGIS_MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-logis_model">Desc</a>
+							<ul id="ml-classify-logistic_model-logis_model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-zstat_model">
+							<a href="#ml-classify-logistic_model-zstat_model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ZSTAT_MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-zstat_model">Desc</a>
+							<ul id="ml-classify-logistic_model-zstat_model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-confint_model">
+							<a href="#ml-classify-logistic_model-confint_model" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFINT_MODEL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-confint_model">Desc</a>
+							<ul id="ml-classify-logistic_model-confint_model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancerec">
+							<a href="#ml-classify-logistic_model-deviancerec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEVIANCEREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancerec">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancerec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-residdevrec">
+							<a href="#ml-classify-logistic_model-residdevrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RESIDDEVREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-residdevrec">Desc</a>
+							<ul id="ml-classify-logistic_model-residdevrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-model">
+							<a href="#ml-classify-logistic_model-model" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-logistic_model-model">Desc</a>
+							<ul id="ml-classify-logistic_model-model" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ML-Distribution-Normal">
+							<a href="#ML-Distribution-Normal" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NORM_DIST</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Distribution-Normal">Desc</a>
+							<ul id="ML-Distribution-Normal" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-zstat">
+							<a href="#ml-classify-logistic_model-zstat" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ZSTAT</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-logistic_model-zstat">Desc</a>
+							<ul id="ml-classify-logistic_model-zstat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-confint">
+							<a href="#ml-classify-logistic_model-confint" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONFINT</span>
+								<span class="sign-post">(Types.t_fieldReal level, DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-logistic_model-confint">Desc</a>
+							<ul id="ml-classify-logistic_model-confint" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-classifyc">
+							<a href="#ml-classify-logistic_model-classifyc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-logistic_model-classifyc">Desc</a>
+							<ul id="ml-classify-logistic_model-classifyc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec">
+							<a href="#ml-classify-logistic_model-deviancec" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEVIANCEC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec" class="accordian-body collapse">
+								<li id="t-ml-classify-logistic_model-deviancec-dev">
+							<a href="#ml-classify-logistic_model-deviancec-dev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-dev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-dev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-ndev">
+							<a href="#ml-classify-logistic_model-deviancec-ndev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NDEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-ndev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-ndev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-devres">
+							<a href="#ml-classify-logistic_model-deviancec-devres" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEVRES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-devres">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-devres" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-devnull">
+							<a href="#ml-classify-logistic_model-deviancec-devnull" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEVNULL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-devnull">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-devnull" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-p">
+							<a href="#ml-classify-logistic_model-deviancec-p" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">P</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-p">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-p" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-residdev">
+							<a href="#ml-classify-logistic_model-deviancec-residdev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RESIDDEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-residdev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-residdev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-nulldev">
+							<a href="#ml-classify-logistic_model-deviancec-nulldev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NULLDEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-nulldev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-nulldev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-aic">
+							<a href="#ml-classify-logistic_model-deviancec-aic" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">AIC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-aic">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-aic" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-aod">
+							<a href="#ml-classify-logistic_model-aod" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">AOD</span>
+								<span class="sign-post">(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)</span>
+							</a> -
+							<a href="#dml-classify-logistic_model-aod">Desc</a>
+							<ul id="ml-classify-logistic_model-aod" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-devianced">
+							<a href="#ml-classify-logistic_model-devianced" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEVIANCED</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-logistic_model-devianced">Desc</a>
+							<ul id="ml-classify-logistic_model-devianced" class="accordian-body collapse">
+								<li id="t-ml-classify-logistic_model-deviancec-dev">
+							<a href="#ml-classify-logistic_model-deviancec-dev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-dev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-dev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-ndev">
+							<a href="#ml-classify-logistic_model-deviancec-ndev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NDEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-ndev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-ndev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-devres">
+							<a href="#ml-classify-logistic_model-deviancec-devres" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEVRES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-devres">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-devres" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-devnull">
+							<a href="#ml-classify-logistic_model-deviancec-devnull" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEVNULL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-devnull">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-devnull" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-p">
+							<a href="#ml-classify-logistic_model-deviancec-p" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">P</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-p">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-p" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-residdev">
+							<a href="#ml-classify-logistic_model-deviancec-residdev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RESIDDEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-residdev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-residdev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-nulldev">
+							<a href="#ml-classify-logistic_model-deviancec-nulldev" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NULLDEV</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-nulldev">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-nulldev" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_model-deviancec-aic">
+							<a href="#ml-classify-logistic_model-deviancec-aic" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">AIC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-classify-logistic_model-deviancec-aic">Desc</a>
+							<ul id="ml-classify-logistic_model-deviancec-aic" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_sparse-learncs">
+							<a href="#ml-classify-logistic_sparse-learncs" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEARNCS</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+							</a> -
+							<a href="#dml-classify-logistic_sparse-learncs">Desc</a>
+							<ul id="ml-classify-logistic_sparse-learncs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_sparse-learnc">
+							<a href="#ml-classify-logistic_sparse-learnc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEARNC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+							</a> -
+							<a href="#dml-classify-logistic_sparse-learnc">Desc</a>
+							<ul id="ml-classify-logistic_sparse-learnc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-classify-logistic_sparse-classifys">
+							<a href="#ml-classify-logistic_sparse-classifys" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYS</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-classify-logistic_sparse-classifys">Desc</a>
+							<ul id="ml-classify-logistic_sparse-classifys" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BIDIRECTIONAL</span>
+									<span class="sign-post">(REAL8 Ridge=0.00001, REAL8 Epsilon=0.000000001, UNSIGNED2 MaxIter=200)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="steplogistic.ecl.html">
+												ml.stepwiselogistic.steplogistic
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional-regression">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REGRESSION</span>
+									<span class="sign-post">(DATASET(Types.NumericField) X,DATASET(Types.DiscreteField) Y, DATASET(Parameter) InputVars)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional-regression" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional-regression-indices">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Parameter)</span>
+									<span class="sign-name">INDICES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional-regression-indices" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional-regression-initialstep">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(StepRec)</span>
+									<span class="sign-name">INITIALSTEP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional-regression-initialstep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional-regression-steps">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(StepRec)</span>
+									<span class="sign-name">STEPS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional-regression-steps" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional-regression-beststep">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BESTSTEP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional-regression-beststep" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional-regression-bestmodel">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BESTMODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional-regression-bestmodel" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-bidirectional-regression-mapx">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAPX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-bidirectional-regression-mapx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-steplogistic-parameter">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARAMETER</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-steplogistic-parameter" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="steplogistic.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-steplogistic-paramrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARAMREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-steplogistic-paramrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="steplogistic.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-steplogistic-steprec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">STEPREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-steplogistic-steprec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="steplogistic.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-steplogistic-rebasex">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REBASEX</span>
+									<span class="sign-post">(DATASET(Types.NumericField) X)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-steplogistic-rebasex" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="steplogistic.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-stepwiselogistic-steplogistic-extractx">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EXTRACTX</span>
+									<span class="sign-post">(DATASET(Types.NumericField) X, DATASET(Parameter) M)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-stepwiselogistic-steplogistic-extractx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="steplogistic.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-default-base">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BASE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-base" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-default-combinemodels">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COMBINEMODELS</span>
+									<span class="sign-post">(DATASET(Types.NumericField) sofar,DATASET(Types.NumericField) new)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-combinemodels" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-default-learnd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEARND</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-learnd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-default-classifyd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYD</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-classifyd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-default-testd">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TESTD</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-testd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-classify-compare-j">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">J</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-j" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-confmatrix_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFMATRIX_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-confmatrix_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-class_cnt">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASS_CNT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-class_cnt" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cfmx">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CFMX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cfmx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cross_raw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSS_RAW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cross_raw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-crossassignments">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSSASSIGNMENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-crossassignments" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-recallbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RECALLBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-recallbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-precisionbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PRECISIONBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-precisionbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-fp_rate_byclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FP_RATE_BYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-fp_rate_byclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-accuracy">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACCURACY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-accuracy" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-classify-default-testc">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TESTC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-testc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-classify-compare-j">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">J</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-j" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-confmatrix_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFMATRIX_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-confmatrix_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-class_cnt">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASS_CNT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-class_cnt" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cfmx">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CFMX</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cfmx" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-cross_raw">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSS_RAW</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-cross_raw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-crossassignments">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CROSSASSIGNMENTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-crossassignments" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-recallbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RECALLBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-recallbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-precisionbyclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PRECISIONBYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-precisionbyclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-fp_rate_byclass">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FP_RATE_BYCLASS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-fp_rate_byclass" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-compare-accuracy">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACCURACY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-compare-accuracy" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-classify-default-learndconcat">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEARNDCONCAT</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.DiscreteField) Dep, LearnD fnc)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-learndconcat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-default-learncconcat">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEARNCCONCAT</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, LearnC fnc)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-default-learncconcat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-logis_model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LOGIS_MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-logis_model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-zstat_model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ZSTAT_MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-zstat_model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-confint_model">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFINT_MODEL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-confint_model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancerec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEVIANCEREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancerec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-residdevrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RESIDDEVREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-residdevrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-model">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-model" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dML-Distribution-Normal">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NORM_DIST</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Distribution-Normal" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../distribution.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="../distribution.ecl.html">
+												ml.distribution.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-zstat">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ZSTAT</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-zstat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-confint">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONFINT</span>
+									<span class="sign-post">(Types.t_fieldReal level, DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-confint" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-classifyc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-classifyc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEVIANCEC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-dev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-dev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-ndev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NDEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-ndev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-devres">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEVRES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-devres" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-devnull">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEVNULL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-devnull" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-p">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">P</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-p" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-residdev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RESIDDEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-residdev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-nulldev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NULLDEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-nulldev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-aic">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">AIC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-aic" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-aod">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">AOD</span>
+									<span class="sign-post">(DATASET(ResidDevRec) R1, DATASET(ResidDevRec) R2)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-aod" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-devianced">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEVIANCED</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-devianced" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-dev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-dev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-ndev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NDEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-ndev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-devres">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEVRES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-devres" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-devnull">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEVNULL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-devnull" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-p">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">P</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-p" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-residdev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RESIDDEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-residdev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-nulldev">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NULLDEV</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-nulldev" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_model-deviancec-aic">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">AIC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_model-deviancec-aic" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-classify-logistic_sparse-learncs">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEARNCS</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_sparse-learncs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_sparse-learnc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEARNC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.DiscreteField) Dep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_sparse-learnc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-classify-logistic_sparse-classifys">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYS</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-classify-logistic_sparse-classifys" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									<a href="../classify.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

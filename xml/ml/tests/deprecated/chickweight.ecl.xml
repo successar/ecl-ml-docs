@@ -7,10 +7,10 @@
    <Field name="weight"/>
    <Field name="Time"/>
    <Field name="Chick"/>
-   <Signature>ChickWeightRec</Signature><Field name="Diet"/>
+   <Signature pre="" post="" name="CHICKWEIGHTREC">ChickWeightRec</Signature><Field name="Diet"/>
   </Definition>
   <Definition body="139" end="10414" exported="1" fullname="ml.tests.deprecated.chickweight" inherit_type="local" line="9" name="ChickWeight" source="/media/sarthak/Data/ecl-ml/ML/Tests/Deprecated/ChickWeight.ecl" start="118">
-   <Signature>ChickWeight</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="CHICKWEIGHT">ChickWeight</Signature><Type>attribute</Type>
   </Definition>
  </Source>
 </Meta>

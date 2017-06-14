@@ -4,15 +4,15 @@
   <Definition body="112" end="306" exported="1" fullname="ML.Config" inherit_type="local" line="2" name="Config" source="/media/sarthak/Data/ecl-ml/ML/Config.ecl" start="96">
    <Type>module</Type>
    <Definition body="141" end="153" exported="1" fullname="ml.config.maxlookup" inherit_type="local" line="3" name="MaxLookup" source="/media/sarthak/Data/ecl-ml/ML/Config.ecl" start="122">
-    <Signature>MaxLookup</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MAXLOOKUP">MaxLookup</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="203" end="207" exported="1" fullname="ml.config.discrete" inherit_type="local" line="4" name="Discrete" source="/media/sarthak/Data/ecl-ml/ML/Config.ecl" start="185">
-    <Signature>Discrete</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DISCRETE">Discrete</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="286" end="300" exported="1" fullname="ml.config.roundingerror" inherit_type="local" line="5" name="RoundingError" source="/media/sarthak/Data/ecl-ml/ML/Config.ecl" start="263">
-    <Signature>RoundingError</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="ROUNDINGERROR">RoundingError</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Config</Signature><Parents/>
+   <Signature pre="" post="" name="CONFIG">Config</Signature><Parents/>
   </Definition>
  </Source>
 </Meta>

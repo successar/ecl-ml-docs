@@ -1,314 +1,626 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>PBblas.Tests.DiffReport</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../ml/dmat/pkg.toc.html">
-				ml.dmat
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../types.ecl.html">
-				pbblas.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			ATTRIBUTE : dimension_t
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="maptest.ecl.html">maptest.ecl</a>
+				</li>
+				
+				<li>
+					<a href="solve.ecl.html">solve.ecl</a>
+				</li>
+				
+				<li>
+					<a href="diffreport.ecl.html">diffreport.ecl</a>
+				</li>
+				
+				<li>
+					<a href="factor.ecl.html">factor.ecl</a>
+				</li>
+				
+				<li>
+					<a href="multiply.ecl.html">multiply.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : value_t
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Layout_Cell
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Layout_Part
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Epsilon
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : DiffReport
-			<ul>
-				
-		<li>
-			ATTRIBUTE : Text_Diff_Missing
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Text_Diff_Added
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Text_Diff_Different
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Text_Diff_Unknown
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Diffs_Kept
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Layout_Diff
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Layout_TestResult
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Compare_Cells(STRING testName,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">PBblas.Tests.DiffReport</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../ml/dmat/pkg.toc.html">
+								ml.dmat
+							</a>
+							</li>
+						<li>
+							<a href="../types.ecl.html">
+								pbblas.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-pbblas-tests-dimension_t">
+							<a href="#pbblas-tests-dimension_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIMENSION_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-dimension_t">Desc</a>
+							<ul id="pbblas-tests-dimension_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-value_t">
+							<a href="#pbblas-tests-value_t" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VALUE_T</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-value_t">Desc</a>
+							<ul id="pbblas-tests-value_t" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-layout_cell">
+							<a href="#pbblas-tests-layout_cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAYOUT_CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-layout_cell">Desc</a>
+							<ul id="pbblas-tests-layout_cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-layout_part">
+							<a href="#pbblas-tests-layout_part" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAYOUT_PART</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-layout_part">Desc</a>
+							<ul id="pbblas-tests-layout_part" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-epsilon">
+							<a href="#pbblas-tests-epsilon" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">EPSILON</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-epsilon">Desc</a>
+							<ul id="pbblas-tests-epsilon" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-PBblas-Tests-DiffReport">
+							<a href="#PBblas-Tests-DiffReport" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIFFREPORT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dPBblas-Tests-DiffReport">Desc</a>
+							<ul id="PBblas-Tests-DiffReport" class="accordian-body collapse">
+								<li id="t-pbblas-tests-diffreport-text_diff_missing">
+							<a href="#pbblas-tests-diffreport-text_diff_missing" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TEXT_DIFF_MISSING</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-text_diff_missing">Desc</a>
+							<ul id="pbblas-tests-diffreport-text_diff_missing" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-text_diff_added">
+							<a href="#pbblas-tests-diffreport-text_diff_added" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TEXT_DIFF_ADDED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-text_diff_added">Desc</a>
+							<ul id="pbblas-tests-diffreport-text_diff_added" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-text_diff_different">
+							<a href="#pbblas-tests-diffreport-text_diff_different" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TEXT_DIFF_DIFFERENT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-text_diff_different">Desc</a>
+							<ul id="pbblas-tests-diffreport-text_diff_different" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-text_diff_unknown">
+							<a href="#pbblas-tests-diffreport-text_diff_unknown" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TEXT_DIFF_UNKNOWN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-text_diff_unknown">Desc</a>
+							<ul id="pbblas-tests-diffreport-text_diff_unknown" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-diffs_kept">
+							<a href="#pbblas-tests-diffreport-diffs_kept" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DIFFS_KEPT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-diffs_kept">Desc</a>
+							<ul id="pbblas-tests-diffreport-diffs_kept" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-layout_diff">
+							<a href="#pbblas-tests-diffreport-layout_diff" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAYOUT_DIFF</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-layout_diff">Desc</a>
+							<ul id="pbblas-tests-diffreport-layout_diff" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-layout_testresult">
+							<a href="#pbblas-tests-diffreport-layout_testresult" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAYOUT_TESTRESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-layout_testresult">Desc</a>
+							<ul id="pbblas-tests-diffreport-layout_testresult" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-compare_cells">
+							<a href="#pbblas-tests-diffreport-compare_cells" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COMPARE_CELLS</span>
+								<span class="sign-post">(STRING testName,
                        DATASET(Layout_Cell) std,
-                       DATASET(Layout_Cell) tst)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Compare_Parts(STRING testName,
+                       DATASET(Layout_Cell) tst)</span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-compare_cells">Desc</a>
+							<ul id="pbblas-tests-diffreport-compare_cells" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-pbblas-tests-diffreport-compare_parts">
+							<a href="#pbblas-tests-diffreport-compare_parts" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COMPARE_PARTS</span>
+								<span class="sign-post">(STRING testName,
                        DATASET(Layout_Part) std,
-                       DATASET(Layout_Part) tst)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	ATTRIBUTE : dimension_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : value_t
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Layout_Cell
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Layout_Part
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Epsilon
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : DiffReport
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Text_Diff_Missing
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Text_Diff_Added
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Text_Diff_Different
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Text_Diff_Unknown
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Diffs_Kept
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Layout_Diff
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Layout_TestResult
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Compare_Cells(STRING testName,
+                       DATASET(Layout_Part) tst)</span>
+							</a> -
+							<a href="#dpbblas-tests-diffreport-compare_parts">Desc</a>
+							<ul id="pbblas-tests-diffreport-compare_parts" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dpbblas-tests-dimension_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIMENSION_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-dimension_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-value_t">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VALUE_T</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-value_t" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-layout_cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAYOUT_CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-layout_cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-layout_part">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAYOUT_PART</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-layout_part" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-epsilon">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">EPSILON</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-epsilon" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dPBblas-Tests-DiffReport">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIFFREPORT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-PBblas-Tests-DiffReport" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-text_diff_missing">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TEXT_DIFF_MISSING</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-text_diff_missing" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-text_diff_added">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TEXT_DIFF_ADDED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-text_diff_added" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-text_diff_different">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TEXT_DIFF_DIFFERENT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-text_diff_different" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-text_diff_unknown">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TEXT_DIFF_UNKNOWN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-text_diff_unknown" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-diffs_kept">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DIFFS_KEPT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-diffs_kept" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-layout_diff">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAYOUT_DIFF</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-layout_diff" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-layout_testresult">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAYOUT_TESTRESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-layout_testresult" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-compare_cells">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COMPARE_CELLS</span>
+									<span class="sign-post">(STRING testName,
                        DATASET(Layout_Cell) std,
-                       DATASET(Layout_Cell) tst)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Compare_Parts(STRING testName,
+                       DATASET(Layout_Cell) tst)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-compare_cells" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dpbblas-tests-diffreport-compare_parts">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COMPARE_PARTS</span>
+									<span class="sign-post">(STRING testName,
                        DATASET(Layout_Part) std,
-                       DATASET(Layout_Part) tst)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+                       DATASET(Layout_Part) tst)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-pbblas-tests-diffreport-compare_parts" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

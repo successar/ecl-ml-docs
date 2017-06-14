@@ -1,700 +1,1462 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Utils</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
-				std.str
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
-				std.system.thorlib
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Utils
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : Pi
-			<ul>
+				<li>
+					<a href="nearestneighborssearch.ecl.html">nearestneighborssearch.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Base
-			<ul>
+				<li>
+					<a href="ensemble.ecl.html">ensemble.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 Fac(UNSIGNED2 i)
-			<ul>
+				<li>
+					<a href="sampling.ecl.html">sampling.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 DoubleFac(INTEGER2 i)
-			<ul>
+				<li>
+					<a href="mat/pkg.toc.html">mat</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : REAL8 NCK(INTEGER2 N, INTEGER2 K)
-			<ul>
+				<li>
+					<a href="appendid.ecl.html">appendid.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 Poly(REAL8 x, SET OF REAL8 Coeffs)
-			<ul>
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : stirlingFormula(real8 x)
-			<ul>
+				<li>
+					<a href="lsa/pkg.toc.html">lsa</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 gamma(REAL8 x)
-			<ul>
+				<li>
+					<a href="config.ecl.html">config.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 lowerGamma(REAL8 x, REAL8 y)
-			<ul>
+				<li>
+					<a href="naivebayes.ecl.html">naivebayes.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : REAL8 upperGamma(REAL8 x, REAL8 y)
-			<ul>
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Beta(REAL8 x, REAL8 y)
-			<ul>
+				<li>
+					<a href="stepregression/pkg.toc.html">stepregression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Fat(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)
-			<ul>
+				<li>
+					<a href="populationestimate.ecl.html">populationestimate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FatD(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)
-			<ul>
+				<li>
+					<a href="svm/pkg.toc.html">svm</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SparseARFFfileToDiscreteField(STRING fileName)
-			<ul>
+				<li>
+					<a href="version.ecl.html">version.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SparseARFFfileToDiscreteFieldCounted(STRING fileName)
-			<ul>
+				<li>
+					<a href="generate.ecl.html">generate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			MACRO : Gini(infile,pivot,target)
-			<ul>
+				<li>
+					<a href="docs/pkg.toc.html">docs</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			MACRO : mac_SequenceInField(infile,infield,seq,outfile)
-			<ul>
+				<li>
+					<a href="nfoldcrossvalidation.ecl.html">nfoldcrossvalidation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic/pkg.toc.html">stepwiselogistic</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fromfield.ecl.html">fromfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lazy.ecl.html">lazy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="correlate.ecl.html">correlate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="associate.ecl.html">associate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tofield.ecl.html">tofield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks.ecl.html">neuralnetworks.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="deeplearning.ecl.html">deeplearning.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils.ecl.html">utils.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trees.ecl.html">trees.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regress_poly_x.ecl.html">regress_poly_x.ecl</a>
+				</li>
+				
+				<li>
+					<a href="dmat/pkg.toc.html">dmat</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregates.ecl.html">fieldaggregates.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RebaseDiscrete(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : RebaseNumericField(DATASET(Types.NumericField) cl)
-			<ul>
-				
-		<li>
-			RECORD : MapRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Mapping(Types.t_FieldNumber new_lowval=1)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToNew(DATASET(MapRec) MapTable)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToOldFromElemToPart(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : RebaseNumericFieldID(DATASET(Types.NumericField) cl)
-			<ul>
-				
-		<li>
-			RECORD : MapRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : MappingID(Types.t_FieldNumber new_lowval=1)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToNew(DATASET(MapRec) MapTable)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NotFirst(STRING S)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NotLast(STRING S)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NotNN(STRING S,UNSIGNED2 NN)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : LastN(STRING S)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NchooseK(UNSIGNED1 N, UNSIGNED1 K)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToGroundTruth(DATASET(Types.NumericField) Y )
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Utils
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : Pi
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Base
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 Fac(UNSIGNED2 i)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 DoubleFac(INTEGER2 i)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : REAL8 NCK(INTEGER2 N, INTEGER2 K)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 Poly(REAL8 x, SET OF REAL8 Coeffs)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : stirlingFormula(real8 x)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 gamma(REAL8 x)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 lowerGamma(REAL8 x, REAL8 y)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : REAL8 upperGamma(REAL8 x, REAL8 y)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Beta(REAL8 x, REAL8 y)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Fat(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FatD(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SparseARFFfileToDiscreteField(STRING fileName)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SparseARFFfileToDiscreteFieldCounted(STRING fileName)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MACRO : Gini(infile,pivot,target)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MACRO : mac_SequenceInField(infile,infield,seq,outfile)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RebaseDiscrete(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : RebaseNumericField(DATASET(Types.NumericField) cl)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	RECORD : MapRec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Mapping(Types.t_FieldNumber new_lowval=1)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToNew(DATASET(MapRec) MapTable)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToOldFromElemToPart(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	MODULE : RebaseNumericFieldID(DATASET(Types.NumericField) cl)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	RECORD : MapRec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : MappingID(Types.t_FieldNumber new_lowval=1)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToNew(DATASET(MapRec) MapTable)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToOld(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	FUNCTION : NotFirst(STRING S)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NotLast(STRING S)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NotNN(STRING S,UNSIGNED2 NN)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : LastN(STRING S)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NchooseK(UNSIGNED1 N, UNSIGNED1 K)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToGroundTruth(DATASET(Types.NumericField) Y )
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Utils</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+								std.str
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+								std.system.thorlib
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Utils">
+							<a href="#ML-Utils" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">UTILS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Utils">Desc</a>
+							<ul id="ML-Utils" class="accordian-body collapse">
+								<li id="t-ml-utils-pi">
+							<a href="#ml-utils-pi" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PI</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-utils-pi">Desc</a>
+							<ul id="ml-utils-pi" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-base">
+							<a href="#ml-utils-base" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BASE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-utils-base">Desc</a>
+							<ul id="ml-utils-base" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-fac">
+							<a href="#ml-utils-fac" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">FAC</span>
+								<span class="sign-post">(UNSIGNED2 i)</span>
+							</a> -
+							<a href="#dml-utils-fac">Desc</a>
+							<ul id="ml-utils-fac" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-doublefac">
+							<a href="#ml-utils-doublefac" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">DOUBLEFAC</span>
+								<span class="sign-post">(INTEGER2 i)</span>
+							</a> -
+							<a href="#dml-utils-doublefac">Desc</a>
+							<ul id="ml-utils-doublefac" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-nck">
+							<a href="#ml-utils-nck" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">NCK</span>
+								<span class="sign-post">(INTEGER2 N, INTEGER2 K)</span>
+							</a> -
+							<a href="#dml-utils-nck">Desc</a>
+							<ul id="ml-utils-nck" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-poly">
+							<a href="#ml-utils-poly" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">POLY</span>
+								<span class="sign-post">(REAL8 x, SET OF REAL8 Coeffs)</span>
+							</a> -
+							<a href="#dml-utils-poly">Desc</a>
+							<ul id="ml-utils-poly" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-stirlingformula">
+							<a href="#ml-utils-stirlingformula" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">STIRLINGFORMULA</span>
+								<span class="sign-post">(real8 x)</span>
+							</a> -
+							<a href="#dml-utils-stirlingformula">Desc</a>
+							<ul id="ml-utils-stirlingformula" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-gamma">
+							<a href="#ml-utils-gamma" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">GAMMA</span>
+								<span class="sign-post">(REAL8 x)</span>
+							</a> -
+							<a href="#dml-utils-gamma">Desc</a>
+							<ul id="ml-utils-gamma" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-lowergamma">
+							<a href="#ml-utils-lowergamma" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">LOWERGAMMA</span>
+								<span class="sign-post">(REAL8 x, REAL8 y)</span>
+							</a> -
+							<a href="#dml-utils-lowergamma">Desc</a>
+							<ul id="ml-utils-lowergamma" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-uppergamma">
+							<a href="#ml-utils-uppergamma" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">REAL8</span>
+								<span class="sign-name">UPPERGAMMA</span>
+								<span class="sign-post">(REAL8 x, REAL8 y)</span>
+							</a> -
+							<a href="#dml-utils-uppergamma">Desc</a>
+							<ul id="ml-utils-uppergamma" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-beta">
+							<a href="#ml-utils-beta" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">BETA</span>
+								<span class="sign-post">(REAL8 x, REAL8 y)</span>
+							</a> -
+							<a href="#dml-utils-beta">Desc</a>
+							<ul id="ml-utils-beta" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-fat">
+							<a href="#ml-utils-fat" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FAT</span>
+								<span class="sign-post">(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)</span>
+							</a> -
+							<a href="#dml-utils-fat">Desc</a>
+							<ul id="ml-utils-fat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-fatd">
+							<a href="#ml-utils-fatd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FATD</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)</span>
+							</a> -
+							<a href="#dml-utils-fatd">Desc</a>
+							<ul id="ml-utils-fatd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-sparsearfffiletodiscretefield">
+							<a href="#ml-utils-sparsearfffiletodiscretefield" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPARSEARFFFILETODISCRETEFIELD</span>
+								<span class="sign-post">(STRING fileName)</span>
+							</a> -
+							<a href="#dml-utils-sparsearfffiletodiscretefield">Desc</a>
+							<ul id="ml-utils-sparsearfffiletodiscretefield" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-sparsearfffiletodiscretefieldcounted">
+							<a href="#ml-utils-sparsearfffiletodiscretefieldcounted" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPARSEARFFFILETODISCRETEFIELDCOUNTED</span>
+								<span class="sign-post">(STRING fileName)</span>
+							</a> -
+							<a href="#dml-utils-sparsearfffiletodiscretefieldcounted">Desc</a>
+							<ul id="ml-utils-sparsearfffiletodiscretefieldcounted" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-gini">
+							<a href="#ml-utils-gini" data-toggle="collapse">
+								MACRO :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GINI</span>
+								<span class="sign-post">(infile,pivot,target)</span>
+							</a> -
+							<a href="#dml-utils-gini">Desc</a>
+							<ul id="ml-utils-gini" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-mac_sequenceinfield">
+							<a href="#ml-utils-mac_sequenceinfield" data-toggle="collapse">
+								MACRO :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAC_SEQUENCEINFIELD</span>
+								<span class="sign-post">(infile,infield,seq,outfile)</span>
+							</a> -
+							<a href="#dml-utils-mac_sequenceinfield">Desc</a>
+							<ul id="ml-utils-mac_sequenceinfield" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasediscrete">
+							<a href="#ml-utils-rebasediscrete" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REBASEDISCRETE</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)</span>
+							</a> -
+							<a href="#dml-utils-rebasediscrete">Desc</a>
+							<ul id="ml-utils-rebasediscrete" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfield">
+							<a href="#ml-utils-rebasenumericfield" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REBASENUMERICFIELD</span>
+								<span class="sign-post">(DATASET(Types.NumericField) cl)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfield">Desc</a>
+							<ul id="ml-utils-rebasenumericfield" class="accordian-body collapse">
+								<li id="t-ml-utils-rebasenumericfield-maprec">
+							<a href="#ml-utils-rebasenumericfield-maprec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAPREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfield-maprec">Desc</a>
+							<ul id="ml-utils-rebasenumericfield-maprec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfield-mapping">
+							<a href="#ml-utils-rebasenumericfield-mapping" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAPPING</span>
+								<span class="sign-post">(Types.t_FieldNumber new_lowval=1)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfield-mapping">Desc</a>
+							<ul id="ml-utils-rebasenumericfield-mapping" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfield-tonew">
+							<a href="#ml-utils-rebasenumericfield-tonew" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TONEW</span>
+								<span class="sign-post">(DATASET(MapRec) MapTable)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfield-tonew">Desc</a>
+							<ul id="ml-utils-rebasenumericfield-tonew" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfield-toold">
+							<a href="#ml-utils-rebasenumericfield-toold" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOOLD</span>
+								<span class="sign-post">(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfield-toold">Desc</a>
+							<ul id="ml-utils-rebasenumericfield-toold" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfield-tooldfromelemtopart">
+							<a href="#ml-utils-rebasenumericfield-tooldfromelemtopart" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOOLDFROMELEMTOPART</span>
+								<span class="sign-post">(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfield-tooldfromelemtopart">Desc</a>
+							<ul id="ml-utils-rebasenumericfield-tooldfromelemtopart" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfieldid">
+							<a href="#ml-utils-rebasenumericfieldid" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REBASENUMERICFIELDID</span>
+								<span class="sign-post">(DATASET(Types.NumericField) cl)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfieldid">Desc</a>
+							<ul id="ml-utils-rebasenumericfieldid" class="accordian-body collapse">
+								<li id="t-ml-utils-rebasenumericfieldid-maprec">
+							<a href="#ml-utils-rebasenumericfieldid-maprec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAPREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfieldid-maprec">Desc</a>
+							<ul id="ml-utils-rebasenumericfieldid-maprec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfieldid-mappingid">
+							<a href="#ml-utils-rebasenumericfieldid-mappingid" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAPPINGID</span>
+								<span class="sign-post">(Types.t_FieldNumber new_lowval=1)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfieldid-mappingid">Desc</a>
+							<ul id="ml-utils-rebasenumericfieldid-mappingid" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfieldid-tonew">
+							<a href="#ml-utils-rebasenumericfieldid-tonew" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TONEW</span>
+								<span class="sign-post">(DATASET(MapRec) MapTable)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfieldid-tonew">Desc</a>
+							<ul id="ml-utils-rebasenumericfieldid-tonew" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-rebasenumericfieldid-toold">
+							<a href="#ml-utils-rebasenumericfieldid-toold" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOOLD</span>
+								<span class="sign-post">(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</span>
+							</a> -
+							<a href="#dml-utils-rebasenumericfieldid-toold">Desc</a>
+							<ul id="ml-utils-rebasenumericfieldid-toold" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-utils-notfirst">
+							<a href="#ml-utils-notfirst" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NOTFIRST</span>
+								<span class="sign-post">(STRING S)</span>
+							</a> -
+							<a href="#dml-utils-notfirst">Desc</a>
+							<ul id="ml-utils-notfirst" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-notlast">
+							<a href="#ml-utils-notlast" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NOTLAST</span>
+								<span class="sign-post">(STRING S)</span>
+							</a> -
+							<a href="#dml-utils-notlast">Desc</a>
+							<ul id="ml-utils-notlast" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-notnn">
+							<a href="#ml-utils-notnn" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NOTNN</span>
+								<span class="sign-post">(STRING S,UNSIGNED2 NN)</span>
+							</a> -
+							<a href="#dml-utils-notnn">Desc</a>
+							<ul id="ml-utils-notnn" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-lastn">
+							<a href="#ml-utils-lastn" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LASTN</span>
+								<span class="sign-post">(STRING S)</span>
+							</a> -
+							<a href="#dml-utils-lastn">Desc</a>
+							<ul id="ml-utils-lastn" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-nchoosek">
+							<a href="#ml-utils-nchoosek" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NCHOOSEK</span>
+								<span class="sign-post">(UNSIGNED1 N, UNSIGNED1 K)</span>
+							</a> -
+							<a href="#dml-utils-nchoosek">Desc</a>
+							<ul id="ml-utils-nchoosek" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-utils-togroundtruth">
+							<a href="#ml-utils-togroundtruth" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOGROUNDTRUTH</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Y )</span>
+							</a> -
+							<a href="#dml-utils-togroundtruth">Desc</a>
+							<ul id="ml-utils-togroundtruth" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Utils">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">UTILS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Utils" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-utils-pi">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PI</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-pi" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-base">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BASE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-base" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-fac">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">FAC</span>
+									<span class="sign-post">(UNSIGNED2 i)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-fac" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-doublefac">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">DOUBLEFAC</span>
+									<span class="sign-post">(INTEGER2 i)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-doublefac" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-nck">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">NCK</span>
+									<span class="sign-post">(INTEGER2 N, INTEGER2 K)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-nck" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-poly">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">POLY</span>
+									<span class="sign-post">(REAL8 x, SET OF REAL8 Coeffs)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-poly" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-stirlingformula">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">STIRLINGFORMULA</span>
+									<span class="sign-post">(real8 x)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-stirlingformula" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-gamma">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">GAMMA</span>
+									<span class="sign-post">(REAL8 x)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-gamma" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-lowergamma">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">LOWERGAMMA</span>
+									<span class="sign-post">(REAL8 x, REAL8 y)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-lowergamma" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-uppergamma">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">REAL8</span>
+									<span class="sign-name">UPPERGAMMA</span>
+									<span class="sign-post">(REAL8 x, REAL8 y)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-uppergamma" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-beta">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">BETA</span>
+									<span class="sign-post">(REAL8 x, REAL8 y)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-beta" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-fat">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FAT</span>
+									<span class="sign-post">(DATASET(Types.NumericField) d0,Types.t_FieldReal v=0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-fat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-fatd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FATD</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) d0,Types.t_Discrete v=0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-fatd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-sparsearfffiletodiscretefield">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPARSEARFFFILETODISCRETEFIELD</span>
+									<span class="sign-post">(STRING fileName)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-sparsearfffiletodiscretefield" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-sparsearfffiletodiscretefieldcounted">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPARSEARFFFILETODISCRETEFIELDCOUNTED</span>
+									<span class="sign-post">(STRING fileName)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-sparsearfffiletodiscretefieldcounted" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-gini">
+							<div class="panel-heading">
+								<div class="type">
+									MACRO
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GINI</span>
+									<span class="sign-post">(infile,pivot,target)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-gini" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-mac_sequenceinfield">
+							<div class="panel-heading">
+								<div class="type">
+									MACRO
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAC_SEQUENCEINFIELD</span>
+									<span class="sign-post">(infile,infield,seq,outfile)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-mac_sequenceinfield" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasediscrete">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REBASEDISCRETE</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) cl,Types.t_FieldNumber new_lowval)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasediscrete" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfield">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REBASENUMERICFIELD</span>
+									<span class="sign-post">(DATASET(Types.NumericField) cl)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfield" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-utils-rebasenumericfield-maprec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAPREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfield-maprec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfield-mapping">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAPPING</span>
+									<span class="sign-post">(Types.t_FieldNumber new_lowval=1)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfield-mapping" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfield-tonew">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TONEW</span>
+									<span class="sign-post">(DATASET(MapRec) MapTable)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfield-tonew" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfield-toold">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOOLD</span>
+									<span class="sign-post">(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfield-toold" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfield-tooldfromelemtopart">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOOLDFROMELEMTOPART</span>
+									<span class="sign-post">(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfield-tooldfromelemtopart" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfieldid">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REBASENUMERICFIELDID</span>
+									<span class="sign-post">(DATASET(Types.NumericField) cl)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfieldid" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-utils-rebasenumericfieldid-maprec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAPREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfieldid-maprec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfieldid-mappingid">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAPPINGID</span>
+									<span class="sign-post">(Types.t_FieldNumber new_lowval=1)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfieldid-mappingid" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfieldid-tonew">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TONEW</span>
+									<span class="sign-post">(DATASET(MapRec) MapTable)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfieldid-tonew" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-rebasenumericfieldid-toold">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOOLD</span>
+									<span class="sign-post">(DATASET(Types.NumericField) cl, DATASET(MapRec) MapTable)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-rebasenumericfieldid-toold" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dml-utils-notfirst">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NOTFIRST</span>
+									<span class="sign-post">(STRING S)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-notfirst" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-notlast">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NOTLAST</span>
+									<span class="sign-post">(STRING S)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-notlast" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-notnn">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NOTNN</span>
+									<span class="sign-post">(STRING S,UNSIGNED2 NN)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-notnn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-lastn">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LASTN</span>
+									<span class="sign-post">(STRING S)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-lastn" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-nchoosek">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NCHOOSEK</span>
+									<span class="sign-post">(UNSIGNED1 N, UNSIGNED1 K)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-nchoosek" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-utils-togroundtruth">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOGROUNDTRUTH</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Y )</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-utils-togroundtruth" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

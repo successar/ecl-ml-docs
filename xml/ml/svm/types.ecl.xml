@@ -4,50 +4,50 @@
   <Definition body="91" end="3170" exported="1" fullname="ML.SVM.Types" inherit_type="local" line="3" name="Types" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="76">
    <Type>module</Type>
    <Definition body="119" end="130" exported="1" fullname="ml.svm.types.model_id" inherit_type="local" line="4" name="Model_ID" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="101">
-    <Signature>Model_ID</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MODEL_ID">Model_ID</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="150" end="172" exported="1" fullname="ml.svm.types.r8entry" inherit_type="local" line="5" name="R8Entry" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="133">
     <Type>record</Type>
-    <Signature>R8Entry</Signature><Field name="v"/>
+    <Signature pre="" post="" name="R8ENTRY">R8Entry</Signature><Field name="v"/>
    </Definition>
    <Definition body="192" end="214" exported="1" fullname="ml.svm.types.i4entry" inherit_type="local" line="6" name="I4Entry" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="175">
     <Type>record</Type>
-    <Signature>I4Entry</Signature><Field name="v"/>
+    <Signature pre="" post="" name="I4ENTRY">I4Entry</Signature><Field name="v"/>
    </Definition>
    <Definition body="235" end="261" exported="1" inherit_type="local" line="7" name="SVM_Type" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="217">
-    <Signature>SVM_Type</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SVM_TYPE">SVM_Type</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="285" end="313" exported="1" inherit_type="local" line="8" name="Kernel_Type" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="264">
-    <Signature>Kernel_Type</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="KERNEL_TYPE">Kernel_Type</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="337" end="387" exported="1" fullname="ml.svm.types.svm_feature" inherit_type="local" line="9" name="SVM_Feature" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="316">
     <Type>record</Type>
     <Field name="nominal"/>
-    <Signature>SVM_Feature</Signature><Field name="v"/>
+    <Signature pre="" post="" name="SVM_FEATURE">SVM_Feature</Signature><Field name="v"/>
    </Definition>
    <Definition body="412" end="578" exported="1" fullname="ml.svm.types.svm_instance" inherit_type="local" line="13" name="SVM_Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="390">
     <Type>record</Type>
     <Field name="rid"/>
     <Field name="y"/>
     <Field name="max_value"/>
-    <Signature>SVM_Instance</Signature><Field name="x"/>
+    <Signature pre="" post="" name="SVM_INSTANCE">SVM_Instance</Signature><Field name="x"/>
    </Definition>
    <Definition body="597" end="666" exported="1" fullname="ml.svm.types.svm_sv" inherit_type="local" line="19" name="SVM_SV" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="581">
     <Type>record</Type>
     <Field name="v_ord"/>
-    <Signature>SVM_SV</Signature><Field name="features"/>
+    <Signature pre="" post="" name="SVM_SV">SVM_SV</Signature><Field name="features"/>
    </Definition>
    <Definition body="692" end="759" exported="1" fullname="ml.svm.types.svm_grid_args" inherit_type="local" line="23" name="SVM_Grid_Args" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="669">
     <Type>record</Type>
     <Field name="start"/>
     <Field name="stop"/>
-    <Signature>SVM_Grid_Args</Signature><Field name="max_incr"/>
+    <Signature pre="" post="" name="SVM_GRID_ARGS">SVM_Grid_Args</Signature><Field name="max_incr"/>
    </Definition>
    <Definition body="785" end="876" exported="1" fullname="ml.svm.types.svm_grid_plan" inherit_type="local" line="28" name="SVM_Grid_Plan" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="762">
     <Type>record</Type>
     <Field name="folds"/>
     <Field name="log2_C"/>
-    <Signature>SVM_Grid_Plan</Signature><Field name="log2_gamma"/>
+    <Signature pre="" post="" name="SVM_GRID_PLAN">SVM_Grid_Plan</Signature><Field name="log2_gamma"/>
    </Definition>
    <Definition body="902" end="1468" exported="1" fullname="ml.svm.types.training_base" inherit_type="local" line="33" name="Training_Base" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="879">
     <Type>record</Type>
@@ -62,7 +62,7 @@
     <Field name="shrinking"/>
     <Field name="prob_est"/>
     <Field name="lbl"/>
-    <Signature>Training_Base</Signature><Field name="weight"/>
+    <Signature pre="" post="" name="TRAINING_BASE">Training_Base</Signature><Field name="weight"/>
    </Definition>
    <Definition body="1500" end="1661" exported="1" fullname="ml.svm.types.training_parameters" inherit_type="local" line="47" name="Training_Parameters" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="1471">
     <Type>record</Type>
@@ -80,7 +80,7 @@
     <Field name="lbl"/>
     <Field name="weight"/>
     <Field name="gamma"/>
-    <Signature>Training_Parameters</Signature><Field name="C"/>
+    <Signature pre="" post="" name="TRAINING_PARAMETERS">Training_Parameters</Signature><Field name="C"/>
    </Definition>
    <Definition body="1679" end="2168" exported="1" fullname="ml.svm.types.model" inherit_type="local" line="53" name="Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="1664">
     <Type>record</Type>
@@ -98,14 +98,14 @@
     <Field name="probA"/>
     <Field name="probB"/>
     <Field name="labels"/>
-    <Signature>Model</Signature><Field name="nSV"/>
+    <Signature pre="" post="" name="MODEL">Model</Signature><Field name="nSV"/>
    </Definition>
    <Definition body="2201" end="2288" exported="1" fullname="ml.svm.types.crossvalidate_result" inherit_type="local" line="70" name="CrossValidate_Result" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2171">
     <Type>record</Type>
     <Field name="id"/>
     <Field name="correct"/>
     <Field name="mse"/>
-    <Signature>CrossValidate_Result</Signature><Field name="r_sq"/>
+    <Signature pre="" post="" name="CROSSVALIDATE_RESULT">CrossValidate_Result</Signature><Field name="r_sq"/>
    </Definition>
    <Definition body="2318" end="2403" exported="1" fullname="ml.svm.types.gridsearch_result" inherit_type="local" line="76" name="GridSearch_Result" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2291">
     <Type>record</Type>
@@ -126,25 +126,25 @@
     <Field name="shrinking"/>
     <Field name="prob_est"/>
     <Field name="lbl"/>
-    <Signature>GridSearch_Result</Signature><Field name="weight"/>
+    <Signature pre="" post="" name="GRIDSEARCH_RESULT">GridSearch_Result</Signature><Field name="weight"/>
    </Definition>
    <Definition body="2429" end="2508" exported="1" fullname="ml.svm.types.feature_scale" inherit_type="local" line="81" name="Feature_Scale" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2406">
     <Type>record</Type>
     <Field name="nominal"/>
     <Field name="min_value"/>
-    <Signature>Feature_Scale</Signature><Field name="max_value"/>
+    <Signature pre="" post="" name="FEATURE_SCALE">Feature_Scale</Signature><Field name="max_value"/>
    </Definition>
    <Definition body="2532" end="2580" exported="1" fullname="ml.svm.types.class_scale" inherit_type="local" line="86" name="Class_Scale" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2511">
     <Type>record</Type>
     <Field name="y_min"/>
-    <Signature>Class_Scale</Signature><Field name="y_max"/>
+    <Signature pre="" post="" name="CLASS_SCALE">Class_Scale</Signature><Field name="y_max"/>
    </Definition>
    <Definition body="2604" end="2694" exported="1" fullname="ml.svm.types.scale_parms" inherit_type="local" line="90" name="Scale_Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2583">
     <Type>record</Type>
     <Field name="x_lower"/>
     <Field name="x_upper"/>
     <Field name="y_lower"/>
-    <Signature>Scale_Parms</Signature><Field name="y_upper"/>
+    <Signature pre="" post="" name="SCALE_PARMS">Scale_Parms</Signature><Field name="y_upper"/>
    </Definition>
    <Definition body="2716" end="2801" exported="1" fullname="ml.svm.types.svm_scale" inherit_type="local" line="96" name="SVM_Scale" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2697">
     <Type>record</Type>
@@ -154,14 +154,14 @@
     <Field name="y_upper"/>
     <Field name="y_min"/>
     <Field name="y_max"/>
-    <Signature>SVM_Scale</Signature><Field name="features"/>
+    <Signature pre="" post="" name="SVM_SCALE">SVM_Scale</Signature><Field name="features"/>
    </Definition>
    <Definition body="2828" end="2972" exported="1" fullname="ml.svm.types.svm_prediction" inherit_type="local" line="101" name="SVM_Prediction" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2804">
     <Type>record</Type>
     <Field name="id"/>
     <Field name="rid"/>
     <Field name="target_y"/>
-    <Signature>SVM_Prediction</Signature><Field name="predict_y"/>
+    <Signature pre="" post="" name="SVM_PREDICTION">SVM_Prediction</Signature><Field name="predict_y"/>
    </Definition>
    <Definition body="3000" end="3068" exported="1" fullname="ml.svm.types.svm_pred_values" inherit_type="local" line="107" name="SVM_Pred_Values" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="2975">
     <Type>record</Type>
@@ -169,7 +169,7 @@
     <Field name="rid"/>
     <Field name="target_y"/>
     <Field name="predict_y"/>
-    <Signature>SVM_Pred_Values</Signature><Field name="decision_values"/>
+    <Signature pre="" post="" name="SVM_PRED_VALUES">SVM_Pred_Values</Signature><Field name="decision_values"/>
    </Definition>
    <Definition body="3098" end="3165" exported="1" fullname="ml.svm.types.svm_pred_prob_est" inherit_type="local" line="110" name="SVM_Pred_Prob_Est" source="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" start="3071">
     <Type>record</Type>
@@ -177,9 +177,9 @@
     <Field name="rid"/>
     <Field name="target_y"/>
     <Field name="predict_y"/>
-    <Signature>SVM_Pred_Prob_Est</Signature><Field name="prob_estimates"/>
+    <Signature pre="" post="" name="SVM_PRED_PROB_EST">SVM_Pred_Prob_Est</Signature><Field name="prob_estimates"/>
    </Definition>
-   <Signature>Types</Signature><Parents/>
+   <Signature pre="" post="" name="TYPES">Types</Signature><Parents/>
   </Definition>
   <Import body="0" end="39" fullname="ML.SVM.LibSVM.Types" inherit_type="local" line="2" name="LibSVM_Types" ref="ml.svm.libsvm.types" start="39" target="libsvm/types.ecl.xml">
    <Type>attribute</Type>

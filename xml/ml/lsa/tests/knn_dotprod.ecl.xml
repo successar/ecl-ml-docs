@@ -32,14 +32,14 @@
    </Parents>
    <Definition body="236" end="586" fullname="ml.lsa.tests.knn_dotprod.searchc" inherit_type="local" line="6" name="SearchC" shared="1" source="/media/sarthak/Data/ecl-ml/ML/LSA/Tests/KNN_DotProd.ecl" start="144">
     <Type>function</Type>
-    <Signature>SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) qpData)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) qpData)" name="SEARCHC">SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) qpData)</Signature><Params>
      <Param name="indepData"/>
      <Param name="qpData"/>
     </Params>
    </Definition>
    <Definition body="730" end="846" exported="1" fullname="ml.lsa.tests.knn_dotprod.classifyc" inherit_type="override" line="14" name="ClassifyC" source="/media/sarthak/Data/ecl-ml/ML/LSA/Tests/KNN_DotProd.ecl" start="589">
     <Type>function</Type>
-    <Signature>ClassifyC(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)" name="CLASSIFYC">ClassifyC(DATASET(Types.NumericField) indepData , DATASET(Types.DiscreteField) depData ,DATASET(Types.NumericField) queryPointsData)</Signature><Params>
      <Param name="indepData"/>
      <Param name="depData"/>
      <Param name="queryPointsData"/>
@@ -47,12 +47,12 @@
    </Definition>
    <Definition body="729" end="1160" exported="1" fullname="ml.lazy.knn.majorityvote" inherit_type="inherited" line="14" name="MajorityVote" source="/media/sarthak/Data/ecl-ml/./ML/Lazy.ecl" start="620" target="../../lazy.ecl.xml">
     <Type>function</Type>
-    <Signature>MajorityVote(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)" name="MAJORITYVOTE">MajorityVote(DATASET(ML.NearestNeighborsSearch.NN) NNeighbors ,DATASET(Types.DiscreteField) depData)</Signature><Params>
      <Param name="NNeighbors"/>
      <Param name="depData"/>
     </Params>
    </Definition>
-   <Signature>KNN_DotProd(CONST Types.t_count NN_count=5)</Signature><Definition body="1425" end="1538" exported="1" fullname="ml.lazy.knn.testc" inherit_type="override" line="21" name="TestC" source="/media/sarthak/Data/ecl-ml/./ML/Lazy.ecl" start="1333" target="../../lazy.ecl.xml">
+   <Signature pre="" post="(CONST Types.t_count NN_count=5)" name="KNN_DOTPROD">KNN_DotProd(CONST Types.t_count NN_count=5)</Signature><Definition body="1425" end="1538" exported="1" fullname="ml.lazy.knn.testc" inherit_type="override" line="21" name="TestC" source="/media/sarthak/Data/ecl-ml/./ML/Lazy.ecl" start="1333" target="../../lazy.ecl.xml">
     <Type>module</Type>
     <Params>
      <Param name="indepData"/>
@@ -60,38 +60,38 @@
     </Params>
     <Parents/>
     <Definition body="1617" end="1704" fullname="ml.classify.compare.j" inherit_type="local" line="45" name="J" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1606" target="../../classify.ecl.xml">
-     <Signature>J</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="J">J</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="1766" end="2081" fullname="ml.classify.compare.confmatrix_rec" inherit_type="local" line="47" name="ConfMatrix_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="1742" target="../../classify.ecl.xml">
      <Type>record</Type>
      <Field name="classifier"/>
      <Field name="c_actual"/>
      <Field name="c_modeled"/>
-     <Signature>ConfMatrix_Rec</Signature><Field name="Cnt"/>
+     <Signature pre="" post="" name="CONFMATRIX_REC">ConfMatrix_Rec</Signature><Field name="Cnt"/>
     </Definition>
     <Definition body="2103" end="2194" fullname="ml.classify.compare.class_cnt" inherit_type="local" line="53" name="class_cnt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2084" target="../../classify.ecl.xml">
-     <Signature>class_cnt</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="CLASS_CNT">class_cnt</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="2419" end="2507" fullname="ml.classify.compare.cfmx" inherit_type="local" line="59" name="cfmx" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2405" target="../../classify.ecl.xml">
-     <Signature>cfmx</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="CFMX">cfmx</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="2579" end="2675" fullname="ml.classify.compare.cross_raw" inherit_type="local" line="60" name="cross_raw" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2560" target="../../classify.ecl.xml">
-     <Signature>cross_raw</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="CROSS_RAW">cross_raw</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="3017" end="3257" exported="1" fullname="ml.classify.compare.crossassignments" inherit_type="local" line="67" name="CrossAssignments" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="2991" target="../../classify.ecl.xml">
-     <Signature>CrossAssignments</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="CROSSASSIGNMENTS">CrossAssignments</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="3467" end="3638" exported="1" fullname="ml.classify.compare.recallbyclass" inherit_type="local" line="72" name="RecallByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3444" target="../../classify.ecl.xml">
-     <Signature>RecallByClass</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="RECALLBYCLASS">RecallByClass</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="3794" end="3965" exported="1" fullname="ml.classify.compare.precisionbyclass" inherit_type="local" line="74" name="PrecisionByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="3768" target="../../classify.ecl.xml">
-     <Signature>PrecisionByClass</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="PRECISIONBYCLASS">PrecisionByClass</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="4809" end="5017" exported="1" fullname="ml.classify.compare.fp_rate_byclass" inherit_type="local" line="85" name="FP_Rate_ByClass" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="4784" target="../../classify.ecl.xml">
-     <Signature>FP_Rate_ByClass</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="FP_RATE_BYCLASS">FP_Rate_ByClass</Signature><Type>attribute</Type>
     </Definition>
-    <Signature>TestC(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
-     <Signature>Accuracy</Signature><Type>attribute</Type>
+    <Signature pre="" post="(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)" name="TESTC">TestC(DATASET(Types.NumericField) indepData, DATASET(Types.DiscreteField) depData)</Signature><Definition body="5146" end="5265" exported="1" fullname="ml.classify.compare.accuracy" inherit_type="local" line="88" name="Accuracy" source="/media/sarthak/Data/ecl-ml/./ML/Classify.ecl" start="5128" target="../../classify.ecl.xml">
+     <Signature pre="" post="" name="ACCURACY">Accuracy</Signature><Type>attribute</Type>
     </Definition>
    </Definition>
   </Definition>

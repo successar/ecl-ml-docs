@@ -5,17 +5,17 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="112" end="134" fullname="pbblas.value_t" inherit_type="local" line="3" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="102">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="149" end="175" fullname="pbblas.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="135">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="190" end="216" fullname="pbblas.partition_t" inherit_type="local" line="5" name="partition_t" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="176">
-   <Signature>partition_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="PARTITION_T">partition_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="289" end="292" exported="1" fullname="pbblas.ielementfunc" inherit_type="local" line="7" name="IElementFunc" source="/media/sarthak/Data/ecl-ml/PBblas/IElementFunc.ecl" start="218">
    <Type>function</Type>
-   <Signature>value_t IElementFunc(value_t v, dimension_t r, dimension_t c)</Signature><Params>
+   <Signature pre="value_t" post="(value_t v, dimension_t r, dimension_t c)" name="IELEMENTFUNC">value_t IElementFunc(value_t v, dimension_t r, dimension_t c)</Signature><Params>
     <Param name="v"/>
     <Param name="r"/>
     <Param name="c"/>

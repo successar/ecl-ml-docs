@@ -5,26 +5,26 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="480" end="499" fullname="pbblas.blas.dimension_t" inherit_type="local" line="10" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" start="466">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="514" end="530" inherit_type="local" line="11" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" start="500">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="545" end="561" inherit_type="local" line="12" name="Diagonal" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" start="531">
-   <Signature>Diagonal</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIAGONAL">Diagonal</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="576" end="588" inherit_type="local" line="13" name="Side" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" start="562">
-   <Signature>Side</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SIDE">Side</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="603" end="618" fullname="pbblas.blas.value_t" inherit_type="local" line="14" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" start="589">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="633" end="649" fullname="pbblas.blas.matrix_t" inherit_type="local" line="15" name="matrix_t" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" start="619">
-   <Signature>matrix_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MATRIX_T">matrix_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="888" end="1501" exported="1" fullname="pbblas.blas.dtrsm" inherit_type="local" line="17" name="dtrsm" source="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" start="651">
    <Type>embed</Type>
-   <Signature>matrix_t dtrsm(Side side, Triangle tri,
+   <Signature pre="matrix_t" post="(Side side, Triangle tri,&#10;                      BOOLEAN transposeA, Diagonal diag,&#10;                      dimension_t M, dimension_t N,  dimension_t lda,&#10;                      value_t alpha, matrix_t A, matrix_t B)" name="DTRSM">matrix_t dtrsm(Side side, Triangle tri,
                       BOOLEAN transposeA, Diagonal diag,
                       dimension_t M, dimension_t N,  dimension_t lda,
                       value_t alpha, matrix_t A, matrix_t B)</Signature><Params>

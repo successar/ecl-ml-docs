@@ -3,7 +3,7 @@
  <Source name="ML.Docs.PorterStem" sourcePath="/media/sarthak/Data/ecl-ml/ML/Docs/PorterStem.ecl" target="porterstem.ecl.xml">
   <Definition body="40" end="14340" exported="1" fullname="ml.docs.porterstem" inherit_type="local" line="1" name="PorterStem" source="/media/sarthak/Data/ecl-ml/ML/Docs/PorterStem.ecl" start="0">
    <Type>function</Type>
-   <Signature>export string PorterStem(string WORD)</Signature><Params>
+   <Signature pre="string" post="(string WORD)" name="PORTERSTEM">string PorterStem(string WORD)</Signature><Params>
     <Param name="WORD"/>
    </Params>
   </Definition>

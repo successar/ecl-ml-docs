@@ -14,41 +14,41 @@
    <Field name="features"/>
    <Field name="max_value"/>
    <Field name="y"/>
-   <Signature>ECL_LibSVM_Problem</Signature><Field name="x"/>
+   <Signature pre="" post="" name="ECL_LIBSVM_PROBLEM">ECL_LibSVM_Problem</Signature><Field name="x"/>
   </Definition>
   <Definition body="180" end="206" fullname="ml.svm.libsvm.test.libsvm_node" inherit_type="local" line="7" name="LibSVM_Node" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="166">
    <Type>record</Type>
    <Field name="indx"/>
-   <Signature>LibSVM_Node</Signature><Field name="value"/>
+   <Signature pre="" post="" name="LIBSVM_NODE">LibSVM_Node</Signature><Field name="value"/>
   </Definition>
   <Definition body="217" end="239" fullname="ml.svm.libsvm.test.r8entry" inherit_type="local" line="8" name="R8Entry" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="207">
    <Type>record</Type>
-   <Signature>R8Entry</Signature><Field name="v"/>
+   <Signature pre="" post="" name="R8ENTRY">R8Entry</Signature><Field name="v"/>
   </Definition>
   <Definition body="251" end="290" fullname="ml.svm.libsvm.test.filename" inherit_type="local" line="9" name="fileName" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="240">
-   <Signature>fileName</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="FILENAME">fileName</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="302" end="356" fullname="ml.svm.libsvm.test.rawinput" inherit_type="local" line="10" name="rawInput" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="291">
-   <Signature>rawInput</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RAWINPUT">rawInput</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="431" end="479" fullname="ml.svm.libsvm.test.instance_data" inherit_type="local" line="13" name="instance_data" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="415">
-   <Signature>instance_data</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="INSTANCE_DATA">instance_data</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="562" end="612" fullname="ml.svm.libsvm.test.problem_data" inherit_type="local" line="16" name="problem_data" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="547">
-   <Signature>problem_data</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="PROBLEM_DATA">problem_data</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="633" end="677" fullname="ml.svm.libsvm.test.libsvm_node_exp" inherit_type="local" line="19" name="LibSVM_Node_Exp" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="615">
    <Type>record</Type>
    <Field name="indx"/>
    <Field name="value"/>
-   <Signature>LibSVM_Node_Exp</Signature><Field name="entry"/>
+   <Signature pre="" post="" name="LIBSVM_NODE_EXP">LibSVM_Node_Exp</Signature><Field name="entry"/>
   </Definition>
   <Definition body="715" end="762" fullname="ml.svm.libsvm.test.cvt" inherit_type="local" line="22" name="cvt" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="678">
    <Type>transform</Type>
    <Params>
     <Param name="n"/>
    </Params>
-   <Signature>LibSVM_Node_Exp cvt(LibSVM_Node n)</Signature><Return>libsvm_node_exp</Return>
+   <Signature pre="LibSVM_Node_Exp" post="(LibSVM_Node n)" name="CVT">LibSVM_Node_Exp cvt(LibSVM_Node n)</Signature><Return>libsvm_node_exp</Return>
   </Definition>
   <Definition body="830" end="961" fullname="ml.svm.libsvm.test.mark" inherit_type="local" line="26" name="mark" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="763">
    <Type>transform</Type>
@@ -56,7 +56,7 @@
     <Param name="prev"/>
     <Param name="curr"/>
    </Params>
-   <Signature>LibSVM_Node_Exp mark(LibSVM_Node_Exp prev, LibSVM_Node_Exp curr)</Signature><Return>libsvm_node_exp</Return>
+   <Signature pre="LibSVM_Node_Exp" post="(LibSVM_Node_Exp prev, LibSVM_Node_Exp curr)" name="MARK">LibSVM_Node_Exp mark(LibSVM_Node_Exp prev, LibSVM_Node_Exp curr)</Signature><Return>libsvm_node_exp</Return>
   </Definition>
   <Definition body="978" end="1180" fullname="ml.svm.libsvm.test.expanded_prob" inherit_type="local" line="31" name="Expanded_Prob" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="962">
    <Type>record</Type>
@@ -65,41 +65,41 @@
    <Field name="features"/>
    <Field name="max_value"/>
    <Field name="y"/>
-   <Signature>Expanded_Prob</Signature><Field name="x"/>
+   <Signature pre="" post="" name="EXPANDED_PROB">Expanded_Prob</Signature><Field name="x"/>
   </Definition>
   <Definition body="1226" end="1317" fullname="ml.svm.libsvm.test.expand" inherit_type="local" line="39" name="expand" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="1181">
    <Type>transform</Type>
    <Params>
     <Param name="p"/>
    </Params>
-   <Signature>Expanded_Prob expand(ECL_LibSVM_Problem p)</Signature><Return>expanded_prob</Return>
+   <Signature pre="" post="ed_Prob expand(ECL_LibSVM_Problem p)" name="EXPAND">Expanded_Prob expand(ECL_LibSVM_Problem p)</Signature><Return>expanded_prob</Return>
   </Definition>
   <Definition body="1334" end="1371" fullname="ml.svm.libsvm.test.xproblem_data" inherit_type="local" line="43" name="xproblem_data" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="1318">
-   <Signature>xproblem_data</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="XPROBLEM_DATA">xproblem_data</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1476" end="1571" fullname="ml.svm.libsvm.test.head_prob" inherit_type="local" line="47" name="Head_Prob" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="1464">
    <Type>record</Type>
    <Field name="elements"/>
    <Field name="entries"/>
    <Field name="features"/>
-   <Signature>Head_Prob</Signature><Field name="max_value"/>
+   <Signature pre="" post="" name="HEAD_PROB">Head_Prob</Signature><Field name="max_value"/>
   </Definition>
   <Definition body="1584" end="1696" fullname="ml.svm.libsvm.test.flat_prob" inherit_type="local" line="53" name="Flat_Prob" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="1572">
    <Type>record</Type>
    <Field name="entry"/>
    <Field name="elements"/>
    <Field name="y"/>
-   <Signature>Flat_Prob</Signature><Field name="x"/>
+   <Signature pre="" post="" name="FLAT_PROB">Flat_Prob</Signature><Field name="x"/>
   </Definition>
   <Definition body="1734" end="1762" fullname="ml.svm.libsvm.test.exthead" inherit_type="local" line="59" name="extHead" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="1697">
    <Type>transform</Type>
    <Params>
     <Param name="p"/>
    </Params>
-   <Signature>Head_Prob extHead(Expanded_Prob p)</Signature><Return>head_prob</Return>
+   <Signature pre="Head_Prob" post="(Expanded_Prob p)" name="EXTHEAD">Head_Prob extHead(Expanded_Prob p)</Signature><Return>head_prob</Return>
   </Definition>
   <Definition body="1778" end="1817" fullname="ml.svm.libsvm.test.problem_head" inherit_type="local" line="62" name="problem_head" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="1763">
-   <Signature>problem_head</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="PROBLEM_HEAD">problem_head</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1914" end="2096" fullname="ml.svm.libsvm.test.extnode" inherit_type="local" line="65" name="extNode" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="1864">
    <Type>transform</Type>
@@ -107,10 +107,10 @@
     <Param name="p"/>
     <Param name="c"/>
    </Params>
-   <Signature>Flat_Prob extNode(Expanded_Prob p, UNSIGNED4 c)</Signature><Return>flat_prob</Return>
+   <Signature pre="Flat_Prob" post="(Expanded_Prob p, UNSIGNED4 c)" name="EXTNODE">Flat_Prob extNode(Expanded_Prob p, UNSIGNED4 c)</Signature><Return>flat_prob</Return>
   </Definition>
   <Definition body="2110" end="2173" fullname="ml.svm.libsvm.test.prob_lines" inherit_type="local" line="72" name="prob_lines" source="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Test/file_conversion.ecl" start="2097">
-   <Signature>prob_lines</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="PROB_LINES">prob_lines</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Types.ecl" name="ML.SVM.LibSVM.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/LibSVM/Converted.ecl" name="ML.SVM.LibSVM.Converted" target="../converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/SVM/Types.ecl" name="ML.SVM.Types" target="../../types.ecl.xml"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/></Meta>

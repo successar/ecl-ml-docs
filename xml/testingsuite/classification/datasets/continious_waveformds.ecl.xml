@@ -27,12 +27,12 @@
     <Field name="A19"/>
     <Field name="A20"/>
     <Field name="A21"/>
-    <Signature>continious_waveformRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="CONTINIOUS_WAVEFORMRECORD">continious_waveformRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="844" end="639760" exported="1" fullname="testingsuite.classification.datasets.continious_waveformds.content" inherit_type="local" line="28" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_waveformDS.ecl" start="827">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>continious_waveformDS</Signature><Parents/>
+   <Signature pre="" post="" name="CONTINIOUS_WAVEFORMDS">continious_waveformDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

@@ -8,12 +8,12 @@
     <Field name="id"/>
     <Field name="features_1"/>
     <Field name="features_2"/>
-    <Signature>ionek_f_two_c_twoRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="IONEK_F_TWO_C_TWORECORD">ionek_f_two_c_twoRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="270" end="50296" exported="1" fullname="testingsuite.clustering.datasets.ionek_f_two_c_twods.content" inherit_type="local" line="9" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_two_c_twoDS.ecl" start="253">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>ionek_f_two_c_twoDS</Signature><Parents/>
+   <Signature pre="" post="" name="IONEK_F_TWO_C_TWODS">ionek_f_two_c_twoDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

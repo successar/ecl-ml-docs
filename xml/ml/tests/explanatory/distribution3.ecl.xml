@@ -8,55 +8,55 @@
    <Type>module</Type>
    <Definition body="2078" end="2754" exported="1" fullname="ml.distribution.default.cumulative" inherit_type="override" line="42" name="Cumulative" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2018" target="../../distribution.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
+    <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal RH)" name="CUMULATIVE">Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
      <Param name="RH"/>
     </Params>
    </Definition>
    <Definition body="2864" end="3358" exported="1" fullname="ml.distribution.default.ntile" inherit_type="override" line="54" name="NTile" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2809" target="../../distribution.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
+    <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal Pc)" name="NTILE">Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
      <Param name="Pc"/>
     </Params>
    </Definition>
    <Definition body="3476" end="3483" exported="1" fullname="ml.distribution.default.discrete" inherit_type="inherited" line="64" name="Discrete" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3458" target="../../distribution.ecl.xml">
-    <Signature>Discrete</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DISCRETE">Discrete</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="7332" end="7504" fullname="ml.distribution.studentt.multiplier" inherit_type="local" line="131" name="Multiplier" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7312" target="../../distribution.ecl.xml">
-    <Signature>Multiplier</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MULTIPLIER">Multiplier</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="7612" end="7621" fullname="ml.distribution.studentt.lowdensity" inherit_type="local" line="134" name="LowDensity" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7592" target="../../distribution.ecl.xml">
-    <Signature>LowDensity</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="LOWDENSITY">LowDensity</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="7710" end="7760" exported="1" fullname="ml.distribution.studentt.invdensity" inherit_type="override" line="135" name="InvDensity" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7665" target="../../distribution.ecl.xml">
     <Type>function</Type>
-    <Signature>InvDensity(Types.t_FieldReal delta)</Signature><Params>
+    <Signature pre="" post="(Types.t_FieldReal delta)" name="INVDENSITY">InvDensity(Types.t_FieldReal delta)</Signature><Params>
      <Param name="delta"/>
     </Params>
    </Definition>
    <Definition body="7866" end="7890" fullname="ml.distribution.studentt.high" inherit_type="local" line="137" name="high" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7852" target="../../distribution.ecl.xml">
-    <Signature>high</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="HIGH">high</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="7906" end="7909" fullname="ml.distribution.studentt.low" inherit_type="local" line="138" name="Low" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7893" target="../../distribution.ecl.xml">
-    <Signature>Low</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="LOW">Low</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="7932" end="7952" exported="1" fullname="ml.distribution.studentt.rangewidth" inherit_type="override" line="139" name="RangeWidth" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7912" target="../../distribution.ecl.xml">
-    <Signature>RangeWidth</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="RANGEWIDTH">RangeWidth</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="8012" end="8056" exported="1" fullname="ml.distribution.studentt.density" inherit_type="override" line="140" name="Density" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7955" target="../../distribution.ecl.xml">
     <Type>function</Type>
-    <Signature>Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
+    <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal RH)" name="DENSITY">Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
      <Param name="RH"/>
     </Params>
    </Definition>
    <Definition body="8079" end="8283" exported="1" fullname="ml.distribution.studentt.densityv" inherit_type="override" line="141" name="DensityV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="8059" target="../../distribution.ecl.xml">
     <Type>function</Type>
-    <Signature>DensityV()</Signature><Params/>
+    <Signature pre="" post="()" name="DENSITYV">DensityV()</Signature><Params/>
    </Definition>
    <Definition body="8311" end="8935" exported="1" fullname="ml.distribution.studentt.cumulativev" inherit_type="override" line="145" name="CumulativeV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="8288" target="../../distribution.ecl.xml">
     <Type>function</Type>
-    <Signature>CumulativeV()</Signature><Params/>
+    <Signature pre="" post="()" name="CUMULATIVEV">CumulativeV()</Signature><Params/>
    </Definition>
-   <Signature>a</Signature><Parents>
+   <Signature pre="" post="" name="A">a</Signature><Parents>
     <Parent line="27" name="Default" ref="ml.distribution.default" target="../../distribution.ecl.xml"/>
    </Parents>
   </Definition>

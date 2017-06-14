@@ -1,324 +1,776 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Mat.Vec</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.mat.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Vec
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : From(Types.t_Index N,Types.t_value def = 1.0)
-			<ul>
+				<li>
+					<a href="householder.ecl.html">householder.ecl</a>
+				</li>
+				
+				<li>
+					<a href="sub.ecl.html">sub.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mu.ecl.html">mu.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lowertriangle.ecl.html">lowertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="uppertriangle.ecl.html">uppertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale.ecl.html">scale.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identity.ecl.html">identity.ecl</a>
+				</li>
+				
+				<li>
+					<a href="inv.ecl.html">inv.ecl</a>
+				</li>
+				
+				<li>
+					<a href="vec.ecl.html">vec.ecl</a>
+				</li>
+				
+				<li>
+					<a href="debug.ecl.html">debug.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eig.ecl.html">eig.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rounddelta.ecl.html">rounddelta.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svd.ecl.html">svd.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rankelements.ecl.html">rankelements.ecl</a>
+				</li>
+				
+				<li>
+					<a href="setdimension.ecl.html">setdimension.ecl</a>
+				</li>
+				
+				<li>
+					<a href="det.ecl.html">det.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mahalanobis.ecl.html">mahalanobis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cov.ecl.html">cov.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randmat.ecl.html">randmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lanczos.ecl.html">lanczos.ecl</a>
+				</li>
+				
+				<li>
+					<a href="add.ecl.html">add.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pow.ecl.html">pow.ecl</a>
+				</li>
+				
+				<li>
+					<a href="insertcolumn.ecl.html">insertcolumn.ecl</a>
+				</li>
+				
+				<li>
+					<a href="has.ecl.html">has.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pca.ecl.html">pca.ecl</a>
+				</li>
+				
+				<li>
+					<a href="thin.ecl.html">thin.ecl</a>
+				</li>
+				
+				<li>
+					<a href="decomp.ecl.html">decomp.ecl</a>
+				</li>
+				
+				<li>
+					<a href="is.ecl.html">is.ecl</a>
+				</li>
+				
+				<li>
+					<a href="repmat.ecl.html">repmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eq.ecl.html">eq.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mul.ecl.html">mul.ecl</a>
+				</li>
+				
+				<li>
+					<a href="each.ecl.html">each.ecl</a>
+				</li>
+				
+				<li>
+					<a href="strict.ecl.html">strict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="substitute.ecl.html">substitute.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToDiag(DATASET(Types.VecElement) v, Types.t_index N=1)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToLowerDiag(DATASET(Types.VecElement) v, Types.t_index N=1)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToUpperDiag(DATASET(Types.VecElement) v, Types.t_index N=1)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToCol(DATASET(Types.VecElement) v,Types.t_index N)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToRow(DATASET(Types.VecElement) v,Types.t_index N)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RepDiag(DATASET(Types.Element) M, DATASET(Types.VecElement) v, Types.t_index N=1)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RepCol(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RepRow(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromDiag(DATASET(Types.Element) M, INTEGER4 K=0)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromCol(DATASET(Types.Element) M,Types.t_index N)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromRow(DATASET(Types.Element) M,Types.t_index N)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Dot(DATASET(Types.VecElement) X,DATASET(Types.VecElement) Y)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Norm(DATASET(Types.VecElement) X)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Length(DATASET(Types.VecElement) X)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Vec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : From(Types.t_Index N,Types.t_value def = 1.0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToDiag(DATASET(Types.VecElement) v, Types.t_index N=1)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToLowerDiag(DATASET(Types.VecElement) v, Types.t_index N=1)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToUpperDiag(DATASET(Types.VecElement) v, Types.t_index N=1)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToCol(DATASET(Types.VecElement) v,Types.t_index N)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToRow(DATASET(Types.VecElement) v,Types.t_index N)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RepDiag(DATASET(Types.Element) M, DATASET(Types.VecElement) v, Types.t_index N=1)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RepCol(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RepRow(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromDiag(DATASET(Types.Element) M, INTEGER4 K=0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromCol(DATASET(Types.Element) M,Types.t_index N)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromRow(DATASET(Types.Element) M,Types.t_index N)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Dot(DATASET(Types.VecElement) X,DATASET(Types.VecElement) Y)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Norm(DATASET(Types.VecElement) X)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Length(DATASET(Types.VecElement) X)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Mat.Vec</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.mat.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Mat-Vec">
+							<a href="#ML-Mat-Vec" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">VEC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Mat-Vec">Desc</a>
+							<ul id="ML-Mat-Vec" class="accordian-body collapse">
+								<li id="t-ml-mat-vec-from">
+							<a href="#ml-mat-vec-from" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROM</span>
+								<span class="sign-post">(Types.t_Index N,Types.t_value def = 1.0)</span>
+							</a> -
+							<a href="#dml-mat-vec-from">Desc</a>
+							<ul id="ml-mat-vec-from" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-todiag">
+							<a href="#ml-mat-vec-todiag" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TODIAG</span>
+								<span class="sign-post">(DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+							</a> -
+							<a href="#dml-mat-vec-todiag">Desc</a>
+							<ul id="ml-mat-vec-todiag" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-tolowerdiag">
+							<a href="#ml-mat-vec-tolowerdiag" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOLOWERDIAG</span>
+								<span class="sign-post">(DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+							</a> -
+							<a href="#dml-mat-vec-tolowerdiag">Desc</a>
+							<ul id="ml-mat-vec-tolowerdiag" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-toupperdiag">
+							<a href="#ml-mat-vec-toupperdiag" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOUPPERDIAG</span>
+								<span class="sign-post">(DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+							</a> -
+							<a href="#dml-mat-vec-toupperdiag">Desc</a>
+							<ul id="ml-mat-vec-toupperdiag" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-tocol">
+							<a href="#ml-mat-vec-tocol" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOCOL</span>
+								<span class="sign-post">(DATASET(Types.VecElement) v,Types.t_index N)</span>
+							</a> -
+							<a href="#dml-mat-vec-tocol">Desc</a>
+							<ul id="ml-mat-vec-tocol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-torow">
+							<a href="#ml-mat-vec-torow" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOROW</span>
+								<span class="sign-post">(DATASET(Types.VecElement) v,Types.t_index N)</span>
+							</a> -
+							<a href="#dml-mat-vec-torow">Desc</a>
+							<ul id="ml-mat-vec-torow" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-repdiag">
+							<a href="#ml-mat-vec-repdiag" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REPDIAG</span>
+								<span class="sign-post">(DATASET(Types.Element) M, DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+							</a> -
+							<a href="#dml-mat-vec-repdiag">Desc</a>
+							<ul id="ml-mat-vec-repdiag" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-repcol">
+							<a href="#ml-mat-vec-repcol" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REPCOL</span>
+								<span class="sign-post">(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</span>
+							</a> -
+							<a href="#dml-mat-vec-repcol">Desc</a>
+							<ul id="ml-mat-vec-repcol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-reprow">
+							<a href="#ml-mat-vec-reprow" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REPROW</span>
+								<span class="sign-post">(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</span>
+							</a> -
+							<a href="#dml-mat-vec-reprow">Desc</a>
+							<ul id="ml-mat-vec-reprow" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-fromdiag">
+							<a href="#ml-mat-vec-fromdiag" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMDIAG</span>
+								<span class="sign-post">(DATASET(Types.Element) M, INTEGER4 K=0)</span>
+							</a> -
+							<a href="#dml-mat-vec-fromdiag">Desc</a>
+							<ul id="ml-mat-vec-fromdiag" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-fromcol">
+							<a href="#ml-mat-vec-fromcol" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMCOL</span>
+								<span class="sign-post">(DATASET(Types.Element) M,Types.t_index N)</span>
+							</a> -
+							<a href="#dml-mat-vec-fromcol">Desc</a>
+							<ul id="ml-mat-vec-fromcol" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-fromrow">
+							<a href="#ml-mat-vec-fromrow" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMROW</span>
+								<span class="sign-post">(DATASET(Types.Element) M,Types.t_index N)</span>
+							</a> -
+							<a href="#dml-mat-vec-fromrow">Desc</a>
+							<ul id="ml-mat-vec-fromrow" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-dot">
+							<a href="#ml-mat-vec-dot" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DOT</span>
+								<span class="sign-post">(DATASET(Types.VecElement) X,DATASET(Types.VecElement) Y)</span>
+							</a> -
+							<a href="#dml-mat-vec-dot">Desc</a>
+							<ul id="ml-mat-vec-dot" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-norm">
+							<a href="#ml-mat-vec-norm" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NORM</span>
+								<span class="sign-post">(DATASET(Types.VecElement) X)</span>
+							</a> -
+							<a href="#dml-mat-vec-norm">Desc</a>
+							<ul id="ml-mat-vec-norm" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-vec-length">
+							<a href="#ml-mat-vec-length" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LENGTH</span>
+								<span class="sign-post">(DATASET(Types.VecElement) X)</span>
+							</a> -
+							<a href="#dml-mat-vec-length">Desc</a>
+							<ul id="ml-mat-vec-length" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Mat-Vec">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">VEC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Mat-Vec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-mat-vec-from">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROM</span>
+									<span class="sign-post">(Types.t_Index N,Types.t_value def = 1.0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-from" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-todiag">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TODIAG</span>
+									<span class="sign-post">(DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-todiag" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-tolowerdiag">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOLOWERDIAG</span>
+									<span class="sign-post">(DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-tolowerdiag" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-toupperdiag">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOUPPERDIAG</span>
+									<span class="sign-post">(DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-toupperdiag" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-tocol">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOCOL</span>
+									<span class="sign-post">(DATASET(Types.VecElement) v,Types.t_index N)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-tocol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-torow">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOROW</span>
+									<span class="sign-post">(DATASET(Types.VecElement) v,Types.t_index N)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-torow" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-repdiag">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REPDIAG</span>
+									<span class="sign-post">(DATASET(Types.Element) M, DATASET(Types.VecElement) v, Types.t_index N=1)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-repdiag" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-repcol">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REPCOL</span>
+									<span class="sign-post">(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-repcol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-reprow">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REPROW</span>
+									<span class="sign-post">(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-reprow" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-fromdiag">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMDIAG</span>
+									<span class="sign-post">(DATASET(Types.Element) M, INTEGER4 K=0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-fromdiag" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-fromcol">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMCOL</span>
+									<span class="sign-post">(DATASET(Types.Element) M,Types.t_index N)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-fromcol" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-fromrow">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMROW</span>
+									<span class="sign-post">(DATASET(Types.Element) M,Types.t_index N)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-fromrow" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-dot">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DOT</span>
+									<span class="sign-post">(DATASET(Types.VecElement) X,DATASET(Types.VecElement) Y)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-dot" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-norm">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NORM</span>
+									<span class="sign-post">(DATASET(Types.VecElement) X)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-norm" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-vec-length">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LENGTH</span>
+									<span class="sign-post">(DATASET(Types.VecElement) X)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-vec-length" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

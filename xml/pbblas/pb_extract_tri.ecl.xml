@@ -26,29 +26,29 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_PART">Layout_Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="214" end="230" inherit_type="local" line="8" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" start="203">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="238" end="260" fullname="pbblas.upper" inherit_type="local" line="9" name="Upper" source="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" start="231">
-   <Signature>Upper</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="UPPER">Upper</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="268" end="290" fullname="pbblas.lower" inherit_type="local" line="10" name="Lower" source="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" start="261">
-   <Signature>Lower</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LOWER">Lower</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="302" end="318" inherit_type="local" line="11" name="Diagonal" source="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" start="291">
-   <Signature>Diagonal</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIAGONAL">Diagonal</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="346" end="350" fullname="pbblas.empty_mat" inherit_type="local" line="12" name="empty_mat" source="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" start="319">
-   <Signature>Types.matrix_t empty_mat</Signature><Type>attribute</Type>
+   <Signature pre="Types.matrix_t" post="" name="EMPTY_MAT">Types.matrix_t empty_mat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="365" end="384" fullname="pbblas.dimension_t" inherit_type="local" line="13" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" start="351">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="503" end="1093" exported="1" fullname="pbblas.pb_extract_tri" inherit_type="local" line="16" name="PB_Extract_Tri" source="/media/sarthak/Data/ecl-ml/PBblas/PB_Extract_Tri.ecl" start="387">
    <Type>function</Type>
-   <Signature>PB_Extract_Tri(Triangle tri, Diagonal dt,
+   <Signature pre="" post="(Triangle tri, Diagonal dt,&#10;                      IMatrix_Map map_a, DATASET(Layout_Part) A)" name="PB_EXTRACT_TRI">PB_Extract_Tri(Triangle tri, Diagonal dt,
                       IMatrix_Map map_a, DATASET(Layout_Part) A)</Signature><Params>
     <Param name="tri"/>
     <Param name="dt"/>

@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Clustering.TestKMeans" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/TestKMeans.ecl" target="testkmeans.ecl.xml">
   <Definition body="218" end="2123" exported="1" fullname="testingsuite.clustering.testkmeans" inherit_type="local" line="8" name="TestKMeans" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/TestKMeans.ecl" start="158">
    <Type>macro</Type>
-   <Signature>TestKMeans(raw_dataset_name, repeats, no_clusters)</Signature><Params>
+   <Signature pre="" post="(raw_dataset_name, repeats, no_clusters)" name="TESTKMEANS">TestKMeans(raw_dataset_name, repeats, no_clusters)</Signature><Params>
     <Param name="raw_dataset_name"/>
     <Param name="repeats"/>
     <Param name="no_clusters"/>

@@ -10,16 +10,16 @@
   <Definition body="128" end="153" fullname="ts.uniobservation" inherit_type="local" line="5" name="UniObservation" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="111">
    <Type>record</Type>
    <Field name="period"/>
-   <Signature>UniObservation</Signature><Field name="dependent"/>
+   <Signature pre="" post="" name="UNIOBSERVATION">UniObservation</Signature><Field name="dependent"/>
   </Definition>
   <Definition body="164" end="182" fullname="ts.t_value" inherit_type="local" line="6" name="t_value" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="154">
-   <Signature>t_value</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="T_VALUE">t_value</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="198" end="221" fullname="ts.numericfield" inherit_type="local" line="7" name="NumericField" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="183">
    <Type>record</Type>
    <Field name="id"/>
    <Field name="number"/>
-   <Signature>NumericField</Signature><Field name="value"/>
+   <Signature pre="" post="" name="NUMERICFIELD">NumericField</Signature><Field name="value"/>
   </Definition>
   <Definition body="243" end="2757" exported="1" fullname="TS.season_adj" inherit_type="local" line="9" name="season_adj" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="223">
    <Type>module</Type>
@@ -27,7 +27,7 @@
     <Type>record</Type>
     <Field name="period"/>
     <Field name="dependent"/>
-    <Signature>ExtendedObs</Signature><Field name="season"/>
+    <Signature pre="" post="" name="EXTENDEDOBS">ExtendedObs</Signature><Field name="season"/>
    </Definition>
    <Definition body="395" end="480" fullname="ts.season_adj.markobs" inherit_type="local" line="13" name="markObs" shared="1" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="328">
     <Type>transform</Type>
@@ -35,25 +35,25 @@
      <Param name="obs"/>
      <Param name="seasons"/>
     </Params>
-    <Signature>ExtendedObs markObs(UniObservation obs, UNSIGNED seasons)</Signature><Return>extendedobs</Return>
+    <Signature pre="ExtendedObs" post="(UniObservation obs, UNSIGNED seasons)" name="MARKOBS">ExtendedObs markObs(UniObservation obs, UNSIGNED seasons)</Signature><Return>extendedobs</Return>
    </Definition>
    <Definition body="539" end="542" fullname="ts.season_adj.adjustprototype" inherit_type="local" line="17" name="AdjustPrototype" shared="1" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="483">
     <Type>function</Type>
-    <Signature>t_value AdjustPrototype(UNSIGNED f, t_value v)</Signature><Params>
+    <Signature pre="t_value" post="(UNSIGNED f, t_value v)" name="ADJUSTPROTOTYPE">t_value AdjustPrototype(UNSIGNED f, t_value v)</Signature><Params>
      <Param name="f"/>
      <Param name="v"/>
     </Params>
    </Definition>
    <Definition body="597" end="604" fullname="ts.season_adj.multiplyadj" inherit_type="local" line="18" name="MultiplyAdj" shared="1" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="545">
     <Type>function</Type>
-    <Signature>t_value MultiplyAdj(UNSIGNED f, t_value v)</Signature><Params>
+    <Signature pre="t_value" post="(UNSIGNED f, t_value v)" name="MULTIPLYADJ">t_value MultiplyAdj(UNSIGNED f, t_value v)</Signature><Params>
      <Param name="f"/>
      <Param name="v"/>
     </Params>
    </Definition>
    <Definition body="654" end="661" fullname="ts.season_adj.addadj" inherit_type="local" line="19" name="AddAdj" shared="1" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="607">
     <Type>function</Type>
-    <Signature>t_value AddAdj(UNSIGNED f, t_value v)</Signature><Params>
+    <Signature pre="t_value" post="(UNSIGNED f, t_value v)" name="ADDADJ">t_value AddAdj(UNSIGNED f, t_value v)</Signature><Params>
      <Param name="f"/>
      <Param name="v"/>
     </Params>
@@ -65,13 +65,13 @@
      <Param name="f"/>
      <Param name="func"/>
     </Params>
-    <Signature>UniObservation adj_obs(ExtendedObs obs,
+    <Signature pre="UniObservation" post="(ExtendedObs obs,&#10;                                NumericField f,&#10;                                AdjustPrototype func)" name="ADJ_OBS">UniObservation adj_obs(ExtendedObs obs,
                                 NumericField f,
                                 AdjustPrototype func)</Signature><Return>uniobservation</Return>
    </Definition>
    <Definition body="1254" end="1486" fullname="ts.season_adj.applyadj" inherit_type="local" line="26" name="ApplyAdj" shared="1" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="931">
     <Type>function</Type>
-    <Signature>DATASET(UniObservation) ApplyAdj(DATASET(UniObservation) ts,
+    <Signature pre="DATASET(UniObservation)" post="(DATASET(UniObservation) ts,&#10;                                          DATASET(NumericField) adj,&#10;                                          UNSIGNED seasons,&#10;                                          UNSIGNED adj_col,&#10;                                          AdjustPrototype func)" name="APPLYADJ">DATASET(UniObservation) ApplyAdj(DATASET(UniObservation) ts,
                                           DATASET(NumericField) adj,
                                           UNSIGNED seasons,
                                           UNSIGNED adj_col,
@@ -87,12 +87,12 @@
     <Type>function</Type>
     <Documentation> <content>Apply multiplicative seasonal adjustment factor to the series.</content>
      <return>the adjusted time series.</return>
-     <param>ts the time series</param>
-     <param>adj the adjustment factor, the season corresponds to the row</param>
-     <param>seasons the number of seasons</param>
-     <param>adj_col the column number of the seasonal factor.</param>
+     <param><name>ts</name><desc>the time series</desc></param>
+     <param><name>adj</name><desc>the adjustment factor, the season corresponds to the row</desc></param>
+     <param><name>seasons</name><desc>the number of seasons</desc></param>
+     <param><name>adj_col</name><desc>the column number of the seasonal factor.</desc></param>
     </Documentation>
-    <Signature>DATASET(UniObservation) Multiply(DATASET(UniObservation) ts,
+    <Signature pre="DATASET(UniObservation)" post="(DATASET(UniObservation) ts,&#10;                                          DATASET(NumericField) adj,&#10;                                          UNSIGNED seasons,&#10;                                          UNSIGNED adj_col)" name="MULTIPLY">DATASET(UniObservation) Multiply(DATASET(UniObservation) ts,
                                           DATASET(NumericField) adj,
                                           UNSIGNED seasons,
                                           UNSIGNED adj_col)</Signature><Params>
@@ -105,12 +105,12 @@
    <Definition body="2680" end="2752" exported="1" fullname="ts.season_adj.add" inherit_type="local" line="57" name="Add" source="/media/sarthak/Data/ecl-ml/TS/season_adj.ecl" start="2441">
     <Type>function</Type>
     <Documentation> <content>Apply additive seasonal adjustment factor to the series.</content>
-     <param>ts the time series</param>
-     <param>adj the adjustment to be added, the season corresponds to the row</param>
-     <param>seasons the number of seasons</param>
-     <param>adj_col the column number of the seasonal factor</param>
+     <param><name>ts</name><desc>the time series</desc></param>
+     <param><name>adj</name><desc>the adjustment to be added, the season corresponds to the row</desc></param>
+     <param><name>seasons</name><desc>the number of seasons</desc></param>
+     <param><name>adj_col</name><desc>the column number of the seasonal factor</desc></param>
     </Documentation>
-    <Signature>DATASET(UniObservation) Add(DATASET(UniObservation) ts,
+    <Signature pre="DATASET(UniObservation)" post="(DATASET(UniObservation) ts,&#10;                                     DATASET(NumericField) adj,&#10;                                     UNSIGNeD seasons,&#10;                                     UNSIGNED adj_col)" name="ADD">DATASET(UniObservation) Add(DATASET(UniObservation) ts,
                                      DATASET(NumericField) adj,
                                      UNSIGNeD seasons,
                                      UNSIGNED adj_col)</Signature><Params>
@@ -120,7 +120,7 @@
      <Param name="adj_col"/>
     </Params>
    </Definition>
-   <Signature>season_adj</Signature><Parents/>
+   <Signature pre="" post="" name="SEASON_ADJ">season_adj</Signature><Parents/>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../ml/types.ecl.xml"/></Meta>

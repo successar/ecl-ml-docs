@@ -12,28 +12,28 @@
    <Field name="weight"/>
    <Field name="age"/>
    <Field name="species"/>
-   <Signature>value_record</Signature><Field name="gender"/>
+   <Signature pre="" post="" name="VALUE_RECORD">value_record</Signature><Field name="gender"/>
   </Definition>
   <Definition body="298" end="735" fullname="ml.tests.explanatory.d" inherit_type="local" line="15" name="d" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/DiscreteField.ecl" start="294">
-   <Signature>d</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D">d</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="762" end="791" fullname="ml.tests.explanatory.o1" inherit_type="local" line="34" name="o1" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/DiscreteField.ecl" start="757">
-   <Signature>o1</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="O1">o1</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="29" end="105" fullname="ml.tests.explanatory.o_toname" inherit_type="local" line="81" name="o_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//---------------------------</Signature><Params>
+   <Signature pre="" post="" name="O_TONAME">//---------------------------</Signature><Params>
     <Param name="i"/>
    </Params>
   </Definition>
   <Definition body="31" end="106" fullname="ml.tests.explanatory.o_tonumber" inherit_type="local" line="83" name="o_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//-----------------------------</Signature><Params>
+   <Signature pre="" post="" name="O_TONUMBER">//-----------------------------</Signature><Params>
     <Param name="s"/>
    </Params>
   </Definition>
   <Definition body="2485" end="2654" fullname="ml.tests.explanatory.o" inherit_type="local" line="85" name="o" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
-   <Signature>/---------------------------------------------------------------------------
+   <Signature pre="/---------------------------------------------------------------------------&#10;// Macr" post="takes a matrix dataset, with each row contianing an ID and one or&#10;// more axis fields containing numeric values, and expands it into the &#10;// NumericField format used by ML.&#10;//&#10;//   dIn       : The name of the input dataset&#10;//   dOut      : The name of the resulting dataset&#10;//   idfield   : [OPTIONAL] The name of the field that contains the UID for&#10;//               each row.  If omitted, it is assumed to be the first field.&#10;//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the&#10;//               fields to be treated as axes.  If omitted, all numeric&#10;//               fields that are not the UID will be treated as axes.&#10;//               NOTE: idfield defaults to the first field in the table, so&#10;//               if that field is specified as an axis field, then the user&#10;//               should be sure to specify a value in the idfield param.&#10;//&#10;//  Along with creating the NumericField table, this macro produces two&#10;//  simple functions to assist the user in mapping the field names to their&#10;//  corresponding numbers.  These are &quot;STRING dOut_ToName(UNSIGNED)&quot; and&#10;//  &quot;UNSIGNED dOut_ToNumber(STRING)&quot;, where the &quot;dOut&quot; portion of the function&#10;//  name is the name passed into that parameter of the macro.&#10;//&#10;//  The macro also produces a mapping table named &quot;dOut_Map&quot;, again where&#10;//  &quot;dOut&quot; refers to the parameter, that contains a table of the field&#10;//  mappings&#10;//  &#10;//  Examples:&#10;//    ML.ToField(dOrig,dMatrix);&#10;//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');&#10;//    dMatrix_ToName(2);  // returns 'field7'&#10;//    dMatrix_ToNumber('field10'); // returns 3&#10;//    dMatrix_Map; // returns the mapping table of field name to number&#10;//---------------------------------------------------------------------------&#10;EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO&#10;  LOADXML('&lt;xml/&gt;');&#10;  // Variable to contain the name of the field that maps to &quot;id&quot;&#10;  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))&#10;  // Contains a comma-delimited list of the fields that will be used as axes,&#10;  // beginning with &quot;COUNTER&quot; so it can be #EXPANDED into a CHOOSE call&#10;  // during normalization&#10;  #DECLARE(normlist) #SET(normlist,'COUNTER')&#10;  // Count of the fields that become axes&#10;  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)&#10;  // A list of every field in the original table and the field number (or &quot;ID&quot;)&#10;  // to which it is mapped in the output.  &quot;" name="O">/---------------------------------------------------------------------------
 // Macro takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
@@ -60,14 +60,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('&lt;xml/&gt;')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('&lt;xml/&gt;');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -80,7 +80,7 @@
   // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="7" end="2800" fullname="ml.tests.explanatory.o_map" inherit_type="local" line="87" name="o_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
-   <Signature>//-----</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="O_MAP">//-----</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" name="ML.Discretize" target="../../discretize.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/></Meta>

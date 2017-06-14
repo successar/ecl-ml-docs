@@ -1,352 +1,709 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.Converted</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.svm
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Converted
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : ToInstance(DATASET(ML_Types.NumericField) Ind,
-                    DATASET(ML_Types.NumericField) Dep=dummy)
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Field_ID
-			<ul>
+				<li>
+					<a href="libsvm/pkg.toc.html">libsvm</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : s_type_id
-			<ul>
+				<li>
+					<a href="scale_instance.ecl.html">scale_instance.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
+				
+				<li>
+					<a href="grid_search.ecl.html">grid_search.ecl</a>
+				</li>
+				
+				<li>
+					<a href="predict.ecl.html">predict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cross_validate.ecl.html">cross_validate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="train.ecl.html">train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale_factors.ecl.html">scale_factors.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : k_type_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : degree_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : gamma_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : coef0_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : k_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : l_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : pairs_a_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : pairs_b_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : n_label_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : n_sv_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : lf_id
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromModel(UNSIGNED id_base, DATASET(SVM.Types.Model) mdl)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToModel(DATASET(ML_Types.NumericField) mdl)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Converted
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : ToInstance(DATASET(ML_Types.NumericField) Ind,
-                    DATASET(ML_Types.NumericField) Dep=dummy)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Field_ID
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : s_type_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : k_type_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : degree_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : gamma_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : coef0_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : k_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : l_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : pairs_a_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : pairs_b_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : n_label_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : n_sv_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : lf_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromModel(UNSIGNED id_base, DATASET(SVM.Types.Model) mdl)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToModel(DATASET(ML_Types.NumericField) mdl)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.Converted</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="pkg.toc.html">
+								ml.svm
+							</a>
+							</li>
+						<li>
+							<a href="../types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-SVM-Converted">
+							<a href="#ML-SVM-Converted" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONVERTED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-SVM-Converted">Desc</a>
+							<ul id="ML-SVM-Converted" class="accordian-body collapse">
+								<li id="t-ml-svm-converted-toinstance">
+							<a href="#ml-svm-converted-toinstance" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOINSTANCE</span>
+								<span class="sign-post">(DATASET(ML_Types.NumericField) Ind,
+                    DATASET(ML_Types.NumericField) Dep=dummy)</span>
+							</a> -
+							<a href="#dml-svm-converted-toinstance">Desc</a>
+							<ul id="ml-svm-converted-toinstance" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-field_id">
+							<a href="#ml-svm-converted-field_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FIELD_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-field_id">Desc</a>
+							<ul id="ml-svm-converted-field_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-s_type_id">
+							<a href="#ml-svm-converted-s_type_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">S_TYPE_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-s_type_id">Desc</a>
+							<ul id="ml-svm-converted-s_type_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-k_type_id">
+							<a href="#ml-svm-converted-k_type_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">K_TYPE_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-k_type_id">Desc</a>
+							<ul id="ml-svm-converted-k_type_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-degree_id">
+							<a href="#ml-svm-converted-degree_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEGREE_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-degree_id">Desc</a>
+							<ul id="ml-svm-converted-degree_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-gamma_id">
+							<a href="#ml-svm-converted-gamma_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GAMMA_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-gamma_id">Desc</a>
+							<ul id="ml-svm-converted-gamma_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-coef0_id">
+							<a href="#ml-svm-converted-coef0_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COEF0_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-coef0_id">Desc</a>
+							<ul id="ml-svm-converted-coef0_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-k_id">
+							<a href="#ml-svm-converted-k_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">K_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-k_id">Desc</a>
+							<ul id="ml-svm-converted-k_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-l_id">
+							<a href="#ml-svm-converted-l_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">L_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-l_id">Desc</a>
+							<ul id="ml-svm-converted-l_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-pairs_a_id">
+							<a href="#ml-svm-converted-pairs_a_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PAIRS_A_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-pairs_a_id">Desc</a>
+							<ul id="ml-svm-converted-pairs_a_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-pairs_b_id">
+							<a href="#ml-svm-converted-pairs_b_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PAIRS_B_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-pairs_b_id">Desc</a>
+							<ul id="ml-svm-converted-pairs_b_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-n_label_id">
+							<a href="#ml-svm-converted-n_label_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">N_LABEL_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-n_label_id">Desc</a>
+							<ul id="ml-svm-converted-n_label_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-n_sv_id">
+							<a href="#ml-svm-converted-n_sv_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">N_SV_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-n_sv_id">Desc</a>
+							<ul id="ml-svm-converted-n_sv_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-lf_id">
+							<a href="#ml-svm-converted-lf_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LF_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-converted-lf_id">Desc</a>
+							<ul id="ml-svm-converted-lf_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-frommodel">
+							<a href="#ml-svm-converted-frommodel" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMMODEL</span>
+								<span class="sign-post">(UNSIGNED id_base, DATASET(SVM.Types.Model) mdl)</span>
+							</a> -
+							<a href="#dml-svm-converted-frommodel">Desc</a>
+							<ul id="ml-svm-converted-frommodel" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-converted-tomodel">
+							<a href="#ml-svm-converted-tomodel" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOMODEL</span>
+								<span class="sign-post">(DATASET(ML_Types.NumericField) mdl)</span>
+							</a> -
+							<a href="#dml-svm-converted-tomodel">Desc</a>
+							<ul id="ml-svm-converted-tomodel" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-SVM-Converted">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONVERTED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-SVM-Converted" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-svm-converted-toinstance">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOINSTANCE</span>
+									<span class="sign-post">(DATASET(ML_Types.NumericField) Ind,
+                    DATASET(ML_Types.NumericField) Dep=dummy)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-toinstance" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-field_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FIELD_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-field_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-s_type_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">S_TYPE_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-s_type_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-k_type_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">K_TYPE_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-k_type_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-degree_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEGREE_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-degree_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-gamma_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GAMMA_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-gamma_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-coef0_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COEF0_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-coef0_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-k_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">K_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-k_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-l_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">L_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-l_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-pairs_a_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PAIRS_A_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-pairs_a_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-pairs_b_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PAIRS_B_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-pairs_b_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-n_label_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">N_LABEL_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-n_label_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-n_sv_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">N_SV_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-n_sv_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-lf_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LF_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-lf_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-frommodel">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMMODEL</span>
+									<span class="sign-post">(UNSIGNED id_base, DATASET(SVM.Types.Model) mdl)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-frommodel" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-converted-tomodel">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOMODEL</span>
+									<span class="sign-post">(DATASET(ML_Types.NumericField) mdl)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-converted-tomodel" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

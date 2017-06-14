@@ -4,15 +4,15 @@
   <Definition body="237" end="12772" exported="1" fullname="VL.Geo" inherit_type="local" line="4" name="Geo" source="/media/sarthak/Data/ecl-ml/VL/Geo.ecl" start="225">
    <Type>module</Type>
    <Definition body="266" end="1082" exported="1" fullname="vl.geo.regioncodes" inherit_type="local" line="5" name="RegionCodes" source="/media/sarthak/Data/ecl-ml/VL/Geo.ecl" start="246">
-    <Signature>RegionCodes</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="REGIONCODES">RegionCodes</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1107" end="10773" exported="1" fullname="vl.geo.countrycodes" inherit_type="local" line="35" name="CountryCodes" source="/media/sarthak/Data/ecl-ml/VL/Geo.ecl" start="1086">
-    <Signature>CountryCodes</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="COUNTRYCODES">CountryCodes</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="10794" end="12767" exported="1" fullname="vl.geo.usstates" inherit_type="local" line="287" name="USStates" source="/media/sarthak/Data/ecl-ml/VL/Geo.ecl" start="10777">
-    <Signature>RT USStatesDATA</Signature><Type>attribute</Type>
+    <Signature pre="RT" post=":=DATA" name="USSTATES">RT USStates:=DATA</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Geo</Signature><Parents/>
+   <Signature pre="" post="" name="GEO">Geo</Signature><Parents/>
   </Definition>
  </Source>
 </Meta>

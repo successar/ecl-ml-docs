@@ -23,7 +23,7 @@
    <Field name="probA"/>
    <Field name="probB"/>
    <Field name="labels"/>
-   <Signature>Model</Signature><Field name="nSV"/>
+   <Signature pre="" post="" name="MODEL">Model</Signature><Field name="nSV"/>
   </Definition>
   <Definition body="138" end="169" fullname="ml.svm.svm_model" inherit_type="local" line="6" name="SVM_Model" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="126">
    <Type>record</Type>
@@ -45,24 +45,24 @@
    <Field name="probA"/>
    <Field name="probB"/>
    <Field name="labels"/>
-   <Signature>SVM_Model</Signature><Field name="nSV"/>
+   <Signature pre="" post="" name="SVM_MODEL">SVM_Model</Signature><Field name="nSV"/>
   </Definition>
   <Definition body="182" end="210" inherit_type="local" line="7" name="SVM_Output" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="170">
-   <Signature>SVM_Output</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SVM_OUTPUT">SVM_Output</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="226" end="250" fullname="ml.svm.svm_instance" inherit_type="local" line="8" name="SVM_Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="211">
    <Type>record</Type>
    <Field name="rid"/>
    <Field name="y"/>
    <Field name="max_value"/>
-   <Signature>SVM_Instance</Signature><Field name="x"/>
+   <Signature pre="" post="" name="SVM_INSTANCE">SVM_Instance</Signature><Field name="x"/>
   </Definition>
   <Definition body="268" end="294" fullname="ml.svm.svm_prediction" inherit_type="local" line="9" name="SVM_Prediction" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="251">
    <Type>record</Type>
    <Field name="id"/>
    <Field name="rid"/>
    <Field name="target_y"/>
-   <Signature>SVM_Prediction</Signature><Field name="predict_y"/>
+   <Signature pre="" post="" name="SVM_PREDICTION">SVM_Prediction</Signature><Field name="predict_y"/>
   </Definition>
   <Definition body="313" end="340" fullname="ml.svm.svm_pred_values" inherit_type="local" line="10" name="SVM_Pred_Values" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="295">
    <Type>record</Type>
@@ -70,7 +70,7 @@
    <Field name="rid"/>
    <Field name="target_y"/>
    <Field name="predict_y"/>
-   <Signature>SVM_Pred_Values</Signature><Field name="decision_values"/>
+   <Signature pre="" post="" name="SVM_PRED_VALUES">SVM_Pred_Values</Signature><Field name="decision_values"/>
   </Definition>
   <Definition body="361" end="390" fullname="ml.svm.svm_pred_prob_est" inherit_type="local" line="11" name="SVM_Pred_Prob_Est" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="341">
    <Type>record</Type>
@@ -78,11 +78,11 @@
    <Field name="rid"/>
    <Field name="target_y"/>
    <Field name="predict_y"/>
-   <Signature>SVM_Pred_Prob_Est</Signature><Field name="prob_estimates"/>
+   <Signature pre="" post="" name="SVM_PRED_PROB_EST">SVM_Pred_Prob_Est</Signature><Field name="prob_estimates"/>
   </Definition>
   <Definition body="405" end="425" fullname="ml.svm.svm_predict" inherit_type="local" line="12" name="SVM_Predict" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="391">
    <Type>embed</Type>
-   <Signature>SVM_Predict</Signature><Params>
+   <Signature pre="" post="" name="SVM_PREDICT">SVM_Predict</Signature><Params>
     <Param name="ecl_model"/>
     <Param name="ecl_nodes"/>
     <Param name="output_request"/>
@@ -91,7 +91,7 @@
   <Definition body="440" end="466" fullname="ml.svm.libsvm_node" inherit_type="local" line="13" name="LibSVM_Node" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="426">
    <Type>record</Type>
    <Field name="indx"/>
-   <Signature>LibSVM_Node</Signature><Field name="value"/>
+   <Signature pre="" post="" name="LIBSVM_NODE">LibSVM_Node</Signature><Field name="value"/>
   </Definition>
   <Definition body="535" end="3044" exported="1" fullname="ml.svm.predict" inherit_type="local" line="15" name="Predict" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="470">
    <Type>module</Type>
@@ -105,19 +105,19 @@
     <Params>
      <Param name="f"/>
     </Params>
-    <Signature>LibSVM.Types.LibSVM_Node cvtNode(SVM.Types.SVM_Feature f)</Signature><Return>libsvm_node</Return>
+    <Signature pre="LibSVM.Types.LibSVM_Node" post="(SVM.Types.SVM_Feature f)" name="CVTNODE">LibSVM.Types.LibSVM_Node cvtNode(SVM.Types.SVM_Feature f)</Signature><Return>libsvm_node</Return>
    </Definition>
    <Definition body="700" end="767" fullname="ml.svm.predict.work_sv" inherit_type="local" line="20" name="Work_SV" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="683">
     <Type>record</Type>
     <Field name="v_ord"/>
-    <Signature>Work_SV</Signature><Field name="nodes"/>
+    <Signature pre="" post="" name="WORK_SV">Work_SV</Signature><Field name="nodes"/>
    </Definition>
    <Definition body="818" end="978" fullname="ml.svm.predict.cvtsv" inherit_type="local" line="24" name="cvtSV" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="770">
     <Type>transform</Type>
     <Params>
      <Param name="sv_rec"/>
     </Params>
-    <Signature>Work_SV cvtSV(SVM.Types.SVM_SV sv_rec)</Signature><Return>work_sv</Return>
+    <Signature pre="Work_SV" post="(SVM.Types.SVM_SV sv_rec)" name="CVTSV">Work_SV cvtSV(SVM.Types.SVM_SV sv_rec)</Signature><Return>work_sv</Return>
    </Definition>
    <Definition body="996" end="1048" fullname="ml.svm.predict.work1" inherit_type="local" line="29" name="Work1" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="981">
     <Type>record</Type>
@@ -140,26 +140,26 @@
     <Field name="probB"/>
     <Field name="labels"/>
     <Field name="nSV"/>
-    <Signature>Work1</Signature><Field name="id"/>
+    <Signature pre="" post="" name="WORK1">Work1</Signature><Field name="id"/>
    </Definition>
    <Definition body="1096" end="1131" fullname="ml.svm.predict.normn" inherit_type="local" line="32" name="normN" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="1051">
     <Type>transform</Type>
     <Params>
      <Param name="node"/>
     </Params>
-    <Signature>LibSVM_Node normN(LibSVM_Node node)</Signature><Return>libsvm_node</Return>
+    <Signature pre="LibSVM_Node" post="(LibSVM_Node node)" name="NORMN">LibSVM_Node normN(LibSVM_Node node)</Signature><Return>libsvm_node</Return>
    </Definition>
    <Definition body="1482" end="1515" fullname="ml.svm.predict.svm_mdls" inherit_type="local" line="45" name="svm_mdls" shared="1" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="1464">
-    <Signature>svm_mdls</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SVM_MDLS">svm_mdls</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1876" end="1927" exported="1" fullname="ml.svm.predict.prediction" inherit_type="local" line="55" name="Prediction" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="1856">
-    <Signature>Prediction</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="PREDICTION">Prediction</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2426" end="2479" exported="1" fullname="ml.svm.predict.pred_values" inherit_type="local" line="67" name="Pred_Values" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="2405">
-    <Signature>Pred_Values</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="PRED_VALUES">Pred_Values</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Predict(DATASET(Model) models, DATASET(SVM_Instance) d)</Signature><Definition body="2988" end="3039" exported="1" fullname="ml.svm.predict.pred_prob_est" inherit_type="local" line="79" name="Pred_Prob_Est" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="2965">
-    <Signature>Pred_Prob_Est</Signature><Type>attribute</Type>
+   <Signature pre="" post="(DATASET(Model) models, DATASET(SVM_Instance) d)" name="PREDICT">Predict(DATASET(Model) models, DATASET(SVM_Instance) d)</Signature><Definition body="2988" end="3039" exported="1" fullname="ml.svm.predict.pred_prob_est" inherit_type="local" line="79" name="Pred_Prob_Est" source="/media/sarthak/Data/ecl-ml/ML/SVM/predict.ecl" start="2965">
+    <Signature pre="" post="" name="PRED_PROB_EST">Pred_Prob_Est</Signature><Type>attribute</Type>
    </Definition>
   </Definition>
  </Source>

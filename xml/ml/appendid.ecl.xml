@@ -3,7 +3,7 @@
  <Source name="ML.AppendID" sourcePath="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" target="appendid.ecl.xml">
   <Definition body="570" end="824" exported="1" fullname="ml.appendid" inherit_type="local" line="14" name="AppendID" source="/media/sarthak/Data/ecl-ml/ML/AppendID.ecl" start="534">
    <Type>macro</Type>
-   <Signature>AppendID(dIn,idfield,dOut)</Signature><Params>
+   <Signature pre="" post="(dIn,idfield,dOut)" name="APPENDID">AppendID(dIn,idfield,dOut)</Signature><Params>
     <Param name="dIn"/>
     <Param name="idfield"/>
     <Param name="dOut"/>

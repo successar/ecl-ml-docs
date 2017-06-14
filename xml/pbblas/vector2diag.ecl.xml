@@ -26,17 +26,17 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="PART">Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="261" end="276" fullname="pbblas.value_t" inherit_type="local" line="10" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" start="251">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="285" end="311" fullname="pbblas.dim_t" inherit_type="local" line="11" name="dim_t" source="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" start="277">
-   <Signature>dim_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIM_T">dim_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="409" end="1838" exported="1" fullname="pbblas.vector2diag" inherit_type="local" line="13" name="Vector2Diag" source="/media/sarthak/Data/ecl-ml/PBblas/Vector2Diag.ecl" start="313">
    <Type>function</Type>
-   <Signature>DATASET(Part)
+   <Signature pre="DATASET(Part)" post="(IMatrix_Map x_map, DATASET(Part) X, IMatrix_Map d_map)" name="VECTOR2DIAG">DATASET(Part)
        Vector2Diag(IMatrix_Map x_map, DATASET(Part) X, IMatrix_Map d_map)</Signature><Params>
     <Param name="x_map"/>
     <Param name="X"/>

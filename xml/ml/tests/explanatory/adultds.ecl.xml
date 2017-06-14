@@ -20,15 +20,15 @@
     <Field name="capital_loss"/>
     <Field name="hours_per_week"/>
     <Field name="native_country"/>
-    <Signature>AdultRecord</Signature><Field name="Outcome"/>
+    <Signature pre="" post="" name="ADULTRECORD">AdultRecord</Signature><Field name="Outcome"/>
    </Definition>
    <Definition body="718" end="1479775" exported="1" fullname="ml.tests.explanatory.adultds.train_data" inherit_type="local" line="23" name="Train_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" start="698">
-    <Signature>Train_Data</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TRAIN_DATA">Train_Data</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1479796" end="2218868" exported="1" fullname="ml.tests.explanatory.adultds.test_data" inherit_type="local" line="32585" name="Test_Data" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/AdultDS.ecl" start="1479777">
-    <Signature>Test_Data</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TEST_DATA">Test_Data</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>AdultDS</Signature><Parents/>
+   <Signature pre="" post="" name="ADULTDS">AdultDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="58" fullname="ML" inherit_type="local" line="2" name="ML" ref="ml" start="58" target="../../pkg.toc.xml">
    <Type>attribute</Type>

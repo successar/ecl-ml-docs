@@ -3,7 +3,7 @@
  <Source name="ML.Mat.SetDimension" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" target="setdimension.ecl.xml">
   <Definition body="138" end="247" exported="1" fullname="ml.mat.setdimension" inherit_type="local" line="4" name="SetDimension" source="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" start="56">
    <Type>function</Type>
-   <Signature>SetDimension(DATASET(Types.Element) A, Types.t_Index I, Types.t_Index J)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) A, Types.t_Index I, Types.t_Index J)" name="SETDIMENSION">SetDimension(DATASET(Types.Element) A, Types.t_Index I, Types.t_Index J)</Signature><Params>
     <Param name="A"/>
     <Param name="I"/>
     <Param name="J"/>

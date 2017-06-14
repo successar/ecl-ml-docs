@@ -5,49 +5,49 @@
    <Type>module</Type>
    <Definition body="339" end="1075" exported="1" fullname="ml.mat.vec.from" inherit_type="local" line="8" name="From" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="284">
     <Type>function</Type>
-    <Signature>From(Types.t_Index N,Types.t_value def = 1.0)</Signature><Params>
+    <Signature pre="" post="(Types.t_Index N,Types.t_value def = 1.0)" name="FROM">From(Types.t_Index N,Types.t_value def = 1.0)</Signature><Params>
      <Param name="N"/>
      <Param name="def"/>
     </Params>
    </Definition>
    <Definition body="1281" end="1377" exported="1" fullname="ml.mat.vec.todiag" inherit_type="local" line="32" name="ToDiag" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="1217">
     <Type>function</Type>
-    <Signature>ToDiag(DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) v, Types.t_index N=1)" name="TODIAG">ToDiag(DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
      <Param name="v"/>
      <Param name="N"/>
     </Params>
    </Definition>
    <Definition body="1525" end="1621" exported="1" fullname="ml.mat.vec.tolowerdiag" inherit_type="local" line="35" name="ToLowerDiag" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="1456">
     <Type>function</Type>
-    <Signature>ToLowerDiag(DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) v, Types.t_index N=1)" name="TOLOWERDIAG">ToLowerDiag(DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
      <Param name="v"/>
      <Param name="N"/>
     </Params>
    </Definition>
    <Definition body="1769" end="1865" exported="1" fullname="ml.mat.vec.toupperdiag" inherit_type="local" line="38" name="ToUpperDiag" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="1700">
     <Type>function</Type>
-    <Signature>ToUpperDiag(DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) v, Types.t_index N=1)" name="TOUPPERDIAG">ToUpperDiag(DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
      <Param name="v"/>
      <Param name="N"/>
     </Params>
    </Definition>
    <Definition body="1947" end="2024" exported="1" fullname="ml.mat.vec.tocol" inherit_type="local" line="41" name="ToCol" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="1887">
     <Type>function</Type>
-    <Signature>ToCol(DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) v,Types.t_index N)" name="TOCOL">ToCol(DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
      <Param name="v"/>
      <Param name="N"/>
     </Params>
    </Definition>
    <Definition body="2103" end="2180" exported="1" fullname="ml.mat.vec.torow" inherit_type="local" line="44" name="ToRow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="2043">
     <Type>function</Type>
-    <Signature>ToRow(DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) v,Types.t_index N)" name="TOROW">ToRow(DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
      <Param name="v"/>
      <Param name="N"/>
     </Params>
    </Definition>
    <Definition body="2345" end="2368" exported="1" fullname="ml.mat.vec.repdiag" inherit_type="local" line="48" name="RepDiag" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="2254">
     <Type>function</Type>
-    <Signature>RepDiag(DATASET(Types.Element) M, DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) M, DATASET(Types.VecElement) v, Types.t_index N=1)" name="REPDIAG">RepDiag(DATASET(Types.Element) M, DATASET(Types.VecElement) v, Types.t_index N=1)</Signature><Params>
      <Param name="M"/>
      <Param name="v"/>
      <Param name="N"/>
@@ -55,7 +55,7 @@
    </Definition>
    <Definition body="2456" end="2477" exported="1" fullname="ml.mat.vec.repcol" inherit_type="local" line="50" name="RepCol" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="2370">
     <Type>function</Type>
-    <Signature>RepCol(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)" name="REPCOL">RepCol(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
      <Param name="M"/>
      <Param name="v"/>
      <Param name="N"/>
@@ -63,7 +63,7 @@
    </Definition>
    <Definition body="2565" end="2586" exported="1" fullname="ml.mat.vec.reprow" inherit_type="local" line="52" name="RepRow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="2479">
     <Type>function</Type>
-    <Signature>RepRow(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)" name="REPROW">RepRow(DATASET(Types.Element) M,DATASET(Types.VecElement) v,Types.t_index N)</Signature><Params>
      <Param name="M"/>
      <Param name="v"/>
      <Param name="N"/>
@@ -71,45 +71,45 @@
    </Definition>
    <Definition body="2789" end="2891" exported="1" fullname="ml.mat.vec.fromdiag" inherit_type="local" line="56" name="FromDiag" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="2731">
     <Type>function</Type>
-    <Signature>FromDiag(DATASET(Types.Element) M, INTEGER4 K=0)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) M, INTEGER4 K=0)" name="FROMDIAG">FromDiag(DATASET(Types.Element) M, INTEGER4 K=0)</Signature><Params>
      <Param name="M"/>
      <Param name="K"/>
     </Params>
    </Definition>
    <Definition body="2952" end="3037" exported="1" fullname="ml.mat.vec.fromcol" inherit_type="local" line="58" name="FromCol" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="2893">
     <Type>function</Type>
-    <Signature>FromCol(DATASET(Types.Element) M,Types.t_index N)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) M,Types.t_index N)" name="FROMCOL">FromCol(DATASET(Types.Element) M,Types.t_index N)</Signature><Params>
      <Param name="M"/>
      <Param name="N"/>
     </Params>
    </Definition>
    <Definition body="3098" end="3183" exported="1" fullname="ml.mat.vec.fromrow" inherit_type="local" line="60" name="FromRow" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="3039">
     <Type>function</Type>
-    <Signature>FromRow(DATASET(Types.Element) M,Types.t_index N)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) M,Types.t_index N)" name="FROMROW">FromRow(DATASET(Types.Element) M,Types.t_index N)</Signature><Params>
      <Param name="M"/>
      <Param name="N"/>
     </Params>
    </Definition>
    <Definition body="3312" end="3476" exported="1" fullname="ml.mat.vec.dot" inherit_type="local" line="64" name="Dot" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="3242">
     <Type>function</Type>
-    <Signature>Dot(DATASET(Types.VecElement) X,DATASET(Types.VecElement) Y)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) X,DATASET(Types.VecElement) Y)" name="DOT">Dot(DATASET(Types.VecElement) X,DATASET(Types.VecElement) Y)</Signature><Params>
      <Param name="X"/>
      <Param name="Y"/>
     </Params>
    </Definition>
    <Definition body="3522" end="3538" exported="1" fullname="ml.mat.vec.norm" inherit_type="local" line="69" name="Norm" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="3479">
     <Type>function</Type>
-    <Signature>Norm(DATASET(Types.VecElement) X)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) X)" name="NORM">Norm(DATASET(Types.VecElement) X)</Signature><Params>
      <Param name="X"/>
     </Params>
    </Definition>
    <Definition body="3585" end="3610" exported="1" fullname="ml.mat.vec.length" inherit_type="local" line="71" name="Length" source="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" start="3540">
     <Type>function</Type>
-    <Signature>Length(DATASET(Types.VecElement) X)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.VecElement) X)" name="LENGTH">Length(DATASET(Types.VecElement) X)</Signature><Params>
      <Param name="X"/>
     </Params>
    </Definition>
-   <Signature>Vec</Signature><Parents/>
+   <Signature pre="" post="" name="VEC">Vec</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

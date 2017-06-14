@@ -3,7 +3,7 @@
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.UpperTriangle" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" target="uppertriangle.ecl.xml">
   <Definition body="130" end="144" exported="1" fullname="ml.mat.uppertriangle" inherit_type="local" line="3" name="UpperTriangle" source="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" start="76">
    <Type>function</Type>
-   <Signature>UpperTriangle(DATASET(Types.Element) matrix)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) matrix)" name="UPPERTRIANGLE">UpperTriangle(DATASET(Types.Element) matrix)</Signature><Params>
     <Param name="matrix"/>
    </Params>
   </Definition>

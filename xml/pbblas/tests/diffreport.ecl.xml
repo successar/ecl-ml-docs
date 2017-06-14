@@ -8,16 +8,16 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="84" end="103" fullname="pbblas.tests.dimension_t" inherit_type="local" line="4" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="70">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="118" end="133" fullname="pbblas.tests.value_t" inherit_type="local" line="5" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="104">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="148" end="167" fullname="pbblas.tests.layout_cell" inherit_type="local" line="6" name="Layout_Cell" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="134">
    <Type>record</Type>
    <Field name="x"/>
    <Field name="y"/>
-   <Signature>Layout_Cell</Signature><Field name="v"/>
+   <Signature pre="" post="" name="LAYOUT_CELL">Layout_Cell</Signature><Field name="v"/>
   </Definition>
   <Definition body="182" end="201" fullname="pbblas.tests.layout_part" inherit_type="local" line="7" name="Layout_Part" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="168">
    <Type>record</Type>
@@ -29,34 +29,34 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_PART">Layout_Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="212" end="223" fullname="pbblas.tests.epsilon" inherit_type="local" line="8" name="Epsilon" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="202">
-   <Signature>Epsilon</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="EPSILON">Epsilon</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="245" end="2445" exported="1" fullname="PBblas.Tests.DiffReport" inherit_type="local" line="10" name="DiffReport" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="225">
    <Type>module</Type>
    <Definition body="287" end="298" exported="1" fullname="pbblas.tests.diffreport.text_diff_missing" inherit_type="local" line="11" name="Text_Diff_Missing" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="255">
-    <Signature>Text_Diff_Missing</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TEXT_DIFF_MISSING">Text_Diff_Missing</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="333" end="342" exported="1" fullname="pbblas.tests.diffreport.text_diff_added" inherit_type="local" line="12" name="Text_Diff_Added" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="301">
-    <Signature>Text_Diff_Added</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TEXT_DIFF_ADDED">Text_Diff_Added</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="377" end="390" exported="1" fullname="pbblas.tests.diffreport.text_diff_different" inherit_type="local" line="13" name="Text_Diff_Different" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="345">
-    <Signature>Text_Diff_Different</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TEXT_DIFF_DIFFERENT">Text_Diff_Different</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="425" end="436" exported="1" fullname="pbblas.tests.diffreport.text_diff_unknown" inherit_type="local" line="14" name="Text_Diff_Unknown" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="393">
-    <Signature>Text_Diff_Unknown</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TEXT_DIFF_UNKNOWN">Text_Diff_Unknown</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="459" end="463" exported="1" fullname="pbblas.tests.diffreport.diffs_kept" inherit_type="local" line="15" name="Diffs_Kept" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="439">
-    <Signature>Diffs_Kept</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DIFFS_KEPT">Diffs_Kept</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="487" end="628" exported="1" fullname="pbblas.tests.diffreport.layout_diff" inherit_type="local" line="16" name="Layout_Diff" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="466">
     <Type>record</Type>
     <Field name="cell_row"/>
     <Field name="cell_col"/>
     <Field name="diff"/>
-    <Signature>Layout_Diff</Signature><Field name="msg"/>
+    <Signature pre="" post="" name="LAYOUT_DIFF">Layout_Diff</Signature><Field name="msg"/>
    </Definition>
    <Definition body="658" end="833" exported="1" fullname="pbblas.tests.diffreport.layout_testresult" inherit_type="local" line="22" name="Layout_TestResult" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="631">
     <Type>record</Type>
@@ -64,11 +64,11 @@
     <Field name="exact"/>
     <Field name="small"/>
     <Field name="TestName"/>
-    <Signature>Layout_TestResult</Signature><Field name="samples"/>
+    <Signature pre="" post="" name="LAYOUT_TESTRESULT">Layout_TestResult</Signature><Field name="samples"/>
    </Definition>
    <Definition body="1872" end="2135" exported="1" fullname="pbblas.tests.diffreport.compare_cells" inherit_type="local" line="48" name="Compare_Cells" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="1734">
     <Type>function</Type>
-    <Signature>Compare_Cells(STRING testName,
+    <Signature pre="" post="(STRING testName,&#10;                       DATASET(Layout_Cell) std,&#10;                       DATASET(Layout_Cell) tst)" name="COMPARE_CELLS">Compare_Cells(STRING testName,
                        DATASET(Layout_Cell) std,
                        DATASET(Layout_Cell) tst)</Signature><Params>
      <Param name="testName"/>
@@ -78,7 +78,7 @@
    </Definition>
    <Definition body="2276" end="2440" exported="1" fullname="pbblas.tests.diffreport.compare_parts" inherit_type="local" line="58" name="Compare_Parts" source="/media/sarthak/Data/ecl-ml/PBblas/Tests/DiffReport.ecl" start="2138">
     <Type>function</Type>
-    <Signature>Compare_Parts(STRING testName,
+    <Signature pre="" post="(STRING testName,&#10;                       DATASET(Layout_Part) std,&#10;                       DATASET(Layout_Part) tst)" name="COMPARE_PARTS">Compare_Parts(STRING testName,
                        DATASET(Layout_Part) std,
                        DATASET(Layout_Part) tst)</Signature><Params>
      <Param name="testName"/>
@@ -86,7 +86,7 @@
      <Param name="tst"/>
     </Params>
    </Definition>
-   <Signature>DiffReport</Signature><Parents/>
+   <Signature pre="" post="" name="DIFFREPORT">DiffReport</Signature><Parents/>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../ml/dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../ml/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../imatrix_map.ecl.xml"/></Meta>

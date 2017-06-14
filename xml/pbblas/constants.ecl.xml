@@ -4,57 +4,57 @@
   <Definition body="48" end="1080" exported="1" fullname="PBblas.Constants" inherit_type="local" line="2" name="Constants" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="29">
    <Type>module</Type>
    <Definition body="81" end="89" exported="1" fullname="pbblas.constants.block_minimum" inherit_type="local" line="3" name="Block_Minimum" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="58">
-    <Signature>Block_Minimum</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BLOCK_MINIMUM">Block_Minimum</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="145" end="153" exported="1" fullname="pbblas.constants.block_nosplit" inherit_type="local" line="4" name="Block_NoSplit" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="122">
-    <Signature>Block_NoSplit</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BLOCK_NOSPLIT">Block_NoSplit</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="213" end="223" exported="1" fullname="pbblas.constants.block_maximum" inherit_type="local" line="5" name="Block_Maximum" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="190">
-    <Signature>Block_Maximum</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BLOCK_MAXIMUM">Block_Maximum</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="277" end="284" exported="1" fullname="pbblas.constants.block_vec_rows" inherit_type="local" line="6" name="Block_Vec_Rows" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="254">
-    <Signature>Block_Vec_Rows</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BLOCK_VEC_ROWS">Block_Vec_Rows</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="397" end="404" fullname="pbblas.constants.error_base" inherit_type="local" line="9" name="Error_Base" shared="1" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="369">
-    <Signature>Error_Base</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="ERROR_BASE">Error_Base</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="435" end="473" exported="1" fullname="pbblas.constants.dimension_incompat" inherit_type="local" line="10" name="Dimension_Incompat" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="407">
-    <Signature>Dimension_Incompat</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DIMENSION_INCOMPAT">Dimension_Incompat</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="504" end="520" exported="1" fullname="pbblas.constants.dimension_incompatz" inherit_type="local" line="11" name="Dimension_IncompatZ" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="476">
-    <Signature>Dimension_IncompatZ</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DIMENSION_INCOMPATZ">Dimension_IncompatZ</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="551" end="587" exported="1" fullname="pbblas.constants.distribution_error" inherit_type="local" line="12" name="Distribution_Error" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="523">
-    <Signature>Distribution_Error</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DISTRIBUTION_ERROR">Distribution_Error</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="618" end="634" exported="1" fullname="pbblas.constants.distribution_errorz" inherit_type="local" line="13" name="Distribution_ErrorZ" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="590">
-    <Signature>Distribution_ErrorZ</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DISTRIBUTION_ERRORZ">Distribution_ErrorZ</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="665" end="689" exported="1" fullname="pbblas.constants.not_square" inherit_type="local" line="14" name="Not_Square" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="637">
-    <Signature>Not_Square</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_SQUARE">Not_Square</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="720" end="736" exported="1" fullname="pbblas.constants.not_squarez" inherit_type="local" line="15" name="Not_SquareZ" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="692">
-    <Signature>Not_SquareZ</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_SQUAREZ">Not_SquareZ</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="767" end="811" exported="1" fullname="pbblas.constants.not_positivedef" inherit_type="local" line="16" name="Not_PositiveDef" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="739">
-    <Signature>Not_PositiveDef</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_POSITIVEDEF">Not_PositiveDef</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="842" end="858" exported="1" fullname="pbblas.constants.not_positivedefz" inherit_type="local" line="17" name="Not_PositiveDefZ" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="814">
-    <Signature>Not_PositiveDefZ</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_POSITIVEDEFZ">Not_PositiveDefZ</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="889" end="921" exported="1" fullname="pbblas.constants.not_single_block" inherit_type="local" line="18" name="Not_Single_Block" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="861">
-    <Signature>Not_Single_Block</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_SINGLE_BLOCK">Not_Single_Block</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="952" end="968" exported="1" fullname="pbblas.constants.not_single_blockz" inherit_type="local" line="19" name="Not_Single_BlockZ" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="924">
-    <Signature>Not_Single_BlockZ</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_SINGLE_BLOCKZ">Not_Single_BlockZ</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="999" end="1028" exported="1" fullname="pbblas.constants.not_block_vector" inherit_type="local" line="20" name="Not_Block_Vector" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="971">
-    <Signature>Not_Block_Vector</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_BLOCK_VECTOR">Not_Block_Vector</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1059" end="1075" exported="1" fullname="pbblas.constants.not_block_vectorz" inherit_type="local" line="21" name="Not_Block_VectorZ" source="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" start="1031">
-    <Signature>Not_Block_VectorZ</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="NOT_BLOCK_VECTORZ">Not_Block_VectorZ</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Constants</Signature><Parents/>
+   <Signature pre="" post="" name="CONSTANTS">Constants</Signature><Parents/>
   </Definition>
  </Source>
 </Meta>

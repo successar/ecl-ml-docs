@@ -17,19 +17,19 @@
    <Type>record</Type>
    <Field name="cv"/>
    <Field name="lag"/>
-   <Signature>Co_eff</Signature><Documentation> <content>Generate time series data for demonstration of TS attributes. Generates four series of values. A lag period is inferred by the number of start values. The series generated are: flat (a random walk); a slope constructed by adding the additive increment product of the prior value and the multiplicative increment; and the cummulative values of the slope value.</content>
+   <Signature pre="" post="" name="CO_EFF">Co_eff</Signature><Documentation> <content>Generate time series data for demonstration of TS attributes. Generates four series of values. A lag period is inferred by the number of start values. The series generated are: flat (a random walk); a slope constructed by adding the additive increment product of the prior value and the multiplicative increment; and the cummulative values of the slope value.</content>
     <return>the generated time series.</return>
-    <param>test records</param>
-    <param>start values, seasonality or cyclic behavior is entered with this parameter</param>
-    <param>noise mean, the mean value of normally distributed noise which will be added</param>
-    <param>noise variance, the variance of the normally distributed noise</param>
-    <param>multiply value, the multiplicative increment</param>
-    <param>additive value, the additive increment</param>
+    <param><name>test</name><desc>records</desc></param>
+    <param><name>start</name><desc>values, seasonality or cyclic behavior is entered with this parameter</desc></param>
+    <param><name>noise</name><desc>mean, the mean value of normally distributed noise which will be added</desc></param>
+    <param><name>noise</name><desc>variance, the variance of the normally distributed noise</desc></param>
+    <param><name>multiply</name><desc>value, the multiplicative increment</desc></param>
+    <param><name>additive</name><desc>value, the additive increment</desc></param>
    </Documentation>
   </Definition>
   <Definition body="1149" end="5739" exported="1" fullname="ts.demo.series_data" inherit_type="local" line="21" name="Series_Data" source="/media/sarthak/Data/ecl-ml/TS/Demo/Series_Data.ecl" start="893">
    <Type>function</Type>
-   <Signature>Series_Data(DATASET(Co_eff) initial_vals,
+   <Signature pre="" post="(DATASET(Co_eff) initial_vals,&#10;                   REAL8 mult_val=1.0,&#10;                   REAL8 add_val=0.0,&#10;                   UNSIGNED2 test_records=100,&#10;                   REAL8 noise_mean=0.0,&#10;                   REAL8 noise_var=1.0)" name="SERIES_DATA">Series_Data(DATASET(Co_eff) initial_vals,
                    REAL8 mult_val=1.0,
                    REAL8 add_val=0.0,
                    UNSIGNED2 test_records=100,

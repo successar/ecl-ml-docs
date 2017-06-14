@@ -13,10 +13,10 @@
    <Field name="a2"/>
    <Field name="a3"/>
    <Field name="a4"/>
-   <Signature>dsRecord</Signature><Field name="class"/>
+   <Signature pre="" post="" name="DSRECORD">dsRecord</Signature><Field name="class"/>
   </Definition>
   <Definition body="211" end="3383" exported="1" fullname="ml.tests.explanatory.irisds" inherit_type="local" line="11" name="irisDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/IrisDS.ecl" start="195">
-   <Signature>irisDS</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="IRISDS">irisDS</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/></Meta>

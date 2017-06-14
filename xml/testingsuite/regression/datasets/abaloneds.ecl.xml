@@ -14,15 +14,15 @@
     <Field name="Shucked_W"/>
     <Field name="Viscera_W"/>
     <Field name="Shell_W"/>
-    <Signature>AbaloneRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="ABALONERECORD">AbaloneRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="460" end="743" exported="1" fullname="testingsuite.regression.datasets.abaloneds.betas" inherit_type="local" line="15" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/AbaloneDS.ecl" start="445">
-    <Signature>betas</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BETAS">betas</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="765" end="279281" exported="1" fullname="testingsuite.regression.datasets.abaloneds.content" inherit_type="local" line="25" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/AbaloneDS.ecl" start="748">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>AbaloneDS</Signature><Parents/>
+   <Signature pre="" post="" name="ABALONEDS">AbaloneDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

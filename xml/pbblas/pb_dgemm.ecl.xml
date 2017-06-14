@@ -23,7 +23,7 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_PART">Layout_Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="253" end="274" fullname="pbblas.layout_target" inherit_type="local" line="8" name="Layout_Target" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="237">
    <Type>record</Type>
@@ -40,20 +40,20 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Target</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_TARGET">Layout_Target</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="285" end="300" fullname="pbblas.value_t" inherit_type="local" line="9" name="value_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="275">
-   <Signature>value_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="VALUE_T">value_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="310" end="336" fullname="pbblas.emptyc" inherit_type="local" line="10" name="emptyC" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="301">
-   <Signature>emptyC</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="EMPTYC">emptyC</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="366" end="370" fullname="pbblas.empty_array" inherit_type="local" line="11" name="empty_array" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="337">
-   <Signature>SET OF value_t empty_array</Signature><Type>attribute</Type>
+   <Signature pre="SET OF value_t" post="" name="EMPTY_ARRAY">SET OF value_t empty_array</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="669" end="6252" exported="1" fullname="pbblas.pb_dgemm" inherit_type="local" line="13" name="PB_dgemm" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" start="372">
    <Type>function</Type>
-   <Signature>PB_dgemm(BOOLEAN transposeA, BOOLEAN transposeB, value_t alpha,
+   <Signature pre="" post="(BOOLEAN transposeA, BOOLEAN transposeB, value_t alpha,&#10;                IMatrix_Map map_a, DATASET(Layout_Part) A_in,&#10;                IMatrix_Map map_b, DATASET(Layout_Part) B_in,&#10;                IMatrix_Map map_c, DATASET(Layout_Part) C=emptyC,&#10;                value_t beta=0.0)" name="PB_DGEMM">PB_dgemm(BOOLEAN transposeA, BOOLEAN transposeB, value_t alpha,
                 IMatrix_Map map_a, DATASET(Layout_Part) A_in,
                 IMatrix_Map map_b, DATASET(Layout_Part) B_in,
                 IMatrix_Map map_c, DATASET(Layout_Part) C=emptyC,

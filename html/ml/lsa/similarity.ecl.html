@@ -1,90 +1,210 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.LSA.Similarity</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../mat/types.ecl.html">
-				ml.mat.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../mat/pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Similarity
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : CosineSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)
-			<ul>
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DotProductSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)
-			<ul>
+				<li>
+					<a href="lsa.ecl.html">lsa.ecl</a>
+				</li>
+				
+				<li>
+					<a href="densesvd/pkg.toc.html">densesvd</a>
+				</li>
+				
+				<li>
+					<a href="similarity.ecl.html">similarity.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randomisedsvd.ecl.html">randomisedsvd.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Similarity
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : CosineSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DotProductSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.LSA.Similarity</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../mat/types.ecl.html">
+								ml.mat.types
+							</a>
+							</li>
+						<li>
+							<a href="../mat/pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-LSA-Similarity">
+							<a href="#ML-LSA-Similarity" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SIMILARITY</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-LSA-Similarity">Desc</a>
+							<ul id="ML-LSA-Similarity" class="accordian-body collapse">
+								<li id="t-ml-lsa-similarity-cosinesim">
+							<a href="#ml-lsa-similarity-cosinesim" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COSINESIM</span>
+								<span class="sign-post">(DATASET(Types.Element) D, DATASET(Types.Element) Q)</span>
+							</a> -
+							<a href="#dml-lsa-similarity-cosinesim">Desc</a>
+							<ul id="ml-lsa-similarity-cosinesim" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-lsa-similarity-dotproductsim">
+							<a href="#ml-lsa-similarity-dotproductsim" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DOTPRODUCTSIM</span>
+								<span class="sign-post">(DATASET(Types.Element) D, DATASET(Types.Element) Q)</span>
+							</a> -
+							<a href="#dml-lsa-similarity-dotproductsim">Desc</a>
+							<ul id="ml-lsa-similarity-dotproductsim" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-LSA-Similarity">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SIMILARITY</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-LSA-Similarity" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-lsa-similarity-cosinesim">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COSINESIM</span>
+									<span class="sign-post">(DATASET(Types.Element) D, DATASET(Types.Element) Q)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lsa-similarity-cosinesim" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-lsa-similarity-dotproductsim">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DOTPRODUCTSIM</span>
+									<span class="sign-post">(DATASET(Types.Element) D, DATASET(Types.Element) Q)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-lsa-similarity-dotproductsim" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -9,10 +9,10 @@
    </Params>
    <Parents/>
    <Definition body="1980" end="2015" exported="1" fullname="ml.mat.pca.ureduce" inherit_type="local" line="39" name="Ureduce" source="/media/sarthak/Data/ecl-ml/ML/Mat/Pca.ecl" start="1963">
-    <Signature>Ureduce</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="UREDUCE">Ureduce</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Pca(DATASET(Types.Element) A, UNSIGNED comp_cnt=0)</Signature><Definition body="2189" end="2248" exported="1" fullname="ml.mat.pca.zcomp" inherit_type="local" line="42" name="ZComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Pca.ecl" start="2174">
-    <Signature>ZComp</Signature><Type>attribute</Type>
+   <Signature pre="" post="(DATASET(Types.Element) A, UNSIGNED comp_cnt=0)" name="PCA">Pca(DATASET(Types.Element) A, UNSIGNED comp_cnt=0)</Signature><Definition body="2189" end="2248" exported="1" fullname="ml.mat.pca.zcomp" inherit_type="local" line="42" name="ZComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Pca.ecl" start="2174">
+    <Signature pre="" post="" name="ZCOMP">ZComp</Signature><Type>attribute</Type>
    </Definition>
   </Definition>
   <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_MAT" ref="ml.mat" start="7" target="pkg.toc.xml">

@@ -1,170 +1,387 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.LagCorrelations</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ts.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../pbblas/pkg.toc.html">
-				pbblas
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : LagRec
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extendedparameters.ecl.html">extendedparameters.ecl</a>
+				</li>
+				
+				<li>
+					<a href="forecast.ecl.html">forecast.ecl</a>
+				</li>
+				
+				<li>
+					<a href="diagnosis.ecl.html">diagnosis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extract_ts.ecl.html">extract_ts.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimatedobs.ecl.html">estimatedobs.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lagcorrelations.ecl.html">lagcorrelations.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimation.ecl.html">estimation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="differenceseries.ecl.html">differenceseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="demo/pkg.toc.html">demo</a>
+				</li>
+				
+				<li>
+					<a href="accumseries.ecl.html">accumseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="seriesbymodel.ecl.html">seriesbymodel.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identification.ecl.html">identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="season_adj.ecl.html">season_adj.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : ACF_Rec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Cell
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ObsRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : PACF_ACF
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : DecObs
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(PACF_ACF) LagCorrelations(DATASET(DecObs) post_diff)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : LagRec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ACF_Rec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Cell
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ObsRec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : PACF_ACF
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : DecObs
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(PACF_ACF) LagCorrelations(DATASET(DecObs) post_diff)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.LagCorrelations</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ts
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ts.types
+							</a>
+							</li>
+						<li>
+							<a href="../pbblas/pkg.toc.html">
+								pbblas
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ts-lagrec">
+							<a href="#ts-lagrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAGREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-lagrec">Desc</a>
+							<ul id="ts-lagrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-acf_rec">
+							<a href="#ts-acf_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACF_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-acf_rec">Desc</a>
+							<ul id="ts-acf_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-cell">
+							<a href="#ts-cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-cell">Desc</a>
+							<ul id="ts-cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-obsrec">
+							<a href="#ts-obsrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OBSREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-obsrec">Desc</a>
+							<ul id="ts-obsrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-pacf_acf">
+							<a href="#ts-pacf_acf" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PACF_ACF</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-pacf_acf">Desc</a>
+							<ul id="ts-pacf_acf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-decobs">
+							<a href="#ts-decobs" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DECOBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-decobs">Desc</a>
+							<ul id="ts-decobs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-lagcorrelations">
+							<a href="#ts-lagcorrelations" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(PACF_ACF)</span>
+								<span class="sign-name">LAGCORRELATIONS</span>
+								<span class="sign-post">(DATASET(DecObs) post_diff)</span>
+							</a> -
+							<a href="#dts-lagcorrelations">Desc</a>
+							<ul id="ts-lagcorrelations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dts-lagrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAGREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-lagrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-acf_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACF_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-acf_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-obsrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OBSREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-obsrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-pacf_acf">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PACF_ACF</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-pacf_acf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-decobs">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DECOBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-decobs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-lagcorrelations">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(PACF_ACF)</span>
+									<span class="sign-name">LAGCORRELATIONS</span>
+									<span class="sign-post">(DATASET(DecObs) post_diff)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-lagcorrelations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

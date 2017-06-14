@@ -1,180 +1,388 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Tests.Validation.Concord</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../../pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../mat/pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : realdata
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="eig.ecl.html">eig.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mahout_k-means_synthetic_control.ecl.html">mahout_k-means_synthetic_control.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lda_cmpr2blei.ecl.html">lda_cmpr2blei.ecl</a>
+				</li>
+				
+				<li>
+					<a href="validate_gammas.ecl.html">validate_gammas.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lanczos.ecl.html">lanczos.ecl</a>
+				</li>
+				
+				<li>
+					<a href="concord.ecl.html">concord.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pca.ecl.html">pca.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.Element cvt(realdata v, UNSIGNED c, INTEGER xx)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : MaxAbsDff(DATASET(Mat.Types.Element) zz1, DATASET(Mat.Types.Element) zz2)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Y
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : omegahatreal
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : omegahat
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Ydata
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : eclestimate1
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : realdata
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.Element cvt(realdata v, UNSIGNED c, INTEGER xx)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : MaxAbsDff(DATASET(Mat.Types.Element) zz1, DATASET(Mat.Types.Element) zz2)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Y
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : omegahatreal
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : omegahat
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Ydata
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : eclestimate1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Tests.Validation.Concord</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../../pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="../../mat/pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-tests-validation-realdata">
+							<a href="#ml-tests-validation-realdata" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REALDATA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-realdata">Desc</a>
+							<ul id="ml-tests-validation-realdata" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-cvt">
+							<a href="#ml-tests-validation-cvt" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.Element</span>
+								<span class="sign-name">CVT</span>
+								<span class="sign-post">(realdata v, UNSIGNED c, INTEGER xx)</span>
+							</a> -
+							<a href="#dml-tests-validation-cvt">Desc</a>
+							<ul id="ml-tests-validation-cvt" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-maxabsdff">
+							<a href="#ml-tests-validation-maxabsdff" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MAXABSDFF</span>
+								<span class="sign-post">(DATASET(Mat.Types.Element) zz1, DATASET(Mat.Types.Element) zz2)</span>
+							</a> -
+							<a href="#dml-tests-validation-maxabsdff">Desc</a>
+							<ul id="ml-tests-validation-maxabsdff" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-y">
+							<a href="#ml-tests-validation-y" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">Y</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-y">Desc</a>
+							<ul id="ml-tests-validation-y" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-omegahatreal">
+							<a href="#ml-tests-validation-omegahatreal" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OMEGAHATREAL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-omegahatreal">Desc</a>
+							<ul id="ml-tests-validation-omegahatreal" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-omegahat">
+							<a href="#ml-tests-validation-omegahat" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OMEGAHAT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-omegahat">Desc</a>
+							<ul id="ml-tests-validation-omegahat" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-ydata">
+							<a href="#ml-tests-validation-ydata" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">YDATA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-ydata">Desc</a>
+							<ul id="ml-tests-validation-ydata" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-tests-validation-eclestimate1">
+							<a href="#ml-tests-validation-eclestimate1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ECLESTIMATE1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-tests-validation-eclestimate1">Desc</a>
+							<ul id="ml-tests-validation-eclestimate1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-tests-validation-realdata">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REALDATA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-realdata" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-cvt">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.Element</span>
+									<span class="sign-name">CVT</span>
+									<span class="sign-post">(realdata v, UNSIGNED c, INTEGER xx)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-cvt" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-maxabsdff">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MAXABSDFF</span>
+									<span class="sign-post">(DATASET(Mat.Types.Element) zz1, DATASET(Mat.Types.Element) zz2)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-maxabsdff" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-y">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">Y</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-y" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-omegahatreal">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OMEGAHATREAL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-omegahatreal" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-omegahat">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OMEGAHAT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-omegahat" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-ydata">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">YDATA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-ydata" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-tests-validation-eclestimate1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ECLESTIMATE1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-tests-validation-eclestimate1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -5,13 +5,13 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="404" end="1380" fullname="vl.drelatives" inherit_type="local" line="9" name="dRelatives" source="/media/sarthak/Data/ecl-ml/VL/D3_Samples.ecl" start="392">
-   <Signature>dRelatives</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DRELATIVES">dRelatives</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1391" end="1477" fullname="vl.dlabels" inherit_type="local" line="41" name="dLabels" source="/media/sarthak/Data/ecl-ml/VL/D3_Samples.ecl" start="1382">
-   <Signature>dLabels</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DLABELS">dLabels</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1494" end="1605" fullname="vl.drelationships" inherit_type="local" line="42" name="dRelationships" source="/media/sarthak/Data/ecl-ml/VL/D3_Samples.ecl" start="1478">
-   <Signature>dRelationships</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DRELATIONSHIPS">dRelationships</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Types.ecl" name="VL.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/Styles.ecl" name="VL.Styles" target="styles.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/VL/D3.ecl" name="VL.D3" target="d3.ecl.xml"/></Meta>

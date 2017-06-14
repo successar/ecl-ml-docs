@@ -42,12 +42,12 @@
     <Field name="A34"/>
     <Field name="A35"/>
     <Field name="A36"/>
-    <Signature>discrete_satimagesRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="DISCRETE_SATIMAGESRECORD">discrete_satimagesRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="1379" end="872280" exported="1" fullname="testingsuite.classification.datasets.discrete_satimagesds.content" inherit_type="local" line="43" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/discrete_satimagesDS.ecl" start="1362">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>discrete_satimagesDS</Signature><Parents/>
+   <Signature pre="" post="" name="DISCRETE_SATIMAGESDS">discrete_satimagesDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

@@ -14,27 +14,27 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="111" end="156" fullname="ts.demo.starts" inherit_type="local" line="7" name="starts" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="102">
-   <Signature>starts</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="STARTS">starts</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="189" end="243" fullname="ts.demo.d0" inherit_type="local" line="9" name="d0" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="184">
-   <Signature>d0</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D0">d0</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="294" end="351" fullname="ts.demo.d1" inherit_type="local" line="11" name="d1" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="289">
-   <Signature>d1</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D1">d1</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="367" end="420" fullname="ts.demo.ident_specs" inherit_type="local" line="13" name="ident_specs" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="353">
-   <Signature>ident_specs</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="IDENT_SPECS">ident_specs</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="473" end="503" fullname="ts.demo.slope0" inherit_type="local" line="15" name="slope0" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="464">
-   <Signature>slope0</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SLOPE0">slope0</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="549" end="589" fullname="TS.Identification" inherit_type="local" line="18" name="id_slope" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="538" target="../identification.ecl.xml">
    <Type>module</Type>
    <Definition body="330" end="362" fullname="ts.identification.model_obs" inherit_type="local" line="10" name="model_obs" shared="1" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="311" target="../identification.ecl.xml">
-    <Signature>model_obs</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MODEL_OBS">model_obs</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="390" end="428" fullname="ts.identification.post_difference" inherit_type="local" line="11" name="post_difference" shared="1" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="365" target="../identification.ecl.xml">
-    <Signature>post_difference</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="POST_DIFFERENCE">post_difference</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="447" end="606" fullname="ts.identification.lagrec" inherit_type="local" line="12" name="LagRec" shared="1" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="431" target="../identification.ecl.xml">
     <Type>record</Type>
@@ -43,7 +43,7 @@
     <Field name="lag_per"/>
     <Field name="v"/>
     <Field name="k"/>
-    <Signature>LagRec</Signature><Field name="N"/>
+    <Signature pre="" post="" name="LAGREC">LagRec</Signature><Field name="N"/>
    </Definition>
    <Definition body="626" end="855" fullname="ts.identification.acf_rec" inherit_type="local" line="20" name="ACF_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="609" target="../identification.ecl.xml">
     <Type>record</Type>
@@ -53,49 +53,49 @@
     <Field name="ac"/>
     <Field name="sq"/>
     <Field name="sum_sq"/>
-    <Signature>ACF_Rec</Signature><Field name="N"/>
+    <Signature pre="" post="" name="ACF_REC">ACF_Rec</Signature><Field name="N"/>
    </Definition>
    <Definition body="872" end="943" fullname="ts.identification.cell" inherit_type="local" line="29" name="Cell" shared="1" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="858" target="../identification.ecl.xml">
     <Type>record</Type>
     <Field name="x"/>
     <Field name="y"/>
     <Field name="v"/>
-    <Signature>Cell</Signature><Field name="model_id"/>
+    <Signature pre="" post="" name="CELL">Cell</Signature><Field name="model_id"/>
    </Definition>
    <Definition body="1083" end="6431" exported="1" fullname="ts.identification.correlations" inherit_type="local" line="33" name="Correlations" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="1021" target="../identification.ecl.xml">
     <Type>function</Type>
-    <Signature>DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)</Signature><Params>
+    <Signature pre="DATASET(Types.PACF_ACF)" post="(UNSIGNED2 lags)" name="CORRELATIONS">DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)</Signature><Params>
      <Param name="lags"/>
     </Params>
    </Definition>
    <Definition body="6486" end="6760" exported="1" fullname="ts.identification.acf" inherit_type="local" line="165" name="ACF" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="6434" target="../identification.ecl.xml">
     <Type>function</Type>
-    <Signature>DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)</Signature><Params>
+    <Signature pre="DATASET(Types.CorrRec)" post="(UNSIGNED2 lags)" name="ACF">DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)</Signature><Params>
      <Param name="lags"/>
     </Params>
    </Definition>
    <Definition body="6816" end="7094" exported="1" fullname="ts.identification.pacf" inherit_type="local" line="174" name="PACF" source="/media/sarthak/Data/ecl-ml/./TS/Identification.ecl" start="6763" target="../identification.ecl.xml">
     <Type>function</Type>
-    <Signature>DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)</Signature><Params>
+    <Signature pre="DATASET(Types.CorrRec)" post="(UNSIGNED2 lags)" name="PACF">DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)</Signature><Params>
      <Param name="lags"/>
     </Params>
    </Definition>
-   <Signature>id_slope</Signature><Parents/>
+   <Signature pre="" post="" name="ID_SLOPE">id_slope</Signature><Parents/>
   </Definition>
   <Definition body="764" end="904" fullname="ts.demo.model_specs" inherit_type="local" line="23" name="model_specs" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="750">
-   <Signature>model_specs</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MODEL_SPECS">model_specs</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="919" end="960" fullname="ts.demo.model_parms" inherit_type="local" line="26" name="model_parms" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="905">
-   <Signature>model_parms</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="MODEL_PARMS">model_parms</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1009" end="1044" fullname="ts.demo.x0" inherit_type="local" line="29" name="x0" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="1004">
-   <Signature>x0</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="X0">x0</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1087" end="1126" fullname="ts.demo.slope_mod" inherit_type="local" line="32" name="slope_mod" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="1075">
-   <Signature>slope_mod</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SLOPE_MOD">slope_mod</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1139" end="1180" fullname="ts.demo.estimates" inherit_type="local" line="33" name="estimates" source="/media/sarthak/Data/ecl-ml/TS/Demo/BWR_Demo_Estimate.ecl" start="1127">
-   <Signature>estimates</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="ESTIMATES">estimates</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Types.ecl" name="TS.Types" target="../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Demo/Series_Data.ecl" name="TS.Demo.Series_Data" target="series_data.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../ml/distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../ml/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../ml/mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../ml/mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../ml/mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../ml/mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../ml/utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../ml/mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/extract_ts.ecl" name="TS.extract_ts" target="../extract_ts.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" name="TS.Identification" target="../identification.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/SeriesByModel.ecl" name="TS.SeriesByModel" target="../seriesbymodel.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/DifferenceSeries.ecl" name="TS.DifferenceSeries" target="../differenceseries.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Estimation.ecl" name="TS.Estimation" target="../estimation.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/LagCorrelations.ecl" name="TS.LagCorrelations" target="../lagcorrelations.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dasum.ecl" name="PBblas.BLAS.dasum" target="../../pbblas/blas/dasum.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_vector.ecl" name="PBblas.Block.make_vector" target="../../pbblas/block/make_vector.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/make_diag.ecl" name="PBblas.Block.make_Diag" target="../../pbblas/block/make_diag.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/Apply2Cells.ecl" name="PBblas.Block.Apply2Cells" target="../../pbblas/block/apply2cells.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/ICellFunc.ecl" name="PBblas.Block.ICellFunc" target="../../pbblas/block/icellfunc.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/Diagnosis.ecl" name="TS.Diagnosis" target="../diagnosis.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/ExtendedParameters.ecl" name="TS.ExtendedParameters" target="../extendedparameters.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/TS/EstimatedObs.ecl" name="TS.EstimatedObs" target="../estimatedobs.ecl.xml"/></Meta>

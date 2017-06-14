@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Utils.GetNumberofFields" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GetNumberofFields.ecl" target="getnumberoffields.ecl.xml">
   <Definition body="41" end="423" exported="1" fullname="testingsuite.utils.getnumberoffields" inherit_type="local" line="1" name="GetNumberofFields" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GetNumberofFields.ecl" start="0">
    <Type>macro</Type>
-   <Signature>GetNumberofFields(Resdata,numF)</Signature><Params>
+   <Signature pre="" post="(Resdata,numF)" name="GETNUMBEROFFIELDS">GetNumberofFields(Resdata,numF)</Signature><Params>
     <Param name="Resdata"/>
     <Param name="numF"/>
    </Params>

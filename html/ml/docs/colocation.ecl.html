@@ -1,342 +1,690 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Docs.CoLocation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.docs
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
-				std.str
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : CoLocation
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : Words(DATASET(Docs.Types.Raw) d)
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Lexicon(DATASET(Docs.Types.WordElement) Words)
-			<ul>
+				<li>
+					<a href="porterstemc.ecl.html">porterstemc.ecl</a>
+				</li>
+				
+				<li>
+					<a href="colocation.ecl.html">colocation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="porterstem.ecl.html">porterstem.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tokenize.ecl.html">tokenize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : AllNGramsLayout
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : AllNGramsLayout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : MutualInfo(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Docs.Types.t_value Support(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Docs.Types.t_value Confidence(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Docs.Types.t_value Lift(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Docs.Types.t_value Conviction(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : NGramsLayout
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NGramsLayout NGrams(DATASET(AllNGramsLayout) d01)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SubGrams(DATASET(NGramsLayout) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SubGramsLayout
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : PMI(DATASET(SubGramsLayout) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitCompare(DATASET(NGramsLayout) d)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : STRING ShowPhrase(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : CoLocation
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : Words(DATASET(Docs.Types.Raw) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Lexicon(DATASET(Docs.Types.WordElement) Words)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : AllNGramsLayout
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : AllNGramsLayout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : MutualInfo(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Docs.Types.t_value Support(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Docs.Types.t_value Confidence(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Docs.Types.t_value Lift(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Docs.Types.t_value Conviction(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : NGramsLayout
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NGramsLayout NGrams(DATASET(AllNGramsLayout) d01)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SubGrams(DATASET(NGramsLayout) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SubGramsLayout
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : PMI(DATASET(SubGramsLayout) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitCompare(DATASET(NGramsLayout) d)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : STRING ShowPhrase(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Docs.CoLocation</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml.docs
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+								std.str
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Docs-CoLocation">
+							<a href="#ML-Docs-CoLocation" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">COLOCATION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Docs-CoLocation">Desc</a>
+							<ul id="ML-Docs-CoLocation" class="accordian-body collapse">
+								<li id="t-ml-docs-colocation-words">
+							<a href="#ml-docs-colocation-words" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">WORDS</span>
+								<span class="sign-post">(DATASET(Docs.Types.Raw) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-words">Desc</a>
+							<ul id="ml-docs-colocation-words" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-lexicon">
+							<a href="#ml-docs-colocation-lexicon" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LEXICON</span>
+								<span class="sign-post">(DATASET(Docs.Types.WordElement) Words)</span>
+							</a> -
+							<a href="#dml-docs-colocation-lexicon">Desc</a>
+							<ul id="ml-docs-colocation-lexicon" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-allngramslayout">
+							<a href="#ml-docs-colocation-allngramslayout" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ALLNGRAMSLAYOUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-docs-colocation-allngramslayout">Desc</a>
+							<ul id="ml-docs-colocation-allngramslayout" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-allngrams">
+							<a href="#ml-docs-colocation-allngrams" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ALLNGRAMS</span>
+								<span class="sign-post">Layout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)</span>
+							</a> -
+							<a href="#dml-docs-colocation-allngrams">Desc</a>
+							<ul id="ml-docs-colocation-allngrams" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-mutualinfo">
+							<a href="#ml-docs-colocation-mutualinfo" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MUTUALINFO</span>
+								<span class="sign-post">(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)</span>
+							</a> -
+							<a href="#dml-docs-colocation-mutualinfo">Desc</a>
+							<ul id="ml-docs-colocation-mutualinfo" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-support">
+							<a href="#ml-docs-colocation-support" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Docs.Types.t_value</span>
+								<span class="sign-name">SUPPORT</span>
+								<span class="sign-post">(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-support">Desc</a>
+							<ul id="ml-docs-colocation-support" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-confidence">
+							<a href="#ml-docs-colocation-confidence" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Docs.Types.t_value</span>
+								<span class="sign-name">CONFIDENCE</span>
+								<span class="sign-post">(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-confidence">Desc</a>
+							<ul id="ml-docs-colocation-confidence" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-lift">
+							<a href="#ml-docs-colocation-lift" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Docs.Types.t_value</span>
+								<span class="sign-name">LIFT</span>
+								<span class="sign-post">(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-lift">Desc</a>
+							<ul id="ml-docs-colocation-lift" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-conviction">
+							<a href="#ml-docs-colocation-conviction" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">Docs.Types.t_value</span>
+								<span class="sign-name">CONVICTION</span>
+								<span class="sign-post">(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-conviction">Desc</a>
+							<ul id="ml-docs-colocation-conviction" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-ngramslayout">
+							<a href="#ml-docs-colocation-ngramslayout" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NGRAMSLAYOUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-docs-colocation-ngramslayout">Desc</a>
+							<ul id="ml-docs-colocation-ngramslayout" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-ngrams">
+							<a href="#ml-docs-colocation-ngrams" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NGRAMS</span>
+								<span class="sign-post">Layout NGrams(DATASET(AllNGramsLayout) d01)</span>
+							</a> -
+							<a href="#dml-docs-colocation-ngrams">Desc</a>
+							<ul id="ml-docs-colocation-ngrams" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-subgrams">
+							<a href="#ml-docs-colocation-subgrams" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SUBGRAMS</span>
+								<span class="sign-post">(DATASET(NGramsLayout) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-subgrams">Desc</a>
+							<ul id="ml-docs-colocation-subgrams" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-subgramslayout">
+							<a href="#ml-docs-colocation-subgramslayout" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SUBGRAMSLAYOUT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-docs-colocation-subgramslayout">Desc</a>
+							<ul id="ml-docs-colocation-subgramslayout" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-pmi">
+							<a href="#ml-docs-colocation-pmi" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PMI</span>
+								<span class="sign-post">(DATASET(SubGramsLayout) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-pmi">Desc</a>
+							<ul id="ml-docs-colocation-pmi" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-splitcompare">
+							<a href="#ml-docs-colocation-splitcompare" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITCOMPARE</span>
+								<span class="sign-post">(DATASET(NGramsLayout) d)</span>
+							</a> -
+							<a href="#dml-docs-colocation-splitcompare">Desc</a>
+							<ul id="ml-docs-colocation-splitcompare" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-docs-colocation-showphrase">
+							<a href="#ml-docs-colocation-showphrase" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">STRING</span>
+								<span class="sign-name">SHOWPHRASE</span>
+								<span class="sign-post">(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)</span>
+							</a> -
+							<a href="#dml-docs-colocation-showphrase">Desc</a>
+							<ul id="ml-docs-colocation-showphrase" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Docs-CoLocation">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">COLOCATION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Docs-CoLocation" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-docs-colocation-words">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">WORDS</span>
+									<span class="sign-post">(DATASET(Docs.Types.Raw) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-words" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-lexicon">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LEXICON</span>
+									<span class="sign-post">(DATASET(Docs.Types.WordElement) Words)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-lexicon" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-allngramslayout">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ALLNGRAMSLAYOUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-allngramslayout" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-allngrams">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ALLNGRAMS</span>
+									<span class="sign-post">Layout AllNGrams(DATASET(Docs.Types.WordElement) Words,DATASET(Docs.Types.LexiconElement) Lexicon=DATASET([],Docs.Types.LexiconElement),UNSIGNED n=3)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-allngrams" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-mutualinfo">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MUTUALINFO</span>
+									<span class="sign-post">(DATASET(Docs.Types.Raw) dIn, DATASET(Docs.Types.Raw) dOut,UNSIGNED minf=1, UNSIGNED units=2)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-mutualinfo" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-support">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Docs.Types.t_value</span>
+									<span class="sign-name">SUPPORT</span>
+									<span class="sign-post">(SET OF STRING ssNGrams,DATASET(AllNGramsLayout) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-support" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-confidence">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Docs.Types.t_value</span>
+									<span class="sign-name">CONFIDENCE</span>
+									<span class="sign-post">(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-confidence" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-lift">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Docs.Types.t_value</span>
+									<span class="sign-name">LIFT</span>
+									<span class="sign-post">(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-lift" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-conviction">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Docs.Types.t_value</span>
+									<span class="sign-name">CONVICTION</span>
+									<span class="sign-post">(SET OF STRING ss01,SET OF STRING ss02,DATASET(AllNGramsLayout) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-conviction" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-ngramslayout">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NGRAMSLAYOUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-ngramslayout" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-ngrams">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NGRAMS</span>
+									<span class="sign-post">Layout NGrams(DATASET(AllNGramsLayout) d01)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-ngrams" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-subgrams">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SUBGRAMS</span>
+									<span class="sign-post">(DATASET(NGramsLayout) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-subgrams" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-subgramslayout">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SUBGRAMSLAYOUT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-subgramslayout" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-pmi">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PMI</span>
+									<span class="sign-post">(DATASET(SubGramsLayout) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-pmi" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-splitcompare">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITCOMPARE</span>
+									<span class="sign-post">(DATASET(NGramsLayout) d)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-splitcompare" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-docs-colocation-showphrase">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">STRING</span>
+									<span class="sign-name">SHOWPHRASE</span>
+									<span class="sign-post">(DATASET(Docs.Types.LexiconElement) Lexicon,STRING s)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-docs-colocation-showphrase" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

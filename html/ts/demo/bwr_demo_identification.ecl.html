@@ -1,745 +1,1297 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.Demo.BWR_Demo_Identification</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ts.demo
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../types.ecl.html">
-				ts.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
-				std.system.thorlib
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			ATTRIBUTE : starts
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="bwr_demo_identification.ecl.html">bwr_demo_identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_demo_estimate.ecl.html">bwr_demo_estimate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="series_data.ecl.html">series_data.ecl</a>
+				</li>
+				
+				<li>
+					<a href="bwr_compare_2_r_arima.ecl.html">bwr_compare_2_r_arima.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : d0
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : d1
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : Specs
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : flat0
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : id_flat
-			<ul>
-				
-		<li>
-			ATTRIBUTE : model_obs
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : post_difference
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : LagRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ACF_Rec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Cell
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : slope0
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : id_slope
-			<ul>
-				
-		<li>
-			ATTRIBUTE : model_obs
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : post_difference
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : LagRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ACF_Rec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Cell
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : accum0
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : id_accum
-			<ul>
-				
-		<li>
-			ATTRIBUTE : model_obs
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : post_difference
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : LagRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ACF_Rec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Cell
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	ATTRIBUTE : starts
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : d0
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : d1
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : Specs
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : flat0
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : id_flat
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : model_obs
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : post_difference
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : LagRec
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ACF_Rec
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Cell
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : slope0
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : id_slope
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : model_obs
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : post_difference
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : LagRec
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ACF_Rec
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Cell
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	ATTRIBUTE : accum0
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	MODULE : id_accum
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : model_obs
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : post_difference
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : LagRec
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ACF_Rec
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Cell
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)
-		
-		<br/>
-		<a href="../identification.ecl.html">External Link </a>
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.Demo.BWR_Demo_Identification</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../pkg.toc.html">
+								ts
+							</a>
+							</li>
+						<li>
+							<a href="pkg.toc.html">
+								ts.demo
+							</a>
+							</li>
+						<li>
+							<a href="../types.ecl.html">
+								ts.types
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl">
+								std.system.thorlib
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ts-demo-starts">
+							<a href="#ts-demo-starts" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">STARTS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-starts">Desc</a>
+							<ul id="ts-demo-starts" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-d0">
+							<a href="#ts-demo-d0" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">D0</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-d0">Desc</a>
+							<ul id="ts-demo-d0" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-d1">
+							<a href="#ts-demo-d1" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">D1</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-d1">Desc</a>
+							<ul id="ts-demo-d1" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-specs">
+							<a href="#ts-demo-specs" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPECS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-specs">Desc</a>
+							<ul id="ts-demo-specs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-demo-flat0">
+							<a href="#ts-demo-flat0" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FLAT0</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-flat0">Desc</a>
+							<ul id="ts-demo-flat0" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-TS-Identification">
+							<a href="#TS-Identification" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ID_FLAT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dTS-Identification">Desc</a>
+							<ul id="TS-Identification" class="accordian-body collapse">
+								<li id="t-ts-identification-model_obs">
+							<a href="#ts-identification-model_obs" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_OBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-model_obs">Desc</a>
+							<ul id="ts-identification-model_obs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-post_difference">
+							<a href="#ts-identification-post_difference" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">POST_DIFFERENCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-post_difference">Desc</a>
+							<ul id="ts-identification-post_difference" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-lagrec">
+							<a href="#ts-identification-lagrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAGREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-lagrec">Desc</a>
+							<ul id="ts-identification-lagrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-acf_rec">
+							<a href="#ts-identification-acf_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACF_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-acf_rec">Desc</a>
+							<ul id="ts-identification-acf_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-cell">
+							<a href="#ts-identification-cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-cell">Desc</a>
+							<ul id="ts-identification-cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-correlations">
+							<a href="#ts-identification-correlations" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.PACF_ACF)</span>
+								<span class="sign-name">CORRELATIONS</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-correlations">Desc</a>
+							<ul id="ts-identification-correlations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-acf">
+							<a href="#ts-identification-acf" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.CorrRec)</span>
+								<span class="sign-name">ACF</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-acf">Desc</a>
+							<ul id="ts-identification-acf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-pacf">
+							<a href="#ts-identification-pacf" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.CorrRec)</span>
+								<span class="sign-name">PACF</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-pacf">Desc</a>
+							<ul id="ts-identification-pacf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ts-demo-slope0">
+							<a href="#ts-demo-slope0" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SLOPE0</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-slope0">Desc</a>
+							<ul id="ts-demo-slope0" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-TS-Identification">
+							<a href="#TS-Identification" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ID_SLOPE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dTS-Identification">Desc</a>
+							<ul id="TS-Identification" class="accordian-body collapse">
+								<li id="t-ts-identification-model_obs">
+							<a href="#ts-identification-model_obs" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_OBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-model_obs">Desc</a>
+							<ul id="ts-identification-model_obs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-post_difference">
+							<a href="#ts-identification-post_difference" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">POST_DIFFERENCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-post_difference">Desc</a>
+							<ul id="ts-identification-post_difference" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-lagrec">
+							<a href="#ts-identification-lagrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAGREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-lagrec">Desc</a>
+							<ul id="ts-identification-lagrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-acf_rec">
+							<a href="#ts-identification-acf_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACF_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-acf_rec">Desc</a>
+							<ul id="ts-identification-acf_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-cell">
+							<a href="#ts-identification-cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-cell">Desc</a>
+							<ul id="ts-identification-cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-correlations">
+							<a href="#ts-identification-correlations" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.PACF_ACF)</span>
+								<span class="sign-name">CORRELATIONS</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-correlations">Desc</a>
+							<ul id="ts-identification-correlations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-acf">
+							<a href="#ts-identification-acf" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.CorrRec)</span>
+								<span class="sign-name">ACF</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-acf">Desc</a>
+							<ul id="ts-identification-acf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-pacf">
+							<a href="#ts-identification-pacf" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.CorrRec)</span>
+								<span class="sign-name">PACF</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-pacf">Desc</a>
+							<ul id="ts-identification-pacf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ts-demo-accum0">
+							<a href="#ts-demo-accum0" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACCUM0</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-demo-accum0">Desc</a>
+							<ul id="ts-demo-accum0" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-TS-Identification">
+							<a href="#TS-Identification" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ID_ACCUM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dTS-Identification">Desc</a>
+							<ul id="TS-Identification" class="accordian-body collapse">
+								<li id="t-ts-identification-model_obs">
+							<a href="#ts-identification-model_obs" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_OBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-model_obs">Desc</a>
+							<ul id="ts-identification-model_obs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-post_difference">
+							<a href="#ts-identification-post_difference" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">POST_DIFFERENCE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-post_difference">Desc</a>
+							<ul id="ts-identification-post_difference" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-lagrec">
+							<a href="#ts-identification-lagrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">LAGREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-lagrec">Desc</a>
+							<ul id="ts-identification-lagrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-acf_rec">
+							<a href="#ts-identification-acf_rec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ACF_REC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-acf_rec">Desc</a>
+							<ul id="ts-identification-acf_rec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-cell">
+							<a href="#ts-identification-cell" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CELL</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-identification-cell">Desc</a>
+							<ul id="ts-identification-cell" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-correlations">
+							<a href="#ts-identification-correlations" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.PACF_ACF)</span>
+								<span class="sign-name">CORRELATIONS</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-correlations">Desc</a>
+							<ul id="ts-identification-correlations" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-acf">
+							<a href="#ts-identification-acf" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.CorrRec)</span>
+								<span class="sign-name">ACF</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-acf">Desc</a>
+							<ul id="ts-identification-acf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-identification-pacf">
+							<a href="#ts-identification-pacf" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(Types.CorrRec)</span>
+								<span class="sign-name">PACF</span>
+								<span class="sign-post">(UNSIGNED2 lags)</span>
+							</a> -
+							<a href="#dts-identification-pacf">Desc</a>
+							<ul id="ts-identification-pacf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dts-demo-starts">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">STARTS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-starts" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-d0">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">D0</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-d0" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-d1">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">D1</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-d1" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-specs">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPECS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-specs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-demo-flat0">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FLAT0</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-flat0" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dTS-Identification">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ID_FLAT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-TS-Identification" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dts-identification-model_obs">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_OBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-model_obs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-post_difference">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">POST_DIFFERENCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-post_difference" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-lagrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAGREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-lagrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-acf_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACF_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-acf_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-correlations">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.PACF_ACF)</span>
+									<span class="sign-name">CORRELATIONS</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-correlations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-acf">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.CorrRec)</span>
+									<span class="sign-name">ACF</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-acf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-pacf">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.CorrRec)</span>
+									<span class="sign-name">PACF</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-pacf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dts-demo-slope0">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SLOPE0</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-slope0" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dTS-Identification">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ID_SLOPE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-TS-Identification" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dts-identification-model_obs">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_OBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-model_obs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-post_difference">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">POST_DIFFERENCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-post_difference" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-lagrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAGREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-lagrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-acf_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACF_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-acf_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-correlations">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.PACF_ACF)</span>
+									<span class="sign-name">CORRELATIONS</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-correlations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-acf">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.CorrRec)</span>
+									<span class="sign-name">ACF</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-acf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-pacf">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.CorrRec)</span>
+									<span class="sign-name">PACF</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-pacf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dts-demo-accum0">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACCUM0</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-demo-accum0" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dTS-Identification">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ID_ACCUM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-TS-Identification" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dts-identification-model_obs">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_OBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-model_obs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-post_difference">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">POST_DIFFERENCE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-post_difference" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-lagrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">LAGREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-lagrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-acf_rec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ACF_REC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-acf_rec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-cell">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CELL</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-cell" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-correlations">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.PACF_ACF)</span>
+									<span class="sign-name">CORRELATIONS</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-correlations" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-acf">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.CorrRec)</span>
+									<span class="sign-name">ACF</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-acf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-identification-pacf">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.CorrRec)</span>
+									<span class="sign-name">PACF</span>
+									<span class="sign-post">(UNSIGNED2 lags)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-identification-pacf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									<a href="../identification.ecl.html" class="btn btn-success">Link</a>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

@@ -9,354 +9,354 @@
    <Type>record</Type>
    <Field name="id"/>
    <Field name="age"/>
-   <Signature>value_ecod</Signature><Field name="height"/>
+   <Signature pre="" post="" name="VALUE_ECOD">value_ecod</Signature><Field name="height"/>
   </Definition>
   <Definition body="130" end="467" fullname="ml.tests.explanatory.d" inherit_type="local" line="8" name="d" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="126">
-   <Signature>d</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="D">d</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="491" end="509" fullname="ml.tests.explanatory.age" inherit_type="local" line="25" name="age" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="485">
-   <Signature>age</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="AGE">age</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="565" end="583" fullname="ml.tests.explanatory.height" inherit_type="local" line="27" name="height" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="556">
-   <Signature>height</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="HEIGHT">height</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="650" end="691" fullname="ML.Regression.Sparse.OLS_LU" inherit_type="local" line="29" name="RegSpase" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="639" target="../../regression/sparse/ols_lu.ecl.xml">
    <Type>module</Type>
    <Definition body="507" end="513" fullname="ml.regression.sparse.ols_lu.mbetas" inherit_type="override" line="16" name="mBetas" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS_LU.ecl" start="464" target="../../regression/sparse/ols_lu.ecl.xml">
-    <Signature>DATASET(Mat.Types.Element) mBetas</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(Mat.Types.Element)" post="" name="MBETAS">DATASET(Mat.Types.Element) mBetas</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="670" end="750" exported="1" fullname="ml.regression.iregression.corec" inherit_type="inherited" line="19" name="CoRec" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="655" target="../../regression/iregression.ecl.xml">
     <Type>record</Type>
     <Field name="number"/>
-    <Signature>CoRec</Signature><Field name="RSquared"/>
+    <Signature pre="" post="" name="COREC">CoRec</Signature><Field name="RSquared"/>
    </Definition>
    <Definition body="756" end="759" fullname="ml.regression.sparse.ols.independents" inherit_type="inherited" line="20" name="Independents" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="712" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>DATASET(NumericField) Independents</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="INDEPENDENTS">DATASET(NumericField) Independents</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="804" end="807" fullname="ml.regression.sparse.ols.dependents" inherit_type="inherited" line="21" name="Dependents" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="762" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>DATASET(NumericField) Dependents</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="DEPENDENTS">DATASET(NumericField) Dependents</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="822" end="841" fullname="ml.regression.sparse.ols.my" inherit_type="inherited" line="22" name="mY" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="810" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>mY</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MY">mY</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="885" end="1041" fullname="ml.regression.sparse.ols.mx" inherit_type="inherited" line="24" name="mX" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="873" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>mX</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MX">mX</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1079" end="1094" fullname="ml.regression.sparse.ols.mxt" inherit_type="inherited" line="27" name="mXt" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="1066" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>mXt</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MXT">mXt</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1598" end="1606" exported="1" fullname="ml.regression.sparse.ols.betas" inherit_type="override" line="40" name="betas" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="1561" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>DATASET(NumericField) Betas</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="BETAS">DATASET(NumericField) Betas</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1755" end="1781" exported="1" fullname="ml.regression.sparse.ols.modely" inherit_type="override" line="44" name="modelY" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="1717" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>DATASET(NumericField) modelY</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="MODELY">DATASET(NumericField) modelY</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1857" end="2029" exported="1" fullname="ml.regression.sparse.ols.extrapolated" inherit_type="override" line="46" name="Extrapolated" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="1785" target="../../regression/sparse/ols.ecl.xml">
     <Type>function</Type>
-    <Signature>DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)</Signature><Params>
+    <Signature pre="DATASET(NumericField)" post="(DATASET(NumericField) newX)" name="EXTRAPOLATED">DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)</Signature><Params>
      <Param name="newX"/>
     </Params>
    </Definition>
    <Definition body="2293" end="2325" fullname="ml.regression.sparse.ols.corr_ds" inherit_type="override" line="56" name="corr_ds" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="2276" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>corr_ds</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CORR_DS">corr_ds</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2838" end="2844" exported="1" fullname="ml.regression.sparse.ols.rsquared" inherit_type="override" line="66" name="RSquared" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="2805" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>DATASET(CoRec) RSquared</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(CoRec)" post="" name="RSQUARED">DATASET(CoRec) RSquared</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2891" end="2966" exported="1" fullname="ml.regression.sparse.ols.var_covar" inherit_type="override" line="68" name="var_covar" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Sparse/OLS.ecl" start="2850" target="../../regression/sparse/ols.ecl.xml">
-    <Signature>DATASET(NumericField) var_covar</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="VAR_COVAR">DATASET(NumericField) var_covar</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2743" end="2779" exported="1" fullname="ml.regression.iregression.anova" inherit_type="override" line="76" name="Anova" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="2728" target="../../regression/iregression.ecl.xml">
-    <Signature>Anova</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="ANOVA">Anova</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3001" end="3106" exported="1" fullname="ml.regression.iregression.se" inherit_type="override" line="86" name="SE" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="2989" target="../../regression/iregression.ecl.xml">
-    <Signature>SE</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SE">SE</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3265" end="3363" exported="1" fullname="ml.regression.iregression.tstat" inherit_type="override" line="93" name="tStat" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3250" target="../../regression/iregression.ecl.xml">
-    <Signature>tStat</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TSTAT">tStat</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3383" end="3436" exported="1" fullname="ML.Distribution.StudentT" inherit_type="override" line="95" name="dist" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3369" target="../../distribution.ecl.xml">
     <Type>module</Type>
     <Definition body="2078" end="2754" exported="1" fullname="ml.distribution.default.cumulative" inherit_type="override" line="42" name="Cumulative" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2018" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
+     <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal RH)" name="CUMULATIVE">Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
       <Param name="RH"/>
      </Params>
     </Definition>
     <Definition body="2864" end="3358" exported="1" fullname="ml.distribution.default.ntile" inherit_type="override" line="54" name="NTile" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2809" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
+     <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal Pc)" name="NTILE">Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
       <Param name="Pc"/>
      </Params>
     </Definition>
     <Definition body="3476" end="3483" exported="1" fullname="ml.distribution.default.discrete" inherit_type="inherited" line="64" name="Discrete" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3458" target="../../distribution.ecl.xml">
-     <Signature>Discrete</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="DISCRETE">Discrete</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7332" end="7504" fullname="ml.distribution.studentt.multiplier" inherit_type="local" line="131" name="Multiplier" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7312" target="../../distribution.ecl.xml">
-     <Signature>Multiplier</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="MULTIPLIER">Multiplier</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7612" end="7621" fullname="ml.distribution.studentt.lowdensity" inherit_type="local" line="134" name="LowDensity" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7592" target="../../distribution.ecl.xml">
-     <Signature>LowDensity</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="LOWDENSITY">LowDensity</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7710" end="7760" exported="1" fullname="ml.distribution.studentt.invdensity" inherit_type="override" line="135" name="InvDensity" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7665" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>InvDensity(Types.t_FieldReal delta)</Signature><Params>
+     <Signature pre="" post="(Types.t_FieldReal delta)" name="INVDENSITY">InvDensity(Types.t_FieldReal delta)</Signature><Params>
       <Param name="delta"/>
      </Params>
     </Definition>
     <Definition body="7866" end="7890" fullname="ml.distribution.studentt.high" inherit_type="local" line="137" name="high" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7852" target="../../distribution.ecl.xml">
-     <Signature>high</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="HIGH">high</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7906" end="7909" fullname="ml.distribution.studentt.low" inherit_type="local" line="138" name="Low" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7893" target="../../distribution.ecl.xml">
-     <Signature>Low</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="LOW">Low</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7932" end="7952" exported="1" fullname="ml.distribution.studentt.rangewidth" inherit_type="override" line="139" name="RangeWidth" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7912" target="../../distribution.ecl.xml">
-     <Signature>RangeWidth</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="RANGEWIDTH">RangeWidth</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8012" end="8056" exported="1" fullname="ml.distribution.studentt.density" inherit_type="override" line="140" name="Density" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7955" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
+     <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal RH)" name="DENSITY">Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
       <Param name="RH"/>
      </Params>
     </Definition>
     <Definition body="8079" end="8283" exported="1" fullname="ml.distribution.studentt.densityv" inherit_type="override" line="141" name="DensityV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="8059" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>DensityV()</Signature><Params/>
+     <Signature pre="" post="()" name="DENSITYV">DensityV()</Signature><Params/>
     </Definition>
     <Definition body="8311" end="8935" exported="1" fullname="ml.distribution.studentt.cumulativev" inherit_type="override" line="145" name="CumulativeV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="8288" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>CumulativeV()</Signature><Params/>
+     <Signature pre="" post="()" name="CUMULATIVEV">CumulativeV()</Signature><Params/>
     </Definition>
-    <Signature>dist</Signature><Parents>
+    <Signature pre="" post="" name="DIST">dist</Signature><Parents>
      <Parent line="27" name="Default" ref="ml.distribution.default" target="../../distribution.ecl.xml"/>
     </Parents>
    </Definition>
    <Definition body="3602" end="3640" exported="1" fullname="ml.regression.iregression.pval" inherit_type="override" line="102" name="pVal" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3588" target="../../regression/iregression.ecl.xml">
-    <Signature>pVal</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="PVAL">pVal</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3679" end="3849" exported="1" fullname="ml.regression.iregression.adjrsquared" inherit_type="override" line="103" name="AdjRSquared" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3643" target="../../regression/iregression.ecl.xml">
-    <Signature>DATASET(CoRec) AdjRSquared</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(CoRec)" post="" name="ADJRSQUARED">DATASET(CoRec) AdjRSquared</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="4295" end="4503" exported="1" fullname="ml.regression.iregression.confint" inherit_type="override" line="120" name="ConfInt" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="4253" target="../../regression/iregression.ecl.xml">
     <Type>function</Type>
-    <Signature>ConfInt(Types.t_fieldReal level)</Signature><Params>
+    <Signature pre="" post="(Types.t_fieldReal level)" name="CONFINT">ConfInt(Types.t_fieldReal level)</Signature><Params>
      <Param name="level"/>
     </Params>
    </Definition>
    <Definition body="4624" end="4818" exported="1" fullname="ml.regression.iregression.aic" inherit_type="override" line="131" name="AIC" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="4595" target="../../regression/iregression.ecl.xml">
-    <Signature>DATASET(AICRec) AIC</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(" post="Rec) AIC" name="AIC">DATASET(AICRec) AIC</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="4979" end="5201" exported="1" fullname="ml.regression.iregression.ftest" inherit_type="override" line="142" name="FTest" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="4946" target="../../regression/iregression.ecl.xml">
-    <Signature>DATASET(FTestRec) FTest</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(" post="Rec) FTest" name="FTEST">DATASET(FTestRec) FTest</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>RegSpase</Signature><Parents>
+   <Signature pre="" post="" name="REGSPASE">RegSpase</Signature><Parents>
     <Parent line="18" name="OLS" ref="ml.regression.sparse.ols" target="../../regression/sparse/ols.ecl.xml"/>
    </Parents>
   </Definition>
   <Definition body="709" end="734" fullname="ml.tests.explanatory.spase_my_modely" inherit_type="local" line="30" name="spase_my_modelY" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="692">
-   <Signature>spase_my_modelY</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SPASE_MY_MODELY">spase_my_modelY</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="806" end="842" fullname="ml.tests.explanatory.spase_extapo_height" inherit_type="local" line="32" name="spase_extapo_height" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="785">
-   <Signature>spase_extapo_height</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SPASE_EXTAPO_HEIGHT">spase_extapo_height</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="913" end="953" fullname="ML.Regression.Dense.OLS_LU" inherit_type="local" line="35" name="RegDense" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="902" target="../../regression/dense/ols_lu.ecl.xml">
    <Type>module</Type>
    <Definition body="670" end="750" exported="1" fullname="ml.regression.iregression.corec" inherit_type="inherited" line="19" name="CoRec" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="655" target="../../regression/iregression.ecl.xml">
     <Type>record</Type>
     <Field name="number"/>
-    <Signature>CoRec</Signature><Field name="RSquared"/>
+    <Signature pre="" post="" name="COREC">CoRec</Signature><Field name="RSquared"/>
    </Definition>
    <Definition body="878" end="881" fullname="ml.regression.dense.ols.independents" inherit_type="inherited" line="23" name="Independents" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="834" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(NumericField) Independents</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="INDEPENDENTS">DATASET(NumericField) Independents</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="926" end="929" fullname="ml.regression.dense.ols.dependents" inherit_type="inherited" line="24" name="Dependents" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="884" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(NumericField) Dependents</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="DEPENDENTS">DATASET(NumericField) Dependents</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="983" end="995" fullname="ml.regression.dense.ols.x_rows" inherit_type="inherited" line="26" name="x_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="968" target="../../regression/dense/ols.ecl.xml">
-    <Signature>x_rows</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="X_ROWS">x_rows</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1013" end="1033" fullname="ml.regression.dense.ols.x_cols" inherit_type="inherited" line="27" name="x_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="998" target="../../regression/dense/ols.ecl.xml">
-    <Signature>x_cols</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="X_COLS">x_cols</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1084" end="1096" fullname="ml.regression.dense.ols.y_rows" inherit_type="inherited" line="28" name="y_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1069" target="../../regression/dense/ols.ecl.xml">
-    <Signature>y_rows</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="Y_ROWS">y_rows</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1114" end="1130" fullname="ml.regression.dense.ols.y_cols" inherit_type="inherited" line="29" name="y_cols" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1099" target="../../regression/dense/ols.ecl.xml">
-    <Signature>y_cols</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="Y_COLS">y_cols</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1153" end="1199" fullname="ml.regression.dense.ols.block_rows" inherit_type="inherited" line="30" name="block_rows" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1133" target="../../regression/dense/ols.ecl.xml">
-    <Signature>block_rows</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BLOCK_ROWS">block_rows</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1217" end="1265" fullname="PBblas.Matrix_Map" inherit_type="inherited" line="31" name="x_map" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1202" target="../../../pbblas/matrix_map.ecl.xml">
     <Type>module</Type>
-    <Signature>x_map</Signature><Parents>
+    <Signature pre="" post="" name="X_MAP">x_map</Signature><Parents>
      <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
     </Parents>
    </Definition>
    <Definition body="1283" end="1331" fullname="PBblas.Matrix_Map" inherit_type="inherited" line="32" name="y_map" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1268" target="../../../pbblas/matrix_map.ecl.xml">
     <Type>module</Type>
-    <Signature>y_map</Signature><Parents>
+    <Signature pre="" post="" name="Y_MAP">y_map</Signature><Parents>
      <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
     </Parents>
    </Definition>
    <Definition body="1349" end="1393" fullname="PBblas.Matrix_Map" inherit_type="inherited" line="33" name="b_map" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1334" target="../../../pbblas/matrix_map.ecl.xml">
     <Type>module</Type>
-    <Signature>b_map</Signature><Parents>
+    <Signature pre="" post="" name="B_MAP">b_map</Signature><Parents>
      <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
     </Parents>
    </Definition>
    <Definition body="1445" end="1453" exported="1" fullname="ml.regression.dense.ols_lu.betasaspartition" inherit_type="override" line="33" name="BetasAsPartition" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS_LU.ecl" start="1405" target="../../regression/dense/ols_lu.ecl.xml">
-    <Signature>DATASET(Part) BetasAsPartition</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(Part)" post="" name="BETASASPARTITION">DATASET(Part) BetasAsPartition</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1411" end="1455" fullname="PBblas.Matrix_Map" inherit_type="inherited" line="34" name="z_map" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1396" target="../../../pbblas/matrix_map.ecl.xml">
     <Type>module</Type>
-    <Signature>z_map</Signature><Parents>
+    <Signature pre="" post="" name="Z_MAP">z_map</Signature><Parents>
      <Parent line="4" name="IMatrix_Map" ref="pbblas.imatrix_map" target="../../../pbblas/imatrix_map.ecl.xml"/>
     </Parents>
    </Definition>
    <Definition body="1527" end="1583" fullname="ml.regression.dense.ols.x_part" inherit_type="inherited" line="36" name="x_part" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1512" target="../../regression/dense/ols.ecl.xml">
-    <Signature>x_part</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="X_PART">x_part</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1655" end="1703" fullname="ml.regression.dense.ols.y_part" inherit_type="inherited" line="38" name="y_part" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1640" target="../../regression/dense/ols.ecl.xml">
-    <Signature>y_part</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="Y_PART">y_part</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1893" end="1901" exported="1" fullname="ml.regression.dense.ols.betasaselements" inherit_type="override" line="43" name="BetasAsElements" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="1841" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(Mat.Types.Element) BetasAsElements</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(Mat.Types.Element)" post="" name="BETASASELEMENTS">DATASET(Mat.Types.Element) BetasAsElements</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2363" end="2371" exported="1" fullname="ml.regression.dense.ols.betas" inherit_type="override" line="54" name="betas" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="2320" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(Types.NumericField) betas</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(Types.NumericField)" post="" name="BETAS">DATASET(Types.NumericField) betas</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2529" end="2536" exported="1" fullname="ml.regression.dense.ols.modely_part" inherit_type="override" line="58" name="modelY_part" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="2494" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(Part) modelY_part</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(Part)" post="" name="MODELY_PART">DATASET(Part) modelY_part</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2710" end="2720" exported="1" fullname="ml.regression.dense.ols.modely" inherit_type="override" line="61" name="modelY" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="2672" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(NumericField) modelY</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="MODELY">DATASET(NumericField) modelY</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="2818" end="3243" exported="1" fullname="ml.regression.dense.ols.extrapolated_part" inherit_type="override" line="64" name="Extrapolated_part" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="2749" target="../../regression/dense/ols.ecl.xml">
     <Type>function</Type>
-    <Signature>DATASET(Part) Extrapolated_part(DATASET(NumericField) newX)</Signature><Params>
+    <Signature pre="DATASET(Part)" post="(DATASET(NumericField) newX)" name="EXTRAPOLATED_PART">DATASET(Part) Extrapolated_part(DATASET(NumericField) newX)</Signature><Params>
      <Param name="newX"/>
     </Params>
    </Definition>
    <Definition body="3318" end="3529" exported="1" fullname="ml.regression.dense.ols.extrapolated" inherit_type="override" line="73" name="Extrapolated" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="3246" target="../../regression/dense/ols.ecl.xml">
     <Type>function</Type>
-    <Signature>DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)</Signature><Params>
+    <Signature pre="DATASET(NumericField)" post="(DATASET(NumericField) newX)" name="EXTRAPOLATED">DATASET(NumericField) Extrapolated(DATASET(NumericField) newX)</Signature><Params>
      <Param name="newX"/>
     </Params>
    </Definition>
    <Definition body="2743" end="2779" exported="1" fullname="ml.regression.iregression.anova" inherit_type="override" line="76" name="Anova" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="2728" target="../../regression/iregression.ecl.xml">
-    <Signature>Anova</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="ANOVA">Anova</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3001" end="3106" exported="1" fullname="ml.regression.iregression.se" inherit_type="override" line="86" name="SE" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="2989" target="../../regression/iregression.ecl.xml">
-    <Signature>SE</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SE">SE</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3265" end="3363" exported="1" fullname="ml.regression.iregression.tstat" inherit_type="override" line="93" name="tStat" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3250" target="../../regression/iregression.ecl.xml">
-    <Signature>tStat</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="TSTAT">tStat</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="4221" end="4253" exported="1" fullname="ml.regression.dense.ols.rsquared" inherit_type="override" line="94" name="RSquared" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="4187" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(CoRec)  RSquared</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(CoRec)" post="" name="RSQUARED">DATASET(CoRec)  RSquared</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3383" end="3436" exported="1" fullname="ML.Distribution.StudentT" inherit_type="override" line="95" name="dist" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3369" target="../../distribution.ecl.xml">
     <Type>module</Type>
     <Definition body="2078" end="2754" exported="1" fullname="ml.distribution.default.cumulative" inherit_type="override" line="42" name="Cumulative" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2018" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
+     <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal RH)" name="CUMULATIVE">Types.t_FieldReal Cumulative(Types.t_FieldReal RH)</Signature><Params>
       <Param name="RH"/>
      </Params>
     </Definition>
     <Definition body="2864" end="3358" exported="1" fullname="ml.distribution.default.ntile" inherit_type="override" line="54" name="NTile" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="2809" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
+     <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal Pc)" name="NTILE">Types.t_FieldReal NTile(Types.t_FieldReal Pc)</Signature><Params>
       <Param name="Pc"/>
      </Params>
     </Definition>
     <Definition body="3476" end="3483" exported="1" fullname="ml.distribution.default.discrete" inherit_type="inherited" line="64" name="Discrete" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="3458" target="../../distribution.ecl.xml">
-     <Signature>Discrete</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="DISCRETE">Discrete</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7332" end="7504" fullname="ml.distribution.studentt.multiplier" inherit_type="local" line="131" name="Multiplier" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7312" target="../../distribution.ecl.xml">
-     <Signature>Multiplier</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="MULTIPLIER">Multiplier</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7612" end="7621" fullname="ml.distribution.studentt.lowdensity" inherit_type="local" line="134" name="LowDensity" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7592" target="../../distribution.ecl.xml">
-     <Signature>LowDensity</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="LOWDENSITY">LowDensity</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7710" end="7760" exported="1" fullname="ml.distribution.studentt.invdensity" inherit_type="override" line="135" name="InvDensity" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7665" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>InvDensity(Types.t_FieldReal delta)</Signature><Params>
+     <Signature pre="" post="(Types.t_FieldReal delta)" name="INVDENSITY">InvDensity(Types.t_FieldReal delta)</Signature><Params>
       <Param name="delta"/>
      </Params>
     </Definition>
     <Definition body="7866" end="7890" fullname="ml.distribution.studentt.high" inherit_type="local" line="137" name="high" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7852" target="../../distribution.ecl.xml">
-     <Signature>high</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="HIGH">high</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7906" end="7909" fullname="ml.distribution.studentt.low" inherit_type="local" line="138" name="Low" shared="1" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7893" target="../../distribution.ecl.xml">
-     <Signature>Low</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="LOW">Low</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="7932" end="7952" exported="1" fullname="ml.distribution.studentt.rangewidth" inherit_type="override" line="139" name="RangeWidth" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7912" target="../../distribution.ecl.xml">
-     <Signature>RangeWidth</Signature><Type>attribute</Type>
+     <Signature pre="" post="" name="RANGEWIDTH">RangeWidth</Signature><Type>attribute</Type>
     </Definition>
     <Definition body="8012" end="8056" exported="1" fullname="ml.distribution.studentt.density" inherit_type="override" line="140" name="Density" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="7955" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
+     <Signature pre="Types.t_FieldReal" post="(Types.t_FieldReal RH)" name="DENSITY">Types.t_FieldReal Density(Types.t_FieldReal RH)</Signature><Params>
       <Param name="RH"/>
      </Params>
     </Definition>
     <Definition body="8079" end="8283" exported="1" fullname="ml.distribution.studentt.densityv" inherit_type="override" line="141" name="DensityV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="8059" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>DensityV()</Signature><Params/>
+     <Signature pre="" post="()" name="DENSITYV">DensityV()</Signature><Params/>
     </Definition>
     <Definition body="8311" end="8935" exported="1" fullname="ml.distribution.studentt.cumulativev" inherit_type="override" line="145" name="CumulativeV" source="/media/sarthak/Data/ecl-ml/./ML/Distribution.ecl" start="8288" target="../../distribution.ecl.xml">
      <Type>function</Type>
-     <Signature>CumulativeV()</Signature><Params/>
+     <Signature pre="" post="()" name="CUMULATIVEV">CumulativeV()</Signature><Params/>
     </Definition>
-    <Signature>dist</Signature><Parents>
+    <Signature pre="" post="" name="DIST">dist</Signature><Parents>
      <Parent line="27" name="Default" ref="ml.distribution.default" target="../../distribution.ecl.xml"/>
     </Parents>
    </Definition>
    <Definition body="3602" end="3640" exported="1" fullname="ml.regression.iregression.pval" inherit_type="override" line="102" name="pVal" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3588" target="../../regression/iregression.ecl.xml">
-    <Signature>pVal</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="PVAL">pVal</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="3679" end="3849" exported="1" fullname="ml.regression.iregression.adjrsquared" inherit_type="override" line="103" name="AdjRSquared" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="3643" target="../../regression/iregression.ecl.xml">
-    <Signature>DATASET(CoRec) AdjRSquared</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(CoRec)" post="" name="ADJRSQUARED">DATASET(CoRec) AdjRSquared</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="4659" end="4703" exported="1" fullname="ml.regression.dense.ols.var_covar" inherit_type="override" line="103" name="var_covar" source="/media/sarthak/Data/ecl-ml/./ML/Regression/Dense/OLS.ecl" start="4618" target="../../regression/dense/ols.ecl.xml">
-    <Signature>DATASET(NumericField) var_covar</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(NumericField)" post="" name="VAR_COVAR">DATASET(NumericField) var_covar</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="4295" end="4503" exported="1" fullname="ml.regression.iregression.confint" inherit_type="override" line="120" name="ConfInt" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="4253" target="../../regression/iregression.ecl.xml">
     <Type>function</Type>
-    <Signature>ConfInt(Types.t_fieldReal level)</Signature><Params>
+    <Signature pre="" post="(Types.t_fieldReal level)" name="CONFINT">ConfInt(Types.t_fieldReal level)</Signature><Params>
      <Param name="level"/>
     </Params>
    </Definition>
    <Definition body="4624" end="4818" exported="1" fullname="ml.regression.iregression.aic" inherit_type="override" line="131" name="AIC" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="4595" target="../../regression/iregression.ecl.xml">
-    <Signature>DATASET(AICRec) AIC</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(" post="Rec) AIC" name="AIC">DATASET(AICRec) AIC</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="4979" end="5201" exported="1" fullname="ml.regression.iregression.ftest" inherit_type="override" line="142" name="FTest" source="/media/sarthak/Data/ecl-ml/./ML/Regression/IRegression.ecl" start="4946" target="../../regression/iregression.ecl.xml">
-    <Signature>DATASET(FTestRec) FTest</Signature><Type>attribute</Type>
+    <Signature pre="DATASET(" post="Rec) FTest" name="FTEST">DATASET(FTestRec) FTest</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>RegDense</Signature><Parents>
+   <Signature pre="" post="" name="REGDENSE">RegDense</Signature><Parents>
     <Parent line="21" name="OLS" ref="ml.regression.dense.ols" target="../../regression/dense/ols.ecl.xml"/>
    </Parents>
   </Definition>
   <Definition body="971" end="996" fullname="ml.tests.explanatory.dense_my_modely" inherit_type="local" line="36" name="dense_my_modelY" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="954">
-   <Signature>dense_my_modelY</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DENSE_MY_MODELY">dense_my_modelY</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1068" end="1095" fullname="ml.tests.explanatory.dense_extapo_height" inherit_type="local" line="38" name="dense_extapo_height" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/BWR_testOfRegressionOLS_LUBothDenseAndSparse.ecl" start="1047">
-   <Signature>dense_extapo_height</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DENSE_EXTAPO_HEIGHT">dense_extapo_height</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="29" end="62" fullname="ml.tests.explanatory.o_toname" inherit_type="local" line="81" name="o_ToName" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//---------------------------</Signature><Params>
+   <Signature pre="" post="" name="O_TONAME">//---------------------------</Signature><Params>
     <Param name="i"/>
    </Params>
   </Definition>
   <Definition body="31" end="63" fullname="ml.tests.explanatory.o_tonumber" inherit_type="local" line="83" name="o_ToNumber" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
    <Type>function</Type>
-   <Signature>//-----------------------------</Signature><Params>
+   <Signature pre="" post="" name="O_TONUMBER">//-----------------------------</Signature><Params>
     <Param name="s"/>
    </Params>
   </Definition>
   <Definition body="2485" end="2654" fullname="ml.tests.explanatory.o" inherit_type="local" line="85" name="o" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="1">
-   <Signature>/---------------------------------------------------------------------------
+   <Signature pre="/---------------------------------------------------------------------------&#10;// Macr" post="takes a matrix dataset, with each row contianing an ID and one or&#10;// more axis fields containing numeric values, and expands it into the &#10;// NumericField format used by ML.&#10;//&#10;//   dIn       : The name of the input dataset&#10;//   dOut      : The name of the resulting dataset&#10;//   idfield   : [OPTIONAL] The name of the field that contains the UID for&#10;//               each row.  If omitted, it is assumed to be the first field.&#10;//   datafields: [OPTIONAL] A STRING contianing a comma-delimited list of the&#10;//               fields to be treated as axes.  If omitted, all numeric&#10;//               fields that are not the UID will be treated as axes.&#10;//               NOTE: idfield defaults to the first field in the table, so&#10;//               if that field is specified as an axis field, then the user&#10;//               should be sure to specify a value in the idfield param.&#10;//&#10;//  Along with creating the NumericField table, this macro produces two&#10;//  simple functions to assist the user in mapping the field names to their&#10;//  corresponding numbers.  These are &quot;STRING dOut_ToName(UNSIGNED)&quot; and&#10;//  &quot;UNSIGNED dOut_ToNumber(STRING)&quot;, where the &quot;dOut&quot; portion of the function&#10;//  name is the name passed into that parameter of the macro.&#10;//&#10;//  The macro also produces a mapping table named &quot;dOut_Map&quot;, again where&#10;//  &quot;dOut&quot; refers to the parameter, that contains a table of the field&#10;//  mappings&#10;//  &#10;//  Examples:&#10;//    ML.ToField(dOrig,dMatrix);&#10;//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');&#10;//    dMatrix_ToName(2);  // returns 'field7'&#10;//    dMatrix_ToNumber('field10'); // returns 3&#10;//    dMatrix_Map; // returns the mapping table of field name to number&#10;//---------------------------------------------------------------------------&#10;EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO&#10;  LOADXML('&lt;xml/&gt;');&#10;  // Variable to contain the name of the field that maps to &quot;id&quot;&#10;  #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))&#10;  // Contains a comma-delimited list of the fields that will be used as axes,&#10;  // beginning with &quot;COUNTER&quot; so it can be #EXPANDED into a CHOOSE call&#10;  // during normalization&#10;  #DECLARE(normlist) #SET(normlist,'COUNTER')&#10;  // Count of the fields that become axes&#10;  #DECLARE(iNumberOfFields) #SET(iNumberOfFields,0)&#10;  // A list of every field in the original table and the field number (or &quot;ID&quot;)&#10;  // to which it is mapped in the output.  &quot;" name="O">/---------------------------------------------------------------------------
 // Macro takes a matrix dataset, with each row contianing an ID and one or
 // more axis fields containing numeric values, and expands it into the 
 // NumericField format used by ML.
@@ -383,14 +383,14 @@
 //  mappings
 //  
 //  Examples:
-//    ML.ToField(dOrig,dMatrix)
-//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10')
-//    dMatrix_ToName(2)  // returns 'field7'
-//    dMatrix_ToNumber('field10') // returns 3
-//    dMatrix_Map // returns the mapping table of field name to number
+//    ML.ToField(dOrig,dMatrix);
+//    ML.ToField(dOrig,dMatrix,myid,'field5,field7,field10');
+//    dMatrix_ToName(2);  // returns 'field7'
+//    dMatrix_ToNumber('field10'); // returns 3
+//    dMatrix_Map; // returns the mapping table of field name to number
 //---------------------------------------------------------------------------
- ToField(dIn,dOut,idfield='',datafields='')MACRO
-  LOADXML('&lt;xml/&gt;')
+EXPORT ToField(dIn,dOut,idfield='',datafields=''):=MACRO
+  LOADXML('&lt;xml/&gt;');
   // Variable to contain the name of the field that maps to "id"
   #DECLARE(foundidfield) #SET(foundidfield,#TEXT(idfield))
   // Contains a comma-delimited list of the fields that will be used as axes,
@@ -403,7 +403,7 @@
   // to which it is mapped in the output.  "</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="7" end="2800" fullname="ml.tests.explanatory.o_map" inherit_type="local" line="87" name="o_Map" source="/media/sarthak/Data/ecl-ml/./ML/ToField.ecl" start="0">
-   <Signature>//-----</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="O_MAP">//-----</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/ToField.ecl" name="ML.ToField" target="../../tofield.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Regression/Sparse/OLS_LU.ecl" name="ML.Regression.Sparse.OLS_LU" target="../../regression/sparse/ols_lu.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl" name="std.Str" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl"/><Depends sourcePath="lib_stringlib" target="lib_stringlib"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Regression/Sparse/OLS.ecl" name="ML.Regression.Sparse.OLS" target="../../regression/sparse/ols.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Regression/IRegression.ecl" name="ML.Regression.IRegression" target="../../regression/iregression.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Types.ecl" name="PBblas.Types" target="../../../pbblas/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/FieldAggregates.ecl" name="ML.FieldAggregates" target="../../fieldaggregates.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Utils.ecl" name="ML.Utils" target="../../utils.ecl.xml"/><Depends sourcePath="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl" name="std.system.Thorlib" target="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/system/Thorlib.ecl"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Repmat.ecl" name="ML.Mat.Repmat" target="../../mat/repmat.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="../../mat/has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="../../mat/each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Distribution.ecl" name="ML.Distribution" target="../../distribution.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Vec.ecl" name="ML.Mat.Vec" target="../../mat/vec.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/InsertColumn.ecl" name="ML.Mat.InsertColumn" target="../../mat/insertcolumn.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Trans.ecl" name="ML.Mat.Trans" target="../../mat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Mul.ecl" name="ML.Mat.Mul" target="../../mat/mul.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="../../mat/strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Debug.ecl" name="ML.Mat.Debug" target="../../mat/debug.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Correlate.ecl" name="ML.Correlate" target="../../correlate.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Discretize.ecl" name="ML.Discretize" target="../../discretize.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" name="ML.Mat.Scale" target="../../mat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Inv.ecl" name="ML.Mat.Inv" target="../../mat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" name="ML.Mat.Decomp" target="../../mat/decomp.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="../../mat/setdimension.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Sub.ecl" name="ML.Mat.Sub" target="../../mat/sub.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Substitute.ecl" name="ML.Mat.Substitute" target="../../mat/substitute.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/LowerTriangle.ecl" name="ML.Mat.LowerTriangle" target="../../mat/lowertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/UpperTriangle.ecl" name="ML.Mat.UpperTriangle" target="../../mat/uppertriangle.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/MU.ecl" name="ML.Mat.MU" target="../../mat/mu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Householder.ecl" name="ML.Mat.Householder" target="../../mat/householder.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" name="ML.Mat.Identity" target="../../mat/identity.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Det.ecl" name="ML.Mat.Det" target="../../mat/det.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Regression/Dense/OLS_LU.ecl" name="ML.Regression.Dense.OLS_LU" target="../../regression/dense/ols_lu.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Constants.ecl" name="PBblas.Constants" target="../../../pbblas/constants.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Matrix_Map.ecl" name="PBblas.Matrix_Map" target="../../../pbblas/matrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/IMatrix_Map.ecl" name="PBblas.IMatrix_Map" target="../../../pbblas/imatrix_map.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Regression/Dense/OLS.ecl" name="ML.Regression.Dense.OLS" target="../../regression/dense/ols.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Converted.ecl" name="ML.DMat.Converted" target="../../dmat/converted.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/MakeR8Set.ecl" name="PBblas.MakeR8Set" target="../../../pbblas/maker8set.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgemm.ecl" name="PBblas.PB_dgemm" target="../../../pbblas/pb_dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dgemm.ecl" name="PBblas.BLAS.dgemm" target="../../../pbblas/blas/dgemm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dscal.ecl" name="PBblas.BLAS.dscal" target="../../../pbblas/blas/dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/daxpy.ecl" name="PBblas.BLAS.daxpy" target="../../../pbblas/blas/daxpy.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Trans.ecl" name="ML.DMat.Trans" target="../../dmat/trans.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtran.ecl" name="PBblas.PB_dtran" target="../../../pbblas/pb_dtran.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Inv.ecl" name="ML.DMat.Inv" target="../../dmat/inv.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" name="PBblas.PB_dpotrf" target="../../../pbblas/pb_dpotrf.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/LAPACK/dpotf2.ecl" name="PBblas.LAPACK.dpotf2" target="../../../pbblas/lapack/dpotf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/BLAS/dtrsm.ecl" name="PBblas.BLAS.dtrsm" target="../../../pbblas/blas/dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dtrsm.ecl" name="PBblas.PB_dtrsm" target="../../../pbblas/pb_dtrsm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/DMat/Scale.ecl" name="ML.DMat.Scale" target="../../dmat/scale.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dscal.ecl" name="PBblas.PB_dscal" target="../../../pbblas/pb_dscal.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dbvrk.ecl" name="PBblas.PB_dbvrk" target="../../../pbblas/pb_dbvrk.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dbvmm.ecl" name="PBblas.PB_dbvmm" target="../../../pbblas/pb_dbvmm.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/Block/dgetf2.ecl" name="PBblas.Block.dgetf2" target="../../../pbblas/block/dgetf2.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/PBblas/PB_dgetrf.ecl" name="PBblas.PB_dgetrf" target="../../../pbblas/pb_dgetrf.ecl.xml"/></Meta>

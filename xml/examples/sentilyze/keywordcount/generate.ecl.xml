@@ -9,17 +9,17 @@
    </Params>
    <Parents/>
    <Definition body="374" end="425" fullname="examples.sentilyze.keywordcount.generate.dtokens" inherit_type="local" line="11" name="dTokens" shared="1" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="357">
-    <Signature>dTokens</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DTOKENS">dTokens</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="445" end="480" fullname="examples.sentilyze.keywordcount.generate.dlexicon" inherit_type="local" line="12" name="dLexicon" shared="1" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="427">
-    <Signature>dLexicon</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="DLEXICON">dLexicon</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="507" end="948" exported="1" fullname="examples.sentilyze.keywordcount.generate.keywords_tfidf" inherit_type="local" line="14" name="Keywords_TFIDF" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="483">
-    <Signature>Keywords_TFIDF</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="KEYWORDS_TFIDF">Keywords_TFIDF</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>Generate(DATASET(ML.Docs.Types.Raw) T,UNSIGNED nWords=100)</Signature><Definition body="1043" end="1151" exported="1" fullname="examples.sentilyze.keywordcount.generate.keywords_mi" inherit_type="local" line="27" name="Keywords_MI" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="952">
+   <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T,UNSIGNED nWords=100)" name="GENERATE">Generate(DATASET(ML.Docs.Types.Raw) T,UNSIGNED nWords=100)</Signature><Definition body="1043" end="1151" exported="1" fullname="examples.sentilyze.keywordcount.generate.keywords_mi" inherit_type="local" line="27" name="Keywords_MI" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/KeywordCount/Generate.ecl" start="952">
     <Type>function</Type>
-    <Signature>Keywords_MI(DATASET(ML.Docs.Types.Raw) O, UNSIGNED nThreshold=0,UNSIGNED units=2)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) O, UNSIGNED nThreshold=0,UNSIGNED units=2)" name="KEYWORDS_MI">Keywords_MI(DATASET(ML.Docs.Types.Raw) O, UNSIGNED nThreshold=0,UNSIGNED units=2)</Signature><Params>
      <Param name="O"/>
      <Param name="nThreshold"/>
      <Param name="units"/>

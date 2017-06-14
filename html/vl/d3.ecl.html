@@ -1,146 +1,327 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>VL.D3</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				vl
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : XPORT D3M
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : reeTemplate(STRING sData)''+
-		'<
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : hLabels) dLabels,DATASET(VL.Types.GraphRelationships) dRelationships)FUNCTION
-    dParentLabelsJOIN(dRelationships,T
-			<ul>
+				<li>
+					<a href="chart.ecl.html">chart.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : t url(http://mbostock.github.com/d3/
-			<ul>
+				<li>
+					<a href="d3.ecl.html">d3.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : lationships)FUNCTION
-    dLReSequencedPROJECT(dLabels,TRANSFORM({RECORDOF(LEFT)UNSIGNED oldid},SELF.oldidLEFT.id
-			<ul>
+				<li>
+					<a href="google.ecl.html">google.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Relationships,VL.Styles.Default s=VL.Styles.Default)FUNCTION
-    RETURN MAP(
-      sChartType='Tree'=>OUTPUT(DATASET([{'CHARTCODE',TreeTemplate(ConvertToTree(dLabels,dRelationsh
-			<ul>
+				<li>
+					<a href="geo.ecl.html">geo.ecl</a>
+				</li>
+				
+				<li>
+					<a href="styles.ecl.html">styles.ecl</a>
+				</li>
+				
+				<li>
+					<a href="formatcartesiandata.ecl.html">formatcartesiandata.ecl</a>
+				</li>
+				
+				<li>
+					<a href="google_samples.ecl.html">google_samples.ecl</a>
+				</li>
+				
+				<li>
+					<a href="swapaxes.ecl.html">swapaxes.ecl</a>
+				</li>
+				
+				<li>
+					<a href="d3_samples.ecl.html">d3_samples.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : XPORT D3M
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : reeTemplate(STRING sData)''+
-		'<
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : hLabels) dLabels,DATASET(VL.Types.GraphRelationships) dRelationships)FUNCTION
-    dParentLabelsJOIN(dRelationships,T
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : t url(http://mbostock.github.com/d3/
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : lationships)FUNCTION
-    dLReSequencedPROJECT(dLabels,TRANSFORM({RECORDOF(LEFT)UNSIGNED oldid},SELF.oldidLEFT.id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : Relationships,VL.Styles.Default s=VL.Styles.Default)FUNCTION
-    RETURN MAP(
-      sChartType='Tree'=>OUTPUT(DATASET([{'CHARTCODE',TreeTemplate(ConvertToTree(dLabels,dRelationsh
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">VL.D3</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								vl
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-VL-D3">
+							<a href="#VL-D3" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre">XPORT</span>
+								<span class="sign-name">D3</span>
+								<span class="sign-post">:=M</span>
+							</a> -
+							<a href="#dVL-D3">Desc</a>
+							<ul id="VL-D3" class="accordian-body collapse">
+								<li id="t-vl-d3-treetemplate">
+							<a href="#vl-d3-treetemplate" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TREETEMPLATE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-d3-treetemplate">Desc</a>
+							<ul id="vl-d3-treetemplate" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-d3-converttotree">
+							<a href="#vl-d3-converttotree" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONVERTTOTREE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-d3-converttotree">Desc</a>
+							<ul id="vl-d3-converttotree" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-d3-chordtemplate">
+							<a href="#vl-d3-chordtemplate" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CHORDTEMPLATE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-d3-chordtemplate">Desc</a>
+							<ul id="vl-d3-chordtemplate" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-d3-converttochord">
+							<a href="#vl-d3-converttochord" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONVERTTOCHORD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-d3-converttochord">Desc</a>
+							<ul id="vl-d3-converttochord" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-vl-d3-graph">
+							<a href="#vl-d3-graph" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GRAPH</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dvl-d3-graph">Desc</a>
+							<ul id="vl-d3-graph" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dVL-D3">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">XPORT</span>
+									<span class="sign-name">D3</span>
+									<span class="sign-post">:=M</span>
+								</div>
+								<div class="btns">
+									<a href="#t-VL-D3" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dvl-d3-treetemplate">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TREETEMPLATE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-d3-treetemplate" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-d3-converttotree">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONVERTTOTREE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-d3-converttotree" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-d3-chordtemplate">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CHORDTEMPLATE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-d3-chordtemplate" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-d3-converttochord">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONVERTTOCHORD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-d3-converttochord" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dvl-d3-graph">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GRAPH</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-vl-d3-graph" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

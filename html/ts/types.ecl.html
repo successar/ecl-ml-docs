@@ -1,334 +1,717 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.Types</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="../pbblas/pkg.toc.html">
-				pbblas
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Types
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : t_time_ord
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_value
-			<ul>
+				<li>
+					<a href="extendedparameters.ecl.html">extendedparameters.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_value_set
-			<ul>
+				<li>
+					<a href="forecast.ecl.html">forecast.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : t_model_id
-			<ul>
+				<li>
+					<a href="diagnosis.ecl.html">diagnosis.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : UniObservation
-			<ul>
+				<li>
+					<a href="extract_ts.ecl.html">extract_ts.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ModelObs
-			<ul>
+				<li>
+					<a href="estimatedobs.ecl.html">estimatedobs.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : DecoratedObs
-			<ul>
+				<li>
+					<a href="lagcorrelations.ecl.html">lagcorrelations.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : CorrRec
-			<ul>
+				<li>
+					<a href="estimation.ecl.html">estimation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="differenceseries.ecl.html">differenceseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="demo/pkg.toc.html">demo</a>
+				</li>
+				
+				<li>
+					<a href="accumseries.ecl.html">accumseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="seriesbymodel.ecl.html">seriesbymodel.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identification.ecl.html">identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="season_adj.ecl.html">season_adj.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : PACF_ACF
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Co_efficient
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Ident_Spec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Model_Spec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Model_Parameters
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Model_Score
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Parameter_Extension
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Obs_Estimated
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Types
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : t_time_ord
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_value
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_value_set
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : t_model_id
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : UniObservation
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ModelObs
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : DecoratedObs
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : CorrRec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : PACF_ACF
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Co_efficient
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Ident_Spec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Model_Spec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Model_Parameters
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Model_Score
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Parameter_Extension
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Obs_Estimated
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.Types</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="../pbblas/pkg.toc.html">
+								pbblas
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-TS-Types">
+							<a href="#TS-Types" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TYPES</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dTS-Types">Desc</a>
+							<ul id="TS-Types" class="accordian-body collapse">
+								<li id="t-ts-types-t_time_ord">
+							<a href="#ts-types-t_time_ord" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_TIME_ORD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-t_time_ord">Desc</a>
+							<ul id="ts-types-t_time_ord" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-t_value">
+							<a href="#ts-types-t_value" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_VALUE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-t_value">Desc</a>
+							<ul id="ts-types-t_value" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-t_value_set">
+							<a href="#ts-types-t_value_set" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_VALUE_SET</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-t_value_set">Desc</a>
+							<ul id="ts-types-t_value_set" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-t_model_id">
+							<a href="#ts-types-t_model_id" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">T_MODEL_ID</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-t_model_id">Desc</a>
+							<ul id="ts-types-t_model_id" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-uniobservation">
+							<a href="#ts-types-uniobservation" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">UNIOBSERVATION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-uniobservation">Desc</a>
+							<ul id="ts-types-uniobservation" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-modelobs">
+							<a href="#ts-types-modelobs" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODELOBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-modelobs">Desc</a>
+							<ul id="ts-types-modelobs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-decoratedobs">
+							<a href="#ts-types-decoratedobs" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DECORATEDOBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-decoratedobs">Desc</a>
+							<ul id="ts-types-decoratedobs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-corrrec">
+							<a href="#ts-types-corrrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CORRREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-corrrec">Desc</a>
+							<ul id="ts-types-corrrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-pacf_acf">
+							<a href="#ts-types-pacf_acf" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PACF_ACF</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-pacf_acf">Desc</a>
+							<ul id="ts-types-pacf_acf" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-co_efficient">
+							<a href="#ts-types-co_efficient" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CO_EFFICIENT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-co_efficient">Desc</a>
+							<ul id="ts-types-co_efficient" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-ident_spec">
+							<a href="#ts-types-ident_spec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">IDENT_SPEC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-ident_spec">Desc</a>
+							<ul id="ts-types-ident_spec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-model_spec">
+							<a href="#ts-types-model_spec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_SPEC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-model_spec">Desc</a>
+							<ul id="ts-types-model_spec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-model_parameters">
+							<a href="#ts-types-model_parameters" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_PARAMETERS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-model_parameters">Desc</a>
+							<ul id="ts-types-model_parameters" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-model_score">
+							<a href="#ts-types-model_score" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODEL_SCORE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-model_score">Desc</a>
+							<ul id="ts-types-model_score" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-parameter_extension">
+							<a href="#ts-types-parameter_extension" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARAMETER_EXTENSION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-parameter_extension">Desc</a>
+							<ul id="ts-types-parameter_extension" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-types-obs_estimated">
+							<a href="#ts-types-obs_estimated" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OBS_ESTIMATED</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-types-obs_estimated">Desc</a>
+							<ul id="ts-types-obs_estimated" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dTS-Types">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TYPES</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-TS-Types" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dts-types-t_time_ord">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_TIME_ORD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-t_time_ord" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-t_value">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_VALUE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-t_value" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-t_value_set">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_VALUE_SET</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-t_value_set" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-t_model_id">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">T_MODEL_ID</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-t_model_id" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-uniobservation">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">UNIOBSERVATION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-uniobservation" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-modelobs">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODELOBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-modelobs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-decoratedobs">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DECORATEDOBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-decoratedobs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-corrrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CORRREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-corrrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-pacf_acf">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PACF_ACF</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-pacf_acf" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-co_efficient">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CO_EFFICIENT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-co_efficient" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-ident_spec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">IDENT_SPEC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-ident_spec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-model_spec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_SPEC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-model_spec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-model_parameters">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_PARAMETERS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-model_parameters" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-model_score">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODEL_SCORE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-model_score" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-parameter_extension">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARAMETER_EXTENSION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-parameter_extension" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-types-obs_estimated">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OBS_ESTIMATED</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-types-obs_estimated" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

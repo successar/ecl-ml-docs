@@ -5,44 +5,44 @@
    <Type>module</Type>
    <Definition body="157" end="316" exported="1" fullname="ml.mat.each.each_sqrt" inherit_type="local" line="6" name="Each_Sqrt" source="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" start="112">
     <Type>function</Type>
-    <Signature>Each_Sqrt(DATASET(Types.Element) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) d)" name="EACH_SQRT">Each_Sqrt(DATASET(Types.Element) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="363" end="519" exported="1" fullname="ml.mat.each.each_exp" inherit_type="local" line="14" name="Each_Exp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" start="319">
     <Type>function</Type>
-    <Signature>Each_Exp(DATASET(Types.Element) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) d)" name="EACH_EXP">Each_Exp(DATASET(Types.Element) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="565" end="721" exported="1" fullname="ml.mat.each.each_abs" inherit_type="local" line="22" name="Each_Abs" source="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" start="521">
     <Type>function</Type>
-    <Signature>Each_Abs(DATASET(Types.Element) d)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) d)" name="EACH_ABS">Each_Abs(DATASET(Types.Element) d)</Signature><Params>
      <Param name="d"/>
     </Params>
    </Definition>
    <Definition body="792" end="1122" exported="1" fullname="ml.mat.each.each_mul" inherit_type="local" line="30" name="Each_Mul" source="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" start="723">
     <Type>function</Type>
-    <Signature>Each_Mul(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) l,DATASET(Types.Element) r)" name="EACH_MUL">Each_Mul(DATASET(Types.Element) l,DATASET(Types.Element) r)</Signature><Params>
      <Param name="l"/>
      <Param name="r"/>
     </Params>
    </Definition>
    <Definition body="1210" end="1364" exported="1" fullname="ml.mat.each.each_add" inherit_type="local" line="42" name="Each_Add" source="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" start="1145">
     <Type>function</Type>
-    <Signature>Each_Add(DATASET(Types.Element) d,Types.t_Value scalar)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) d,Types.t_Value scalar)" name="EACH_ADD">Each_Add(DATASET(Types.Element) d,Types.t_Value scalar)</Signature><Params>
      <Param name="d"/>
      <Param name="scalar"/>
     </Params>
    </Definition>
    <Definition body="1469" end="1630" exported="1" fullname="ml.mat.each.each_reciprocal" inherit_type="local" line="53" name="Each_Reciprocal" source="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" start="1394">
     <Type>function</Type>
-    <Signature>Each_Reciprocal(DATASET(Types.Element) d, Types.t_Value factor=1)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) d, Types.t_Value factor=1)" name="EACH_RECIPROCAL">Each_Reciprocal(DATASET(Types.Element) d, Types.t_Value factor=1)</Signature><Params>
      <Param name="d"/>
      <Param name="factor"/>
     </Params>
    </Definition>
-   <Signature>Each</Signature><Parents/>
+   <Signature pre="" post="" name="EACH">Each</Signature><Parents/>
   </Definition>
   <Import body="0" end="41" fullname="ML.Mat" inherit_type="local" line="2" name="ML_Mat" ref="ml.mat" start="41" target="pkg.toc.xml">
    <Type>attribute</Type>

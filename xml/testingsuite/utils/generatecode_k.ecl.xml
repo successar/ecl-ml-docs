@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Utils.GenerateCode_k" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode_k.ecl" target="generatecode_k.ecl.xml">
   <Definition body="97" end="1765" exported="1" fullname="testingsuite.utils.generatecode_k" inherit_type="local" line="1" name="GenerateCode_K" source="/media/sarthak/Data/ecl-ml/TestingSuite/Utils/GenerateCode_k.ecl" start="0">
    <Type>macro</Type>
-   <Signature>GenerateCode_K(algorithm, datasetNames, clusterNumbers, performance_scores, repeat_no=1)</Signature><Params>
+   <Signature pre="" post="(algorithm, datasetNames, clusterNumbers, performance_scores, repeat_no=1)" name="GENERATECODE_K">GenerateCode_K(algorithm, datasetNames, clusterNumbers, performance_scores, repeat_no=1)</Signature><Params>
     <Param name="algorithm"/>
     <Param name="datasetNames"/>
     <Param name="clusterNumbers"/>

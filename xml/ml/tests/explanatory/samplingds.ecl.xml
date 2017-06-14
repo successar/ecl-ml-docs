@@ -12,10 +12,10 @@
    <Field name="ab1"/>
    <Field name="ab2"/>
    <Field name="ab3"/>
-   <Signature>dsRecord</Signature><Field name="ac"/>
+   <Signature pre="" post="" name="DSRECORD">dsRecord</Signature><Field name="ac"/>
   </Definition>
   <Definition body="185" end="1311" exported="1" fullname="ml.tests.explanatory.samplingds" inherit_type="local" line="10" name="samplingDS" source="/media/sarthak/Data/ecl-ml/ML/Tests/Explanatory/samplingDS.ecl" start="165">
-   <Signature>samplingDS</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="SAMPLINGDS">samplingDS</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="../../mat/types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Types.ecl" name="ML.Types" target="../../types.ecl.xml"/></Meta>

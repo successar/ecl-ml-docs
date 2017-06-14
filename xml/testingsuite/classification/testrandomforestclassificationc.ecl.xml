@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Classification.TestRandomForestClassificationC" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestRandomForestClassificationC.ecl" target="testrandomforestclassificationc.ecl.xml">
   <Definition body="253" end="3601" exported="1" fullname="testingsuite.classification.testrandomforestclassificationc" inherit_type="local" line="9" name="TestRandomForestClassificationC" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestRandomForestClassificationC.ecl" start="185">
    <Type>macro</Type>
-   <Signature>TestRandomForestClassificationC(raw_dataset_name, repeats)</Signature><Params>
+   <Signature pre="" post="(raw_dataset_name, repeats)" name="TESTRANDOMFORESTCLASSIFICATIONC">TestRandomForestClassificationC(raw_dataset_name, repeats)</Signature><Params>
     <Param name="raw_dataset_name"/>
     <Param name="repeats"/>
    </Params>

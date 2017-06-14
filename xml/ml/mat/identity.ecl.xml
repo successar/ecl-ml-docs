@@ -3,7 +3,7 @@
  <Source name="ML.Mat.Identity" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" target="identity.ecl.xml">
   <Definition body="65" end="118" exported="1" fullname="ml.mat.identity" inherit_type="local" line="3" name="Identity" source="/media/sarthak/Data/ecl-ml/ML/Mat/Identity.ecl" start="26">
    <Type>function</Type>
-   <Signature>Identity(UNSIGNED4 dimension)</Signature><Params>
+   <Signature pre="" post="(UNSIGNED4 dimension)" name="IDENTITY">Identity(UNSIGNED4 dimension)</Signature><Params>
     <Param name="dimension"/>
    </Params>
   </Definition>

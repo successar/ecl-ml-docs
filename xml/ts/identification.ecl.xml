@@ -14,7 +14,7 @@
    <Type>record</Type>
    <Field name="period"/>
    <Field name="dependent"/>
-   <Signature>ModelObs</Signature><Field name="model_id"/>
+   <Signature pre="" post="" name="MODELOBS">ModelObs</Signature><Field name="model_id"/>
   </Definition>
   <Definition body="301" end="7099" exported="1" fullname="ts.identification" inherit_type="local" line="8" name="Identification" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="185">
    <Type>module</Type>
@@ -24,10 +24,10 @@
    </Params>
    <Parents/>
    <Definition body="330" end="362" fullname="ts.identification.model_obs" inherit_type="local" line="10" name="model_obs" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="311">
-    <Signature>model_obs</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="MODEL_OBS">model_obs</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="390" end="428" fullname="ts.identification.post_difference" inherit_type="local" line="11" name="post_difference" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="365">
-    <Signature>post_difference</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="POST_DIFFERENCE">post_difference</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="447" end="606" fullname="ts.identification.lagrec" inherit_type="local" line="12" name="LagRec" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="431">
     <Type>record</Type>
@@ -36,7 +36,7 @@
     <Field name="lag_per"/>
     <Field name="v"/>
     <Field name="k"/>
-    <Signature>LagRec</Signature><Field name="N"/>
+    <Signature pre="" post="" name="LAGREC">LagRec</Signature><Field name="N"/>
    </Definition>
    <Definition body="626" end="855" fullname="ts.identification.acf_rec" inherit_type="local" line="20" name="ACF_Rec" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="609">
     <Type>record</Type>
@@ -46,31 +46,31 @@
     <Field name="ac"/>
     <Field name="sq"/>
     <Field name="sum_sq"/>
-    <Signature>ACF_Rec</Signature><Field name="N"/>
+    <Signature pre="" post="" name="ACF_REC">ACF_Rec</Signature><Field name="N"/>
    </Definition>
    <Definition body="872" end="943" fullname="ts.identification.cell" inherit_type="local" line="29" name="Cell" shared="1" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="858">
     <Type>record</Type>
     <Field name="x"/>
     <Field name="y"/>
     <Field name="v"/>
-    <Signature>Cell</Signature><Field name="model_id"/>
+    <Signature pre="" post="" name="CELL">Cell</Signature><Field name="model_id"/>
    </Definition>
    <Definition body="1083" end="6431" exported="1" fullname="ts.identification.correlations" inherit_type="local" line="33" name="Correlations" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="1021">
     <Type>function</Type>
-    <Signature>DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)</Signature><Params>
+    <Signature pre="DATASET(Types.PACF_ACF)" post="(UNSIGNED2 lags)" name="CORRELATIONS">DATASET(Types.PACF_ACF) Correlations(UNSIGNED2 lags)</Signature><Params>
      <Param name="lags"/>
     </Params>
    </Definition>
    <Definition body="6486" end="6760" exported="1" fullname="ts.identification.acf" inherit_type="local" line="165" name="ACF" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="6434">
     <Type>function</Type>
-    <Signature>DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)</Signature><Params>
+    <Signature pre="DATASET(Types.CorrRec)" post="(UNSIGNED2 lags)" name="ACF">DATASET(Types.CorrRec) ACF(UNSIGNED2 lags)</Signature><Params>
      <Param name="lags"/>
     </Params>
    </Definition>
-   <Signature>Identification(DATASET(Types.UniObservation) series,
+   <Signature pre="" post="(DATASET(Types.UniObservation) series,&#10;                      DATASET(Types.Ident_Spec) spec)" name="IDENTIFICATION">Identification(DATASET(Types.UniObservation) series,
                       DATASET(Types.Ident_Spec) spec)</Signature><Definition body="6816" end="7094" exported="1" fullname="ts.identification.pacf" inherit_type="local" line="174" name="PACF" source="/media/sarthak/Data/ecl-ml/TS/Identification.ecl" start="6763">
     <Type>function</Type>
-    <Signature>DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)</Signature><Params>
+    <Signature pre="DATASET(Types.CorrRec)" post="(UNSIGNED2 lags)" name="PACF">DATASET(Types.CorrRec) PACF(UNSIGNED2 lags)</Signature><Params>
      <Param name="lags"/>
     </Params>
    </Definition>

@@ -26,7 +26,7 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Part</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_PART">Layout_Part</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="909" end="930" fullname="pbblas.layout_target" inherit_type="local" line="23" name="Layout_Target" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="893">
    <Type>record</Type>
@@ -43,29 +43,29 @@
    <Field name="part_rows"/>
    <Field name="first_col"/>
    <Field name="part_cols"/>
-   <Signature>Layout_Target</Signature><Field name="mat_part"/>
+   <Signature pre="" post="" name="LAYOUT_TARGET">Layout_Target</Signature><Field name="mat_part"/>
   </Definition>
   <Definition body="942" end="958" inherit_type="local" line="24" name="Triangle" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="931">
-   <Signature>Triangle</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="TRIANGLE">Triangle</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="966" end="988" fullname="pbblas.upper" inherit_type="local" line="25" name="Upper" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="959">
-   <Signature>Upper</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="UPPER">Upper</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="996" end="1018" fullname="pbblas.lower" inherit_type="local" line="26" name="Lower" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="989">
-   <Signature>Lower</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="LOWER">Lower</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1030" end="1046" inherit_type="local" line="27" name="Diagonal" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="1019">
-   <Signature>Diagonal</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIAGONAL">Diagonal</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1074" end="1078" fullname="pbblas.empty_mat" inherit_type="local" line="28" name="empty_mat" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="1047">
-   <Signature>Types.matrix_t empty_mat</Signature><Type>attribute</Type>
+   <Signature pre="Types.matrix_t" post="" name="EMPTY_MAT">Types.matrix_t empty_mat</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1093" end="1112" fullname="pbblas.dimension_t" inherit_type="local" line="29" name="dimension_t" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="1079">
-   <Signature>dimension_t</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="DIMENSION_T">dimension_t</Signature><Type>attribute</Type>
   </Definition>
   <Definition body="1190" end="6805" exported="1" fullname="pbblas.pb_dpotrf" inherit_type="local" line="31" name="PB_dpotrf" source="/media/sarthak/Data/ecl-ml/PBblas/PB_dpotrf.ecl" start="1114">
    <Type>function</Type>
-   <Signature>PB_dpotrf(Triangle tri, IMatrix_Map map_a, DATASET(Layout_Part) A)</Signature><Params>
+   <Signature pre="" post="(Triangle tri, IMatrix_Map map_a, DATASET(Layout_Part) A)" name="PB_DPOTRF">PB_dpotrf(Triangle tri, IMatrix_Map map_a, DATASET(Layout_Part) A)</Signature><Params>
     <Param name="tri"/>
     <Param name="map_a"/>
     <Param name="A"/>

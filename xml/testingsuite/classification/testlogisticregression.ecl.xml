@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Classification.TestLogisticRegression" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestLogisticRegression.ecl" target="testlogisticregression.ecl.xml">
   <Definition body="217" end="2944" exported="1" fullname="testingsuite.classification.testlogisticregression" inherit_type="local" line="9" name="TestLogisticRegression" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/TestLogisticRegression.ecl" start="158">
    <Type>macro</Type>
-   <Signature>TestLogisticRegression(raw_dataset_name, repeats)</Signature><Params>
+   <Signature pre="" post="(raw_dataset_name, repeats)" name="TESTLOGISTICREGRESSION">TestLogisticRegression(raw_dataset_name, repeats)</Signature><Params>
     <Param name="raw_dataset_name"/>
     <Param name="repeats"/>
    </Params>

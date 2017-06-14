@@ -3,7 +3,7 @@
  <Source name="TestingSuite.Regression.TestLinearRegression" sourcePath="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/TestLinearRegression.ecl" target="testlinearregression.ecl.xml">
   <Definition body="220" end="2066" exported="1" fullname="testingsuite.regression.testlinearregression" inherit_type="local" line="8" name="TestLinearRegression" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/TestLinearRegression.ecl" start="158">
    <Type>macro</Type>
-   <Signature>TestLinearRegression(raw_dataset_name, ground_truth)</Signature><Params>
+   <Signature pre="" post="(raw_dataset_name, ground_truth)" name="TESTLINEARREGRESSION">TestLinearRegression(raw_dataset_name, ground_truth)</Signature><Params>
     <Param name="raw_dataset_name"/>
     <Param name="ground_truth"/>
    </Params>

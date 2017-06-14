@@ -9,11 +9,11 @@
   </Import>
   <Definition body="78" end="150" fullname="ml.mat.produce_random" inherit_type="local" line="6" name="Produce_Random" source="/media/sarthak/Data/ecl-ml/ML/Mat/RandMat.ecl" start="58">
    <Type>function</Type>
-   <Signature>Produce_Random ()</Signature><Params/>
+   <Signature pre="" post="()" name="PRODUCE_RANDOM">Produce_Random ()</Signature><Params/>
   </Definition>
   <Definition body="343" end="712" exported="1" fullname="ml.mat.randmat" inherit_type="local" line="19" name="RandMat" source="/media/sarthak/Data/ecl-ml/ML/Mat/RandMat.ecl" start="274">
    <Type>function</Type>
-   <Signature>RandMat (UNSIGNED Nrows, UNSIGNED NCols, REAL8 density=1.0)</Signature><Params>
+   <Signature pre="" post="(UNSIGNED Nrows, UNSIGNED NCols, REAL8 density=1.0)" name="RANDMAT">RandMat (UNSIGNED Nrows, UNSIGNED NCols, REAL8 density=1.0)</Signature><Params>
     <Param name="Nrows"/>
     <Param name="NCols"/>
     <Param name="density"/>

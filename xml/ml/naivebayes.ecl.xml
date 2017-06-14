@@ -8,14 +8,14 @@
   <Definition body="58" end="22531" exported="1" fullname="ML.NaiveBayes" inherit_type="local" line="4" name="NaiveBayes" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="38">
    <Type>module</Type>
    <Definition body="123" end="138" fullname="ml.naivebayes.base" inherit_type="local" line="6" name="Base" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="109">
-    <Signature>Base</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BASE">Base</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="167" end="170" fullname="ml.naivebayes.samplecorrection" inherit_type="local" line="7" name="SampleCorrection" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="141">
-    <Signature>SampleCorrection</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="SAMPLECORRECTION">SampleCorrection</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="199" end="215" fullname="ml.naivebayes.logscale" inherit_type="local" line="8" name="LogScale" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="173">
     <Type>function</Type>
-    <Signature>LogScale(REAL P)</Signature><Params>
+    <Signature pre="" post="(REAL P)" name="LOGSCALE">LogScale(REAL P)</Signature><Params>
      <Param name="P"/>
     </Params>
    </Definition>
@@ -23,7 +23,7 @@
     <Type>record</Type>
     <Field name="class_number"/>
     <Field name="c"/>
-    <Signature>ClassifierFeatureClass</Signature><Field name="number"/>
+    <Signature pre="" post="" name="CLASSIFIERFEATURECLASS">ClassifierFeatureClass</Signature><Field name="number"/>
    </Definition>
    <Definition body="526" end="738" fullname="ml.naivebayes.bayesresult" inherit_type="local" line="15" name="BayesResult" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="505">
     <Type>record</Type>
@@ -31,7 +31,7 @@
     <Field name="class_number"/>
     <Field name="c"/>
     <Field name="number"/>
-    <Signature>BayesResult</Signature><Field name="Support"/>
+    <Signature pre="" post="" name="BAYESRESULT">BayesResult</Signature><Field name="Support"/>
    </Definition>
    <Definition body="763" end="992" fullname="ml.naivebayes.bayesresultd" inherit_type="local" line="20" name="BayesResultD" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="741">
     <Type>record</Type>
@@ -41,7 +41,7 @@
     <Field name="number"/>
     <Field name="Support"/>
     <Field name="f"/>
-    <Signature>BayesResultD</Signature><Field name="PC"/>
+    <Signature pre="" post="" name="BAYESRESULTD">BayesResultD</Signature><Field name="PC"/>
    </Definition>
    <Definition body="1017" end="1227" fullname="ml.naivebayes.bayesresultc" inherit_type="local" line="24" name="BayesResultC" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="995">
     <Type>record</Type>
@@ -51,14 +51,14 @@
     <Field name="number"/>
     <Field name="Support"/>
     <Field name="mu"/>
-    <Signature>BayesResultC</Signature><Field name="var"/>
+    <Signature pre="" post="" name="BAYESRESULTC">BayesResultC</Signature><Field name="var"/>
    </Definition>
    <Definition body="1247" end="1313" fullname="ml.naivebayes.tripled" inherit_type="local" line="28" name="TripleD" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="1230">
     <Type>record</Type>
     <Field name="class_number"/>
     <Field name="c"/>
     <Field name="number"/>
-    <Signature>TripleD</Signature><Field name="f"/>
+    <Signature pre="" post="" name="TRIPLED">TripleD</Signature><Field name="f"/>
    </Definition>
    <Definition body="1386" end="1517" fullname="ml.naivebayes.form" inherit_type="local" line="32" name="form" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="1316">
     <Type>transform</Type>
@@ -66,7 +66,7 @@
      <Param name="le"/>
      <Param name="ri"/>
     </Params>
-    <Signature>TripleD form(Types.DiscreteField le, Types.DiscreteField ri)</Signature><Return>tripled</Return>
+    <Signature pre="TripleD" post="(Types.DiscreteField le, Types.DiscreteField ri)" name="FORM">TripleD form(Types.DiscreteField le, Types.DiscreteField ri)</Signature><Return>tripled</Return>
    </Definition>
    <Definition body="1540" end="1599" fullname="ml.naivebayes.aggtripled" inherit_type="local" line="38" name="AggTripleD" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="1520">
     <Type>record</Type>
@@ -74,11 +74,11 @@
     <Field name="c"/>
     <Field name="number"/>
     <Field name="f"/>
-    <Signature>AggTripleD</Signature><Field name="support"/>
+    <Signature pre="" post="" name="AGGTRIPLED">AggTripleD</Signature><Field name="support"/>
    </Definition>
    <Definition body="1704" end="2070" fullname="ml.naivebayes.fatvalscount" inherit_type="local" line="42" name="FatValsCount" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="1602">
     <Type>function</Type>
-    <Signature>AggTripleD FatValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
+    <Signature pre="AggTripleD" post="(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)" name="FATVALSCOUNT">AggTripleD FatValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
     </Params>
@@ -87,11 +87,11 @@
     <Type>record</Type>
     <Field name="number"/>
     <Field name="value"/>
-    <Signature>clCnt_Rec</Signature><Field name="Support"/>
+    <Signature pre="" post="" name="CLCNT_REC">clCnt_Rec</Signature><Field name="Support"/>
    </Definition>
    <Definition body="2366" end="3348" fullname="ml.naivebayes.sparsevalscount" inherit_type="local" line="53" name="SparseValsCount" shared="1" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="2202">
     <Type>function</Type>
-    <Signature>AggTripleD SparseValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(clCnt_Rec) CTotals, Types.t_discrete defValue = 0)</Signature><Params>
+    <Signature pre="AggTripleD" post="(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(clCnt_Rec) CTotals, Types.t_discrete defValue = 0)" name="SPARSEVALSCOUNT">AggTripleD SparseValsCount(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, DATASET(clCnt_Rec) CTotals, Types.t_discrete defValue = 0)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
      <Param name="CTotals"/>
@@ -100,7 +100,7 @@
    </Definition>
    <Definition body="3610" end="8497" exported="1" fullname="ml.naivebayes.learnd" inherit_type="local" line="66" name="LearnD" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="3434">
     <Type>function</Type>
-    <Signature>LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)" name="LEARND">LearnD(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
      <Param name="IgnoreMissing"/>
@@ -110,13 +110,13 @@
    </Definition>
    <Definition body="8634" end="8702" exported="1" fullname="ml.naivebayes.model" inherit_type="local" line="147" name="Model" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="8586">
     <Type>function</Type>
-    <Signature>Model(DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="MODEL">Model(DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="14374" end="15724" exported="1" fullname="ml.naivebayes.classprobdistribd" inherit_type="local" line="232" name="ClassProbDistribD" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="14188">
     <Type>function</Type>
-    <Signature>ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)" name="CLASSPROBDISTRIBD">ClassProbDistribD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)</Signature><Params>
      <Param name="Indep"/>
      <Param name="mod"/>
      <Param name="IgnoreMissing"/>
@@ -126,7 +126,7 @@
    </Definition>
    <Definition body="15975" end="16300" exported="1" fullname="ml.naivebayes.classifyd" inherit_type="local" line="252" name="ClassifyD" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="15798">
     <Type>function</Type>
-    <Signature>ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)" name="CLASSIFYD">ClassifyD(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod, BOOLEAN IgnoreMissing = FALSE, BOOLEAN SparseData = FALSE, Types.t_discrete defValue = 0)</Signature><Params>
      <Param name="Indep"/>
      <Param name="mod"/>
      <Param name="IgnoreMissing"/>
@@ -136,32 +136,32 @@
    </Definition>
    <Definition body="17092" end="18996" exported="1" fullname="ml.naivebayes.learnc" inherit_type="local" line="266" name="LearnC" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="17007">
     <Type>function</Type>
-    <Signature>LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)" name="LEARNC">LearnC(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep)</Signature><Params>
      <Param name="Indep"/>
      <Param name="Dep"/>
     </Params>
    </Definition>
    <Definition body="19135" end="19203" exported="1" fullname="ml.naivebayes.modelc" inherit_type="local" line="312" name="ModelC" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="19086">
     <Type>function</Type>
-    <Signature>ModelC(DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) mod)" name="MODELC">ModelC(DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="19301" end="22076" exported="1" fullname="ml.naivebayes.classprobdistribc" inherit_type="local" line="316" name="ClassProbDistribC" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="19206">
     <Type>function</Type>
-    <Signature>ClassProbDistribC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)" name="CLASSPROBDISTRIBC">ClassProbDistribC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="mod"/>
     </Params>
    </Definition>
    <Definition body="22238" end="22526" exported="1" fullname="ml.naivebayes.classifyc" inherit_type="local" line="365" name="ClassifyC" source="/media/sarthak/Data/ecl-ml/ML/NaiveBayes.ecl" start="22152">
     <Type>function</Type>
-    <Signature>ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)" name="CLASSIFYC">ClassifyC(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</Signature><Params>
      <Param name="Indep"/>
      <Param name="mod"/>
     </Params>
    </Definition>
-   <Signature>NaiveBayes</Signature><Parents/>
+   <Signature pre="" post="" name="NAIVEBAYES">NaiveBayes</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

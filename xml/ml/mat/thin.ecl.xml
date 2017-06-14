@@ -3,7 +3,7 @@
  <Source name="ML.Mat.Thin" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Thin.ecl" target="thin.ecl.xml">
   <Definition body="324" end="481" exported="1" fullname="ml.mat.thin" inherit_type="local" line="6" name="Thin" source="/media/sarthak/Data/ecl-ml/ML/Mat/Thin.ecl" start="284">
    <Type>function</Type>
-   <Signature>Thin(DATASET(Types.Element) d)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) d)" name="THIN">Thin(DATASET(Types.Element) d)</Signature><Params>
     <Param name="d"/>
    </Params>
   </Definition>

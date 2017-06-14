@@ -1,224 +1,453 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>Examples.Sentilyze.PreProcess</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				examples.sentilyze
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
-				std.str
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="../../ml/pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : PreProcess
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			FUNCTION : RemoveFeatures(STRING tweet)
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="preprocess.ecl.html">preprocess.ecl</a>
+				</li>
+				
+				<li>
+					<a href="naivebayes/pkg.toc.html">naivebayes</a>
+				</li>
+				
+				<li>
+					<a href="keywordcount/pkg.toc.html">keywordcount</a>
+				</li>
+				
+				<li>
+					<a href="strings.ecl.html">strings.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ReplaceFeatures(STRING tweet)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RemoveRT(DATASET(ML.Docs.Types.Raw) T)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RemoveBlank(DATASET(ML.Docs.Types.Raw) T)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ConvertToRaw(DATASET(Sentilyze.Types.TweetType) T)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RemoveAnalysis(DATASET(ML.Docs.Types.Raw) T)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ReplaceAnalysis(DATASET(ML.Docs.Types.Raw) T)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RemoveTraining(DATASET(ML.Docs.Types.Raw) T)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ReplaceTraining(DATASET(ML.Docs.Types.Raw) T)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : PreProcess
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	FUNCTION : RemoveFeatures(STRING tweet)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ReplaceFeatures(STRING tweet)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RemoveRT(DATASET(ML.Docs.Types.Raw) T)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RemoveBlank(DATASET(ML.Docs.Types.Raw) T)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ConvertToRaw(DATASET(Sentilyze.Types.TweetType) T)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RemoveAnalysis(DATASET(ML.Docs.Types.Raw) T)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ReplaceAnalysis(DATASET(ML.Docs.Types.Raw) T)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RemoveTraining(DATASET(ML.Docs.Types.Raw) T)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ReplaceTraining(DATASET(ML.Docs.Types.Raw) T)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">Examples.Sentilyze.PreProcess</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								examples.sentilyze
+							</a>
+							</li>
+						<li>
+							<a href="/home/sarthak/runtime/opt/HPCCSystems/6.5.0/clienttools/share/ecllibrary/std/Str.ecl">
+								std.str
+							</a>
+							</li>
+						<li>
+							<a href="../../ml/pkg.toc.html">
+								ml
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-Examples-Sentilyze-PreProcess">
+							<a href="#Examples-Sentilyze-PreProcess" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PREPROCESS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dExamples-Sentilyze-PreProcess">Desc</a>
+							<ul id="Examples-Sentilyze-PreProcess" class="accordian-body collapse">
+								<li id="t-examples-sentilyze-preprocess-removefeatures">
+							<a href="#examples-sentilyze-preprocess-removefeatures" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REMOVEFEATURES</span>
+								<span class="sign-post">(STRING tweet)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-removefeatures">Desc</a>
+							<ul id="examples-sentilyze-preprocess-removefeatures" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-replacefeatures">
+							<a href="#examples-sentilyze-preprocess-replacefeatures" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REPLACEFEATURES</span>
+								<span class="sign-post">(STRING tweet)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-replacefeatures">Desc</a>
+							<ul id="examples-sentilyze-preprocess-replacefeatures" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-removert">
+							<a href="#examples-sentilyze-preprocess-removert" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REMOVERT</span>
+								<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-removert">Desc</a>
+							<ul id="examples-sentilyze-preprocess-removert" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-removeblank">
+							<a href="#examples-sentilyze-preprocess-removeblank" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REMOVEBLANK</span>
+								<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-removeblank">Desc</a>
+							<ul id="examples-sentilyze-preprocess-removeblank" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-converttoraw">
+							<a href="#examples-sentilyze-preprocess-converttoraw" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CONVERTTORAW</span>
+								<span class="sign-post">(DATASET(Sentilyze.Types.TweetType) T)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-converttoraw">Desc</a>
+							<ul id="examples-sentilyze-preprocess-converttoraw" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-removeanalysis">
+							<a href="#examples-sentilyze-preprocess-removeanalysis" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REMOVEANALYSIS</span>
+								<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-removeanalysis">Desc</a>
+							<ul id="examples-sentilyze-preprocess-removeanalysis" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-replaceanalysis">
+							<a href="#examples-sentilyze-preprocess-replaceanalysis" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REPLACEANALYSIS</span>
+								<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-replaceanalysis">Desc</a>
+							<ul id="examples-sentilyze-preprocess-replaceanalysis" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-removetraining">
+							<a href="#examples-sentilyze-preprocess-removetraining" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REMOVETRAINING</span>
+								<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-removetraining">Desc</a>
+							<ul id="examples-sentilyze-preprocess-removetraining" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-examples-sentilyze-preprocess-replacetraining">
+							<a href="#examples-sentilyze-preprocess-replacetraining" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REPLACETRAINING</span>
+								<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+							</a> -
+							<a href="#dexamples-sentilyze-preprocess-replacetraining">Desc</a>
+							<ul id="examples-sentilyze-preprocess-replacetraining" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dExamples-Sentilyze-PreProcess">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PREPROCESS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-Examples-Sentilyze-PreProcess" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-removefeatures">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REMOVEFEATURES</span>
+									<span class="sign-post">(STRING tweet)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-removefeatures" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-replacefeatures">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REPLACEFEATURES</span>
+									<span class="sign-post">(STRING tweet)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-replacefeatures" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-removert">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REMOVERT</span>
+									<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-removert" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-removeblank">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REMOVEBLANK</span>
+									<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-removeblank" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-converttoraw">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CONVERTTORAW</span>
+									<span class="sign-post">(DATASET(Sentilyze.Types.TweetType) T)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-converttoraw" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-removeanalysis">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REMOVEANALYSIS</span>
+									<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-removeanalysis" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-replaceanalysis">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REPLACEANALYSIS</span>
+									<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-replaceanalysis" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-removetraining">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REMOVETRAINING</span>
+									<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-removetraining" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dexamples-sentilyze-preprocess-replacetraining">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REPLACETRAINING</span>
+									<span class="sign-post">(DATASET(ML.Docs.Types.Raw) T)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-examples-sentilyze-preprocess-replacetraining" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

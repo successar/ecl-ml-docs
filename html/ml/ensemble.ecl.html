@@ -1,648 +1,1384 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Ensemble</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Ensemble
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : modelD_Map
-			<ul>
+				<li>
+					<a href="nearestneighborssearch.ecl.html">nearestneighborssearch.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : STRING modelD_fields
-			<ul>
+				<li>
+					<a href="ensemble.ecl.html">ensemble.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : modelC_Map
-			<ul>
+				<li>
+					<a href="sampling.ecl.html">sampling.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : STRING modelC_fields
-			<ul>
+				<li>
+					<a href="mat/pkg.toc.html">mat</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : gSplitD
-			<ul>
+				<li>
+					<a href="appendid.ecl.html">appendid.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : gSplitC
-			<ul>
+				<li>
+					<a href="regression/pkg.toc.html">regression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : gNodeInstDisc
-			<ul>
+				<li>
+					<a href="lsa/pkg.toc.html">lsa</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : gNodeThin
-			<ul>
+				<li>
+					<a href="config.ecl.html">config.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : gNodeInstCont
-			<ul>
+				<li>
+					<a href="naivebayes.ecl.html">naivebayes.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : DepGroupedRec
-			<ul>
+				<li>
+					<a href="classify.ecl.html">classify.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : DepGroupedRec GroupDepRecords (Types.DiscreteField l, ML.Sampling.idListGroupRec r)
-			<ul>
+				<li>
+					<a href="stepregression/pkg.toc.html">stepregression</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : gNodexKoutofM(DATASET(gNodeThin) topNodes, Types.t_FieldNumber K, Types.t_FieldNumber M)
-			<ul>
+				<li>
+					<a href="populationestimate.ecl.html">populationestimate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : NxKoutofM(Types.t_Count N, Types.t_FieldNumber K, Types.t_FieldNumber M)
-			<ul>
+				<li>
+					<a href="svm/pkg.toc.html">svm</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.DiscreteField GetDRecords(Types.DiscreteField l, ML.Sampling.idListGroupRec r)
-			<ul>
+				<li>
+					<a href="version.ecl.html">version.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : gNodeInstDisc GenerateRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
-			<ul>
+				<li>
+					<a href="generate.ecl.html">generate.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : gNodeInstCont GenerateCRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
-			<ul>
+				<li>
+					<a href="docs/pkg.toc.html">docs</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : gSplitD toNewDiscNode(gNodeInstDisc NodeInst)
-			<ul>
+				<li>
+					<a href="nfoldcrossvalidation.ecl.html">nfoldcrossvalidation.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : Types.NumericField GetCRecords(Types.NumericField l, ML.Sampling.idListGroupRec r)
-			<ul>
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
 				
-			</ul>
-		</li>
-		
-		<li>
-			TRANSFORM : gSplitC toNewContNode(gNodeInstCont NodeInst)
-			<ul>
+				<li>
+					<a href="tests/pkg.toc.html">tests</a>
+				</li>
+				
+				<li>
+					<a href="stepwiselogistic/pkg.toc.html">stepwiselogistic</a>
+				</li>
+				
+				<li>
+					<a href="cluster.ecl.html">cluster.ecl</a>
+				</li>
+				
+				<li>
+					<a href="fromfield.ecl.html">fromfield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lazy.ecl.html">lazy.ecl</a>
+				</li>
+				
+				<li>
+					<a href="correlate.ecl.html">correlate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="associate.ecl.html">associate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="tofield.ecl.html">tofield.ecl</a>
+				</li>
+				
+				<li>
+					<a href="neuralnetworks.ecl.html">neuralnetworks.ecl</a>
+				</li>
+				
+				<li>
+					<a href="discretize.ecl.html">discretize.ecl</a>
+				</li>
+				
+				<li>
+					<a href="deeplearning.ecl.html">deeplearning.ecl</a>
+				</li>
+				
+				<li>
+					<a href="utils.ecl.html">utils.ecl</a>
+				</li>
+				
+				<li>
+					<a href="distribution.ecl.html">distribution.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trees.ecl.html">trees.ecl</a>
+				</li>
+				
+				<li>
+					<a href="regress_poly_x.ecl.html">regress_poly_x.ecl</a>
+				</li>
+				
+				<li>
+					<a href="dmat/pkg.toc.html">dmat</a>
+				</li>
+				
+				<li>
+					<a href="fieldaggregates.ecl.html">fieldaggregates.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitFeatureSampleGI(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitFeatureSampleIGR(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, Types.t_level maxLevel=32)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromDiscreteForest(DATASET(ML.Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToDiscreteForest(DATASET(gSplitD) nodes)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : gSplitInstancesD(DATASET(gSplitD) mod, DATASET(Types.DiscreteField) Indep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassProbDistribForestD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyDForest(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : RndFeatSelBinPartitionGIBased(DATASET(gNodeInstCont) nodes, Types.t_Count nTrees, Types.t_Count kFeatSel, Types.t_Count mTotFeats, Types.t_Count p_level, REAL Purity=1.0)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : SplitFeatureSampleGIBin(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ToContinuosForest(DATASET(gSplitC) nodes)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : FromContinuosForest(DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : gSplitInstC(DATASET(gSplitC) mod, DATASET(Types.NumericField) Indep)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassProbDistribForestC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : ClassifyCForest(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Ensemble
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : modelD_Map
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : STRING modelD_fields
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : modelC_Map
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : STRING modelC_fields
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : gSplitD
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : gSplitC
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : gNodeInstDisc
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : gNodeThin
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : gNodeInstCont
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : DepGroupedRec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : DepGroupedRec GroupDepRecords (Types.DiscreteField l, ML.Sampling.idListGroupRec r)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : gNodexKoutofM(DATASET(gNodeThin) topNodes, Types.t_FieldNumber K, Types.t_FieldNumber M)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : NxKoutofM(Types.t_Count N, Types.t_FieldNumber K, Types.t_FieldNumber M)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.DiscreteField GetDRecords(Types.DiscreteField l, ML.Sampling.idListGroupRec r)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : gNodeInstDisc GenerateRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : gNodeInstCont GenerateCRoots(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : gSplitD toNewDiscNode(gNodeInstDisc NodeInst)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : Types.NumericField GetCRecords(Types.NumericField l, ML.Sampling.idListGroupRec r)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	TRANSFORM : gSplitC toNewContNode(gNodeInstCont NodeInst)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitFeatureSampleGI(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitFeatureSampleIGR(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, Types.t_level maxLevel=32)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromDiscreteForest(DATASET(ML.Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToDiscreteForest(DATASET(gSplitD) nodes)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : gSplitInstancesD(DATASET(gSplitD) mod, DATASET(Types.DiscreteField) Indep)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassProbDistribForestD(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyDForest(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : RndFeatSelBinPartitionGIBased(DATASET(gNodeInstCont) nodes, Types.t_Count nTrees, Types.t_Count kFeatSel, Types.t_Count mTotFeats, Types.t_Count p_level, REAL Purity=1.0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : SplitFeatureSampleGIBin(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ToContinuosForest(DATASET(gSplitC) nodes)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : FromContinuosForest(DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : gSplitInstC(DATASET(gSplitC) mod, DATASET(Types.NumericField) Indep)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassProbDistribForestC(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : ClassifyCForest(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Ensemble</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ML-Ensemble">
+							<a href="#ML-Ensemble" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ENSEMBLE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Ensemble">Desc</a>
+							<ul id="ML-Ensemble" class="accordian-body collapse">
+								<li id="t-ml-ensemble-modeld_map">
+							<a href="#ml-ensemble-modeld_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODELD_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-modeld_map">Desc</a>
+							<ul id="ml-ensemble-modeld_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-modeld_fields">
+							<a href="#ml-ensemble-modeld_fields" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">STRING</span>
+								<span class="sign-name">MODELD_FIELDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-modeld_fields">Desc</a>
+							<ul id="ml-ensemble-modeld_fields" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-modelc_map">
+							<a href="#ml-ensemble-modelc_map" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODELC_MAP</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-modelc_map">Desc</a>
+							<ul id="ml-ensemble-modelc_map" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-modelc_fields">
+							<a href="#ml-ensemble-modelc_fields" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">STRING</span>
+								<span class="sign-name">MODELC_FIELDS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-modelc_fields">Desc</a>
+							<ul id="ml-ensemble-modelc_fields" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gsplitd">
+							<a href="#ml-ensemble-gsplitd" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GSPLITD</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-gsplitd">Desc</a>
+							<ul id="ml-ensemble-gsplitd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gsplitc">
+							<a href="#ml-ensemble-gsplitc" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GSPLITC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-gsplitc">Desc</a>
+							<ul id="ml-ensemble-gsplitc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gnodeinstdisc">
+							<a href="#ml-ensemble-gnodeinstdisc" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GNODEINSTDISC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-gnodeinstdisc">Desc</a>
+							<ul id="ml-ensemble-gnodeinstdisc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gnodethin">
+							<a href="#ml-ensemble-gnodethin" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GNODETHIN</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-gnodethin">Desc</a>
+							<ul id="ml-ensemble-gnodethin" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gnodeinstcont">
+							<a href="#ml-ensemble-gnodeinstcont" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GNODEINSTCONT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-gnodeinstcont">Desc</a>
+							<ul id="ml-ensemble-gnodeinstcont" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-depgroupedrec">
+							<a href="#ml-ensemble-depgroupedrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEPGROUPEDREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-ensemble-depgroupedrec">Desc</a>
+							<ul id="ml-ensemble-depgroupedrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-groupdeprecords">
+							<a href="#ml-ensemble-groupdeprecords" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">DepGroupedRec</span>
+								<span class="sign-name">GROUPDEPRECORDS</span>
+								<span class="sign-post">(Types.DiscreteField l, ML.Sampling.idListGroupRec r)</span>
+							</a> -
+							<a href="#dml-ensemble-groupdeprecords">Desc</a>
+							<ul id="ml-ensemble-groupdeprecords" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gnodexkoutofm">
+							<a href="#ml-ensemble-gnodexkoutofm" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GNODEXKOUTOFM</span>
+								<span class="sign-post">(DATASET(gNodeThin) topNodes, Types.t_FieldNumber K, Types.t_FieldNumber M)</span>
+							</a> -
+							<a href="#dml-ensemble-gnodexkoutofm">Desc</a>
+							<ul id="ml-ensemble-gnodexkoutofm" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-nxkoutofm">
+							<a href="#ml-ensemble-nxkoutofm" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">NXKOUTOFM</span>
+								<span class="sign-post">(Types.t_Count N, Types.t_FieldNumber K, Types.t_FieldNumber M)</span>
+							</a> -
+							<a href="#dml-ensemble-nxkoutofm">Desc</a>
+							<ul id="ml-ensemble-nxkoutofm" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-getdrecords">
+							<a href="#ml-ensemble-getdrecords" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.DiscreteField</span>
+								<span class="sign-name">GETDRECORDS</span>
+								<span class="sign-post">(Types.DiscreteField l, ML.Sampling.idListGroupRec r)</span>
+							</a> -
+							<a href="#dml-ensemble-getdrecords">Desc</a>
+							<ul id="ml-ensemble-getdrecords" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-generateroots">
+							<a href="#ml-ensemble-generateroots" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">gNodeInstDisc</span>
+								<span class="sign-name">GENERATEROOTS</span>
+								<span class="sign-post">(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)</span>
+							</a> -
+							<a href="#dml-ensemble-generateroots">Desc</a>
+							<ul id="ml-ensemble-generateroots" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-generatecroots">
+							<a href="#ml-ensemble-generatecroots" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">gNodeInstCont</span>
+								<span class="sign-name">GENERATECROOTS</span>
+								<span class="sign-post">(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)</span>
+							</a> -
+							<a href="#dml-ensemble-generatecroots">Desc</a>
+							<ul id="ml-ensemble-generatecroots" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-tonewdiscnode">
+							<a href="#ml-ensemble-tonewdiscnode" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">gSplitD</span>
+								<span class="sign-name">TONEWDISCNODE</span>
+								<span class="sign-post">(gNodeInstDisc NodeInst)</span>
+							</a> -
+							<a href="#dml-ensemble-tonewdiscnode">Desc</a>
+							<ul id="ml-ensemble-tonewdiscnode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-getcrecords">
+							<a href="#ml-ensemble-getcrecords" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">Types.NumericField</span>
+								<span class="sign-name">GETCRECORDS</span>
+								<span class="sign-post">(Types.NumericField l, ML.Sampling.idListGroupRec r)</span>
+							</a> -
+							<a href="#dml-ensemble-getcrecords">Desc</a>
+							<ul id="ml-ensemble-getcrecords" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-tonewcontnode">
+							<a href="#ml-ensemble-tonewcontnode" data-toggle="collapse">
+								TRANSFORM :
+								<span class="sign-pre">gSplitC</span>
+								<span class="sign-name">TONEWCONTNODE</span>
+								<span class="sign-post">(gNodeInstCont NodeInst)</span>
+							</a> -
+							<a href="#dml-ensemble-tonewcontnode">Desc</a>
+							<ul id="ml-ensemble-tonewcontnode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-splitfeaturesamplegi">
+							<a href="#ml-ensemble-splitfeaturesamplegi" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITFEATURESAMPLEGI</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)</span>
+							</a> -
+							<a href="#dml-ensemble-splitfeaturesamplegi">Desc</a>
+							<ul id="ml-ensemble-splitfeaturesamplegi" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-splitfeaturesampleigr">
+							<a href="#ml-ensemble-splitfeaturesampleigr" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITFEATURESAMPLEIGR</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, Types.t_level maxLevel=32)</span>
+							</a> -
+							<a href="#dml-ensemble-splitfeaturesampleigr">Desc</a>
+							<ul id="ml-ensemble-splitfeaturesampleigr" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-fromdiscreteforest">
+							<a href="#ml-ensemble-fromdiscreteforest" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMDISCRETEFOREST</span>
+								<span class="sign-post">(DATASET(ML.Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-ensemble-fromdiscreteforest">Desc</a>
+							<ul id="ml-ensemble-fromdiscreteforest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-todiscreteforest">
+							<a href="#ml-ensemble-todiscreteforest" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TODISCRETEFOREST</span>
+								<span class="sign-post">(DATASET(gSplitD) nodes)</span>
+							</a> -
+							<a href="#dml-ensemble-todiscreteforest">Desc</a>
+							<ul id="ml-ensemble-todiscreteforest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gsplitinstancesd">
+							<a href="#ml-ensemble-gsplitinstancesd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GSPLITINSTANCESD</span>
+								<span class="sign-post">(DATASET(gSplitD) mod, DATASET(Types.DiscreteField) Indep)</span>
+							</a> -
+							<a href="#dml-ensemble-gsplitinstancesd">Desc</a>
+							<ul id="ml-ensemble-gsplitinstancesd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-classprobdistribforestd">
+							<a href="#ml-ensemble-classprobdistribforestd" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSPROBDISTRIBFORESTD</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-ensemble-classprobdistribforestd">Desc</a>
+							<ul id="ml-ensemble-classprobdistribforestd" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-classifydforest">
+							<a href="#ml-ensemble-classifydforest" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYDFOREST</span>
+								<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-ensemble-classifydforest">Desc</a>
+							<ul id="ml-ensemble-classifydforest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-rndfeatselbinpartitiongibased">
+							<a href="#ml-ensemble-rndfeatselbinpartitiongibased" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RNDFEATSELBINPARTITIONGIBASED</span>
+								<span class="sign-post">(DATASET(gNodeInstCont) nodes, Types.t_Count nTrees, Types.t_Count kFeatSel, Types.t_Count mTotFeats, Types.t_Count p_level, REAL Purity=1.0)</span>
+							</a> -
+							<a href="#dml-ensemble-rndfeatselbinpartitiongibased">Desc</a>
+							<ul id="ml-ensemble-rndfeatselbinpartitiongibased" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-splitfeaturesamplegibin">
+							<a href="#ml-ensemble-splitfeaturesamplegibin" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SPLITFEATURESAMPLEGIBIN</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)</span>
+							</a> -
+							<a href="#dml-ensemble-splitfeaturesamplegibin">Desc</a>
+							<ul id="ml-ensemble-splitfeaturesamplegibin" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-tocontinuosforest">
+							<a href="#ml-ensemble-tocontinuosforest" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">TOCONTINUOSFOREST</span>
+								<span class="sign-post">(DATASET(gSplitC) nodes)</span>
+							</a> -
+							<a href="#dml-ensemble-tocontinuosforest">Desc</a>
+							<ul id="ml-ensemble-tocontinuosforest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-fromcontinuosforest">
+							<a href="#ml-ensemble-fromcontinuosforest" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">FROMCONTINUOSFOREST</span>
+								<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-ensemble-fromcontinuosforest">Desc</a>
+							<ul id="ml-ensemble-fromcontinuosforest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-gsplitinstc">
+							<a href="#ml-ensemble-gsplitinstc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GSPLITINSTC</span>
+								<span class="sign-post">(DATASET(gSplitC) mod, DATASET(Types.NumericField) Indep)</span>
+							</a> -
+							<a href="#dml-ensemble-gsplitinstc">Desc</a>
+							<ul id="ml-ensemble-gsplitinstc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-classprobdistribforestc">
+							<a href="#ml-ensemble-classprobdistribforestc" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSPROBDISTRIBFORESTC</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-ensemble-classprobdistribforestc">Desc</a>
+							<ul id="ml-ensemble-classprobdistribforestc" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-ensemble-classifycforest">
+							<a href="#ml-ensemble-classifycforest" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CLASSIFYCFOREST</span>
+								<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+							</a> -
+							<a href="#dml-ensemble-classifycforest">Desc</a>
+							<ul id="ml-ensemble-classifycforest" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dML-Ensemble">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ENSEMBLE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Ensemble" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-ensemble-modeld_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODELD_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-modeld_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-modeld_fields">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">STRING</span>
+									<span class="sign-name">MODELD_FIELDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-modeld_fields" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-modelc_map">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODELC_MAP</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-modelc_map" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-modelc_fields">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">STRING</span>
+									<span class="sign-name">MODELC_FIELDS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-modelc_fields" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gsplitd">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GSPLITD</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gsplitd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gsplitc">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GSPLITC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gsplitc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gnodeinstdisc">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GNODEINSTDISC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gnodeinstdisc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gnodethin">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GNODETHIN</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gnodethin" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gnodeinstcont">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GNODEINSTCONT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gnodeinstcont" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-depgroupedrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEPGROUPEDREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-depgroupedrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-groupdeprecords">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DepGroupedRec</span>
+									<span class="sign-name">GROUPDEPRECORDS</span>
+									<span class="sign-post">(Types.DiscreteField l, ML.Sampling.idListGroupRec r)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-groupdeprecords" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gnodexkoutofm">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GNODEXKOUTOFM</span>
+									<span class="sign-post">(DATASET(gNodeThin) topNodes, Types.t_FieldNumber K, Types.t_FieldNumber M)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gnodexkoutofm" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-nxkoutofm">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">NXKOUTOFM</span>
+									<span class="sign-post">(Types.t_Count N, Types.t_FieldNumber K, Types.t_FieldNumber M)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-nxkoutofm" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-getdrecords">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.DiscreteField</span>
+									<span class="sign-name">GETDRECORDS</span>
+									<span class="sign-post">(Types.DiscreteField l, ML.Sampling.idListGroupRec r)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-getdrecords" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-generateroots">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">gNodeInstDisc</span>
+									<span class="sign-name">GENERATEROOTS</span>
+									<span class="sign-post">(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-generateroots" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-generatecroots">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">gNodeInstCont</span>
+									<span class="sign-name">GENERATECROOTS</span>
+									<span class="sign-post">(Types.DiscreteField dep, ML.Sampling.idListGroupRec depSample)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-generatecroots" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-tonewdiscnode">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">gSplitD</span>
+									<span class="sign-name">TONEWDISCNODE</span>
+									<span class="sign-post">(gNodeInstDisc NodeInst)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-tonewdiscnode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-getcrecords">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Types.NumericField</span>
+									<span class="sign-name">GETCRECORDS</span>
+									<span class="sign-post">(Types.NumericField l, ML.Sampling.idListGroupRec r)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-getcrecords" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-tonewcontnode">
+							<div class="panel-heading">
+								<div class="type">
+									TRANSFORM
+								</div>
+								<div class="sign">
+									<span class="sign-pre">gSplitC</span>
+									<span class="sign-name">TONEWCONTNODE</span>
+									<span class="sign-post">(gNodeInstCont NodeInst)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-tonewcontnode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-splitfeaturesamplegi">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITFEATURESAMPLEGI</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-splitfeaturesamplegi" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-splitfeaturesampleigr">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITFEATURESAMPLEIGR</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, Types.t_level maxLevel=32)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-splitfeaturesampleigr" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-fromdiscreteforest">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMDISCRETEFOREST</span>
+									<span class="sign-post">(DATASET(ML.Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-fromdiscreteforest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-todiscreteforest">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TODISCRETEFOREST</span>
+									<span class="sign-post">(DATASET(gSplitD) nodes)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-todiscreteforest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gsplitinstancesd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GSPLITINSTANCESD</span>
+									<span class="sign-post">(DATASET(gSplitD) mod, DATASET(Types.DiscreteField) Indep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gsplitinstancesd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-classprobdistribforestd">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSPROBDISTRIBFORESTD</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep, DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-classprobdistribforestd" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-classifydforest">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYDFOREST</span>
+									<span class="sign-post">(DATASET(Types.DiscreteField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-classifydforest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-rndfeatselbinpartitiongibased">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RNDFEATSELBINPARTITIONGIBASED</span>
+									<span class="sign-post">(DATASET(gNodeInstCont) nodes, Types.t_Count nTrees, Types.t_Count kFeatSel, Types.t_Count mTotFeats, Types.t_Count p_level, REAL Purity=1.0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-rndfeatselbinpartitiongibased" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-splitfeaturesamplegibin">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SPLITFEATURESAMPLEGIBIN</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep, DATASET(Types.DiscreteField) Dep, Types.t_Count treeNum, Types.t_Count fsNum, REAL Purity=1.0, Types.t_level maxLevel=32)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-splitfeaturesamplegibin" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-tocontinuosforest">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">TOCONTINUOSFOREST</span>
+									<span class="sign-post">(DATASET(gSplitC) nodes)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-tocontinuosforest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-fromcontinuosforest">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">FROMCONTINUOSFOREST</span>
+									<span class="sign-post">(DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-fromcontinuosforest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-gsplitinstc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GSPLITINSTC</span>
+									<span class="sign-post">(DATASET(gSplitC) mod, DATASET(Types.NumericField) Indep)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-gsplitinstc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-classprobdistribforestc">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSPROBDISTRIBFORESTC</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep, DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-classprobdistribforestc" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-ensemble-classifycforest">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CLASSIFYCFOREST</span>
+									<span class="sign-post">(DATASET(Types.NumericField) Indep,DATASET(Types.NumericField) mod)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-ensemble-classifycforest" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

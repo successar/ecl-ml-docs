@@ -19,15 +19,15 @@
     <Field name="A11"/>
     <Field name="A12"/>
     <Field name="A13"/>
-    <Signature>housingRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="HOUSINGRECORD">housingRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="572" end="1086" exported="1" fullname="testingsuite.regression.datasets.housingds.betas" inherit_type="local" line="20" name="betas" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/housingDS.ecl" start="557">
-    <Signature>betas</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="BETAS">betas</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="1108" end="48229" exported="1" fullname="testingsuite.regression.datasets.housingds.content" inherit_type="local" line="35" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Regression/Datasets/housingDS.ecl" start="1091">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>housingDS</Signature><Parents/>
+   <Signature pre="" post="" name="HOUSINGDS">housingDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

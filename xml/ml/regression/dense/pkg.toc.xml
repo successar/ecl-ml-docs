@@ -1,1 +1,1 @@
-<folder name="dense"><file name="ols_cholesky.ecl.xml">ML/Regression/Dense/OLS_Cholesky.ecl.xml</file><file name="ols.ecl.xml">ML/Regression/Dense/OLS.ecl.xml</file><file name="ols_lu.ecl.xml">ML/Regression/Dense/OLS_LU.ecl.xml</file></folder>
+<folder name="dense"><file name="ols.ecl.xml">ML/Regression/Dense/OLS.ecl.xml</file><file name="ols_cholesky.ecl.xml">ML/Regression/Dense/OLS_Cholesky.ecl.xml</file><file name="ols_lu.ecl.xml">ML/Regression/Dense/OLS_LU.ecl.xml</file></folder>

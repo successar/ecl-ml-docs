@@ -3,7 +3,7 @@
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Source name="ML.Mat.Scale" sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" target="scale.ecl.xml">
   <Definition body="117" end="259" exported="1" fullname="ml.mat.scale" inherit_type="local" line="3" name="Scale" source="/media/sarthak/Data/ecl-ml/ML/Mat/Scale.ecl" start="55">
    <Type>function</Type>
-   <Signature>Scale(DATASET(Types.Element) d,Types.t_Value factor)</Signature><Params>
+   <Signature pre="" post="(DATASET(Types.Element) d,Types.t_Value factor)" name="SCALE">Scale(DATASET(Types.Element) d,Types.t_Value factor)</Signature><Params>
     <Param name="d"/>
     <Param name="factor"/>
    </Params>

@@ -5,7 +5,7 @@
    <Type>attribute</Type>
   </Import>
   <Definition body="134" end="150" fullname="ml.mat.rt" inherit_type="local" line="4" name="rt" source="/media/sarthak/Data/ecl-ml/ML/Mat/Eq.ecl" start="129">
-   <Signature>rt</Signature><Type>attribute</Type>
+   <Signature pre="" post="" name="RT">rt</Signature><Type>attribute</Type>
   </Definition>
  </Source>
  <Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Thin.ecl" name="ML.Mat.Thin" target="thin.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Types.ecl" name="ML.Mat.Types" target="types.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Config.ecl" name="ML.Config" target="../config.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Has.ecl" name="ML.Mat.Has" target="has.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Each.ecl" name="ML.Mat.Each" target="each.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/Strict.ecl" name="ML.Mat.Strict" target="strict.ecl.xml"/><Depends sourcePath="/media/sarthak/Data/ecl-ml/ML/Mat/SetDimension.ecl" name="ML.Mat.SetDimension" target="setdimension.ecl.xml"/></Meta>

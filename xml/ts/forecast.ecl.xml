@@ -3,7 +3,7 @@
  <Source name="TS.Forecast" sourcePath="/media/sarthak/Data/ecl-ml/TS/Forecast.ecl" target="forecast.ecl.xml">
   <Definition body="360" end="744" exported="1" fullname="ts.forecast" inherit_type="local" line="5" name="Forecast" source="/media/sarthak/Data/ecl-ml/TS/Forecast.ecl" start="168">
    <Type>function</Type>
-   <Signature>DATASET(TS.Types.ModelObs)
+   <Signature pre="DATASET(TS.Types.ModelObs)" post="(DATASET(TS.Types.UniObservation) obs,&#10;                DATASET(TS.Types.Model_Parameters) parms,&#10;                UNSIGNED2 forecast_periods)" name="FORECAST">DATASET(TS.Types.ModelObs)
        Forecast(DATASET(TS.Types.UniObservation) obs,
                 DATASET(TS.Types.Model_Parameters) parms,
                 UNSIGNED2 forecast_periods)</Signature><Params>

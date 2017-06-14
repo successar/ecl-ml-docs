@@ -5,19 +5,19 @@
    <Type>module</Type>
    <Definition body="157" end="693" exported="1" fullname="ml.lsa.similarity.cosinesim" inherit_type="local" line="6" name="CosineSim" source="/media/sarthak/Data/ecl-ml/ML/LSA/Similarity.ecl" start="86">
     <Type>function</Type>
-    <Signature>CosineSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) D, DATASET(Types.Element) Q)" name="COSINESIM">CosineSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)</Signature><Params>
      <Param name="D"/>
      <Param name="Q"/>
     </Params>
    </Definition>
    <Definition body="774" end="827" exported="1" fullname="ml.lsa.similarity.dotproductsim" inherit_type="local" line="22" name="DotProductSim" source="/media/sarthak/Data/ecl-ml/ML/LSA/Similarity.ecl" start="699">
     <Type>function</Type>
-    <Signature>DotProductSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) D, DATASET(Types.Element) Q)" name="DOTPRODUCTSIM">DotProductSim(DATASET(Types.Element) D, DATASET(Types.Element) Q)</Signature><Params>
      <Param name="D"/>
      <Param name="Q"/>
     </Params>
    </Definition>
-   <Signature>Similarity</Signature><Parents/>
+   <Signature pre="" post="" name="SIMILARITY">Similarity</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML.Mat.Types" inherit_type="local" line="1" name="Types" ref="ml.mat.types" start="7" target="../mat/types.ecl.xml">
    <Type>attribute</Type>

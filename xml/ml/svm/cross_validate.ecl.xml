@@ -29,21 +29,21 @@
    <Field name="lbl"/>
    <Field name="weight"/>
    <Field name="gamma"/>
-   <Signature>Parms</Signature><Field name="C"/>
+   <Signature pre="" post="" name="PARMS">Parms</Signature><Field name="C"/>
   </Definition>
   <Definition body="193" end="213" fullname="ml.svm.instance" inherit_type="local" line="7" name="Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/cross_validate.ecl" start="182">
    <Type>record</Type>
    <Field name="rid"/>
    <Field name="y"/>
    <Field name="max_value"/>
-   <Signature>Instance</Signature><Field name="x"/>
+   <Signature pre="" post="" name="INSTANCE">Instance</Signature><Field name="x"/>
   </Definition>
   <Definition body="226" end="254" fullname="ml.svm.xv_result" inherit_type="local" line="8" name="XV_Result" source="/media/sarthak/Data/ecl-ml/ML/SVM/cross_validate.ecl" start="214">
    <Type>record</Type>
    <Field name="id"/>
    <Field name="correct"/>
    <Field name="mse"/>
-   <Signature>XV_Result</Signature><Field name="r_sq"/>
+   <Signature pre="" post="" name="XV_RESULT">XV_Result</Signature><Field name="r_sq"/>
   </Definition>
   <Definition body="265" end="298" fullname="ml.svm.problem" inherit_type="local" line="9" name="Problem" source="/media/sarthak/Data/ecl-ml/ML/SVM/cross_validate.ecl" start="255">
    <Type>record</Type>
@@ -52,7 +52,7 @@
    <Field name="features"/>
    <Field name="max_value"/>
    <Field name="y"/>
-   <Signature>Problem</Signature><Field name="x"/>
+   <Signature pre="" post="" name="PROBLEM">Problem</Signature><Field name="x"/>
   </Definition>
   <Definition body="311" end="348" fullname="ml.svm.svm_parms" inherit_type="local" line="10" name="SVM_Parms" source="/media/sarthak/Data/ecl-ml/ML/SVM/cross_validate.ecl" start="299">
    <Type>record</Type>
@@ -70,11 +70,11 @@
    <Field name="shrinking"/>
    <Field name="prob_est"/>
    <Field name="lbl"/>
-   <Signature>SVM_Parms</Signature><Field name="weight"/>
+   <Signature pre="" post="" name="SVM_PARMS">SVM_Parms</Signature><Field name="weight"/>
   </Definition>
   <Definition body="473" end="1083" exported="1" fullname="ml.svm.cross_validate" inherit_type="local" line="12" name="cross_validate" source="/media/sarthak/Data/ecl-ml/ML/SVM/cross_validate.ecl" start="350">
    <Type>function</Type>
-   <Signature>cross_validate(DATASET(Parms) p,
+   <Signature pre="" post="(DATASET(Parms) p,&#10;                      DATASET(Instance) d,&#10;                      UNSIGNED2 folds)" name="CROSS_VALIDATE">cross_validate(DATASET(Parms) p,
                       DATASET(Instance) d,
                       UNSIGNED2 folds)</Signature><Params>
     <Param name="p"/>

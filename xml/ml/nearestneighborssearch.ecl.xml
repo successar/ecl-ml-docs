@@ -14,24 +14,24 @@
     <Field name="qp_id"/>
     <Field name="id"/>
     <Field name="number"/>
-    <Signature>leafData</Signature><Field name="value"/>
+    <Signature pre="" post="" name="LEAFDATA">leafData</Signature><Field name="value"/>
    </Definition>
    <Definition body="213" end="399" exported="1" fullname="ml.nearestneighborssearch.nn" inherit_type="local" line="9" name="NN" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="201">
     <Type>record</Type>
     <Field name="qp_id"/>
     <Field name="id"/>
-    <Signature>NN</Signature><Field name="distance"/>
+    <Signature pre="" post="" name="NN">NN</Signature><Field name="distance"/>
    </Definition>
    <Definition body="419" end="565" exported="1" fullname="ML.NearestNeighborsSearch.DEFAULT" inherit_type="local" line="14" name="DEFAULT" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="402" virtual="1">
     <Type>module</Type>
     <Definition body="541" end="558" exported="1" fullname="ml.nearestneighborssearch.default.searchc" inherit_type="local" line="15" name="SearchC" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="439">
      <Type>function</Type>
-     <Signature>SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)</Signature><Params>
+     <Signature pre="" post="(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)" name="SEARCHC">SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData)</Signature><Params>
       <Param name="indepData"/>
       <Param name="queryPointsData"/>
      </Params>
     </Definition>
-    <Signature>DEFAULT</Signature><Parents/>
+    <Signature pre="" post="" name="DEFAULT">DEFAULT</Signature><Parents/>
    </Definition>
    <Definition body="981" end="11738" exported="1" fullname="ml.nearestneighborssearch.kdtreennsearch" inherit_type="local" line="25" name="KDTreeNNSearch" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="872">
     <Type>module</Type>
@@ -58,26 +58,26 @@
      <Field name="BallRadius"/>
      <Field name="BWB"/>
      <Field name="BOB"/>
-     <Signature>query_point</Signature><Field name="isTerminal"/>
+     <Signature pre="" post="" name="QUERY_POINT">query_point</Signature><Field name="isTerminal"/>
     </Definition>
     <Definition body="2144" end="11282" exported="1" fullname="ml.nearestneighborssearch.kdtreennsearch.knneighbors" inherit_type="local" line="42" name="KNNeighbors" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="1973">
      <Type>function</Type>
-     <Signature>PORT KNNeighbors(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries)  F</Signature><Params>
+     <Signature pre="PORT" post="(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries) := F" name="KNNEIGHBORS">PORT KNNeighbors(DATASET(Types.NumericField) queryPointsData, DATASET(Trees.Node) KDTFullTree, DATASET(Trees.Node) KDTPartitioned, DATASET(Trees.sNode) KDTBoundaries) := F</Signature><Params>
       <Param name="queryPointsData"/>
       <Param name="KDTFullTree"/>
       <Param name="KDTPartitioned"/>
       <Param name="KDTBoundaries"/>
      </Params>
     </Definition>
-    <Signature>KDTreeNNSearch(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)</Signature><Definition body="11388" end="11731" exported="1" fullname="ml.nearestneighborssearch.kdtreennsearch.searchc" inherit_type="override" line="182" name="SearchC" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="11287">
+    <Signature pre="" post="(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)" name="KDTREENNSEARCH">KDTreeNNSearch(CONST Types.t_count NN_count=5, Types.t_level Depth=10, Types.t_level MedianDepth=0)</Signature><Definition body="11388" end="11731" exported="1" fullname="ml.nearestneighborssearch.kdtreennsearch.searchc" inherit_type="override" line="182" name="SearchC" source="/media/sarthak/Data/ecl-ml/ML/NearestNeighborsSearch.ecl" start="11287">
      <Type>function</Type>
-     <Signature>PORT SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData) F</Signature><Params>
+     <Signature pre="PORT" post="(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData):= F" name="SEARCHC">PORT SearchC(DATASET(Types.NumericField) indepData , DATASET(Types.NumericField) queryPointsData):= F</Signature><Params>
       <Param name="indepData"/>
       <Param name="queryPointsData"/>
      </Params>
     </Definition>
    </Definition>
-   <Signature>NearestNeighborsSearch</Signature><Parents/>
+   <Signature pre="" post="" name="NEARESTNEIGHBORSSEARCH">NearestNeighborsSearch</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

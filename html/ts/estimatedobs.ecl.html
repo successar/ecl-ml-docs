@@ -1,150 +1,352 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>TS.EstimatedObs</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ts
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ts.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : ModelObs
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extendedparameters.ecl.html">extendedparameters.ecl</a>
+				</li>
+				
+				<li>
+					<a href="forecast.ecl.html">forecast.ecl</a>
+				</li>
+				
+				<li>
+					<a href="diagnosis.ecl.html">diagnosis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="extract_ts.ecl.html">extract_ts.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimatedobs.ecl.html">estimatedobs.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lagcorrelations.ecl.html">lagcorrelations.ecl</a>
+				</li>
+				
+				<li>
+					<a href="estimation.ecl.html">estimation.ecl</a>
+				</li>
+				
+				<li>
+					<a href="differenceseries.ecl.html">differenceseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="demo/pkg.toc.html">demo</a>
+				</li>
+				
+				<li>
+					<a href="accumseries.ecl.html">accumseries.ecl</a>
+				</li>
+				
+				<li>
+					<a href="seriesbymodel.ecl.html">seriesbymodel.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identification.ecl.html">identification.ecl</a>
+				</li>
+				
+				<li>
+					<a href="season_adj.ecl.html">season_adj.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : Parameter_Extension
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : Co_eff
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ObsRec
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : ObsWork
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : DATASET(TS.Types.Obs_Estimated)
-       EstimatedObs(DATASET(TS.Types.ModelObs) model_obs,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">TS.EstimatedObs</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ts
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ts.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ts-modelobs">
+							<a href="#ts-modelobs" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">MODELOBS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-modelobs">Desc</a>
+							<ul id="ts-modelobs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-parameter_extension">
+							<a href="#ts-parameter_extension" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PARAMETER_EXTENSION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-parameter_extension">Desc</a>
+							<ul id="ts-parameter_extension" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-co_eff">
+							<a href="#ts-co_eff" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">CO_EFF</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-co_eff">Desc</a>
+							<ul id="ts-co_eff" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-obsrec">
+							<a href="#ts-obsrec" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OBSREC</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-obsrec">Desc</a>
+							<ul id="ts-obsrec" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-obswork">
+							<a href="#ts-obswork" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">OBSWORK</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dts-obswork">Desc</a>
+							<ul id="ts-obswork" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ts-estimatedobs">
+							<a href="#ts-estimatedobs" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre">DATASET(TS.Types.Obs_Estimated)</span>
+								<span class="sign-name">ESTIMATEDOBS</span>
+								<span class="sign-post">(DATASET(TS.Types.ModelObs) model_obs,
                     DATASET(TS.Types.Model_Parameters) models,
-                    UNSIGNED2 forecast_periods=0)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : ModelObs
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Parameter_Extension
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Co_eff
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ObsRec
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : ObsWork
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	FUNCTION : DATASET(TS.Types.Obs_Estimated)
-       EstimatedObs(DATASET(TS.Types.ModelObs) model_obs,
+                    UNSIGNED2 forecast_periods=0)</span>
+							</a> -
+							<a href="#dts-estimatedobs">Desc</a>
+							<ul id="ts-estimatedobs" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dts-modelobs">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">MODELOBS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-modelobs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-parameter_extension">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PARAMETER_EXTENSION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-parameter_extension" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-co_eff">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">CO_EFF</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-co_eff" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-obsrec">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OBSREC</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-obsrec" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-obswork">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">OBSWORK</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-obswork" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dts-estimatedobs">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(TS.Types.Obs_Estimated)</span>
+									<span class="sign-name">ESTIMATEDOBS</span>
+									<span class="sign-post">(DATASET(TS.Types.ModelObs) model_obs,
                     DATASET(TS.Types.Model_Parameters) models,
-                    UNSIGNED2 forecast_periods=0)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+                    UNSIGNED2 forecast_periods=0)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ts-estimatedobs" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

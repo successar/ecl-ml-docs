@@ -262,12 +262,12 @@
     <Field name="features_254"/>
     <Field name="features_255"/>
     <Field name="features_256"/>
-    <Signature>ionek_f_twofiftysix_c_eightRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="IONEK_F_TWOFIFTYSIX_C_EIGHTRECORD">ionek_f_twofiftysix_c_eightRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="10346" end="3742327" exported="1" fullname="testingsuite.clustering.datasets.ionek_f_twofiftysix_c_eightds.content" inherit_type="local" line="263" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Clustering/Datasets/ionek_f_twofiftysix_c_eightDS.ecl" start="10329">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>ionek_f_twofiftysix_c_eightDS</Signature><Parents/>
+   <Signature pre="" post="" name="IONEK_F_TWOFIFTYSIX_C_EIGHTDS">ionek_f_twofiftysix_c_eightDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>

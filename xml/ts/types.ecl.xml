@@ -4,41 +4,41 @@
   <Definition body="33" end="1878" exported="1" fullname="TS.Types" inherit_type="local" line="3" name="Types" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="18">
    <Type>module</Type>
    <Definition body="63" end="74" exported="1" fullname="ts.types.t_time_ord" inherit_type="local" line="4" name="t_time_ord" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="43">
-    <Signature>t_time_ord</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_TIME_ORD">t_time_ord</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="94" end="116" exported="1" fullname="ts.types.t_value" inherit_type="local" line="5" name="t_value" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="77">
-    <Signature>t_value</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_VALUE">t_value</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="140" end="163" exported="1" fullname="ts.types.t_value_set" inherit_type="local" line="6" name="t_value_set" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="119">
-    <Signature>t_value_set</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_VALUE_SET">t_value_set</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="186" end="197" exported="1" fullname="ts.types.t_model_id" inherit_type="local" line="7" name="t_model_id" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="166">
-    <Signature>t_model_id</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="T_MODEL_ID">t_model_id</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="224" end="284" exported="1" fullname="ts.types.uniobservation" inherit_type="local" line="8" name="UniObservation" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="200">
     <Type>record</Type>
     <Field name="period"/>
-    <Signature>UniObservation</Signature><Field name="dependent"/>
+    <Signature pre="" post="" name="UNIOBSERVATION">UniObservation</Signature><Field name="dependent"/>
    </Definition>
    <Definition body="305" end="360" exported="1" fullname="ts.types.modelobs" inherit_type="local" line="12" name="ModelObs" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="287">
     <Type>record</Type>
     <Field name="period"/>
     <Field name="dependent"/>
-    <Signature>ModelObs</Signature><Field name="model_id"/>
+    <Signature pre="" post="" name="MODELOBS">ModelObs</Signature><Field name="model_id"/>
    </Definition>
    <Definition body="385" end="429" exported="1" fullname="ts.types.decoratedobs" inherit_type="local" line="15" name="DecoratedObs" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="363">
     <Type>record</Type>
     <Field name="period"/>
     <Field name="dependent"/>
     <Field name="model_id"/>
-    <Signature>DecoratedObs</Signature><Field name="lags"/>
+    <Signature pre="" post="" name="DECORATEDOBS">DecoratedObs</Signature><Field name="lags"/>
    </Definition>
    <Definition body="449" end="634" exported="1" fullname="ts.types.corrrec" inherit_type="local" line="18" name="CorrRec" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="432">
     <Type>record</Type>
     <Field name="model_id"/>
     <Field name="lag"/>
     <Field name="corr"/>
-    <Signature>CorrRec</Signature><Field name="t_like"/>
+    <Signature pre="" post="" name="CORRREC">CorrRec</Signature><Field name="t_like"/>
    </Definition>
    <Definition body="655" end="998" exported="1" fullname="ts.types.pacf_acf" inherit_type="local" line="24" name="PACF_ACF" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="637">
     <Type>record</Type>
@@ -49,17 +49,17 @@
     <Field name="ac"/>
     <Field name="ac_t_like"/>
     <Field name="pac"/>
-    <Signature>PACF_ACF</Signature><Field name="pac_t_like"/>
+    <Signature pre="" post="" name="PACF_ACF">PACF_ACF</Signature><Field name="pac_t_like"/>
    </Definition>
    <Definition body="1023" end="1072" exported="1" fullname="ts.types.co_efficient" inherit_type="local" line="34" name="Co_efficient" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="1001">
     <Type>record</Type>
     <Field name="cv"/>
-    <Signature>Co_efficient</Signature><Field name="lag"/>
+    <Signature pre="" post="" name="CO_EFFICIENT">Co_efficient</Signature><Field name="lag"/>
    </Definition>
    <Definition body="1095" end="1155" exported="1" fullname="ts.types.ident_spec" inherit_type="local" line="38" name="Ident_Spec" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="1075">
     <Type>record</Type>
     <Field name="model_id"/>
-    <Signature>Ident_Spec</Signature><Field name="degree"/>
+    <Signature pre="" post="" name="IDENT_SPEC">Ident_Spec</Signature><Field name="degree"/>
    </Definition>
    <Definition body="1178" end="1279" exported="1" fullname="ts.types.model_spec" inherit_type="local" line="42" name="Model_Spec" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="1158">
     <Type>record</Type>
@@ -67,7 +67,7 @@
     <Field name="degree"/>
     <Field name="ar_terms"/>
     <Field name="ma_terms"/>
-    <Signature>Model_Spec</Signature><Field name="constant_term"/>
+    <Signature pre="" post="" name="MODEL_SPEC">Model_Spec</Signature><Field name="constant_term"/>
    </Definition>
    <Definition body="1308" end="1409" exported="1" fullname="ts.types.model_parameters" inherit_type="local" line="47" name="Model_Parameters" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="1282">
     <Type>record</Type>
@@ -78,7 +78,7 @@
     <Field name="constant_term"/>
     <Field name="ar"/>
     <Field name="ma"/>
-    <Signature>Model_Parameters</Signature><Field name="c"/>
+    <Signature pre="" post="" name="MODEL_PARAMETERS">Model_Parameters</Signature><Field name="c"/>
    </Definition>
    <Definition body="1433" end="1581" exported="1" fullname="ts.types.model_score" inherit_type="local" line="52" name="Model_Score" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="1412">
     <Type>record</Type>
@@ -91,7 +91,7 @@
     <Field name="ma"/>
     <Field name="c"/>
     <Field name="s_measure"/>
-    <Signature>Model_Score</Signature><Field name="Q_measure"/>
+    <Signature pre="" post="" name="MODEL_SCORE">Model_Score</Signature><Field name="Q_measure"/>
    </Definition>
    <Definition body="1613" end="1794" exported="1" fullname="ts.types.parameter_extension" inherit_type="local" line="56" name="Parameter_Extension" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="1584">
     <Type>record</Type>
@@ -101,16 +101,16 @@
     <Field name="c"/>
     <Field name="mu"/>
     <Field name="theta_phi"/>
-    <Signature>Parameter_Extension</Signature><Field name="phi"/>
+    <Signature pre="" post="" name="PARAMETER_EXTENSION">Parameter_Extension</Signature><Field name="phi"/>
    </Definition>
    <Definition body="1820" end="1873" exported="1" fullname="ts.types.obs_estimated" inherit_type="local" line="65" name="Obs_Estimated" source="/media/sarthak/Data/ecl-ml/TS/Types.ecl" start="1797">
     <Type>record</Type>
     <Field name="period"/>
     <Field name="dependent"/>
     <Field name="model_id"/>
-    <Signature>Obs_Estimated</Signature><Field name="estimate"/>
+    <Signature pre="" post="" name="OBS_ESTIMATED">Obs_Estimated</Signature><Field name="estimate"/>
    </Definition>
-   <Signature>Types</Signature><Parents/>
+   <Signature pre="" post="" name="TYPES">Types</Signature><Parents/>
   </Definition>
   <Import body="0" end="10" fullname="PBblas" inherit_type="local" line="2" name="PBblas" ref="pbblas" remotescope="1" start="10" target="../pbblas/pkg.toc.xml">
    <Type>attribute</Type>

@@ -5,59 +5,59 @@
    <Type>module</Type>
    <Definition body="346" end="789" exported="1" fullname="examples.sentilyze.preprocess.removefeatures" inherit_type="local" line="11" name="RemoveFeatures" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="308">
     <Type>function</Type>
-    <Signature>RemoveFeatures(STRING tweet)</Signature><Params>
+    <Signature pre="" post="(STRING tweet)" name="REMOVEFEATURES">RemoveFeatures(STRING tweet)</Signature><Params>
      <Param name="tweet"/>
     </Params>
    </Definition>
    <Definition body="831" end="1324" exported="1" fullname="examples.sentilyze.preprocess.replacefeatures" inherit_type="local" line="20" name="ReplaceFeatures" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="792">
     <Type>function</Type>
-    <Signature>ReplaceFeatures(STRING tweet)</Signature><Params>
+    <Signature pre="" post="(STRING tweet)" name="REPLACEFEATURES">ReplaceFeatures(STRING tweet)</Signature><Params>
      <Param name="tweet"/>
     </Params>
    </Definition>
    <Definition body="1375" end="1524" exported="1" fullname="examples.sentilyze.preprocess.removert" inherit_type="local" line="29" name="RemoveRT" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1327">
     <Type>function</Type>
-    <Signature>RemoveRT(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T)" name="REMOVERT">RemoveRT(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
      <Param name="T"/>
     </Params>
    </Definition>
    <Definition body="1578" end="1704" exported="1" fullname="examples.sentilyze.preprocess.removeblank" inherit_type="local" line="33" name="RemoveBlank" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1527">
     <Type>function</Type>
-    <Signature>RemoveBlank(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T)" name="REMOVEBLANK">RemoveBlank(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
      <Param name="T"/>
     </Params>
    </Definition>
    <Definition body="1767" end="1874" exported="1" fullname="examples.sentilyze.preprocess.converttoraw" inherit_type="local" line="37" name="ConvertToRaw" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1707">
     <Type>function</Type>
-    <Signature>ConvertToRaw(DATASET(Sentilyze.Types.TweetType) T)</Signature><Params>
+    <Signature pre="" post="(DATASET(Sentilyze.Types.TweetType) T)" name="CONVERTTORAW">ConvertToRaw(DATASET(Sentilyze.Types.TweetType) T)</Signature><Params>
      <Param name="T"/>
     </Params>
    </Definition>
    <Definition body="1998" end="2162" exported="1" fullname="examples.sentilyze.preprocess.removeanalysis" inherit_type="local" line="42" name="RemoveAnalysis" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="1944">
     <Type>function</Type>
-    <Signature>RemoveAnalysis(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T)" name="REMOVEANALYSIS">RemoveAnalysis(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
      <Param name="T"/>
     </Params>
    </Definition>
    <Definition body="2220" end="2385" exported="1" fullname="examples.sentilyze.preprocess.replaceanalysis" inherit_type="local" line="48" name="ReplaceAnalysis" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="2165">
     <Type>function</Type>
-    <Signature>ReplaceAnalysis(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T)" name="REPLACEANALYSIS">ReplaceAnalysis(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
      <Param name="T"/>
     </Params>
    </Definition>
    <Definition body="2507" end="2694" exported="1" fullname="examples.sentilyze.preprocess.removetraining" inherit_type="local" line="55" name="RemoveTraining" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="2453">
     <Type>function</Type>
-    <Signature>RemoveTraining(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T)" name="REMOVETRAINING">RemoveTraining(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
      <Param name="T"/>
     </Params>
    </Definition>
    <Definition body="2752" end="2939" exported="1" fullname="examples.sentilyze.preprocess.replacetraining" inherit_type="local" line="62" name="ReplaceTraining" source="/media/sarthak/Data/ecl-ml/Examples/Sentilyze/PreProcess.ecl" start="2697">
     <Type>function</Type>
-    <Signature>ReplaceTraining(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
+    <Signature pre="" post="(DATASET(ML.Docs.Types.Raw) T)" name="REPLACETRAINING">ReplaceTraining(DATASET(ML.Docs.Types.Raw) T)</Signature><Params>
      <Param name="T"/>
     </Params>
    </Definition>
-   <Signature>PreProcess</Signature><Parents/>
+   <Signature pre="" post="" name="PREPROCESS">PreProcess</Signature><Parents/>
   </Definition>
   <Import body="0" end="211" fullname="Examples.Sentilyze" inherit_type="local" line="6" name="Sentilyze" ref="examples.sentilyze" start="211" target="pkg.toc.xml">
    <Type>attribute</Type>

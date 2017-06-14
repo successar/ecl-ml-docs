@@ -1,278 +1,664 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.Mat.Householder</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="pkg.toc.html">
-				ml.mat
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.mat.types
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			MODULE : Householder(DATASET(Types.VecElement) X, Types.t_Index k, Types.t_Index Dim=1)
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
 				
-		<li>
-			MODULE : HTA
-			<ul>
+				<li>
+					<a href="householder.ecl.html">householder.ecl</a>
+				</li>
 				
-		<li>
-			MODULE : Default
-			<ul>
+				<li>
+					<a href="sub.ecl.html">sub.ecl</a>
+				</li>
 				
-		<li>
-			ATTRIBUTE : IdentityM
-			<ul>
+				<li>
+					<a href="mu.ecl.html">mu.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lowertriangle.ecl.html">lowertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="uppertriangle.ecl.html">uppertriangle.ecl</a>
+				</li>
+				
+				<li>
+					<a href="scale.ecl.html">scale.ecl</a>
+				</li>
+				
+				<li>
+					<a href="identity.ecl.html">identity.ecl</a>
+				</li>
+				
+				<li>
+					<a href="inv.ecl.html">inv.ecl</a>
+				</li>
+				
+				<li>
+					<a href="vec.ecl.html">vec.ecl</a>
+				</li>
+				
+				<li>
+					<a href="debug.ecl.html">debug.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eig.ecl.html">eig.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rounddelta.ecl.html">rounddelta.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svd.ecl.html">svd.ecl</a>
+				</li>
+				
+				<li>
+					<a href="rankelements.ecl.html">rankelements.ecl</a>
+				</li>
+				
+				<li>
+					<a href="setdimension.ecl.html">setdimension.ecl</a>
+				</li>
+				
+				<li>
+					<a href="det.ecl.html">det.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mahalanobis.ecl.html">mahalanobis.ecl</a>
+				</li>
+				
+				<li>
+					<a href="cov.ecl.html">cov.ecl</a>
+				</li>
+				
+				<li>
+					<a href="randmat.ecl.html">randmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="lanczos.ecl.html">lanczos.ecl</a>
+				</li>
+				
+				<li>
+					<a href="add.ecl.html">add.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pow.ecl.html">pow.ecl</a>
+				</li>
+				
+				<li>
+					<a href="insertcolumn.ecl.html">insertcolumn.ecl</a>
+				</li>
+				
+				<li>
+					<a href="has.ecl.html">has.ecl</a>
+				</li>
+				
+				<li>
+					<a href="pca.ecl.html">pca.ecl</a>
+				</li>
+				
+				<li>
+					<a href="thin.ecl.html">thin.ecl</a>
+				</li>
+				
+				<li>
+					<a href="decomp.ecl.html">decomp.ecl</a>
+				</li>
+				
+				<li>
+					<a href="is.ecl.html">is.ecl</a>
+				</li>
+				
+				<li>
+					<a href="repmat.ecl.html">repmat.ecl</a>
+				</li>
+				
+				<li>
+					<a href="eq.ecl.html">eq.ecl</a>
+				</li>
+				
+				<li>
+					<a href="trans.ecl.html">trans.ecl</a>
+				</li>
+				
+				<li>
+					<a href="mul.ecl.html">mul.ecl</a>
+				</li>
+				
+				<li>
+					<a href="each.ecl.html">each.ecl</a>
+				</li>
+				
+				<li>
+					<a href="strict.ecl.html">strict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="substitute.ecl.html">substitute.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(Types.Element) hReflection
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : Atkinson
-			<ul>
-				
-		<li>
-			ATTRIBUTE : IdentityM
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(Types.Element) hReflection
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			MODULE : Golub
-			<ul>
-				
-		<li>
-			ATTRIBUTE : IdentityM
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : DATASET(Types.Element) hReflection
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-		<li>
-			FUNCTION : Reflection(HTA.Default Control = HTA.Golub)
-			<ul>
-				
-			</ul>
-		</li>
-		
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	MODULE : Householder(DATASET(Types.VecElement) X, Types.t_Index k, Types.t_Index Dim=1)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	MODULE : HTA
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	MODULE : Default
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : IdentityM
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(Types.Element) hReflection
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	MODULE : Atkinson
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="householder.ecl.html">
-					ml.mat.householder.hta.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : IdentityM
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(Types.Element) hReflection
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	<p>	MODULE : Golub
-		
-		<br/>
-		
-		<h4>Parent</h4>
-		<ul>
-			
-			<li>
-				
-				<a href="householder.ecl.html">
-					ml.mat.householder.hta.default
-				</a>
-				
-			</li>
-			
-		</ul>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	<p>	ATTRIBUTE : IdentityM
-		
-		<br/>
-		
-		Inherit Type : inherited
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : DATASET(Types.Element) hReflection
-		
-		<br/>
-		
-		Inherit Type : override
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
-	
-	<p>	FUNCTION : Reflection(HTA.Default Control = HTA.Golub)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.Mat.Householder</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="pkg.toc.html">
+								ml.mat
+							</a>
+							</li>
+						<li>
+							<a href="types.ecl.html">
+								ml.mat.types
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-mat-householder">
+							<a href="#ml-mat-householder" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HOUSEHOLDER</span>
+								<span class="sign-post">(DATASET(Types.VecElement) X, Types.t_Index k, Types.t_Index Dim=1)</span>
+							</a> -
+							<a href="#dml-mat-householder">Desc</a>
+							<ul id="ml-mat-householder" class="accordian-body collapse">
+								<li id="t-ML-Mat-Householder-HTA">
+							<a href="#ML-Mat-Householder-HTA" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">HTA</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Mat-Householder-HTA">Desc</a>
+							<ul id="ML-Mat-Householder-HTA" class="accordian-body collapse">
+								<li id="t-ML-Mat-Householder-HTA-Default">
+							<a href="#ML-Mat-Householder-HTA-Default" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">DEFAULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Mat-Householder-HTA-Default">Desc</a>
+							<ul id="ML-Mat-Householder-HTA-Default" class="accordian-body collapse">
+								<li id="t-ml-mat-householder-hta-default-identitym">
+							<a href="#ml-mat-householder-hta-default-identitym" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">IDENTITYM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-householder-hta-default-identitym">Desc</a>
+							<ul id="ml-mat-householder-hta-default-identitym" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-householder-hta-default-hreflection">
+							<a href="#ml-mat-householder-hta-default-hreflection" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(Types.Element)</span>
+								<span class="sign-name">HREFLECTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-householder-hta-default-hreflection">Desc</a>
+							<ul id="ml-mat-householder-hta-default-hreflection" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ML-Mat-Householder-HTA-Atkinson">
+							<a href="#ML-Mat-Householder-HTA-Atkinson" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ATKINSON</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Mat-Householder-HTA-Atkinson">Desc</a>
+							<ul id="ML-Mat-Householder-HTA-Atkinson" class="accordian-body collapse">
+								<li id="t-ml-mat-householder-hta-default-identitym">
+							<a href="#ml-mat-householder-hta-default-identitym" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">IDENTITYM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-householder-hta-default-identitym">Desc</a>
+							<ul id="ml-mat-householder-hta-default-identitym" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-householder-hta-atkinson-hreflection">
+							<a href="#ml-mat-householder-hta-atkinson-hreflection" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(Types.Element)</span>
+								<span class="sign-name">HREFLECTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-householder-hta-atkinson-hreflection">Desc</a>
+							<ul id="ml-mat-householder-hta-atkinson-hreflection" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ML-Mat-Householder-HTA-Golub">
+							<a href="#ML-Mat-Householder-HTA-Golub" data-toggle="collapse">
+								MODULE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">GOLUB</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dML-Mat-Householder-HTA-Golub">Desc</a>
+							<ul id="ML-Mat-Householder-HTA-Golub" class="accordian-body collapse">
+								<li id="t-ml-mat-householder-hta-default-identitym">
+							<a href="#ml-mat-householder-hta-default-identitym" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">IDENTITYM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-householder-hta-default-identitym">Desc</a>
+							<ul id="ml-mat-householder-hta-default-identitym" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-mat-householder-hta-golub-hreflection">
+							<a href="#ml-mat-householder-hta-golub-hreflection" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre">DATASET(Types.Element)</span>
+								<span class="sign-name">HREFLECTION</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-mat-householder-hta-golub-hreflection">Desc</a>
+							<ul id="ml-mat-householder-hta-golub-hreflection" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						<li id="t-ml-mat-householder-reflection">
+							<a href="#ml-mat-householder-reflection" data-toggle="collapse">
+								FUNCTION :
+								<span class="sign-pre"></span>
+								<span class="sign-name">REFLECTION</span>
+								<span class="sign-post">(HTA.Default Control = HTA.Golub)</span>
+							</a> -
+							<a href="#dml-mat-householder-reflection">Desc</a>
+							<ul id="ml-mat-householder-reflection" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-mat-householder">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HOUSEHOLDER</span>
+									<span class="sign-post">(DATASET(Types.VecElement) X, Types.t_Index k, Types.t_Index Dim=1)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dML-Mat-Householder-HTA">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">HTA</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Mat-Householder-HTA" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dML-Mat-Householder-HTA-Default">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">DEFAULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Mat-Householder-HTA-Default" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-mat-householder-hta-default-identitym">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">IDENTITYM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder-hta-default-identitym" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-householder-hta-default-hreflection">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.Element)</span>
+									<span class="sign-name">HREFLECTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder-hta-default-hreflection" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dML-Mat-Householder-HTA-Atkinson">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ATKINSON</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Mat-Householder-HTA-Atkinson" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="householder.ecl.html">
+												ml.mat.householder.hta.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-mat-householder-hta-default-identitym">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">IDENTITYM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder-hta-default-identitym" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-householder-hta-atkinson-hreflection">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.Element)</span>
+									<span class="sign-name">HREFLECTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder-hta-atkinson-hreflection" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						<div class="panel panel-info" id="dML-Mat-Householder-HTA-Golub">
+							<div class="panel-heading">
+								<div class="type">
+									MODULE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">GOLUB</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ML-Mat-Householder-HTA-Golub" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								<div class="row">
+									<div class="col-md-1">Parent</div>
+									<div class="col-md-11">
+									<ul>
+										<li>
+											<a href="householder.ecl.html">
+												ml.mat.householder.hta.default
+											</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								</div>
+						</div>
+						<div class="panel panel-info" id="dml-mat-householder-hta-default-identitym">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">IDENTITYM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder-hta-default-identitym" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> inherited</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-mat-householder-hta-golub-hreflection">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre">DATASET(Types.Element)</span>
+									<span class="sign-name">HREFLECTION</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder-hta-golub-hreflection" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> override</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						
+						<div class="panel panel-info" id="dml-mat-householder-reflection">
+							<div class="panel-heading">
+								<div class="type">
+									FUNCTION
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">REFLECTION</span>
+									<span class="sign-post">(HTA.Default Control = HTA.Golub)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-mat-householder-reflection" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

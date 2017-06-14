@@ -12,29 +12,29 @@
    <Field name="y_upper"/>
    <Field name="y_min"/>
    <Field name="y_max"/>
-   <Signature>SVM_Scale</Signature><Field name="features"/>
+   <Signature pre="" post="" name="SVM_SCALE">SVM_Scale</Signature><Field name="features"/>
   </Definition>
   <Definition body="69" end="89" fullname="ml.svm.svm_instance" inherit_type="local" line="4" name="SVM_Instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="54">
    <Type>record</Type>
    <Field name="rid"/>
    <Field name="y"/>
    <Field name="max_value"/>
-   <Signature>SVM_Instance</Signature><Field name="x"/>
+   <Signature pre="" post="" name="SVM_INSTANCE">SVM_Instance</Signature><Field name="x"/>
   </Definition>
   <Definition body="104" end="123" fullname="ml.svm.svm_feature" inherit_type="local" line="5" name="SVM_Feature" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="90">
    <Type>record</Type>
    <Field name="nominal"/>
-   <Signature>SVM_Feature</Signature><Field name="v"/>
+   <Signature pre="" post="" name="SVM_FEATURE">SVM_Feature</Signature><Field name="v"/>
   </Definition>
   <Definition body="140" end="161" fullname="ml.svm.feature_scale" inherit_type="local" line="6" name="Feature_Scale" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="124">
    <Type>record</Type>
    <Field name="nominal"/>
    <Field name="min_value"/>
-   <Signature>Feature_Scale</Signature><Field name="max_value"/>
+   <Signature pre="" post="" name="FEATURE_SCALE">Feature_Scale</Signature><Field name="max_value"/>
   </Definition>
   <Definition body="235" end="1077" exported="1" fullname="ml.svm.scale_instance" inherit_type="local" line="8" name="scale_instance" source="/media/sarthak/Data/ecl-ml/ML/SVM/scale_instance.ecl" start="163">
    <Type>function</Type>
-   <Signature>scale_instance(DATASET(SVM_Scale) f, DATASET(SVM_Instance) ds)</Signature><Params>
+   <Signature pre="" post="(DATASET(SVM_Scale) f, DATASET(SVM_Instance) ds)" name="SCALE_INSTANCE">scale_instance(DATASET(SVM_Scale) f, DATASET(SVM_Instance) ds)</Signature><Params>
     <Param name="f"/>
     <Param name="ds"/>
    </Params>

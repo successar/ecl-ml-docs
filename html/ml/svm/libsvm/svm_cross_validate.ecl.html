@@ -1,140 +1,301 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta content="">
-	<style></style>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+	<title>ML.SVM.LibSVM.svm_cross_validate</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+	<link href="/media/sarthak/Data/ecldoc/ecldoc/src/css/simple-sidebar.css" rel="stylesheet">
+
 </head>
+
 <body>
-	<h2>Imports	</h2>
-	<ul>
-		
-		<li>
-			
-			<a href="types.ecl.html">
-				ml.svm.libsvm.types
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="constants.ecl.html">
-				ml.svm.libsvm.constants
-			</a>
-			
-		</li>
-		
-		<li>
-			
-			<a href="converted.ecl.html">
-				ml.svm.libsvm.converted
-			</a>
-			
-		</li>
-		
-	</ul>
-	<h2>Tree</h2>
-	<ul>
-		
-		<li>
-			RECORD : Result
-			<ul>
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand">
+					<a href="pkg.toc.html">
+						Up
+					</a>
+				</li>
+				
+				<li>
+					<a href="types.ecl.html">types.ecl</a>
+				</li>
+				
+				<li>
+					<a href="constants.ecl.html">constants.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svm_predict.ecl.html">svm_predict.ecl</a>
+				</li>
+				
+				<li>
+					<a href="svm_cross_validate.ecl.html">svm_cross_validate.ecl</a>
+				</li>
+				
+				<li>
+					<a href="test/pkg.toc.html">test</a>
+				</li>
+				
+				<li>
+					<a href="svm_train.ecl.html">svm_train.ecl</a>
+				</li>
+				
+				<li>
+					<a href="libsvm_version.ecl.html">libsvm_version.ecl</a>
+				</li>
+				
+				<li>
+					<a href="converted.ecl.html">converted.ecl</a>
+				</li>
 				
 			</ul>
-		</li>
-		
-		<li>
-			RECORD : Problem
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			RECORD : SVM_Parms
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			ATTRIBUTE : ErrCode
-			<ul>
-				
-			</ul>
-		</li>
-		
-		<li>
-			EMBED : Result svm_cross_validate(SVM_Parms prm,
+		</div>
+
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-4">
+						<a href="#menu-toggle" class="glyphicon glyphicon-menu-hamburger" style="font-size:2.2em;" id="menu-toggle"></a>
+					</div>
+					<div class="col-lg-8">
+						<span class="title">ML.SVM.LibSVM.svm_cross_validate</span>
+					</div>
+				</div>
+				<div class="row">
+					<h2>Imports	</h2>
+					<ul>
+						<li>
+							<a href="types.ecl.html">
+								ml.svm.libsvm.types
+							</a>
+							</li>
+						<li>
+							<a href="constants.ecl.html">
+								ml.svm.libsvm.constants
+							</a>
+							</li>
+						<li>
+							<a href="converted.ecl.html">
+								ml.svm.libsvm.converted
+							</a>
+							</li>
+						</ul>
+					<h2>Tree</h2>
+					<ul>
+						<li id="t-ml-svm-libsvm-result">
+							<a href="#ml-svm-libsvm-result" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">RESULT</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-result">Desc</a>
+							<ul id="ml-svm-libsvm-result" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-problem">
+							<a href="#ml-svm-libsvm-problem" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">PROBLEM</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-problem">Desc</a>
+							<ul id="ml-svm-libsvm-problem" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-svm_parms">
+							<a href="#ml-svm-libsvm-svm_parms" data-toggle="collapse">
+								RECORD :
+								<span class="sign-pre"></span>
+								<span class="sign-name">SVM_PARMS</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-svm_parms">Desc</a>
+							<ul id="ml-svm-libsvm-svm_parms" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-errcode">
+							<a href="#ml-svm-libsvm-errcode" data-toggle="collapse">
+								ATTRIBUTE :
+								<span class="sign-pre"></span>
+								<span class="sign-name">ERRCODE</span>
+								<span class="sign-post"></span>
+							</a> -
+							<a href="#dml-svm-libsvm-errcode">Desc</a>
+							<ul id="ml-svm-libsvm-errcode" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						<li id="t-ml-svm-libsvm-svm_cross_validate">
+							<a href="#ml-svm-libsvm-svm_cross_validate" data-toggle="collapse">
+								EMBED :
+								<span class="sign-pre">Result</span>
+								<span class="sign-name">SVM_CROSS_VALIDATE</span>
+								<span class="sign-post">(SVM_Parms prm,
                                  Problem prb,
                                  UNSIGNED2 nr_fold,
-                                 UNSIGNED4 err_code=ErrCode)
-			<ul>
-				
-			</ul>
-		</li>
-		
-	</ul>
-	<hr/>
-	<h2>Descriptions</h2>
-	
-	<p>	RECORD : Result
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : Problem
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	RECORD : SVM_Parms
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	ATTRIBUTE : ErrCode
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
-	<p>	EMBED : Result svm_cross_validate(SVM_Parms prm,
+                                 UNSIGNED4 err_code=ErrCode)</span>
+							</a> -
+							<a href="#dml-svm-libsvm-svm_cross_validate">Desc</a>
+							<ul id="ml-svm-libsvm-svm_cross_validate" class="accordian-body collapse">
+								
+							</ul>
+						</li>
+						</ul>
+					<hr/>
+					<h2>Descriptions</h2>
+					<div class="panel-group">
+						<div class="panel panel-info" id="dml-svm-libsvm-result">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">RESULT</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-result" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-problem">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">PROBLEM</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-problem" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-svm_parms">
+							<div class="panel-heading">
+								<div class="type">
+									RECORD
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">SVM_PARMS</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-svm_parms" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-errcode">
+							<div class="panel-heading">
+								<div class="type">
+									ATTRIBUTE
+								</div>
+								<div class="sign">
+									<span class="sign-pre"></span>
+									<span class="sign-name">ERRCODE</span>
+									<span class="sign-post"></span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-errcode" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						<div class="panel panel-info" id="dml-svm-libsvm-svm_cross_validate">
+							<div class="panel-heading">
+								<div class="type">
+									EMBED
+								</div>
+								<div class="sign">
+									<span class="sign-pre">Result</span>
+									<span class="sign-name">SVM_CROSS_VALIDATE</span>
+									<span class="sign-post">(SVM_Parms prm,
                                  Problem prb,
                                  UNSIGNED2 nr_fold,
-                                 UNSIGNED4 err_code=ErrCode)
-		
-		<br/>
-		
-		Inherit Type : local
-		<br/>
-		
-	</p>
-	<hr/>
-	
-	
+                                 UNSIGNED4 err_code=ErrCode)</span>
+								</div>
+								<div class="btns">
+									<a href="#t-ml-svm-libsvm-svm_cross_validate" class="tree-link btn btn-primary">Tree</a>
+									<button class="btn btn-danger"> local</button>
+									</div>
+							</div>
+
+							<div class="panel-body">
+								</div>
+							<div class="panel-footer">
+								</div>
+						</div>
+						
+						</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Menu Toggle Script -->
+	<script>
+		$("#menu-toggle").click(function(e) {
+			e.preventDefault();
+			$("#wrapper").toggleClass("toggled");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('.tree-link').click(function(e) {
+				var loc = $(this).attr('href');
+				$(loc).parents().collapse('show');
+				return true;
+			});
+		});
+	</script>
 </body>
 </html>

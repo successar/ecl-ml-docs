@@ -5,64 +5,64 @@
    <Type>module</Type>
    <Definition body="249" end="894" exported="1" fullname="ml.mat.decomp.b_sub" inherit_type="local" line="7" name="b_sub" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="182">
     <Type>function</Type>
-    <Signature>b_sub(DATASET(Types.Element) U, DATASET(Types.Element) B)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) U, DATASET(Types.Element) B)" name="B_SUB">b_sub(DATASET(Types.Element) U, DATASET(Types.Element) B)</Signature><Params>
      <Param name="U"/>
      <Param name="B"/>
     </Params>
    </Definition>
    <Definition body="1065" end="1558" exported="1" fullname="ml.mat.decomp.f_sub" inherit_type="local" line="29" name="f_sub" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="998">
     <Type>function</Type>
-    <Signature>f_sub(DATASET(Types.Element) L, DATASET(Types.Element) B)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) L, DATASET(Types.Element) B)" name="F_SUB">f_sub(DATASET(Types.Element) L, DATASET(Types.Element) B)</Signature><Params>
      <Param name="L"/>
      <Param name="B"/>
     </Params>
    </Definition>
    <Definition body="2006" end="2486" exported="1" fullname="ml.mat.decomp.cholesky" inherit_type="local" line="51" name="Cholesky" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="1934">
     <Type>function</Type>
-    <Signature>DATASET(Types.Element) Cholesky(DATASET(Types.Element) matrix)</Signature><Params>
+    <Signature pre="DATASET(Types.Element)" post="(DATASET(Types.Element) matrix)" name="CHOLESKY">DATASET(Types.Element) Cholesky(DATASET(Types.Element) matrix)</Signature><Params>
      <Param name="matrix"/>
     </Params>
    </Definition>
    <Definition body="3044" end="3861" exported="1" fullname="ml.mat.decomp.lu" inherit_type="local" line="76" name="LU" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="2978">
     <Type>function</Type>
-    <Signature>DATASET(Types.Element) LU(DATASET(Types.Element) matrix)</Signature><Params>
+    <Signature pre="DATASET(Types.Element)" post="(DATASET(Types.Element) matrix)" name="LU">DATASET(Types.Element) LU(DATASET(Types.Element) matrix)</Signature><Params>
      <Param name="matrix"/>
     </Params>
    </Definition>
    <Definition body="4028" end="4080" exported="1" fullname="ml.mat.decomp.lcomp" inherit_type="local" line="102" name="LComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="3985">
     <Type>function</Type>
-    <Signature>LComp(DATASET(Types.Element) l_u)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) l_u)" name="LCOMP">LComp(DATASET(Types.Element) l_u)</Signature><Params>
      <Param name="l_u"/>
     </Params>
    </Definition>
    <Definition body="4124" end="4151" exported="1" fullname="ml.mat.decomp.ucomp" inherit_type="local" line="103" name="UComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="4081">
     <Type>function</Type>
-    <Signature>UComp(DATASET(Types.Element) l_u)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) l_u)" name="UCOMP">UComp(DATASET(Types.Element) l_u)</Signature><Params>
      <Param name="l_u"/>
     </Params>
    </Definition>
    <Definition body="4490" end="4514" inherit_type="local" line="113" name="qr_comp" shared="1" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="4473">
-    <Signature>qr_comp</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="QR_COMP">qr_comp</Signature><Type>attribute</Type>
    </Definition>
    <Definition body="4581" end="5180" exported="1" fullname="ml.mat.decomp.qr" inherit_type="local" line="114" name="QR" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="4515">
     <Type>function</Type>
-    <Signature>DATASET(Types.Element) QR(DATASET(Types.Element) matrix)</Signature><Params>
+    <Signature pre="DATASET(Types.Element)" post="(DATASET(Types.Element) matrix)" name="QR">DATASET(Types.Element) QR(DATASET(Types.Element) matrix)</Signature><Params>
      <Param name="matrix"/>
     </Params>
    </Definition>
    <Definition body="5228" end="5267" exported="1" fullname="ml.mat.decomp.qcomp" inherit_type="local" line="134" name="QComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="5182">
     <Type>function</Type>
-    <Signature>QComp(DATASET(Types.Element) matrix)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) matrix)" name="QCOMP">QComp(DATASET(Types.Element) matrix)</Signature><Params>
      <Param name="matrix"/>
     </Params>
    </Definition>
    <Definition body="5314" end="5353" exported="1" fullname="ml.mat.decomp.rcomp" inherit_type="local" line="135" name="RComp" source="/media/sarthak/Data/ecl-ml/ML/Mat/Decomp.ecl" start="5268">
     <Type>function</Type>
-    <Signature>RComp(DATASET(Types.Element) matrix)</Signature><Params>
+    <Signature pre="" post="(DATASET(Types.Element) matrix)" name="RCOMP">RComp(DATASET(Types.Element) matrix)</Signature><Params>
      <Param name="matrix"/>
     </Params>
    </Definition>
-   <Signature>Decomp</Signature><Parents/>
+   <Signature pre="" post="" name="DECOMP">Decomp</Signature><Parents/>
   </Definition>
   <Import body="0" end="7" fullname="ML.Mat" inherit_type="local" line="1" name="ML_Mat" ref="ml.mat" start="7" target="pkg.toc.xml">
    <Type>attribute</Type>

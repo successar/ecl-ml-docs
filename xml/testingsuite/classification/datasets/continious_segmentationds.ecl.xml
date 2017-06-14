@@ -25,12 +25,12 @@
     <Field name="A17"/>
     <Field name="A18"/>
     <Field name="A19"/>
-    <Signature>continious_segmentationRECORD</Signature><Field name="class"/>
+    <Signature pre="" post="" name="CONTINIOUS_SEGMENTATIONRECORD">continious_segmentationRECORD</Signature><Field name="class"/>
    </Definition>
    <Definition body="790" end="416545" exported="1" fullname="testingsuite.classification.datasets.continious_segmentationds.content" inherit_type="local" line="26" name="content" source="/media/sarthak/Data/ecl-ml/TestingSuite/Classification/Datasets/continious_segmentationDS.ecl" start="773">
-    <Signature>content</Signature><Type>attribute</Type>
+    <Signature pre="" post="" name="CONTENT">content</Signature><Type>attribute</Type>
    </Definition>
-   <Signature>continious_segmentationDS</Signature><Parents/>
+   <Signature pre="" post="" name="CONTINIOUS_SEGMENTATIONDS">continious_segmentationDS</Signature><Parents/>
   </Definition>
   <Import body="0" end="14" fullname="ML" inherit_type="local" line="1" name="ML" ref="ml" remotescope="1" start="14" target="../../../ml/pkg.toc.xml">
    <Type>attribute</Type>
